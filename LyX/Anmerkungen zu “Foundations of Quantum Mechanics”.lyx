@@ -1,0 +1,978 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Anmerkungen zu 
+\begin_inset Quotes eld
+\end_inset
+
+Foundations of Quantum Mechanics, Naber
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Naber"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Jürgen Womser-Schütz, https://github.com/JW-Schuetz
+\end_layout
+
+\begin_layout Date
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kein Datum!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Mathematisches Pendel
+\end_layout
+
+\begin_layout Standard
+Für den Auslenkungswinkel 
+\begin_inset Formula $\phi\left(t\right)$
+\end_inset
+
+ als Funktion der Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+ gilt 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d^{2}\phi\left(t\right)}{dt^{2}}+\omega^{2}\sin\phi\left(t\right) & = & 0\label{eq:Pendelgleichung}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula 
+\begin{eqnarray}
+\omega & = & \sqrt{\frac{g}{l}}.\label{eq:Omega}
+\end{eqnarray}
+
+\end_inset
+
+Dabei ist 
+\begin_inset Formula $l$
+\end_inset
+
+ die Pendellänge und 
+\begin_inset Formula $g$
+\end_inset
+
+ die Erdbeschleunigung.
+\end_layout
+
+\begin_layout Subsubsection*
+Beispiel 1.0.3.1
+\end_layout
+
+\begin_layout Standard
+Zeige, dass sich die Pendelgleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Pendelgleichung"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) wie folgt umformulieren lässt 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{d\phi}\left[\frac{1}{2}\left[\frac{d\phi\left(t\right)}{dt}\right]^{2}\right]+\omega^{2}\sin\phi\left(t\right) & = & 0.\label{eq:Modifizierte Pendelgleichung}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zeige durch Integration über 
+\begin_inset Formula $\phi$
+\end_inset
+
+ und durch Multiplikation mit 
+\begin_inset Formula $ml^{2}$
+\end_inset
+
+ die Gültigkeit von 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\frac{1}{2}ml^{2}\right)\left[\frac{d\phi\left(t\right)}{dt}\right]^{2}-mgl\cos\phi\left(t\right) & = & E,
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+wobei 
+\begin_inset Formula $E$
+\end_inset
+
+ eine Konstante bezeichnet.
+\end_layout
+
+\begin_layout Subsubsection*
+Lösung 1.0.3.1
+\end_layout
+
+\begin_layout Standard
+Durch Anwendung der Kettenregel 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{d\phi}\left[f\left(g\left(\phi\right)\right)\right] & = & \frac{df\left(g\right)}{dg}\frac{dg\left(\phi\right)}{d\phi}\label{eq:Kettenregel}
+\end{eqnarray}
+
+\end_inset
+
+folgt für die 2.
+ Ableitung von 
+\begin_inset Formula $\phi\left(t\right)$
+\end_inset
+
+ nach der Zeit 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ddot{\phi} & = & \frac{d\dot{\phi}}{dt}\\
+ & = & \dot{\frac{d\phi}{d\phi}\frac{d\phi}{dt}}\\
+ & = & \dot{\phi}\frac{d\dot{\phi}}{d\phi}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ebenso durch Anwendung der Kettenregel folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{d\phi}\left(\frac{1}{2}\dot{\phi}^{2}\right) & = & \frac{d}{d\phi}\left[f\left(g\left(\phi\right)\right)\right]\\
+ & = & \dot{\phi}\frac{d\dot{\phi}}{d\phi}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es gilt also 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsubsection*
+Beispiel 1
+\end_layout
+
+\begin_layout Plain Layout
+Sei 
+\begin_inset Formula 
+\begin{eqnarray*}
+\phi\left(t\right) & = & \cos\omega t.
+\end{eqnarray*}
+
+\end_inset
+
+Dann gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{dt}\phi\left(t\right) & = & -\omega\sin\omega t\\
+ & = & \mp\omega\sqrt{1-\cos^{2}\omega t}\\
+ & = & \mp\omega\sqrt{1-\phi^{2}\left(t\right)}\\
+\\
+\frac{d^{2}}{d^{2}t}\phi\left(t\right) & = & -\omega^{2}\cos\omega t\\
+ & = & -\omega^{2}\phi\left(t\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Für den Term 
+\begin_inset Formula $\frac{d}{d\phi}\left(\frac{1}{2}\dot{\phi}^{2}\right)$
+\end_inset
+
+ erhält man wegen 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d\dot{\phi}}{d\phi} & = & \mp\omega\frac{d}{d\phi}\sqrt{1-\phi^{2}\left(t\right)}\\
+ & = & \mp\omega\left[1-\phi^{2}\left(t\right)\right]^{-\frac{1}{2}}\left[-2\phi\left(t\right)\right]\\
+ & = & \pm2\omega\frac{\phi\left(t\right)}{\sqrt{1-\phi^{2}\left(t\right)}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+den Ausdruck 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{d\phi}\left(\frac{1}{2}\dot{\phi}^{2}\right) & = & \dot{\phi}\frac{d\dot{\phi}}{d\phi}\\
+ & = & -2\omega^{2}\phi\left(t\right)\\
+ & = & \frac{d^{2}}{d^{2}t}\phi\left(t\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsubsection*
+Beispiel 2
+\end_layout
+
+\begin_layout Plain Layout
+Sei 
+\begin_inset Formula 
+\begin{eqnarray*}
+\phi\left(t\right) & = & t^{2}.
+\end{eqnarray*}
+
+\end_inset
+
+Dann gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{dt}\phi\left(t\right) & = & 2t\\
+ & = & 2\sqrt{\phi\left(t\right)}\\
+\\
+\frac{d^{2}}{d^{2}t}\phi\left(t\right) & = & 2.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Für den Term 
+\begin_inset Formula $\frac{d}{d\phi}\left(\frac{1}{2}\dot{\phi}^{2}\right)$
+\end_inset
+
+ erhält man wegen 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d\dot{\phi}}{d\phi} & = & 2\frac{d}{d\phi}\sqrt{\phi\left(t\right)}\\
+ & = & \frac{1}{\sqrt{\phi\left(t\right)}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+den Ausdruck 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{d\phi}\left(\frac{1}{2}\dot{\phi}^{2}\right) & = & \dot{\phi}\frac{d\dot{\phi}}{d\phi}\\
+ & = & 2\sqrt{\phi\left(t\right)}\frac{1}{\sqrt{\phi\left(t\right)}}\\
+ & = & 2\\
+ & = & \frac{d^{2}}{d^{2}t}\phi\left(t\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{d\phi}\left(\frac{1}{2}\dot{\phi}^{2}\left(t\right)\right) & = & \frac{d^{2}\phi\left(t\right)}{dt^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und damit gilt die modifizierte Pendelgleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Modifizierte Pendelgleichung"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Integration von 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{d\phi}\left(\frac{1}{2}\dot{\phi}^{2}\right)+\omega^{2}\sin\phi\left(t\right) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+über 
+\begin_inset Formula $\phi$
+\end_inset
+
+ liefert 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{2}\dot{\phi}^{2}-\omega^{2}\cos\phi\left(t\right) & = & C\left(t\right)
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+und nach Multiplikation mit 
+\begin_inset Formula $ml$
+\end_inset
+
+ folgt mit der Definition von 
+\begin_inset Formula $\omega$
+\end_inset
+
+ nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Omega"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(t\right) & = & \frac{ml^{2}}{2}\dot{\phi}^{2}-gml\cos\phi\left(t\right).
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Differentation nach der Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+ ergibt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{E}\left(t\right) & = & \frac{ml^{2}}{2}\frac{d}{dt}\left(\dot{\phi}^{2}\right)-gml\frac{d}{dt}\cos\phi\left(t\right)\\
+ & = & ml^{2}\dot{\phi}\ddot{\phi}+gml\dot{\phi}\sin\phi\left(t\right)\\
+ & = & ml\left[l\ddot{\phi}+g\sin\phi\left(t\right)\right]\dot{\phi}.
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Einsetzen der Pendelgleichung liefert 
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{E}\left(t\right) & = & ml\left[-l\omega^{2}\sin\phi\left(t\right)+g\sin\phi\left(t\right)\right]\dot{\phi}\\
+ & = & ml\left[g-l\omega^{2}\right]\dot{\phi}\sin\phi\left(t\right)\\
+ & = & ml\left[g-l\frac{g}{l}\right]\dot{\phi}\sin\phi\left(t\right)\\
+ & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E$
+\end_inset
+
+ ist also eine zeitliche Konstante.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Beispiel 1.0.3.2
+\end_layout
+
+\begin_layout Standard
+Zeige, dass 
+\begin_inset Formula $E\left(t\right)$
+\end_inset
+
+ die Summe aus kinetischer und potentieller Energie des Pendels ist.
+\end_layout
+
+\begin_layout Subsubsection*
+Lösung 1.0.3.2
+\end_layout
+
+\begin_layout Standard
+Klar!
+\end_layout
+
+\begin_layout Subsubsection*
+Beispiel 1.0.3.3
+\end_layout
+
+\begin_layout Standard
+Es werden neue Zustandsraum-Variable 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ eingeführt: 
+\begin_inset Formula $x=\phi$
+\end_inset
+
+ und 
+\begin_inset Formula $y=\dot{\phi}.$
+\end_inset
+
+ Gebe das zugehörige Differentialgleichungssystem 1.
+ Ordnung an und skizziere die Trajektorien der Pendelbewegung.
+\end_layout
+
+\begin_layout Subsubsection*
+Lösung 1.0.3.3
+\end_layout
+
+\begin_layout Standard
+Aus der Pendelgleichung folgt 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{x} & = & y\\
+\dot{y} & = & -\omega^{2}\sin x.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Im Koordinatenursprung gilt 
+\begin_inset Formula $\dot{x}=\dot{y}=0$
+\end_inset
+
+ - das Pendel ruht
+\end_layout
+
+\begin_layout Itemize
+Für die 
+\begin_inset Formula $x$
+\end_inset
+
+-Achse gilt 
+\begin_inset Formula $y=\dot{x}=0$
+\end_inset
+
+ - die Trajektorien stehen auf ihr senkrecht
+\end_layout
+
+\begin_layout Itemize
+Für die 
+\begin_inset Formula $y$
+\end_inset
+
+-Achse gilt 
+\begin_inset Formula $x=\dot{y}=0$
+\end_inset
+
+ - die Trajektorien stehen auf ihr senkrecht
+\end_layout
+
+\begin_layout Itemize
+Für 
+\begin_inset Formula $y>0$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\dot{x}>0$
+\end_inset
+
+ und für 
+\begin_inset Formula $x>0$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\dot{y}>0$
+\end_inset
+
+ - die Trajektorien verlaufen im Uhrzeigersinn 
+\end_layout
+
+\begin_layout Itemize
+Für 
+\begin_inset Formula $y=-\omega^{2}\sin x$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\dot{x=\dot{y}}$
+\end_inset
+
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+State Space and Lagrangians 
+\end_layout
+
+\begin_layout Standard
+Es gilt mit der Teilchenmasse 
+\begin_inset Formula $m$
+\end_inset
+
+, der Teilchentrajektorie 
+\begin_inset Formula $\underline{\alpha}\left(t\right)=\left(q^{1}\left(t\right),\cdots,q^{n}\left(t\right)\right)$
+\end_inset
+
+ und der Kraft 
+\begin_inset Formula $\underline{F}\left(\underline{q}\right)$
+\end_inset
+
+ das Newtonsche Gesetz 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+m\frac{d²\underline{\alpha}\left(t\right)}{dt²} & = & \underline{F}\left(\underline{q}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es wird vorausgesetzt, dass die Kraft 
+\begin_inset Formula $\underline{F}$
+\end_inset
+
+ konservativ ist, dass sie sich also als Gradient eines reellen Potentiales
+ (der potentiellen Energie 
+\begin_inset Formula $V\left[\underline{\alpha}\left(t\right)\right]$
+\end_inset
+
+) darstellen lässt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{F}\left(\underline{q}\right) & = & -\nabla V\left[\underline{\alpha}\left(t\right)\right].
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dabi ist 
+\begin_inset Formula $V$
+\end_inset
+
+ eine reellwertige Funktion der 
+\begin_inset Formula $n$
+\end_inset
+
+ Ortskoordinaten 
+\begin_inset Formula $\underline{q}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Entlang der Trajektorie 
+\begin_inset Formula $\underline{\alpha}\left(t\right)$
+\end_inset
+
+ ist also das Newtonsche Gesetz 
+\begin_inset Formula 
+\begin{eqnarray}
+m\frac{d²\underline{\alpha}\left(t\right)}{dt²} & = & -\nabla V\left[\underline{\alpha}\left(t\right)\right]\label{eq:Newton}
+\end{eqnarray}
+
+\end_inset
+
+erfüllt.
+ 
+\end_layout
+
+\begin_layout Standard
+Im folgenden wird eine alternative Formulierung dieser Tatsache gesucht.
+ 
+\end_layout
+
+\begin_layout Standard
+Definiert man für die kinetische Energie 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{k}\left[\underline{\alpha}\left(t\right)\right] & = & \frac{m}{2}\left\Vert \frac{d\underline{\alpha}\left(t\right)}{dt}\right\Vert ^{2}\\
+ & = & \frac{m}{2}\frac{d\underline{\alpha}\left(t\right)}{dt}\frac{d\underline{\alpha}\left(t\right)}{dt},
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so folgt für die Gesamtenergie 
+\begin_inset Formula 
+\begin{eqnarray}
+E\left[\underline{\alpha}\left(t\right)\right] & = & E_{k}\left[\underline{\alpha}\left(t\right)\right]+V\left[\underline{\alpha}\left(t\right)\right]\label{eq:Energie}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und deren zeitliche Ableitung 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Die runde Klammer verschwindet wegen der Gültigkeit des Newtonschen Gesetztes
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Newton"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{dt}E\left[\underline{\alpha}\left(t\right)\right] & = & \frac{m}{2}\left[\frac{d²\underline{\alpha}\left(t\right)}{dt²}\frac{d\underline{\alpha}\left(t\right)}{dt}+\frac{d\underline{\alpha}\left(t\right)}{dt}\frac{d\text{²}\underline{\alpha}\left(t\right)}{dt\text{²}}\right]+\frac{d}{dt}V\left[\underline{\alpha}\left(t\right)\right]\\
+ & = & m\frac{d\underline{\alpha}\left(t\right)}{dt}\frac{d\text{²}\underline{\alpha}\left(t\right)}{dt\text{²}}+\nabla V\left[\underline{\alpha}\left(t\right)\right]\frac{d\underline{\alpha}\left(t\right)}{dt}\\
+ & = & \frac{d\underline{\alpha}\left(t\right)}{dt}\left\{ m\frac{d\text{²}\underline{\alpha}\left(t\right)}{dt\text{²}}+\nabla V\left[\underline{\alpha}\left(t\right)\right]\right\} \\
+ & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+Nun soll die Umwandlung zwischen den beiden Energieformen entlang der Trajektori
+e 
+\begin_inset Formula $\underline{\alpha}\left(t\right)$
+\end_inset
+
+ untersucht werden, also die Differenz von kinetischer und potentieller
+ Energie 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+L\left[\underline{\alpha}\left(t\right)\right] & = & E_{k}\left[\underline{\alpha}\left(t\right)\right]-V\left[\underline{\alpha}\left(t\right)\right].\label{eq:Wirkung}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es soll gezeigt werden, dass das Funktional 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+S\left(\underline{\alpha}\right) & = & \int_{t=t_{0}}^{t_{1}}L\left[\underline{\alpha}\left(t\right)\right]dt
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+für die Trajektorie 
+\begin_inset Formula $\underline{\alpha}$
+\end_inset
+
+ stationär ist, dabei sind 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ die Anfangs- und Endpunkte der Bewegung.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Zur Auswahl zugelassen sind alle glatten Funktionen des 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ im Intervall 
+\begin_inset Formula $\left[t_{0},t_{1}\right]$
+\end_inset
+
+, also 
+\begin_inset Formula $C^{\infty}\left(\left[t_{0},t_{1}\right]\right).$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection*
+Nebenrechnung Variationsprinzip 
+\end_layout
+
+\begin_layout Plain Layout
+Gegeben ist für 
+\begin_inset Formula $t\in\left[t_{0},t_{1}\right]$
+\end_inset
+
+ eine glatte Funktion 
+\begin_inset Formula $\underline{\alpha}\left(t\right)$
+\end_inset
+
+ im 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ die an den Randpunkten die Bedingung 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{\alpha}\left(t_{0}\right) & = & \underline{\alpha}_{0}\\
+\underline{\alpha}\left(t_{1}\right) & = & \underline{\alpha}_{1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+erfüllt.
+ Als Variation dieser Funktion wird definiert 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{\delta}\left(t\right) & = & \underline{\alpha}\left(t\right)+\varepsilon\underline{e}\left(t\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit 
+\begin_inset Formula $\underline{e}\left(t_{0}\right)=\underline{e}\left(t_{1}\right)=0.$
+\end_inset
+
+ Es wird angesetzt 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+S\left(\underline{\alpha}\right) & = & \int_{t=t_{0}}^{t_{1}}\underline{\alpha}\left(t\right)dt
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "Naber"
+literal "false"
+
+\end_inset
+
+Foundations of Quantum Mechanics - An Introduction to the Physical Background
+ and Mathematical Structure; Naber, Gregory; 03.12.2016
+\end_layout
+
+\end_body
+\end_document

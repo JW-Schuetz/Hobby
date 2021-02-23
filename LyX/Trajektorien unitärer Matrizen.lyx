@@ -1,0 +1,415 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Trajektorien unitärer 
+\begin_inset Formula $2\times2$
+\end_inset
+
+-Matrizen
+\end_layout
+
+\begin_layout Author
+Jürgen Womser-Schütz, https://github.com/JW-Schuetz
+\end_layout
+
+\begin_layout Date
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kein Datum!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problemstellung
+\end_layout
+
+\begin_layout Standard
+Gesucht ist eine unitäre, einparametrige und glatte Trajektorie zwischen
+ zwei vorgegebenen unitären Matrizen 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $G_{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Lösungsidee
+\end_layout
+
+\begin_layout Itemize
+Die erste Lösungsidee einer 
+\begin_inset Quotes eld
+\end_inset
+
+Geraden
+\begin_inset Quotes erd
+\end_inset
+
+ zwischen den beiden Matrizen 
+\begin_inset Formula 
+\[
+G\left(\alpha\right)=\left(1-\alpha\right)G_{1}+\alpha G_{2}
+\]
+
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha\in\left[0,1\right]$
+\end_inset
+
+ trägt nicht, da die unitären Matrizen keinen Vektorraum bilden.
+\end_layout
+
+\begin_layout Itemize
+Aber: die unitären Matrizen besitzen mit der üblichen Matrizenmultiplikation
+ die Struktur einer multiplikativen Gruppe - und diese Gruppe 
+\begin_inset Formula $G$
+\end_inset
+
+ ist sogar eine Lie-Gruppe!
+\end_layout
+
+\begin_layout Itemize
+Die zweite Lösungsidee ist es daher, eine Trajektorie in der Lie-Algebra
+ 
+\begin_inset Formula $LG$
+\end_inset
+
+ der Lie-Gruppe der unitären Matrizen 
+\begin_inset Formula $G$
+\end_inset
+
+ zu konstruieren und diese dann auf 
+\begin_inset Formula $G$
+\end_inset
+
+ abzubilden.
+\end_layout
+
+\begin_layout Itemize
+Diese Idee trägt, da Lie-Algebren eine Vektorraumstruktur besitzen.
+\end_layout
+
+\begin_layout Itemize
+Ich definiere also eine Gerade in der Lie-Algebra durch 
+\begin_inset Formula 
+\[
+x\left(\alpha\right)=\left(1-\alpha\right)x_{1}+\alpha x_{2}
+\]
+
+\end_inset
+
+mit 
+\begin_inset Formula $\alpha\in\left[0,1\right]$
+\end_inset
+
+, dabei sind 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ die zu den vorgegebenen Matrizen 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ gehörenden Elemente der Lie-Algebra 
+\begin_inset Formula $LG$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Die Gruppenelemente der gesuchten Trajektorie sind dann durch 
+\begin_inset Formula $G\left(\alpha\right)=\exp\left(x\left(\alpha\right)\right)$
+\end_inset
+
+ gegeben.
+ Diese Abbildung ist surjektiv 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TTB"
+literal "true"
+
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Diese Matrixexponierte kann man (analog zum im reellen Fall orthogonalen
+ Matrizen) durch Nutzung der speziellen Eigenschaften der Lie-Algebra 
+\begin_inset Formula $LG$
+\end_inset
+
+ (siehe unten) stark vereinfachen.
+ Dann wird der Zusammenhang zu der Bedeutung der Drehmatrizen im reellen
+ Fall vermutlich klar werden.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Es existieren natürlich unendlich viele verschiedene Trajektorien durch
+ die beiden Punkte 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+.
+ Hier wurde der einfachste Fall ausgewählt: die 
+\begin_inset Quotes eld
+\end_inset
+
+Lie-Algebra-Gerade
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Jede andere glatte Funktion des Parameters 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ die die Start- und Endbedingung erfüllt, liefert eine gleichwertige Lösung
+ des Problemes.
+\end_layout
+
+\begin_layout Section*
+Hintergrundinformationen
+\end_layout
+
+\begin_layout Itemize
+Die Gruppe 
+\begin_inset Formula $G$
+\end_inset
+
+ der unitären 
+\begin_inset Formula $2\times2$
+\end_inset
+
+-Matrizen besteht aus 
+\begin_inset Formula $\left(\begin{array}{cc}
+a & b\\
+-b^{*} & a^{*}
+\end{array}\right)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\mid a\mid^{2}+\mid b\mid^{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Die Lie-Algebra 
+\begin_inset Formula $LG$
+\end_inset
+
+ der Gruppe 
+\begin_inset Formula $G$
+\end_inset
+
+ besteht aus den Matrizen 
+\begin_inset Formula $x$
+\end_inset
+
+ mit 
+\begin_inset Formula $x+x^{*}=0$
+\end_inset
+
+ und 
+\begin_inset Formula $\mbox{spur\ensuremath{\left(x\right)}}=0$
+\end_inset
+
+ oder explizit 
+\begin_inset Formula $x=\left(\begin{array}{cr}
+ia & b+ic\\
+-b+ic & -ia
+\end{array}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Es gilt mit 
+\begin_inset Formula $r=\sqrt{a^{2}+b^{2}+c^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\exp\left(x\right) & = & \left(\begin{array}{cc}
+\cosh\left(ir\right)+\frac{a}{r}\sinh\left(ir\right) & \frac{1}{r}\left(c-ib\right)\sinh\left(ir\right)\\
+\frac{1}{r}\left(c+ib\right)\sinh\left(ir\right) & \cosh\left(ir\right)-\frac{a}{r}\sinh\left(ir\right)
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Reeller Fall:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ seinen orthogonale Matrizen 
+\begin_inset Formula $\left\{ g\mid g^{T}g=E\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+die zugehörige Lie-Algebra ist 
+\begin_inset Formula $\left\{ x\mid x^{T}=-x\right\} $
+\end_inset
+
+ oder explizit 
+\begin_inset Formula $\left\{ x\mid\left\{ \begin{array}{cc}
+0 & a\\
+-a & 0
+\end{array}\right\} ,a\in\mathbb{R}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+es gilt: 
+\begin_inset Formula $\exp\left(x\right)=\left(\begin{array}{cc}
+\cos\left(a\right) & \sin\left(a\right)\\
+-\sin\left(a\right) & \cos\left(a\right)
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "TTB"
+literal "true"
+
+\end_inset
+
+Teubner Taschenbuch der Mathematik, Teil 2, S.
+ 647
+\end_layout
+
+\end_body
+\end_document

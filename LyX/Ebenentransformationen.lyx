@@ -1,0 +1,2544 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ebenentransformationen
+\end_layout
+
+\begin_layout Author
+Jürgen Womser-Schütz, https://github.com/JW-Schuetz
+\end_layout
+
+\begin_layout Date
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kein Datum!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Normierung
+\end_layout
+
+\begin_layout Standard
+Die Matrizen der Ebenentransformationen (siehe auch Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Ebenentransformationen"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\underline{G}(a,b,c)=\frac{1}{a+b+c}\left(\begin{array}{cc}
+b+c & c\\
+a & a+b
+\end{array}\right)\label{G}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+haben für 
+\begin_inset Formula $\lambda\neq0$
+\end_inset
+
+ die Eigenschaft: 
+\begin_inset Formula $\underline{G}(\lambda a,\lambda b,\lambda c)=\underline{G}\left(a,b,c\right)$
+\end_inset
+
+ (Skaleninvarianz).
+ Es ist durch entsprechende Wahl von 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ stets möglich, die Normierung 
+\begin_inset Formula $a+b+c=1$
+\end_inset
+
+ zu erreichen.
+ Man erhält die äquivalente Darstellung der Ebenentransformationsmatrizen
+ 
+\begin_inset Formula 
+\begin{equation}
+\underline{g}(a',c')=\left(\begin{array}{cc}
+1-a' & c'\\
+a' & 1-c'
+\end{array}\right),\label{g}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+die nur noch von 2 Parametern abhängig ist.
+ Durch die Ersetzungen 
+\begin_inset Formula $a'\mapsto a$
+\end_inset
+
+, 
+\begin_inset Formula $1-(a'+c')\mapsto b$
+\end_inset
+
+ und 
+\begin_inset Formula $c'\mapsto c$
+\end_inset
+
+ in Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "g"
+
+\end_inset
+
+) erhält man wieder die entnormierte Ebenentransformation 
+\begin_inset Formula $\underline{G}(a,b,c).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Im folgenden schreibe ich wegen der einfacheren Schreibweise 
+\begin_inset Formula $a,c$
+\end_inset
+
+ anstatt 
+\begin_inset Formula $a',c'.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ebenentransformationen/EbTrans.eps
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Ebenentransformationen"
+
+\end_inset
+
+Zur Definition der Ebenentransformationen nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "G"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Symmetrie
+\end_layout
+
+\begin_layout Standard
+Die Matrizen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "G"
+
+\end_inset
+
+) und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "g"
+
+\end_inset
+
+) besitzen die Eigenschaft, dass die Summe ihrer Zeilenelemente gleich 1
+ ist — der physikalische Grund dafür ist der Erhaltungssatz der Kraft, wie
+ aus der Beziehung 
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+B_{1}\\
+B_{2}
+\end{array}\right)=\underline{g}(a,c)\cdot\left(\begin{array}{c}
+A_{1}\\
+A_{2}
+\end{array}\right)=\left(\begin{array}{c}
+1-a\\
+a
+\end{array}\right)A_{1}+\left(\begin{array}{c}
+c\\
+1-c
+\end{array}\right)A_{2}\label{Bilanzgleichung}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+deutlich wird: es folgt nämlich aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Bilanzgleichung"
+
+\end_inset
+
+) die Kräftebilanzgleichung 
+\begin_inset Formula $B_{1}+B_{2}=A_{1}+A_{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Eigenschaft der 1-Zeilensummen bleibt auch bei der Hintereinanderausführung
+ zweier Ebenentransformationen erhalten — sie bilden, bezogen auf die Matrizenmu
+ltiplikation, eine Gruppe.
+\end_layout
+
+\begin_layout Standard
+Dies ist ein hübsches kleines Beispiel dafür, wie sich physikalische Erhaltungss
+ätze in mathematische Symmetrien abbilden.
+\end_layout
+
+\begin_layout Subsection*
+Definition der Gruppe 
+\begin_inset Formula $ET(2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Gruppe der Ebenentransformationen 
+\begin_inset Formula $ET(2):=\left(G^{\pm},\cdot\right)$
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Der Name 
+\begin_inset Quotes eld
+\end_inset
+
+ET
+\begin_inset Quotes erd
+\end_inset
+
+ steht dabei für 
+\begin_inset Quotes eld
+\end_inset
+
+Ebenentransformation
+\begin_inset Quotes erd
+\end_inset
+
+ , die 
+\begin_inset Quotes eld
+\end_inset
+
+2
+\begin_inset Quotes erd
+\end_inset
+
+ ist die Dimensionskennzeichnung.
+ Die Matrizen- und Vektormultiplikation wird in dieser Arbeit mit 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ bezeichnet.
+ 
+\end_layout
+
+\end_inset
+
+ wird wie folgt definiert:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="block" valignment="top">
+<column alignment="block" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Menge
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G^{\pm}:=\left\{ (g_{ij}):=\underline{g}\left(a,c\right)\in R^{2\times2},\:\det(\underline{g})\neq0,\:\sum_{i}g_{ij}=1\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplikation 
+\begin_inset Formula $\cdot$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{l}
+\cdot:\:G^{\pm}\times G^{\pm}\longmapsto G^{\pm}\\
+\underline{g}(A,C):=\underline{g}\left(a,c\right)\cdot\underline{g}\left(a^{'},c^{'}\right)\\
+\\
+\mbox{mit:}\\
+A=a(1-a^{'})+(1-c)a^{'}\\
+C=(1-a)c^{'}+c(1-c^{'})\\
+\\
+\mbox{Assoziativgesetz}\:(\underline{r},\underline{s},\underline{t}\in G^{\pm}):\\
+(\underline{r}\cdot\underline{s})\cdot\underline{t}=\underline{r}\cdot(\underline{s}\cdot\underline{t})
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Neutrales Element
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\underline{e}:=\underline{g}\left(0,0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inverses Element
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\underline{g}^{-1}\left(a,c\right):=\underline{g}\left(\frac{-a}{1-(a+c)},\frac{-c}{1-(a+c)}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Grundmenge der Gruppe 
+\begin_inset Formula $ET(2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Grundmenge 
+\begin_inset Formula $G^{\pm}$
+\end_inset
+
+ der Gruppe 
+\begin_inset Formula $ET(2)$
+\end_inset
+
+ ist eine Teilmenge des Vektorraumes 
+\begin_inset Formula $V:=span(\underline{e}_{1},\underline{e}_{2},\underline{e}_{3})$
+\end_inset
+
+ mit der Basis
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Durch Ergänzung dieser Basis um das Element
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\underline{e}_{4}=\left(\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+erhält man eine Basis des Raumes der reellen 
+\begin_inset Formula $2\times2$
+\end_inset
+
+-Matrizen.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underline{e}_{1}=\left(\begin{array}{cc}
+0 & 0\\
+1 & 1
+\end{array}\right),\:\underline{e}_{2}=\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right),\:\underline{e}_{3}=\left(\begin{array}{cc}
+1 & 1\\
+0 & 0
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d.h.
+ alle 
+\begin_inset Formula $\underline{g}\in G^{\pm}$
+\end_inset
+
+ lassen sich durch ihre Komponenten 
+\begin_inset Formula $\alpha,\beta,\gamma\in R$
+\end_inset
+
+ darstellen: 
+\begin_inset Formula $\underline{g}=\alpha\underline{e}_{1}+\beta\underline{e}_{2}+\gamma\underline{e}_{3}$
+\end_inset
+
+.
+ Durch Vergleich erhält man für die Komponenten 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha & = & a\\
+\beta & = & 1-(a+c)\\
+\gamma & = & c,
+\end{eqnarray*}
+
+\end_inset
+
+ d.h.
+ es gilt 
+\begin_inset Formula $\alpha+\beta+\gamma=1$
+\end_inset
+
+.
+ Eine Skizze eines Teiles der Menge zeigt Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "MengeG"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Für die Determinante eines Gruppenelementes gilt der Zusammenhang 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det\underline{g}=1-\left(a+c\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ebenentransformationen/HyperEb.eps
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "MengeG"
+
+\end_inset
+
+Skizze der Menge 
+\begin_inset Formula $G^{\pm}$
+\end_inset
+
+ für den Komponentenbereich 
+\begin_inset Formula $\alpha,\beta,\gamma>0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus der Forderung 
+\begin_inset Formula $\det(\underline{g})\neq0$
+\end_inset
+
+ folgt 
+\begin_inset Formula $\beta\neq0$
+\end_inset
+
+, sodass 
+\begin_inset Formula $G^{\pm}$
+\end_inset
+
+ in zwei Zusammenhangskomponenten (jeweils eine für 
+\begin_inset Formula $\beta<0:$
+\end_inset
+
+ 
+\begin_inset Formula $G^{-}$
+\end_inset
+
+ und eine für 
+\begin_inset Formula $\beta>0:$
+\end_inset
+
+ 
+\begin_inset Formula $G^{+}$
+\end_inset
+
+ ) zerfällt.
+ Die zur Teilmenge 
+\begin_inset Formula $G^{+}$
+\end_inset
+
+ gehörende einfach zusammenhängende Untergruppe von 
+\begin_inset Formula $ET(2)$
+\end_inset
+
+ wird mit 
+\begin_inset Formula $ET^{+}(2)$
+\end_inset
+
+ bezeichnet - 
+\begin_inset Formula $G^{+}$
+\end_inset
+
+ ist die Zusammenhangskomponente des neutralen Elementes von 
+\begin_inset Formula $ET(2)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Lie-Gruppe 
+\begin_inset Formula $ET^{+}(2)$
+\end_inset
+
+ und Lie-Algebra 
+\begin_inset Formula $et(2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Gruppen 
+\begin_inset Formula $ET(2)$
+\end_inset
+
+ und 
+\begin_inset Formula $ET^{+}(2)$
+\end_inset
+
+ sind Lie-Gruppen.
+ Beide besitzen die gleiche Lie-Algebra 
+\begin_inset Formula $et(2)$
+\end_inset
+
+, deren Grundmenge 
+\begin_inset Formula $LG$
+\end_inset
+
+ der Tangentialraum des gemeinsamen neutralen Elementes 
+\begin_inset Formula $\underline{e}$
+\end_inset
+
+ ist.
+ Man erhält für die Lie-Algebra 
+\begin_inset Formula $et(2)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="block" valignment="top">
+<column alignment="block" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Menge
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 
+\begin_inset Formula $LG:=\{(h_{ij})\in R^{2\times2},\:\sum_{i}h_{ij}=0\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplikation 
+\begin_inset Formula $[\cdot,\cdot]$
+\end_inset
+
+, (Lie-Klammer)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{l}
+\left[\cdot,\cdot\right]:\:LG\times LG\longmapsto LG\\
+\left[\underline{h}_{1},\underline{h}_{2}\right]:=\underline{h}_{1}\cdot\underline{h}_{2}-\underline{h}_{2}\cdot\underline{h}_{1}\\
+\\
+\mbox{mit:}\\
+\left[\underline{h}_{1},\underline{h}_{2}\right]=-\left[\underline{h}_{2},\underline{h}_{1}\right]\\
+\left[\alpha\underline{h}_{1}+\beta\underline{h}_{2},\underline{h}_{3}\right]=\alpha\left[\underline{h}_{1},\underline{h}_{3}\right]+\beta\left[\underline{h}_{2},\underline{h}_{3}\right]\\
+\left[\underline{h}_{1},\left[\underline{h}_{2},\underline{h}_{3}\right]\right]+\left[\underline{h}_{2},\left[\underline{h}_{3},\underline{h}_{1}\right]\right]+\left[\underline{h}_{3},\left[\underline{h}_{1},\underline{h}_{2}\right]\right]=\underline{0}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lie-Gruppendarstellung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exp(\underline{h})\in G,\quad\forall\underline{h}\in LG$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für die Matrizen-Multiplikation 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ in 
+\begin_inset Formula $LG$
+\end_inset
+
+ gilt für alle 
+\begin_inset Formula $\underline{v}\in G^{+}$
+\end_inset
+
+ oder 
+\begin_inset Formula $\underline{v}\in LG$
+\end_inset
+
+ und alle 
+\begin_inset Formula $\underline{w}\in LG$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underline{v}\cdot\underline{w}=(\sum_{j}v_{ij})\underline{w}\in LG$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Weitere Eigenschaften der Lie-Klammer und der Lie-Algebra:
+\end_layout
+
+\begin_layout Itemize
+Eine Basis von 
+\begin_inset Formula $LG$
+\end_inset
+
+ ist durch 
+\begin_inset Formula $\underline{e}_{1}^{*}=\left(\begin{array}{rr}
+1 & 0\\
+-1 & 0
+\end{array}\right),\:\underline{e}_{2}^{*}=\left(\begin{array}{rr}
+0 & -1\\
+0 & 1
+\end{array}\right)$
+\end_inset
+
+ gegeben.
+\end_layout
+
+\begin_layout Itemize
+Die Strukturkonstanten 
+\begin_inset Formula $c_{ij}^{k}$
+\end_inset
+
+ einer Lie-Algebra sind definiert durch 
+\begin_inset Formula $[\underline{e}_{i}^{*},\underline{e}_{j}^{*}]=c_{ij}^{k}\,\underline{e}_{k}^{*}.$
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Die nichtredundanten Strukturkonstanten von 
+\begin_inset Formula $et(2)$
+\end_inset
+
+ ergeben sich zu 
+\begin_inset Formula $c_{12}^{1}=-1$
+\end_inset
+
+ und 
+\begin_inset Formula $c_{12}^{2}=$
+\end_inset
+
+ 1.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Es gilt 
+\begin_inset Formula $\left[\underline{h}_{1},\underline{h}_{2}\right]=\underline{0}$
+\end_inset
+
+ genau dann, falls 
+\begin_inset Formula $\underline{h}_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{h}_{2}$
+\end_inset
+
+ linear abhängig sind.
+\end_layout
+
+\begin_layout Itemize
+Jedes Element 
+\begin_inset Formula $\underline{v}\in LG$
+\end_inset
+
+ der Lie-Algebra liefert eine einparametrige Untergruppe 
+\begin_inset Formula $G^{v}=\{\exp(t\underline{v})\}$
+\end_inset
+
+ von 
+\begin_inset Formula $G^{+}$
+\end_inset
+
+.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Beweis:
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\underline{v}\in LG$
+\end_inset
+
+ beliebig aber fest.
+\end_layout
+
+\begin_layout Enumerate
+Das neutrale Element 
+\begin_inset Formula $\underline{e}$
+\end_inset
+
+ erhält man aus 
+\begin_inset Formula $\{\exp(t\underline{v})\}$
+\end_inset
+
+ für 
+\begin_inset Formula $t=0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Das zu 
+\begin_inset Formula $\exp(t\underline{v})$
+\end_inset
+
+ inverse Element ist durch 
+\begin_inset Formula $\exp(-t\underline{v})$
+\end_inset
+
+ gegeben.
+\end_layout
+
+\begin_layout Enumerate
+Für
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{1}=\exp\left(t_{1}\underline{v}\right)\in G^{+},\quad g_{2}=\exp\left(t_{2}\underline{v}\right)\in G^{+}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+gilt 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\underline{g}_{1}\cdot\underline{g}_{2}=\exp\left(t_{1}\underline{v}\right)\cdot\exp\left(t_{2}\underline{v}\right)=\exp\left((t_{1}+t_{2})\underline{v}\right)\in G^{+},\label{Umrechnung}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+da wegen der linearen Abhängigkeit von 
+\begin_inset Formula $t_{1}\underline{v}$
+\end_inset
+
+ und 
+\begin_inset Formula $t_{2}\underline{v}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[t_{1}\underline{v},\;t_{2}\underline{v}]=\underline{0}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+gilt.
+ Daraus folgt dann das zweite Gleichheitszeichen in Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Umrechnung"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ebenentransformationen/subgroupe.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "UnterGruppen"
+
+\end_inset
+
+Durch verschiedene 
+\begin_inset Formula $\underline{v}_{i}\in LG$
+\end_inset
+
+ erzeugte Untergruppen von 
+\begin_inset Formula $G^{+}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Unter Benutzung von
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\alpha\underline{e}_{1}^{*}+\beta\underline{e}_{2}^{*})^{n}=\left\{ \begin{array}{ll}
+(\alpha+\beta)^{n-1}(\alpha\underline{e}_{1}^{*}+\beta\underline{e}_{2}^{*}), & \qquad\alpha\neq-\beta\qquad n=2,3,4,\ldots\\
+\underline{0} & \qquad\alpha=-\beta\qquad n=2,3,4\ldots
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+erhält man die Elemente von 
+\begin_inset Formula $G^{v}$
+\end_inset
+
+ für ein beliebiges Element 
+\begin_inset Formula $\underline{v}=\alpha\underline{e}_{1}^{*}+\beta\underline{e}_{2}^{*}\in LG$
+\end_inset
+
+ explizit durch die Beziehung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\exp\left(t\underline{v}\right)=\left\{ \begin{array}{ll}
+\underline{Id}+\frac{1}{\alpha+\beta}\left(\exp\left(\left(\alpha+\beta\right)t\right)-1\right)\underline{v}, & \qquad\alpha\neq-\beta\\
+\underline{Id}+t\underline{v}, & \qquad\alpha=-\beta,
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und als Trajektorien in der Gruppe 
+\begin_inset Formula $G^{+}$
+\end_inset
+
+ erhält man (siehe auch Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "UnterGruppen"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+a\left(\underline{v},t\right)=\left\{ \begin{array}{ll}
+\frac{\alpha}{\alpha+\beta}\left(1-\exp\left(\left(\alpha+\beta\right)t\right)\right), & \qquad\alpha\neq-\beta\\
+-t\alpha & \qquad\alpha=-\beta.
+\end{array}\right.\label{KartenKoordinateA}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c\left(\underline{v},t\right)=\left\{ \begin{array}{ll}
+\frac{\beta}{\alpha+\beta}\left(1-\exp\left(\left(\alpha+\beta\right)t\right)\right), & \qquad\alpha\neq-\beta\\
+-t\beta & \qquad\alpha=-\beta.
+\end{array}\right.\label{KartenKoordinateC}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Jedes 
+\begin_inset Formula $\underline{g}\in G^{+}$
+\end_inset
+
+ lässt sich darstellen durch 
+\begin_inset Formula $\underline{g}=\underline{e}+\underline{v}$
+\end_inset
+
+ mit einem 
+\begin_inset Formula $\underline{v}\in LG.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Rechts- und Linkstranslation
+\end_layout
+
+\begin_layout Standard
+Die Rechtstranslation auf 
+\begin_inset Formula $ET^{+}(2)$
+\end_inset
+
+ ist für alle 
+\begin_inset Formula $\underline{g},\underline{h}\in ET^{+}(2)$
+\end_inset
+
+ gegeben durch 
+\begin_inset Formula $R_{h}\underline{g}:=\underline{g}\cdot\underline{h}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definiert man in Kartenkoordinaten
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{h}\underline{g}:\quad\underline{g}(A_{R},C_{R})=\underline{g}(a,c)\cdot\underline{h}(a^{'},c^{'}),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so erhält man
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+A_{R}\\
+C_{R}
+\end{array}\right)=\left(\begin{array}{c}
+a\\
+c
+\end{array}\right)+\det\underline{g}\left(\begin{array}{c}
+a^{'}\\
+c^{'}
+\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Rechtstranslationen bedeuten also auch in lokalen Koordinaten eine Translati
+on von 
+\begin_inset Formula $\underline{g}$
+\end_inset
+
+ um den mit dem Faktor 
+\begin_inset Formula $\deg\underline{g}$
+\end_inset
+
+ gewichteten Kartenpunkt von 
+\begin_inset Formula $\underline{h}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Für die Linkstranslation 
+\begin_inset Formula $L_{h}\underline{g}:=\underline{h}\cdot\underline{g}$
+\end_inset
+
+ erhält man analog
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+A_{L}\\
+C_{L}
+\end{array}\right)=\left(\begin{array}{c}
+a^{'}\\
+c^{'}
+\end{array}\right)+\det\underline{h}\left(\begin{array}{c}
+a\\
+c
+\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ebenentransformationen/Det.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "AequiDet"
+
+\end_inset
+
+Linien gleicher Determinante
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zur Veranschaulichung sind die Linien gleicher Determinante in Abbildung
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "AequiDet"
+
+\end_inset
+
+ dargestellt.
+\end_layout
+
+\begin_layout Subsection*
+Allgemeines
+\end_layout
+
+\begin_layout Standard
+Im folgenden gelte 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M:=R^{2},\qquad G:=ET^{+}(2),\qquad LG:=et(2).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Transformationsgruppe
+\end_layout
+
+\begin_layout Standard
+Durch
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\varphi: & G\longmapsto & Diff(M)\\
+\varphi(\underline{g}) & := & D_{g}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+mit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D_{g}(\underline{m}):=\underline{g}\cdot\underline{m}\quad\forall\underline{g}\in G,\quad\forall\underline{m}\in M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+wird eine Transformationsgruppe auf M definiert.
+\end_layout
+
+\begin_layout Standard
+Beweis: 
+\end_layout
+
+\begin_layout Enumerate
+Für jedes 
+\begin_inset Formula $D_{g}\in Diff(M)$
+\end_inset
+
+ existiert ein 
+\begin_inset Formula $D_{g}^{-1}$
+\end_inset
+
+ mit 
+\begin_inset Formula $D_{g}^{-1}(\underline{m})=\underline{g}^{-1}\cdot\underline{m},$
+\end_inset
+
+ da 
+\begin_inset Formula $\det\underline{g}\neq0$
+\end_inset
+
+ gilt.
+\end_layout
+
+\begin_layout Enumerate
+Es gilt 
+\begin_inset Formula $D_{g}D_{h}=D_{g\cdot h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Fixpunktgruppe
+\end_layout
+
+\begin_layout Standard
+Dies sind alle Transformationsgruppenelemente 
+\begin_inset Formula $\underline{h},$
+\end_inset
+
+ die einen gegebenen Punkt 
+\begin_inset Formula $\underline{m}_{0}\in M$
+\end_inset
+
+ invariant lassen.
+\end_layout
+
+\begin_layout Standard
+Satz: Die Fixpunktgruppe 
+\begin_inset Formula $H\subset G$
+\end_inset
+
+ mit 
+\begin_inset Formula $D_{h}(\underline{m}_{0})=\underline{m}_{0}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $\underline{h}\in H$
+\end_inset
+
+ bildet eine Untergruppe von 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Beweis:
+\end_layout
+
+\begin_layout Enumerate
+Wegen 
+\begin_inset Formula $D_{e}(\underline{m}_{o})=\underline{Id}(\underline{m}_{0})=\underline{m}_{0}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\underline{e}\in H.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\underline{h}\in H,$
+\end_inset
+
+ und somit auch 
+\begin_inset Formula $\underline{h}\in G$
+\end_inset
+
+.
+ Es existiert also zu 
+\begin_inset Formula $\underline{h}$
+\end_inset
+
+ eine Inverse 
+\begin_inset Formula $\underline{h}^{-1}\in G.$
+\end_inset
+
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Wegen 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underline{m}_{0}=D_{e}(\underline{m}_{0})=D_{h^{-1}\cdot h}(\underline{m}_{0})=D_{h^{-1}}(D_{h}(\underline{m}_{0}))=D_{h^{-1}}(\underline{m}_{0})
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+gilt also 
+\begin_inset Formula $\underline{h}^{-1}\in H.$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\underline{h}_{1},\underline{h}_{2}\in H.$
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Wegen 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D_{h_{1}}(\underline{m}_{0})=\underline{m}_{0},\quad D_{h_{2}}(\underline{m}_{0})=\underline{m}_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+folgt
+\begin_inset Formula 
+\[
+D_{h_{1}\cdot h_{2}}(\underline{m}_{0})=\underline{m}_{0},\quad D_{h_{2}\cdot h_{1}}(\underline{m}_{0})=\underline{m}_{0}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es gilt somit 
+\begin_inset Formula $\underline{h}_{1}\cdot\underline{h}_{2}\in H$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{h}_{2}\cdot\underline{h}_{1}\in H.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Die Fixpunktgruppen zur Transformationsgruppe 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ bestehen nur aus dem Einselement.
+\end_layout
+
+\begin_layout Subsubsection*
+Orbit
+\end_layout
+
+\begin_layout Standard
+Der Orbit von 
+\begin_inset Formula $\underline{m}=\left(A,B\right)^{T}\in M$
+\end_inset
+
+ bezogen auf die Transformationsgruppe 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ist definiert durch (siehe auch Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Orbit"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+O_{x}=\left\{ D_{g}(\underline{m}),\:g\in G\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Ebenentransformationen/Orbit.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Orbit"
+
+\end_inset
+
+Orbit eines Punktes 
+\begin_inset Formula $\underline{m}$
+\end_inset
+
+ der Mannigfaltigkeit 
+\begin_inset Formula $M$
+\end_inset
+
+=
+\begin_inset Formula $R^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Wirkung
+\end_layout
+
+\begin_layout Standard
+Die Gruppe 
+\begin_inset Formula $G$
+\end_inset
+
+ wirkt auf 
+\begin_inset Formula $M$
+\end_inset
+
+ effektiv und frei, aber nicht transitiv.
+\end_layout
+
+\begin_layout Subsubsection*
+Lievektorfelder
+\end_layout
+
+\begin_layout Standard
+Jedes 
+\begin_inset Formula $\underline{v}\in LG$
+\end_inset
+
+ erzeugt eine einparametrige Untergruppe (mit dem Parameter 
+\begin_inset Formula $t$
+\end_inset
+
+) 
+\begin_inset Formula $G^{v}$
+\end_inset
+
+ von 
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G^{v}=\left\{ \exp(t\underline{v}),\:\underline{v}\in LG,\:t\in R\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Durch
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{t}^{v}(\underline{x}):=D_{g^{v}(t)}(\underline{x})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+wird auf 
+\begin_inset Formula $M$
+\end_inset
+
+ ein Fluss definiert.
+ Explizit gilt
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{t}^{v}(\underline{x})=\left(\begin{array}{cc}
+1-a(\underline{v},t) & c(\underline{v},t)\\
+a(\underline{v},t) & 1-c(\underline{v},t)
+\end{array}\right)\underline{x},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula $a(\underline{v},t)$
+\end_inset
+
+ und 
+\begin_inset Formula $c(\underline{v},t)$
+\end_inset
+
+ nach den Gleichungen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "KartenKoordinateA"
+
+\end_inset
+
+) und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "KartenKoordinateC"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Das Lie-Vektorfeld ist definiert durch
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underline{w}(\underline{x}):=\frac{dF_{t}^{v}(\underline{x})}{dt}\mid_{t=0}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Man erhält nach kurzer Rechnung für jedes 
+\begin_inset Formula $\underline{v}=\alpha\underline{e}_{1}^{*}+\beta\underline{e}_{2}^{*}\in LG$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{x}\in M$
+\end_inset
+
+ das zugehörige Lie-Vektorfeld auf 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underline{w}(\underline{x})=\left(\underline{e}+\underline{v}\right)\underline{x}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Einschub: Norm und Skalarprodukt im Raum 
+\begin_inset Formula $C^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es gelte 
+\begin_inset Formula $\underline{x}=\left(\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right)\in C^{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\Vert\underline{x}\Vert & = & \mid x_{1}\mid^{2}+\mid x_{2}\mid^{2}\\
+\left\langle \begin{array}{cc}
+\underline{x}, & \underline{y}\end{array}\right\rangle  & = & \frac{1}{4}\left(\Vert\underline{x}+\underline{y}\Vert^{2}-\Vert\underline{x}-\underline{y}\Vert^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection*
+Topologisches
+\end_layout
+
+\begin_layout Standard
+Die physikalisch sinnvollen Parameterwerte der Ebenentransformationen sind
+ Elemente der folgenden Teilmenge 
+\begin_inset Formula $D$
+\end_inset
+
+ des 
+\begin_inset Formula $R^{3}$
+\end_inset
+
+ (Konfigurationsraum):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+D:=\left\{ \underline{x}=\left(x_{1},x_{2},x_{3}\right)^{T}\in R^{3}\mid x_{1}+x_{2}+x_{3}>0,x_{2}>0\right\} \label{D}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diese Parameterwerte werden durch die Abbildung 
+\begin_inset Formula $\underline{G}$
+\end_inset
+
+ auf die Ebenentransformationsmatrizen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G^{+}:=\left\{ \underline{g}=(g_{ij})\in R^{2\times2}\mid\det(\underline{g})>0,\sum_{i}g_{ij}=1\right\} \label{ET2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+abgebildet, dabei gilt
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{G}: & D\mapsto & G^{+}\\
+\underline{G}(\underline{x}) & := & \frac{1}{x_{1}+x_{2}+x_{3}}\left(\begin{array}{cc}
+x_{2}+x_{3} & x_{3}\\
+x_{1} & x_{1}+x_{2}
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Satz 1
+\end_layout
+
+\begin_layout Standard
+Die Abbildung 
+\begin_inset Formula $\underline{G}:D\mapsto G^{+}$
+\end_inset
+
+ ist surjektiv.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis:
+\end_layout
+
+\begin_layout Standard
+Zu beweisen ist: 
+\begin_inset Formula $\underline{G}(D)=G^{+}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\underline{G}(D)\subset G^{+}$
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dies ist erfüllt, da für alle 
+\begin_inset Formula $\underline{x}\in D$
+\end_inset
+
+ die Zeilensumme von 
+\begin_inset Formula $\underline{G}(\underline{x})$
+\end_inset
+
+ gleich 1 ist und die Determinante grösser 0 ist.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\underline{G}(D)\supset G^{+}$
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Für ein beliebiges Element von 
+\begin_inset Formula $G^{+}$
+\end_inset
+
+ gilt die Darstellung
+\begin_inset Formula 
+\[
+\underline{g}=\left(\begin{array}{cc}
+\beta & \gamma\\
+\alpha & \delta
+\end{array}\right),\alpha+\beta=1,\gamma+\delta=1,\det\underline{g}>0
+\]
+
+\end_inset
+
+ oder auch 
+\begin_inset Formula 
+\[
+\underline{g}=\left(\begin{array}{cc}
+1-\alpha & \gamma\\
+\alpha & 1-\gamma
+\end{array}\right),\det\underline{g}>0.
+\]
+
+\end_inset
+
+Durch 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1} & = & \alpha\\
+x_{2} & = & 1-(\alpha+\gamma)\\
+x_{3} & = & \gamma
+\end{eqnarray*}
+
+\end_inset
+
+lässt sich für jedes 
+\begin_inset Formula $\underline{g}\in G^{2}$
+\end_inset
+
+ ein 
+\begin_inset Formula $\underline{G}(\underline{x})$
+\end_inset
+
+ hinzubestimmen.
+ Wegen 
+\begin_inset Formula $\det\underline{g}=1-(\alpha+\gamma)>0$
+\end_inset
+
+ gilt 
+\begin_inset Formula $x_{2}>0$
+\end_inset
+
+ und ausserdem gilt 
+\begin_inset Formula $x_{1}+x_{2}+x_{3}>0$
+\end_inset
+
+.
+ Daraus folgt 
+\begin_inset Formula $\underline{x}\in D$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Satz 2
+\end_layout
+
+\begin_layout Standard
+Die Abbildung 
+\begin_inset Formula $\underline{G}:D\mapsto G^{+}$
+\end_inset
+
+ ist nicht injektiv.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis:
+\end_layout
+
+\begin_layout Standard
+Es sei 
+\begin_inset Formula $\underline{x}=(x_{1},x_{2},x_{3})^{T}\in D$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{y}=\lambda\underline{x},\lambda>0$
+\end_inset
+
+.
+ Es gilt also 
+\begin_inset Formula $\underline{y}\in D$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{y}\neq\underline{x}$
+\end_inset
+
+.
+ Durch Einsetzen sieht man sofort 
+\begin_inset Formula $\underline{G}(\underline{x})\neq\underline{G}(\underline{y})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Äquivalenzrelation
+\end_layout
+
+\begin_layout Standard
+Im folgenden werden alle 
+\begin_inset Formula $\underline{x}\in D$
+\end_inset
+
+ als äquivalent angesehen, die sich nur um einen positiven Faktor ungleich
+ 0 unterscheiden, also
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underline{x}\sim\underline{y}\Leftrightarrow\underline{x}=\lambda\underline{y},\lambda>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die entstehenden Äquivalenzklassen 
+\begin_inset Formula $[\underline{x}]$
+\end_inset
+
+ werden aber im folgenden vereinfacht als 
+\begin_inset Formula $\underline{x}$
+\end_inset
+
+ und der entstehende Faktorraum 
+\begin_inset Formula $D/\sim$
+\end_inset
+
+ als 
+\begin_inset Formula $D$
+\end_inset
+
+ bezeichnet.
+\end_layout
+
+\begin_layout Section*
+Anhang
+\end_layout
+
+\begin_layout Subsection*
+Gegenüberstellung der Gruppen ET(2) und 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="block" valignment="top">
+<column alignment="block" valignment="top">
+<column alignment="block" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ET(2)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Darstellung von 
+\begin_inset Formula $g$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\begin{array}{c}
+a\\
+b
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\begin{array}{c}
+a\\
+b
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplikation 
+\begin_inset Formula $g\cdot g^{'}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\begin{array}{c}
+a(1-a^{'})+(1-c)a^{'}\\
+(1-a)c^{'}+c(1-c^{'})
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\begin{array}{c}
+aa^{'}-bb^{'}\\
+ab^{'}+ba^{'}
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inverse 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{1}{1-(a+b)}\left(\begin{array}{c}
+a\\
+b
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{a^{2}+b^{2}}\left(\begin{array}{c}
+a\\
+-b
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Einselement 
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\begin{array}{c}
+0\\
+0
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\begin{array}{c}
+1\\
+0
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kommutator 
+\begin_inset Formula $\left[g,g^{'}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{ac^{'}-ca^{'}}\left(\begin{array}{c}
+1\\
+-1
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\begin{array}{c}
+0\\
+0
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
