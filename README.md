@@ -1,2 +1,2 @@
 # Hobby
-Einige meiner Spass-Projekte
+Einige meiner Spass-an-der-Freud-Projekte
