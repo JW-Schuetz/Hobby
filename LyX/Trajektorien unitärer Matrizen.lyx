@@ -175,10 +175,7 @@ Die zweite Lösungsidee ist es daher, eine Trajektorie in der Lie-Algebra
 \end_inset
 
  abzubilden.
-\end_layout
-
-\begin_layout Itemize
-Diese Idee trägt, da Lie-Algebren eine Vektorraumstruktur besitzen.
+ Diese Idee trägt, da Lie-Algebren eine Vektorraumstruktur besitzen.
 \end_layout
 
 \begin_layout Itemize
@@ -228,8 +225,9 @@ literal "true"
 status open
 
 \begin_layout Plain Layout
-Diese Matrixexponierte kann man (analog zum im reellen Fall orthogonalen
- Matrizen) durch Nutzung der speziellen Eigenschaften der Lie-Algebra 
+Diese Matrixexponierte kann man (analog zu den orthogonalen Matrizen im
+ reellen Fall) durch Nutzung der speziellen Eigenschaften der Lie-Algebra
+ 
 \begin_inset Formula $LG$
 \end_inset
 

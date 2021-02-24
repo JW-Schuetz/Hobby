@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -63,7 +63,7 @@
 \defskip smallskip
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style german
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -91,6 +91,23 @@ Principles of Quantum Mechanics, Shankar
 LatexCommand cite
 key "Shankar"
 literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Jürgen Womser-Schütz, https://github.com/JW-Schuetz
+\end_layout
+
+\begin_layout Date
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kein Datum!
+\end_layout
 
 \end_inset
 
@@ -195,6 +212,10 @@ status collapsed
 \end_inset
 
  
+\end_layout
+
+\begin_layout Paragraph*
+Symmetrie
 \begin_inset Formula 
 \begin{eqnarray}
 \begin{array}{ccccc}
@@ -204,7 +225,11 @@ status collapsed
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Paragraph*
+Semidefinitheit
 \begin_inset Formula 
 \begin{eqnarray}
 \begin{array}{ccccc}
@@ -218,6 +243,10 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Paragraph*
+Linearität
 \end_layout
 
 \begin_layout Standard
@@ -237,7 +266,7 @@ status collapsed
 \end_layout
 
 \begin_layout Subsubsection*
-Definition 
+Definitionen
 \end_layout
 
 \begin_layout Standard
@@ -294,7 +323,7 @@ Norm
 Orthogonale Basen 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 Schwarzsche Ungleichung 
 \end_layout
 
@@ -312,7 +341,7 @@ Schwarzsche Ungleichung
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 Dreiecksungleichung
 \family roman
 \series medium
@@ -343,7 +372,7 @@ Dreiecksungleichung
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 Adjungierte 
 \end_layout
 
@@ -366,7 +395,7 @@ Kommutator
 
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Subsubsection*
 Regeln 
 \begin_inset Note Note
 status collapsed
@@ -414,7 +443,7 @@ Parallele zur Kettenregel der Differentation?
 
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Subsubsection*
 Beweise 
 \end_layout
 
