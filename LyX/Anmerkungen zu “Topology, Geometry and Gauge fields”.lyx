@@ -119,7 +119,145 @@ Kein Datum!
 \end_layout
 
 \begin_layout Section*
+Kapitel 
+\begin_inset Quotes gld
+\end_inset
+
 Physical and Geometrical Motivation
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Elektrischer Monopol
+\end_layout
+
+\begin_layout Standard
+Sein elektrisches und magnetisches Feld in Kugelkoordinaten mit den Einheitsvekt
+oren 
+\begin_inset Formula $\underline{e}_{\rho}$
+\end_inset
+
+, 
+\begin_inset Formula $\underline{e}_{\phi}$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{e}_{\varTheta}$
+\end_inset
+
+ ist auf 
+\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+ durch
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{E}\left(\begin{array}{ccc}
+\rho, & \phi, & \varTheta\end{array}\right) & = & \frac{q}{\rho^{2}}\underline{e}_{\rho}\\
+\underline{B}\left(\begin{array}{ccc}
+\rho, & \phi, & \varTheta\end{array}\right) & = & \underline{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gegeben und erfüllt dort die quellenfreien Maxwellgleichungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\text{div}\left(\underline{E}\right) & = & 0\label{eq:Maxwell}\\
+\text{div}\left(\underline{B}\right) & = & 0\nonumber \\
+\text{rot}\left(\underline{E}\right) & = & \underline{0}\nonumber \\
+\text{rot}\left(\underline{B}\right) & = & \underline{0}.\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Magnetischer Monopol
+\end_layout
+
+\begin_layout Standard
+Ein magnetischer Monopol wurde bisher noch nicht beobachtet und ist deshalb
+ hypothetisch.
+ Sein magnetisches und elektrisches Feld in Kugelkoordinaten ist auf 
+\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+ analog durch
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{B}\left(\begin{array}{ccc}
+\rho, & \phi, & \varTheta\end{array}\right) & = & \frac{g}{\rho^{2}}\underline{e}_{\rho}\\
+\underline{E}\left(\begin{array}{ccc}
+\rho, & \phi, & \varTheta\end{array}\right) & = & \underline{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gegeben und erfüllt dort ebenfalls (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Maxwell"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection*
+Potentiale des magnetischen Monopols
+\end_layout
+
+\begin_layout Standard
+Weil 
+\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+ einfach zusammenhängend ist und dort 
+\begin_inset Formula $\text{rot}\left(\underline{B}\right)=\underline{0}$
+\end_inset
+
+ gilt, existiert auf 
+\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+ für den magnetischen Monopol ein skalares Potential 
+\begin_inset Formula $V$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{B}=\text{grad}\left(V\right)$
+\end_inset
+
+ und es gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+V\left(\begin{array}{ccc}
+\rho, & \phi, & \varTheta\end{array}\right) & = & -\frac{g}{\rho}.
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
