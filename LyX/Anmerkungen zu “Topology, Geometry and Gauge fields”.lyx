@@ -185,17 +185,69 @@ gegeben und erfüllt dort die quellenfreien Maxwellgleichungen
 \end_layout
 
 \begin_layout Subsection*
+Potentiale des elektrischen Monopols
+\end_layout
+
+\begin_layout Standard
+Weil 
+\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+ einfach zusammenhängend ist und dort 
+\begin_inset Formula $\text{rot}\left(\underline{E}\right)=\underline{0}$
+\end_inset
+
+ gilt, existiert auf 
+\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+ für den elektrischen Monopol ein skalares Potential 
+\begin_inset Formula $V$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{E}=\text{grad}\left(V\right)$
+\end_inset
+
+ und es gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+V\left(\begin{array}{ccc}
+\rho, & \phi, & \varTheta\end{array}\right) & = & -\frac{q}{\rho}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Vektorpotential 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{B}=\text{rot}\left(\underline{A}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
 Magnetischer Monopol
 \end_layout
 
 \begin_layout Standard
 Ein magnetischer Monopol wurde bisher noch nicht beobachtet und ist deshalb
  hypothetisch.
- Sein magnetisches und elektrisches Feld in Kugelkoordinaten ist auf 
+\end_layout
+
+\begin_layout Standard
+Sein magnetisches und elektrisches Feld in Kugelkoordinaten ist auf 
 \begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
 \end_inset
 
- analog durch
+ analog zum elektrischen Monopol durch
 \begin_inset Formula 
 \begin{eqnarray*}
 \underline{B}\left(\begin{array}{ccc}
@@ -258,6 +310,11 @@ V\left(\begin{array}{ccc}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Aus der Sicht der Quantenmechanik ist es aber sehr wünschenswert auch ein
+ Vektorpotential zu haben.
 \end_layout
 
 \begin_layout Bibliography
