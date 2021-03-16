@@ -787,11 +787,11 @@ E\left[\underline{\alpha}\left(t\right)\right] & = & E_{k}\left[\underline{\alph
 \begin_layout Standard
 und deren zeitliche Ableitung 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Die runde Klammer verschwindet wegen der Gültigkeit des Newtonschen Gesetztes
- (
+Die geschweifte Klammer verschwindet wegen der Gültigkeit des Newtonschen
+ Gesetztes (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Newton"
