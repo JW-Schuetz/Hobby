@@ -122,80 +122,6 @@ Vektoren
 Grundlegendes
 \end_layout
 
-\begin_layout Standard
-Aus der Vektoranalysis ist für den dreidimensionalen Raum 
-\begin_inset Formula $\mathbb{R}^{3}$
-\end_inset
-
- hinlänglich bekannt
-\begin_inset Formula 
-\begin{eqnarray*}
-\text{rot grad\left(\psi\right)} & = & \underline{0}\\
-\text{div rot\left(\underline{A}\right)} & = & 0.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Damit gelten die folgenden Aussagen
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{V}=\text{grad\left(\psi\right)} & \Longrightarrow & \text{rot}\left(\underline{V}\right)=\underline{0}\\
-\underline{W}=\text{rot\left(\underline{A}\right)} & \Longrightarrow & \text{div}\left(\underline{W}\right)=0.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Aber gilt auch die Umkehrung? 
-\end_layout
-
-\begin_layout Standard
-Existiert für jedes rotationsfreie Feld 
-\begin_inset Formula $\underline{V}$
-\end_inset
-
- eine skalare Funktion 
-\begin_inset Formula $\psi$
-\end_inset
-
- mit 
-\begin_inset Formula $\underline{V}=\text{grad\left(\psi\right)}$
-\end_inset
-
- und existiert für jedes divergenzfreie Feld 
-\begin_inset Formula $\underline{W}$
-\end_inset
-
- ein Feld 
-\begin_inset Formula $\underline{A}$
-\end_inset
-
- mit 
-\begin_inset Formula $\underline{W}=\text{rot\left(\underline{A}\right)}$
-\end_inset
-
-?
-\end_layout
-
-\begin_layout Standard
-Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
- Definitionsbereich 
-\begin_inset Formula $U$
-\end_inset
-
- ab.
-\end_layout
-
 \begin_layout Subsection*
 Satz von Stokes
 \end_layout
@@ -288,6 +214,84 @@ Es gelten die quellenfreien Maxwellgleichungen
 
 \end_layout
 
+\begin_layout Subsection*
+Potentiale
+\end_layout
+
+\begin_layout Standard
+Aus der Vektoranalysis ist für den dreidimensionalen Raum 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ hinlänglich bekannt
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{rot grad\left(\psi\right)} & = & \underline{0}\\
+\text{div rot\left(\underline{A}\right)} & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit gelten die folgenden Aussagen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{V}=\text{grad\left(\psi\right)} & \Longrightarrow & \text{rot}\left(\underline{V}\right)=\underline{0}\\
+\underline{W}=\text{rot\left(\underline{A}\right)} & \Longrightarrow & \text{div}\left(\underline{W}\right)=0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aber gilt auch die Umkehrung? 
+\end_layout
+
+\begin_layout Standard
+Existiert für jedes rotationsfreie Feld 
+\begin_inset Formula $\underline{V}$
+\end_inset
+
+ eine skalare Funktion 
+\begin_inset Formula $\psi$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{V}=\text{grad\left(\psi\right)}$
+\end_inset
+
+ und existiert für jedes divergenzfreie Feld 
+\begin_inset Formula $\underline{W}$
+\end_inset
+
+ ein Feld 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{W}=\text{rot\left(\underline{A}\right)}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
+ Definitionsbereich 
+\begin_inset Formula $U$
+\end_inset
+
+ ab.
+\end_layout
+
 \begin_layout Section*
 Definitionsbereich 
 \begin_inset Formula $U$
@@ -307,7 +311,7 @@ Der Definitionsbereich der Felder und Potentiale beider Monopole ist der
 \end_inset
 
 .
- Der Ursprung ist ein singulärer Punkt.
+ Der Ursprung ist ein singulärer Punkt der Betrachtung.
 \end_layout
 
 \begin_layout Subsection*
@@ -555,7 +559,15 @@ Betrachtet man eine Kugeloberfläche
 
  sei entgegen des Uhrzeigersinns orientiert und die beiden Hemisphären besitzen
  einen nach aussen gerichteten Normalenvektor.
- Dann liefert eine einfache Rechnung 
+ Wir nehmen an, dass ein Vektorpotential 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ existiert.
+\end_layout
+
+\begin_layout Standard
+Dann liefert eine einfache Rechnung 
 \end_layout
 
 \begin_layout Standard
@@ -574,7 +586,7 @@ Betrachtet man eine Kugeloberfläche
 \end_layout
 
 \begin_layout Standard
-Anererseits folgt aus dem Satz von Stokes (
+Andererseits folgt aus dem Satz von Stokes (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Stokes"
