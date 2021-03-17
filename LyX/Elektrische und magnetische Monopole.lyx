@@ -119,7 +119,7 @@ Vektoren
 \end_layout
 
 \begin_layout Section*
-Behauptungen 
+Grundlegendes
 \end_layout
 
 \begin_layout Standard
@@ -196,175 +196,6 @@ Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
  ab.
 \end_layout
 
-\begin_layout Section*
-Elektrische und magnetische Monopole 
-\end_layout
-
-\begin_layout Subsection*
-Definitionsbereich 
-\begin_inset Formula $U$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Der Definitionsbereich der Felder und Potentiale beider Monopole ist der
- gesamte 
-\begin_inset Formula $\mathbb{R}^{3}$
-\end_inset
-
- mit Ausnahme des Ortes des Monopoles im Koordinatenursprung, also 
-\begin_inset Formula $U=\mathbb{R}^{3}-\underline{0}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Subsection*
-Topologische Eigenschaften des Definitionsbereiches 
-\begin_inset Formula $U$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Die erste Homotopiegruppe (Fundamentalgruppe) von 
-\begin_inset Formula $U$
-\end_inset
-
- ist trivial 
-\begin_inset Formula $\pi_{1}\left(U\right)=0$
-\end_inset
-
- , d.h.
- eine beliebige 1-Sphäre 
-\begin_inset Formula $S^{1}$
-\end_inset
-
- (Kreis) in 
-\begin_inset Formula $U$
-\end_inset
-
- kann kontinuierlich auf einen Punkt zusammengezogen werden.
- Man nennt 
-\begin_inset Formula $U$
-\end_inset
-
- auch einfach zusammenhängend.
-\end_layout
-
-\begin_layout Itemize
-Die zweite Homotopiegruppe von 
-\begin_inset Formula $U$
-\end_inset
-
- ist nicht trivial 
-\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
-\end_inset
-
- , d.h.
- es ist nicht möglich, eine beliebige 2-Sphäre 
-\begin_inset Formula $S^{2}$
-\end_inset
-
- (Kugeloberfläche) in 
-\begin_inset Formula $U$
-\end_inset
-
- kontinuierlich auf einen Punkt zusammenzuziehen - dies scheitert für jede
- Kugeloberfläche, die den Ursprung umschliesst.
-\end_layout
-
-\begin_layout Standard
-Diese beiden Eigenschaften des Definitionsbereiches 
-\begin_inset Formula $U$
-\end_inset
-
- haben Konsequenzen für die Existenz der Potentiale.
-\end_layout
-
-\begin_layout Itemize
-Im Fall 
-\begin_inset Formula $\pi_{1}\left(U\right)=0$
-\end_inset
-
- wird sich zeigen, dass für jedes rotationsfreie Feld 
-\begin_inset Formula $\underline{V}$
-\end_inset
-
- die Existenz eines skalaren Potentiales 
-\begin_inset Formula $\psi$
-\end_inset
-
- folgt.
- 
-\end_layout
-
-\begin_layout Itemize
-Im Fall 
-\begin_inset Formula $\pi_{1}\left(U\right)=0$
-\end_inset
-
- existieren aber divergenzfreie Felder 
-\begin_inset Formula $\underline{W}$
-\end_inset
-
- die kein Vektorpotential 
-\begin_inset Formula $\underline{A}$
-\end_inset
-
- besitzen.
-\end_layout
-
-\begin_layout Itemize
-Im Fall 
-\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
-\end_inset
-
- wird sich zeigen, dass jedes divergenzfreie Feld 
-\begin_inset Formula $\underline{W}$
-\end_inset
-
- eine Vektorpotential 
-\begin_inset Formula $\underline{A}$
-\end_inset
-
- besitzt.
-\end_layout
-
-\begin_layout Standard
-Noch zu tun: dies beweisen.
-\end_layout
-
-\begin_layout Subsection*
-Maxwellgleichungen 
-\end_layout
-
-\begin_layout Standard
-Die Monopolfelder erfüllen auf 
-\begin_inset Formula $U$
-\end_inset
-
- die quellenfreien Maxwellgleichungen
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\text{div}\left(\underline{E}\right) & = & 0\label{eq:Maxwell}\\
-\text{div}\left(\underline{B}\right) & = & 0\nonumber \\
-\text{rot}\left(\underline{E}\right) & = & \underline{0}\nonumber \\
-\text{rot}\left(\underline{B}\right) & = & \underline{0}.\nonumber 
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection*
 Satz von Stokes
 \end_layout
@@ -374,11 +205,11 @@ Sei
 \begin_inset Formula $S$
 \end_inset
 
- eine glatte orientierte Fläche im 
+ eine glatte, orientierte Fläche im 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- mit dem Rand 
+ mit Rand 
 \begin_inset Formula $\partial S$
 \end_inset
 
@@ -397,9 +228,9 @@ Sei
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \oint_{\partial S}\underline{A}d\underline{l}.
-\end{eqnarray*}
+\begin{eqnarray}
+\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \oint_{\partial S}\underline{A}d\underline{l}.\label{eq:Stokes}
+\end{eqnarray}
 
 \end_inset
 
@@ -433,6 +264,177 @@ Dabei ist
 
 .
  
+\end_layout
+
+\begin_layout Subsection*
+Maxwellgleichungen 
+\end_layout
+
+\begin_layout Standard
+Es gelten die quellenfreien Maxwellgleichungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\text{div}\left(\underline{E}\right) & = & 0\label{eq:Maxwell}\\
+\text{div}\left(\underline{B}\right) & = & 0\nonumber \\
+\text{rot}\left(\underline{E}\right) & = & \underline{0}\nonumber \\
+\text{rot}\left(\underline{B}\right) & = & \underline{0}.\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Definitionsbereich 
+\begin_inset Formula $U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Definitionsbereich der Felder und Potentiale beider Monopole ist der
+ gesamte 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ mit Ausnahme des Ortes des Monopoles im Koordinatenursprung, also 
+\begin_inset Formula $U=\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+.
+ Der Ursprung ist ein singulärer Punkt.
+\end_layout
+
+\begin_layout Subsection*
+Topologische Eigenschaften des Definitionsbereiches 
+\begin_inset Formula $U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die erste Homotopiegruppe (Fundamentalgruppe) von 
+\begin_inset Formula $U$
+\end_inset
+
+ ist trivial 
+\begin_inset Formula $\pi_{1}\left(U\right)=0$
+\end_inset
+
+ , d.h.
+ eine beliebige 1-Sphäre 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ (Kreis) in 
+\begin_inset Formula $U$
+\end_inset
+
+ kann kontinuierlich auf einen Punkt in 
+\begin_inset Formula $U$
+\end_inset
+
+ zusammengezogen werden.
+ Man nennt 
+\begin_inset Formula $U$
+\end_inset
+
+ auch einfach zusammenhängend.
+\end_layout
+
+\begin_layout Itemize
+Die zweite Homotopiegruppe von 
+\begin_inset Formula $U$
+\end_inset
+
+ ist nicht trivial 
+\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
+\end_inset
+
+ , d.h.
+ es ist nicht möglich, eine beliebige 2-Sphäre 
+\begin_inset Formula $S^{2}$
+\end_inset
+
+ (Kugeloberfläche) in 
+\begin_inset Formula $U$
+\end_inset
+
+ kontinuierlich auf einen Punkt in 
+\begin_inset Formula $U$
+\end_inset
+
+ zusammenzuziehen - dies scheitert für jede Kugeloberfläche, die den Ursprung
+ umschliesst.
+\end_layout
+
+\begin_layout Standard
+Diese beiden Eigenschaften des Definitionsbereiches 
+\begin_inset Formula $U$
+\end_inset
+
+ haben Konsequenzen für die Existenz der Potentiale.
+\end_layout
+
+\begin_layout Enumerate
+Im Fall 
+\begin_inset Formula $\pi_{1}\left(U\right)=0$
+\end_inset
+
+ wird sich zeigen, dass für jedes rotationsfreie Feld 
+\begin_inset Formula $\underline{V}$
+\end_inset
+
+ die Existenz eines skalaren Potentiales 
+\begin_inset Formula $\psi$
+\end_inset
+
+ folgt.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Fall-2"
+
+\end_inset
+
+Im Fall 
+\begin_inset Formula $\pi_{1}\left(U\right)=0$
+\end_inset
+
+ existieren aber divergenzfreie Felder 
+\begin_inset Formula $\underline{W}$
+\end_inset
+
+ die kein Vektorpotential 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ besitzen.
+\end_layout
+
+\begin_layout Enumerate
+Im Fall 
+\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
+\end_inset
+
+ wird sich zeigen, dass jedes divergenzfreie Feld 
+\begin_inset Formula $\underline{W}$
+\end_inset
+
+ eine Vektorpotential 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ besitzt.
 \end_layout
 
 \begin_layout Section*
@@ -500,6 +502,108 @@ gegeben.
 
 \begin_layout Standard
 Noch zu tun: Potentiale herleiten.
+\end_layout
+
+\begin_layout Subsection*
+Beweis zu Punkt 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Fall-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ für den Spezialfall 
+\begin_inset Quotes gld
+\end_inset
+
+Magnetischer Monopol
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Betrachtet man eine Kugeloberfläche 
+\begin_inset Formula $S$
+\end_inset
+
+ des Radiuses 
+\begin_inset Formula $R$
+\end_inset
+
+ um den Ursprung und sei 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ ihr Äquator.
+ Weiterhin seien 
+\begin_inset Formula $S^{+}$
+\end_inset
+
+ und 
+\begin_inset Formula $S^{-}$
+\end_inset
+
+ ihre obere und untere Hemisphären.
+ 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ sei entgegen des Uhrzeigersinns orientiert und die beiden Hemisphären besitzen
+ einen nach aussen gerichteten Normalenvektor.
+ Dann liefert eine einfache Rechnung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \iint_{S}\underline{B}d\underline{a}\\
+ & = & \iint_{S}\left(\frac{g}{\rho^{2}}\underline{e}_{\rho}\right)d\underline{a}\\
+ & = & \frac{g}{R^{2}}\iint_{S}\underline{e}_{\rho}d\underline{a}\\
+ & = & \frac{g}{R^{2}}\left(4\pi R^{2}\right)\\
+ & = & 4\pi g.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Anererseits folgt aus dem Satz von Stokes (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Stokes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & =\\
+\\
+\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Noch zu tun: 1.
+ und 3.
+ beweisen.
 \end_layout
 
 \begin_layout Standard
