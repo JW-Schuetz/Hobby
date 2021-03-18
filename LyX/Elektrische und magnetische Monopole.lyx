@@ -323,7 +323,7 @@ Topologische Eigenschaften des Definitionsbereiches
 \end_layout
 
 \begin_layout Itemize
-Die erste Homotopiegruppe (Fundamentalgruppe) von 
+Die erste Homotopiegruppe (die Fundamentalgruppe) von 
 \begin_inset Formula $U$
 \end_inset
 
@@ -454,7 +454,7 @@ Sein elektrisches und magnetisches Feld ist auf
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{E}\left(\begin{array}{ccc}
-\rho, & \phi, & \Theta\end{array}\right) & = & \frac{q}{\rho^{2}}\underline{e}_{\rho}\label{eq:E-elektrisch}\\
+\rho, & \phi, & \Theta\end{array}\right) & = & \frac{q}{\rho^{2}}\underline{e}_{\rho}\label{eq:Felder-EM}\\
 \underline{B}\left(\begin{array}{ccc}
 \rho, & \phi, & \Theta\end{array}\right) & = & \underline{0}\nonumber 
 \end{eqnarray}
@@ -489,10 +489,10 @@ Sein magnetisches und elektrisches Feld in Kugelkoordinaten ist auf
  analog zum elektrischen Monopol durch
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{B}\left(\begin{array}{ccc}
-\rho, & \phi, & \varTheta\end{array}\right) & = & \frac{g}{\rho^{2}}\underline{e}_{\rho}\label{eq:B-magnetisch}\\
 \underline{E}\left(\begin{array}{ccc}
-\rho, & \phi, & \varTheta\end{array}\right) & = & \underline{0}\nonumber 
+\rho, & \phi, & \varTheta\end{array}\right) & = & \underline{0}\nonumber \\
+\underline{B}\left(\begin{array}{ccc}
+\rho, & \phi, & \varTheta\end{array}\right) & = & \frac{g}{\rho^{2}}\underline{e}_{\rho}\label{eq:Felder-MM}
 \end{eqnarray}
 
 \end_inset
@@ -565,8 +565,16 @@ Betrachtet man eine Kugeloberfläche
 \begin_inset Formula $S^{-}$
 \end_inset
 
- besitzen einen nach aussen gerichteten Normalenvektor.
- Wir nehmen an, dass ein Vektorpotential 
+ besitzen einen nach aussen gerichteten Normalenvektor 
+\begin_inset Formula $\underline{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Wir nehmen an, dass ein Vektorpotential 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
@@ -579,10 +587,18 @@ Betrachtet man eine Kugeloberfläche
 \end_layout
 
 \begin_layout Standard
-Dann gilt wegen (
+Dann erhält man für den Fluss der Rotation des Vektorpotentials 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ durch 
+\begin_inset Formula $S$
+\end_inset
+
+ zusammen mit (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:B-magnetisch"
+reference "eq:"
 plural "false"
 caps "false"
 noprefix "false"
@@ -618,7 +634,7 @@ noprefix "false"
 
 \end_inset
 
-)
+) für diesen Fluss
 \end_layout
 
 \begin_layout Standard
@@ -657,7 +673,8 @@ noprefix "false"
 \end_inset
 
 ) besteht ein Widerspruch.
- Also existiert kein solches Vektorpotential 
+ Die getroffene Annahme ist also falsch und es existiert kein solches Vektorpote
+ntial 
 \begin_inset Formula $\underline{A}\quad\blacksquare$
 \end_inset
 
