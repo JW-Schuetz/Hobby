@@ -557,8 +557,15 @@ Betrachtet man eine Kugeloberfläche
 \begin_inset Formula $\partial S$
 \end_inset
 
- sei entgegen des Uhrzeigersinns orientiert und die beiden Hemisphären besitzen
- einen nach aussen gerichteten Normalenvektor.
+ sei entgegen des Uhrzeigersinns orientiert und die beiden Hemisphären 
+\begin_inset Formula $S^{+}$
+\end_inset
+
+ und 
+\begin_inset Formula $S^{-}$
+\end_inset
+
+ besitzen einen nach aussen gerichteten Normalenvektor.
  Wir nehmen an, dass ein Vektorpotential 
 \begin_inset Formula $\underline{A}$
 \end_inset
@@ -572,7 +579,7 @@ Betrachtet man eine Kugeloberfläche
 \end_layout
 
 \begin_layout Standard
-Dann liefert wegen (
+Dann gilt wegen (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:B-magnetisch"
@@ -582,18 +589,18 @@ noprefix "false"
 
 \end_inset
 
-) eine einfache Rechnung 
+) 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \iint_{S}\underline{B}d\underline{a}\\
- & = & \iint_{S}\left(\frac{g}{\rho^{2}}\underline{e}_{\rho}\right)d\underline{a}\\
- & = & \frac{g}{R^{2}}\iint_{S}\underline{e}_{\rho}d\underline{a}\\
- & = & \frac{g}{R^{2}}\left(4\pi R^{2}\right)\\
- & = & 4\pi g.
-\end{eqnarray*}
+\begin{eqnarray}
+\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \iint_{S}\underline{B}d\underline{a}\label{eq:linke-Seite}\\
+ & = & \iint_{S}\left(\frac{g}{\rho^{2}}\underline{e}_{\rho}\right)d\underline{a}\nonumber \\
+ & = & \frac{g}{R^{2}}\iint_{S}\underline{e}_{\rho}d\underline{a}\nonumber \\
+ & = & \frac{g}{R^{2}}\left(4\pi R^{2}\right)\nonumber \\
+ & = & 4\pi g.\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -616,12 +623,12 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \iint_{S^{+}}\left(\text{rot }\underline{A}\right)d\underline{a}+\iint_{S^{-}}\left(\text{rot }\underline{A}\right)d\underline{a}\\
- & = & \oint_{\partial S}\underline{A}d\underline{l}+\oint_{-\partial S}\underline{A}d\underline{l}\\
- & = & \oint_{\partial S}\underline{A}d\underline{l}-\oint_{\partial S}\underline{A}d\underline{l}\\
- & = & 0.
-\end{eqnarray*}
+\begin{eqnarray}
+\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \iint_{S^{+}}\left(\text{rot }\underline{A}\right)d\underline{a}+\iint_{S^{-}}\left(\text{rot }\underline{A}\right)d\underline{a}\label{eq:rechte-Seite}\\
+ & = & \oint_{\partial S}\underline{A}d\underline{l}+\oint_{-\partial S}\underline{A}d\underline{l}\nonumber \\
+ & = & \oint_{\partial S}\underline{A}d\underline{l}-\oint_{\partial S}\underline{A}d\underline{l}\nonumber \\
+ & = & 0.\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -629,8 +636,28 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Dies ist ein Widerspruch.
- Es existiert also kein Vektorpotential 
+Zwischen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linke-Seite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rechte-Seite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) besteht ein Widerspruch.
+ Also existiert kein solches Vektorpotential 
 \begin_inset Formula $\underline{A}\quad\blacksquare$
 \end_inset
 
@@ -663,6 +690,19 @@ literal "false"
 
 Topology, Geometry and Gauge fields; Naber, Gregory; Springer Science+Business
  Media; 2011
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "Valli"
+literal "false"
+
+\end_inset
+
+Scalar and vector potentials, Helmholtz decomposition, and de Rham cohomology;
+ Valli, Alberto; University of Trento, Italy
 \end_layout
 
 \end_body
