@@ -691,6 +691,100 @@ Noch zu tun: 1.
  beweisen.
 \end_layout
 
+\begin_layout Subsection*
+Helmholtz Zerlegung
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem 1
+\end_layout
+
+\begin_layout Standard
+Nehmen wir an, dass 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ rotationsfrei ist und dass 
+\begin_inset Formula $\underline{H}\times\underline{n}=0$
+\end_inset
+
+ auf dem Rand 
+\begin_inset Formula $\partial\Omega$
+\end_inset
+
+ von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ gilt.
+ Dann existiert eine skalare Funktion 
+\begin_inset Formula $\psi$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{H}=\text{grad}\left(\psi\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis
+\end_layout
+
+\begin_layout Standard
+Ergänzt man 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ durch 
+\begin_inset Formula $\underline{0}$
+\end_inset
+
+ ausserhalb von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, dann bleibt 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ rotationsfrei.
+ 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ ist also der Gradient eines skalaren Potentials
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hier wird das Argument benutzt, dass im 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ jedes rotationsfreie Feld als Gradient eines skalaen Potentials bestimmt
+ werden kann.
+ Ist das denn bewiesen?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
