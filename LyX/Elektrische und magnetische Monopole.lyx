@@ -708,6 +708,188 @@ Nehmen wir an, dass
 \begin_inset Formula $\Omega$
 \end_inset
 
+ rotationsfrei ist und dass jede geschlossene Kurve in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ der Rand 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ einer Fläche 
+\begin_inset Formula $S\subset\Omega$
+\end_inset
+
+ ist.
+ Dann existiert eine skalare Funktion 
+\begin_inset Formula $\psi$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{H}=\text{grad}\left(\psi\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis
+\end_layout
+
+\begin_layout Standard
+Da der Fluss von 
+\begin_inset Formula $\text{rot }\underline{H}$
+\end_inset
+
+ auf jeder Oberfläche 
+\begin_inset Formula $S$
+\end_inset
+
+ verschwindet, folgt aus dem Satz von Stokes (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Stokes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), dass das Linienintegral einer geschlossenen nKurve über 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ verschwindet
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hä?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem 2
+\end_layout
+
+\begin_layout Standard
+Nehmen wir an, dass 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ divergenzfrei ist und dass jede geschlossene Oberfläche in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ der Rand 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ einer Teilmenge 
+\begin_inset Formula $D\subset\Omega$
+\end_inset
+
+ ist.
+ Dann existiert ein skalare Vektorfeld 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ mit 
+\begin_inset Formula $\underline{A}=\text{rot}\left(\underline{B}\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis
+\end_layout
+
+\begin_layout Standard
+Da das Intergal 
+\begin_inset Formula $\text{div}\left(\underline{B}\right)$
+\end_inset
+
+ auf jeder Teilmenge 
+\begin_inset Formula $D$
+\end_inset
+
+ verschwindet, 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hä?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem 3
+\end_layout
+
+\begin_layout Standard
+Nehmen wir an, dass 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
  rotationsfrei ist und dass 
 \begin_inset Formula $\underline{H}\times\underline{n}=0$
 \end_inset
@@ -741,19 +923,19 @@ Beweis
 \end_layout
 
 \begin_layout Standard
-Ergänzt man 
+Setzt man 
 \begin_inset Formula $\underline{H}$
-\end_inset
-
- durch 
-\begin_inset Formula $\underline{0}$
 \end_inset
 
  ausserhalb von 
 \begin_inset Formula $\Omega$
 \end_inset
 
-, dann bleibt 
+ durch 
+\begin_inset Formula $\underline{0}$
+\end_inset
+
+ fort, dann bleibt 
 \begin_inset Formula $\underline{H}$
 \end_inset
 
@@ -775,7 +957,7 @@ Hier wird das Argument benutzt, dass im
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- jedes rotationsfreie Feld als Gradient eines skalaen Potentials bestimmt
+ jedes rotationsfreie Feld als Gradient eines skalaren Potentials bestimmt
  werden kann.
  Ist das denn bewiesen?
 \end_layout
@@ -783,6 +965,101 @@ Hier wird das Argument benutzt, dass im
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem 4
+\end_layout
+
+\begin_layout Standard
+Nehmen wir an, dass 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ divergenzfrei ist und dass 
+\begin_inset Formula $\underline{B}\underline{n}=0$
+\end_inset
+
+ auf dem Rand 
+\begin_inset Formula $\partial\Omega$
+\end_inset
+
+ von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ gilt.
+ Dann existiert ein Vektorfeld 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{B}=\text{rot}\left(\underline{A}\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis
+\end_layout
+
+\begin_layout Standard
+Setzt man 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ ausserhalb von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ durch 
+\begin_inset Formula $\underline{0}$
+\end_inset
+
+ fort, dann bleibt 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ divergenzfrei.
+ 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ ist also die Rotation eine Vektorpotentials
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hier wird das Argument benutzt, dass im 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ jedes divergenzfreie Feld als Rotation eines Vektorpotentials bestimmt
+ werden kann.
+ Ist das denn bewiesen?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Noch zu tun: Verstehen! Das ist die Stelle, in der die Topologie ins Spiel
+ kommt!
 \end_layout
 
 \begin_layout Standard
