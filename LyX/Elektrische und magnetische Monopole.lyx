@@ -759,7 +759,7 @@ noprefix "false"
 
 \end_inset
 
-), dass das Linienintegral einer geschlossenen nKurve über 
+), dass das Linienintegral einer geschlossenen Kurve über 
 \begin_inset Formula $\underline{H}$
 \end_inset
 
@@ -806,7 +806,7 @@ Nehmen wir an, dass
 \end_inset
 
  ist.
- Dann existiert ein skalare Vektorfeld 
+ Dann existiert ein skalares Vektorfeld 
 \family roman
 \series medium
 \shape up
@@ -1059,7 +1059,8 @@ Hier wird das Argument benutzt, dass im
 
 \begin_layout Standard
 Noch zu tun: Verstehen! Das ist die Stelle, in der die Topologie ins Spiel
- kommt!
+ kommt! Die Voraussetzungen von Theorem 3 sind für den magnetischen Monopol
+ nicht erfüllt!
 \end_layout
 
 \begin_layout Standard
