@@ -103,11 +103,7 @@ Kein Datum!
 \end_layout
 
 \begin_layout Standard
-Vektoren 
-\begin_inset Formula $v$
-\end_inset
-
- werden im folgenden durch einen Unterstrich kenntlich gemacht 
+Vektoren werden im folgenden durch einen Unterstrich kenntlich gemacht 
 \begin_inset Formula $\underline{v}$
 \end_inset
 
@@ -305,25 +301,32 @@ Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
 \end_layout
 
 \begin_layout Section*
-Definitionsbereich 
-\begin_inset Formula $U$
-\end_inset
-
-
+Definitionsbereich
 \end_layout
 
 \begin_layout Standard
-Der Definitionsbereich der Felder und Potentiale beider Monopole ist der
- gesamte 
+Der Definitionsbereich 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ der Felder und Potentiale beider Monopole ist der gesamte 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
  mit Ausnahme des Ortes des Monopoles im Koordinatenursprung, also 
-\begin_inset Formula $U=\mathbb{R}^{3}-\underline{0}$
+\begin_inset Formula $\Omega=\mathbb{R}^{3}-\underline{0}$
 \end_inset
 
 .
- Der Ursprung ist ein singulärer Punkt der Betrachtung.
+ 
+\end_layout
+
+\begin_layout Standard
+Dieser spezielle Definitionsbereich wird im folgenden mit 
+\begin_inset Formula $U$
+\end_inset
+
+ bezeichnet.
 \end_layout
 
 \begin_layout Subsection*
@@ -395,7 +398,7 @@ Diese beiden Eigenschaften des Definitionsbereiches
 \begin_inset Formula $U$
 \end_inset
 
- haben Konsequenzen für die Existenz der Potentiale.
+ haben vermutlich Konsequenzen für die Existenz der Potentiale.
 \end_layout
 
 \begin_layout Enumerate
