@@ -111,7 +111,19 @@ Vektoren
 \begin_inset Formula $\underline{v}$
 \end_inset
 
-, weiterhin sollen Kugelkoordinaten 
+, ihr Skalarprodukt sei durch 
+\begin_inset Formula $\bullet$
+\end_inset
+
+, ihr Kreuzprodukt durch 
+\begin_inset Formula $\times$
+\end_inset
+
+ bezeichnet.
+\end_layout
+
+\begin_layout Standard
+Weiterhin sollen Kugelkoordinaten 
 \begin_inset Formula $\left(\rho,\phi,\Theta\right)$
 \end_inset
 
@@ -155,7 +167,7 @@ Sei
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \oint_{\partial S}\underline{A}d\underline{l}.\label{eq:Stokes}
+\iint_{S}\left(\text{rot }\underline{A}\right)\bullet d\underline{a} & = & \oint_{\partial S}\underline{A}\bullet d\underline{l}.\label{eq:Stokes}
 \end{eqnarray}
 
 \end_inset
@@ -164,7 +176,7 @@ Sei
 \end_layout
 
 \begin_layout Standard
-Dabei ist 
+Dabei gilt 
 \begin_inset Formula $d\underline{a}=\underline{n}dS$
 \end_inset
 
@@ -184,7 +196,7 @@ Dabei ist
 \begin_inset Formula $\underline{t}$
 \end_inset
 
- des Flächenrandes 
+ des Randes 
 \begin_inset Formula $\partial S$
 \end_inset
 
@@ -236,7 +248,7 @@ Aus der Vektoranalysis ist für den dreidimensionalen Raum
 \end_layout
 
 \begin_layout Standard
-Damit gelten die folgenden Aussagen
+Damit gelten die folgenden beiden Aussagen
 \end_layout
 
 \begin_layout Standard
@@ -286,7 +298,7 @@ Existiert für jedes rotationsfreie Feld
 \begin_layout Standard
 Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
  Definitionsbereich 
-\begin_inset Formula $U$
+\begin_inset Formula $\Omega$
 \end_inset
 
  ab.
@@ -391,7 +403,7 @@ Im Fall
 \begin_inset Formula $\pi_{1}\left(U\right)=0$
 \end_inset
 
- wird sich zeigen, dass für jedes rotationsfreie Feld 
+ wird sich vermutlich zeigen, dass für jedes rotationsfreie Feld 
 \begin_inset Formula $\underline{V}$
 \end_inset
 
@@ -414,7 +426,7 @@ Im Fall
 \begin_inset Formula $\pi_{1}\left(U\right)=0$
 \end_inset
 
- existieren aber divergenzfreie Felder 
+ existieren aber vermutlich divergenzfreie Felder 
 \begin_inset Formula $\underline{W}$
 \end_inset
 
@@ -430,7 +442,7 @@ Im Fall
 \begin_inset Formula $\pi_{2}\left(U\right)\neq0$
 \end_inset
 
- wird sich zeigen, dass jedes divergenzfreie Feld 
+ wird sich vermutlich zeigen, dass jedes divergenzfreie Feld 
 \begin_inset Formula $\underline{W}$
 \end_inset
 
@@ -439,6 +451,10 @@ Im Fall
 \end_inset
 
  besitzt.
+\end_layout
+
+\begin_layout Standard
+Noch zu tun: die Vermutungen beweisen.
 \end_layout
 
 \begin_layout Section*
@@ -483,7 +499,7 @@ Ein magnetischer Monopol wurde bisher noch nicht beobachtet und ist deshalb
 
 \begin_layout Standard
 Sein magnetisches und elektrisches Feld in Kugelkoordinaten ist auf 
-\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\begin_inset Formula $U$
 \end_inset
 
  analog zum elektrischen Monopol durch
@@ -611,9 +627,9 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \iint_{S}\underline{B}d\underline{a}\label{eq:linke-Seite}\\
- & = & \iint_{S}\left(\frac{g}{\rho^{2}}\underline{e}_{\rho}\right)d\underline{a}\nonumber \\
- & = & \frac{g}{R^{2}}\iint_{S}\underline{e}_{\rho}d\underline{a}\nonumber \\
+\iint_{S}\left(\text{rot }\underline{A}\right)\bullet d\underline{a} & = & \iint_{S}\underline{B}\bullet d\underline{a}\label{eq:linke-Seite}\\
+ & = & \iint_{S}\left(\frac{g}{\rho^{2}}\underline{e}_{\rho}\right)\bullet d\underline{a}\nonumber \\
+ & = & \frac{g}{R^{2}}\iint_{S}\underline{e}_{\rho}\bullet d\underline{a}\nonumber \\
  & = & \frac{g}{R^{2}}\left(4\pi R^{2}\right)\nonumber \\
  & = & 4\pi g.\nonumber 
 \end{eqnarray}
@@ -640,9 +656,9 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\iint_{S}\left(\text{rot }\underline{A}\right)d\underline{a} & = & \iint_{S^{+}}\left(\text{rot }\underline{A}\right)d\underline{a}+\iint_{S^{-}}\left(\text{rot }\underline{A}\right)d\underline{a}\label{eq:rechte-Seite}\\
- & = & \oint_{\partial S}\underline{A}d\underline{l}+\oint_{-\partial S}\underline{A}d\underline{l}\nonumber \\
- & = & \oint_{\partial S}\underline{A}d\underline{l}-\oint_{\partial S}\underline{A}d\underline{l}\nonumber \\
+\iint_{S}\left(\text{rot }\underline{A}\right)\bullet d\underline{a} & = & \iint_{S^{+}}\left(\text{rot }\underline{A}\right)\bullet d\underline{a}+\iint_{S^{-}}\left(\text{rot }\underline{A}\right)\bullet d\underline{a}\label{eq:rechte-Seite}\\
+ & = & \oint_{\partial S}\underline{A}\bullet d\underline{l}+\oint_{-\partial S}\underline{A}\bullet d\underline{l}\nonumber \\
+ & = & \oint_{\partial S}\underline{A}\bullet d\underline{l}-\oint_{\partial S}\underline{A}\bullet d\underline{l}\nonumber \\
  & = & 0.\nonumber 
 \end{eqnarray}
 
@@ -695,6 +711,43 @@ Noch zu tun: 1.
 Helmholtz Zerlegung
 \end_layout
 
+\begin_layout Standard
+Es werden die beiden Räume der 
+\begin_inset Quotes gld
+\end_inset
+
+Harmonischen Felder
+\begin_inset Quotes grd
+\end_inset
+
+ definiert
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbb{H}_{m}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\bullet\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} \\
+\mathbb{H}_{e}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\times\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} .
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula $L_{p}^{3}\left(\Omega\right)$
+\end_inset
+
+ seien die Lebeque-integrablen Funktionen 
+\begin_inset Formula $L_{p}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
+\end_inset
+
+ bezeichnet.
+\end_layout
+
 \begin_layout Subsubsection*
 Theorem 1
 \end_layout
@@ -708,7 +761,11 @@ Nehmen wir an, dass
 \begin_inset Formula $\Omega$
 \end_inset
 
- rotationsfrei ist und dass jede geschlossene Kurve in 
+ rotationsfrei ist und dass jede geschlossene Kurve 
+\begin_inset Formula $C$
+\end_inset
+
+ in 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -721,7 +778,7 @@ Nehmen wir an, dass
 \end_inset
 
  ist.
- Dann existiert eine skalare Funktion 
+ Dann existiert eine Funktion 
 \begin_inset Formula $\psi$
 \end_inset
 
@@ -742,7 +799,7 @@ Beweis
 
 \begin_layout Standard
 Da der Fluss von 
-\begin_inset Formula $\text{rot }\underline{H}$
+\begin_inset Formula $\text{rot}\left(\underline{H}\right)$
 \end_inset
 
  auf jeder Oberfläche 
@@ -759,7 +816,11 @@ noprefix "false"
 
 \end_inset
 
-), dass das Linienintegral einer geschlossenen Kurve über 
+), dass das Linienintegral einer geschlossenen Kurve 
+\begin_inset Formula $C$
+\end_inset
+
+ über 
 \begin_inset Formula $\underline{H}$
 \end_inset
 
@@ -793,7 +854,11 @@ Nehmen wir an, dass
 \begin_inset Formula $\Omega$
 \end_inset
 
- divergenzfrei ist und dass jede geschlossene Oberfläche in 
+ divergenzfrei ist und dass jede geschlossene Oberfläche 
+\begin_inset Formula $S$
+\end_inset
+
+ in 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -806,7 +871,7 @@ Nehmen wir an, dass
 \end_inset
 
  ist.
- Dann existiert ein skalares Vektorfeld 
+ Dann existiert ein Vektorfeld 
 \family roman
 \series medium
 \shape up
@@ -903,7 +968,7 @@ Nehmen wir an, dass
 \end_inset
 
  gilt.
- Dann existiert eine skalare Funktion 
+ Dann existiert eine Funktion 
 \begin_inset Formula $\psi$
 \end_inset
 
@@ -981,7 +1046,7 @@ Nehmen wir an, dass
 \end_inset
 
  divergenzfrei ist und dass 
-\begin_inset Formula $\underline{B}\underline{n}=0$
+\begin_inset Formula $\underline{B}\bullet\underline{n}=0$
 \end_inset
 
  auf dem Rand 
@@ -1034,7 +1099,7 @@ Setzt man
 \begin_inset Formula $\underline{B}$
 \end_inset
 
- ist also die Rotation eine Vektorpotentials
+ ist also die Rotation eine Vektorfeldes
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
@@ -1059,7 +1124,7 @@ Hier wird das Argument benutzt, dass im
 
 \begin_layout Standard
 Noch zu tun: Verstehen! Das ist die Stelle, in der die Topologie ins Spiel
- kommt! Die Voraussetzungen von Theorem 3 sind für den magnetischen Monopol
+ kommt! Die Voraussetzungen von Theorem 2 sind für den magnetischen Monopol
  nicht erfüllt!
 \end_layout
 
