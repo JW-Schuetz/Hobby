@@ -739,7 +739,7 @@ Die Annahme ist also falsch und es existiert kein solches Vektorpotential
 \color red
 Noch zu tun: 1.
  und 3.
- beweisen
+ in voller Allgemeinheit beweisen
 \end_layout
 
 \begin_layout Subsection*
@@ -944,7 +944,7 @@ Beweis
 \end_layout
 
 \begin_layout Standard
-Da das Intergal 
+Da das Integral von 
 \begin_inset Formula $\text{div}\left(\underline{B}\right)$
 \end_inset
 
@@ -952,7 +952,11 @@ Da das Intergal
 \begin_inset Formula $D$
 \end_inset
 
- verschwindet, ...
+ verschwindet, 
+\color red
+...
+
+\color inherit
  
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
@@ -1173,8 +1177,18 @@ Harmonischen Felder
 \begin_layout Itemize
 
 \color red
-Das ist die Stelle, in der die Topologie ins Spiel kommt! Die Voraussetzungen
- von Theorem 2 sind für den magnetischen Monopol nicht erfüllt!
+...
+ auffüllen
+\color inherit
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Das ist die Stelle, in der die Topologie ins Spiel kommt.
+ Die Voraussetzungen von Theorem 2 sind für den magnetischen Monopol nicht
+ erfüllt!
 \end_layout
 
 \begin_layout Itemize
@@ -1184,20 +1198,28 @@ Alles obige zu einem folgerichtigen Ganzen integrieren
 \end_layout
 
 \begin_layout Section*
-Alternierende Differentialformen auf Mannigfaltigkeiten
-\end_layout
-
-\begin_layout Standard
-Im folgenden bezeichnen griechische Buchstaben Differentialformen und 
-\begin_inset Formula $d$
-\end_inset
-
- die äussere Ableitung.
- Mit 
+Alternierende Differentialformen auf 
 \begin_inset Formula $n$
 \end_inset
 
- wird die Dimension der Mannigfaltigkeit bezeichnet.
+-Mannigfaltigkeiten
+\end_layout
+
+\begin_layout Standard
+Im folgenden wird mit 
+\begin_inset Formula $n$
+\end_inset
+
+ die Dimension der Mannigfaltigkeit bezeichnet.
+\end_layout
+
+\begin_layout Standard
+Griechische Buchstaben bezeichnen Differentialformen und 
+\begin_inset Formula $d$
+\end_inset
+
+ deren äussere Ableitung.
+ 
 \end_layout
 
 \begin_layout Enumerate
