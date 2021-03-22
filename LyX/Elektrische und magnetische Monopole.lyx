@@ -464,7 +464,7 @@ Im Fall
 \begin_layout Standard
 
 \color red
-Noch zu tun: die Vermutungen beweisen.
+Noch zu tun: die Vermutungen beweisen
 \end_layout
 
 \begin_layout Section*
@@ -497,7 +497,7 @@ gegeben.
 \begin_layout Standard
 
 \color red
-Noch zu tun: skalares Potential und Vektorpotential herleiten.
+Noch zu tun: skalares Potential und Vektorpotential herleiten
 \end_layout
 
 \begin_layout Section*
@@ -535,9 +535,26 @@ gegeben.
 \begin_layout Standard
 
 \color red
-Noch zu tun: skalares Potential herleiten, Dirac-Strings thematisieren,
- Quantelung der Elementarladung als direkte Folge der magnetischen Monopole
- herleiten.
+Noch zu tun: 
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+skalares Potential herleiten
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Dirac-Strings thematisieren
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Quantelung der Elementarladung als direkte Folge der magnetischen Monopole
+ herleiten
 \end_layout
 
 \begin_layout Subsection*
@@ -722,7 +739,7 @@ Die Annahme ist also falsch und es existiert kein solches Vektorpotential
 \color red
 Noch zu tun: 1.
  und 3.
- beweisen.
+ beweisen
 \end_layout
 
 \begin_layout Subsection*
@@ -734,7 +751,15 @@ Es werden für einen Definitionsbereich
 \begin_inset Formula $\Omega$
 \end_inset
 
- die beiden Räume definiert
+ die beiden Räume der 
+\begin_inset Quotes gld
+\end_inset
+
+Harmonischen Felder
+\begin_inset Quotes grd
+\end_inset
+
+ definiert
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathbb{H}_{m}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\bullet\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} \\
@@ -927,7 +952,8 @@ Da das Intergal
 \begin_inset Formula $D$
 \end_inset
 
- verschwindet, 
+ verschwindet, ...
+ 
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
@@ -1127,15 +1153,159 @@ Hier wird das Argument benutzt, dass im
 \begin_layout Standard
 
 \color red
-Noch zu tun: Verstehen! Das ist die Stelle, in der die Topologie ins Spiel
- kommt! Die Voraussetzungen von Theorem 2 sind für den magnetischen Monopol
- nicht erfüllt!
+Noch zu tun: 
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Definition der 
+\begin_inset Quotes gld
+\end_inset
+
+Harmonischen Felder
+\begin_inset Quotes grd
+\end_inset
+
+ verstehen
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Das ist die Stelle, in der die Topologie ins Spiel kommt! Die Voraussetzungen
+ von Theorem 2 sind für den magnetischen Monopol nicht erfüllt!
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Alles obige zu einem folgerichtigen Ganzen integrieren
+\end_layout
+
+\begin_layout Section*
+Alternierende Differentialformen auf Mannigfaltigkeiten
+\end_layout
+
+\begin_layout Standard
+Im folgenden bezeichnen griechische Buchstaben Differentialformen und 
+\begin_inset Formula $d$
+\end_inset
+
+ die äussere Ableitung.
+ Mit 
+\begin_inset Formula $n$
+\end_inset
+
+ wird die Dimension der Mannigfaltigkeit bezeichnet.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:d^2-gleich-0"
+
+\end_inset
+
+Es gilt 
+\begin_inset Formula $d^{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Eine Form 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ nennt man geschlossen, falls gilt 
+\begin_inset Formula $d\alpha=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Eine Form 
+\begin_inset Formula $\beta$
+\end_inset
+
+ nennt man exakt, falls gilt 
+\begin_inset Formula $\beta=d\gamma$
+\end_inset
+
+, wobei 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ wieder eine Form ist.
+ Eine exakte Form ist also im Bild von 
+\begin_inset Formula $d$
+\end_inset
+
+ und eine geschlossene Form ist im Kern von 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:d^2-gleich-0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) ist eine exakte Form stets geschlossen.
+\end_layout
+
+\begin_layout Enumerate
+Die Frage, ob jede geschlossene Form exakt ist, hängt von der Topologie
+ des Definitionsbereiches ab.
+\end_layout
+
+\begin_layout Enumerate
+Auf einem einfach zusammenhängenden Definitionsbereich ist jede geschlossene
+ p-Form mit 
+\begin_inset Formula $1\leqq p\leqq n$
+\end_inset
+
+ wegen des Poincaré-Lemmas exakt.
 \end_layout
 
 \begin_layout Standard
 
 \color red
-Noch zu tun: Alles zu einem folgerichtigen Ganzen integrieren.
+Noch zu tun: 
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Warum gilt Punkt (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:d^2-gleich-0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)? 
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Poincaré-Lemma verstehen
 \end_layout
 
 \begin_layout Standard
