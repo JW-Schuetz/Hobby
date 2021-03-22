@@ -730,7 +730,11 @@ Helmholtz Zerlegung
 \end_layout
 
 \begin_layout Standard
-Es werden die beiden Räume definiert
+Es werden für einen Definitionsbereich 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ die beiden Räume definiert
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathbb{H}_{m}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\bullet\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} \\
@@ -743,7 +747,7 @@ Es werden die beiden Räume definiert
 \end_layout
 
 \begin_layout Standard
-mit 
+Mit 
 \begin_inset Formula $L_{p}^{3}\left(\Omega\right)$
 \end_inset
 
@@ -764,19 +768,11 @@ Theorem 1
 
 \begin_layout Standard
 Nehmen wir an, dass 
-\begin_inset Formula $\underline{H}$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
+\begin_inset Formula $\underline{w}$
 \end_inset
 
  rotationsfrei ist und dass jede geschlossene Kurve 
-\begin_inset Formula $C$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
+\begin_inset Formula $C\subset\Omega$
 \end_inset
 
  der Rand 
@@ -793,7 +789,7 @@ Nehmen wir an, dass
 \end_inset
 
  mit 
-\begin_inset Formula $\underline{H}=\text{grad}\left(\psi\right)$
+\begin_inset Formula $\underline{w}=\text{grad}\left(\psi\right)$
 \end_inset
 
  in 
@@ -809,7 +805,7 @@ Beweis
 
 \begin_layout Standard
 Da der Fluss von 
-\begin_inset Formula $\text{rot}\left(\underline{H}\right)$
+\begin_inset Formula $\text{rot}\left(\underline{w}\right)$
 \end_inset
 
  auf jeder Oberfläche 
@@ -831,7 +827,7 @@ noprefix "false"
 \end_inset
 
  über 
-\begin_inset Formula $\underline{H}$
+\begin_inset Formula $\underline{w}$
 \end_inset
 
  verschwindet
@@ -865,11 +861,7 @@ Nehmen wir an, dass
 \end_inset
 
  divergenzfrei ist und dass jede geschlossene Oberfläche 
-\begin_inset Formula $S$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
+\begin_inset Formula $S\subset\Omega$
 \end_inset
 
  der Rand 
@@ -1179,6 +1171,33 @@ literal "false"
 
 Scalar and vector potentials, Helmholtz decomposition and de Rham cohomology;
  Valli, Alberto; University of Trento, Italy
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "3"
+key "Dirac-1"
+literal "false"
+
+\end_inset
+
+Quantised singularities in the electromagnetic field; Dirac, P.A.M.; Proc.
+ Roy.
+ Soc., A133(1931), 60–72
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "4"
+key "Dirac-2"
+literal "false"
+
+\end_inset
+
+The theory of magnetic poles; Dirac, P.A.M.; Phys.
+ Rev., 74(1948), 817–830
 \end_layout
 
 \end_body
