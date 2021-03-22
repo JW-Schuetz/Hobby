@@ -57,8 +57,8 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 1cm
-\topmargin 2cm
+\leftmargin 2cm
+\topmargin 1cm
 \rightmargin 2cm
 \bottommargin 2cm
 \secnumdepth 3
@@ -107,11 +107,11 @@ Vektoren werden im folgenden durch einen Unterstrich kenntlich gemacht
 \begin_inset Formula $\underline{v}$
 \end_inset
 
-, ihr Skalarprodukt sei durch 
+, ihr inneres Produkt sei durch 
 \begin_inset Formula $\bullet$
 \end_inset
 
-, ihr Kreuzprodukt durch 
+, ihr äusseres Produkt durch 
 \begin_inset Formula $\times$
 \end_inset
 
@@ -227,7 +227,7 @@ Potentiale
 \end_layout
 
 \begin_layout Standard
-Aus der Vektoranalysis ist für den dreidimensionalen Raum 
+Aus der Vektoranalysis ist für den 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
@@ -322,7 +322,11 @@ Der Definitionsbereich
 \end_layout
 
 \begin_layout Standard
-Dieser spezielle Definitionsbereich wird im folgenden mit 
+Dieser spezielle Definitionsbereich 
+\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+ wird im folgenden mit 
 \begin_inset Formula $U$
 \end_inset
 
@@ -346,7 +350,8 @@ Die erste Homotopiegruppe (die Fundamentalgruppe) von
 \begin_inset Formula $\pi_{1}\left(U\right)=0$
 \end_inset
 
- , d.h.
+.
+ D.h.
  eine beliebige 1-Sphäre 
 \begin_inset Formula $S^{1}$
 \end_inset
@@ -359,8 +364,7 @@ Die erste Homotopiegruppe (die Fundamentalgruppe) von
 \begin_inset Formula $U$
 \end_inset
 
- zusammengezogen werden.
- Man nennt 
+ zusammengezogen werden - man nennt 
 \begin_inset Formula $U$
 \end_inset
 
@@ -376,7 +380,8 @@ Die zweite Homotopiegruppe von
 \begin_inset Formula $\pi_{2}\left(U\right)\neq0$
 \end_inset
 
- , d.h.
+.
+ D.h.
  es ist nicht möglich, eine beliebige 2-Sphäre 
 \begin_inset Formula $S^{2}$
 \end_inset
@@ -457,6 +462,8 @@ Im Fall
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Noch zu tun: die Vermutungen beweisen.
 \end_layout
 
@@ -488,6 +495,8 @@ gegeben.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Noch zu tun: skalares Potential und Vektorpotential herleiten.
 \end_layout
 
@@ -524,7 +533,11 @@ gegeben.
 \end_layout
 
 \begin_layout Standard
-Noch zu tun: skalares Potential herleiten, Dirac-Strings thematisieren.
+
+\color red
+Noch zu tun: skalares Potential herleiten, Dirac-Strings thematisieren,
+ Quantelung der Elementarladung als direkte Folge der magnetischen Monopole
+ herleiten.
 \end_layout
 
 \begin_layout Subsection*
@@ -696,8 +709,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Die getroffene Annahme ist also falsch und es existiert kein solches Vektorpoten
-tial 
+Die Annahme ist also falsch und es existiert kein solches Vektorpotential
+ 
 \begin_inset Formula $\underline{A}\quad\blacksquare$
 \end_inset
 
@@ -705,6 +718,8 @@ tial
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Noch zu tun: 1.
  und 3.
  beweisen.
@@ -715,15 +730,7 @@ Helmholtz Zerlegung
 \end_layout
 
 \begin_layout Standard
-Es werden die beiden Räume der 
-\begin_inset Quotes gld
-\end_inset
-
-Harmonischen Felder
-\begin_inset Quotes grd
-\end_inset
-
- definiert
+Es werden die beiden Räume definiert
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathbb{H}_{m}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\bullet\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} \\
@@ -1027,7 +1034,7 @@ Hier wird das Argument benutzt, dass im
 
  jedes rotationsfreie Feld als Gradient eines skalaren Potentials bestimmt
  werden kann.
- Ist das denn bewiesen?
+ Wo ist das denn bewiesen?
 \end_layout
 
 \end_inset
@@ -1117,7 +1124,7 @@ Hier wird das Argument benutzt, dass im
 
  jedes divergenzfreie Feld als Rotation eines Vektorpotentials bestimmt
  werden kann.
- Ist das denn bewiesen?
+ Wo ist das denn bewiesen?
 \end_layout
 
 \end_inset
@@ -1126,9 +1133,17 @@ Hier wird das Argument benutzt, dass im
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Noch zu tun: Verstehen! Das ist die Stelle, in der die Topologie ins Spiel
  kommt! Die Voraussetzungen von Theorem 2 sind für den magnetischen Monopol
  nicht erfüllt!
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Noch zu tun: Alles zu einem folgerichtigen Ganzen integrieren.
 \end_layout
 
 \begin_layout Standard
