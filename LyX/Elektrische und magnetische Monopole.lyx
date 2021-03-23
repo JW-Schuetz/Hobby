@@ -127,6 +127,41 @@ Weiterhin sollen Kugelkoordinaten
 \end_layout
 
 \begin_layout Section*
+Motivation
+\end_layout
+
+\begin_layout Standard
+In der Elektrodynamik sind die Skalar- und Vektorpotentiale 
+\begin_inset Formula $\psi$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ ein nützliches, aber verzichtbares mathematisches Werkzeug, das die Lösung
+ der Maxwell-Gleichungen stark vereinfacht.
+\end_layout
+
+\begin_layout Standard
+Mit der Quantenmechanik ändert sich die Situation - hier kann auf das Vektorpote
+ntial 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ nicht mehr verzichtet werden.
+ So zeigt z.B.
+ der Aharonov-Bohm-Effekt, dass das Vektorpotential messbare Auswirkungen
+ besitzt.
+\end_layout
+
+\begin_layout Standard
+Umso ärgerlicher ist es, dass es einfache physikalische Systeme gibt, für
+ die kein Vektorpotential existiert.
+ Ein solches System ist der (noch hypothetische) magnetische Monopol.
+\end_layout
+
+\begin_layout Section*
 Grundlegendes
 \end_layout
 
@@ -198,6 +233,51 @@ Dabei gilt
 
 .
  
+\end_layout
+
+\begin_layout Subsection*
+Helmholtz Zerlegung
+\end_layout
+
+\begin_layout Standard
+Es werden für einen Definitionsbereich 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ die beiden Räume der 
+\begin_inset Quotes gld
+\end_inset
+
+Harmonischen Felder
+\begin_inset Quotes grd
+\end_inset
+
+ definiert
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbb{H}_{m}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\bullet\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} \\
+\mathbb{H}_{e}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\times\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} .
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit 
+\begin_inset Formula $L_{p}^{3}\left(\Omega\right)$
+\end_inset
+
+ seien die Lebeque-integrablen Funktionen 
+\begin_inset Formula $L_{p}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
+\end_inset
+
+ bezeichnet.
 \end_layout
 
 \begin_layout Subsection*
@@ -726,7 +806,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Die Annahme ist also falsch und es existiert kein solches Vektorpotential
+Die Annahme ist also falsch und es existiert kein solches Vektorpotential.
  
 \begin_inset Formula $\underline{A}\quad\blacksquare$
 \end_inset
@@ -740,58 +820,13 @@ Die Annahme ist also falsch und es existiert kein solches Vektorpotential
 Noch zu tun: 1, 2 und 3 in voller Allgemeinheit beweisen
 \end_layout
 
-\begin_layout Subsection*
-Helmholtz Zerlegung
-\end_layout
-
-\begin_layout Standard
-Es werden für einen Definitionsbereich 
-\begin_inset Formula $\Omega$
-\end_inset
-
- die beiden Räume der 
-\begin_inset Quotes gld
-\end_inset
-
-Harmonischen Felder
-\begin_inset Quotes grd
-\end_inset
-
- definiert
-\begin_inset Formula 
-\begin{eqnarray*}
-\mathbb{H}_{m}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\bullet\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} \\
-\mathbb{H}_{e}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\times\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} .
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Mit 
-\begin_inset Formula $L_{p}^{3}\left(\Omega\right)$
-\end_inset
-
- seien die Lebeque-integrablen Funktionen 
-\begin_inset Formula $L_{p}$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
-\end_inset
-
- bezeichnet.
-\end_layout
-
 \begin_layout Subsubsection*
 Theorem 1
 \end_layout
 
 \begin_layout Standard
 Nehmen wir an, dass 
-\begin_inset Formula $\underline{w}$
+\begin_inset Formula $\underline{H}$
 \end_inset
 
  rotationsfrei ist und dass jede geschlossene Kurve 
@@ -812,7 +847,7 @@ Nehmen wir an, dass
 \end_inset
 
  mit 
-\begin_inset Formula $\underline{w}=\text{grad}\left(\psi\right)$
+\begin_inset Formula $\underline{H}=\text{grad}\left(\psi\right)$
 \end_inset
 
  in 
@@ -828,7 +863,7 @@ Beweis
 
 \begin_layout Standard
 Da der Fluss von 
-\begin_inset Formula $\text{rot}\left(\underline{w}\right)$
+\begin_inset Formula $\text{rot}\left(\underline{H}\right)$
 \end_inset
 
  auf jeder Oberfläche 
@@ -850,10 +885,11 @@ noprefix "false"
 \end_inset
 
  über 
-\begin_inset Formula $\underline{w}$
+\begin_inset Formula $\underline{H}$
 \end_inset
 
- verschwindet
+ verschwindet.
+ 
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
@@ -950,11 +986,19 @@ Da das Integral von
 \begin_inset Formula $D$
 \end_inset
 
- verschwindet, 
-\color red
-...
+ verschwindet, verschwindet der Fluss von 
+\begin_inset Formula $B$
+\end_inset
 
-\color inherit
+ auf jeder geschlossenen Fläche in 
+\begin_inset Formula $\Omega.$
+\end_inset
+
+ Dies garantiert die Existenz eines Vektorpotentials 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+.
  
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
@@ -1039,7 +1083,8 @@ Setzt man
 \begin_inset Formula $\underline{H}$
 \end_inset
 
- ist also der Gradient eines skalaren Potentials
+ ist also der Gradient eines skalaren Potentials.
+ 
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
@@ -1129,7 +1174,8 @@ Setzt man
 \begin_inset Formula $\underline{B}$
 \end_inset
 
- ist also die Rotation eine Vektorfeldes
+ ist also die Rotation eine Vektorfeldes.
+ 
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
@@ -1175,18 +1221,8 @@ Harmonischen Felder
 \begin_layout Itemize
 
 \color red
-...
- auffüllen
-\color inherit
- 
-\end_layout
-
-\begin_layout Itemize
-
-\color red
-Das ist die Stelle, in der die Topologie ins Spiel kommt.
- Die Voraussetzungen von Theorem 2 sind für den magnetischen Monopol nicht
- erfüllt!
+Theorem 2 ist die Stelle, in der die Topologie ins Spiel kommt.
+ Die Voraussetzungen von sind für den magnetischen Monopol nicht erfüllt!
 \end_layout
 
 \begin_layout Itemize
