@@ -161,6 +161,20 @@ Umso ärgerlicher ist es, dass es einfache physikalische Systeme gibt, für
  Ein solches System ist der (noch hypothetische) magnetische Monopol.
 \end_layout
 
+\begin_layout Standard
+Das Argument 
+\begin_inset Quotes gld
+\end_inset
+
+Ist doch egal, der existiert nicht!
+\begin_inset Quotes grd
+\end_inset
+
+ ist nicht angebracht, da es starke Hinweise für die Existenz magnetischer
+ Monopole gibt.
+ 
+\end_layout
+
 \begin_layout Section*
 Grundlegendes
 \end_layout
@@ -664,7 +678,7 @@ Betrachtet man eine Kugeloberfläche
 \begin_inset Formula $S$
 \end_inset
 
- des Radiuses 
+ des Radius 
 \begin_inset Formula $R$
 \end_inset
 
@@ -806,9 +820,14 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Die Annahme ist also falsch und es existiert kein solches Vektorpotential.
+Die Annahme ist also falsch und es existiert kein solches Vektorpotential
  
-\begin_inset Formula $\underline{A}\quad\blacksquare$
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\quad\blacksquare$
 \end_inset
 
 
@@ -1054,7 +1073,7 @@ Nehmen wir an, dass
 \begin_inset Formula $\Omega$
 \end_inset
 
- .
+.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1086,6 +1105,16 @@ Setzt man
  ist also der Gradient eines skalaren Potentials.
  
 \begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hä?
+\end_layout
+
 \end_inset
 
 
@@ -1145,7 +1174,7 @@ Nehmen wir an, dass
 \begin_inset Formula $\Omega$
 \end_inset
 
- .
+.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1215,13 +1244,14 @@ Harmonischen Felder
 \begin_inset Quotes grd
 \end_inset
 
- verstehen
+ der Helmhotz-Zerlegung verstehen
 \end_layout
 
 \begin_layout Itemize
 
 \color red
-Theorem 2 ist die Stelle, in der die Topologie ins Spiel kommt.
+Theorem 2 ist die Stelle (neben Theorem 1), in der die Topologie ins Spiel
+ kommt.
  Die Voraussetzungen von sind für den magnetischen Monopol nicht erfüllt!
 \end_layout
 
@@ -1296,7 +1326,8 @@ Eine Form
 \end_inset
 
  wieder eine Form ist.
- Eine exakte Form ist im Bild und eine geschlossene Form im Kern von 
+ Eine exakte Form ist im Bild und eine geschlossene Form im Kern der Abbildung
+ 
 \begin_inset Formula $d$
 \end_inset
 
