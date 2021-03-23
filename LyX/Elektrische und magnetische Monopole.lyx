@@ -737,9 +737,7 @@ Die Annahme ist also falsch und es existiert kein solches Vektorpotential
 \begin_layout Standard
 
 \color red
-Noch zu tun: 1.
- und 3.
- in voller Allgemeinheit beweisen
+Noch zu tun: 1, 2 und 3 in voller Allgemeinheit beweisen
 \end_layout
 
 \begin_layout Subsection*
@@ -1241,11 +1239,11 @@ Eine Form
 \begin_inset Formula $\alpha$
 \end_inset
 
- nennt man geschlossen, falls gilt 
+ nennt man geschlossen, falls 
 \begin_inset Formula $d\alpha=0$
 \end_inset
 
-.
+ gilt.
 \end_layout
 
 \begin_layout Enumerate
@@ -1253,20 +1251,16 @@ Eine Form
 \begin_inset Formula $\beta$
 \end_inset
 
- nennt man exakt, falls gilt 
+ nennt man exakt, falls 
 \begin_inset Formula $\beta=d\gamma$
 \end_inset
 
-, wobei 
+ gilt , wobei 
 \begin_inset Formula $\gamma$
 \end_inset
 
  wieder eine Form ist.
- Eine exakte Form ist also im Bild von 
-\begin_inset Formula $d$
-\end_inset
-
- und eine geschlossene Form ist im Kern von 
+ Eine exakte Form ist im Bild und eine geschlossene Form im Kern von 
 \begin_inset Formula $d$
 \end_inset
 
@@ -1328,6 +1322,12 @@ noprefix "false"
 
 \color red
 Poincaré-Lemma verstehen
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Zusammenhang verstehen
 \end_layout
 
 \begin_layout Standard
