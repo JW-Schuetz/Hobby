@@ -1258,7 +1258,7 @@ Theorem 2 ist die Stelle (neben Theorem 1), in der die Topologie ins Spiel
 \begin_layout Itemize
 
 \color red
-Alles obige zu einem folgerichtigen Ganzen integrieren
+Alles obige zu einem folgerichtigen Ganzen integrieren und die Lücken füllen
 \end_layout
 
 \begin_layout Section*
@@ -1361,6 +1361,24 @@ Auf einem einfach zusammenhängenden Definitionsbereich ist jede geschlossene
 \end_inset
 
  wegen des Poincaré-Lemmas exakt.
+\end_layout
+
+\begin_layout Enumerate
+Es gibt Beziehungen (z.B.
+ gilt ebenso 
+\begin_inset Formula $\partial\partial=0$
+\end_inset
+
+) der äusseren Ableitung 
+\begin_inset Formula $d$
+\end_inset
+
+ zum Randoperator 
+\begin_inset Formula $\partial$
+\end_inset
+
+.
+ Welche?
 \end_layout
 
 \begin_layout Standard
