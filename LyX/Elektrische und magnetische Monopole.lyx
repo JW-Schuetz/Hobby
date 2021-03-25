@@ -711,11 +711,11 @@ Magnetischer Monopol
 \end_layout
 
 \begin_layout Standard
-Betrachtet man eine Kugeloberfläche 
+Betrachtet man die Oberfläche 
 \begin_inset Formula $S$
 \end_inset
 
- des Radius 
+ einer Kugel des Radius 
 \begin_inset Formula $R$
 \end_inset
 
@@ -733,7 +733,7 @@ Betrachtet man eine Kugeloberfläche
 \end_inset
 
  ihre obere und untere Hemisphären.
- 
+ Ihr gemeinsamer Rand 
 \begin_inset Formula $\partial S$
 \end_inset
 
@@ -754,7 +754,7 @@ Betrachtet man eine Kugeloberfläche
 \end_layout
 
 \begin_layout Standard
-Wir nehmen an, dass ein Vektorpotential 
+Annahme: Wir nehmen an, dass ein Vektorpotential 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
@@ -949,7 +949,7 @@ noprefix "false"
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
-
+ 
 \begin_inset Note Note
 status open
 
@@ -1059,7 +1059,7 @@ Da das Integral von
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
-
+ 
 \begin_inset Note Note
 status open
 
@@ -1144,7 +1144,7 @@ Setzt man
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
-
+ 
 \begin_inset Note Note
 status open
 
@@ -1243,6 +1243,16 @@ Setzt man
  ist also die Rotation eine Vektorfeldes.
  
 \begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hä?
+\end_layout
+
 \end_inset
 
 
