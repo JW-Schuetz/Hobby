@@ -166,7 +166,7 @@ Das Argument
 \begin_inset Quotes gld
 \end_inset
 
-Ist doch egal, der existiert nicht!
+Ist doch egal, den gibt es nicht!
 \begin_inset Quotes grd
 \end_inset
 
@@ -387,7 +387,7 @@ Existiert für jedes rotationsfreie Feld
 
 \begin_layout Standard
 Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
- Definitionsbereich 
+ Definitionsbereichs 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -559,6 +559,34 @@ Im Fall
 
 \color red
 Noch zu tun: die Vermutungen beweisen
+\end_layout
+
+\begin_layout Section*
+Homologie
+\end_layout
+
+\begin_layout Subsection*
+Definition
+\end_layout
+
+\begin_layout Standard
+Man nennt 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ homologisch trivial, falls jede geschlossene Kurve 
+\begin_inset Formula $c\subset\Omega$
+\end_inset
+
+ der Rand 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ einer Fläche 
+\begin_inset Formula $S\subset\Omega$
+\end_inset
+
+ ist.
 \end_layout
 
 \begin_layout Section*
@@ -1219,7 +1247,7 @@ Hier wird das Argument benutzt, dass im
 
  jedes divergenzfreie Feld als Rotation eines Vektorpotentials bestimmt
  werden kann.
- Wo ist das denn bewiesen?
+ Wo ist das bewiesen?
 \end_layout
 
 \end_inset
@@ -1274,7 +1302,11 @@ Im folgenden wird mit
 \begin_inset Formula $n$
 \end_inset
 
- die Dimension der Mannigfaltigkeit bezeichnet.
+ die Dimension der Mannigfaltigkeit 
+\begin_inset Formula $M$
+\end_inset
+
+ bezeichnet.
 \end_layout
 
 \begin_layout Standard
@@ -1364,12 +1396,7 @@ Auf einem einfach zusammenhängenden Definitionsbereich ist jede geschlossene
 \end_layout
 
 \begin_layout Enumerate
-Es gibt Beziehungen (z.B.
- gilt ebenso 
-\begin_inset Formula $\partial\partial=0$
-\end_inset
-
-) der äusseren Ableitung 
+Es gibt Ähnlichkeiten der äusseren Ableitung 
 \begin_inset Formula $d$
 \end_inset
 
@@ -1377,8 +1404,21 @@ Es gibt Beziehungen (z.B.
 \begin_inset Formula $\partial$
 \end_inset
 
-.
- Welche?
+ (z.B.
+ gilt ebenso 
+\begin_inset Formula $\partial^{2}=0$
+\end_inset
+
+).
+ Wie hängt das tiefer zusammen? Siehe Wikipedia-Artikel 
+\begin_inset Quotes gld
+\end_inset
+
+Homologietheorie
+\begin_inset Quotes grd
+\end_inset
+
+?
 \end_layout
 
 \begin_layout Standard
@@ -1412,7 +1452,7 @@ Poincaré-Lemma verstehen
 \begin_layout Itemize
 
 \color red
-Zusammenhang verstehen
+Zusammenhänge verstehen
 \end_layout
 
 \begin_layout Standard
