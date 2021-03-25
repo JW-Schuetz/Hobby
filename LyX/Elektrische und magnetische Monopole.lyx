@@ -139,8 +139,10 @@ In der Elektrodynamik sind die Skalar- und Vektorpotentiale
 \begin_inset Formula $\underline{A}$
 \end_inset
 
- ein nützliches, aber verzichtbares mathematisches Werkzeug, das die Lösung
- der Maxwell-Gleichungen stark vereinfacht.
+ ein nützliches mathematisches Werkzeug, das die Lösung der Maxwell-Gleichungen
+ stark vereinfacht.
+ Die Potentiale sind aber zur Lösung nicht unbedingt notwendig und haben
+ physikalisch keine Auswirkungen.
 \end_layout
 
 \begin_layout Standard
@@ -149,15 +151,14 @@ ntial
 \begin_inset Formula $\underline{A}$
 \end_inset
 
- nicht mehr verzichtet werden.
- So zeigt z.B.
- der Aharonov-Bohm-Effekt, dass das Vektorpotential messbare Auswirkungen
- besitzt.
+ nicht mehr verzichtet werden und der Aharonov-Bohm-Effekt zeigt z.B., dass
+ das Vektorpotential physikalisch messbar Auswirkungen besitzt.
 \end_layout
 
 \begin_layout Standard
 Umso ärgerlicher ist es, dass es einfache physikalische Systeme gibt, für
- die kein Vektorpotential existiert 
+ die kein Vektorpotential existiert.
+ Ein solches System ist der (noch hypothetische) magnetische Monopol 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Dirac-1,Dirac-2"
@@ -166,7 +167,6 @@ literal "false"
 \end_inset
 
 .
- Ein solches System ist der (noch hypothetische) magnetische Monopol.
 \end_layout
 
 \begin_layout Standard
@@ -595,7 +595,15 @@ Man nennt
 \begin_inset Formula $S\subset\Omega$
 \end_inset
 
- ist.
+ ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+c & = & \partial S.
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -711,7 +719,7 @@ Magnetischer Monopol
 \end_layout
 
 \begin_layout Standard
-Betrachtet man die Oberfläche 
+Betrachtet wird die Oberfläche 
 \begin_inset Formula $S$
 \end_inset
 
@@ -719,11 +727,7 @@ Betrachtet man die Oberfläche
 \begin_inset Formula $R$
 \end_inset
 
- um den Ursprung und sei 
-\begin_inset Formula $\partial S$
-\end_inset
-
- ihr Äquator.
+ um den Ursprung.
  Weiterhin seien 
 \begin_inset Formula $S^{+}$
 \end_inset
@@ -732,8 +736,12 @@ Betrachtet man die Oberfläche
 \begin_inset Formula $S^{-}$
 \end_inset
 
- ihre obere und untere Hemisphären.
- Ihr gemeinsamer Rand 
+ ihre obere und untere Hemisphäre und 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ ihr Äquator.
+ 
 \begin_inset Formula $\partial S$
 \end_inset
 
