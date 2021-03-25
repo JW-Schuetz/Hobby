@@ -264,7 +264,7 @@ Helmholtz Zerlegung
 
 \begin_layout Standard
 Es werden für einen Definitionsbereich 
-\begin_inset Formula $\Omega$
+\begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
 \end_inset
 
  die beiden Räume der 
@@ -296,7 +296,7 @@ Mit
 \begin_inset Formula $L_{p}$
 \end_inset
 
- in 
+ auf 
 \begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
 \end_inset
 
@@ -597,9 +597,9 @@ Man nennt
 
  ist 
 \begin_inset Formula 
-\begin{eqnarray*}
-c & = & \partial S.
-\end{eqnarray*}
+\[
+\forall c\quad\exists S\mid c=\partial S.
+\]
 
 \end_inset
 
