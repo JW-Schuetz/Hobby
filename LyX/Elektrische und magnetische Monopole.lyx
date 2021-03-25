@@ -157,7 +157,15 @@ ntial
 
 \begin_layout Standard
 Umso ärgerlicher ist es, dass es einfache physikalische Systeme gibt, für
- die kein Vektorpotential existiert.
+ die kein Vektorpotential existiert 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dirac-1,Dirac-2"
+literal "false"
+
+\end_inset
+
+.
  Ein solches System ist der (noch hypothetische) magnetische Monopol.
 \end_layout
 
@@ -172,7 +180,8 @@ Ist doch egal, den gibt es nicht!
 
  ist nicht angebracht, da es starke Hinweise für die Existenz magnetischer
  Monopole gibt.
- 
+ Insbesondere wäre die (beobachtete) Quantisierung der elektrischen Elementarlad
+ung eine direkte Folge der Existenz des magnetischen Monopols.
 \end_layout
 
 \begin_layout Section*
@@ -1358,7 +1367,11 @@ Eine Form
 \end_inset
 
  wieder eine Form ist.
- Eine exakte Form ist im Bild und eine geschlossene Form im Kern der Abbildung
+ 
+\end_layout
+
+\begin_layout Enumerate
+Eine exakte Form ist im Bild und eine geschlossene Form im Kern der Abbildung
  
 \begin_inset Formula $d$
 \end_inset
@@ -1368,7 +1381,7 @@ Eine Form
 \end_layout
 
 \begin_layout Enumerate
-Wegen (
+Wegen Punkt (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "enu:d^2-gleich-0"
