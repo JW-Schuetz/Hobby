@@ -142,7 +142,7 @@ In der Elektrodynamik sind die Skalar- und Vektorpotentiale
  ein nützliches mathematisches Werkzeug, das die Lösung der Maxwell-Gleichungen
  stark vereinfacht.
  Die Potentiale sind aber zur Lösung nicht unbedingt notwendig und haben
- physikalisch keine Auswirkungen.
+ keine eigenständigen physikalischen Auswirkungen.
 \end_layout
 
 \begin_layout Standard
@@ -158,15 +158,7 @@ ntial
 \begin_layout Standard
 Umso ärgerlicher ist es, dass es einfache physikalische Systeme gibt, für
  die kein Vektorpotential existiert.
- Ein solches System ist der (noch hypothetische) magnetische Monopol 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Dirac-1,Dirac-2"
-literal "false"
-
-\end_inset
-
-.
+ Ein solches System ist der (noch hypothetische!) magnetische Monopol.
 \end_layout
 
 \begin_layout Standard
@@ -180,8 +172,16 @@ Ist doch egal, den gibt es nicht!
 
  ist nicht angebracht, da es starke Hinweise für die Existenz magnetischer
  Monopole gibt.
- Insbesondere wäre die (beobachtete) Quantisierung der elektrischen Elementarlad
-ung eine direkte Folge der Existenz des magnetischen Monopols.
+ Insbesondere wäre die (beobachtete!) Quantisierung der elektrischen Elementarla
+dung eine direkte Folge der Existenz des magnetischen Monopols 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dirac-2"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section*
@@ -259,7 +259,7 @@ Dabei gilt
 \end_layout
 
 \begin_layout Subsection*
-Helmholtz Zerlegung
+Helmholtz-Zerlegung
 \end_layout
 
 \begin_layout Standard
@@ -352,10 +352,143 @@ Damit gelten die folgenden beiden Aussagen
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\underline{V}=\text{grad\left(\psi\right)} & \Longrightarrow & \text{rot}\left(\underline{V}\right)=\underline{0}\\
-\underline{W}=\text{rot\left(\underline{A}\right)} & \Longrightarrow & \text{div}\left(\underline{W}\right)=0.
-\end{eqnarray*}
+\begin{eqnarray}
+\underline{V}=\text{grad\left(\psi\right)} & \Longrightarrow & \text{rot}\left(\underline{V}\right)=\underline{0}\label{eq:Potentiale-Notwendig}\\
+\underline{W}=\text{rot\left(\underline{A}\right)} & \Longrightarrow & \text{div}\left(\underline{W}\right)=0.\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Definitionsbereich der Monopole
+\end_layout
+
+\begin_layout Standard
+Der Definitionsbereich 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ der Felder und Potentiale beider Monopole ist der gesamte 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ mit Ausnahme des Ortes des Monopoles im Koordinatenursprung, also 
+\begin_inset Formula $\Omega=\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Dieser spezielle Definitionsbereich 
+\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+ wird im folgenden mit 
+\begin_inset Formula $U$
+\end_inset
+
+ bezeichnet.
+\end_layout
+
+\begin_layout Subsection*
+Topologie
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U$
+\end_inset
+
+ besitzt die folgenden topologischen Eigenschaften
+\end_layout
+
+\begin_layout Itemize
+die erste Homotopiegruppe (die Fundamentalgruppe) von 
+\begin_inset Formula $U$
+\end_inset
+
+ ist trivial 
+\begin_inset Formula $\pi_{1}\left(U\right)=0$
+\end_inset
+
+.
+ D.h.
+ eine beliebige 1-Sphäre 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ (Kreislinie) in 
+\begin_inset Formula $U$
+\end_inset
+
+ kann kontinuierlich auf einen Punkt in 
+\begin_inset Formula $U$
+\end_inset
+
+ zusammengezogen werden - man nennt 
+\begin_inset Formula $U$
+\end_inset
+
+ auch einfach zusammenhängend
+\end_layout
+
+\begin_layout Itemize
+die zweite Homotopiegruppe von 
+\begin_inset Formula $U$
+\end_inset
+
+ ist nicht trivial 
+\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
+\end_inset
+
+.
+ D.h.
+ es ist nicht möglich, eine beliebige 2-Sphäre 
+\begin_inset Formula $S^{2}$
+\end_inset
+
+ (Kugeloberfläche) in 
+\begin_inset Formula $U$
+\end_inset
+
+ kontinuierlich auf einen Punkt in 
+\begin_inset Formula $U$
+\end_inset
+
+ zusammenzuziehen - dies scheitert für jede Kugeloberfläche, die den Ursprung
+ umschliesst.
+\end_layout
+
+\begin_layout Subsection*
+Homologie
+\end_layout
+
+\begin_layout Standard
+Man nennt 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ homologisch trivial, falls jede geschlossene Kurve 
+\begin_inset Formula $c\subset\Omega$
+\end_inset
+
+ der Rand 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ einer Fläche 
+\begin_inset Formula $S\subset\Omega$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\[
+\forall c\exists S\mid c=\partial S.
+\]
 
 \end_inset
 
@@ -363,7 +496,31 @@ Damit gelten die folgenden beiden Aussagen
 \end_layout
 
 \begin_layout Standard
-Aber gilt auch die Umkehrung? 
+
+\color red
+Noch zu tun: ist 
+\begin_inset Formula $U$
+\end_inset
+
+ homologisch trivial?
+\end_layout
+
+\begin_layout Section*
+Existenz der Potentiale
+\end_layout
+
+\begin_layout Standard
+Für die Existenz der Potentiale gelten die notwendigen Bedingungen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Potentiale-Notwendig"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) aber gelten auch die Umkehrungen? 
 \end_layout
 
 \begin_layout Standard
@@ -401,112 +558,11 @@ Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
 \end_inset
 
  ab.
-\end_layout
-
-\begin_layout Section*
-Definitionsbereich
-\end_layout
-
-\begin_layout Standard
-Der Definitionsbereich 
-\begin_inset Formula $\Omega$
+ Es soll für 
+\begin_inset Formula $\Omega=U$
 \end_inset
 
- der Felder und Potentiale beider Monopole ist der gesamte 
-\begin_inset Formula $\mathbb{R}^{3}$
-\end_inset
-
- mit Ausnahme des Ortes des Monopoles im Koordinatenursprung, also 
-\begin_inset Formula $\Omega=\mathbb{R}^{3}-\underline{0}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Dieser spezielle Definitionsbereich 
-\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
-\end_inset
-
- wird im folgenden mit 
-\begin_inset Formula $U$
-\end_inset
-
- bezeichnet.
-\end_layout
-
-\begin_layout Subsection*
-Topologische Eigenschaften des Definitionsbereiches 
-\begin_inset Formula $U$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Die erste Homotopiegruppe (die Fundamentalgruppe) von 
-\begin_inset Formula $U$
-\end_inset
-
- ist trivial 
-\begin_inset Formula $\pi_{1}\left(U\right)=0$
-\end_inset
-
-.
- D.h.
- eine beliebige 1-Sphäre 
-\begin_inset Formula $S^{1}$
-\end_inset
-
- (Kreislinie) in 
-\begin_inset Formula $U$
-\end_inset
-
- kann kontinuierlich auf einen Punkt in 
-\begin_inset Formula $U$
-\end_inset
-
- zusammengezogen werden - man nennt 
-\begin_inset Formula $U$
-\end_inset
-
- auch einfach zusammenhängend.
-\end_layout
-
-\begin_layout Itemize
-Die zweite Homotopiegruppe von 
-\begin_inset Formula $U$
-\end_inset
-
- ist nicht trivial 
-\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
-\end_inset
-
-.
- D.h.
- es ist nicht möglich, eine beliebige 2-Sphäre 
-\begin_inset Formula $S^{2}$
-\end_inset
-
- (Kugeloberfläche) in 
-\begin_inset Formula $U$
-\end_inset
-
- kontinuierlich auf einen Punkt in 
-\begin_inset Formula $U$
-\end_inset
-
- zusammenzuziehen - dies scheitert für jede Kugeloberfläche, die den Ursprung
- umschliesst.
-\end_layout
-
-\begin_layout Standard
-Diese beiden Eigenschaften des Definitionsbereiches 
-\begin_inset Formula $U$
-\end_inset
-
- haben vermutlich Konsequenzen für die Existenz der Potentiale.
+ gezeigt werden, dass die folgenden Aussagen richtig sind
 \end_layout
 
 \begin_layout Enumerate
@@ -514,15 +570,15 @@ Im Fall
 \begin_inset Formula $\pi_{1}\left(U\right)=0$
 \end_inset
 
- wird sich vermutlich zeigen, dass für jedes rotationsfreie Feld 
+ existiert für jedes rotationsfreie Feld 
 \begin_inset Formula $\underline{V}$
 \end_inset
 
- die Existenz eines skalaren Potentiales 
+ ein skalares Potentiales 
 \begin_inset Formula $\psi$
 \end_inset
 
- folgt.
+.
  
 \end_layout
 
@@ -537,15 +593,15 @@ Im Fall
 \begin_inset Formula $\pi_{1}\left(U\right)=0$
 \end_inset
 
- existieren aber vermutlich divergenzfreie Felder 
+ existiert für kein divergenzfreies Feld 
 \begin_inset Formula $\underline{W}$
 \end_inset
 
- die kein Vektorpotential 
+ ein Vektorpotential 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
- besitzen.
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -553,7 +609,7 @@ Im Fall
 \begin_inset Formula $\pi_{2}\left(U\right)\neq0$
 \end_inset
 
- wird sich vermutlich zeigen, dass jedes divergenzfreie Feld 
+ existiert für jedes divergenzfreie Feld 
 \begin_inset Formula $\underline{W}$
 \end_inset
 
@@ -561,49 +617,13 @@ Im Fall
 \begin_inset Formula $\underline{A}$
 \end_inset
 
- besitzt.
+.
 \end_layout
 
 \begin_layout Standard
 
 \color red
 Noch zu tun: die Vermutungen beweisen
-\end_layout
-
-\begin_layout Section*
-Homologie
-\end_layout
-
-\begin_layout Subsection*
-Definition
-\end_layout
-
-\begin_layout Standard
-Man nennt 
-\begin_inset Formula $\Omega$
-\end_inset
-
- homologisch trivial, falls jede geschlossene Kurve 
-\begin_inset Formula $c\subset\Omega$
-\end_inset
-
- der Rand 
-\begin_inset Formula $\partial S$
-\end_inset
-
- einer Fläche 
-\begin_inset Formula $S\subset\Omega$
-\end_inset
-
- ist 
-\begin_inset Formula 
-\[
-\forall c\quad\exists S\mid c=\partial S.
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section*
@@ -952,13 +972,8 @@ noprefix "false"
 \begin_inset Formula $\underline{H}$
 \end_inset
 
- verschwindet.
- 
-\begin_inset Formula $\quad\blacksquare$
-\end_inset
-
- 
-\begin_inset Note Note
+ verschwindet
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
@@ -967,7 +982,12 @@ Hä?
 
 \end_inset
 
+.
+ 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
 
+ 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1062,13 +1082,8 @@ Da das Integral von
 \begin_inset Formula $\underline{A}$
 \end_inset
 
-.
- 
-\begin_inset Formula $\quad\blacksquare$
-\end_inset
 
- 
-\begin_inset Note Note
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
@@ -1077,7 +1092,12 @@ Hä?
 
 \end_inset
 
+.
+ 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
 
+ 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1147,24 +1167,9 @@ Setzt man
 \begin_inset Formula $\underline{H}$
 \end_inset
 
- ist also der Gradient eines skalaren Potentials.
- 
-\begin_inset Formula $\quad\blacksquare$
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Hä?
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
+ ist also der Gradient eines skalaren Potentials
+\begin_inset Foot
+status collapsed
 
 \begin_layout Plain Layout
 Hier wird das Argument benutzt, dass im 
@@ -1178,7 +1183,12 @@ Hier wird das Argument benutzt, dass im
 
 \end_inset
 
+.
+ 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
 
+ 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1244,28 +1254,13 @@ Setzt man
 \end_inset
 
  divergenzfrei.
- 
+ Das Feld 
 \begin_inset Formula $\underline{B}$
 \end_inset
 
- ist also die Rotation eine Vektorfeldes.
- 
-\begin_inset Formula $\quad\blacksquare$
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Hä?
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
+ ist also die Rotation eines Vektorpotentials
+\begin_inset Foot
+status collapsed
 
 \begin_layout Plain Layout
 Hier wird das Argument benutzt, dass im 
@@ -1279,7 +1274,12 @@ Hier wird das Argument benutzt, dass im
 
 \end_inset
 
+.
+ 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
 
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1307,7 +1307,7 @@ Harmonischen Felder
 \color red
 Theorem 2 ist die Stelle (neben Theorem 1), in der die Topologie ins Spiel
  kommt.
- Die Voraussetzungen von sind für den magnetischen Monopol nicht erfüllt!
+ Diese Voraussetzungen von sind für den magnetischen Monopol nicht erfüllt!
 \end_layout
 
 \begin_layout Itemize
@@ -1484,6 +1484,12 @@ Poincaré-Lemma verstehen
 
 \color red
 Zusammenhänge verstehen
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Alles obige in der Sprache der Differentialformen formulieren
 \end_layout
 
 \begin_layout Standard
