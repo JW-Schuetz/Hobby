@@ -562,6 +562,12 @@ Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Fall-1"
+
+\end_inset
+
 Im Fall 
 \begin_inset Formula $\pi_{1}\left(U\right)=0$
 \end_inset
@@ -570,7 +576,7 @@ Im Fall
 \begin_inset Formula $\underline{V}$
 \end_inset
 
- ein skalares Potentiales 
+ ein skalares Potential 
 \begin_inset Formula $\psi$
 \end_inset
 
@@ -601,6 +607,35 @@ Im Fall
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Fall-3"
+
+\end_inset
+
+Im Fall 
+\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
+\end_inset
+
+ existiert für jedes rotationsfreie Feld 
+\begin_inset Formula $\underline{V}$
+\end_inset
+
+ ein skalares Potential 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Fall-4"
+
+\end_inset
+
 Im Fall 
 \begin_inset Formula $\pi_{2}\left(U\right)\neq0$
 \end_inset
@@ -647,6 +682,11 @@ Sein elektrisches und magnetisches Feld ist auf
 
 \begin_layout Standard
 gegeben.
+ Dabei ist mit 
+\begin_inset Formula $q$
+\end_inset
+
+ die elektrische Elementarladung bezeichnet.
 \end_layout
 
 \begin_layout Standard
@@ -685,6 +725,11 @@ Sein magnetisches und elektrisches Feld in Kugelkoordinaten ist auf
 
 \begin_layout Standard
 gegeben.
+ Dabei ist mit 
+\begin_inset Formula $g$
+\end_inset
+
+ die magnetische Elementarladung bezeichnet.
 \end_layout
 
 \begin_layout Standard
@@ -983,7 +1028,7 @@ Hä?
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1093,7 +1138,7 @@ Hä?
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1184,7 +1229,7 @@ Hier wird das Argument benutzt, dass im
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1275,7 +1320,7 @@ Hier wird das Argument benutzt, dass im
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1344,7 +1389,7 @@ Griechische Buchstaben bezeichnen Differentialformen und
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "enu:d^2-gleich-0"
+name "enu:Punkt-1"
 
 \end_inset
 
@@ -1398,7 +1443,7 @@ Eine exakte Form ist im Bild und eine geschlossene Form im Kern der Abbildung
 Wegen Punkt (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "enu:d^2-gleich-0"
+reference "enu:Punkt-1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1460,7 +1505,7 @@ Noch zu tun:
 Warum gilt Punkt (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "enu:d^2-gleich-0"
+reference "enu:Punkt-1"
 plural "false"
 caps "false"
 noprefix "false"
