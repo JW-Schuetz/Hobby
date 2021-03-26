@@ -384,11 +384,7 @@ Der Definitionsbereich
 \end_layout
 
 \begin_layout Standard
-Dieser spezielle Definitionsbereich 
-\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
-\end_inset
-
- wird im folgenden mit 
+Dieser spezielle Definitionsbereich wird im folgenden mit 
 \begin_inset Formula $U$
 \end_inset
 
@@ -524,7 +520,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Existiert für jedes rotationsfreie Feld 
+Existiert also für jedes rotationsfreie Feld 
 \begin_inset Formula $\underline{V}$
 \end_inset
 
@@ -593,7 +589,7 @@ Im Fall
 \begin_inset Formula $\pi_{1}\left(U\right)=0$
 \end_inset
 
- existiert für kein divergenzfreies Feld 
+ existiert für jedes divergenzfreie Feld 
 \begin_inset Formula $\underline{W}$
 \end_inset
 
@@ -609,11 +605,11 @@ Im Fall
 \begin_inset Formula $\pi_{2}\left(U\right)\neq0$
 \end_inset
 
- existiert für jedes divergenzfreie Feld 
+ existiert für kein divergenzfreies Feld 
 \begin_inset Formula $\underline{W}$
 \end_inset
 
- eine Vektorpotential 
+ ein Vektorpotential 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
