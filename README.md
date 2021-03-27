@@ -1,2 +1,2 @@
-# Einige meiner "Spass-an-der-Freud"-Projekte
+# Some of my fun-projects
 Work in progress
