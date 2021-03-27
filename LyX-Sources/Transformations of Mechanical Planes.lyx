@@ -35,7 +35,7 @@
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -60,6 +60,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -213,7 +217,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Ebenentransformationen/EbTrans.eps
+	filename Planetransformations/EbTrans.eps
 	width 50col%
 
 \end_inset
@@ -649,7 +653,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Ebenentransformationen/HyperEb.eps
+	filename Planetransformations/HyperEb.eps
 	width 50col%
 
 \end_inset
@@ -1138,7 +1142,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Ebenentransformationen/subgroupe.eps
+	filename Planetransformations/subgroupe.eps
 	width 50text%
 
 \end_inset
@@ -1399,7 +1403,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Ebenentransformationen/Det.eps
+	filename Planetransformations/Det.eps
 	width 50text%
 
 \end_inset
@@ -1738,7 +1742,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Ebenentransformationen/Orbit.eps
+	filename Planetransformations/Orbit.eps
 	width 50text%
 
 \end_inset
