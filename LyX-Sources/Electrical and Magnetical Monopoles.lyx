@@ -303,6 +303,38 @@ Mit
  bezeichnet.
 \end_layout
 
+\begin_layout Standard
+Dann kann jedes beliebige Feld 
+\begin_inset Formula $\underline{V}$
+\end_inset
+
+ auf 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ als Summe 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{V} & = & \underline{H}_{m}+\underline{H}_{e}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula $\underline{H}_{m}\in\mathbb{H}_{m}$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{H}_{e}\in\mathbb{H}_{e}$
+\end_inset
+
+ ausgedrückt werden.
+\end_layout
+
 \begin_layout Subsection*
 Maxwellgleichungen 
 \end_layout
@@ -980,6 +1012,25 @@ Nehmen wir an, dass
 \end_inset
 
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Dies ist Theorem 5 in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Valli"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1301,7 +1352,7 @@ Setzt man
 
  ist also die Rotation eines Vektorpotentials
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Hier wird das Argument benutzt, dass im 
