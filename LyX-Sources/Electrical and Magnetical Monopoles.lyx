@@ -304,7 +304,7 @@ Mit
 \end_layout
 
 \begin_layout Standard
-Dann kann jedes beliebige Feld 
+Jedes beliebige Feld 
 \begin_inset Formula $\underline{V}$
 \end_inset
 
@@ -312,7 +312,7 @@ Dann kann jedes beliebige Feld
 \begin_inset Formula $\Omega$
 \end_inset
 
- als Summe 
+ kann dann als Summe 
 \begin_inset Formula 
 \begin{eqnarray*}
 \underline{V} & = & \underline{H}_{m}+\underline{H}_{e}
@@ -366,7 +366,7 @@ Aus der Vektoranalysis ist für den
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- hinlänglich bekannt
+ bekannt
 \begin_inset Formula 
 \begin{eqnarray*}
 \text{rot grad\left(\psi\right)} & = & \underline{0}\\
@@ -690,7 +690,7 @@ Noch zu tun: die Vermutungen beweisen
 \end_layout
 
 \begin_layout Section*
-Potentiale des elektrischen Monopols 
+Felder und Potentiale des elektrischen Monopols 
 \end_layout
 
 \begin_layout Standard
@@ -728,7 +728,7 @@ Noch zu tun: skalares Potential und Vektorpotential herleiten
 \end_layout
 
 \begin_layout Section*
-Potentiale des magnetischen Monopols
+Felder und Potentiale des magnetischen Monopols
 \end_layout
 
 \begin_layout Standard
@@ -741,7 +741,7 @@ Sein magnetisches und elektrisches Feld in Kugelkoordinaten ist auf
 \begin_inset Formula $U$
 \end_inset
 
- analog zum elektrischen Monopol durch
+ durch
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{E}\left(\begin{array}{ccc}
