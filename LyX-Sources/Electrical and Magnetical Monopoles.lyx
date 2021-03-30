@@ -189,6 +189,41 @@ Grundlegendes
 \end_layout
 
 \begin_layout Subsection*
+Annahmen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ , alle Felder sind glatt, Flächen und Kurven besitzen eine Orientierung
+\end_layout
+
+\begin_layout Subsection*
+Rechenregeln 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jackson"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\nabla\times\left(\psi\underline{A}\right) & = & \left(\nabla\psi\right)\times\underline{A}+\psi\left(\nabla\times\underline{A}\right)\\
+\nabla\bullet\left(\psi\underline{A}\right) & = & \left(\nabla\psi\right)\bullet\underline{A}+\psi\left(\nabla\bullet\underline{A}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
 Satz von Stokes
 \end_layout
 
@@ -197,24 +232,12 @@ Sei
 \begin_inset Formula $S$
 \end_inset
 
- eine glatte, orientierte Fläche im 
-\begin_inset Formula $\mathbb{R}^{m}$
-\end_inset
-
- mit Rand 
-\begin_inset Formula $\partial S$
+ eine Fläche mit dem Rand 
+\begin_inset Formula $s=\partial S$
 \end_inset
 
 .
- Dann gilt für ein in einer Umgebung 
-\begin_inset Formula $U$
-\end_inset
-
- mit 
-\begin_inset Formula $S\subset U$
-\end_inset
-
- stetig differenzierbares Vektorfeld 
+ Dann gilt für ein Vektorfeld 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
@@ -224,7 +247,7 @@ Sei
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\int_{S}\left(\text{rot }\underline{A}\right)\bullet\underline{n}dS & = & \oint_{\partial S}\underline{A}\bullet\underline{t}ds\label{eq:Stokes}
+\int_{S}\left(\text{rot }\underline{A}\right)\bullet\underline{n}dS & = & \oint_{s}\underline{A}\bullet\underline{t}ds\label{eq:Stokes}
 \end{eqnarray}
 
 \end_inset
@@ -245,8 +268,8 @@ mit dem Normalenvektor
 \begin_inset Formula $\underline{t}$
 \end_inset
 
- des Randes 
-\begin_inset Formula $\partial S$
+ ihres Randes 
+\begin_inset Formula $s$
 \end_inset
 
 .
@@ -262,30 +285,22 @@ Sei
 \begin_inset Formula $V$
 \end_inset
 
- eine offene kompakte Teilmenge im 
-\begin_inset Formula $\mathbb{R}^{m}$
-\end_inset
-
- mit stückweise glattem Rand 
+ ein Volumen mit dem Rand 
 \begin_inset Formula $S=\partial V$
 \end_inset
 
 .
- Dann gilt für ein stetig differenzierbares Vektorfeld 
+ Dann gilt für ein Vektorfeld 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
- auf 
-\begin_inset Formula $V$
-\end_inset
-
-
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\int_{V}\left(\text{div }\underline{A}\right)dV & = & \oint_{\partial V}\underline{A}\bullet\underline{n}dS\label{eq:Stokes-1}
+\int_{V}\left(\text{div }\underline{A}\right)dV & = & \oint_{S}\underline{A}\bullet\underline{n}dS\label{eq:Stokes-1}
 \end{eqnarray}
 
 \end_inset
@@ -305,13 +320,20 @@ mit dem Normalenvektor
 .
 \end_layout
 
+\begin_layout Standard
+
+\color red
+Noch zu tun: der Satz von Gauss ist ein Spezialfall des Satzes von Stokes.
+ Wie sieht man das?
+\end_layout
+
 \begin_layout Subsection*
 Helmholtz-Zerlegung
 \end_layout
 
 \begin_layout Standard
 Es werden für einen Definitionsbereich 
-\begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
+\begin_inset Formula $\Omega$
 \end_inset
 
  die beiden Räume der 
@@ -325,8 +347,8 @@ Harmonischen Felder
  definiert
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathbb{H}_{m}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\bullet\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} \\
-\mathbb{H}_{e}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}^{3}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\times\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} .
+H_{m}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\bullet\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} \\
+H_{e}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\times\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} 
 \end{eqnarray*}
 
 \end_inset
@@ -335,51 +357,35 @@ Harmonischen Felder
 \end_layout
 
 \begin_layout Standard
-Mit 
-\begin_inset Formula $L_{p}^{3}\left(\Omega\right)$
+mit den auf 
+\begin_inset Formula $\Omega$
 \end_inset
 
- seien die Lebeque-integrablen Funktionen 
-\begin_inset Formula $L_{p}$
+ Lebeque-integrablen Funktionen 
+\begin_inset Formula $L_{2}\left(\Omega\right)$
 \end_inset
 
- auf 
-\begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
-\end_inset
-
- bezeichnet.
+.
 \end_layout
 
 \begin_layout Standard
 Jedes beliebige Feld 
-\begin_inset Formula $\underline{V}$
+\begin_inset Formula $\underline{A}$
 \end_inset
 
  auf 
 \begin_inset Formula $\Omega$
 \end_inset
 
- kann dann als Summe 
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{V} & = & \underline{H}_{m}+\underline{H}_{e}
-\end{eqnarray*}
-
+ kann dann als Summe eines Elementes aus 
+\begin_inset Formula $H_{m}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-mit 
-\begin_inset Formula $\underline{H}_{m}\in\mathbb{H}_{m}$
+ und eines Elementes aus 
+\begin_inset Formula $H_{e}$
 \end_inset
 
- und 
-\begin_inset Formula $\underline{H}_{e}\in\mathbb{H}_{e}$
-\end_inset
-
- ausgedrückt werden.
+ dargestellt werden.
 \end_layout
 
 \begin_layout Subsection*
@@ -409,11 +415,7 @@ Potentiale
 \end_layout
 
 \begin_layout Standard
-Aus der Vektoranalysis ist für den 
-\begin_inset Formula $\mathbb{R}^{3}$
-\end_inset
-
- bekannt
+Aus der Vektoranalysis ist bekannt
 \begin_inset Formula 
 \begin{eqnarray*}
 \text{rot grad\left(\psi\right)} & = & \underline{0}\\
@@ -1745,6 +1747,19 @@ literal "false"
 
 The theory of magnetic poles; Dirac, P.A.M.; Phys.
  Rev., 74(1948), 817–830
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "5"
+key "Jackson"
+literal "false"
+
+\end_inset
+
+Classical Elektrodynamics, Jackson, John David; John Wiley & Sons, Inc.;
+ 1999
 \end_layout
 
 \end_body
