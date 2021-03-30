@@ -198,7 +198,7 @@ Sei
 \end_inset
 
  eine glatte, orientierte Fläche im 
-\begin_inset Formula $\mathbb{R}^{3}$
+\begin_inset Formula $\mathbb{R}^{m}$
 \end_inset
 
  mit Rand 
@@ -206,22 +206,25 @@ Sei
 \end_inset
 
 .
- Dann gilt für ein Vektorfeld 
+ Dann gilt für ein in einer Umgebung 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $S\subset U$
+\end_inset
+
+ stetig differenzierbares Vektorfeld 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
- mit kontinuierlichen 1.
- partiellen Ableitungen in einer Umgebung, die 
-\begin_inset Formula $S$
-\end_inset
-
- enthält
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\iint_{S}\left(\text{rot }\underline{A}\right)\bullet d\underline{a} & = & \oint_{\partial S}\underline{A}\bullet d\underline{l}.\label{eq:Stokes}
+\int_{S}\left(\text{rot }\underline{A}\right)\bullet\underline{n}dS & = & \oint_{\partial S}\underline{A}\bullet\underline{t}ds\label{eq:Stokes}
 \end{eqnarray}
 
 \end_inset
@@ -230,15 +233,7 @@ Sei
 \end_layout
 
 \begin_layout Standard
-Dabei gilt 
-\begin_inset Formula $d\underline{a}=\underline{n}dS$
-\end_inset
-
- und 
-\begin_inset Formula $d\underline{l}=\underline{t}ds$
-\end_inset
-
- mit dem Normalenvektor 
+mit dem Normalenvektor 
 \begin_inset Formula $\underline{n}$
 \end_inset
 
@@ -256,6 +251,58 @@ Dabei gilt
 
 .
  
+\end_layout
+
+\begin_layout Subsection*
+Satz von Gauss
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $V$
+\end_inset
+
+ eine offene kompakte Teilmenge im 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ mit stückweise glattem Rand 
+\begin_inset Formula $S=\partial V$
+\end_inset
+
+.
+ Dann gilt für ein stetig differenzierbares Vektorfeld 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ auf 
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{V}\left(\text{div }\underline{A}\right)dV & = & \oint_{\partial V}\underline{A}\bullet\underline{n}dS\label{eq:Stokes-1}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit dem Normalenvektor 
+\begin_inset Formula $\underline{n}$
+\end_inset
+
+ des Randes 
+\begin_inset Formula $S$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection*
@@ -689,6 +736,445 @@ Im Fall
 Noch zu tun: die Vermutungen beweisen
 \end_layout
 
+\begin_layout Subsubsection*
+Theorem 1
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ rotationsfrei und jede geschlossene Kurve 
+\begin_inset Formula $C\subset\Omega$
+\end_inset
+
+ sei der Rand 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ einer Fläche 
+\begin_inset Formula $S\subset\Omega$
+\end_inset
+
+.
+ Dann existiert eine Funktion 
+\begin_inset Formula $\psi$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{H}=\text{grad}\left(\psi\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Dies ist Theorem 5 in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Valli"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis
+\end_layout
+
+\begin_layout Standard
+Da der Fluss von 
+\begin_inset Formula $\text{rot}\left(\underline{H}\right)$
+\end_inset
+
+ auf der Oberfläche 
+\begin_inset Formula $S$
+\end_inset
+
+ der zu 
+\begin_inset Formula $C$
+\end_inset
+
+ gehörenden Kurve verschwindet, folgt aus dem Satz von Stokes (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Stokes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), dass das Linienintegral jeder geschlossenen Kurve 
+\begin_inset Formula $C$
+\end_inset
+
+ über 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ verschwindet.
+ 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ ist also ein konservatives Vektorfeld und es gilt 
+\begin_inset Formula $\underline{H}=\text{grad}\left(\psi\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem 2
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ divergenzfrei und jede geschlossene Oberfläche 
+\begin_inset Formula $S\subset\Omega$
+\end_inset
+
+ sei der Rand 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ einer Teilmenge 
+\begin_inset Formula $D\subset\Omega$
+\end_inset
+
+.
+ Dann existiert ein Vektorfeld 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ mit 
+\begin_inset Formula $\underline{A}=\text{rot}\left(\underline{B}\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis
+\end_layout
+
+\begin_layout Standard
+Da das Integral von 
+\begin_inset Formula $\text{div}\left(\underline{B}\right)$
+\end_inset
+
+ auf jeder Teilmenge 
+\begin_inset Formula $D$
+\end_inset
+
+ verschwindet, folgt aus dem Satz von Stokes (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Stokes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), dass der Fluss von 
+\begin_inset Formula $B$
+\end_inset
+
+ auf jeder geschlossenen Fläche in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ verschwindet.
+ Dies garantiert die Existenz eines Vektorpotentials 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem 3
+\end_layout
+
+\begin_layout Standard
+Nehmen wir an, dass 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ rotationsfrei ist und dass 
+\begin_inset Formula $\underline{H}\times\underline{n}=0$
+\end_inset
+
+ auf dem Rand 
+\begin_inset Formula $\partial\Omega$
+\end_inset
+
+ von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ gilt.
+ Dann existiert eine Funktion 
+\begin_inset Formula $\psi$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{H}=\text{grad}\left(\psi\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis
+\end_layout
+
+\begin_layout Standard
+Setzt man 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ ausserhalb von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ durch 
+\begin_inset Formula $\underline{0}$
+\end_inset
+
+ fort, dann bleibt 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ rotationsfrei.
+ 
+\begin_inset Formula $\underline{H}$
+\end_inset
+
+ ist also der Gradient eines skalaren Potentials
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Hier wird das Argument benutzt, dass im 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ jedes rotationsfreie Feld als Gradient eines skalaren Potentials bestimmt
+ werden kann.
+ Wo ist das denn bewiesen?
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem 4
+\end_layout
+
+\begin_layout Standard
+Nehmen wir an, dass 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ divergenzfrei ist und dass 
+\begin_inset Formula $\underline{B}\bullet\underline{n}=0$
+\end_inset
+
+ auf dem Rand 
+\begin_inset Formula $\partial\Omega$
+\end_inset
+
+ von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ gilt.
+ Dann existiert ein Vektorfeld 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{B}=\text{rot}\left(\underline{A}\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis
+\end_layout
+
+\begin_layout Standard
+Setzt man 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ ausserhalb von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ durch 
+\begin_inset Formula $\underline{0}$
+\end_inset
+
+ fort, dann bleibt 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ divergenzfrei.
+ Das Feld 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ ist also die Rotation eines Vektorpotentials
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Hier wird das Argument benutzt, dass im 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ jedes divergenzfreie Feld als Rotation eines Vektorpotentials bestimmt
+ werden kann.
+ Wo ist das bewiesen?
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Noch zu tun: 
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Definition der 
+\begin_inset Quotes gld
+\end_inset
+
+Harmonischen Felder
+\begin_inset Quotes grd
+\end_inset
+
+ der Helmhotz-Zerlegung verstehen
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Theorem 2 ist die Stelle (neben Theorem 1), in der die Topologie ins Spiel
+ kommt.
+ Diese Voraussetzungen von sind für den magnetischen Monopol nicht erfüllt!
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Alles obige zu einem folgerichtigen Ganzen integrieren und die Lücken füllen
+\end_layout
+
 \begin_layout Section*
 Felder und Potentiale des elektrischen Monopols 
 \end_layout
@@ -977,437 +1463,6 @@ Die Annahme ist also falsch und es existiert kein solches Vektorpotential
 Noch zu tun: 1, 2 und 3 in voller Allgemeinheit beweisen
 \end_layout
 
-\begin_layout Subsubsection*
-Theorem 1
-\end_layout
-
-\begin_layout Standard
-Nehmen wir an, dass 
-\begin_inset Formula $\underline{H}$
-\end_inset
-
- rotationsfrei ist und dass jede geschlossene Kurve 
-\begin_inset Formula $C\subset\Omega$
-\end_inset
-
- der Rand 
-\begin_inset Formula $\partial S$
-\end_inset
-
- einer Fläche 
-\begin_inset Formula $S\subset\Omega$
-\end_inset
-
- ist.
- Dann existiert eine Funktion 
-\begin_inset Formula $\psi$
-\end_inset
-
- mit 
-\begin_inset Formula $\underline{H}=\text{grad}\left(\psi\right)$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
-\end_inset
-
-.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Dies ist Theorem 5 in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Valli"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-Beweis
-\end_layout
-
-\begin_layout Standard
-Da der Fluss von 
-\begin_inset Formula $\text{rot}\left(\underline{H}\right)$
-\end_inset
-
- auf jeder Oberfläche 
-\begin_inset Formula $S$
-\end_inset
-
- verschwindet, folgt aus dem Satz von Stokes (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Stokes"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), dass das Linienintegral einer geschlossenen Kurve 
-\begin_inset Formula $C$
-\end_inset
-
- über 
-\begin_inset Formula $\underline{H}$
-\end_inset
-
- verschwindet
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Hä?
-\end_layout
-
-\end_inset
-
-.
- 
-\begin_inset Formula $\quad\blacksquare$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-Theorem 2
-\end_layout
-
-\begin_layout Standard
-Nehmen wir an, dass 
-\begin_inset Formula $\underline{B}$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
-\end_inset
-
- divergenzfrei ist und dass jede geschlossene Oberfläche 
-\begin_inset Formula $S\subset\Omega$
-\end_inset
-
- der Rand 
-\begin_inset Formula $\partial S$
-\end_inset
-
- einer Teilmenge 
-\begin_inset Formula $D\subset\Omega$
-\end_inset
-
- ist.
- Dann existiert ein Vektorfeld 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $\underline{A}$
-\end_inset
-
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- mit 
-\begin_inset Formula $\underline{A}=\text{rot}\left(\underline{B}\right)$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection*
-Beweis
-\end_layout
-
-\begin_layout Standard
-Da das Integral von 
-\begin_inset Formula $\text{div}\left(\underline{B}\right)$
-\end_inset
-
- auf jeder Teilmenge 
-\begin_inset Formula $D$
-\end_inset
-
- verschwindet, verschwindet der Fluss von 
-\begin_inset Formula $B$
-\end_inset
-
- auf jeder geschlossenen Fläche in 
-\begin_inset Formula $\Omega.$
-\end_inset
-
- Dies garantiert die Existenz eines Vektorpotentials 
-\begin_inset Formula $\underline{A}$
-\end_inset
-
-
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Hä?
-\end_layout
-
-\end_inset
-
-.
- 
-\begin_inset Formula $\quad\blacksquare$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-Theorem 3
-\end_layout
-
-\begin_layout Standard
-Nehmen wir an, dass 
-\begin_inset Formula $\underline{H}$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
-\end_inset
-
- rotationsfrei ist und dass 
-\begin_inset Formula $\underline{H}\times\underline{n}=0$
-\end_inset
-
- auf dem Rand 
-\begin_inset Formula $\partial\Omega$
-\end_inset
-
- von 
-\begin_inset Formula $\Omega$
-\end_inset
-
- gilt.
- Dann existiert eine Funktion 
-\begin_inset Formula $\psi$
-\end_inset
-
- mit 
-\begin_inset Formula $\underline{H}=\text{grad}\left(\psi\right)$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection*
-Beweis
-\end_layout
-
-\begin_layout Standard
-Setzt man 
-\begin_inset Formula $\underline{H}$
-\end_inset
-
- ausserhalb von 
-\begin_inset Formula $\Omega$
-\end_inset
-
- durch 
-\begin_inset Formula $\underline{0}$
-\end_inset
-
- fort, dann bleibt 
-\begin_inset Formula $\underline{H}$
-\end_inset
-
- rotationsfrei.
- 
-\begin_inset Formula $\underline{H}$
-\end_inset
-
- ist also der Gradient eines skalaren Potentials
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Hier wird das Argument benutzt, dass im 
-\begin_inset Formula $\mathbb{R}^{3}$
-\end_inset
-
- jedes rotationsfreie Feld als Gradient eines skalaren Potentials bestimmt
- werden kann.
- Wo ist das denn bewiesen?
-\end_layout
-
-\end_inset
-
-.
- 
-\begin_inset Formula $\quad\blacksquare$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-Theorem 4
-\end_layout
-
-\begin_layout Standard
-Nehmen wir an, dass 
-\begin_inset Formula $\underline{B}$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
-\end_inset
-
- divergenzfrei ist und dass 
-\begin_inset Formula $\underline{B}\bullet\underline{n}=0$
-\end_inset
-
- auf dem Rand 
-\begin_inset Formula $\partial\Omega$
-\end_inset
-
- von 
-\begin_inset Formula $\Omega$
-\end_inset
-
- gilt.
- Dann existiert ein Vektorfeld 
-\begin_inset Formula $\underline{A}$
-\end_inset
-
- mit 
-\begin_inset Formula $\underline{B}=\text{rot}\left(\underline{A}\right)$
-\end_inset
-
- in 
-\begin_inset Formula $\Omega$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection*
-Beweis
-\end_layout
-
-\begin_layout Standard
-Setzt man 
-\begin_inset Formula $\underline{B}$
-\end_inset
-
- ausserhalb von 
-\begin_inset Formula $\Omega$
-\end_inset
-
- durch 
-\begin_inset Formula $\underline{0}$
-\end_inset
-
- fort, dann bleibt 
-\begin_inset Formula $\underline{B}$
-\end_inset
-
- divergenzfrei.
- Das Feld 
-\begin_inset Formula $\underline{B}$
-\end_inset
-
- ist also die Rotation eines Vektorpotentials
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Hier wird das Argument benutzt, dass im 
-\begin_inset Formula $\mathbb{R}^{3}$
-\end_inset
-
- jedes divergenzfreie Feld als Rotation eines Vektorpotentials bestimmt
- werden kann.
- Wo ist das bewiesen?
-\end_layout
-
-\end_inset
-
-.
- 
-\begin_inset Formula $\quad\blacksquare$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\color red
-Noch zu tun: 
-\end_layout
-
-\begin_layout Itemize
-
-\color red
-Definition der 
-\begin_inset Quotes gld
-\end_inset
-
-Harmonischen Felder
-\begin_inset Quotes grd
-\end_inset
-
- der Helmhotz-Zerlegung verstehen
-\end_layout
-
-\begin_layout Itemize
-
-\color red
-Theorem 2 ist die Stelle (neben Theorem 1), in der die Topologie ins Spiel
- kommt.
- Diese Voraussetzungen von sind für den magnetischen Monopol nicht erfüllt!
-\end_layout
-
-\begin_layout Itemize
-
-\color red
-Alles obige zu einem folgerichtigen Ganzen integrieren und die Lücken füllen
-\end_layout
-
 \begin_layout Section*
 Alternierende Differentialformen auf 
 \begin_inset Formula $n$
@@ -1542,6 +1597,52 @@ Homologietheorie
 \end_inset
 
 ?
+\end_layout
+
+\begin_layout Subsection*
+Satz von Stokes
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $M$
+\end_inset
+
+ eine orientierte 
+\begin_inset Formula $m$
+\end_inset
+
+-dimensionale kompakte differenzierbare Mannigfaltigkeit mit abschnittsweise
+ glattem Rand 
+\begin_inset Formula $\partial M$
+\end_inset
+
+ mit induzierter Orientierung.
+ Sei ferner 
+\begin_inset Formula $\omega$
+\end_inset
+
+ eine in einer hinreichend großen offenen Umgebung von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ definierte alternierende Differentialform vom Grad 
+\begin_inset Formula $m-1$
+\end_inset
+
+, die als stetig differenzierbar vorausgesetzt wird.
+\end_layout
+
+\begin_layout Standard
+Dann gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\int_{M}d\omega & = & \int_{\partial M}\omega.
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
