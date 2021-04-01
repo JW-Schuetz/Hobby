@@ -326,7 +326,26 @@ mit dem Normalenvektor
 
 \color red
 Noch zu tun: der Satz von Gauss ist ein Spezialfall des Satzes von Stokes.
- Wie sieht man das?
+ Wie sieht man das? Folgt aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Satz-von-Stokes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) für 
+\begin_inset Formula $m=3$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $m=2$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection*
@@ -649,7 +668,7 @@ Fall
 \end_layout
 
 \begin_layout Standard
-Es soll die Umkehrung von 
+Es soll die Umkehrung von (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Potentiale-Notwendig-Rotationsfrei"
@@ -659,7 +678,7 @@ noprefix "false"
 
 \end_inset
 
- gezeigt werden.
+) gezeigt werden.
 \end_layout
 
 \begin_layout Standard
@@ -676,7 +695,7 @@ Es sei ein rotationsfreies Feld
 \begin_inset Formula $s$
 \end_inset
 
-, so folgt mit dem Satz von Stokes 
+, so folgt mit dem Satz von Stokes (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Stokes"
@@ -686,7 +705,7 @@ noprefix "false"
 
 \end_inset
 
- 
+) 
 \begin_inset Formula $\oint_{s}\underline{V}\bullet\underline{t}ds=0.$
 \end_inset
 
@@ -714,7 +733,7 @@ Das Feld
 \end_layout
 
 \begin_layout Standard
-Es soll die Umkehrung von 
+Es soll die Umkehrung von (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Potentiale-Notwendig-Divergenzfrei"
@@ -724,7 +743,7 @@ noprefix "false"
 
 \end_inset
 
- gezeigt werden.
+) gezeigt werden.
 \end_layout
 
 \begin_layout Standard
@@ -745,7 +764,7 @@ Es sei ein Feld
 \begin_inset Formula $S$
 \end_inset
 
-, so folgt mit dem Satz von Gauss 
+, so folgt mit dem Satz von Gauss (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Gauss"
@@ -755,7 +774,7 @@ noprefix "false"
 
 \end_inset
 
- 
+) 
 \begin_inset Formula $\oint_{S}\underline{W}\bullet\underline{n}dS=0$
 \end_inset
 
@@ -1423,7 +1442,7 @@ Quantelung der Elementarladung als direkte Folge der magnetischen Monopole
 \end_layout
 
 \begin_layout Subsection*
-Beweis zu Punkt 
+Beweis zu Punkt (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "enu:Fall-2"
@@ -1433,7 +1452,7 @@ noprefix "false"
 
 \end_inset
 
- für den Spezialfall 
+) für den Spezialfall 
 \begin_inset Quotes gld
 \end_inset
 
@@ -1783,9 +1802,9 @@ Sei
 \begin_layout Standard
 Dann gilt 
 \begin_inset Formula 
-\begin{eqnarray*}
-\int_{M}d\omega & = & \int_{\partial M}\omega.
-\end{eqnarray*}
+\begin{eqnarray}
+\int_{M}d\omega & = & \int_{\partial M}\omega.\label{eq:Satz-von-Stokes}
+\end{eqnarray}
 
 \end_inset
 
