@@ -193,14 +193,16 @@ Annahmen
 \end_layout
 
 \begin_layout Standard
+Definitionsbereich 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- , alle Felder sind glatt, Flächen und Kurven besitzen eine Orientierung
+, alle Felder sind glatt, Flächen und Kurven sind glatt und haben Normalenvektor
+en
 \end_layout
 
 \begin_layout Subsection*
-Rechenregeln 
+Identitäten 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Jackson"
@@ -300,7 +302,7 @@ Sei
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\int_{V}\left(\text{div }\underline{A}\right)dV & = & \oint_{S}\underline{A}\bullet\underline{n}dS\label{eq:Stokes-1}
+\int_{V}\left(\text{div }\underline{A}\right)dV & = & \oint_{S}\underline{A}\bullet\underline{n}dS\label{eq:Gauss}
 \end{eqnarray}
 
 \end_inset
@@ -415,11 +417,11 @@ Potentiale
 \end_layout
 
 \begin_layout Standard
-Aus der Vektoranalysis ist bekannt
+Wegen 
 \begin_inset Formula 
 \begin{eqnarray*}
 \text{rot grad\left(\psi\right)} & = & \underline{0}\\
-\text{div rot\left(\underline{A}\right)} & = & 0.
+\text{div rot\left(\underline{A}\right)} & = & 0
 \end{eqnarray*}
 
 \end_inset
@@ -428,14 +430,14 @@ Aus der Vektoranalysis ist bekannt
 \end_layout
 
 \begin_layout Standard
-Damit gelten die folgenden beiden Aussagen
+gelten die folgenden beiden Aussagen
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{V}=\text{grad\left(\psi\right)} & \Longrightarrow & \text{rot}\left(\underline{V}\right)=\underline{0}\label{eq:Potentiale-Notwendig}\\
-\underline{W}=\text{rot\left(\underline{A}\right)} & \Longrightarrow & \text{div}\left(\underline{W}\right)=0.\nonumber 
+\underline{V}=\text{grad\left(\psi\right)} & \Longrightarrow & \text{rot}\left(\underline{V}\right)=\underline{0}\label{eq:Potentiale-Notwendig-Rotationsfrei}\\
+\underline{W}=\text{rot\left(\underline{A}\right)} & \Longrightarrow & \text{div}\left(\underline{W}\right)=0.\label{eq:Potentiale-Notwendig-Divergenzfrei}
 \end{eqnarray}
 
 \end_inset
@@ -590,7 +592,7 @@ Existenz der Potentiale
 Für die Existenz der Potentiale gelten die notwendigen Bedingungen (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:Potentiale-Notwendig"
+reference "eq:Potentiale-Notwendig-Rotationsfrei"
 plural "false"
 caps "false"
 noprefix "false"
@@ -635,7 +637,145 @@ Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
 \end_inset
 
  ab.
- Es soll für 
+ 
+\end_layout
+
+\begin_layout Subsection*
+Fall 
+\begin_inset Formula $\Omega=\mathbb{R}^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es soll die Umkehrung von 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Potentiale-Notwendig-Rotationsfrei"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gezeigt werden.
+\end_layout
+
+\begin_layout Standard
+Es sei ein rotationsfreies Feld 
+\begin_inset Formula $\underline{V}$
+\end_inset
+
+ gegeben.
+ Wählt man eine Fläche 
+\begin_inset Formula $S$
+\end_inset
+
+ mit Rand 
+\begin_inset Formula $s$
+\end_inset
+
+, so folgt mit dem Satz von Stokes 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Stokes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula $\oint_{s}\underline{V}\bullet\underline{t}ds=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Feld 
+\begin_inset Formula $\underline{V}$
+\end_inset
+
+ ist also konservativ und damit existiert eine Funktion 
+\begin_inset Formula $\psi$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{V}=\text{grad\left(\psi\right)}.$
+\end_inset
+
+ 
+\begin_inset Formula $\quad\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es soll die Umkehrung von 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Potentiale-Notwendig-Divergenzfrei"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gezeigt werden.
+\end_layout
+
+\begin_layout Standard
+Es sei ein Feld 
+\begin_inset Formula $\underline{W}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\text{div}\left(\underline{W}\right)=0$
+\end_inset
+
+ gegeben.
+ Wählt man ein Volumen 
+\begin_inset Formula $V$
+\end_inset
+
+ mit der (geschlossenen) Oberfläche 
+\begin_inset Formula $S$
+\end_inset
+
+, so folgt mit dem Satz von Gauss 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Gauss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula $\oint_{S}\underline{W}\bullet\underline{n}dS=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Das Feld 
+\begin_inset Formula $\underline{W}$
+\end_inset
+
+ ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Es soll für 
 \begin_inset Formula $\Omega=U$
 \end_inset
 
@@ -730,6 +870,11 @@ Im Fall
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
