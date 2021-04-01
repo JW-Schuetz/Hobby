@@ -1,2 +1,2 @@
 # Some of my fun-projects in learning Math
-Work in progress (only in german, sorry)
+Work in progress (only in german)
