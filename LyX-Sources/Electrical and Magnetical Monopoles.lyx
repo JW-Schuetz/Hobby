@@ -151,8 +151,15 @@ ntial
 \begin_inset Formula $\underline{A}$
 \end_inset
 
- nicht mehr verzichtet werden und der Aharonov-Bohm-Effekt zeigt z.B., dass
- das Vektorpotential physikalisch messbar Auswirkungen besitzt.
+ nicht mehr verzichtet werden und der Aharonov-Bohm-Effekt 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Aharonov-Bohm"
+literal "false"
+
+\end_inset
+
+ zeigt z.B., dass das Vektorpotential physikalisch messbar Auswirkungen besitzt.
 \end_layout
 
 \begin_layout Standard
@@ -1924,6 +1931,19 @@ literal "false"
 
 Classical Elektrodynamics, Jackson, John David; John Wiley & Sons, Inc.;
  1999
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "6"
+key "Aharonov-Bohm"
+literal "false"
+
+\end_inset
+
+Significance of electromagnetic potentials in the quantum theory; Aharonov,
+ Y., Bohm, D.
 \end_layout
 
 \end_body
