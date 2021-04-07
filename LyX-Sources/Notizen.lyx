@@ -161,7 +161,7 @@ Das Betragsquadrat von
 \begin_inset Formula $\psi$
 \end_inset
 
- hat eine physikalische Bedeutung, die Wahrscheinlichkeitsdichte, ist aber
+ hat die physikalische Bedeutung einer Wahrscheinlichkeitsdichte und ist
  von der Phase 
 \begin_inset Formula $\gamma$
 \end_inset
@@ -170,13 +170,27 @@ Das Betragsquadrat von
 \end_layout
 
 \begin_layout Itemize
-Der Betrag
+Der Betrag von 
 \begin_inset Formula $\int\psi_{n}\psi_{m}dx_{i}$
 \end_inset
 
- hat eine physikalische Bedeutung, die Wahrscheinlichkeit der 
+ hat die physikalische Bedeutung der Wahrscheinlichkeit der Übereinstimmung
+ von 
+\begin_inset Formula $\psi_{n}$
+\end_inset
+
+ und 
+\begin_inset Formula $\psi_{m}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+Insgesamt gilt: die Phasenänderung über jede geschlossene Kurve muss für
+ alle Wellenfunktionen gleich sein!
+\end_layout
+
 \end_body
 \end_document
