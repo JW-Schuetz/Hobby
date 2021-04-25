@@ -139,8 +139,8 @@ In der Elektrodynamik sind die Skalar- und Vektorpotentiale
 \begin_inset Formula $\underline{A}$
 \end_inset
 
- ein nützliches mathematisches Werkzeug, das die Lösung der Maxwell-Gleichungen
- stark vereinfacht.
+ für die elektrische und magnetische Feldstärke ein nützliches mathematisches
+ Werkzeug, das die Lösung der Maxwell-Gleichungen stark vereinfacht.
  Die Potentiale sind aber zur Lösung nicht unbedingt notwendig und haben
  keine eigenständigen physikalischen Auswirkungen.
 \end_layout
@@ -159,7 +159,7 @@ literal "false"
 
 \end_inset
 
- zeigt z.B., dass das Vektorpotential physikalisch messbar Auswirkungen besitzt.
+ zeigt, dass das Vektorpotential physikalisch messbar Auswirkungen besitzt.
 \end_layout
 
 \begin_layout Standard
@@ -204,8 +204,8 @@ Definitionsbereich
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
-, alle Felder sind glatt, Flächen und Kurven sind glatt und haben Normalenvektor
-en
+, alle Felder sind glatt, Flächen und Kurven sind glatt und sind orientierbar
+ und haben also Normalenvektoren
 \end_layout
 
 \begin_layout Subsection*
@@ -397,6 +397,10 @@ mit den auf
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Jedes beliebige Feld 
 \begin_inset Formula $\underline{A}$
 \end_inset
@@ -414,6 +418,14 @@ Jedes beliebige Feld
 \end_inset
 
  dargestellt werden.
+ 
+\color red
+Das kann doch nicht stimmen!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
