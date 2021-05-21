@@ -1,0 +1,449 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Topologische Räume und Mannigfaltigkeiten
+\end_layout
+
+\begin_layout Section*
+Euklidscher Räume
+\end_layout
+
+\begin_layout Subsection*
+Innere, Äussere, Rand
+\end_layout
+
+\begin_layout Standard
+Es sei ein Punkt 
+\begin_inset Formula $\underline{x}\in\mathbb{R}^{n}$
+\end_inset
+
+ mit einer offenen 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+-Umgebungen 
+\begin_inset Formula $B_{\varepsilon}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{x}\in B_{\varepsilon}$
+\end_inset
+
+ und 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ gegeben.
+ Weiterhin sei eine Teilmenge 
+\begin_inset Formula $A\subset\mathbb{R}^{n}$
+\end_inset
+
+ gegeben.
+ 
+\end_layout
+
+\begin_layout Standard
+Dann muss für den Punkt 
+\begin_inset Formula $\underline{x}$
+\end_inset
+
+ einer der folgenden drei Fälle zutreffen 
+\end_layout
+
+\begin_layout Enumerate
+Es gibt ein 
+\begin_inset Formula $B_{\varepsilon}$
+\end_inset
+
+ mit 
+\begin_inset Formula $B_{\varepsilon}\subset A$
+\end_inset
+
+ oder äquivalent 
+\begin_inset Formula $\exists B_{\varepsilon}\mid B_{\varepsilon}\subset A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Es gibt ein 
+\begin_inset Formula $B_{\varepsilon}$
+\end_inset
+
+ mit 
+\begin_inset Formula $B_{\varepsilon}\subset\mathbb{R}^{n}-A$
+\end_inset
+
+ oder äquivalent 
+\begin_inset Formula $\exists B_{\varepsilon}\mid B_{\varepsilon}\subset\mathbb{R}^{n}-A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B_{\varepsilon}$
+\end_inset
+
+ enthält Punkte aus 
+\begin_inset Formula $A$
+\end_inset
+
+ und Punkte aus 
+\begin_inset Formula $\mathbb{R}^{n}-A$
+\end_inset
+
+ oder äquivalent 
+\begin_inset Formula $\left(\exists\underline{b}\in B_{\varepsilon}\mid\underline{b}\in A\right)\land\left(\exists\underline{b}\in B_{\varepsilon}\mid\underline{b}\in\mathbb{R}^{n}-A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+D.h.
+ die Punkte des 
+\begin_inset Formula $\underline{x}\in\mathbb{R}^{n}$
+\end_inset
+
+ werden relativ zur Teilmenge 
+\begin_inset Formula $A$
+\end_inset
+
+ in disjunkte Punktmengen zerlegt - ein Punkt 
+\begin_inset Formula $\underline{x}$
+\end_inset
+
+ liegt entweder 
+\end_layout
+
+\begin_layout Enumerate
+im Inneren von 
+\begin_inset Formula $A$
+\end_inset
+
+: 
+\begin_inset Formula $\underline{x}\in\text{int\left(A\right)}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+im Äusseren von 
+\begin_inset Formula $A$
+\end_inset
+
+: 
+\begin_inset Formula $\underline{x}\in\mathbb{R}^{n}-A$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+auf dem Rand von 
+\begin_inset Formula $A$
+\end_inset
+
+: 
+\begin_inset Formula $\underline{x}\in\partial A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Beispiel 1
+\end_layout
+
+\begin_layout Standard
+Die Menge 
+\begin_inset Formula $A$
+\end_inset
+
+ besteht aus allen Punkten 
+\begin_inset Formula $A=\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\underline{x}\in A$
+\end_inset
+
+ trifft Punkt 1 zu und somit gilt 
+\begin_inset Formula $\text{int\left(A\right)}=A$
+\end_inset
+
+ und 
+\begin_inset Formula $\partial A=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Beispiel 2
+\end_layout
+
+\begin_layout Standard
+Die Menge 
+\begin_inset Formula $A$
+\end_inset
+
+ besteht nur aus einem Punkt 
+\begin_inset Formula $A=\left\{ \underline{a}\in\mathbb{R}^{n}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underline{x}\neq\underline{a}$
+\end_inset
+
+: Punkt 2 trifft zu also gilt 
+\begin_inset Formula $\text{int\left(A\right)}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underline{x}=\underline{a}$
+\end_inset
+
+: Punkt 3 trifft zu und somit 
+\begin_inset Formula $\partial A=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dieses Ergebnis lässt sich auf die Menge abzählbar unendlich vieler voneinander
+ isolierter Punkte verallgemeinern.
+\end_layout
+
+\begin_layout Subsection*
+Offenheit, Geschlossenheit, Abschluss
+\end_layout
+
+\begin_layout Subsubsection*
+Definitionen
+\end_layout
+
+\begin_layout Standard
+Für den Abschluss 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ einer Punktmenge 
+\begin_inset Formula $A$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\overline{A}=A\cup\partial A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Vermutungen
+\end_layout
+
+\begin_layout Itemize
+Das Innere jeder Punktmenge ist offen.
+\end_layout
+
+\begin_layout Itemize
+Das Äussere jeder Punktmenge ist offen.
+\end_layout
+
+\begin_layout Itemize
+Die Vereinigung abzählbar vieler offener Punktmengen ist offen.
+\end_layout
+
+\begin_layout Itemize
+Der Rand einer offenen Menge ist leer.
+\end_layout
+
+\begin_layout Itemize
+Der Rand einer Punktmenge ist entweder leer oder geschlossen.
+\end_layout
+
+\begin_layout Itemize
+Das Komplement einer geschlossenen Punktmenge ist offen.
+ ???
+\end_layout
+
+\begin_layout Subsubsection*
+Beispiel 1
+\end_layout
+
+\begin_layout Standard
+Die Punktmengen 
+\begin_inset Formula $A$
+\end_inset
+
+ der Beispiele 1 und 2 sind offen.
+\end_layout
+
+\begin_layout Subsubsection*
+Beispiel 2
+\end_layout
+
+\begin_layout Standard
+Ich betrachte im 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ die folgende Teilmenge 
+\begin_inset Formula $M=K\cup L$
+\end_inset
+
+ mit 
+\begin_inset Formula 
+\begin{eqnarray*}
+K & = & \left\{ \underline{x}\in\mathbb{R}^{3}\mid\left\Vert \underline{x}\right\Vert =R\right\} \in\mathbb{R}^{3}\\
+L & = & \left\{ \underline{x}\in\mathbb{R}^{3}\mid\left(\begin{array}{ccc}
+0, & 0, & z\end{array}\right),-R\leq z\leq R\right\} \in\mathbb{R}^{3}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dies ist also die Oberfläche der Kugel mit Radius 
+\begin_inset Formula $R$
+\end_inset
+
+ vereinigt mit dem offenen Teilintervall 
+\begin_inset Formula $-R<z<R$
+\end_inset
+
+ der 
+\begin_inset Formula $z$
+\end_inset
+
+-Achse.
+ 
+\end_layout
+
+\begin_layout Standard
+Ich will 
+\begin_inset Formula $M$
+\end_inset
+
+ zu einem topologischen Raum ausbauen.
+ 
+\end_layout
+
+\begin_layout Standard
+Die zugehörige Mannigfaltigkeit sollte dann die die Besonderheit haben,
+ dass sie Karten der Dimension 
+\begin_inset Formula $n=1$
+\end_inset
+
+ und 
+\begin_inset Formula $n=2$
+\end_inset
+
+ besitzt.
+ 
+\end_layout
+
+\end_body
+\end_document

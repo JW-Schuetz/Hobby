@@ -115,15 +115,11 @@ Vektoren werden im folgenden durch einen Unterstrich kenntlich gemacht
 \begin_inset Formula $\times$
 \end_inset
 
- bezeichnet.
-\end_layout
-
-\begin_layout Standard
-Weiterhin sollen Kugelkoordinaten 
+ bezeichnet, weiterhin sollen Kugelkoordinaten 
 \begin_inset Formula $\left(\rho,\phi,\Theta\right)$
 \end_inset
 
- zur Anwendung kommen.
+ benutzt werden.
 \end_layout
 
 \begin_layout Section*
@@ -204,8 +200,8 @@ Definitionsbereich
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
-, alle Felder sind glatt, Flächen und Kurven sind glatt und sind orientierbar
- und haben also Normalenvektoren
+, alle Felder sind glatt, Flächen und Kurven sind glatt und orientierbar
+ (besitzen also Normalenvektoren)
 \end_layout
 
 \begin_layout Subsection*
@@ -468,7 +464,7 @@ Wegen
 \end_layout
 
 \begin_layout Standard
-gelten die folgenden beiden Aussagen
+gelten die folgenden beiden Aussagen 
 \end_layout
 
 \begin_layout Standard
