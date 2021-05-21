@@ -127,7 +127,7 @@ Es sei ein Punkt
 \end_layout
 
 \begin_layout Standard
-Dann muss für den Punkt 
+Dann muss für jeden Punkt 
 \begin_inset Formula $\underline{x}$
 \end_inset
 
@@ -187,7 +187,7 @@ Es gibt ein
 
 \begin_layout Standard
 D.h.
- die Punkte des 
+ die Punkte 
 \begin_inset Formula $\underline{x}\in\mathbb{R}^{n}$
 \end_inset
 
@@ -195,7 +195,7 @@ D.h.
 \begin_inset Formula $A$
 \end_inset
 
- in disjunkte Punktmengen zerlegt - ein Punkt 
+ in zueinander disjunkte Punktmengen zerlegt - ein Punkt 
 \begin_inset Formula $\underline{x}$
 \end_inset
 
@@ -215,7 +215,7 @@ im Inneren von
 \end_layout
 
 \begin_layout Enumerate
-im Äusseren von 
+im Komplement von 
 \begin_inset Formula $A$
 \end_inset
 
@@ -287,10 +287,10 @@ Die Menge
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\underline{x}\neq\underline{a}$
+\begin_inset Formula $\forall\underline{x}\neq\underline{a}$
 \end_inset
 
-: Punkt 2 trifft zu also gilt 
+: trifft Punkt 2 zu also gilt 
 \begin_inset Formula $\text{int\left(A\right)}=\emptyset$
 \end_inset
 
@@ -301,16 +301,17 @@ Die Menge
 \begin_inset Formula $\underline{x}=\underline{a}$
 \end_inset
 
-: Punkt 3 trifft zu und somit 
+: trifft Punkt 3 zu und somit 
 \begin_inset Formula $\partial A=A$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
 Dieses Ergebnis lässt sich auf die Menge abzählbar unendlich vieler voneinander
  isolierter Punkte verallgemeinern.
+ Beweis durch vollständige Induktion fehlt noch!
 \end_layout
 
 \begin_layout Subsection*
@@ -340,6 +341,10 @@ Für den Abschluss
 
 \begin_layout Subsubsection*
 Vermutungen
+\end_layout
+
+\begin_layout Standard
+Die Beweise fehlen noch!
 \end_layout
 
 \begin_layout Itemize
@@ -376,7 +381,8 @@ Die Punktmengen
 \begin_inset Formula $A$
 \end_inset
 
- der Beispiele 1 und 2 sind offen.
+ der Beispiele 1 und 2 sind vermutlich offen.
+ Beweis fehlt noch!
 \end_layout
 
 \begin_layout Subsubsection*
@@ -419,11 +425,7 @@ Dies ist also die Oberfläche der Kugel mit Radius
 \end_inset
 
 -Achse.
- 
-\end_layout
-
-\begin_layout Standard
-Ich will 
+ Ich will 
 \begin_inset Formula $M$
 \end_inset
 
@@ -442,7 +444,7 @@ Die zugehörige Mannigfaltigkeit sollte dann die die Besonderheit haben,
 \end_inset
 
  besitzt.
- 
+ Fehlt noch!
 \end_layout
 
 \end_body
