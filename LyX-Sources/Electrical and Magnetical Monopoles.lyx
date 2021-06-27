@@ -196,12 +196,12 @@ Annahmen
 \end_layout
 
 \begin_layout Standard
-Definitionsbereich 
+Der Definitionsbereich ist 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
 , alle Felder sind glatt, Flächen und Kurven sind glatt und orientierbar
- (besitzen also Normalenvektoren)
+ (besitzen also Normalenvektoren).
 \end_layout
 
 \begin_layout Subsection*
@@ -542,7 +542,8 @@ die erste Homotopiegruppe (die Fundamentalgruppe) von
 \begin_inset Formula $U$
 \end_inset
 
- zusammengezogen werden - man nennt 
+ zusammengezogen werden.
+ Man nennt 
 \begin_inset Formula $U$
 \end_inset
 
@@ -572,8 +573,8 @@ die zweite Homotopiegruppe von
 \begin_inset Formula $U$
 \end_inset
 
- zusammenzuziehen - dies scheitert für jede Kugeloberfläche, die den Ursprung
- umschliesst.
+ zusammenzuziehen.
+ Dies scheitert für jede Kugeloberfläche, die den Ursprung umschliesst.
 \end_layout
 
 \begin_layout Subsection*
@@ -597,7 +598,7 @@ Man nennt
 \begin_inset Formula $S\subset\Omega$
 \end_inset
 
- ist 
+ ist, falls also gilt
 \begin_inset Formula 
 \[
 \forall c\exists S\mid c=\partial S.
@@ -649,7 +650,8 @@ Existiert also für jedes rotationsfreie Feld
 \begin_inset Formula $\underline{V}=\text{grad\left(\psi\right)}$
 \end_inset
 
- und existiert für jedes divergenzfreie Feld 
+.
+ Und existiert für jedes divergenzfreie Feld 
 \begin_inset Formula $\underline{W}$
 \end_inset
 
