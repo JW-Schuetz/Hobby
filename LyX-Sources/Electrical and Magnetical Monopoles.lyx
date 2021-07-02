@@ -122,6 +122,19 @@ Vektoren werden im folgenden durch einen Unterstrich kenntlich gemacht
  benutzt werden.
 \end_layout
 
+\begin_layout Standard
+Die wichtigsten der im Literaturverzeichnis zitierten Quellen sind im Github-Unt
+erverzeichnis 
+\begin_inset Quotes gld
+\end_inset
+
+Literature
+\begin_inset Quotes grd
+\end_inset
+
+ zu finden.
+\end_layout
+
 \begin_layout Section*
 Motivation
 \end_layout
@@ -771,6 +784,20 @@ noprefix "false"
  
 \color red
 Noch zu tun: der Schluss fehlt noch
+\end_layout
+
+\begin_layout Subsection*
+Fall 
+\begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Noch zu tun
 \end_layout
 
 \begin_layout Standard
