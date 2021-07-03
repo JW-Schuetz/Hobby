@@ -174,22 +174,18 @@ literal "false"
 \begin_layout Standard
 Umso ärgerlicher ist es, dass es einfache physikalische Systeme gibt, für
  die kein Vektorpotential existiert.
- Ein solches System ist der (noch hypothetische!) magnetische Monopol.
+ 
 \end_layout
 
 \begin_layout Standard
-Das Argument 
-\begin_inset Quotes gld
-\end_inset
+Ein solches System ist der magnetische Monopol.
+\end_layout
 
-Ist doch egal, den gibt es nicht!
-\begin_inset Quotes grd
-\end_inset
-
- ist nicht angebracht, da es starke Hinweise für die Existenz magnetischer
- Monopole gibt.
- Insbesondere wäre die (beobachtete!) Quantisierung der elektrischen Elementarla
-dung eine direkte Folge der Existenz des magnetischen Monopols 
+\begin_layout Standard
+Magnetische Monopole sind z.Z.
+ noch hypothetisch, es gibt aber starke Indizien für ihre Existenz.
+ Insbesondere wäre die Quantisierung der elektrischen Elementarladung eine
+ direkte Folge der Existenz des magnetischen Monopols 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Dirac-2"
@@ -209,12 +205,12 @@ Annahmen
 \end_layout
 
 \begin_layout Standard
-Der Definitionsbereich ist 
+Definitionsbereiche sind Teilmengen des 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
 , alle Felder sind glatt, Flächen und Kurven sind glatt und orientierbar
- (besitzen also Normalenvektoren).
+ (sie besitzen also Normalenvektoren).
 \end_layout
 
 \begin_layout Subsection*
@@ -356,7 +352,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsection*
-Identitäten (siehe 
+Identitäten 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Jackson"
@@ -364,7 +360,7 @@ literal "false"
 
 \end_inset
 
-)
+
 \end_layout
 
 \begin_layout Standard
@@ -495,7 +491,7 @@ Der Definitionsbereich der Felder und Potentiale beider Monopole ist der
 \end_layout
 
 \begin_layout Subsection*
-Topologie
+Homotopie
 \end_layout
 
 \begin_layout Standard
@@ -613,8 +609,7 @@ Existenz der Potentiale
 \end_layout
 
 \begin_layout Standard
-Wegen den bekannten Identitäten (siehe z.B.
- 
+Wegen den bekannten Identitäten 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Jackson"
@@ -622,7 +617,7 @@ literal "false"
 
 \end_inset
 
-)
+
 \begin_inset Formula 
 \begin{eqnarray*}
 \text{rot grad\left(\psi\right)} & = & \underline{0}\\
