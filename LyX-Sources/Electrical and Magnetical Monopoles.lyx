@@ -119,7 +119,31 @@ Vektoren werden im folgenden durch einen Unterstrich kenntlich gemacht
 \begin_inset Formula $\left(\rho,\phi,\Theta\right)$
 \end_inset
 
- benutzt werden.
+ benutzt werden, das Symbol 
+\begin_inset Formula $\subset$
+\end_inset
+
+ soll eine echte Teilmenge bezeichenen.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+In 
+\begin_inset Formula $A\subset B$
+\end_inset
+
+ soll also der Fall 
+\begin_inset Formula $A=B$
+\end_inset
+
+ ausgeschlossen sein.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -352,23 +376,21 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsection*
-Identitäten 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Jackson"
-literal "false"
+Maxwellgleichungen 
+\end_layout
 
-\end_inset
-
-
+\begin_layout Standard
+Es gelten die quellenfreien Maxwellgleichungen
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\nabla\times\left(\psi\underline{A}\right) & = & \left(\nabla\psi\right)\times\underline{A}+\psi\left(\nabla\times\underline{A}\right)\\
-\nabla\bullet\left(\psi\underline{A}\right) & = & \left(\nabla\psi\right)\bullet\underline{A}+\psi\left(\nabla\bullet\underline{A}\right)
-\end{eqnarray*}
+\begin{eqnarray}
+\text{div}\left(\underline{E}\right) & = & 0\label{eq:Maxwell}\\
+\text{div}\left(\underline{B}\right) & = & 0\nonumber \\
+\text{rot}\left(\underline{E}\right) & = & \underline{0}\nonumber \\
+\text{rot}\left(\underline{B}\right) & = & \underline{0}.\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -447,21 +469,23 @@ Das kann doch nicht stimmen!
 \end_layout
 
 \begin_layout Subsection*
-Maxwellgleichungen 
-\end_layout
+Identitäten 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jackson"
+literal "false"
 
-\begin_layout Standard
-Es gelten die quellenfreien Maxwellgleichungen
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-\text{div}\left(\underline{E}\right) & = & 0\label{eq:Maxwell}\\
-\text{div}\left(\underline{B}\right) & = & 0\nonumber \\
-\text{rot}\left(\underline{E}\right) & = & \underline{0}\nonumber \\
-\text{rot}\left(\underline{B}\right) & = & \underline{0}.\nonumber 
-\end{eqnarray}
+\begin{eqnarray*}
+\nabla\times\left(\psi\underline{A}\right) & = & \left(\nabla\psi\right)\times\underline{A}+\psi\left(\nabla\times\underline{A}\right)\\
+\nabla\bullet\left(\psi\underline{A}\right) & = & \left(\nabla\psi\right)\bullet\underline{A}+\psi\left(\nabla\bullet\underline{A}\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -491,82 +515,62 @@ Der Definitionsbereich der Felder und Potentiale beider Monopole ist der
 \end_layout
 
 \begin_layout Subsection*
-Homotopie
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $U$
-\end_inset
-
- besitzt die folgenden topologischen Eigenschaften
+Topologischen Eigenschaften
 \end_layout
 
 \begin_layout Itemize
-die erste Homotopiegruppe 
+Man nennt die erste Homotopiegruppe 
 \begin_inset Formula $\pi_{1}$
 \end_inset
 
- (die Fundamentalgruppe) von 
-\begin_inset Formula $U$
+ von 
+\begin_inset Formula $\Omega$
 \end_inset
 
- ist trivial 
-\begin_inset Formula $\pi_{1}\left(U\right)=0$
+ trivial (formal 
+\begin_inset Formula $\pi_{1}\left(\Omega\right)=0$
 \end_inset
 
-.
- D.h.
- eine beliebige 1-Sphäre 
+), falls eine beliebige 1-Sphäre 
 \begin_inset Formula $S^{1}$
 \end_inset
 
  (Kreislinie) in 
-\begin_inset Formula $U$
-\end_inset
-
- kann kontinuierlich auf einen Punkt in 
-\begin_inset Formula $U$
-\end_inset
-
- zusammengezogen werden.
-\end_layout
-
-\begin_layout Itemize
-die zweite Homotopiegruppe 
-\begin_inset Formula $\pi_{2}$
-\end_inset
-
- von 
-\begin_inset Formula $U$
-\end_inset
-
- ist nicht trivial 
-\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
-\end_inset
-
-.
- D.h.
- es ist nicht möglich, eine beliebige 2-Sphäre 
-\begin_inset Formula $S^{2}$
-\end_inset
-
- (Kugeloberfläche) in 
-\begin_inset Formula $U$
+\begin_inset Formula $\Omega$
 \end_inset
 
  kontinuierlich auf einen Punkt in 
 \begin_inset Formula $U$
 \end_inset
 
- zusammenzuziehen.
- Dies scheitert für jede Kugeloberfläche, die den Ursprung umschliesst.
+ zusammengezogen werden kann.
 \end_layout
 
-\begin_layout Subsection*
-Homologie
+\begin_layout Itemize
+Man nennt die zweite Homotopiegruppe 
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+ von 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ trivial 
+\begin_inset Formula $\pi_{2}\left(\Omega\right)=0$
+\end_inset
+
+, falls eine beliebige 2-Sphäre 
+\begin_inset Formula $S^{2}$
+\end_inset
+
+ (Kugeloberfläche) in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ kontinuierlich auf einen Punkt zusammengezogen werden kann.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Man nennt 
 \begin_inset Formula $\Omega$
 \end_inset
@@ -595,13 +599,32 @@ Man nennt
 \end_layout
 
 \begin_layout Standard
-
-\color red
-Noch zu tun: ist 
+Für 
 \begin_inset Formula $U$
 \end_inset
 
- homologisch trivial?
+ gelten die Eigenschaften
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{1}\left(U\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $U$
+\end_inset
+
+ ist homologisch trivial.
 \end_layout
 
 \begin_layout Section*
@@ -610,18 +633,10 @@ Existenz der Potentiale
 
 \begin_layout Standard
 Wegen den bekannten Identitäten 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Jackson"
-literal "false"
-
-\end_inset
-
-
 \begin_inset Formula 
 \begin{eqnarray*}
 \text{rot grad\left(\psi\right)} & = & \underline{0}\\
-\text{div rot\left(\underline{A}\right)} & = & 0
+\text{div rot}\left(\underline{A}\right) & = & 0
 \end{eqnarray*}
 
 \end_inset
@@ -690,7 +705,7 @@ Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
 
 \begin_layout Subsection*
 Fall 
-\begin_inset Formula $\Omega=\mathbb{R}^{3}$
+\begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
 \end_inset
 
 
@@ -783,7 +798,7 @@ Noch zu tun: der Schluss fehlt noch
 
 \begin_layout Subsection*
 Fall 
-\begin_inset Formula $\Omega\subset\mathbb{R}^{3}$
+\begin_inset Formula $\Omega=\mathbb{R}^{3}$
 \end_inset
 
 
@@ -1611,11 +1626,7 @@ noprefix "false"
 \end_inset
 
 ) besteht ein Widerspruch.
- 
-\end_layout
-
-\begin_layout Standard
-Die Annahme ist also falsch und es existiert kein solches Vektorpotential
+ Die Annahme ist also falsch und es existiert kein solches Vektorpotential
  
 \begin_inset Formula $\underline{A}$
 \end_inset
@@ -1759,7 +1770,9 @@ Es gibt Ähnlichkeiten der äusseren Ableitung
 \end_inset
 
 ).
- Wie hängt das tiefer zusammen? Siehe Wikipedia-Artikel 
+ 
+\color red
+Wie hängt das tiefer zusammen? Siehe Wikipedia-Artikel 
 \begin_inset Quotes gld
 \end_inset
 
