@@ -555,11 +555,11 @@ Man nennt die zweite Homotopiegruppe
 \begin_inset Formula $\Omega$
 \end_inset
 
- trivial 
+ trivial (formal 
 \begin_inset Formula $\pi_{2}\left(\Omega\right)=0$
 \end_inset
 
-, falls eine beliebige 2-Sphäre 
+), falls eine beliebige 2-Sphäre 
 \begin_inset Formula $S^{2}$
 \end_inset
 
@@ -604,6 +604,20 @@ Für
 \end_inset
 
  gelten die Eigenschaften
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Hinweis: für den Fall 
+\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
+\end_inset
+
+ betrachte man eine 2-Sphäre, die den Ursprung umschliesst.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
