@@ -5,6 +5,10 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{a4}
+\pagestyle{empty}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language ngerman
@@ -32,7 +36,7 @@
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry true
+\use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -57,10 +61,10 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 1cm
-\rightmargin 2cm
-\bottommargin 2cm
+\leftmargin 0cm
+\topmargin 0cm
+\rightmargin 0cm
+\bottommargin 0cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -95,6 +99,32 @@ status open
 
 \begin_layout Plain Layout
 Kein Datum!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Keine Seitennummerierung!
 \end_layout
 
 \end_inset
@@ -148,7 +178,8 @@ In
 
 \begin_layout Standard
 Die wichtigsten der im Literaturverzeichnis zitierten Quellen sind im Github-Unt
-erverzeichnis 
+er\SpecialChar softhyphen
+verzeichnis 
 \begin_inset Quotes gld
 \end_inset
 
@@ -336,7 +367,7 @@ mit dem Normalenvektor
 \color red
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -367,7 +398,7 @@ noprefix "false"
 \begin_inset Formula $m=2$
 \end_inset
 
-.
+?
 \end_layout
 
 \end_inset
@@ -398,7 +429,7 @@ Es gelten die quellenfreien Maxwellgleichungen
 \end_layout
 
 \begin_layout Subsection*
-Helmholtz-Zerlegung
+Helmholtz-Zerlegung / Harmonischen Felder
 \end_layout
 
 \begin_layout Standard
@@ -406,15 +437,7 @@ Es werden für einen Definitionsbereich
 \begin_inset Formula $\Omega\subset\mathbb{\mathbb{R}}^{3}$
 \end_inset
 
- die beiden Räume der 
-\begin_inset Quotes gld
-\end_inset
-
-Harmonischen Felder
-\begin_inset Quotes grd
-\end_inset
-
- definiert
+ die beiden Räume definiert
 \begin_inset Formula 
 \begin{eqnarray*}
 H_{m}\left(\Omega\right) & = & \left\{ \underline{w}\in L_{2}\left(\Omega\right)\mid\text{rot\left(\underline{w}\right)=\underline{0}, div\left(\underline{w}\right)=\underline{0}},\;\underline{w}\bullet\underline{n}=0\enskip\text{auf}\enskip\partial\Omega\right\} \\
@@ -438,7 +461,7 @@ mit den auf
 .
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Jedes beliebige Feld 
@@ -469,7 +492,7 @@ Das kann doch nicht stimmen!
 \end_layout
 
 \begin_layout Subsection*
-Identitäten 
+Identitäten aus 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Jackson"
@@ -605,7 +628,7 @@ Für
 
  gelten die Eigenschaften
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Hinweis: für den Fall 
@@ -807,7 +830,7 @@ noprefix "false"
 .
  
 \color red
-Noch zu tun: der Schluss fehlt noch
+Noch zu tun: der Schluss fehlt noch!
 \end_layout
 
 \begin_layout Subsection*
@@ -821,14 +844,10 @@ Fall
 \begin_layout Standard
 
 \color red
-Noch zu tun
+Noch zu tun!
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
 Es soll für 
 \begin_inset Formula $\Omega=U$
 \end_inset
@@ -926,15 +945,10 @@ Im Fall
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color red
-Noch zu tun: die Vermutungen beweisen
-\end_layout
-
-\end_inset
-
-
+Noch zu tun: Beweisen!
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1229,7 +1243,7 @@ Setzt man
 
  ist also der Gradient eines skalaren Potentials
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Hier wird das Argument benutzt, dass im 
@@ -1238,7 +1252,7 @@ Hier wird das Argument benutzt, dass im
 
  jedes rotationsfreie Feld als Gradient eines skalaren Potentials bestimmt
  werden kann.
- Wo ist das denn bewiesen?
+ Beweis?
 \end_layout
 
 \end_inset
@@ -1329,7 +1343,7 @@ Hier wird das Argument benutzt, dass im
 
  jedes divergenzfreie Feld als Rotation eines Vektorpotentials bestimmt
  werden kann.
- Wo ist das bewiesen?
+ Beweis?
 \end_layout
 
 \end_inset
@@ -1359,7 +1373,7 @@ Harmonischen Felder
 \begin_inset Quotes grd
 \end_inset
 
- der Helmhotz-Zerlegung verstehen
+ der Helmhotz-Zerlegung besser verstehen.
 \end_layout
 
 \begin_layout Itemize
@@ -1372,7 +1386,7 @@ Theorem 2 ist die Stelle, in der die Topologie ins Spiel kommt.
 \begin_layout Itemize
 
 \color red
-Alles obige zu einem folgerichtigen Ganzen integrieren und die Lücken füllen
+Alles obige zu einem folgerichtigen Ganzen integrieren und die Lücken füllen.
 \end_layout
 
 \begin_layout Section*
@@ -1410,7 +1424,7 @@ gegeben.
 \begin_layout Standard
 
 \color red
-Noch zu tun: skalares Potential und Vektorpotential herleiten
+Noch zu tun: Skalares Potential und Vektorpotential herleiten.
 \end_layout
 
 \begin_layout Section*
@@ -1459,20 +1473,20 @@ Noch zu tun:
 \begin_layout Itemize
 
 \color red
-skalares Potential herleiten
+Skalares Potential herleiten.
 \end_layout
 
 \begin_layout Itemize
 
 \color red
-Dirac-Strings thematisieren
+Dirac-Strings thematisieren.
 \end_layout
 
 \begin_layout Itemize
 
 \color red
 Quantelung der Elementarladung als direkte Folge der magnetischen Monopole
- herleiten
+ herleiten.
 \end_layout
 
 \begin_layout Subsection*
@@ -1656,7 +1670,7 @@ noprefix "false"
 \begin_layout Standard
 
 \color red
-Noch zu tun: 1, 2 und 3 in voller Allgemeinheit beweisen
+Noch zu tun: 1, 2 und 3 in voller Allgemeinheit beweisen.
 \end_layout
 
 \begin_layout Section*
@@ -1868,19 +1882,19 @@ noprefix "false"
 \begin_layout Itemize
 
 \color red
-Poincaré-Lemma verstehen
+Poincaré-Lemma verstehen.
 \end_layout
 
 \begin_layout Itemize
 
 \color red
-Zusammenhänge verstehen
+Zusammenhänge verstehen.
 \end_layout
 
 \begin_layout Itemize
 
 \color red
-Alles obige in der Sprache der Differentialformen formulieren
+Alles obige in der Sprache der Differentialformen formulieren.
 \end_layout
 
 \begin_layout Standard
