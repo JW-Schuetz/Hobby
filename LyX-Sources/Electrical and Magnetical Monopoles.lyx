@@ -7,7 +7,7 @@
 \textclass article
 \begin_preamble
 \usepackage{a4}
-\pagestyle{empty}
+% \pagestyle{empty}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -491,6 +491,42 @@ Das kann doch nicht stimmen!
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Jänich 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jaenich"
+literal "false"
+
+\end_inset
+
+ (Kapitel 10.6) definiert harmonische Funktionen 
+\begin_inset Formula $f:X\rightarrow\mathbb{R}$
+\end_inset
+
+ durch 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\triangle f & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 Identitäten aus 
 \begin_inset CommandInset citation
@@ -758,8 +794,8 @@ Es sei ein rotationsfreies Feld
 \begin_inset Formula $S$
 \end_inset
 
- mit Rand 
-\begin_inset Formula $s$
+ mit dem Rand 
+\begin_inset Formula $s=\partial S$
 \end_inset
 
 , so folgt mit dem Satz von Stokes (
@@ -773,9 +809,10 @@ noprefix "false"
 \end_inset
 
 ) 
-\begin_inset Formula $\oint_{s}\underline{V}\bullet\underline{t}ds=0.$
+\begin_inset Formula $\oint_{s}\underline{V}\bullet\underline{t}ds=0$
 \end_inset
 
+.
  Das Feld 
 \begin_inset Formula $\underline{V}$
 \end_inset
@@ -792,7 +829,63 @@ noprefix "false"
 \begin_inset Formula $\quad\blacksquare$
 \end_inset
 
+
+\color red
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Für ein Vektorfeld 
+\begin_inset Formula $\underline{V}$
+\end_inset
+
+ gelte für jeden geschlossenen Pfad 
+\begin_inset Formula $s$
+\end_inset
+
+ und seinem Tangentialvektor 
+\begin_inset Formula $\underline{t}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\oint_{s}\underline{V}\bullet\underline{t}ds & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Annahme: es existiert kein Potential 
+\begin_inset Formula $\psi$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{V}=\text{grad\left(\psi\right)}$
+\end_inset
+
+ das die obige Identität erfüllt.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\oint_{s}\text{grad}\left(\psi\right)\bullet\underline{t}ds & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -809,7 +902,7 @@ Es sei ein Feld
 \begin_inset Formula $V$
 \end_inset
 
- mit der (geschlossenen) Oberfläche 
+ mit  der (geschlossenen) Oberfläche 
 \begin_inset Formula $S$
 \end_inset
 
@@ -898,6 +991,7 @@ Im Fall
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -943,6 +1037,7 @@ Im Fall
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1968,7 +2063,7 @@ literal "false"
 
 \end_inset
 
-Classical Elektrodynamics, Jackson, John David; John Wiley & Sons, Inc.;
+Classical Elektrodynamics; Jackson, John David; John Wiley & Sons, Inc.;
  1999
 \end_layout
 
@@ -1983,6 +2078,19 @@ literal "false"
 
 Significance of electromagnetic potentials in the quantum theory; Aharonov,
  Y., Bohm, D.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "7"
+key "Jaenich"
+literal "false"
+
+\end_inset
+
+Vektoranalysis; Jänich, Klaus; Springer Berlin, Heidelberg, New York; 5.
+ Auflage, 2005
 \end_layout
 
 \end_body
