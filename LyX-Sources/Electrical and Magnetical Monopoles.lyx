@@ -468,9 +468,6 @@ Jedes beliebige Feld
 \end_inset
 
  dargestellt werden.
- 
-\color red
-Das kann doch nicht stimmen!
 \end_layout
 
 \end_inset
@@ -515,7 +512,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection*
-Identitäten aus 
+Identitäten 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Jackson"
@@ -553,7 +550,11 @@ Der Definitionsbereich der Felder und Potentiale beider Monopole ist der
 \end_inset
 
 .
- Dieser spezielle Definitionsbereich wird im folgenden mit 
+ 
+\end_layout
+
+\begin_layout Standard
+Dieser spezielle Definitionsbereich wird im folgenden mit 
 \begin_inset Formula $U$
 \end_inset
 
@@ -573,7 +574,7 @@ Man nennt die erste Homotopiegruppe
 \begin_inset Formula $\Omega$
 \end_inset
 
- trivial (formal 
+ trivial (formal: 
 \begin_inset Formula $\pi_{1}\left(\Omega\right)=0$
 \end_inset
 
@@ -601,7 +602,7 @@ Man nennt die zweite Homotopiegruppe
 \begin_inset Formula $\Omega$
 \end_inset
 
- trivial (formal 
+ trivial (formal: 
 \begin_inset Formula $\pi_{2}\left(\Omega\right)=0$
 \end_inset
 
@@ -646,12 +647,12 @@ Man nennt
 
 \begin_layout Standard
 Für 
-\begin_inset Formula $U$
+\begin_inset Formula $U=\mathbb{R}^{3}-\underline{0}$
 \end_inset
 
- gelten die Eigenschaften
+ gelten die folgenden Eigenschaften
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Hinweis: für den Fall 
@@ -692,7 +693,7 @@ Existenz der Potentiale
 \end_layout
 
 \begin_layout Standard
-Wegen den bekannten Identitäten 
+Wegen den bekannten Identitäten der Vektoranalysis 
 \begin_inset Formula 
 \begin{eqnarray*}
 \text{rot grad\left(\psi\right)} & = & \underline{0}\\
@@ -823,7 +824,11 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
+
+\begin_layout Subsection*
+Beweisversuch
+\end_layout
 
 \begin_layout Plain Layout
 Für ein Vektorfeld 
@@ -850,7 +855,7 @@ Für ein Vektorfeld
 \end_layout
 
 \begin_layout Plain Layout
-Annahme: es existiert kein Potential 
+Annahme: es existiere kein Potential 
 \begin_inset Formula $\psi$
 \end_inset
 
@@ -868,6 +873,105 @@ Annahme: es existiert kein Potential
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Paragraph*
+Annahme
+\end_layout
+
+\begin_layout Plain Layout
+Gegeben sei das Feld 
+\begin_inset Formula $\underline{V}$
+\end_inset
+
+ und zwei Pfade 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+.
+ Es gelte 
+\begin_inset Formula 
+\begin{eqnarray}
+\oint_{s_{1}}\underline{V}\bullet\underline{t}ds & = & \oint_{s_{2}}\underline{V}\bullet\underline{t}ds.\label{eq:Wegunabhängigkeit}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sei 
+\begin_inset Formula $s$
+\end_inset
+
+ ein Pfad zwischen den beiden Punkten 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ dann folgt aus 
+\begin_inset Formula $\underline{V}=\text{grad\left(\psi\right)}$
+\end_inset
+
+ Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Wegunabhängigkeit"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) aus dem Fundamentaltheorem der Vektoranalysis, da gilt
+\begin_inset Formula 
+\begin{eqnarray*}
+\oint_{s}\underline{V}\bullet\underline{t}ds & = & \oint_{s}\text{grad}\left(\psi\right)\bullet\underline{t}ds=\psi\left(P_{2}\right)-\psi\left(P_{1}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Wegunabhängigkeit"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt die Existenz einer Funktion 
+\begin_inset Formula $\psi$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{V}=\text{grad\left(\psi\right)}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_inset
