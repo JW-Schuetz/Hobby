@@ -242,7 +242,11 @@ Es werden die folgenden Annahmen getroffen:
 \end_layout
 
 \begin_layout Itemize
-die Sonne sei durch einen Punktstrahler darstellt 
+die Sonne im Punkt 
+\begin_inset Formula $\underline{S}$
+\end_inset
+
+ sei durch einen Punktstrahler darstellt 
 \end_layout
 
 \begin_layout Itemize
@@ -263,7 +267,7 @@ die Erde habe ideale Kugelgestalt mit dem Radius
 
 \begin_layout Itemize
 im Punkt 
-\begin_inset Formula $P$
+\begin_inset Formula $\underline{P}$
 \end_inset
 
  der Erdoberfläche befinde sich der Stab der Länge 
@@ -336,7 +340,7 @@ Problemskizze
 \end_layout
 
 \begin_layout Section*
-Erd-Rotationsachse 
+Rotationsachse 
 \end_layout
 
 \begin_layout Standard
@@ -351,7 +355,8 @@ Die Erde rotiert um ihre Rotationsachse.
 \begin_inset Formula $D_{\alpha}$
 \end_inset
 
- beschrieben 
+ beschrieben.
+ Für die Drehmatrix gilt 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Wikipedia2"
@@ -359,25 +364,7 @@ literal "false"
 
 \end_inset
 
-.
- Der Drehwinkel 
-\begin_inset Formula $\alpha$
-\end_inset
-
- durchläuft innerhalb eines Tages die Werte von 
-\begin_inset Formula $0$
-\end_inset
-
- bis 
-\begin_inset Formula $2\pi$
-\end_inset
-
-.
  
-\end_layout
-
-\begin_layout Standard
-Für die Drehmatrix gilt 
 \end_layout
 
 \begin_layout Standard
@@ -453,17 +440,17 @@ Die Kugel mit Radius
 \begin_inset Formula $R_{E}$
 \end_inset
 
- um den Ursprung ist implizit durch die Gleichung 
-\begin_inset Formula $f(x_{i})=0$
+ um den Ursprung ist durch die Gleichung 
+\begin_inset Formula $f(x_{1},x_{2},x_{3})=0$
 \end_inset
 
- mit 
+ gegeben, mit 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-f(x_{i}) & = & \sum_{i}x_{i}^{2}+R_{E}^{2}
+f(x_{1},x_{2},x_{3}) & = & \sum_{i}x_{i}^{2}+R_{E}^{2}.
 \end{eqnarray*}
 
 \end_inset
@@ -472,11 +459,11 @@ f(x_{i}) & = & \sum_{i}x_{i}^{2}+R_{E}^{2}
 \end_layout
 
 \begin_layout Standard
-gegeben und die Tangentialebene im Berührpunkt 
-\begin_inset Formula $P$
+Für die Tangentialebene im Berührpunkt 
+\begin_inset Formula $\underline{P}=\left(p_{1},p_{2,}p_{3}\right)$
 \end_inset
 
- implizit durch die Gleichung 
+ gilt allgemein (siehe dazu 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Wikipedia3"
@@ -484,7 +471,7 @@ literal "false"
 
 \end_inset
 
- 
+) 
 \end_layout
 
 \begin_layout Standard
@@ -500,11 +487,242 @@ literal "false"
 
 \begin_layout Standard
 Dabei sind die Ableitungen im Berührpunkt 
-\begin_inset Formula $P=\left(p_{i}\right)$
+\begin_inset Formula $\underline{P}$
 \end_inset
 
- zu bilden.
+ zu bilden, für den Index gilt 
+\begin_inset Formula $i\in\left[1,3\right]$
+\end_inset
+
+.
  
+\end_layout
+
+\begin_layout Standard
+Für die implizite Gleichung der Tangentialebene im Berührpunkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ folgt schliesslich in unserem speziellen Fall 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i}p_{i}\left(x_{i}-p_{i}\right) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+oder in Vektorschreibweise 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{P}\left(\underline{x}-\underline{P}\right) & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Berücksichtigt man die Erdrotation durch die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ so folgt für die gedrehte Tangentialebene 
+\begin_inset Formula $T^{\alpha}$
+\end_inset
+
+ die Gleichung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(D_{\alpha}\underline{P}\right)\underline{x}=\left(D_{\alpha}\underline{P}\right)^{2}=D_{2\alpha}\underline{P}^{2}.\label{eq:Tangentialebene}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Stabende 
+\end_layout
+
+\begin_layout Standard
+Für den Punkt 
+\begin_inset Formula $\underline{Q}$
+\end_inset
+
+ am Ende des Stabes der Länge 
+\begin_inset Formula $L$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{Q} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Berücksichtigt man die Erdrotation durch die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ so folgt 
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)D_{\alpha}\underline{P}.\label{eq:Stabende}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Verbindungsgerade 
+\end_layout
+
+\begin_layout Standard
+Die Sonne befinde sich im Punkt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{S} & = & \left(\begin{array}{c}
+R_{S}\\
+0\\
+0
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Punkte der Verbindungsgerade 
+\begin_inset Formula $\underline{G}$
+\end_inset
+
+ der Sonne 
+\begin_inset Formula $\underline{S}$
+\end_inset
+
+ mit dem Stabende 
+\begin_inset Formula $\underline{Q}$
+\end_inset
+
+ nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Stabende"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) sind durch 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{G} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gegeben, dabei gilt 
+\begin_inset Formula $\mu\in\left[0,1\right]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Berücksichtigt man die Erdrotation durch die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ so folgt 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)D_{\alpha}\underline{S}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Lösung 
+\end_layout
+
+\begin_layout Standard
+Gesucht wird die Trajektorie des Schattens des Stabendes auf der Tangentialebene
+ 
+\begin_inset Formula $T^{\alpha}$
+\end_inset
+
+ in Abhängigkeit des Rotationswinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, der im Verlauf eines Tages den Wertebereich von 
+\begin_inset Formula $0$
+\end_inset
+
+ bis 
+\begin_inset Formula $2\pi$
+\end_inset
+
+ durchläuft.
+ 
+\end_layout
+
+\begin_layout Standard
+Gesucht ist also der Schnittpunkt der Geraden 
+\begin_inset Formula $\underline{G}^{\alpha}$
+\end_inset
+
+ mit der Tangentialebene 
+\begin_inset Formula $T^{\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
