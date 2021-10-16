@@ -678,7 +678,7 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \end_layout
 
 \begin_layout Section*
-Lösung 
+Problemlösung 
 \end_layout
 
 \begin_layout Standard
@@ -688,18 +688,10 @@ Gesucht wird die Trajektorie des Schattens des Stabendes auf der Tangentialebene
 \end_inset
 
  in Abhängigkeit des Rotationswinkels 
-\begin_inset Formula $\alpha$
+\begin_inset Formula $\alpha\in\left[0,2\pi\right]$
 \end_inset
 
-, der im Verlauf eines Tages den Wertebereich von 
-\begin_inset Formula $0$
-\end_inset
-
- bis 
-\begin_inset Formula $2\pi$
-\end_inset
-
- durchläuft.
+, der im Verlauf eines Tages seinen Wertebereich durchläuft.
  
 \end_layout
 
@@ -713,6 +705,7 @@ Gesucht ist also der Schnittpunkt der Geraden
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
