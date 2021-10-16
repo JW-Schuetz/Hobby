@@ -1,4 +1,7 @@
 *.lyx~
 *.lyx\#
 /Notizzettel.lyx
-*.lyx
+/*.eps
+/Beweisversuch.lyx
+/Coq.lyx
+/Merker.lyx

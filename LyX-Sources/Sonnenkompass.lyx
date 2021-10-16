@@ -1,0 +1,473 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0cm
+\topmargin 0cm
+\rightmargin 0cm
+\bottommargin 0cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Sonnenkompass 
+\end_layout
+
+\begin_layout Author
+Jürgen Womser-Schütz, https://github.com/JW-Schuetz 
+\end_layout
+
+\begin_layout Date
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kein Datum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Fragestellung 
+\end_layout
+
+\begin_layout Standard
+Wir genau ist die verbreitete Methode, die Nord-Richtung per Sonnenstand
+ zu bestimmen? 
+\end_layout
+
+\begin_layout Section
+Methodenbeschreibung 
+\end_layout
+
+\begin_layout Itemize
+einen Stab senkrecht in die Erde stecken 
+\end_layout
+
+\begin_layout Itemize
+das Ende des Schattens des Stabes mit einen Stein markieren 
+\end_layout
+
+\begin_layout Itemize
+einige Zeit abwarten bis der Stabschatten weiter gewandert ist 
+\end_layout
+
+\begin_layout Itemize
+das neue Schattenende des Stabes mit einem zweiten Stein markieren.
+ 
+\end_layout
+
+\begin_layout Standard
+Man erhält die Nordrichtung mittels der folgenden Regeln (R
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "R1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, R
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "R2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, R
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "R3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "R1"
+
+\end_inset
+
+der Schatten des Stab-Endes bewegt sich auf der Verbindungsgeraden der beiden
+ Steine 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "R2"
+
+\end_inset
+
+die Nordrichtung ist orthogonal zur Verbindungsgeraden 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "R3"
+
+\end_inset
+
+auf der Nordhalbkugel der Erde zeigt der Schatten Richtung Norden, auf der
+ Südhalbkugel Richtung Süden.
+ 
+\end_layout
+
+\begin_layout Section
+Problemformulierung 
+\end_layout
+
+\begin_layout Standard
+Es werden kartesische Koordinaten 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
+\end_inset
+
+ verwendet, wobei das Koordinatenpaar 
+\begin_inset Formula $\left(x_{1},x_{2}\right)$
+\end_inset
+
+ die Ekliptikalebene aufspannt, der Ursprung des Koordinatensystems ist
+ der Erdmittelpunkt (siehe dazu die Problemskizze in Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Problemskizze 0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es werden die folgenden Annahmen getroffen: 
+\end_layout
+
+\begin_layout Itemize
+die Sonne sei durch einen Punktstrahler darstellt 
+\end_layout
+
+\begin_layout Itemize
+die Sonne habe den Abstand 
+\begin_inset Formula $R_{S}$
+\end_inset
+
+ von der Erde 
+\end_layout
+
+\begin_layout Itemize
+die Erde habe ideale Kugelgestalt mit dem Radius 
+\begin_inset Formula $R_{E}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+im Punkt 
+\begin_inset Formula $P$
+\end_inset
+
+ der Erdoberfläche befinde sich der Stab der Länge 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+die Erd-Rotationsachse habe einen Neigungswinkel 
+\begin_inset Formula $\phi$
+\end_inset
+
+ zur 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+-Achse 
+\end_layout
+
+\begin_layout Itemize
+die Erdoberfläche um den Stab wird durch eine Tangentialebene 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia1"
+literal "false"
+
+\end_inset
+
+ an die Erdkugel angenähert.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompass.eps
+	lyxscale 150
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Problemskizze 0"
+
+\end_inset
+
+Problemskizze 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Einfluss der Erd-Rotationsachse
+\end_layout
+
+\begin_layout Standard
+Die Erde rotiert um ihre Rotationsachse.
+ Durch diese Rotation werden Punkte der Erdoberfläche auf andere Punkte
+ der Erdoberfläche abgebildet.
+ Diese Abbildung wird in Abhängigkeit des Drehwinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ durch die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ beschrieben.
+ Der Drehwinkel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ durchläuft innerhalb eines Tages die Werte von 
+\begin_inset Formula $0$
+\end_inset
+
+ bis 
+\begin_inset Formula $2\pi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Diese Drehmatrix ist durch 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{\alpha} & = & \begin{pmatrix}n_{1}^{2}\left(1-\cos\alpha\right)+\cos\alpha & n_{1}n_{2}\left(1-\cos\alpha\right)-n_{3}\sin\alpha & n_{1}n_{3}\left(1-\cos\alpha\right)+n_{2}\sin\alpha\\
+n_{2}n_{1}\left(1-\cos\alpha\right)+n_{3}\sin\alpha & n_{2}^{2}\left(1-\cos\alpha\right)+\cos\alpha & n_{2}n_{3}\left(1-\cos\alpha\right)-n_{1}\sin\alpha\\
+n_{3}n_{1}\left(1-\cos\alpha\right)-n_{2}\sin\alpha & n_{3}n_{2}\left(1-\cos\alpha\right)+n_{1}\sin\alpha & n_{3}^{2}\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gegeben 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia2"
+literal "false"
+
+\end_inset
+
+.
+ Dabei ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{n} & = & \left(\begin{array}{c}
+n_{1}\\
+n_{2}\\
+n_{3}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ein Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert.
+ 
+\end_layout
+
+\begin_layout Standard
+In dieser Arbeit soll die Rotationsachse, so wie in Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Problemskizze 0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ dargestellt, in der 
+\begin_inset Formula $\left(x_{1},x_{3}\right)$
+\end_inset
+
+-Ebene liegen.
+ Es wird gewählt 
+\begin_inset Formula 
+\begin{eqnarray*}
+n_{1} & = & \sin\phi\\
+n_{2} & = & 0\\
+n_{3} & = & \cos\phi.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "Wikipedia1"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Tangentialebene 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "Wikipedia2"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Drehmatrix 
+\end_layout
+
+\end_body
+\end_document
