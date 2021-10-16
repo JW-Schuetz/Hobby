@@ -336,7 +336,7 @@ Problemskizze
 \end_layout
 
 \begin_layout Section*
-Einfluss der Erd-Rotationsachse
+Erd-Rotationsachse 
 \end_layout
 
 \begin_layout Standard
@@ -351,7 +351,15 @@ Die Erde rotiert um ihre Rotationsachse.
 \begin_inset Formula $D_{\alpha}$
 \end_inset
 
- beschrieben.
+ beschrieben 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia2"
+literal "false"
+
+\end_inset
+
+.
  Der Drehwinkel 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -369,7 +377,7 @@ Die Erde rotiert um ihre Rotationsachse.
 \end_layout
 
 \begin_layout Standard
-Diese Drehmatrix ist durch 
+Für die Drehmatrix gilt 
 \end_layout
 
 \begin_layout Standard
@@ -378,7 +386,7 @@ Diese Drehmatrix ist durch
 D_{\alpha} & = & \begin{pmatrix}n_{1}^{2}\left(1-\cos\alpha\right)+\cos\alpha & n_{1}n_{2}\left(1-\cos\alpha\right)-n_{3}\sin\alpha & n_{1}n_{3}\left(1-\cos\alpha\right)+n_{2}\sin\alpha\\
 n_{2}n_{1}\left(1-\cos\alpha\right)+n_{3}\sin\alpha & n_{2}^{2}\left(1-\cos\alpha\right)+\cos\alpha & n_{2}n_{3}\left(1-\cos\alpha\right)-n_{1}\sin\alpha\\
 n_{3}n_{1}\left(1-\cos\alpha\right)-n_{2}\sin\alpha & n_{3}n_{2}\left(1-\cos\alpha\right)+n_{1}\sin\alpha & n_{3}^{2}\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}
+\end{pmatrix}.
 \end{eqnarray*}
 
 \end_inset
@@ -387,16 +395,7 @@ n_{3}n_{1}\left(1-\cos\alpha\right)-n_{2}\sin\alpha & n_{3}n_{2}\left(1-\cos\alp
 \end_layout
 
 \begin_layout Standard
-gegeben 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Wikipedia2"
-literal "false"
-
-\end_inset
-
-.
- Dabei ist 
+Dabei ist 
 \begin_inset Formula 
 \begin{eqnarray*}
 \underline{n} & = & \left(\begin{array}{c}
@@ -432,7 +431,7 @@ noprefix "false"
 \end_inset
 
 -Ebene liegen.
- Es wird gewählt 
+ Es wird somit gewählt 
 \begin_inset Formula 
 \begin{eqnarray*}
 n_{1} & = & \sin\phi\\
@@ -443,6 +442,69 @@ n_{3} & = & \cos\phi.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Tangentialebene 
+\end_layout
+
+\begin_layout Standard
+Die Kugel mit Radius 
+\begin_inset Formula $R_{E}$
+\end_inset
+
+ um den Ursprung ist implizit durch die Gleichung 
+\begin_inset Formula $f(x_{i})=0$
+\end_inset
+
+ mit 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+f(x_{i}) & = & \sum_{i}x_{i}^{2}+R_{E}^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gegeben und die Tangentialebene im Berührpunkt 
+\begin_inset Formula $P$
+\end_inset
+
+ implizit durch die Gleichung 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia3"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i}\frac{\partial f}{\partial x_{i}}\left(x_{i}-p_{i}\right) & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dabei sind die Ableitungen im Berührpunkt 
+\begin_inset Formula $P=\left(p_{i}\right)$
+\end_inset
+
+ zu bilden.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -467,6 +529,18 @@ literal "false"
 \end_inset
 
 https://de.wikipedia.org/wiki/Drehmatrix 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "3"
+key "Wikipedia3"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Tangentialebene
 \end_layout
 
 \end_body
