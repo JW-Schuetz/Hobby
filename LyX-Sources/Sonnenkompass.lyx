@@ -89,7 +89,7 @@ Sonnenkompass
 \end_layout
 
 \begin_layout Author
-Jürgen Womser-Schütz, https://github.com/JW-Schuetz 
+Jürgen Womser-Schütz, https://github.com/JW-Schuetz/Hobby 
 \end_layout
 
 \begin_layout Date
@@ -110,8 +110,8 @@ Fragestellung
 \end_layout
 
 \begin_layout Standard
-Wir genau ist die verbreitete Methode, die Nord-Richtung per Sonnenstand
- zu bestimmen? 
+Wir genau ist die bekannte Methode, die Nord-Richtung per Sonnenstand zu
+ bestimmen? 
 \end_layout
 
 \begin_layout Section
@@ -136,69 +136,39 @@ das neue Schattenende des Stabes mit einem zweiten Stein markieren.
 \end_layout
 
 \begin_layout Standard
-Man erhält die Nordrichtung mittels der folgenden Regeln (R
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "R1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, R
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "R2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, R
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "R3"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
+Man erhält die Nordrichtung mittels der folgenden Regeln  
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 \begin_inset CommandInset label
 LatexCommand label
 name "R1"
 
 \end_inset
 
-der Schatten des Stab-Endes bewegt sich auf der Verbindungsgeraden der beiden
- Steine 
+R1: der Schatten des Stab-Endes bewegt sich auf der Verbindungsgeraden der
+ beiden Steine 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 \begin_inset CommandInset label
 LatexCommand label
 name "R2"
 
 \end_inset
 
-die Nordrichtung ist orthogonal zur Verbindungsgeraden 
+R2: die Nordrichtung ist orthogonal zur Verbindungsgeraden 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 \begin_inset CommandInset label
 LatexCommand label
 name "R3"
 
 \end_inset
 
-auf der Nordhalbkugel der Erde zeigt der Schatten Richtung Norden, auf der
- Südhalbkugel Richtung Süden.
+R3: auf der Nordhalbkugel der Erde zeigt der Schatten Richtung Norden, auf
+ der Südhalbkugel Richtung Süden.
  
 \end_layout
 
@@ -442,7 +412,7 @@ Die Kugel mit Radius
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-f(x_{1},x_{2},x_{3}) & = & \sum_{i}x_{i}^{2}+R_{E}^{2}.
+f(x_{1},x_{2},x_{3}) & = & \sum_{i}x_{i}^{2}-R_{E}^{2}.
 \end{eqnarray*}
 
 \end_inset
@@ -538,7 +508,7 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \begin_inset Formula 
 \begin{eqnarray}
 D_{\alpha}\underline{P}\left(\underline{x}-D_{\alpha}\underline{P}\right) & = & 0\nonumber \\
-D_{\alpha}\underline{P}\underline{x} & = & \left(D_{\alpha}\underline{P}\right)^{2}.\label{eq:Tangentialebene}
+\underline{P}^{\alpha}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0.\label{eq:Tangentialebene}
 \end{eqnarray}
 
 \end_inset
@@ -644,7 +614,11 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-gegeben.
+gegeben, dabei gilt 
+\begin_inset Formula $\mu\geq0$
+\end_inset
+
+.
  
 \end_layout
 
@@ -659,7 +633,8 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}.
+\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\\
+ & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}.
 \end{eqnarray*}
 
 \end_inset
@@ -698,8 +673,39 @@ Gesucht ist also der Schnittpunkt der Geraden
 \begin_inset Formula $T^{\alpha}$
 \end_inset
 
-.
+ oder anders formuliert, gesucht wird der Geradenparameter 
+\begin_inset Formula $\mu\geq0$
+\end_inset
+
+, der eine Lösung 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+ der Gleichung 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{P}^{\alpha}\left(\underline{x}_{0}-\underline{P}^{\alpha}\right) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit der Bedingung 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0} & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}
+\end{eqnarray*}
+
+\end_inset
+
+zulässt.
  
+\end_layout
+
+\begin_layout Standard
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -707,8 +713,8 @@ Gesucht ist also der Schnittpunkt der Geraden
 \end_layout
 
 \begin_layout Standard
-Zur Problemlösung wird MatLab verwendet, wobei zur analytischen Lösung die
- 
+Zur Problemlösung wird MatLab verwendet, wobei zur analytischen Lösung der
+ Gleichungen die 
 \begin_inset Quotes gld
 \end_inset
 
@@ -727,6 +733,50 @@ Matlab-Sources
 
 .
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Tangentialebene 
+\begin_inset Formula $T^{\alpha}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{P}^{\alpha}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Gerade 
+\begin_inset Formula $\underline{G}^{\alpha}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{G}^{\alpha} & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
