@@ -219,7 +219,7 @@ Es werden kartesische Koordinaten
  der Erdmittelpunkt (siehe dazu die Problemskizze in Abbildung 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Problemskizze 0"
+reference "fig:Problemskizze"
 plural "false"
 caps "false"
 noprefix "false"
@@ -290,15 +290,8 @@ die Erd-Rotationsachse habe einen Neigungswinkel
 \end_layout
 
 \begin_layout Itemize
-die Erdoberfläche um den Stab wird durch eine Tangentialebene 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Wikipedia1"
-literal "false"
-
-\end_inset
-
- an die Erdkugel angenähert.
+die Erdoberfläche um den Stab wird durch eine Tangentialebene an die Erdkugel
+ angenähert.
  
 \end_layout
 
@@ -322,7 +315,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Problemskizze 0"
+name "fig:Problemskizze"
 
 \end_inset
 
@@ -340,14 +333,12 @@ Problemskizze
 \end_layout
 
 \begin_layout Section*
-Rotationsachse 
+Erd-Rotation 
 \end_layout
 
 \begin_layout Standard
 Die Erde rotiert um ihre Rotationsachse.
- Durch diese Rotation werden Punkte der Erdoberfläche auf andere Punkte
- der Erdoberfläche abgebildet.
- Diese Abbildung wird in Abhängigkeit des Drehwinkels 
+ Diese Rotation wird in Abhängigkeit des Rotationswinkels 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -356,7 +347,8 @@ Die Erde rotiert um ihre Rotationsachse.
 \end_inset
 
  beschrieben.
- Für die Drehmatrix gilt 
+ Für die Drehmatrix gilt (siehe dazu z.B.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Wikipedia2"
@@ -364,7 +356,7 @@ literal "false"
 
 \end_inset
 
- 
+) 
 \end_layout
 
 \begin_layout Standard
@@ -398,7 +390,7 @@ n_{3}
 \end_layout
 
 \begin_layout Standard
-ein Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert.
+der Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert.
  
 \end_layout
 
@@ -406,7 +398,7 @@ ein Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert.
 In dieser Arbeit soll die Rotationsachse, so wie in Abbildung 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Problemskizze 0"
+reference "fig:Problemskizze"
 plural "false"
 caps "false"
 noprefix "false"
@@ -463,10 +455,11 @@ Für die Tangentialebene im Berührpunkt
 \begin_inset Formula $\underline{P}=\left(p_{1},p_{2,}p_{3}\right)$
 \end_inset
 
- gilt allgemein (siehe dazu 
+ gilt allgemein (siehe dazu z.B.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Wikipedia3"
+key "Wikipedia1"
 literal "false"
 
 \end_inset
@@ -515,7 +508,7 @@ Für die implizite Gleichung der Tangentialebene im Berührpunkt
 \end_layout
 
 \begin_layout Standard
-oder in Vektorschreibweise 
+oder in vektorieller Schreibweise 
 \end_layout
 
 \begin_layout Standard
@@ -538,14 +531,15 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \begin_inset Formula $T^{\alpha}$
 \end_inset
 
- die Gleichung 
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\left(D_{\alpha}\underline{P}\right)\underline{x}=\left(D_{\alpha}\underline{P}\right)^{2}=D_{2\alpha}\underline{P}^{2}.\label{eq:Tangentialebene}
-\end{equation}
+\begin{eqnarray}
+D_{\alpha}\underline{P}\left(\underline{x}-D_{\alpha}\underline{P}\right) & = & 0\nonumber \\
+D_{\alpha}\underline{P}\underline{x} & = & \left(D_{\alpha}\underline{P}\right)^{2}.\label{eq:Tangentialebene}
+\end{eqnarray}
 
 \end_inset
 
@@ -650,11 +644,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-gegeben, dabei gilt 
-\begin_inset Formula $\mu\in\left[0,1\right]$
-\end_inset
-
-.
+gegeben.
  
 \end_layout
 
@@ -669,7 +659,7 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)D_{\alpha}\underline{S}.
+\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}.
 \end{eqnarray*}
 
 \end_inset
@@ -687,11 +677,15 @@ Gesucht wird die Trajektorie des Schattens des Stabendes auf der Tangentialebene
 \begin_inset Formula $T^{\alpha}$
 \end_inset
 
- in Abhängigkeit des Rotationswinkels 
+ in Abhängigkeit des Erd-Rotationswinkels 
 \begin_inset Formula $\alpha\in\left[0,2\pi\right]$
 \end_inset
 
-, der im Verlauf eines Tages seinen Wertebereich durchläuft.
+ - 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ durchläuft im Verlauf eines Tages seinen Wertebereich.
  
 \end_layout
 
@@ -706,16 +700,33 @@ Gesucht ist also der Schnittpunkt der Geraden
 
 .
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\end{eqnarray*}
-
+\begin_inset VSpace bigskip
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Zur Problemlösung wird MatLab verwendet, wobei zur analytischen Lösung die
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Symbolic Math Toolbox
+\begin_inset Quotes grd
+\end_inset
+
+ benutzt wird.
+ Die MatLab-Quellen finden sich im GitHub-Unterverzeichnis 
+\begin_inset Quotes gld
+\end_inset
+
+Matlab-Sources
+\begin_inset Quotes grd
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -740,18 +751,6 @@ literal "false"
 \end_inset
 
 https://de.wikipedia.org/wiki/Drehmatrix 
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-label "3"
-key "Wikipedia3"
-literal "false"
-
-\end_inset
-
-https://de.wikipedia.org/wiki/Tangentialebene
 \end_layout
 
 \end_body
