@@ -31,6 +31,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -136,7 +137,7 @@ das neue Schattenende des Stabes mit einem zweiten Stein markieren.
 \end_layout
 
 \begin_layout Standard
-Man erhält die Nordrichtung mittels der folgenden Regeln  
+Man erhält die Nordrichtung mittels der folgenden Regeln 
 \end_layout
 
 \begin_layout Itemize
@@ -212,6 +213,10 @@ Es werden die folgenden Annahmen getroffen:
 \end_layout
 
 \begin_layout Itemize
+der Zeitpunkt im Jahr sei die Sommersonnenwende 
+\end_layout
+
+\begin_layout Itemize
 die Sonne im Punkt 
 \begin_inset Formula $\underline{S}$
 \end_inset
@@ -266,6 +271,23 @@ die Erdoberfläche um den Stab wird durch eine Tangentialebene an die Erdkugel
 \end_layout
 
 \begin_layout Standard
+Vermutlich wird die Methode allerdings auf zwei Kugelkalotten
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Interessant wäre es, diese Kalotten näher zu kennen, evtl.
+ gilt für ihre Höhe h=L?
+\end_layout
+
+\end_inset
+
+ um den Nord- und Südpol scheitern, da das Stabende dort keinen Schatten
+ mehr wirft.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -289,7 +311,7 @@ name "fig:Problemskizze"
 
 \end_inset
 
-Problemskizze 
+Problemskizze zur Zeit der Sommersonnenwende 
 \end_layout
 
 \end_inset
@@ -335,7 +357,7 @@ literal "false"
 D_{\alpha} & = & \begin{pmatrix}n_{1}^{2}\left(1-\cos\alpha\right)+\cos\alpha & n_{1}n_{2}\left(1-\cos\alpha\right)-n_{3}\sin\alpha & n_{1}n_{3}\left(1-\cos\alpha\right)+n_{2}\sin\alpha\\
 n_{2}n_{1}\left(1-\cos\alpha\right)+n_{3}\sin\alpha & n_{2}^{2}\left(1-\cos\alpha\right)+\cos\alpha & n_{2}n_{3}\left(1-\cos\alpha\right)-n_{1}\sin\alpha\\
 n_{3}n_{1}\left(1-\cos\alpha\right)-n_{2}\sin\alpha & n_{3}n_{2}\left(1-\cos\alpha\right)+n_{1}\sin\alpha & n_{3}^{2}\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}.
+\end{pmatrix}
 \end{eqnarray*}
 
 \end_inset
@@ -344,7 +366,7 @@ n_{3}n_{1}\left(1-\cos\alpha\right)-n_{2}\sin\alpha & n_{3}n_{2}\left(1-\cos\alp
 \end_layout
 
 \begin_layout Standard
-Dabei ist 
+dabei ist 
 \begin_inset Formula 
 \begin{eqnarray*}
 \underline{n} & = & \left(\begin{array}{c}
@@ -365,7 +387,8 @@ der Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert.
 \end_layout
 
 \begin_layout Standard
-In dieser Arbeit soll die Rotationsachse, so wie in Abbildung 
+In dieser Arbeit soll Zeit der Sommersonnenwende betrachtet werden, d.h.
+ die Rotationsachse soll, so wie in Abbildung 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Problemskizze"
@@ -548,7 +571,8 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
  so folgt 
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)D_{\alpha}\underline{P}.\label{eq:Stabende}
+\underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)D_{\alpha}\underline{P}\nonumber \\
+ & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}^{\alpha}.\label{eq:Stabende}
 \end{eqnarray}
 
 \end_inset
@@ -702,7 +726,15 @@ mit der Bedingung
 \end_inset
 
 zulässt.
- 
+ Da mit 
+\begin_inset Formula $\mu=1$
+\end_inset
+
+ das Stabende beschrieben wird, muss für eine Lösung sogar 
+\begin_inset Formula $\mu>1$
+\end_inset
+
+ gelten.
 \end_layout
 
 \begin_layout Standard
@@ -744,7 +776,7 @@ Tangentialebene
 \begin_inset Formula $T^{\alpha}$
 \end_inset
 
-:
+: 
 \begin_inset Formula 
 \begin{eqnarray*}
 \underline{P}^{\alpha}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0
@@ -760,13 +792,31 @@ Gerade
 \begin_inset Formula $\underline{G}^{\alpha}$
 \end_inset
 
-:
+: 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 \underline{G}^{\alpha} & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Zusammen: 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \underline{P}^{\alpha}\left(\underline{x}-\underline{P}^{\alpha}\right)\\
+ & = & \underline{P}^{\alpha}\left[\mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}-\underline{P}^{\alpha}\right]\\
+ & = & \underline{P}^{\alpha}\left[\mu\underline{Q}^{\alpha}-\mu\underline{S}+\underline{S}-\underline{P}^{\alpha}\right]\\
+ & = & \underline{P}^{\alpha}\left[\mu\left(\left(1+\frac{L}{R_{E}}\right)\underline{P}^{\alpha}-\underline{S}\right)-\left(\underline{P}^{\alpha}-\underline{S}\right)\right]
 \end{eqnarray*}
 
 \end_inset
