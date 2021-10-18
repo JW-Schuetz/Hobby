@@ -275,7 +275,7 @@ die Erdoberfläche um den Stab wird durch eine Tangentialebene an die Erdkugel
 \end_layout
 
 \begin_layout Standard
-Die Methode wird allerdings auf zwei Kugelkalotten um die Pole scheitern,
+Die Methode wird allerdings auf den Kugelkalotten um die Pole scheitern,
  da das Stabende dort keinen Schatten mehr wirft.
  
 \end_layout
@@ -288,7 +288,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename SonnenKompass.eps
+	filename SonnenKompass1.eps
 	lyxscale 150
 	scale 55
 
@@ -309,6 +309,45 @@ Problemskizze zur Zeit der Sommersonnenwende
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompass2.eps
+	lyxscale 150
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Problemskizze zur Zeit der Sommersonnenwende
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
