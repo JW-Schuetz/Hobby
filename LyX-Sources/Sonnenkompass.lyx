@@ -401,11 +401,11 @@ noprefix "false"
 -Ebene liegen.
  Es wird somit gewählt 
 \begin_inset Formula 
-\begin{eqnarray*}
-n_{1} & = & \sin\phi\\
-n_{2} & = & 0\\
-n_{3} & = & \cos\phi.
-\end{eqnarray*}
+\begin{eqnarray}
+n_{1} & = & \sin\phi\label{eq:Erd-Rotation}\\
+n_{2} & = & 0\nonumber \\
+n_{3} & = & \cos\phi.\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -654,10 +654,10 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\\
- & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}.
-\end{eqnarray*}
+\begin{eqnarray}
+\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\nonumber \\
+ & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}.\label{eq:Verbindungsgerade}
+\end{eqnarray}
 
 \end_inset
 
@@ -724,18 +724,7 @@ mit der Bedingung
 \end_inset
 
 zulässt.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Einsetzen liefert 
+ Einsetzen liefert 
 \begin_inset Formula 
 \begin{eqnarray*}
 \left(\underline{P}^{\alpha}\right)^{T}\left[\mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}-\underline{P}^{\alpha}\right] & = & 0.
@@ -759,7 +748,7 @@ Wegen
 \end_layout
 
 \begin_layout Standard
-folgt nach Ausmultiplizieren die zu lösende Gleichung 
+folgt nach ausmultiplizieren die zu lösende Gleichung 
 \begin_inset Note Note
 status collapsed
 
@@ -1065,8 +1054,15 @@ Diese Komponenten sind auf das Koordinatensystem
 \begin_inset Formula $\left(x_{1}^{'},x_{2}^{'},x_{3}^{'}\right)$
 \end_inset
 
- der Tangentialebene transformiert werden, das im Berührpunkt seinen Ursprung
- hat.
+ der Tangentialebene 
+\begin_inset Formula $T^{\alpha}$
+\end_inset
+
+ transformiert werden, das im Berührpunkt 
+\begin_inset Formula $\underline{P}^{\alpha}$
+\end_inset
+
+ seinen Ursprung haben soll.
 \end_layout
 
 \begin_layout Bibliography
