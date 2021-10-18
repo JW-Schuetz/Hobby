@@ -275,19 +275,8 @@ die Erdoberfläche um den Stab wird durch eine Tangentialebene an die Erdkugel
 \end_layout
 
 \begin_layout Standard
-Vermutlich wird die Methode allerdings auf zwei Kugelkalotten
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Interessant wäre es, diese Kalotten näher zu kennen, evtl.
- gilt für ihre Höhe h=L?
-\end_layout
-
-\end_inset
-
- um den Nord- und Südpol scheitern, da das Stabende dort keinen Schatten
- mehr wirft.
+Die Methode wird allerdings auf zwei Kugelkalotten um die Pole scheitern,
+ da das Stabende dort keinen Schatten mehr wirft.
  
 \end_layout
 
@@ -676,7 +665,7 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \end_layout
 
 \begin_layout Section*
-Problemlösung 
+Lösung 
 \end_layout
 
 \begin_layout Standard
@@ -686,14 +675,14 @@ Gesucht wird die Trajektorie des Schattens des Stabendes auf der Tangentialebene
 \end_inset
 
  in Abhängigkeit des Erd-Rotationswinkels 
-\begin_inset Formula $\alpha\in\left[0,2\pi\right]$
-\end_inset
-
- - 
 \begin_inset Formula $\alpha$
 \end_inset
 
- durchläuft im Verlauf eines Tages seinen Wertebereich.
+, der im Verlauf eines Tages den Wertebereich 
+\begin_inset Formula $\left[0,2\pi\right]$
+\end_inset
+
+ durchläuft.
  
 \end_layout
 
@@ -735,19 +724,6 @@ mit der Bedingung
 \end_inset
 
 zulässt.
- Da mit 
-\begin_inset Formula $\mu=0$
-\end_inset
-
- die Sonne und mit 
-\begin_inset Formula $\mu=1$
-\end_inset
-
- das Stabende beschrieben wird, muss für die Lösung 
-\begin_inset Formula $\mu>1$
-\end_inset
-
- gelten.
  
 \end_layout
 
@@ -869,9 +845,9 @@ folgt
 
  
 \begin_inset Formula 
-\begin{eqnarray*}
-\mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right] & = & R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}
-\end{eqnarray*}
+\begin{eqnarray}
+\mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right]-\left[R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right] & = & 0.\label{eq:Lösungsgleichung1}
+\end{eqnarray}
 
 \end_inset
 
@@ -879,20 +855,28 @@ folgt
 \end_layout
 
 \begin_layout Standard
-und damit 
-\begin_inset Formula 
-\begin{eqnarray*}
-\mu & = & \frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}.
-\end{eqnarray*}
+Da mit 
+\begin_inset Formula $\mu=0$
+\end_inset
 
+ die Sonne und mit 
+\begin_inset Formula $\mu=1$
+\end_inset
+
+ das Stabende beschrieben wird, muss für die Lösung 
+\begin_inset Formula $\mu>1$
+\end_inset
+
+ gelten.
+ 
+\begin_inset VSpace bigskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Zur Problemlösung wird MatLab verwendet, wobei zur analytischen Lösung der
- Gleichungen die 
+Zur Problemlösung wird MatLab verwendet, wobei auch die 
 \begin_inset Quotes gld
 \end_inset
 
@@ -911,6 +895,178 @@ Matlab-Sources
 
 .
  
+\end_layout
+
+\begin_layout Standard
+Man erhält mit der 
+\begin_inset Quotes gld
+\end_inset
+
+Symbolic Math Toolbox
+\begin_inset Quotes grd
+\end_inset
+
+ für den Teilausdruck 
+\begin_inset Formula $\left(\underline{P}^{\alpha}\right)^{T}\underline{S}$
+\end_inset
+
+ der Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Lösungsgleichung1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgende Darstellung als Funktion des Punktes 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Die MatLab-Lösung für 
+\begin_inset Formula $\left(\underline{P}^{\alpha}\right)^{T}\underline{S}$
+\end_inset
+
+ lautet:
+\end_layout
+
+\begin_layout Plain Layout
+========================
+\end_layout
+
+\begin_layout Plain Layout
+rS*(cos(alpha) - sin(phi)^2*(cos(alpha) - 1))*p1 + (-rS*cos(phi)*sin(alpha))*p2
+ + ...
+\end_layout
+
+\begin_layout Plain Layout
+(-rS*cos(phi)*sin(phi)*(cos(alpha) - 1))*p3
+\end_layout
+
+\begin_layout Plain Layout
+Das wird zu:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\underline{P}^{\alpha}\right)^{T}\underline{S} & = & R_{S}\left[\cos\alpha-\sin^{2}\phi\left(\cos\alpha-1\right)\right]p_{1}-R_{S}\cos\phi\sin\alpha p_{2}-R_{S}\cos\phi\sin\phi\left(\cos\alpha-1\right)p_{3}\\
+ & = & -R_{S}\left(\left[\sin^{2}\phi\left(\cos\alpha-1\right)-\cos\alpha\right]p_{1}+\cos\phi\sin\alpha p_{2}+\cos\phi\sin\phi\left(\cos\alpha-1\right)p_{3}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\underline{P}^{\alpha}\right)^{T}\underline{S} & = & -R_{S}\underline{A}^{T}\underline{P}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit dem Vektor 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{A} & = & \left(\begin{array}{c}
+A_{1}\\
+A_{2}\\
+A_{3}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und seinen Komponenten 
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{1} & = & \sin^{2}\phi\left(\cos\alpha-1\right)-\cos\alpha\\
+A_{2} & = & \cos\phi\sin\alpha\\
+A_{3} & = & \cos\phi\sin\phi\left(\cos\alpha-1\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Einsetzen liefert 
+\begin_inset Formula 
+\begin{eqnarray}
+\mu\left[\left(R_{E}+L\right)R_{E}+R_{S}\underline{A}^{T}\underline{P}\right]-\left(R_{E}^{2}+R_{S}\underline{A}^{T}\underline{P}\right) & = & 0.\label{eq:Lösungsgleichung2}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diese Gleichung wird mit MatLab numerisch nach 
+\begin_inset Formula $\mu$
+\end_inset
+
+ gelöst - dabei wird die Nebenbedingung 
+\begin_inset Formula $\mu>1$
+\end_inset
+
+ berücksichtigt.
+ 
+\end_layout
+
+\begin_layout Standard
+Ist eine Lösung 
+\begin_inset Formula $\mu_{0}$
+\end_inset
+
+ gefunden, erhält man den gesuchten Punkt der Tangentialebene, also den
+ Schattenpunkt des Stabendes, durch die Gleichung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+ & =
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diese Komponenten sind auf das Koordinatensystem 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
+\end_inset
+
+ bezogen und müssen erst noch in das Koordinatensystem 
+\begin_inset Formula $\left(x_{1}^{'},x_{2}^{'},x_{3}^{'}\right)$
+\end_inset
+
+ der Tangentialebene transformiert werden, das im Berührpunkt seinen Ursprung
+ hat.
 \end_layout
 
 \begin_layout Bibliography
