@@ -6,7 +6,7 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage{a4}
+\pagestyle{empty}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -61,10 +61,10 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0cm
-\topmargin 0cm
-\rightmargin 0cm
-\bottommargin 0cm
+\leftmargin 2cm
+\topmargin 1.5cm
+\rightmargin 2cm
+\bottommargin 1.5cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
