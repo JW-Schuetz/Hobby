@@ -1063,6 +1063,60 @@ Diese Gleichung wird mit MatLab numerisch nach
 
  berücksichtigt.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Den Punkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ errechnet man aus Breiten- und Längenangaben (wie z.B.
+ 
+\begin_inset Formula $\phi$
+\end_inset
+
+ = 28.136746041614316, 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ = -15.438275482887885 für die Stadt Las Palmas auf Gran Canaria) zu 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia3"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1} & = & r\cos\phi\cos\varphi\\
+x_{2} & = & r\cos\phi\sin\varphi\\
+x_{3} & = & r\sin\phi
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit der geographischen Breite 
+\begin_inset Formula $\phi$
+\end_inset
+
+ und der geographischen Länge 
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1127,6 +1181,18 @@ literal "false"
 \end_inset
 
 https://de.wikipedia.org/wiki/Drehmatrix 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "3"
+key "Wikipedia3"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Kugelkoordinaten
 \end_layout
 
 \end_body
