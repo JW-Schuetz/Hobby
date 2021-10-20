@@ -275,8 +275,8 @@ die Erdoberfläche um den Stab wird durch eine Tangentialebene an die Erdkugel
 \end_layout
 
 \begin_layout Standard
-Die Methode wird allerdings auf den Kugelkalotten um die Pole scheitern,
- da das Stabende dort keinen Schatten mehr wirft.
+Die Methode wird allerdings in der Nähe der beiden Pole scheitern, da das
+ Stabende dort keinen Schatten mehr wirft.
  
 \end_layout
 
@@ -379,7 +379,7 @@ Die Erde rotiert um ihre Rotationsachse.
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Wikipedia2"
+key "Wikipedia3"
 literal "false"
 
 \end_inset
@@ -423,7 +423,8 @@ der Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert.
 \end_layout
 
 \begin_layout Standard
-In dieser Arbeit soll Zeit der Sommersonnenwende betrachtet werden, d.h.
+In dieser Arbeit soll der Zeitpunkt der Sommersonnenwende betrachtet werden,
+ d.h.
  die Rotationsachse soll, so wie in Abbildung 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -450,6 +451,23 @@ n_{3} & = & \cos\phi.\nonumber
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Der Winkel 
+\begin_inset Formula $\phi$
+\end_inset
+
+ beträgt 23.44° 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia1"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -481,7 +499,7 @@ f(x_{1},x_{2},x_{3}) & = & \sum_{i}x_{i}^{2}-R_{E}^{2}.
 
 \begin_layout Standard
 Für die Tangentialebene im Berührpunkt 
-\begin_inset Formula $\underline{P}=\left(p_{1},p_{2,}p_{3}\right)$
+\begin_inset Formula $\underline{P}=\left(p_{1},p_{2,}p_{3}\right)^{T}$
 \end_inset
 
  gilt allgemein (siehe dazu z.B.
@@ -491,7 +509,7 @@ Für die Tangentialebene im Berührpunkt
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Wikipedia1"
+key "Wikipedia2"
 literal "false"
 
 \end_inset
@@ -571,6 +589,47 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \begin{eqnarray}
 \left(\underline{P}^{\alpha}\right)^{T}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0.\label{eq:Tangentialebene}
 \end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Stabfuss 
+\end_layout
+
+\begin_layout Standard
+Der Ort 
+\begin_inset Formula $\underline{P}=\left(p_{1},p_{2,}p_{3}\right)^{T}$
+\end_inset
+
+ des Fusses des Stabes bestimmt sich aus der geographischen Breite 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, Länge 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, Erdradius 
+\begin_inset Formula $R_{E}$
+\end_inset
+
+ und des Achsneigungswinkel 
+\begin_inset Formula $\phi$
+\end_inset
+
+ zu 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1} & = & R_{E}\cos\left(\Theta+\phi\right)\cos\varphi\\
+p_{2} & = & R_{E}\cos\left(\Theta+\phi\right)\sin\varphi\\
+p_{3} & = & R_{E}\sin\left(\Theta+\phi\right).
+\end{eqnarray*}
 
 \end_inset
 
@@ -1044,8 +1103,58 @@ A_{3} & = & \cos\phi\sin\phi\left(\cos\alpha-1\right).
 Einsetzen liefert 
 \begin_inset Formula 
 \begin{eqnarray}
-\mu\left[\left(R_{E}+L\right)R_{E}+R_{S}\underline{A}^{T}\underline{P}\right]-\left(R_{E}^{2}+R_{S}\underline{A}^{T}\underline{P}\right) & = & 0.\label{eq:Lösungsgleichung2}
+\mu\left(L+R\right)-R & = & 0\label{eq:Lösungsgleichung2}
 \end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Umgeformt erhält man 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\mu\left(L+R\right)-R & = & 0\\
+\mu & = & \frac{R}{L+R}.
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Es gilt also stets 
+\begin_inset Formula $\mu<1$
+\end_inset
+
+, eine Lösung mit 
+\begin_inset Formula $\mu>1$
+\end_inset
+
+ existiert also nicht.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+R & = & R_{E}+\frac{R_{S}}{R_{E}}\underline{A}^{T}\underline{P}.
+\end{eqnarray*}
 
 \end_inset
 
@@ -1063,60 +1172,6 @@ Diese Gleichung wird mit MatLab numerisch nach
 
  berücksichtigt.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Den Punkt 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
- errechnet man aus Breiten- und Längenangaben (wie z.B.
- 
-\begin_inset Formula $\phi$
-\end_inset
-
- = 28.136746041614316, 
-\begin_inset Formula $\varphi$
-\end_inset
-
- = -15.438275482887885 für die Stadt Las Palmas auf Gran Canaria) zu 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Wikipedia3"
-literal "false"
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-x_{1} & = & r\cos\phi\cos\varphi\\
-x_{2} & = & r\cos\phi\sin\varphi\\
-x_{3} & = & r\sin\phi
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-mit der geographischen Breite 
-\begin_inset Formula $\phi$
-\end_inset
-
- und der geographischen Länge 
-\begin_inset Formula $\varphi$
-\end_inset
-
-.
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1168,7 +1223,7 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Tangentialebene 
+https://de.wikipedia.org/wiki/Erdachse
 \end_layout
 
 \begin_layout Bibliography
@@ -1180,7 +1235,7 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Drehmatrix 
+https://de.wikipedia.org/wiki/Tangentialebene 
 \end_layout
 
 \begin_layout Bibliography
@@ -1188,6 +1243,18 @@ https://de.wikipedia.org/wiki/Drehmatrix
 LatexCommand bibitem
 label "3"
 key "Wikipedia3"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Drehmatrix 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "4"
+key "Wikipedia4"
 literal "false"
 
 \end_inset
