@@ -52,18 +52,15 @@ S( 1 ) = RS;
 S( 2 ) = 0;
 S( 3 ) = 0;
 
-x = simplify( DAlpha' * DAlpha );
-
 % Test: ist Matrix DAlpha auch wirklich orthogonal?
 if( simplify( DAlpha' * DAlpha ) ~= eye( 3 ) )
-    error( 'Das sollte nie passieren!' )
+    error( 'Diese Meldung sollte NIE angezeigt werden!' )
 end
 
-% Ausdruck PAlpha' * S bestimmen
-res = simplify( PAlpha' * S );
+% Ausdruck PAlpha' * S bestimmen, collect: PAlphaS als Koeffizienten des Vektors P ausdrücken
+PAlphaS = collect( PAlpha' * S, P );
 
-% res als Koeffizienten des Vektors P ausdrücken
-collect( res, P )
+% zu lösende Gleichung, R=rechte Seite, L=linke Seite
+R = simplify( RE^2 - PAlphaS );
 
-% dies liefert den Output:
-% rS*(cos(alpha) - sin(phi)^2*(cos(alpha) - 1))*p1 + (-rS*cos(phi)*sin(alpha))*p2 + (-rS*cos(phi)*sin(phi)*(cos(alpha) - 1))*p3
+save( 'sonnenkompass.mat', 'R' )
