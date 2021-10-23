@@ -60,7 +60,8 @@ end
 % Ausdruck PAlpha' * S bestimmen, collect: PAlphaS als Koeffizienten des Vektors P ausdrücken
 PAlphaS = collect( PAlpha' * S, P );
 
-% zu lösende Gleichung, R=rechte Seite, L=linke Seite
-R = simplify( RE^2 - PAlphaS );
+% Hauptterm der zu lösende Gleichung
+R = simplify( RE - PAlphaS / RE );
+R = R / L;
 
 save( 'sonnenkompass.mat', 'R' )
