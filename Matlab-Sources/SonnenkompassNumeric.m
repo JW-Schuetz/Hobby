@@ -28,4 +28,5 @@ p3 = rE * sin( LP( 1 ) );                  % z-Koordinate
 R = eval( subs( R ) );
 
 % Lösung 
-R / ( R + 1 )
+mue0 = R / ( R + 1 );
+sprintf( 'Mue0 = %1.20f', mue0 )

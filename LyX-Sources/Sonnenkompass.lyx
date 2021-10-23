@@ -279,7 +279,7 @@ Die Methode wird allerdings in der Nähe der beiden Pole scheitern, da das
  Stabende dort keinen Schatten mehr wirft.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -341,7 +341,7 @@ name "fig:Problemskizze"
 
 \end_inset
 
-Problemskizze zur Zeit der Sommersonnenwende 
+Problemskizze (Sommersonnenwende) 
 \end_layout
 
 \end_inset
@@ -705,6 +705,7 @@ Dabei sind die Ableitungen im Berührpunkt
 \end_inset
 
  zu bilden.
+ 
 \end_layout
 
 \begin_layout Standard
