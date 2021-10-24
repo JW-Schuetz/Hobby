@@ -1448,110 +1448,31 @@ Ich suche eine Drehung des ursprünglichen Koordinatensystems
 \begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
 \end_inset
 
- um 2 Winkel, so dass eine der Achsen des gedrehten Koordinatensystems in
- Richtung 
+ um zwei Winkel, so dass eine der Achsen des gedrehten Koordinatensystems
+ 
+\begin_inset Formula $\left(y_{1},y_{2},y_{3}\right)$
+\end_inset
+
+, z.B.
+ 
+\begin_inset Formula $y_{3}$
+\end_inset
+
+, in Richtung 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- zeigt!
-\color inherit
+ zeigt.
+ Dann spannen die übrigen zwei Achsen 
+\begin_inset Formula $\left(y_{1},y_{2}\right)$
+\end_inset
+
+ des gedrehten Koordinatensystems die Tangentialebene für 
+\begin_inset Formula $y_{3}=\left\Vert \underline{P}\right\Vert $
+\end_inset
+
+ auf.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Es gilt für die Tangentialebene 
-\begin_inset Formula $T$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray}
-\underline{P}^{T}\left(\underline{x}-\underline{P}\right) & = & 0.\label{eq:TangentialEbeneNote}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-D.h.
- alle 
-\begin_inset Formula $\underline{x}\in\mathbb{R}^{3}$
-\end_inset
-
-, die Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:TangentialEbeneNote"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) erfüllen, liegen in 
-\begin_inset Formula $T$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
-Welche sind das? Es gilt 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\left(p_{1},p_{2},p_{3}\right)\left[\left(\begin{array}{c}
-x_{1}-p_{1}\\
-x_{2}-p_{2}\\
-x_{3}-p_{3}
-\end{array}\right)\right] & = & p_{1}\left(x_{1}-p_{1}\right)+p_{2}\left(x_{2}-p_{2}\right)+p_{3}\left(x_{3}-p_{3}\right)\\
- & =\\
- & = & \sum_{i}\left(p_{i}x_{i}-p_{i}^{2}\right)\\
- & =
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Gesucht wird eine lineare Abbildung 
-\begin_inset Formula $\mathbb{R}^{3}\rightarrow\mathbb{R}^{2}$
-\end_inset
-
- mit den Eigenschaften 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{P} & \rightarrow & \underline{0}\\
-\underline{P}\pm\lambda\underline{e}_{3} & \rightarrow & \underline{0}\pm\lambda\underline{e}_{y}\\
- & \rightarrow\\
- & \rightarrow\\
- & \rightarrow
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
