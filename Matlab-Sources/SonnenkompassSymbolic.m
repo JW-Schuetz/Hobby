@@ -16,7 +16,7 @@ N( 1 ) = sin( Phi );
 N( 2 ) = 0;
 N( 3 ) = cos( Phi );
 
-% Erd-Rotationswinkel (2*pi/24h)
+% Erd-Rotationswinkel (2*pi/24h), alpha=0 -> Mittags d.h.Sonnenhöchststand
 Alpha = sym( 'alpha', 'real' );
 ca    = cos( Alpha );
 sa    = sin( Alpha );
@@ -64,4 +64,4 @@ PAlphaS = collect( PAlpha' * S, P );
 R = simplify( RE - PAlphaS / RE );
 R = R / L;
 
-save( 'sonnenkompass.mat', 'R' )
+save( 'sonnenkompass.mat', 'R', 'QAlpha', 'S' )

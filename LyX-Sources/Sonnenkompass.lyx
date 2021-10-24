@@ -1273,7 +1273,7 @@ Wegen
 folgt nach kurzer Umformung die zu lösende Gleichung 
 \begin_inset Formula 
 \begin{eqnarray}
-\mu_{0} & = & \frac{R}{1+R}\label{eq:Lösungsgleichung1}
+\mu_{0}\left(\alpha\right) & = & \frac{R}{1+R}\label{eq:Lösungsgleichung1}
 \end{eqnarray}
 
 \end_inset
