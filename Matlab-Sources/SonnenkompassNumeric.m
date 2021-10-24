@@ -24,22 +24,32 @@ p2 = rE * cos( LP( 1 ) ) * sin( LP( 2 ) ); % y-Koordinate
 p3 = rE * sin( LP( 1 ) );                  % z-Koordinate
 
 mue0 = R / ( R + 1 );
-x0   = mue0 * QAlpha + ( 1 - mue0 ) * S;
-x0   = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
+
+x0 = mue0 * QAlpha + ( 1 - mue0 ) * S;
+x0 = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
 
 % numerische Auswertung, Plot
-N = 100;
-x = zeros( N, 1 );
-y = zeros( N, 3 );
-delta = pi / 2 / N;
+N = 100;    % Anzahl Punkte
 
-for i = 1 : N
-	alpha     = ( i - 1 ) * delta;
+% N soll gerade sein
+if( rem( N, 2 ) ~= 0 )
+    N = N + 1;
+end
+
+h     = 5;      % Anzahl Stunden (um den Mittag herum)
+delta = ( 2 * pi / 24 * h ) / N;
+
+x = zeros( N + 1, 1 );
+y = zeros( N + 1, 3 );
+
+for i = 1 : N + 1
+	alpha = ( i  - 1 - N / 2 ) * delta;
+
     x( i )    = alpha;
-    y( i, : ) = eval( subs( x0 ) )';    % alpha substituieren
+    y( i, : ) = eval( subs( x0 ) )';    % auch noch alpha substituieren
 end
 
 hold 'on'
-plot( x, y( :, 1 ) )
-plot( x, y( :, 2 ) )
-plot( x, y( :, 3 ) )
+plot( x, y( :, 1 ) )    % x1
+plot( x, y( :, 2 ) )    % x2
+plot( x, y( :, 3 ) )    % x3

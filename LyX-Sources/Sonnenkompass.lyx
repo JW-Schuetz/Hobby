@@ -279,7 +279,7 @@ Die Methode wird allerdings in der Nähe der beiden Pole scheitern, da das
  Stabende dort keinen Schatten mehr wirft.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -304,6 +304,43 @@ Problemskizze zur Zeit der Sommersonnenwende
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompassHelp.eps
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tangentialebene
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -386,12 +423,12 @@ literal "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{eqnarray}
 D_{\alpha} & = & \begin{pmatrix}n_{1}^{2}\left(1-\cos\alpha\right)+\cos\alpha & n_{1}n_{2}\left(1-\cos\alpha\right)-n_{3}\sin\alpha & n_{1}n_{3}\left(1-\cos\alpha\right)+n_{2}\sin\alpha\\
 n_{2}n_{1}\left(1-\cos\alpha\right)+n_{3}\sin\alpha & n_{2}^{2}\left(1-\cos\alpha\right)+\cos\alpha & n_{2}n_{3}\left(1-\cos\alpha\right)-n_{1}\sin\alpha\\
 n_{3}n_{1}\left(1-\cos\alpha\right)-n_{2}\sin\alpha & n_{3}n_{2}\left(1-\cos\alpha\right)+n_{1}\sin\alpha & n_{3}^{2}\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}
-\end{eqnarray*}
+\end{pmatrix}\label{eq:Drehmatrix}
+\end{eqnarray}
 
 \end_inset
 
@@ -691,7 +728,7 @@ literal "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\sum_{i}\frac{\partial f}{\partial x_{i}}\left(x_{i}-p_{i}\right) & = & 0.
+\sum_{i}\frac{\partial f}{\partial x_{i}}\left(x_{i}-p_{i}\right) & = & 0,
 \end{eqnarray*}
 
 \end_inset
@@ -700,7 +737,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Dabei sind die Ableitungen im Berührpunkt 
+die Ableitungen sind im Berührpunkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -890,7 +927,7 @@ Lösung
 \end_layout
 
 \begin_layout Standard
-Zur Unterstützung der Problemlösung wird die 
+Zur Unterstützung der Problemlösung wird MatLab und seine 
 \begin_inset Quotes gld
 \end_inset
 
@@ -898,8 +935,7 @@ Symbolic Math Toolbox
 \begin_inset Quotes grd
 \end_inset
 
- von MatLab verwendet, die MatLab-Quellen finden sich im GitHub-Unterverzeichnis
- 
+ verwendet, die MatLab-Quellen finden sich im GitHub-Unterverzeichnis 
 \begin_inset Quotes gld
 \end_inset
 
@@ -1390,7 +1426,126 @@ Dieser Punkt ist im Koordinatensystem
 \end_inset
 
 -Achse nach Osten.
- Es gilt 
+ 
+\end_layout
+
+\begin_layout Standard
+Was wäre, wenn ich bei der Drehmatrix in Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Drehmatrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{n}=\underline{P}$
+\end_inset
+
+ annehme? Dann würde ich doch ein Koordinatensystem erhalten, in dem zwei
+ Koordinatenachsen genau die Tangentialebene aufspannen?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Es gilt für die Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{P}^{T}\left(\underline{x}-\underline{P}\right) & = & 0.\label{eq:TangentialEbeneNote}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+D.h.
+ alle 
+\begin_inset Formula $\underline{x}\in\mathbb{R}^{3}$
+\end_inset
+
+, die Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TangentialEbeneNote"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) erfüllen, liegen in 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Welche sind das? Es gilt 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(p_{1},p_{2},p_{3}\right)\left[\left(\begin{array}{c}
+x_{1}-p_{1}\\
+x_{2}-p_{2}\\
+x_{3}-p_{3}
+\end{array}\right)\right] & = & p_{1}\left(x_{1}-p_{1}\right)+p_{2}\left(x_{2}-p_{2}\right)+p_{3}\left(x_{3}-p_{3}\right)\\
+ & =\\
+ & = & \sum_{i}\left(p_{i}x_{i}-p_{i}^{2}\right)\\
+ & =
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Gesucht wird eine lineare Abbildung 
+\begin_inset Formula $\mathbb{R}^{3}\rightarrow\mathbb{R}^{2}$
+\end_inset
+
+ mit den Eigenschaften 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{P} & \rightarrow & \underline{0}\\
+\underline{P}\pm\lambda\underline{e}_{3} & \rightarrow & \underline{0}\pm\lambda\underline{e}_{y}\\
+ & \rightarrow\\
+ & \rightarrow\\
+ & \rightarrow
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
