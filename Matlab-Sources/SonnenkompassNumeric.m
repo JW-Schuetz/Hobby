@@ -25,7 +25,7 @@ p3 = rE * sin( LP( 1 ) );                  % z-Koordinate
 
 mue0 = R / ( R + 1 );
 x0   = mue0 * QAlpha + ( 1 - mue0 ) * S;
-x0   = subs( x0 );    % Zahlenwerte substituieren
+x0   = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
 
 % numerische Auswertung, Plot
 N = 100;
@@ -36,7 +36,7 @@ delta = pi / 2 / N;
 for i = 1 : N
 	alpha     = ( i - 1 ) * delta;
     x( i )    = alpha;
-    y( i, : ) = eval( subs( x0 ) )';    % Zahlenwerte substituieren
+    y( i, : ) = eval( subs( x0 ) )';    % alpha substituieren
 end
 
 hold 'on'
