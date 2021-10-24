@@ -332,7 +332,19 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tangentialebene
+Tangentialebene: alle Punkte 
+\begin_inset Formula $\underline{x}$
+\end_inset
+
+, deren Differenz zum Punkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ senkrecht auf 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ steht.
 \end_layout
 
 \end_inset
@@ -1430,26 +1442,20 @@ Dieser Punkt ist im Koordinatensystem
 \end_layout
 
 \begin_layout Standard
-Was wäre, wenn ich bei der Drehmatrix in Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Drehmatrix"
-plural "false"
-caps "false"
-noprefix "false"
 
+\color red
+Ich suche eine Drehung des ursprünglichen Koordinatensystems 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
 \end_inset
 
-) 
-\begin_inset Formula $\alpha=0$
+ um 2 Winkel, so dass eine der Achsen des gedrehten Koordinatensystems in
+ Richtung 
+\begin_inset Formula $\underline{P}$
 \end_inset
 
- und 
-\begin_inset Formula $\underline{n}=\underline{P}$
-\end_inset
-
- annehme? Dann würde ich doch ein Koordinatensystem erhalten, in dem zwei
- Koordinatenachsen genau die Tangentialebene aufspannen?
+ zeigt!
+\color inherit
+ 
 \end_layout
 
 \begin_layout Standard
