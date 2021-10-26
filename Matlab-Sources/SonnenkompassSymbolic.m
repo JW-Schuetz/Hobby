@@ -62,6 +62,5 @@ PAlphaS = collect( PAlpha' * S, P );
 
 % Hauptterm der zu lösende Gleichung
 R = simplify( RE - PAlphaS / RE );
-R = R / L;
 
-save( 'sonnenkompass.mat', 'R', 'QAlpha', 'S' )
+save( 'sonnenkompass.mat', 'R', 'L', 'QAlpha', 'S' )
