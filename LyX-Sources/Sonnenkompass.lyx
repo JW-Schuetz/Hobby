@@ -249,7 +249,7 @@ im Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- der Erdoberfläche befinde sich der Stab der Länge 
+ der Erdoberfläche befinde sich der Fusspunkt des Stabes der Länge 
 \begin_inset Formula $L$
 \end_inset
 
@@ -269,14 +269,14 @@ die Erd-Rotationsachse habe einen Neigungswinkel
 \end_layout
 
 \begin_layout Itemize
-die Erdoberfläche um den Stab herum wird durch eine Tangentialebene an die
- Erdkugel angenähert.
+die Erdoberfläche um den Fusspunkt des Stabes herum wird durch eine Tangentialeb
+ene an die Erdkugel angenähert.
  
 \end_layout
 
 \begin_layout Standard
-Die Methode wird allerdings in der Nähe der beiden Pole scheitern, da das
- Stabende dort keinen Schatten mehr wirft.
+Die Methode wird allerdings in der Nähe der Pole scheitern, da das Stabende
+ dort keinen Schatten mehr wirft.
  
 \begin_inset Note Note
 status collapsed
@@ -1315,15 +1315,28 @@ Dazu wird das System
 \end_inset
 
  nämlich die Tangentialebene 
-\begin_inset Formula $T^{\alpha}$
+\begin_inset Formula $T$
 \end_inset
 
  auf.
+ Durch die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ werden die Koordinaten 
+\begin_inset Formula $\left(x_{1}^{'},x_{2}^{'}\right)$
+\end_inset
+
+ zu den gesuchten Koordinaten der Tangentialebene 
+\begin_inset Formula $T^{\alpha}$
+\end_inset
+
+ transformiert.
  
 \end_layout
 
 \begin_layout Standard
-Die gesuchte Rotationsmatrix ist durch 
+Die Rotationsmatrix ist allgemein durch 
 \end_layout
 
 \begin_layout Standard

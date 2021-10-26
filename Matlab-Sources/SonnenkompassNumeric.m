@@ -6,13 +6,14 @@ clear
 
 format long
 
-load( 'sonnenkompass.mat', 'R', 'L', 'QAlpha', 'S' )
+load( 'sonnenkompass.mat', 'R', 'QAlpha', 'S' )
 
 % Daten
-LP  = [ 28.136746041614316, -15.438275482887885 ] / 180 * pi;    % Ortskoordinaten Las Palmas [Breitengrad, Längengrad]
-phi = 23.44 / 180 * pi;     % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
-rE  = 6371000.785;          % mittl. Erdradius [m]
-rS  = 149597870700;         % Astronomische Einheit, mittl. Abstand Erde - Sonne [m]
+% Strand vor "Las Palmas, P.º las Canteras, 74"
+LP  = [ 28.136746041614316, -15.438275482887885 ] / 180.0 * pi;    % [Breite, Länge]
+phi = 23.44 / 180.0 * pi;	% Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
+rE  = 6371000.785;          % mittlerer Erdradius [m]
+rS  = 149597870700;         % AE, mittlerer Abstand Erde - Sonne [m]
 l   = 1.5;                  % Stablänge [m]
 
 % Neigung der Erd-Rotationsachse berücksichtigen
@@ -23,7 +24,7 @@ p1 = rE * cos( LP( 1 ) ) * cos( LP( 2 ) ); % x-Koordinate
 p2 = rE * cos( LP( 1 ) ) * sin( LP( 2 ) ); % y-Koordinate
 p3 = rE * sin( LP( 1 ) );                  % z-Koordinate
 
-mue0 = R / ( R + L );
+mue0 = R / ( R + 1 );
 
 x0 = mue0 * QAlpha + ( 1 - mue0 ) * S;
 x0 = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
@@ -39,13 +40,11 @@ end
 h     = 5;      % Anzahl Stunden (um den Mittag herum)
 delta = ( 2 * pi / 24 * h ) / N;
 
-mue = zeros( N + 1, 1 );
-x   = zeros( N + 1, 1 );
-y   = zeros( N + 1, 3 );
+x = zeros( N + 1, 1 );
+y = zeros( N + 1, 3 );
 
 for i = 1 : N + 1
-	alpha    = ( i  - 1 - N / 2 ) * delta;
-    mue( i ) = eval( subs( mue0 ) );
+	alpha = ( i  - 1 - N / 2 ) * delta;
 
     x( i )    = alpha;
     y( i, : ) = eval( subs( x0 ) )';    % auch noch alpha substituieren
@@ -57,12 +56,7 @@ variationX1     = max( y( :, 1 ) ) - min( y( :, 1 ) );
 variationX2     = max( y( :, 2 ) ) - min( y( :, 2 ) );
 variationX3     = max( y( :, 3 ) ) - min( y( :, 3 ) );
 
-figure
-plot( x, mue - 1 )
-
-figure
 hold 'on'
 plot( x, y( :, 1 ) )    % x1
 plot( x, y( :, 2 ) )    % x2
 plot( x, y( :, 3 ) )    % x3
-plot( x, betrag )       % Betrag
