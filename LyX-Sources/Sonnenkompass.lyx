@@ -276,10 +276,11 @@ ene an die Erdkugel angenähert.
 
 \begin_layout Standard
 Die Methode wird allerdings in der Nähe der Pole scheitern, da das Stabende
- dort keinen Schatten mehr wirft.
+ dort evtl.
+ keinen Schatten mehr wirft.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -375,7 +376,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompass1.eps
-	lyxscale 150
+	lyxscale 250
 	scale 55
 
 \end_inset
@@ -390,7 +391,7 @@ name "fig:Problemskizze"
 
 \end_inset
 
-Problemskizze (Sommersonnenwende) 
+Nicht massstäbliche Problemskizze (Sommersonnenwende) 
 \end_layout
 
 \end_inset
@@ -717,7 +718,7 @@ Für die Tangentialebene im Berührpunkt
 \begin_inset Formula $\underline{P}=\left(p_{1},p_{2,}p_{3}\right)^{T}$
 \end_inset
 
- gilt allgemein (siehe dazu z.B.
+ gilt (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -814,6 +815,112 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Darstellung der Ebene durch 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+ax_{1}+bx_{2}+c & = & x_{3}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ Datenpunkte nehmen 
+\begin_inset Formula $\left(x_{1}^{n},x_{2}^{n},x_{3}^{n}\right)$
+\end_inset
+
+ und das i.a.
+ überbestimmte Gleichungssystem aufstellen 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{ccc}
+x_{1}^{1} & x_{2}^{1} & 1\\
+\vdots & \vdots & \vdots\\
+x_{1}^{N} & x_{2}^{N} & 1
+\end{array}\right)\left(\begin{array}{c}
+a\\
+b\\
+c
+\end{array}\right) & = & \left(\begin{array}{c}
+x_{3}^{1}\\
+\vdots\\
+x_{3}^{N}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+und nach 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+ lösen.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Parameterform der Ebene 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x} & = & \underline{P}+\lambda\underline{u}+\mu\underline{v}
+\end{eqnarray*}
+
+\end_inset
+
+die linear unabhängigen Vektoren 
+\begin_inset Formula $\underline{u}$
+\end_inset
+
+, 
+\begin_inset Formula $\underline{v}$
+\end_inset
+
+ sind aus 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ und liegen innerhalb der Ebene, die Parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $\mu$
+\end_inset
+
+ sind die gesuchte Basis.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+x 
+\end_layout
+
+\end_deeper
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Section*
@@ -1327,47 +1434,11 @@ Dazu wird das System
 \begin_inset Formula $\left(x_{1}^{'},x_{2}^{'}\right)$
 \end_inset
 
- zu den gesuchten Koordinaten der Tangentialebene 
+ zu den gesuchten Koordinaten der gedrehten Tangentialebene 
 \begin_inset Formula $T^{\alpha}$
 \end_inset
 
  transformiert.
- 
-\end_layout
-
-\begin_layout Standard
-Die Rotationsmatrix ist allgemein durch 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-S & = & \left(\begin{array}{ccc}
-\sin\Theta\cos\varphi & \cos\Theta\cos\varphi & -\sin\varphi\\
-\sin\Theta\sin\varphi & \cos\Theta\sin\varphi & \cos\varphi\\
-\cos\Theta & -\sin\Theta & 0
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-gegeben (siehe dazu z.B.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Wikipedia4"
-literal "false"
-
-\end_inset
-
-).
  
 \end_layout
 

@@ -50,13 +50,14 @@ for i = 1 : N + 1
     y( i, : ) = eval( subs( x0 ) )';    % auch noch alpha substituieren
 end
 
-betrag          = sqrt( y( :, 1 ).^2 + y( :, 2 ).^2 + y( :, 3 ).^2 );
-variationBetrag = max( betrag ) - min( betrag );
-variationX1     = max( y( :, 1 ) ) - min( y( :, 1 ) );
-variationX2     = max( y( :, 2 ) ) - min( y( :, 2 ) );
-variationX3     = max( y( :, 3 ) ) - min( y( :, 3 ) );
+% Gleichungssystem aufstellen und lösen
+A = zeros( N + 1, 3 );
+B = zeros( N + 1, 1 );
 
-hold 'on'
-plot( x, y( :, 1 ) )    % x1
-plot( x, y( :, 2 ) )    % x2
-plot( x, y( :, 3 ) )    % x3
+for n = 1 : N + 1
+    A( n, 1 : 2 ) = y( n, 1 : 2 ); 
+    A( n, 3 )     = 1;
+    B( n )        = y( n, 3 );
+end
+
+hyperPlane = A \ B	% Parameter (a,b,c) der Hyperebene a*x_1+b*x_2+c=x_3
