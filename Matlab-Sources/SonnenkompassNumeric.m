@@ -50,13 +50,17 @@ for i = 1 : N + 1
     y( i, : ) = eval( subs( x0 ) )';    % auch noch alpha substituieren
 end
 
+% P substituieren -> Ebene durch Ursprung
+for i = 1 : N + 1
+    y( i, : ) = y( i, : ) - [ p1, p2, p3 ];
+end
+
 % Gleichungssystem aufstellen und lösen
-A = zeros( N + 1, 3 );
+A = zeros( N + 1, 2 );
 B = zeros( N + 1, 1 );
 
 for n = 1 : N + 1
     A( n, 1 : 2 ) = y( n, 1 : 2 ); 
-    A( n, 3 )     = 1;
     B( n )        = y( n, 3 );
 end
 

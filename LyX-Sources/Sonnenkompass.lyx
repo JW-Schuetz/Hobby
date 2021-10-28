@@ -821,39 +821,85 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \begin_inset Note Note
 status open
 
+\begin_layout Subsection*
+Vorgehen
+\begin_inset Foot
+status open
+
+\begin_layout Subsection*
+(siehe dazu 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Stackexchange"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Itemize
-Darstellung der Ebene durch 
+Es gebe 
+\begin_inset Formula $N>3$
+\end_inset
+
+ Datenpunkte.
+ 
+\end_layout
+
+\begin_layout Itemize
+Von den 
+\begin_inset Formula $N$
+\end_inset
+
+ Datenpunkten 
+\begin_inset Formula $\left(x_{1}^{n},x_{2}^{n},x_{3}^{n}\right)$
+\end_inset
+
+ jeweils den Berührpunkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ subtrahieren und man erhält eine Ebene durch den Ursprung.
+ 
+\end_layout
+
+\begin_layout Itemize
+Darstellung der Ursprungsebene durch 
 \end_layout
 
 \begin_deeper
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-ax_{1}+bx_{2}+c & = & x_{3}
+ax_{1}+bx_{2} & = & x_{3}
 \end{eqnarray*}
 
 \end_inset
 
-
+Die 
 \begin_inset Formula $N$
 \end_inset
 
- Datenpunkte nehmen 
+ Datenpunkte 
 \begin_inset Formula $\left(x_{1}^{n},x_{2}^{n},x_{3}^{n}\right)$
 \end_inset
 
- und das i.a.
- überbestimmte Gleichungssystem aufstellen 
+ nehmen und das überbestimmte Gleichungssystem 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left(\begin{array}{ccc}
-x_{1}^{1} & x_{2}^{1} & 1\\
-\vdots & \vdots & \vdots\\
-x_{1}^{N} & x_{2}^{N} & 1
+\left(\begin{array}{cc}
+x_{1}^{1} & x_{2}^{1}\\
+\vdots & \vdots\\
+x_{1}^{N} & x_{2}^{N}
 \end{array}\right)\left(\begin{array}{c}
 a\\
-b\\
-c
+b
 \end{array}\right) & = & \left(\begin{array}{c}
 x_{3}^{1}\\
 \vdots\\
@@ -863,58 +909,12 @@ x_{3}^{N}
 
 \end_inset
 
-und nach 
-\begin_inset Formula $a,b,c$
+nach 
+\begin_inset Formula $a,b$
 \end_inset
 
  lösen.
  
-\end_layout
-
-\begin_layout Plain Layout
-x
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Parameterform der Ebene 
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{x} & = & \underline{P}+\lambda\underline{u}+\mu\underline{v}
-\end{eqnarray*}
-
-\end_inset
-
-die linear unabhängigen Vektoren 
-\begin_inset Formula $\underline{u}$
-\end_inset
-
-, 
-\begin_inset Formula $\underline{v}$
-\end_inset
-
- sind aus 
-\begin_inset Formula $\mathbb{R}^{3}$
-\end_inset
-
- und liegen innerhalb der Ebene, die Parameter 
-\begin_inset Formula $\lambda$
-\end_inset
-
-, 
-\begin_inset Formula $\mu$
-\end_inset
-
- sind die gesuchte Basis.
- 
-\end_layout
-
-\begin_layout Plain Layout
-x 
 \end_layout
 
 \end_deeper
@@ -1488,6 +1488,19 @@ literal "false"
 \end_inset
 
 https://de.wikipedia.org/wiki/Kugelkoordinaten
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "5"
+key "Stackexchange"
+literal "false"
+
+\end_inset
+
+https://math.stackexchange.com/questions/99299/best-fitting-plane-given-a-set-of-p
+oints
 \end_layout
 
 \end_body
