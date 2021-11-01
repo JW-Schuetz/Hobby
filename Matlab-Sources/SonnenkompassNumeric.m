@@ -6,7 +6,7 @@ clear
 
 format long
 
-load( 'sonnenkompass.mat', 'R', 'QAlpha', 'S' )
+load( 'sonnenkompass.mat', 'QAlpha', 'S', 'R' )
 
 % Daten
 % Strand vor "Las Palmas, P.º las Canteras, 74"
@@ -44,24 +44,12 @@ x = zeros( N + 1, 1 );
 y = zeros( N + 1, 3 );
 
 for i = 1 : N + 1
-	alpha = ( i  - 1 - N / 2 ) * delta;
-
-    x( i )    = alpha;
+    x( i )    = ( i  - 1 - N / 2 ) * delta;
+	alpha     = x( i );
     y( i, : ) = eval( subs( x0 ) )';    % auch noch alpha substituieren
 end
 
-% P substituieren -> Ebene durch Ursprung
-for i = 1 : N + 1
-    y( i, : ) = y( i, : ) - [ p1, p2, p3 ];
-end
+betrag          = sqrt( y( :, 1 ).^2 + y( :, 2 ).^2 + y( :, 3 ).^2 );
+variationBetrag = max( betrag ) - min( betrag );
 
-% Gleichungssystem aufstellen und lösen
-A = zeros( N + 1, 2 );
-B = zeros( N + 1, 1 );
-
-for n = 1 : N + 1
-    A( n, 1 : 2 ) = y( n, 1 : 2 ); 
-    B( n )        = y( n, 3 );
-end
-
-hyperPlane = A \ B	% Parameter (a,b,c) der Hyperebene a*x_1+b*x_2+c=x_3
+y

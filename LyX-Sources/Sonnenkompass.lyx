@@ -850,7 +850,7 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Section*
@@ -1303,7 +1303,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{x}_{0}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}\label{eq:Lösungspunkte}
+\underline{x}_{0}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}.\label{eq:Lösungspunkte}
 \end{eqnarray}
 
 \end_inset
@@ -1311,20 +1311,15 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Standard
-und ist im Koordinatensystem 
-\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
-\end_inset
-
- gegeben.
- 
-\end_layout
+\begin_layout Subsection*
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Subsection*
 Koordinatentransformation 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Punkte der oben konstruierten Tangentialebene nach Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1350,8 +1345,15 @@ noprefix "false"
  
 \end_layout
 
-\begin_layout Standard
-Der Punkt 
+\begin_layout Plain Layout
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Ein Punkt 
 \begin_inset Formula $\underline{x}$
 \end_inset
 
@@ -1366,7 +1368,7 @@ Der Punkt
  gilt, also 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \left(p_{1},p_{2},p_{3}\right)\left(\begin{array}{c}
@@ -1381,7 +1383,7 @@ x_{3}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die zu 
 \begin_inset Formula $\underline{P}$
 \end_inset
@@ -1420,7 +1422,7 @@ Wegen
  auch durch 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
 x_{1}=-\frac{1}{p_{1}}\left(p_{2}x_{2}+p_{3}x_{3}\right)\label{eq:Ursprungsebene}
@@ -1429,15 +1431,19 @@ x_{1}=-\frac{1}{p_{1}}\left(p_{2}x_{2}+p_{3}x_{3}\right)\label{eq:Ursprungsebene
 \end_inset
 
 charakterisieren kann.
- Durch Auswahl zweier linear unabhängiger Kombinationen 
-\begin_inset Formula $\left(a_{1},b_{1},c_{1}\right)$
+ Durch Auswahl zweier linear unabhängiger 
+\begin_inset Formula $\left(x_{1},x_{2}\right)-$
+\end_inset
+
+Kombinationen 
+\begin_inset Formula $\left(b_{1},c_{1}\right)$
 \end_inset
 
  und 
-\begin_inset Formula $\left(a_{2},b_{2},c_{2}\right)$
+\begin_inset Formula $\left(b_{2},c_{2}\right)$
 \end_inset
 
- werden zwei Punkte dieser Ursprungsebene konstruiert, es folgt mit (
+ werden mit (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Ursprungsebene"
@@ -1447,7 +1453,8 @@ noprefix "false"
 
 \end_inset
 
-) 
+) zwei Punkte dieser Ursprungsebene konstruiert.
+ Es folgt 
 \begin_inset Formula 
 \begin{eqnarray*}
 a_{1} & = & -\frac{p_{2}}{p_{1}}b_{1}-\frac{p_{3}}{p_{1}}c_{1}\\
@@ -1459,14 +1466,14 @@ a_{2} & = & -\frac{p_{2}}{p_{1}}b_{2}-\frac{p_{3}}{p_{1}}c_{2}.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Für die Darstellung einer Ursprungsebene gilt allgemein 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-a_{i}y_{1}+b_{i}y_{2} & = & c_{i}
+b_{i}y_{1}+c_{i}y_{2} & = & a_{i}
 \end{eqnarray*}
 
 \end_inset
@@ -1474,7 +1481,7 @@ a_{i}y_{1}+b_{i}y_{2} & = & c_{i}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 und für die Koordinaten 
 \begin_inset Formula $\left(y_{1},y_{2}\right)$
 \end_inset
@@ -1483,8 +1490,8 @@ und für die Koordinaten
 \begin_inset Formula 
 \begin{eqnarray*}
 A & = & \left(\begin{array}{cc}
-a_{1} & b_{1}\\
-a_{2} & b_{2}
+b_{1} & c_{1}\\
+b_{2} & c_{2}
 \end{array}\right)
 \end{eqnarray*}
 
@@ -1493,15 +1500,15 @@ a_{2} & b_{2}
 das lineare Gleichungssystem 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 A\left(\begin{array}{c}
 y_{1}\\
 y_{2}
 \end{array}\right) & = & \left(\begin{array}{c}
-c_{1}\\
-c_{2}
+a_{1}\\
+a_{2}
 \end{array}\right)
 \end{eqnarray*}
 
@@ -1514,8 +1521,8 @@ c_{2}
 y_{1}\\
 y_{2}
 \end{array}\right) & = & A^{-1}\left(\begin{array}{c}
-c_{1}\\
-c_{2}
+a_{1}\\
+a_{2}
 \end{array}\right).
 \end{eqnarray*}
 
@@ -1524,7 +1531,7 @@ c_{2}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Kombinationen 
 \begin_inset Formula $\left(a_{1},b_{1},c_{1}\right)$
 \end_inset
@@ -1542,11 +1549,65 @@ Die Kombinationen
 \end_inset
 
  ist, dass also 
-\begin_inset Formula $a_{1}b_{2}\neq a_{2}b_{1}$
+\begin_inset Formula $b_{1}c_{2}\neq b_{2}c_{1}$
 \end_inset
 
  gilt.
  
+\end_layout
+
+\begin_layout Subsubsection*
+Auswahl der Kombination 
+\end_layout
+
+\begin_layout Plain Layout
+Ich wähle die Kombinationen 
+\begin_inset Formula $\left(b_{1},c_{1}\right)$
+\end_inset
+
+ und 
+\begin_inset Formula $\left(b_{2},c_{2}\right)$
+\end_inset
+
+ zu 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+b_{1} & = & p_{2}+\lambda R_{E}\\
+c_{1} & = & p_{3}+\lambda R_{E}\\
+b_{2} & = & p_{2}-\lambda R_{E}\\
+c_{2} & = & p_{3}-\lambda R_{E}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und erhalte für die Matrix 
+\begin_inset Formula 
+\begin{eqnarray*}
+A & = & \left(\begin{array}{cc}
+p_{2}+\lambda R_{E} & p_{3}+\lambda R_{E}\\
+p_{2}-\lambda R_{E} & p_{3}-\lambda R_{E}
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Transformation 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography

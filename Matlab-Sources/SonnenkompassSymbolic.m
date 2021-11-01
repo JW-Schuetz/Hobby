@@ -5,10 +5,10 @@ clc
 clear
 
 % Symbol-Definitionen
-Phi = sym( 'phi', 'real' ); % Komplementwinkel Erd-Rotationsachse zur Ekliptik
-RS  = sym( 'rS', 'real' );  % Abstand Erde - Sonne
-RE  = sym( 'rE', 'real' );  % Erdradius
-L   = sym( 'l', 'real' );   % Stablänge
+Phi = sym( 'phi', 'real' );      % Komplementwinkel Erd-Rotationsachse zur Ekliptik
+RS  = sym( 'rS', 'real' );       % Abstand Erde - Sonne
+RE  = sym( 'rE', 'real' );       % Erdradius
+L   = sym( 'l', 'real' );        % Stablänge
 
 % Einheitsvektor Rotationsachse
 N      = sym( 'n', [ 3, 1 ], 'real' );
@@ -64,4 +64,4 @@ PAlphaS = collect( PAlpha' * S, P );
 R = simplify( RE - PAlphaS / RE );
 R = R / L;
 
-save( 'sonnenkompass.mat', 'R', 'QAlpha', 'S' )
+save( 'sonnenkompass.mat', 'QAlpha', 'S', 'R' )
