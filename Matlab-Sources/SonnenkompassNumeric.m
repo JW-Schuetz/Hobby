@@ -6,7 +6,10 @@ clear
 
 format long
 
-load( 'sonnenkompass.mat', 'QAlpha', 'S', 'R' )
+load( 'sonnenkompass.mat', 'Q', 'QAlpha', 'S', 'SAlpha', 'R1', 'R2' )
+
+% Erde 'E' oder Sonne 'S' drehen
+Drehen = 'S';
 
 % Daten
 % Strand vor "Las Palmas, P.º las Canteras, 74"
@@ -24,10 +27,20 @@ p1 = rE * cos( LP( 1 ) ) * cos( LP( 2 ) ); % x-Koordinate
 p2 = rE * cos( LP( 1 ) ) * sin( LP( 2 ) ); % y-Koordinate
 p3 = rE * sin( LP( 1 ) );                  % z-Koordinate
 
-mue0 = R / ( R + 1 );
-
-x0 = mue0 * QAlpha + ( 1 - mue0 ) * S;
-x0 = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
+switch( Drehen )
+    case 'E' 
+        % Fall: Erde wird gedreht
+        vz   = 1;
+        mue0 = R1 / ( R1 + 1 );
+        x0	 = mue0 * QAlpha + ( 1 - mue0 ) * S;
+        x0	 = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
+    case 'S'
+        % Fall: Sonne wird gedreht
+        vz   = -1;
+        mue0 = R2 / ( R2 + 1 );
+        x0   = mue0 * Q + ( 1 - mue0 ) * SAlpha;
+        x0   = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
+end
 
 % numerische Auswertung, Plot
 N = 100;    % Anzahl Punkte
@@ -37,19 +50,29 @@ if( rem( N, 2 ) ~= 0 )
     N = N + 1;
 end
 
-h     = 5;      % Anzahl Stunden (um den Mittag herum)
+h     = 1 / 6;      % Anzahl Stunden (um den Mittag herum): 10 Minuten
 delta = ( 2 * pi / 24 * h ) / N;
 
 x = zeros( N + 1, 1 );
 y = zeros( N + 1, 3 );
 
 for i = 1 : N + 1
-    x( i )    = ( i  - 1 - N / 2 ) * delta;
+    x( i )    = vz * ( i  - 1 - N / 2 ) * delta;
 	alpha     = x( i );
     y( i, : ) = eval( subs( x0 ) )';    % auch noch alpha substituieren
 end
 
+% Die Variation des Betrages ist durch die Diskrepanz der Tangentialebene
+% zur Kugeloberfläche erklärbar.
 betrag          = sqrt( y( :, 1 ).^2 + y( :, 2 ).^2 + y( :, 3 ).^2 );
 variationBetrag = max( betrag ) - min( betrag );
+variationX1     = max( y( :, 1 ) ) - min( y( :, 1 ) );
+variationX2     = max( y( :, 2 ) ) - min( y( :, 2 ) );
+variationX3     = max( y( :, 3 ) ) - min( y( :, 3 ) );
 
-y
+hold 'on'
+plot( x, y( :, 1 ) - p1 )    % x1
+plot( x, y( :, 2 ) - p2 )    % x2
+plot( x, y( :, 3 ) - p3 )    % x3
+
+x

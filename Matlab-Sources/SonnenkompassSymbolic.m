@@ -42,15 +42,16 @@ DAlpha = simplify( DAlpha );    % evtl. Vereinfachung
 P = sym( 'p', [ 3, 1 ], 'real' );
 Q = ( 1 + L / RE ) * P;
 
-% rotierte Punkte P und Q
-PAlpha = DAlpha * P;
-QAlpha = DAlpha * Q;
-
 % Sonne
 S = sym( 's', [ 3, 1 ], 'real' );
 S( 1 ) = RS;
 S( 2 ) = 0;
 S( 3 ) = 0;
+
+% rotierte Punkte P, Q und S
+PAlpha = DAlpha * P;
+QAlpha = DAlpha * Q;
+SAlpha = DAlpha * S;
 
 % Test: ist Matrix DAlpha auch wirklich orthogonal?
 if( simplify( DAlpha' * DAlpha ) ~= eye( 3 ) )
@@ -60,8 +61,15 @@ end
 % Ausdruck PAlpha' * S bestimmen, collect: PAlphaS als Koeffizienten des Vektors P ausdrücken
 PAlphaS = collect( PAlpha' * S, P );
 
-% Hauptterm der zu lösende Gleichung
-R = simplify( RE - PAlphaS / RE );
-R = R / L;
+% Ausdruck P' * SAlpha bestimmen, collect: PSAlpha als Koeffizienten des Vektors P ausdrücken
+PSAlpha = collect( P' * SAlpha, P );
 
-save( 'sonnenkompass.mat', 'QAlpha', 'S', 'R' )
+% Hauptterm der zu lösende Gleichung (Erde wird gedreht)
+R1 = simplify( RE - PAlphaS / RE );
+R1 = R1 / L;
+
+% Hauptterm der zu lösende Gleichung (Sonne wird gedreht)
+R2 = simplify( RE - PSAlpha / RE );
+R2 = R2 / L;
+
+save( 'sonnenkompass.mat', 'Q', 'QAlpha', 'S', 'SAlpha', 'R1', 'R2' )

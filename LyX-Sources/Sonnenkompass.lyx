@@ -414,6 +414,13 @@ Im folgenden wird Kenntnis der linearen Algebra vorausgesetzt.
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Vektoren werden durch einen Unterstrich kenntlich gemacht 
 \begin_inset Formula $\underline{x}$
 \end_inset
@@ -431,11 +438,7 @@ Vektoren werden durch einen Unterstrich kenntlich gemacht
  
 \end_layout
 
-\begin_layout Part
-Gemeinsamkeiten beider Lösungsansätze 
-\end_layout
-
-\begin_layout Section*
+\begin_layout Section
 Erdrotation 
 \end_layout
 
@@ -491,8 +494,20 @@ n_{3}
 \end_layout
 
 \begin_layout Standard
-der Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert.
- 
+ein  Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert.
+ Die Drehmatrix ist orthogonal, d.h.
+ es gilt 
+\begin_inset Formula 
+\[
+D_{\alpha}^{T}D_{\alpha}=\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -558,7 +573,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Für mittags 12 Uhr soll 
+Für 12 Uhr mittags soll 
 \begin_inset Formula $\alpha=0$
 \end_inset
 
@@ -566,7 +581,7 @@ Für mittags 12 Uhr soll
  
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Fusspunkt des Stabes 
 \end_layout
 
@@ -583,7 +598,29 @@ Der Ort
 \begin_inset Formula $\varphi$
 \end_inset
 
- (siehe dazu z.B.
+, dem Erdradius 
+\begin_inset Formula $R_{E}$
+\end_inset
+
+ und dem Achsneigungswinkel nach Gleichung 
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Neigungswinkel"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) zu (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -595,25 +632,7 @@ literal "false"
 
 \end_inset
 
-), dem Erdradius 
-\begin_inset Formula $R_{E}$
-\end_inset
-
- und dem Achsneigungswinkel 
-\begin_inset Formula $\phi$
-\end_inset
-
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Neigungswinkel"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) zu 
+)
 \end_layout
 
 \begin_layout Standard
@@ -648,7 +667,40 @@ p_{3} & = & R_{E}\sin\left(\Theta+\phi\right).
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+Berücksichtigt man die Erdrotation durch die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ so folgt für den Ort des Stabfusspunktes aus Gleichung
+\begin_inset space ~
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Fusspunkt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{P}^{\alpha} & = & D_{\alpha}\underline{P}.\label{eq:FusspunktGedreht}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Endpunkt des Stabes 
 \end_layout
 
@@ -672,7 +724,66 @@ Für den Punkt
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+Berücksichtigt man die Erdrotation durch die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ so folgt aus Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Endpunkt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Paragraph*
+Kontrolle
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\Vert \underline{Q}-\underline{P}\right\Vert  & = & \left\Vert \left(1+\frac{L}{R_{E}}\right)\underline{P}-\underline{P}\right\Vert \\
+ & = & \left\Vert \frac{L}{R_{E}}\underline{P}\right\Vert \\
+ & = & \frac{L}{R_{E}}\left\Vert \underline{P}\right\Vert \\
+ & = & L
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Stimmt!
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)D_{\alpha}\underline{P}\nonumber \\
+\underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}^{\alpha}.\label{eq:EndpunktGedreht}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Tangentialebene 
 \end_layout
 
@@ -753,7 +864,11 @@ Für die implizite Gleichung der Tangentialebene im Berührpunkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- folgt schliesslich für die Kugel (
+ folgt schliesslich für die Kugel nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Kugel"
@@ -789,7 +904,45 @@ oder in vektorieller Schreibweise
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+Berücksichtigt man die Erdrotation durch die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ so folgt für die gedrehte Tangentialebene 
+\begin_inset Formula $T^{\alpha}$
+\end_inset
+
+ aus Gleichung
+\begin_inset space ~
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Tangentialebene"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\left(D_{\alpha}\underline{P}\right)^{T}\left(\underline{x}-D_{\alpha}\underline{P}\right) & = & 0\nonumber \\
+\left(\underline{P}^{\alpha}\right)^{T}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0.\label{eq:TangentialebeneGedreht}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Verbindungsgerade 
 \end_layout
 
@@ -822,7 +975,11 @@ Die Punkte der Verbindungsgerade
 \begin_inset Formula $\underline{Q}$
 \end_inset
 
- nach Gleichung (
+ nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Endpunkt"
@@ -855,7 +1012,135 @@ gegeben, dabei gilt
  
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+Berücksichtigt man die Erdrotation durch die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ so folgt
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Für 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+ wird der Punkt 
+\begin_inset Formula $\underline{S}$
+\end_inset
+
+, für 
+\begin_inset Formula $\mu=1$
+\end_inset
+
+ wird der Punkt 
+\begin_inset Formula $\underline{Q}^{\alpha}$
+\end_inset
+
+ beschrieben.
+\end_layout
+
+\end_inset
+
+ aus Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Verbindungsgerade"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\nonumber \\
+\underline{G}^{\alpha} & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}.\label{eq:VerbindungsgeradeGedrehtErde}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Berücksichtigt man die Rotation der Sonne durch die Drehmatrix 
+\begin_inset Formula $D_{\left(-\alpha\right)}$
+\end_inset
+
+ so folgt
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Für 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+ wird der Punkt 
+\begin_inset Formula $\underline{S}^{\alpha}$
+\end_inset
+
+, für 
+\begin_inset Formula $\mu=1$
+\end_inset
+
+ wird der Punkt 
+\begin_inset Formula $\underline{Q}$
+\end_inset
+
+ beschrieben.
+\end_layout
+
+\end_inset
+
+ mit 
+\begin_inset Formula 
+\[
+\underline{S}^{\alpha}=D_{\left(-\alpha\right)}\underline{S}
+\]
+
+\end_inset
+
+aus Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Verbindungsgerade"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{G}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)D_{\left(-\alpha\right)}\underline{S}\nonumber \\
+\underline{G}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}.\label{eq:VerbindungsgeradeGedrehtSonne}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Lösung 
 \end_layout
 
@@ -895,215 +1180,98 @@ Gesucht wird die Trajektorie des Schattens des Stabendes auf der Tangentialebene
 
 .
  
-\end_layout
+\begin_inset VSpace bigskip
+\end_inset
 
-\begin_layout Part
-Rotation der Erde bei fixer Sonne 
-\end_layout
 
-\begin_layout Section*
-Fusspunkt des Stabes 
 \end_layout
 
 \begin_layout Standard
-Berücksichtigt man die Erdrotation durch die Drehmatrix 
-\begin_inset Formula $D_{\alpha}$
-\end_inset
-
- so folgt für den Ort des Stabfusspunktes aus Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Fusspunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\underline{P}^{\alpha} & = & D_{\alpha}\underline{P}.\label{eq:FusspunktGedreht}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-Endpunkt des Stabes 
-\end_layout
-
-\begin_layout Standard
-Berücksichtigt man die Erdrotation durch die Drehmatrix 
-\begin_inset Formula $D_{\alpha}$
-\end_inset
-
- so folgt aus Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Endpunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
+Es sind zwei äquivalente Lösungsansätze denkbar, die Erdrotation zu berücksichti
+gen 
 \begin_inset Note Note
 status collapsed
 
-\begin_layout Paragraph*
-Kontrolle
+\begin_layout Subsection*
+Äquivalenz
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\Vert \underline{Q}-\underline{P}\right\Vert  & = & \left\Vert \left(1+\frac{L}{R_{E}}\right)\underline{P}-\underline{P}\right\Vert \\
- & = & \left\Vert \frac{L}{R_{E}}\underline{P}\right\Vert \\
- & = & \frac{L}{R_{E}}\left\Vert \underline{P}\right\Vert \\
- & = & L
-\end{eqnarray*}
+\begin_layout Itemize
+alles auf der Erde Rotieren und die Sonne fix lassen: 
+\begin_inset Formula $D_{\alpha}\underline{E}$
+\end_inset
 
+, 
+\begin_inset Formula $D_{0}\underline{S}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
-Stimmt!
+\begin_layout Itemize
+alles auf der Erde fix lassen und die Sonne entgegengesetzt Rotieren: 
+\begin_inset Formula $D_{0}\underline{E}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{\left(-\alpha\right)}\underline{S}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
  
-\begin_inset Formula 
-\begin{eqnarray}
-\underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)D_{\alpha}\underline{P}\nonumber \\
-\underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}^{\alpha}.\label{eq:EndpunktGedreht}
-\end{eqnarray}
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset label
+LatexCommand label
+name "Fall 1"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Section*
-Tangentialebene 
-\end_layout
-
-\begin_layout Standard
-Berücksichtigt man die Erdrotation durch die Drehmatrix 
+Die mit der Erde verbundenen Orte mit der Drehmatrix 
 \begin_inset Formula $D_{\alpha}$
 \end_inset
 
- so folgt für die gedrehte Tangentialebene 
-\begin_inset Formula $T^{\alpha}$
-\end_inset
+ zu multiplizieren und die Sonne fixiert lassen.
+ 
+\end_layout
 
- aus Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Tangentialebene"
-plural "false"
-caps "false"
-noprefix "false"
+\begin_layout Itemize
+\begin_inset CommandInset label
+LatexCommand label
+name "Fall 2"
 
 \end_inset
 
-) 
+Den Ort der Sonne mit der Drehmatrix 
+\begin_inset Formula $D_{\left(-\alpha\right)}$
+\end_inset
+
+ zu multiplizieren und die mit der Erde verbundenen Orte fixiert lassen.
+ 
+\end_layout
+
+\begin_layout Part
+Lösung durch Rotation der Erde 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\left(D_{\alpha}\underline{P}\right)^{T}\left(\underline{x}-D_{\alpha}\underline{P}\right) & = & 0\nonumber \\
-\left(\underline{P}^{\alpha}\right)^{T}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0.\label{eq:TangentialebeneGedreht}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-Verbindungsgerade 
-\end_layout
-
-\begin_layout Standard
-Berücksichtigt man die Erdrotation durch die Drehmatrix 
-\begin_inset Formula $D_{\alpha}$
-\end_inset
-
- so folgt
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Für 
-\begin_inset Formula $\mu=0$
-\end_inset
-
- wird der Punkt 
-\begin_inset Formula $\underline{S}$
-\end_inset
-
-, für 
-\begin_inset Formula $\mu=1$
-\end_inset
-
- wird der Punkt 
-\begin_inset Formula $\underline{Q}^{\alpha}$
-\end_inset
-
- beschrieben.
-\end_layout
-
-\end_inset
-
- aus Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Verbindungsgerade"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\nonumber \\
-\underline{G}^{\alpha} & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}.\label{eq:VerbindungsgeradeGedreht}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-Lösung 
-\end_layout
-
-\begin_layout Standard
-Gesucht ist also der Schnittpunkt der Geraden 
+Gesucht ist der Schnittpunkt der Geraden 
 \begin_inset Formula $\underline{G}^{\alpha}$
 \end_inset
 
- nach Gleichung (
+ nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:VerbindungsgeradeGedreht"
+reference "eq:VerbindungsgeradeGedrehtErde"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1122,7 +1290,11 @@ noprefix "false"
 \begin_inset Formula $\underline{x}_{0}$
 \end_inset
 
- der Gleichung (
+ der Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:TangentialebeneGedreht"
@@ -1143,7 +1315,6 @@ D.h.
 \end_inset
 
  soll auf der Verbindungsgeraden liegen.
- 
 \end_layout
 
 \end_inset
@@ -1151,7 +1322,7 @@ D.h.
  
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{x}_{0} & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}\label{eq:GesuchterPunktGedreht}
+\underline{x}_{0} & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}\label{eq:GesuchterPunktGedrehtErde}
 \end{eqnarray}
 
 \end_inset
@@ -1169,17 +1340,25 @@ Lösungspunkt
 \end_layout
 
 \begin_layout Standard
-Einsetzen von Gleichung (
+Einsetzen von Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GesuchterPunktGedreht"
+reference "eq:GesuchterPunktGedrehtErde"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-) in Gleichung (
+) in Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:TangentialebeneGedreht"
@@ -1292,7 +1471,7 @@ R & = & R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}
  
 \begin_inset Formula 
 \begin{eqnarray}
-\mu_{0}\left(\alpha\right) & = & \frac{R}{R+L}\label{eq:LösungsgleichungGedreht}
+\mu_{0}\left(\alpha\right) & = & \frac{R}{R+L}\label{eq:LösungsgleichungGedrehtErde}
 \end{eqnarray}
 
 \end_inset
@@ -1324,10 +1503,14 @@ Da mit
 \begin_inset Formula $\mu=1$
 \end_inset
 
- das Stabende beschrieben wird, muss wegen Gleichung (
+ das Stabende beschrieben wird, muss wegen Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:VerbindungsgeradeGedreht"
+reference "eq:VerbindungsgeradeGedrehtErde"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1355,10 +1538,14 @@ Der gesuchte Punkt
 \begin_inset Formula $\alpha$
 \end_inset
 
- mit dem nach Gleichung (
+ mit dem nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:LösungsgleichungGedreht"
+reference "eq:LösungsgleichungGedrehtErde"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1369,10 +1556,14 @@ noprefix "false"
 \begin_inset Formula $\mu_{0}\left(\alpha\right)$
 \end_inset
 
- durch Einsetzen in Gleichung (
+ durch Einsetzen in Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GesuchterPunktGedreht"
+reference "eq:GesuchterPunktGedrehtErde"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1385,7 +1576,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{x}_{0}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}.\label{eq:LösungspunkteGedreht}
+\underline{x}_{0}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}.\label{eq:LösungspunkteGedrehtErde}
 \end{eqnarray}
 
 \end_inset
@@ -1394,97 +1585,346 @@ noprefix "false"
 \end_layout
 
 \begin_layout Part
-Rotation der Sonne bei fixer Erde 
-\end_layout
-
-\begin_layout Section*
-Sonne 
+Lösung durch Rotation der Sonne 
 \end_layout
 
 \begin_layout Standard
+Gesucht ist der Schnittpunkt der Geraden 
+\begin_inset Formula $\underline{G}^{\alpha}$
+\end_inset
 
-\color red
-Still to do!
+ nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:VerbindungsgeradeGedrehtSonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) mit der Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ oder anders formuliert, gesucht wird der Geradenparameter 
+\begin_inset Formula $\mu$
+\end_inset
+
+, der eine Lösung 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+ der Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Tangentialebene"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) mit der Bedingung
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+D.h.
+ 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ soll auf der Verbindungsgeraden liegen.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:GesuchterPunktGedrehtSonne}
+\end{eqnarray}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Äquivalent: 
-\end_layout
-
-\begin_layout Itemize
-alles auf der Erde Rotieren und die Sonne fix lassen: 
-\begin_inset Formula $D_{\alpha}\underline{E}$
-\end_inset
-
-, 
-\begin_inset Formula $D_{0}\underline{S}$
-\end_inset
-
+zulässt.
  
-\end_layout
-
-\begin_layout Itemize
-alles auf der Erde fix lassen und die Sonne Rotieren: 
-\begin_inset Formula $D_{0}\underline{E}$
-\end_inset
-
-, 
-\begin_inset Formula $D_{\alpha}\underline{S}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-NoOp: 
-\end_layout
-
-\begin_layout Itemize
-alles auf der Erde und die Sonne Rotieren: 
-\begin_inset Formula $D_{\alpha}\underline{E}$
-\end_inset
-
-, 
-\begin_inset Formula $D_{\alpha}\underline{S}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-weder Erde noch Sonne Rotieren: 
-\begin_inset Formula $D_{0}\underline{E}$
-\end_inset
-
-, 
-\begin_inset Formula $D_{0}\underline{S}$
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection*
+Lösungspunkt 
+\end_layout
+
+\begin_layout Standard
+Einsetzen von Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GesuchterPunktGedrehtSonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) in Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Tangentialebene"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) liefert 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}-\underline{P}\right] & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wegen 
+\begin_inset Formula 
+\[
+\underline{P}^{T}\underline{P}=R_{E}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+folgt nach kurzer Umformung die zu lösende Gleichung 
 \begin_inset Note Note
 status collapsed
 
-\begin_layout Subsection*
-Koordinatentransformation 
+\begin_layout Plain Layout
+Aus den beiden Gleichungen 
 \end_layout
 
 \begin_layout Plain Layout
-Die Punkte der oben konstruierten Tangentialebene nach Gleichung (
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \underline{P}^{T}\left(\underline{x}_{0}-\underline{P}\right)\\
+\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt durch Einsetzen 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}-\underline{P}\right]\\
+ & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}^{\alpha}-\underline{P}^{T}\underline{P}\\
+ & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left(\underline{P}^{T}\underline{Q}-\underline{P}^{T}\underline{S}^{\alpha}\right)+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left[\underline{P}^{T}\left(1+\frac{L}{R_{E}}\right)\underline{P}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left[R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left[R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right]-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
+ & = & \mu\left[R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}+LR_{E}\right]-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
+ & = & \mu\left[R+LR_{E}\right]-R\\
+ & = & \mu\left(L+\frac{R}{R_{E}}\right)-\frac{R}{R_{E}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+R=R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Oder auch 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mu\left(L+R\right) & = & R\\
+R & = & R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+\mu_{0}\left(\alpha\right) & = & \frac{R}{R+L}\label{eq:LösungsgleichungGedrehtSonne}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit der Abkürzung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+R\left(\alpha\right) & = & R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da mit 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+ die Sonne und mit 
+\begin_inset Formula $\mu=1$
+\end_inset
+
+ das Stabende beschrieben wird, muss wegen Gleichung
+\begin_inset space ~
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:LösungspunkteGedreht"
+reference "eq:VerbindungsgeradeGedrehtSonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) für die Lösung 
+\begin_inset Formula $\mu_{0}>1$
+\end_inset
+
+ und damit 
+\begin_inset Formula $R<0$
+\end_inset
+
+ gelten.
+ 
+\end_layout
+
+\begin_layout Standard
+Der gesuchte Punkt 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+ ergibt sich als Funktion des Drehwinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ mit dem nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LösungsgleichungGedrehtSonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) bestimmten 
+\begin_inset Formula $\mu_{0}\left(\alpha\right)$
+\end_inset
+
+ durch Einsetzen in Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GesuchterPunktGedrehtSonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) zu 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{x}_{0}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}.\label{eq:LösungspunkteGedrehtSonne}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Anhang Koordinatentransformation 
+\end_layout
+
+\begin_layout Standard
+Die Punkte der oben konstruierten Tangentialebene nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LösungspunkteGedrehtErde"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1506,14 +1946,14 @@ noprefix "false"
  
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset VSpace bigskip
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Ein Punkt 
 \begin_inset Formula $\underline{x}$
 \end_inset
@@ -1529,7 +1969,7 @@ Ein Punkt
  gilt, also 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \left(p_{1},p_{2},p_{3}\right)\left(\begin{array}{c}
@@ -1544,7 +1984,7 @@ x_{3}
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Die zu 
 \begin_inset Formula $\underline{P}$
 \end_inset
@@ -1583,7 +2023,7 @@ Wegen
  auch durch 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 x_{1}=-\frac{1}{p_{1}}\left(p_{2}x_{2}+p_{3}x_{3}\right)\label{eq:Ursprungsebene}
@@ -1604,7 +2044,11 @@ Kombinationen
 \begin_inset Formula $\left(b_{2},c_{2}\right)$
 \end_inset
 
- werden mit (
+ werden mit
+\begin_inset space ~
+\end_inset
+
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Ursprungsebene"
@@ -1627,11 +2071,11 @@ a_{2} & = & -\frac{p_{2}}{p_{1}}b_{2}-\frac{p_{3}}{p_{1}}c_{2}.
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Für die Darstellung einer Ursprungsebene gilt allgemein 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
 b_{i}y_{1}+c_{i}y_{2} & = & a_{i}
@@ -1642,7 +2086,7 @@ b_{i}y_{1}+c_{i}y_{2} & = & a_{i}
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 und für die Koordinaten 
 \begin_inset Formula $\left(y_{1},y_{2}\right)$
 \end_inset
@@ -1661,7 +2105,7 @@ b_{2} & c_{2}
 das lineare Gleichungssystem 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
 A\left(\begin{array}{c}
@@ -1692,7 +2136,7 @@ a_{2}
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Die Kombinationen 
 \begin_inset Formula $\left(a_{1},b_{1},c_{1}\right)$
 \end_inset
@@ -1721,7 +2165,7 @@ Die Kombinationen
 Auswahl der Kombination 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Ich wähle die Kombinationen 
 \begin_inset Formula $\left(b_{1},c_{1}\right)$
 \end_inset
@@ -1733,7 +2177,7 @@ Ich wähle die Kombinationen
  zu 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
 b_{1} & = & p_{2}+\lambda R_{E}\\
@@ -1747,7 +2191,7 @@ c_{2} & = & p_{3}-\lambda R_{E}.
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 und erhalte für die Matrix 
 \begin_inset Formula 
 \begin{eqnarray*}
@@ -1756,15 +2200,6 @@ p_{2}+\lambda R_{E} & p_{3}+\lambda R_{E}\\
 p_{2}-\lambda R_{E} & p_{3}-\lambda R_{E}
 \end{array}\right).
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-Transformation 
-\end_layout
 
 \end_inset
 
