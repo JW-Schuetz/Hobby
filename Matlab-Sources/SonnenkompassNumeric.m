@@ -50,7 +50,9 @@ if( rem( N, 2 ) ~= 0 )
     N = N + 1;
 end
 
-h     = 1 / 6;      % Anzahl Stunden (um den Mittag herum): 10 Minuten
+% h: Anzahl Stunden (um den Mittag herum)
+% Trajektorienlänge in Las Palmas: ca. 3cm/10min. (experimentell ermittelt)
+h     = 1 / 6;  % 1/6 h sind 10 min.
 delta = ( 2 * pi / 24 * h ) / N;
 
 x = zeros( N + 1, 1 );
