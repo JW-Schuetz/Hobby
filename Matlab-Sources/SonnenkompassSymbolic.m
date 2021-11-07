@@ -5,16 +5,16 @@ clc
 clear
 
 % Symbol-Definitionen
-Phi = sym( 'phi', 'real' );      % Komplementwinkel Erd-Rotationsachse zur Ekliptik
+Psi = sym( 'psi', 'real' );      % Komplementwinkel Erd-Rotationsachse zur Ekliptik
 RS  = sym( 'rS', 'real' );       % Abstand Erde - Sonne
 RE  = sym( 'rE', 'real' );       % Erdradius
 L   = sym( 'l', 'real' );        % Stablänge
 
 % Einheitsvektor Rotationsachse
 E      = sym( 'n', [ 3, 1 ], 'real' );
-E( 1 ) = sin( Phi );
+E( 1 ) = sin( Psi );
 E( 2 ) = 0;
-E( 3 ) = cos( Phi );
+E( 3 ) = cos( Psi );
 
 % Erd-Rotationswinkel (2*pi/24h), alpha=0 -> Mittags d.h.Sonnenhöchststand
 Alpha = sym( 'alpha', 'real' );
@@ -25,18 +25,16 @@ sa    = sin( Alpha );
 DAlpha = sym( 'dAlpha', [ 3, 3 ], 'real' );
 
 DAlpha( 1, 1 ) = E( 1 )^2        * ( 1 - ca ) + ca;             % 1. Spalte
-DAlpha( 2, 1 ) = E( 1 ) * E( 2 ) * ( 1 - ca ) + E( 3 ) * sa;
-DAlpha( 3, 1 ) = E( 1 ) * E( 3 ) * ( 1 - ca ) - E( 2 ) * sa;
+DAlpha( 2, 1 ) = E( 2 ) * E( 1 ) * ( 1 - ca ) + E( 3 ) * sa;
+DAlpha( 3, 1 ) = E( 3 ) * E( 1 ) * ( 1 - ca ) - E( 2 ) * sa;
 
 DAlpha( 1, 2 ) = E( 1 ) * E( 2 ) * ( 1 - ca ) - E( 3 ) * sa;    % 2. Spalte
 DAlpha( 2, 2 ) = E( 2 )^2        * ( 1 - ca ) + ca;
-DAlpha( 3, 2 ) = E( 2 ) * E( 3 ) * ( 1 - ca ) + E( 1 ) * sa;
+DAlpha( 3, 2 ) = E( 3 ) * E( 2 ) * ( 1 - ca ) + E( 1 ) * sa;
 
 DAlpha( 1, 3 ) = E( 1 ) * E( 3 ) * ( 1 - ca ) + E( 2 ) * sa;    % 3. Spalte
 DAlpha( 2, 3 ) = E( 2 ) * E( 3 ) * ( 1 - ca ) - E( 1 ) * sa;
 DAlpha( 3, 3 ) = E( 3 )^2        * ( 1 - ca ) + ca;
-
-DAlpha = simplify( DAlpha );    % evtl. Vereinfachung
 
 % Fusspunkt des Stabes auf der Erdoberfläche und Stabende
 P = sym( 'p', [ 3, 1 ], 'real' );
@@ -72,4 +70,4 @@ R1 = R1 / L;
 R2 = simplify( RE - PSAlpha / RE );
 R2 = R2 / L;
 
-save( 'sonnenkompass.mat', 'Q', 'QAlpha', 'S', 'SAlpha', 'R1', 'R2' )
+save( 'sonnenkompass.mat', 'DAlpha', 'Q', 'QAlpha', 'S', 'SAlpha', 'R1', 'R2' )

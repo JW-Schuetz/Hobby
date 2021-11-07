@@ -246,7 +246,7 @@ die Erde habe ideale Kugelgestalt mit dem Radius
 
 \begin_layout Itemize
 die Erd-Rotationsachse habe einen Neigungswinkel 
-\begin_inset Formula $\phi$
+\begin_inset Formula $\psi$
 \end_inset
 
  zur 
@@ -408,7 +408,8 @@ Vereinbarungen
 \end_layout
 
 \begin_layout Standard
-Im folgenden wird Kenntnis der linearen Algebra vorausgesetzt.
+Im folgenden werden zum Verständnis Basiskenntnisse der Geometrie und der
+ linearen Algebra vorausgesetzt.
  
 \end_layout
 
@@ -424,7 +425,7 @@ Vektoren werden durch einen Unterstrich kenntlich gemacht (
 \begin_inset Formula $\underline{x}$
 \end_inset
 
-) und ihre Transposition (
+) und ihre Transponierten (
 \begin_inset Formula $\underline{x}^{T}$
 \end_inset
 
@@ -484,18 +485,8 @@ Gesucht wird die Trajektorie des Schattens des Stabendes auf der Tangentialebene
 \end_layout
 
 \begin_layout Standard
-Es sind zwei äquivalente Lösungsansätze denkbar, die Erdrotation (siehe
- dazu Abschnitt 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Erdrotation"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) zu berücksichtigen 
+Es sind zwei äquivalente Lösungsansätze denkbar, die Erdrotation zu berücksichti
+gen 
 \begin_inset Note Note
 status collapsed
 
@@ -543,7 +534,21 @@ Die mit der Erde verbundenen Orte um den Winkel
 \begin_inset Formula $\alpha$
 \end_inset
 
- zu rotieren und die Sonne fixiert lassen.
+ zu rotieren und die Sonne fixiert lassen (siehe dazu Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:FixierungErde"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  
 \end_layout
 
@@ -558,7 +563,22 @@ Den Ort der Sonne um den Winkel
 \begin_inset Formula $-\alpha$
 \end_inset
 
- zu rotieren und die mit der Erde verbundenen Orte fixiert lassen.
+ zu rotieren und die mit der Erde verbundenen Orte fixiert lassen (siehe
+ dazu Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:FixierungSonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  
 \end_layout
 
@@ -583,12 +603,12 @@ inkels
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-D_{\alpha} & = & \begin{pmatrix}e_{1}\left(1-\cos\alpha\right)+\cos\alpha & e_{1}e_{2}\left(1-\cos\alpha\right)-e_{3}\sin\alpha & e_{1}e_{3}\left(1-\cos\alpha\right)+e_{2}\sin\alpha\\
-e_{2}e_{1}\left(1-\cos\alpha\right)+e_{3}\sin\alpha & e_{2}\left(1-\cos\alpha\right)+\cos\alpha & e_{2}e_{3}\left(1-\cos\alpha\right)-e_{1}\sin\alpha\\
-e_{3}e_{1}\left(1-\cos\alpha\right)-e_{2}\sin\alpha & e_{3}e_{2}\left(1-\cos\alpha\right)+e_{1}\sin\alpha & e_{3}\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}\label{eq:Drehmatrix}
-\end{eqnarray}
+\begin{eqnarray*}
+D_{\alpha} & = & \begin{pmatrix}e_{1}^{2}\left(1-\cos\alpha\right)+\cos\alpha & e_{1}e_{2}\left(1-\cos\alpha\right)-e_{3}\sin\alpha & e_{1}e_{3}\left(1-\cos\alpha\right)+e_{2}\sin\alpha\\
+e_{2}e_{1}\left(1-\cos\alpha\right)+e_{3}\sin\alpha & e_{2}^{2}\left(1-\cos\alpha\right)+\cos\alpha & e_{2}e_{3}\left(1-\cos\alpha\right)-e_{1}\sin\alpha\\
+e_{3}e_{1}\left(1-\cos\alpha\right)-e_{2}\sin\alpha & e_{3}e_{2}\left(1-\cos\alpha\right)+e_{1}\sin\alpha & e_{3}^{2}\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
+\end{eqnarray*}
 
 \end_inset
 
@@ -596,19 +616,7 @@ e_{3}e_{1}\left(1-\cos\alpha\right)-e_{2}\sin\alpha & e_{3}e_{2}\left(1-\cos\alp
 \end_layout
 
 \begin_layout Standard
-beschrieben (siehe dazu z.B.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Wikipedia1"
-literal "false"
-
-\end_inset
-
-), dabei ist 
+beschrieben, dabei ist 
 \begin_inset Formula 
 \begin{eqnarray*}
 \underline{e} & = & \left(\begin{array}{c}
@@ -624,27 +632,31 @@ e_{3}
 \end_layout
 
 \begin_layout Standard
-ein  Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert.
- Die Drehmatrix ist orthogonal, d.h.
- es gilt mit der Einheitsmatrix 
-\begin_inset Formula $E$
+ein  Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert
+ (siehe dazu z.B.
+\begin_inset space ~
 \end_inset
 
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia1"
+literal "false"
+
+\end_inset
+
+).
  
-\begin_inset Formula 
-\[
-D_{\alpha}^{T}D_{\alpha}=E.
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 In dieser Arbeit soll der Zeitpunkt der Sommersonnenwende betrachtet werden,
  d.h.
- die Rotationsachse soll, so wie in Abbildung 
+ die Rotationsachse soll, so wie in Abbildung
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Problemskizze"
@@ -661,11 +673,11 @@ noprefix "false"
 -Ebene liegen.
  Der Einheitsvektor ist somit durch 
 \begin_inset Formula 
-\begin{eqnarray*}
-e_{1} & = & \sin\phi\\
-e_{2} & = & 0\\
-e_{3} & = & \cos\phi.
-\end{eqnarray*}
+\begin{eqnarray}
+e_{1} & = & \sin\psi\label{eq:EinheitsvektorRotationsAchse}\\
+e_{2} & = & 0\nonumber \\
+e_{3} & = & \cos\psi.\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -673,8 +685,40 @@ e_{3} & = & \cos\phi.
 \end_layout
 
 \begin_layout Standard
-gegeben, der Winkel 
-\begin_inset Formula $\phi$
+gegeben und für die Drehmatrix folgt schliesslich 
+\begin_inset Formula 
+\begin{eqnarray}
+D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & \sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}.\label{eq:DrehmatrixAlpha}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Drehmatrix ist orthogonal, d.h.
+ es gilt mit der Einheitsmatrix 
+\begin_inset Formula $E$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+D_{\alpha}^{T}D_{\alpha}=E.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Winkel 
+\begin_inset Formula $\psi$
 \end_inset
 
  hat den numerischen Wert
@@ -695,7 +739,7 @@ literal "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\phi & = & 23.44°.\label{eq:Neigungswinkel}
+\psi & = & 23.44°.\label{eq:Neigungswinkel}
 \end{eqnarray}
 
 \end_inset
@@ -725,7 +769,7 @@ Der Ort
 \begin_inset Formula $\Theta$
 \end_inset
 
-, der Länge 
+, der geographischen Länge 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -734,7 +778,7 @@ Der Ort
 \end_inset
 
  und dem Achsneigungswinkel nach Gleichung 
-\begin_inset Formula $\phi$
+\begin_inset Formula $\psi$
 \end_inset
 
 
@@ -763,7 +807,7 @@ literal "false"
 
 \end_inset
 
-)
+) 
 \end_layout
 
 \begin_layout Standard
@@ -788,9 +832,9 @@ mit
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{1} & = & R_{E}\cos\left(\Theta+\phi\right)\cos\varphi\\
-p_{2} & = & R_{E}\cos\left(\Theta+\phi\right)\sin\varphi\\
-p_{3} & = & R_{E}\sin\left(\Theta+\phi\right).
+p_{1} & = & R_{E}\sin\left(\Theta-\psi\right)\cos\varphi\\
+p_{2} & = & R_{E}\sin\left(\Theta-\psi\right)\sin\varphi\\
+p_{3} & = & R_{E}\cos\left(\Theta-\psi\right).
 \end{eqnarray*}
 
 \end_inset
@@ -807,7 +851,7 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \begin_inset space ~
 \end_inset
 
- (
+(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Fusspunkt"
@@ -920,7 +964,7 @@ Stimmt!
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)D_{\alpha}\underline{P}\nonumber \\
-\underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}^{\alpha}.\label{eq:EndpunktGedreht}
+ & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}^{\alpha}.\label{eq:EndpunktGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -956,7 +1000,7 @@ f(x_{1},x_{2},x_{3}) & = & \sum_{i}x_{i}^{2}-R_{E}^{2},\label{eq:Kugel}
 \end_layout
 
 \begin_layout Standard
-für den Index gilt 
+für den Index gilt hier und im folgenden 
 \begin_inset Formula $i\in\left[1,3\right]$
 \end_inset
 
@@ -987,7 +1031,7 @@ literal "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\sum_{i}\frac{\partial f}{\partial x_{i}}\left(x_{i}-p_{i}\right) & = & 0,
+\sum_{i}\frac{\partial f}{\partial x_{i}}\left(x_{i}-p_{i}\right) & = & 0.
 \end{eqnarray*}
 
 \end_inset
@@ -996,7 +1040,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-die Ableitungen sind im Berührpunkt 
+Die Ableitungen sind im Berührpunkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -1062,7 +1106,7 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \begin_inset space ~
 \end_inset
 
- (
+(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:FusspunktGedreht"
@@ -1196,8 +1240,8 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{G}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\nonumber \\
-\underline{G}^{\alpha} & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}.\label{eq:VerbindungsgeradeErdeGedreht}
+\underline{G}_{E}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\nonumber \\
+ & = & \mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}.\label{eq:VerbindungsgeradeErdeGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1238,8 +1282,8 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{G}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)D_{\left(-\alpha\right)}\underline{S}\nonumber \\
-\underline{G}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:VerbindungsgeradeSonneGedreht}
+\underline{G}_{S}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)D_{\left(-\alpha\right)}\underline{S}\nonumber \\
+ & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:VerbindungsgeradeSonneGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1310,15 +1354,490 @@ noprefix "false"
 \end_inset
 
  beschrieben.
+ 
 \end_layout
 
-\begin_layout Part
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:FixierungErde"
+
+\end_inset
+
+Lösung durch Fixierung der Erde 
+\end_layout
+
+\begin_layout Standard
+Gesucht ist der Schnittpunkt der Geraden 
+\begin_inset Formula $\underline{G}_{S}^{\alpha}$
+\end_inset
+
+ nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:VerbindungsgeradeSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) mit der Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ oder anders formuliert, gesucht wird der Geradenparameter 
+\begin_inset Formula $\mu$
+\end_inset
+
+, der eine Lösung 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+ der Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Tangentialebene"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) mit der Bedingung 
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:GesuchterPunktSonneGedreht}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+zulässt.
+ 
+\end_layout
+
+\begin_layout Subsection
+Lösungspunkt 
+\end_layout
+
+\begin_layout Standard
+Einsetzen von Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GesuchterPunktSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) in Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Tangentialebene"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) liefert 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}-\underline{P}\right] & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wegen 
+\begin_inset Formula 
+\[
+\underline{P}^{T}\underline{P}=R_{E}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+folgt nach kurzer Umformung die zu lösende Gleichung 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Aus den beiden Gleichungen 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \underline{P}^{T}\left(\underline{x}_{0}-\underline{P}\right)\\
+\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt durch Einsetzen 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}-\underline{P}\right]\\
+ & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}^{\alpha}-\underline{P}^{T}\underline{P}\\
+ & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left(\underline{P}^{T}\underline{Q}-\underline{P}^{T}\underline{S}^{\alpha}\right)+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left[\underline{P}^{T}\left(1+\frac{L}{R_{E}}\right)\underline{P}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left[R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left[R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right]-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
+ & = & \mu\left[R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}+LR_{E}\right]-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
+ & = & \mu\left[R+LR_{E}\right]-R\\
+ & = & \mu\left(L+\frac{R}{R_{E}}\right)-\frac{R}{R_{E}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+R=R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Oder auch 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mu\left(L+R\right) & = & R\\
+R & = & R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+\mu_{0}\left(\alpha\right) & = & \frac{R}{R+L}\label{eq:LösungsgleichungSonneGedreht}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit der Abkürzung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+R\left(\alpha\right) & = & R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da mit 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+ die Sonne und mit 
+\begin_inset Formula $\mu=1$
+\end_inset
+
+ das Stabende beschrieben wird, muss wegen Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:VerbindungsgeradeSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) für die Lösung 
+\begin_inset Formula $\mu_{0}>1$
+\end_inset
+
+ und damit 
+\begin_inset Formula $R<0$
+\end_inset
+
+ gelten.
+ 
+\end_layout
+
+\begin_layout Standard
+Der gesuchte Punkt 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+ ergibt sich als Funktion des Drehwinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ mit dem nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LösungsgleichungSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) bestimmten 
+\begin_inset Formula $\mu_{0}\left(\alpha\right)$
+\end_inset
+
+ durch Einsetzen in Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GesuchterPunktSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) zu 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}.\label{eq:LösungspunkteSonneGedreht}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Koordinatentransformation 
+\end_layout
+
+\begin_layout Standard
+Die gefundenen Trajektorienpunkte 
+\begin_inset Formula $\underline{x}_{0}\left(\alpha\right)$
+\end_inset
+
+ sind im Koordinatensystem 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
+\end_inset
+
+ gegeben.
+ Sie sollen aber auf ein zweidimensionales Koordinatensystem der Tangentialebene
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ transformiert werden.
+ 
+\end_layout
+
+\begin_layout Standard
+Dazu wird der Punkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ um um seinen negativen Längenwinkel 
+\begin_inset Formula $-\varphi$
+\end_inset
+
+ um die 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+-Achse und anschliessend um den Winkel 
+\begin_inset Formula $\Theta+\psi-\frac{\pi}{2}$
+\end_inset
+
+ um die 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+-Achse gedreht.
+ Er stimmt danach mit der 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+-Achse überein und die Trajektorienpunkte können mittels der Projektionsabbildun
+g 
+\begin_inset Formula 
+\[
+A=\left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+auf die Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ projiziert werden
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Der dadurch auftretende Verzerrungsfehler liegt bei Stablängen von einem
+ Meter im Bereich von Mikrometern.
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Die Drehung um die 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+-Achse um den Winkel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wird durch die Matrix 
+\begin_inset Formula 
+\begin{equation}
+D_{\varphi}^{x_{3}}=\left(\begin{array}{ccc}
+\cos\varphi & -\sin\varphi & 0\\
+\sin\varphi & \cos\varphi & 0\\
+0 & 0 & 1
+\end{array}\right)\label{eq:DrehmatrixPhi}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und die Drehung um die 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+-Achse um den Winkel 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ wird durch die Matrix 
+\begin_inset Formula 
+\begin{equation}
+D_{\Theta}^{x_{2}}=\left(\begin{array}{ccc}
+\cos\Theta & 0 & \sin\Theta\\
+0 & 1 & 0\\
+-\sin\Theta & 0 & \cos\Theta
+\end{array}\right)\label{eq:DrehmatrixTheta}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+vermittelt (siehe dazu z.B.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia1"
+literal "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:FixierungSonne"
+
+\end_inset
+
 Lösung durch Fixierung der Sonne 
 \end_layout
 
 \begin_layout Standard
 Gesucht ist der Schnittpunkt der Geraden 
-\begin_inset Formula $\underline{G}^{\alpha}$
+\begin_inset Formula $\underline{G}_{E}^{\alpha}$
 \end_inset
 
  nach Gleichung
@@ -1377,7 +1896,7 @@ zulässt.
  
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Lösungspunkt 
 \end_layout
 
@@ -1618,7 +2137,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{x}_{0}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}.\label{eq:LösungspunkteErdeGedreht}
+\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}.\label{eq:LösungspunkteErdeGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1626,120 +2145,154 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Part
-Lösung durch Fixierung der Erde  
+\begin_layout Subsection
+Koordinatentransformation
 \end_layout
 
 \begin_layout Standard
-Gesucht ist der Schnittpunkt der Geraden 
-\begin_inset Formula $\underline{G}^{\alpha}$
+Jeder aufgefundene Punkt 
+\begin_inset Formula $\underline{x}_{0}^{E}\left(\alpha\right)$
 \end_inset
 
- nach Gleichung
-\begin_inset space ~
+ wird um den Winkel 
+\begin_inset Formula $-\alpha$
 \end_inset
 
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:VerbindungsgeradeSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
+ um die Erd-Rotationsachse zurückgedreht, dann um den Winkel 
+\begin_inset Formula $-\varphi$
+\end_inset
+
+ um die 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+-Achse und schliesslich noch um den Winkel 
+\begin_inset Formula $\Theta+\psi-\frac{\pi}{2}$
+\end_inset
+
+ um die 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+-Achse gedreht.
+ 
+\end_layout
+
+\begin_layout Standard
+Er stimmt danach mit der 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+-Achse überein und die Trajektorienpunkte können mittels der Projektionsabbildun
+g
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Die Projektionsabbildung 
+\begin_inset Formula $P$
+\end_inset
+
+ bitte nicht verwechseln mit dem Punkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+.
+\end_layout
 
 \end_inset
 
-) mit der Tangentialebene 
+ 
+\begin_inset Formula 
+\begin{equation}
+P=\left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\label{eq:ProjektionsMatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+auf die Tangentialebene 
 \begin_inset Formula $T$
 \end_inset
 
- oder anders formuliert, gesucht wird der Geradenparameter 
-\begin_inset Formula $\mu$
-\end_inset
+ projiziert werden
+\begin_inset Foot
+status open
 
-, der eine Lösung 
-\begin_inset Formula $\underline{x}_{0}$
-\end_inset
-
- der Gleichung
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Tangentialebene"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) mit der Bedingung 
-\begin_inset Formula 
-\begin{eqnarray}
-\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:GesuchterPunktSonneGedreht}
-\end{eqnarray}
-
-\end_inset
-
-
+\begin_layout Plain Layout
+Der dadurch auftretende Verzerrungsfehler liegt bei einer Stablänge von
+ einem Meter im Bereich von Mikrometern.
 \end_layout
 
-\begin_layout Standard
-zulässt.
+\end_inset
+
+.
  
 \end_layout
 
-\begin_layout Subsection*
-Lösungspunkt 
-\end_layout
-
 \begin_layout Standard
-Einsetzen von Gleichung
+Es ergibt sich also mit den Abbildungen
 \begin_inset space ~
 \end_inset
 
 (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GesuchterPunktSonneGedreht"
+reference "eq:DrehmatrixAlpha"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-) in Gleichung
+,
 \begin_inset space ~
 \end_inset
 
-(
+
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:Tangentialebene"
+reference "eq:DrehmatrixPhi"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-) liefert 
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}-\underline{P}\right] & = & 0.
-\end{eqnarray*}
-
+,
+\begin_inset space ~
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DrehmatrixTheta"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Standard
-Wegen 
+\end_inset
+
+ und 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ProjektionsMatrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) für die auf die Tangentialebene projizierten Punkte 
 \begin_inset Formula 
 \[
-\underline{P}^{T}\underline{P}=R_{E}^{2}
+x\left(\alpha\right)=PD_{\left(\Theta+\psi-\frac{\pi}{2}\right)}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right).
 \]
 
 \end_inset
@@ -1748,203 +2301,68 @@ Wegen
 \end_layout
 
 \begin_layout Standard
-folgt nach kurzer Umformung die zu lösende Gleichung 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Aus den beiden Gleichungen 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-0 & = & \underline{P}^{T}\left(\underline{x}_{0}-\underline{P}\right)\\
-\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}
-\end{eqnarray*}
-
+\begin_inset VSpace bigskip
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
-folgt durch Einsetzen 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-0 & = & \underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}-\underline{P}\right]\\
- & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}^{\alpha}-\underline{P}^{T}\underline{P}\\
- & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left(\underline{P}^{T}\underline{Q}-\underline{P}^{T}\underline{S}^{\alpha}\right)+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left[\underline{P}^{T}\left(1+\frac{L}{R_{E}}\right)\underline{P}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left[R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left[R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right]-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
- & = & \mu\left[R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}+LR_{E}\right]-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
- & = & \mu\left[R+LR_{E}\right]-R\\
- & = & \mu\left(L+\frac{R}{R_{E}}\right)-\frac{R}{R_{E}}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-mit
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-R=R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Oder auch 
-\begin_inset Formula 
-\begin{eqnarray*}
-\mu\left(L+R\right) & = & R\\
-R & = & R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula 
-\begin{eqnarray}
-\mu_{0}\left(\alpha\right) & = & \frac{R}{R+L}\label{eq:LösungsgleichungSonneGedreht}
-\end{eqnarray}
-
-\end_inset
-
-
+\begin_layout Section
+Äquivalenz der Lösungsansätze 
 \end_layout
 
 \begin_layout Standard
-mit der Abkürzung 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-R\left(\alpha\right) & = & R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}.
-\end{eqnarray*}
-
+Es soll die Äquivalenz der beiden Lösungsansätze 
+\begin_inset Quotes gld
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Da mit 
-\begin_inset Formula $\mu=0$
+Lösung durch Fixierung der Erde
+\begin_inset Quotes grd
 \end_inset
 
- die Sonne und mit 
-\begin_inset Formula $\mu=1$
+ und 
+\begin_inset Quotes gld
 \end_inset
 
- das Stabende beschrieben wird, muss wegen Gleichung
-\begin_inset space ~
+Lösung durch Fixierung der Sonne
+\begin_inset Quotes grd
 \end_inset
 
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:VerbindungsgeradeSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) für die Lösung 
-\begin_inset Formula $\mu_{0}>1$
-\end_inset
-
- und damit 
-\begin_inset Formula $R<0$
-\end_inset
-
- gelten.
+ gezeigt werden.
  
 \end_layout
 
 \begin_layout Standard
-Der gesuchte Punkt 
-\begin_inset Formula $\underline{x}_{0}$
-\end_inset
-
- ergibt sich als Funktion des Drehwinkels 
-\begin_inset Formula $\alpha$
-\end_inset
-
- mit dem nach Gleichung
+Im Fall der gefixten Erde folgt nach Gleichung
 \begin_inset space ~
 \end_inset
 
 (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:LösungsgleichungSonneGedreht"
+reference "eq:LösungspunkteSonneGedreht"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-) bestimmten 
-\begin_inset Formula $\mu_{0}\left(\alpha\right)$
-\end_inset
-
- durch Einsetzen in Gleichung
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:GesuchterPunktSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) zu 
+) 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-\underline{x}_{0}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}.\label{eq:LösungspunkteSonneGedreht}
-\end{eqnarray}
+\begin{eqnarray*}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}
+\end{eqnarray*}
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section*
-Anhang Koordinatentransformation 
-\end_layout
-
 \begin_layout Standard
-Die Punkte der oben konstruierten Tangentialebene nach Gleichung
+während im Fall der gefixten Sonne nach Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -1958,53 +2376,11 @@ noprefix "false"
 
 \end_inset
 
-) sind im 
-\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
-\end_inset
-
--Kordinatensystem beschrieben.
- Es ist aber wünschenswert, die Punkte im intrinsischen, zweidimensionalen
- Koordinatensystem der Ebene zu kennen.
- Dieses 
-\begin_inset Formula $\left(y_{1},y_{2}\right)$
-\end_inset
-
--Koordinatensystem soll hier bestimmt werden.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Ein Punkt 
-\begin_inset Formula $\underline{x}$
-\end_inset
-
- ist orthogonal zum Punkt 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
-, falls 
-\begin_inset Formula $\underline{P}^{T}\underline{x}=0$
-\end_inset
-
- gilt, also 
-\end_layout
-
-\begin_layout Standard
+) 
 \begin_inset Formula 
-\[
-\left(p_{1},p_{2},p_{3}\right)\left(\begin{array}{c}
-x_{1}\\
-x_{2}\\
-x_{3}
-\end{array}\right)=p_{1}x_{1}+p_{2}x_{2}+p_{3}x_{3}=0.
-\]
+\begin{eqnarray*}
+\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}
+\end{eqnarray*}
 
 \end_inset
 
@@ -2012,220 +2388,20 @@ x_{3}
 \end_layout
 
 \begin_layout Standard
-Die zu 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
- orthogonalen Punkte bilden somit eine Ebene durch den Ursprung, die man
- im Fall 
-\begin_inset Formula $p_{1}\neq0$
-\end_inset
-
-
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Wegen 
-\begin_inset Formula $p_{1}\neq0$
-\end_inset
-
- folgt für den Winkel 
-\begin_inset Formula $\alpha$
-\end_inset
-
- (für 
-\begin_inset Formula $\phi=0$
-\end_inset
-
-) die Einschränkung 
-\begin_inset Formula $-\frac{\pi}{2}<\alpha<\frac{\pi}{2}.$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- auch durch 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-x_{1}=-\frac{1}{p_{1}}\left(p_{2}x_{2}+p_{3}x_{3}\right)\label{eq:Ursprungsebene}
-\end{equation}
-
-\end_inset
-
-charakterisieren kann.
- Durch Auswahl zweier linear unabhängiger 
-\begin_inset Formula $\left(x_{1},x_{2}\right)-$
-\end_inset
-
-Kombinationen 
-\begin_inset Formula $\left(b_{1},c_{1}\right)$
+gilt.
+ Ersetzen von 
+\begin_inset Formula $\underline{S}^{\alpha}$
 \end_inset
 
  und 
-\begin_inset Formula $\left(b_{2},c_{2}\right)$
+\begin_inset Formula $\underline{Q}^{\alpha}$
 \end_inset
 
- werden mit
-\begin_inset space ~
-\end_inset
-
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Ursprungsebene"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) zwei Punkte dieser Ursprungsebene konstruiert.
- Es folgt 
+ liefert 
 \begin_inset Formula 
 \begin{eqnarray*}
-a_{1} & = & -\frac{p_{2}}{p_{1}}b_{1}-\frac{p_{3}}{p_{1}}c_{1}\\
-a_{2} & = & -\frac{p_{2}}{p_{1}}b_{2}-\frac{p_{3}}{p_{1}}c_{2}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Für die Darstellung einer Ursprungsebene gilt allgemein 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-b_{i}y_{1}+c_{i}y_{2} & = & a_{i}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-und für die Koordinaten 
-\begin_inset Formula $\left(y_{1},y_{2}\right)$
-\end_inset
-
- folgt mit der Matrix 
-\begin_inset Formula 
-\begin{eqnarray*}
-A & = & \left(\begin{array}{cc}
-b_{1} & c_{1}\\
-b_{2} & c_{2}
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-das lineare Gleichungssystem 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-A\left(\begin{array}{c}
-y_{1}\\
-y_{2}
-\end{array}\right) & = & \left(\begin{array}{c}
-a_{1}\\
-a_{2}
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
- mit der Lösung 
-\begin_inset Formula 
-\begin{eqnarray*}
-\left(\begin{array}{c}
-y_{1}\\
-y_{2}
-\end{array}\right) & = & A^{-1}\left(\begin{array}{c}
-a_{1}\\
-a_{2}
-\end{array}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Die Kombinationen 
-\begin_inset Formula $\left(a_{1},b_{1},c_{1}\right)$
-\end_inset
-
- und 
-\begin_inset Formula $\left(a_{2},b_{2},c_{2}\right)$
-\end_inset
-
- müssen so gewählt werden, dass die Determinante von 
-\begin_inset Formula $A$
-\end_inset
-
- ungleich 
-\begin_inset Formula $0$
-\end_inset
-
- ist, dass also 
-\begin_inset Formula $b_{1}c_{2}\neq b_{2}c_{1}$
-\end_inset
-
- gilt.
- 
-\end_layout
-
-\begin_layout Subsubsection*
-Auswahl der Kombination 
-\end_layout
-
-\begin_layout Standard
-Ich wähle die Kombinationen 
-\begin_inset Formula $\left(b_{1},c_{1}\right)$
-\end_inset
-
- und 
-\begin_inset Formula $\left(b_{2},c_{2}\right)$
-\end_inset
-
- zu 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-b_{1} & = & p_{2}+\lambda R_{E}\\
-c_{1} & = & p_{3}+\lambda R_{E}\\
-b_{2} & = & p_{2}-\lambda R_{E}\\
-c_{2} & = & p_{3}-\lambda R_{E}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-und erhalte für die Matrix 
-\begin_inset Formula 
-\begin{eqnarray*}
-A & = & \left(\begin{array}{cc}
-p_{2}+\lambda R_{E} & p_{3}+\lambda R_{E}\\
-p_{2}-\lambda R_{E} & p_{3}-\lambda R_{E}
-\end{array}\right).
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)D_{\left(-\alpha\right)}\underline{S}\\
+\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}D_{\alpha}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}.
 \end{eqnarray*}
 
 \end_inset
