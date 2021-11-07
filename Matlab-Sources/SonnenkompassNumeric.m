@@ -44,7 +44,7 @@ switch( Drehen )
 end
 
 % numerische Auswertung, Plot
-N = 1000;    % Anzahl Punkte
+N = 50;    % Anzahl Punkte
 
 % N soll gerade sein
 if( rem( N, 2 ) ~= 0 )
@@ -53,7 +53,7 @@ end
 
 % h: Anzahl Stunden (um den Mittag herum)
 % Trajektorienlänge in Las Palmas: ca. 3cm/10min. (experimentell ermittelt)
-h     = 1 / 6;  % 1/6 h sind 10 min.
+h     = 2 / 6;  % 1/6 h sind 10 min.
 delta = ( 2 * pi / 24 * h ) / N;
 
 x = zeros( N + 1, 1 );
@@ -77,7 +77,15 @@ switch( Drehen )
         end
 end
 
-plot( t( :, 1 ), t( :, 2 ) )
+hold 'on'
+plot( 0, 0, 'o', 'MarkerSize', 4, 'MarkerFaceColor', 'r' )
+plot( t( :, 1 ), t( :, 2 ), 'Color', 'k', 'LineWidth', 2 )
+
+box 'on'
+grid 'on'
+axis( 'equal' )
+xlim( 1.2 * [ min( t( :, 1 ) ), 0.1 ] )
+ylim( [ min( 1.2 * t( :, 2 ) ), 0.1 ] )
 
 % Die Variation des Betrages ist durch die Diskrepanz der Tangentialebene
 % zur Kugeloberfläche erklärbar.
