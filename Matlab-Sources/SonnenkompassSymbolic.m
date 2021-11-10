@@ -11,7 +11,7 @@ RE  = sym( 'rE', 'real' );       % Erdradius
 L   = sym( 'l', 'real' );        % Stablänge
 
 % Einheitsvektor Rotationsachse
-E      = sym( 'n', [ 3, 1 ], 'real' );
+E      = sym( 'e', [ 3, 1 ], 'real' );
 E( 1 ) = sin( Psi );
 E( 2 ) = 0;
 E( 3 ) = cos( Psi );
