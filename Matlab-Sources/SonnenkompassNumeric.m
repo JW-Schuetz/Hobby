@@ -40,6 +40,7 @@ switch( Drehen )
         mue0 = R_E / ( 1 + R_E );
         x0	 = mue0 * QAlpha + ( 1 - mue0 ) * S;
         x0	 = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
+
     case 'S'
         % Fall: Sonne wird gedreht
         vz   = -1;
