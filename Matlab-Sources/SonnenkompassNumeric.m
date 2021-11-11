@@ -20,14 +20,18 @@ rE  = earthRadius;          % mittlerer Erdradius [m]
 rS  = 149597870700;         % AE, mittlerer Abstand Erde - Sonne [m]
 l   = 1.5;                  % Stablänge [m]
 
-% Umrechnung geographische Koordinaten ins Kugelkoordinatensystem
+% Umrechnung geographische Koordinaten in Kugelkoordinaten
 LP = [ pi / 2 - LP( 1 ), LP( 2 ) ];
 
-% Koordinaten des Fusspunkt des Stabes (in Las Palmas), dabei Neigung der 
+% Kugelkoordinaten des Fusspunkt des Stabes (in Las Palmas), dabei Neigung der 
 % Erd-Rotationsachse berücksichtigen
 p1 = rE * sin( LP( 1 ) + psi ) * cos( LP( 2 ) ); % x-Koordinate
 p2 = rE * sin( LP( 1 ) + psi ) * sin( LP( 2 ) ); % y-Koordinate
 p3 = rE * cos( LP( 1 ) + psi );                  % z-Koordinate
+
+% Test: Punkt P wird abgebildet auf (0,0), warum pi/2-... ???
+% [ a, b ] = Maptangential( p1, p2, p3, 0, 0, ...
+%                           -LP( 2 ), pi / 2 - ( LP( 1 ) + psi ) );
 
 % Test: Drehrichtung (Erwartung: x2 Komponente wächst mit alpha)
 % alpha = 0.00;
@@ -86,7 +90,7 @@ switch( Drehen )
     case 'S'
         for i = 1 : N + 1
             [ a, b ] = Maptangential( pts( i, 1 ), pts( i, 2 ), pts( i, 3 ), ...
-                            -LP( 2 ), pi / 2 - LP( 1 ) - psi );
+                            0, 0, -LP( 2 ), pi / 2 - ( LP( 1 ) + psi ) );
             y( i, : ) = [ a, b ];
         end
 
