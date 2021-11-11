@@ -1570,7 +1570,7 @@ mit
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-R^{S}\left(\alpha\right) & = & \frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
+R^{S}\left(\alpha\right) & = & \frac{1}{L}\left(R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -2080,7 +2080,6 @@ folgt durch Einsetzen
  & = & \mu\left[\left(\underline{P}^{\alpha}\right)^{T}\underline{Q}^{\alpha}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right]+\left(\underline{P}^{\alpha}\right)^{T}\underline{S}-R_{E}^{2}\\
  & = & \mu\left[\left(\underline{P}^{\alpha}\right)^{T}\left(1+\frac{L}{R_{E}}\right)\underline{P}^{\alpha}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right]+\left(\underline{P}^{\alpha}\right)^{T}\underline{S}-R_{E}^{2}\\
  & = & \mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right]+\left(\underline{P}^{\alpha}\right)^{T}\underline{S}-R_{E}^{2}\\
- & = & \mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right]+\left(\underline{P}^{\alpha}\right)^{T}\underline{S}-R_{E}^{2}\\
  & = & \mu\left[R_{E}^{2}+LR_{E}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right]+\left(\underline{P}^{\alpha}\right)^{T}\underline{S}-R_{E}^{2}\\
  & = & \mu\left[LR_{E}+R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right]-\left[R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}\right]\\
  & = & \mu\left(LR_{E}+R\right)-R\\
@@ -2125,7 +2124,8 @@ Oder auch
 \begin_inset Formula 
 \begin{eqnarray*}
 \mu\left(1+R\right) & = & R\\
-R & = & \frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{LR_{E}}.
+R & = & \frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{LR_{E}}\\
+ & = & \frac{R_{E}}{L}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{LR_{E}}
 \end{eqnarray*}
 
 \end_inset
@@ -2143,7 +2143,7 @@ mit der Abkürzung
 \color blue
 \begin_inset Formula 
 \begin{eqnarray*}
-R^{E}\left(\alpha\right) & = & \frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{LR_{E}}.
+R^{E}\left(\alpha\right) & = & \frac{1}{L}\left(R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -2523,7 +2523,7 @@ D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}D_
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Section
 Überprüfung 
