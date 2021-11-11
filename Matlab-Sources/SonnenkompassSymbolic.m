@@ -63,11 +63,11 @@ PAlphaS = collect( PAlpha' * S, P );
 PSAlpha = collect( P' * SAlpha, P );
 
 % Hauptterm der zu lösende Gleichung (Erde wird gedreht)
-R1 = simplify( RE - PAlphaS / RE );
-R1 = R1 / L;
+R_E = simplify( RE - PAlphaS / RE );
+R_E = R_E / L;
 
 % Hauptterm der zu lösende Gleichung (Sonne wird gedreht)
-R2 = simplify( RE - PSAlpha / RE );
-R2 = R2 / L;
+R_S = simplify( RE - PSAlpha / RE );
+R_S = R_S / L;
 
-save( 'sonnenkompass.mat', 'DAlpha', 'Q', 'QAlpha', 'S', 'SAlpha', 'R1', 'R2' )
+save( 'sonnenkompass.mat', 'Q', 'QAlpha', 'S', 'SAlpha', 'R_S', 'R_E' )

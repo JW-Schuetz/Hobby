@@ -1,10 +1,11 @@
-function [ x2, x3 ] = Maptangential( x1, x2, x3, alpha, psi, phi, theta )
+function [ x2, x3 ] = Maptangential( x1, x2, x3, psi, alpha, phi, theta )
     if( alpha ~= 0 )
         % Punkt drehen um Erdrotations-Achse um den Winkel alpha
         cp = cos( psi );
         sp = sin( psi );
         ca = cos( alpha );
         sa = sin( alpha );
+
         D = [ sp^2 * ( 1 - ca ) + ca, -cp * sa,  sp * cp * ( 1 - ca );
               cp * sa,                 ca,      -sp * sa;
               cp * sp * ( 1 - ca ),    sp * sa,  cp^2 * ( 1 - ca ) + ca ];

@@ -1516,8 +1516,21 @@ mit
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-R=R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}.
+R=R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \mu\left(L+\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\right)-\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\\
+ & = & \mu\left(1+\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}\right)-\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -1528,8 +1541,8 @@ R=R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}.
 Oder auch 
 \begin_inset Formula 
 \begin{eqnarray*}
-\mu\left(L+R\right) & = & R\\
-R & = & R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}.
+\mu\left(1+R\right) & = & R\\
+R & = & \frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
 \end{eqnarray*}
 
 \end_inset
@@ -1542,7 +1555,7 @@ R & = & R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}.
  
 \begin_inset Formula 
 \begin{eqnarray}
-\mu_{0}\left(\alpha\right) & = & \frac{R}{R\left(\alpha\right)+L}\label{eq:LösungsgleichungSonneGedreht}
+\mu_{0}\left(\alpha\right) & = & \frac{R^{S}\left(\alpha\right)}{1+R^{S}\left(\alpha\right)}\label{eq:LösungsgleichungSonneGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1557,7 +1570,7 @@ mit
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-R\left(\alpha\right) & = & R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}.
+R^{S}\left(\alpha\right) & = & \frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
 \end{eqnarray*}
 
 \end_inset
@@ -2020,6 +2033,20 @@ Wegen
 \begin_layout Standard
 
 \color blue
+folgt nach kurzer Umformung die zu lösende Gleichung 
+\begin_inset Formula 
+\begin{eqnarray}
+\mu_{0}\left(\alpha\right) & = & \frac{R^{E}\left(\alpha\right)}{1+R^{E}\left(\alpha\right)}\label{eq:LösungsgleichungErdeGedreht}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color blue
 \begin_inset Note Note
 status collapsed
 
@@ -2072,8 +2099,21 @@ mit
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-R=R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}.
+R=R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \mu\left(L+\frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}\right)-\frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}\\
+ & = & \mu\left(1+\frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{LR_{E}}\right)-\frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{LR_{E}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -2084,8 +2124,8 @@ R=R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}.
 Oder auch 
 \begin_inset Formula 
 \begin{eqnarray*}
-\mu\left(L+R\right) & = & R\\
-R & = & R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}.
+\mu\left(1+R\right) & = & R\\
+R & = & \frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{LR_{E}}.
 \end{eqnarray*}
 
 \end_inset
@@ -2095,20 +2135,6 @@ R & = & R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}
 
 \end_inset
 
- folgt nach kurzer Umformung die zu lösende Gleichung 
-\begin_inset Formula 
-\begin{eqnarray}
-\mu_{0}\left(\alpha\right) & = & \frac{R}{R+L}\label{eq:LösungsgleichungErdeGedreht}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\color blue
 mit der Abkürzung 
 \end_layout
 
@@ -2117,7 +2143,7 @@ mit der Abkürzung
 \color blue
 \begin_inset Formula 
 \begin{eqnarray*}
-R\left(\alpha\right) & = & R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}.
+R^{E}\left(\alpha\right) & = & \frac{R_{E}^{2}-\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{LR_{E}}.
 \end{eqnarray*}
 
 \end_inset
