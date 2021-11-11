@@ -179,11 +179,13 @@ R3: auf der Nordhalbkugel der Erde zeigt der Schatten Richtung Norden, auf
 
 \begin_layout Standard
 Die Methode wird in der Nähe der Pole scheitern, da das Stabende dort keinen
- Schatten mehr wirft (und dort keine Erde für den Stab vorhanden ist 
+ Schatten mehr wirft (und dort keine Erde zum Hineinstecken des Stabes vorhanden
+ ist 
 \begin_inset Formula $\smiley$
 \end_inset
 
 ).
+ 
 \end_layout
 
 \begin_layout Section
@@ -227,7 +229,11 @@ Vektoren werden durch einen Unterstrich kenntlich gemacht (
 \end_layout
 
 \begin_layout Standard
-Weiterhin werden Kugelkoordinaten und kartesische Koordinaten 
+Weiterhin werden Kugelkoordinaten 
+\begin_inset Formula $\left(r,\Theta,\varphi\right)$
+\end_inset
+
+ und kartesische Koordinaten 
 \begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
 \end_inset
 
@@ -444,6 +450,8 @@ alles auf der Erde fix lassen und die Sonne entgegengesetzt Rotieren:
 \end_layout
 
 \begin_layout Itemize
+
+\color blue
 \begin_inset CommandInset label
 LatexCommand label
 name "Fall 1"
@@ -454,7 +462,21 @@ Die mit der Erde verbundenen Orte um den Winkel
 \begin_inset Formula $\alpha$
 \end_inset
 
- zu rotieren und die Sonne fixiert lassen.
+ zu rotieren und die Sonne fixiert lassen (siehe Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:FixierungErde"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  
 \end_layout
 
@@ -469,7 +491,22 @@ Den Ort der Sonne um den Winkel
 \begin_inset Formula $-\alpha$
 \end_inset
 
- zu rotieren und die mit der Erde verbundenen Orte fixiert lassen.
+ zu rotieren und die mit der Erde verbundenen Orte fixiert lassen (siehe
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:FixierungSonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  
 \end_layout
 
@@ -757,8 +794,7 @@ Der Ort
 \begin_inset Formula $\psi$
 \end_inset
 
- wegen der Umrechnung der geographischen Breite ins Kugelkoordinatensystem
- (siehe dazu z.B.
+ zu (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -771,18 +807,9 @@ literal "false"
 \end_inset
 
 ) 
-\begin_inset Formula 
-\[
-\Theta-\psi\longrightarrow\frac{\pi}{2}-\Theta+\psi
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-zu 
 \begin_inset Formula 
 \begin{equation}
 \underline{P}=\left(\begin{array}{c}
@@ -812,6 +839,37 @@ p_{3} & = & R_{E}\cos\left(\frac{\pi}{2}-\Theta+\psi\right).
 \end_layout
 
 \begin_layout Standard
+Dabei wurde die geographischen Breite durch 
+\begin_inset Formula 
+\[
+\Theta-\psi\longrightarrow\frac{\pi}{2}-\Theta+\psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ins Kugelkoordinatensystem umgerechnet (siehe dazu z.B.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia4"
+literal "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color blue
 Berücksichtigt man die Erdrotation durch die Drehmatrix 
 \begin_inset Formula $D_{\alpha}$
 \end_inset
@@ -820,6 +878,8 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{P}^{\alpha} & = & D_{\alpha}\underline{P}.\label{eq:FusspunktGedreht}
@@ -855,6 +915,8 @@ Für den Punkt
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Berücksichtigt man die Erdrotation durch die Drehmatrix 
 \begin_inset Formula $D_{\alpha}$
 \end_inset
@@ -888,34 +950,6 @@ noprefix "false"
 \end_inset
 
 ) 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Paragraph*
-Kontrolle
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\Vert \underline{Q}-\underline{P}\right\Vert  & = & \left\Vert \left(1+\frac{L}{R_{E}}\right)\underline{P}-\underline{P}\right\Vert \\
- & = & \left\Vert \frac{L}{R_{E}}\underline{P}\right\Vert \\
- & = & \frac{L}{R_{E}}\left\Vert \underline{P}\right\Vert \\
- & = & L
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Stimmt!
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{Q}^{\alpha} & = & \left(1+\frac{L}{R_{E}}\right)D_{\alpha}\underline{P}\nonumber \\
@@ -1049,6 +1083,8 @@ oder in vektorieller Schreibweise
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Berücksichtigt man die Erdrotation durch die Drehmatrix 
 \begin_inset Formula $D_{\alpha}$
 \end_inset
@@ -1089,6 +1125,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 \begin_inset Formula 
 \begin{eqnarray}
 \left(D_{\alpha}\underline{P}\right)^{T}\left(\underline{x}-D_{\alpha}\underline{P}\right) & = & 0\nonumber \\
@@ -1234,6 +1272,8 @@ Hier wird für
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Berücksichtigt man die Erdrotation durch die Drehmatrix 
 \begin_inset Formula $D_{\alpha}$
 \end_inset
@@ -1256,6 +1296,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{G}_{E}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\nonumber \\
@@ -1268,6 +1310,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Hier wird für 
 \begin_inset Formula $\mu=0$
 \end_inset
@@ -1289,6 +1333,10 @@ Hier wird für
 \end_layout
 
 \begin_layout Section
+Problemlösung 
+\end_layout
+
+\begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:FixierungErde"
@@ -1359,7 +1407,7 @@ zulässt.
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Lösungspunkt 
 \end_layout
 
@@ -1607,7 +1655,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Koordinatentransformation 
 \end_layout
 
@@ -1822,7 +1870,7 @@ noprefix "false"
 ) für die auf die Tangentialebene projizierten Punkte 
 \begin_inset Formula 
 \begin{equation}
-x^{S}\left(\alpha\right)=PD_{\left(\frac{\pi}{2}-\left(\Theta+\psi\right)\right)}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:ErgebnisSonneGedreht}
+\underline{x}^{S}\left(\alpha\right)=PD_{\left(\frac{\pi}{2}-\left(\Theta+\psi\right)\right)}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:ErgebnisSonneGedreht}
 \end{equation}
 
 \end_inset
@@ -1830,7 +1878,9 @@ x^{S}\left(\alpha\right)=PD_{\left(\frac{\pi}{2}-\left(\Theta+\psi\right)\right)
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
+
+\color blue
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:FixierungSonne"
@@ -1841,6 +1891,8 @@ Lösung durch Fixierung der Sonne
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Gesucht ist der Schnittpunkt der Geraden 
 \begin_inset Formula $\underline{G}_{E}^{\alpha}$
 \end_inset
@@ -1897,15 +1949,21 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 zulässt.
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
+
+\color blue
 Lösungspunkt 
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Einsetzen von Gleichung
 \begin_inset space ~
 \end_inset
@@ -1946,6 +2004,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Wegen 
 \begin_inset Formula 
 \[
@@ -1958,7 +2018,8 @@ Wegen
 \end_layout
 
 \begin_layout Standard
-folgt nach kurzer Umformung die zu lösende Gleichung 
+
+\color blue
 \begin_inset Note Note
 status collapsed
 
@@ -2034,7 +2095,7 @@ R & = & R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}
 
 \end_inset
 
- 
+ folgt nach kurzer Umformung die zu lösende Gleichung 
 \begin_inset Formula 
 \begin{eqnarray}
 \mu_{0}\left(\alpha\right) & = & \frac{R}{R+L}\label{eq:LösungsgleichungErdeGedreht}
@@ -2046,10 +2107,14 @@ R & = & R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 mit der Abkürzung 
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 \begin_inset Formula 
 \begin{eqnarray*}
 R\left(\alpha\right) & = & R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}.
@@ -2061,6 +2126,8 @@ R\left(\alpha\right) & = & R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\u
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Da mit 
 \begin_inset Formula $\mu=0$
 \end_inset
@@ -2096,6 +2163,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Der gesuchte Punkt 
 \begin_inset Formula $\underline{x}_{0}$
 \end_inset
@@ -2140,6 +2209,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}.\label{eq:LösungspunkteErdeGedreht}
@@ -2150,11 +2221,15 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
+
+\color blue
 Koordinatentransformation 
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Jeder aufgefundene Punkt 
 \begin_inset Formula $\underline{x}_{0}^{E}\left(\alpha\right)$
 \end_inset
@@ -2184,6 +2259,8 @@ Jeder aufgefundene Punkt
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Die Punkte liegen dann auf dem Äquator, 
 \begin_inset Formula $0°$
 \end_inset
@@ -2220,6 +2297,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Es ergibt sich also mit den Abbildungen
 \begin_inset space ~
 \end_inset
@@ -2275,7 +2354,7 @@ noprefix "false"
 ) für die auf die Tangentialebene projizierten Punkte 
 \begin_inset Formula 
 \begin{equation}
-x^{E}\left(\alpha\right)=PD_{\left(\frac{\pi}{2}-\left(\Theta+\psi\right)\right)}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right).\label{eq:ErgebnisErdeGedreht}
+\underline{x}^{E}\left(\alpha\right)=PD_{\left(\frac{\pi}{2}-\left(\Theta+\psi\right)\right)}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right).\label{eq:ErgebnisErdeGedreht}
 \end{equation}
 
 \end_inset
@@ -2284,7 +2363,7 @@ x^{E}\left(\alpha\right)=PD_{\left(\frac{\pi}{2}-\left(\Theta+\psi\right)\right)
 \end_layout
 
 \begin_layout Section
-Äquivalenz der Lösungsansätze 
+Äquivalenz der Problemlösungs-Ansätze 
 \end_layout
 
 \begin_layout Standard
@@ -2310,11 +2389,11 @@ Lösung durch Fixierung der Sonne
 
 \begin_layout Standard
 Für die Gleichheit der Punkte 
-\begin_inset Formula $x^{S}\left(\alpha\right)$
+\begin_inset Formula $\underline{x}^{S}\left(\alpha\right)$
 \end_inset
 
  und 
-\begin_inset Formula $x^{E}\left(\alpha\right)$
+\begin_inset Formula $\underline{x}^{E}\left(\alpha\right)$
 \end_inset
 
  ist wegen
@@ -2348,7 +2427,7 @@ noprefix "false"
 ) die Bedingung 
 \begin_inset Formula 
 \begin{eqnarray}
-x^{S}\left(\alpha\right) & = & D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right)\label{eq:Aequivalenz}
+\underline{x}^{S}\left(\alpha\right) & = & D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right)\label{eq:Aequivalenz}
 \end{eqnarray}
 
 \end_inset
