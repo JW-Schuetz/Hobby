@@ -9,7 +9,7 @@ Omega = sym( 'omega', 'real' );     % Jahreszeiteinfluss
 Psi   = sym( 'psi', 'real' );       % Komplementwinkel Erd-Rotationsachse zur Ekliptik
 RS    = sym( 'rS', 'real' );        % Abstand Erde - Sonne
 RE    = sym( 'rE', 'real' );        % Erdradius
-L     = sym( 'l', 'real' );         % Stablänge
+LS    = sym( 'lS', 'real' );        % Stablänge
 
 % Einheitsvektor Rotationsachse
 E      = sym( 'e', [ 3, 1 ], 'real' );
@@ -39,7 +39,7 @@ DAlpha( 3, 3 ) = E( 3 )^2        * ( 1 - ca ) + ca;
 
 % Fusspunkt des Stabes auf der Erdoberfläche und Stabende
 P = sym( 'p', [ 3, 1 ], 'real' );
-Q = ( 1 + L / RE ) * P;
+Q = ( 1 + LS / RE ) * P;
 
 % Sonne
 S = sym( 's', [ 3, 1 ], 'real' );
@@ -65,10 +65,10 @@ PSAlpha = collect( P' * SAlpha, P );
 
 % Hauptterm der zu lösende Gleichung (Erde wird gedreht)
 R_E = simplify( RE - PAlphaS / RE );
-R_E = R_E / L;
+R_E = R_E / LS;
 
 % Hauptterm der zu lösende Gleichung (Sonne wird gedreht)
 R_S = simplify( RE - PSAlpha / RE );
-R_S = R_S / L;
+R_S = R_S / LS;
 
 save( 'sonnenkompass.mat', 'Q', 'SAlpha', 'R_S', 'R_E' )

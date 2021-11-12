@@ -793,15 +793,6 @@ literal "false"
 
 \end_layout
 
-\begin_layout Standard
-Für 12 Uhr mittags soll 
-\begin_inset Formula $\alpha=0$
-\end_inset
-
- gelten.
- 
-\end_layout
-
 \begin_layout Section
 Jahreszeit 
 \end_layout
@@ -818,8 +809,8 @@ Sei
 \end_inset
 
  die Jahreszeit, gemessen in Tagen ab dem 1.
- Januar, gilt ür den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinke
-ls 
+ Januar, gilt für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwink
+els 
 \begin_inset Formula 
 \[
 \varOmega=\frac{2\pi}{365}t
@@ -827,7 +818,7 @@ ls
 
 \end_inset
 
- die Gleichung 
+die Gleichung 
 \end_layout
 
 \begin_layout Standard
@@ -876,6 +867,15 @@ noprefix "false"
 \end_inset
 
 ).
+ 
+\end_layout
+
+\begin_layout Standard
+Für 12 Uhr mittags soll 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ gelten.
  
 \end_layout
 
