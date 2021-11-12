@@ -179,8 +179,8 @@ R3: auf der Nordhalbkugel der Erde zeigt der Schatten Richtung Norden, auf
 
 \begin_layout Standard
 Die Methode wird in der Nähe der Pole scheitern, da das Stabende dort keinen
- Schatten mehr wirft (und dort keine Erde zum Hineinstecken des Stabes vorhanden
- ist 
+ Schatten mehr wirft (und natürlich auch, weil dort keine Erde zum Hineinstecken
+ des Stabes vorhanden ist 
 \begin_inset Formula $\smiley$
 \end_inset
 
@@ -538,8 +538,8 @@ Den Ort der Sonne um den Winkel
 \end_layout
 
 \begin_layout Standard
-Der zweite Fall erscheint analytisch einfacher zu sein und wird im folgenden
- behandelt.
+Der zweite Fall erscheint analytisch etwas einfacher zu sein und wird im
+ folgenden behandelt.
  
 \end_layout
 
@@ -550,7 +550,7 @@ name "sec:Erdrotation"
 
 \end_inset
 
-Tageszeit, Erdrotation 
+Tageszeitabhängigkeit 
 \end_layout
 
 \begin_layout Standard
@@ -750,24 +750,15 @@ D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
 \end_layout
 
 \begin_layout Standard
-Die Drehmatrix ist orthogonal, d.h.
- es gilt 
-\begin_inset Formula 
-\[
-D_{\alpha}^{T}=D_{\alpha}^{-1}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Der Winkel 
 \begin_inset Formula $\psi$
 \end_inset
 
- hat den numerischen Wert (siehe dazu z.B.
+ hat den numerischen Wert 
+\begin_inset Formula $\psi=23.44°$
+\end_inset
+
+ (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -779,22 +770,12 @@ literal "false"
 
 \end_inset
 
-) 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\psi & = & 23.44°.\label{eq:Neigungswinkel}
-\end{eqnarray}
-
-\end_inset
-
-
+).
+ 
 \end_layout
 
 \begin_layout Section
-Jahreszeit 
+Jahreszeitabhängigkeit 
 \end_layout
 
 \begin_layout Standard
@@ -809,22 +790,23 @@ Sei
 \end_inset
 
  die Jahreszeit, gemessen in Tagen ab dem 1.
- Januar, gilt für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwink
-els 
-\begin_inset Formula 
-\[
-\varOmega=\frac{2\pi}{365}t
-\]
-
+ Januar.
+ Dann gilt für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinkels
+ 
+\begin_inset Formula $\varOmega=\omega t$
 \end_inset
 
-die Gleichung 
+ mit 
+\begin_inset Formula $\omega=\frac{2\pi}{365}$
+\end_inset
+
+ die Gleichung 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\underline{S}\left(t\right)=R_{S}\left(\begin{array}{c}
+\underline{S}=R_{S}\left(\begin{array}{c}
 \cos\varOmega\\
 \sin\varOmega\\
 0
@@ -871,11 +853,25 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Für 12 Uhr mittags soll 
+Für jede gewählte Jahreszeit 
+\begin_inset Formula $t$
+\end_inset
+
+ und damit für den Winkel 
+\begin_inset Formula $\varOmega=\omega t$
+\end_inset
+
+ soll für 12 Uhr mittags 
 \begin_inset Formula $\alpha=0$
 \end_inset
 
  gelten.
+ Dies erfordert eine Drehung der Erde um ihre Rotationsachse um den Winkel
+ 
+\begin_inset Formula $\alpha=\varOmega$
+\end_inset
+
+.
  
 \end_layout
 
@@ -950,18 +946,10 @@ p_{3} & = & R_{E}\cos\left(\frac{\pi}{2}-\Theta+\psi\right).
 
 \begin_layout Standard
 Dabei wurde die geographischen Breite durch 
-\begin_inset Formula 
-\[
-\Theta-\psi\longrightarrow\frac{\pi}{2}-\Theta+\psi
-\]
-
+\begin_inset Formula $\Theta-\psi\longrightarrow\frac{\pi}{2}-\Theta+\psi$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-ins Kugelkoordinatensystem umgerechnet (siehe dazu z.B.
+ ins Kugelkoordinatensystem umgerechnet (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -978,14 +966,10 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-
-\color blue
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-
-\color blue
 Berücksichtigt man die Erdrotation durch die Drehmatrix 
 \begin_inset Formula $D_{\alpha}$
 \end_inset
@@ -994,8 +978,6 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \end_layout
 
 \begin_layout Plain Layout
-
-\color blue
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{P}^{\alpha} & = & D_{\alpha}\underline{P}.\label{eq:FusspunktGedreht}
@@ -1008,6 +990,8 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 
 \end_inset
 
+
+\color blue
  
 \end_layout
 
@@ -1036,14 +1020,10 @@ Für den Punkt
 \end_layout
 
 \begin_layout Standard
-
-\color blue
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-
-\color blue
 Berücksichtigt man die Erdrotation durch die Drehmatrix 
 \begin_inset Formula $D_{\alpha}$
 \end_inset
@@ -1090,6 +1070,8 @@ noprefix "false"
 
 \end_inset
 
+
+\color blue
  
 \end_layout
 
@@ -1215,14 +1197,10 @@ oder in vektorieller Schreibweise
 \end_layout
 
 \begin_layout Standard
-
-\color blue
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-
-\color blue
 Berücksichtigt man die Erdrotation durch die Drehmatrix 
 \begin_inset Formula $D_{\alpha}$
 \end_inset
@@ -1263,8 +1241,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Plain Layout
-
-\color blue
 \begin_inset Formula 
 \begin{eqnarray}
 \left(D_{\alpha}\underline{P}\right)^{T}\left(\underline{x}-D_{\alpha}\underline{P}\right) & = & 0\nonumber \\
@@ -1278,6 +1254,8 @@ noprefix "false"
 
 \end_inset
 
+
+\color blue
  
 \end_layout
 
@@ -1421,14 +1399,10 @@ Hier wird für
 \end_layout
 
 \begin_layout Standard
-
-\color blue
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-
-\color blue
 Berücksichtigt man die Erdrotation durch die Drehmatrix 
 \begin_inset Formula $D_{\alpha}$
 \end_inset
@@ -1451,8 +1425,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Plain Layout
-
-\color blue
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{G}_{E}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\nonumber \\
@@ -1465,8 +1437,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Plain Layout
-
-\color blue
 Hier wird für 
 \begin_inset Formula $\mu=0$
 \end_inset
@@ -1484,11 +1454,12 @@ Hier wird für
 \end_inset
 
  beschrieben.
- 
 \end_layout
 
 \end_inset
 
+ 
+\color blue
  
 \end_layout
 
@@ -1613,18 +1584,10 @@ noprefix "false"
 
 \begin_layout Standard
 Wegen 
-\begin_inset Formula 
-\[
-\underline{P}^{T}\underline{P}=R_{E}^{2}
-\]
-
+\begin_inset Formula $\underline{P}^{T}\underline{P}=R_{E}^{2}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-folgt nach kurzer Rechnung die zu lösende Gleichung 
+ folgt nach kurzer Rechnung die zu lösende Gleichung 
 \begin_inset Note Note
 status collapsed
 
@@ -1959,25 +1922,7 @@ Der Punkt
 \end_inset
 
 -Achse überein.
- Die Trajektorienpunkte können mittels der Projektionsabbildung
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Die Projektionsabbildung 
-\begin_inset Formula $P$
-\end_inset
-
- bitte nicht verwechseln mit dem Punkt 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
- 
+ Die Trajektorienpunkte können mittels der Projektionsabbildung 
 \begin_inset Formula 
 \begin{equation}
 A=\left(\begin{array}{ccc}
@@ -2040,10 +1985,14 @@ noprefix "false"
 
 \end_inset
 
-) für die auf die Tangentialebene projizierten Punkte 
+) für die auf die Tangentialebene projizierten Punkte aus 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
-\underline{x}^{S}\left(\alpha\right)=PD_{\left(\frac{\pi}{2}-\left(\Theta+\psi\right)\right)}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:ErgebnisSonneGedreht}
+\underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:ErgebnisSonneGedreht}
 \end{equation}
 
 \end_inset
@@ -2053,7 +2002,7 @@ noprefix "false"
 
 \begin_layout Standard
 
-\color blue
+\color white
 \begin_inset Note Note
 status collapsed
 
@@ -2063,7 +2012,7 @@ x
 
 \begin_layout Subsection
 
-\color blue
+\color white
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:FixierungSonne"
@@ -2075,7 +2024,7 @@ Lösung durch Fixierung der Sonne
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 Gesucht ist der Schnittpunkt der Geraden 
 \begin_inset Formula $\underline{G}_{E}^{\alpha}$
 \end_inset
@@ -2133,20 +2082,20 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 zulässt.
  
 \end_layout
 
 \begin_layout Subsubsection
 
-\color blue
+\color white
 Lösungspunkt 
 \end_layout
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 Einsetzen von Gleichung
 \begin_inset space ~
 \end_inset
@@ -2188,7 +2137,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 Wegen 
 \begin_inset Formula 
 \[
@@ -2202,7 +2151,7 @@ Wegen
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 folgt nach kurzer Umformung die zu lösende Gleichung 
 \begin_inset Formula 
 \begin{eqnarray}
@@ -2216,7 +2165,7 @@ folgt nach kurzer Umformung die zu lösende Gleichung
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 \begin_inset Note Note
 status collapsed
 
@@ -2310,7 +2259,7 @@ mit der Abkürzung
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 \begin_inset Formula 
 \begin{eqnarray*}
 R^{E}\left(\alpha\right) & = & \frac{1}{L}\left[R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}\right].
@@ -2323,7 +2272,7 @@ R^{E}\left(\alpha\right) & = & \frac{1}{L}\left[R_{E}-\frac{\left(\underline{P}^
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 Da mit 
 \begin_inset Formula $\mu=0$
 \end_inset
@@ -2360,7 +2309,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 Der gesuchte Punkt 
 \begin_inset Formula $\underline{x}_{0}$
 \end_inset
@@ -2406,7 +2355,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}.\label{eq:LösungspunkteErdeGedreht}
@@ -2419,13 +2368,13 @@ noprefix "false"
 
 \begin_layout Subsubsection
 
-\color blue
+\color white
 Koordinatentransformation 
 \end_layout
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 Jeder aufgefundene Punkt 
 \begin_inset Formula $\underline{x}_{0}^{E}\left(\alpha\right)$
 \end_inset
@@ -2456,7 +2405,7 @@ Jeder aufgefundene Punkt
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 Die Punkte liegen dann auf dem Äquator, 
 \begin_inset Formula $0°$
 \end_inset
@@ -2494,7 +2443,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\color blue
+\color white
 Es ergibt sich also mit den Abbildungen
 \begin_inset space ~
 \end_inset
@@ -2560,16 +2509,14 @@ noprefix "false"
 
 \end_inset
 
+
+\color blue
  
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
 status collapsed
-
-\begin_layout Plain Layout
-x
-\end_layout
 
 \begin_layout Section
 Äquivalenz der Problemlösungs-Ansätze 
