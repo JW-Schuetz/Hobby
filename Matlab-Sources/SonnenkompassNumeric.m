@@ -15,7 +15,7 @@ psi = 23.44 / 180.0 * pi;	% Winkel Erd-Rotationsachse senkrecht zur Ekliptik [ra
 % Strand vor "Las Palmas, P.º las Canteras, 74"
 LP    = [ 28.136746041614316, -15.438275482887885 ] / 180.0 * pi;    % [Breite, Länge]
 lS    = 1.5;                % Stablänge [m]
-tJ    = 0;                % 284: Tagesanzahl seit Jahresbeginn für den 12.10.2021
+tJ    = 365/2;                  % 284: Tagesanzahl seit Jahresbeginn für den 12.10.2021
 
 % Umrechnung geographische Koordinaten in Kugelkoordinaten
 LP = [ pi / 2 - LP( 1 ), LP( 2 ) ];
@@ -26,14 +26,18 @@ p1 = rE * sin( LP( 1 ) + psi ) * cos( LP( 2 ) ); % x-Koordinate
 p2 = rE * sin( LP( 1 ) + psi ) * sin( LP( 2 ) ); % y-Koordinate
 p3 = rE * cos( LP( 1 ) + psi );                  % z-Koordinate
 
-% Substitution
+% Jahreszeitliche Drehung
 omega = 2 * pi / 365 * tJ;
+% alpha = -omega;
+% x     = eval( subs( SAlpha ) );
+
+% Substitution
 mue0  = R_S / ( 1 + R_S );
 x0    = mue0 * Q + ( 1 - mue0 ) * SAlpha;
 x0    = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
 
 % numerische Auswertung, Plot
-N = 50;    % Anzahl Punkte
+N = 100;    % Anzahl Punkte
 
 % N soll gerade sein
 if( rem( N, 2 ) ~= 0 )
@@ -44,7 +48,6 @@ end
 % Trajektorienlänge in Las Palmas: ca. 3cm/10min. (experimentell ermittelt)
 minutes = 60;
 delta   = ( pi / 720 * minutes ) / N;	% Winkel-Delta
-alph0   = LP( 2 );                      % Winkeloffset wg. Jahreszeit
 
 pts  = zeros( N + 1, 3 );    % [m]
 y    = zeros( N + 1, 2 );    % [m]
@@ -53,7 +56,7 @@ alph = zeros( N + 1, 1 );    % [rad]
 
 % Zeitpunkte berechnen
 for i = 1 : N + 1
-	alph( i ) = alph0 -( i - 1 - N / 2 ) * delta;
+	alph( i ) = -( i - 1 - N / 2 ) * delta;
     t( i )    = alph( i ) * 720 / pi;
 
     alpha = alph( i );
@@ -61,14 +64,14 @@ for i = 1 : N + 1
     if( mue > 1 )
         pts( i, : ) = eval( subs( x0 ) )';  % alpha substituieren
     else
-        error( 'Mue0 kleiner 1' )
+        pts( i, : ) = [ Inf, Inf, Inf ];
     end
 end
 
 % Koordinatentransformation
 for i = 1 : N + 1
-    [ a, b ] = Maptangential( pts( i, 1 ), pts( i, 2 ), pts( i, 3 ), ...
-                    0, 0, -LP( 2 ), pi / 2 - ( LP( 1 ) + psi ) );
+    [ a, b ] = MapToTangentialPlane( pts( i, 1 ), pts( i, 2 ), pts( i, 3 ), ...
+                    -LP( 2 ), pi / 2 - ( LP( 1 ) + psi ) );
     y( i, : ) = [ a, b ];
 end
 
