@@ -5,10 +5,11 @@ clc
 clear
 
 % Symbol-Definitionen
-Psi = sym( 'psi', 'real' );      % Komplementwinkel Erd-Rotationsachse zur Ekliptik
-RS  = sym( 'rS', 'real' );       % Abstand Erde - Sonne
-RE  = sym( 'rE', 'real' );       % Erdradius
-L   = sym( 'l', 'real' );        % Stablänge
+Omega = sym( 'omega', 'real' );     % Jahreszeiteinfluss
+Psi   = sym( 'psi', 'real' );       % Komplementwinkel Erd-Rotationsachse zur Ekliptik
+RS    = sym( 'rS', 'real' );        % Abstand Erde - Sonne
+RE    = sym( 'rE', 'real' );        % Erdradius
+L     = sym( 'l', 'real' );         % Stablänge
 
 % Einheitsvektor Rotationsachse
 E      = sym( 'e', [ 3, 1 ], 'real' );
@@ -42,8 +43,8 @@ Q = ( 1 + L / RE ) * P;
 
 % Sonne
 S = sym( 's', [ 3, 1 ], 'real' );
-S( 1 ) = RS;
-S( 2 ) = 0;
+S( 1 ) = RS * cos( Omega );
+S( 2 ) = RS * sin( Omega );
 S( 3 ) = 0;
 
 % rotierte Punkte P, Q und S
@@ -70,4 +71,4 @@ R_E = R_E / L;
 R_S = simplify( RE - PSAlpha / RE );
 R_S = R_S / L;
 
-save( 'sonnenkompass.mat', 'Q', 'QAlpha', 'S', 'SAlpha', 'R_S', 'R_E' )
+save( 'sonnenkompass.mat', 'Q', 'SAlpha', 'R_S', 'R_E' )

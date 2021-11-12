@@ -1,6 +1,6 @@
 function [ x2, x3 ] = Maptangential( x1, x2, x3, psi, alpha, phi, theta )
     if( alpha ~= 0 )
-        % Punkt drehen um Erdrotations-Achse um den Winkel alpha
+        % Punkt um den Winkel alpha drehen um Erdrotations-Achse 
         cp = cos( psi );
         sp = sin( psi );
         ca = cos( alpha );
