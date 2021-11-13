@@ -15,7 +15,8 @@ psi = 23.44 / 180.0 * pi;	% Winkel Erd-Rotationsachse senkrecht zur Ekliptik [ra
 % Strand vor "Las Palmas, P.º las Canteras, 74"
 LP    = [ 28.136746041614316, -15.438275482887885 ] / 180.0 * pi;    % [Breite, Länge]
 lS    = 1.5;                % Stablänge [m]
-tJ    = 0;                  % 284: Tagesanzahl seit Jahresbeginn für den 12.10.2021
+tJ    = 365 / 2;            % 284: Tagesanzahl seit Jahresbeginn für den 12.10.2021
+tJ    = 284;            % 284: Tagesanzahl seit Jahresbeginn für den 12.10.2021
 
 % Umrechnung geographische Koordinaten in Kugelkoordinaten
 LP = [ pi / 2 - LP( 1 ), LP( 2 ) ];
@@ -28,8 +29,6 @@ p3 = rE * cos( LP( 1 ) + psi );                  % z-Koordinate
 
 % Jahreszeitliche Drehung
 omega = 2 * pi / 365 * tJ;
-% alpha = -omega;
-% x     = eval( subs( SAlpha ) );
 
 % Substitution
 mue0  = R_S / ( 1 + R_S );
@@ -40,27 +39,27 @@ x0    = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
 N = 100;    % Anzahl Punkte
 
 % N soll gerade sein
+N = fix( N );
 if( rem( N, 2 ) ~= 0 )
     N = N + 1;
 end
 
 % min: Anzahl Minuten (um den Mittag herum)
-% Trajektorienlänge in Las Palmas: ca. 3cm/10min. (experimentell ermittelt)
-minutes = 60;
+% Trajektorie in Las Palmas: ds = 3cm/10min. (ca., experimentell ermittelt)
+minutes = 24*60;    % 24 Stunden
 delta   = ( pi / 720 * minutes ) / N;	% Winkel-Delta
 
-pts  = zeros( N + 1, 3 );    % [m]
-y    = zeros( N + 1, 2 );    % [m]
-t    = zeros( N + 1, 1 );    % [min]
-alph = zeros( N + 1, 1 );    % [rad]
+pts     = zeros( N + 1, 3 );    % [m]
+y       = zeros( N + 1, 2 );    % [m]
+alp     = zeros( N + 1, 2 );    % [rad]
+abstand = zeros( N + 1, 2 );    % [m]
 
 % Zeitpunkte berechnen
 for i = 1 : N + 1
-	alph( i ) = -( i - 1 - N / 2 ) * delta;
-    t( i )    = alph( i ) * 720 / pi;
+	alp( i ) = -( i - 1 - N / 2 ) * delta;
+    alpha    = alp( i );
 
-    alpha = alph( i );
-    mue   = eval( subs( mue0 ) );
+    mue = eval( subs( mue0 ) );  % in mue0 alpha substituieren
     if( mue > 1 )
         pts( i, : ) = eval( subs( x0 ) )';  % in x0 alpha substituieren
     else
@@ -70,12 +69,14 @@ end
 
 % Koordinatentransformation
 for i = 1 : N + 1
-    [ x1, x2, x3 ] = RotateAroundEarthAxis( pts( i, 1 ), pts( i, 2 ), ...
-                        pts( i, 3 ), psi, omega );
-    [ a, b ] = MapToTangentialPlane( x1, x2, x3, -LP( 2 ), ...
-                        pi / 2 - ( LP( 1 ) + psi ) );
-    y( i, : ) = [ a, b ];
+    [ a, b ] = MapToTangentialPlane( pts( i, 1 ), pts( i, 2 ), pts( i, 3 ), ...
+                    -LP( 2 ), pi / 2 - ( LP( 1 ) + psi ) );
+    abstand( i ) = sqrt( a^2 + b^2 );
+    y( i, : )    = [ a, b ];
 end
+
+[ minAbstand, ndx ] = min( abstand );
+minAlpha            = alp( ndx( 1 ) ) / pi * 180; % [°]
 
 % Plotten der Ergebnisse
 figure
@@ -86,13 +87,14 @@ box 'on'
 grid 'on'
 axis( 'equal' )
 
-txt = text( -0.02, -0.02, 'Stab' );
+txt = text( 0.45, 0.45, 'Stab', 'Units', 'normalized' );
 txt.FontSize   = 13;
 txt.FontWeight = 'bold';
 txt.FontName   = 'FixedWidth';
 
-xlim( 1.2 * [ min( y( :, 1 ) ), max( y( :, 1 ) ) ] )
-ylim( 1.2 * [ min( -0.1, min( y( :, 2 ) ) ),  max( 0.1, max( y( :, 2 ) ) ) ] )
+squareSize = 3; % [m]
+xlim( squareSize * [ -1, 1 ] );
+ylim( squareSize * [ -1, 1 ] );
 
 xlabel( 'West-Ost [m]' )
 ylabel( 'Süd-Nord [m]' )

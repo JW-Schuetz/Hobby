@@ -237,12 +237,8 @@ Weiterhin werden Kugelkoordinaten
 \begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
 \end_inset
 
- verwendet, wobei das Koordinatenpaar 
-\begin_inset Formula $\left(x_{1},x_{2}\right)$
-\end_inset
-
- die Ekliptikalebene aufspannt, der Ursprung des Koordinatensystems ist
- der Erdmittelpunkt (siehe dazu die Problemskizze in Abbildung
+ verwendet, der Ursprung der Koordinatensysteme ist der Erdmittelpunkt (siehe
+ dazu die Problemskizze in Abbildung
 \begin_inset space ~
 \end_inset
 
@@ -257,6 +253,15 @@ noprefix "false"
 \end_inset
 
 ).
+ 
+\end_layout
+
+\begin_layout Standard
+Das kartesische Koordinatenpaar 
+\begin_inset Formula $\left(x_{1},x_{2}\right)$
+\end_inset
+
+ spannt die Ekliptikalebene auf.
  
 \end_layout
 
@@ -359,7 +364,8 @@ name "fig:Problemskizze1"
 
 \end_inset
 
-Problemskizze (nicht massstäblich, zur Sommersonnenwende) 
+Problemskizze (nicht massstäblich, Sommersonnenwende, 21.
+ Juni) 
 \end_layout
 
 \end_inset
@@ -396,7 +402,8 @@ name "fig:Problemskizze2"
 
 \end_inset
 
-Problemskizze (nicht massstäblich, zur Wintersonnenwende) 
+Problemskizze (nicht massstäblich, Wintersonnenwende, 21.
+ Dezember) 
 \end_layout
 
 \end_inset
