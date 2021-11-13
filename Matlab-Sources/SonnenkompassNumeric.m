@@ -15,7 +15,7 @@ psi = 23.44 / 180.0 * pi;	% Winkel Erd-Rotationsachse senkrecht zur Ekliptik [ra
 % Strand vor "Las Palmas, P.º las Canteras, 74"
 LP    = [ 28.136746041614316, -15.438275482887885 ] / 180.0 * pi;    % [Breite, Länge]
 lS    = 1.5;                % Stablänge [m]
-tJ    = 365/2;                  % 284: Tagesanzahl seit Jahresbeginn für den 12.10.2021
+tJ    = 0;                  % 284: Tagesanzahl seit Jahresbeginn für den 12.10.2021
 
 % Umrechnung geographische Koordinaten in Kugelkoordinaten
 LP = [ pi / 2 - LP( 1 ), LP( 2 ) ];
@@ -62,7 +62,7 @@ for i = 1 : N + 1
     alpha = alph( i );
     mue   = eval( subs( mue0 ) );
     if( mue > 1 )
-        pts( i, : ) = eval( subs( x0 ) )';  % alpha substituieren
+        pts( i, : ) = eval( subs( x0 ) )';  % in x0 alpha substituieren
     else
         pts( i, : ) = [ Inf, Inf, Inf ];
     end
@@ -70,8 +70,10 @@ end
 
 % Koordinatentransformation
 for i = 1 : N + 1
-    [ a, b ] = MapToTangentialPlane( pts( i, 1 ), pts( i, 2 ), pts( i, 3 ), ...
-                    -LP( 2 ), pi / 2 - ( LP( 1 ) + psi ) );
+    [ x1, x2, x3 ] = RotateAroundEarthAxis( pts( i, 1 ), pts( i, 2 ), ...
+                        pts( i, 3 ), psi, omega );
+    [ a, b ] = MapToTangentialPlane( x1, x2, x3, -LP( 2 ), ...
+                        pi / 2 - ( LP( 1 ) + psi ) );
     y( i, : ) = [ a, b ];
 end
 

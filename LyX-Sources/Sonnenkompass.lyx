@@ -867,7 +867,7 @@ Für jede gewählte Jahreszeit
 
  gelten.
  Dies erfordert eine Drehung der Sonne mit 
-\begin_inset Formula $D_{\left(-\varOmega\right)}\underline{S}$
+\begin_inset Formula $D_{\varOmega}\underline{S}$
 \end_inset
 
 .
@@ -1943,6 +1943,7 @@ auf die Tangentialebene
  projiziert werden.
  Der dadurch auftretende Verzerrungsfehler liegt bei Stablängen von einem
  Meter im Bereich von Mikrometern.
+ 
 \end_layout
 
 \begin_layout Standard
