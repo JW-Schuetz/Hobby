@@ -132,7 +132,7 @@ das Ende des Schattens des Stabes mit einen Stein markieren
 \end_layout
 
 \begin_layout Itemize
-einige Zeit abwarten bis der Stabschatten weiter gewandert ist 
+einige Zeit abwarten bis der Schatten weiter gewandert ist 
 \end_layout
 
 \begin_layout Itemize
@@ -618,8 +618,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Es soll zunächst der Zeitpunkt der Sommersonnenwende betrachtet werden,
- d.h.
+Es soll der Zeitpunkt der Sommersonnenwende betrachtet werden, d.h.
  die Rotationsachse soll, so wie in Abbildung
 \begin_inset space ~
 \end_inset
@@ -831,7 +830,7 @@ Die Sommersonnenwende am 21.
 \begin_inset Formula $\varOmega=0$
 \end_inset
 
- definiert (siehe dazu auch die Problemskizzen
+ definiert (siehe dazu auch die Problemskizzen in den Abbildungen
 \begin_inset space ~
 \end_inset
 
@@ -856,28 +855,6 @@ noprefix "false"
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_layout Standard
-Für jede gewählte Jahreszeit 
-\begin_inset Formula $t$
-\end_inset
-
- und damit für den Winkel 
-\begin_inset Formula $\varOmega=\omega t$
-\end_inset
-
- soll für 12 Uhr mittags 
-\begin_inset Formula $\alpha=0$
-\end_inset
-
- gelten.
- Dies erfordert eine Drehung der Sonne mit 
-\begin_inset Formula $D_{\varOmega}\underline{S}$
-\end_inset
-
-.
  
 \end_layout
 
