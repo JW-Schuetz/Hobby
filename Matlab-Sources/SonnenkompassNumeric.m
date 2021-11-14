@@ -8,27 +8,30 @@ format long
 
 load( 'sonnenkompass.mat', 'Q', 'SAlpha', 'R_S', 'R_E' )
 
-% Daten
-rE  = 6371000;              % mittlerer Erdradius [m]
+% fixe Daten
+rE  = 6371000.8;            % mittlerer Erdradius [m] (GRS 80, WGS 84)
 rS  = 149597870700;         % AE, mittlerer Abstand Erde - Sonne [m]
 psi = 23.44 / 180.0 * pi;	% Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
-% Strand vor "Las Palmas, P.º las Canteras, 74"
-LP    = [ 28.136746041614316, -15.438275482887885 ] / 180.0 * pi;    % [Breite, Länge]
-lS    = 1.5;                % Stablänge [m]
-tJ    = 365 / 2;            % 284: Tagesanzahl seit Jahresbeginn für den 12.10.2021
-tJ    = 284;            % 284: Tagesanzahl seit Jahresbeginn für den 12.10.2021
+ssw = datetime( '21.06.2021' ); % Datum Sommersonnenwende
 
-% Umrechnung geographische Koordinaten in Kugelkoordinaten
-LP = [ pi / 2 - LP( 1 ), LP( 2 ) ];
+% variable Daten
+lS      = 1.5;                  % Stablänge [m]
+tag = datetime( '12.10.2021' ); % Datum
+% Ort: Las Palmas de Gran Canaria, P.º las Canteras, 74
+tOffset = 1;                    % Zeitzone am 12.10.2021: UTC+1
+ort     = [ 28.136746041614316, -15.438275482887885 ] / 180.0 * pi;  % Breite/Länge
+% Umrechnungen
+ort = [ pi / 2 - ort( 1 ), ort( 2 ) ];	% Geographische- in Kugelkoordinaten
+T   = days( tag - ssw );                % Jahreszeit [Tage seit Sommersonnenwende]
 
-% Kugelkoordinaten des Fusspunkt des Stabes (in Las Palmas), dabei Neigung der 
+% Kugelkoordinaten des Fusspunkt des Stabes, dabei Neigung der 
 % Erd-Rotationsachse berücksichtigen
-p1 = rE * sin( LP( 1 ) + psi ) * cos( LP( 2 ) ); % x-Koordinate
-p2 = rE * sin( LP( 1 ) + psi ) * sin( LP( 2 ) ); % y-Koordinate
-p3 = rE * cos( LP( 1 ) + psi );                  % z-Koordinate
+p1 = rE * sin( ort( 1 ) + psi ) * cos( ort( 2 ) );	% x-Koordinate
+p2 = rE * sin( ort( 1 ) + psi ) * sin( ort( 2 ) );	% y-Koordinate
+p3 = rE * cos( ort( 1 ) + psi );                    % z-Koordinate
 
-% Jahreszeitliche Drehung
-omega = 2 * pi / 365 * tJ;
+% Jahreszeitwinkel
+omega = 2 * pi / 365 * T;
 
 % Substitution
 mue0  = R_S / ( 1 + R_S );
@@ -36,7 +39,7 @@ x0    = mue0 * Q + ( 1 - mue0 ) * SAlpha;
 x0    = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
 
 % numerische Auswertung, Plot
-N = 100;    % Anzahl Punkte
+N = 50;    % Anzahl Punkte
 
 % N soll gerade sein
 N = fix( N );
@@ -70,7 +73,7 @@ end
 % Koordinatentransformation
 for i = 1 : N + 1
     [ a, b ] = MapToTangentialPlane( pts( i, 1 ), pts( i, 2 ), pts( i, 3 ), ...
-                    -LP( 2 ), pi / 2 - ( LP( 1 ) + psi ) );
+                    -ort( 2 ), pi / 2 - ( ort( 1 ) + psi ) );
     abstand( i ) = sqrt( a^2 + b^2 );
     y( i, : )    = [ a, b ];
 end
@@ -87,11 +90,6 @@ box 'on'
 grid 'on'
 axis( 'equal' )
 
-txt = text( 0.45, 0.45, 'Stab', 'Units', 'normalized' );
-txt.FontSize   = 13;
-txt.FontWeight = 'bold';
-txt.FontName   = 'FixedWidth';
-
 squareSize = 3; % [m]
 xlim( squareSize * [ -1, 1 ] );
 ylim( squareSize * [ -1, 1 ] );
@@ -101,6 +99,7 @@ ylabel( 'Süd-Nord [m]' )
 
 % Ort des Stabes plotten
 plot( 0, 0, 'o', 'MarkerSize', 5, 'MarkerFaceColor', 'r' )
-
 % Schatten-Trajektorie plotten
 plot( y( :, 1 ), y( :, 2 ), 'Color', 'k', 'LineWidth', 2 )
+
+legend( 'Stabposition' )

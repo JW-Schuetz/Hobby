@@ -238,7 +238,7 @@ Weiterhin werden Kugelkoordinaten
 \end_inset
 
  verwendet, der Ursprung der Koordinatensysteme ist der Erdmittelpunkt (siehe
- dazu die Problemskizze in Abbildung
+ dazu die Problemskizzen in den Abbildungen
 \begin_inset space ~
 \end_inset
 
@@ -246,6 +246,20 @@ Weiterhin werden Kugelkoordinaten
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Problemskizze1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Problemskizze2"
 plural "false"
 caps "false"
 noprefix "false"
@@ -270,7 +284,7 @@ Problemformulierung
 \end_layout
 
 \begin_layout Standard
-Es werden die folgenden Annahmen getroffen: 
+Es werden die folgenden vereinfachenden Annahmen getroffen: 
 \end_layout
 
 \begin_layout Itemize
@@ -278,15 +292,16 @@ die Sonne im Punkt
 \begin_inset Formula $\underline{S}$
 \end_inset
 
- sei durch einen Punktstrahler angenähert 
+ sei ein Punktstrahler 
 \end_layout
 
 \begin_layout Itemize
-die Erde bewege sich auf einer idealen Kreisbahn mit Radius 
+die Erde bewege sich in der Ekliptikalebene auf einer idealen Kreisbahn
+ mit Radius 
 \begin_inset Formula $R_{S}$
 \end_inset
 
- um die Sonne (in der Ekliptikalebene) 
+ um die Sonne 
 \end_layout
 
 \begin_layout Itemize
@@ -327,16 +342,28 @@ bene an die Erdkugel angenähert
 \end_layout
 
 \begin_layout Itemize
-es werden zwei voneinander unabhängige Zeiten betrachtet: die Jahreszeit,
- gemessen in Tagen 
-\begin_inset Formula $t=\left[0,365\right)$
+es werden zwei voneinander unabhängige Zeiten betrachtet: die Jahreszeit
+ 
+\begin_inset Formula $T\in\left[0,365\right)$
 \end_inset
 
- und die Tageszeit, gemessen durch den Rotationswinkel 
-\begin_inset Formula $\alpha=\left[0,2\pi\right)$
+, gemessen in Tagen und die Tageszeit 
+\begin_inset Formula $t\in\left[0,24\right)$
 \end_inset
 
- der Erde um ihre Rotationsachse.
+, gemessen in Stunden 
+\end_layout
+
+\begin_layout Itemize
+der Ablauf der Tageszeit 
+\begin_inset Formula $t$
+\end_inset
+
+ soll die Jahreszeit 
+\begin_inset Formula $T$
+\end_inset
+
+ unbeeinflusst lassen.
  
 \end_layout
 
@@ -455,15 +482,17 @@ Matlab-Sources
 
 \begin_layout Standard
 Gesucht wird die Trajektorie des Schattens des Stabendes auf der Tangentialebene
- in Abhängigkeit von der Jahreszeit 
+ in Abhängigkeit von der der Tageszeit 
 \begin_inset Formula $t$
 \end_inset
 
- und des täglichen Erd-Rotationswinkels 
-\begin_inset Formula $\alpha$
+.
+ Die Jahreszeit 
+\begin_inset Formula $T$
 \end_inset
 
-.
+ hat ebenfalls Einfluss auf die Trajektorie und soll als Parameter betrachtet
+ werden.
  
 \begin_inset VSpace bigskip
 \end_inset
@@ -546,7 +575,7 @@ Den Ort der Sonne um den Winkel
 
 \begin_layout Standard
 Der zweite Fall erscheint analytisch etwas einfacher zu sein und wird im
- folgenden behandelt.
+ folgenden gewählt.
  
 \end_layout
 
@@ -618,8 +647,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Es soll der Zeitpunkt der Sommersonnenwende betrachtet werden, d.h.
- die Rotationsachse soll, so wie in Abbildung
+Zum Zeitpunkt der Sommersonnenwende, am 21.
+ Juni, liegt die Rotationsachse in der 
+\begin_inset Formula $\left(x_{1},x_{3}\right)$
+\end_inset
+
+-Ebene (siehe Abbildung
 \begin_inset space ~
 \end_inset
 
@@ -633,12 +666,11 @@ noprefix "false"
 
 \end_inset
 
- dargestellt, in der 
-\begin_inset Formula $\left(x_{1},x_{3}\right)$
+), der Einheitsvektor 
+\begin_inset Formula $\underline{e}$
 \end_inset
 
--Ebene liegen.
- Der Einheitsvektor ist somit durch 
+ ist somit durch 
 \begin_inset Formula 
 \begin{eqnarray}
 e_{1} & = & \sin\psi\label{eq:EinheitsvektorRotationsAchse}\\
@@ -652,7 +684,8 @@ e_{3} & = & \cos\psi.\nonumber
 \end_layout
 
 \begin_layout Standard
-gegeben und für die Drehmatrix folgt schliesslich 
+gegeben.
+ Für die Drehmatrix folgt 
 \begin_inset Note Note
 status collapsed
 
@@ -747,7 +780,7 @@ Die
 D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
 \cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
 \cos\psi\sin\psi\left(1-\cos\alpha\right) & \sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}.\label{eq:DrehmatrixAlpha}
+\end{pmatrix},\label{eq:DrehmatrixAlpha}
 \end{eqnarray}
 
 \end_inset
@@ -756,11 +789,11 @@ D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
 \end_layout
 
 \begin_layout Standard
-Der Winkel 
+der Winkel 
 \begin_inset Formula $\psi$
 \end_inset
 
- hat den numerischen Wert 
+ hat dabei den numerischen Wert 
 \begin_inset Formula $\psi=23.44°$
 \end_inset
 
@@ -780,57 +813,40 @@ literal "false"
  
 \end_layout
 
+\begin_layout Standard
+Der Rotationswinkel 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ gehört somit stets zur Tageszeit 0 Uhr UTC±0.
+ 
+\end_layout
+
+\begin_layout Standard
+Der Zusammenhang zwischen der UTC±0 Tageszeit 
+\begin_inset Formula $t$
+\end_inset
+
+ in Stunden und Rotationswinkel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ist durch 
+\begin_inset Formula $t=\frac{12}{\pi}\alpha$
+\end_inset
+
+ gegeben.
+ 
+\end_layout
+
 \begin_layout Section
 Jahreszeitabhängigkeit 
 \end_layout
 
 \begin_layout Standard
 Der jahreszeitliche Einfluss wird durch eine Kreisbewegung der Sonne um
- die als im Koordinatenursprung fixiert angenommene Erde berücksichtigt.
- 
-\end_layout
-
-\begin_layout Standard
-Sei 
-\begin_inset Formula $t$
-\end_inset
-
- die Jahreszeit, gemessen in Tagen ab dem 1.
- Januar.
- Dann gilt für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinkels
- 
-\begin_inset Formula $\varOmega=\omega t$
-\end_inset
-
- mit 
-\begin_inset Formula $\omega=\frac{2\pi}{365}$
-\end_inset
-
- die Gleichung 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\underline{S}=R_{S}\left(\begin{array}{c}
-\cos\varOmega\\
-\sin\varOmega\\
-0
-\end{array}\right).\label{eq:Ort der Sonne}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Die Sommersonnenwende am 21.
- Juni wird als Startwinkel 
-\begin_inset Formula $\varOmega=0$
-\end_inset
-
- definiert (siehe dazu auch die Problemskizzen in den Abbildungen
+ die als im Koordinatenursprung fixiert angenommene Erde berücksichtigt
+ (siehe dazu die Abbildungen
 \begin_inset space ~
 \end_inset
 
@@ -855,6 +871,43 @@ noprefix "false"
 \end_inset
 
 ).
+ 
+\end_layout
+
+\begin_layout Standard
+Für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinkels 
+\begin_inset Formula $\omega T$
+\end_inset
+
+ mit 
+\begin_inset Formula $\omega=\frac{2\pi}{365}$
+\end_inset
+
+ die Gleichung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\underline{S}=R_{S}\left(\begin{array}{c}
+\cos\left(\omega T\right)\\
+\sin\left(\omega T\right)\\
+0
+\end{array}\right),\label{eq:Ort der Sonne}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dabei ist 
+\begin_inset Formula $T\in\left[0,365\right)$
+\end_inset
+
+ die Jahreszeit, gemessen in der Tagesdifferenz zum 21.
+ Juni, der Sommersonnenwende.
  
 \end_layout
 
@@ -1189,7 +1242,7 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \end_inset
 
  so folgt für die gedrehte Tangentialebene 
-\begin_inset Formula $T^{\alpha}$
+\begin_inset Formula $T^{\left(\alpha\right)}$
 \end_inset
 
  aus den Gleichungen
@@ -1479,11 +1532,8 @@ noprefix "false"
 
 \end_inset
 
-) mit der Tangentialebene 
-\begin_inset Formula $T$
-\end_inset
-
- oder anders formuliert, gesucht wird der Geradenparameter 
+) mit der Tangentialebene oder anders formuliert, gesucht wird der Geradenparame
+ter 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -1789,10 +1839,6 @@ Die gefundenen Trajektorienpunkte
 
  gegeben.
  Sie sollen aber auf ein zweidimensionales Koordinatensystem der Tangentialebene
- 
-\begin_inset Formula $T$
-\end_inset
-
  transformiert werden.
  
 \end_layout
@@ -1892,7 +1938,7 @@ Der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- liegt dann auf dem Äquator, 
+ liegt nach diesen Drehungen auf dem Äquator, 
 \begin_inset Formula $0°$
 \end_inset
 
@@ -1905,7 +1951,7 @@ Der Punkt
 \end_inset
 
 -Achse überein.
- Die Trajektorienpunkte können mittels der Projektionsabbildung 
+ Die Trajektorienpunkte können dann mittels der Projektionsabbildung 
 \begin_inset Formula 
 \begin{equation}
 A=\left(\begin{array}{ccc}
@@ -1920,13 +1966,7 @@ A=\left(\begin{array}{ccc}
 \end_layout
 
 \begin_layout Standard
-auf die Tangentialebene 
-\begin_inset Formula $T$
-\end_inset
-
- projiziert werden.
- Der dadurch auftretende Verzerrungsfehler liegt bei Stablängen von einem
- Meter im Bereich von Mikrometern.
+auf die Tangentialebene projiziert werden.
  
 \end_layout
 
@@ -1969,14 +2009,10 @@ noprefix "false"
 
 \end_inset
 
-) für die auf die Tangentialebene projizierten Punkte aus 
-\begin_inset Formula $\mathbb{R}^{2}$
-\end_inset
-
- 
+) für die auf die Tangentialebene projizierten Punkte 
 \begin_inset Formula 
 \begin{equation}
-\underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:ErgebnisSonneGedreht}
+\underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
 \end{equation}
 
 \end_inset
@@ -1989,10 +2025,6 @@ noprefix "false"
 \color white
 \begin_inset Note Note
 status collapsed
-
-\begin_layout Plain Layout
-x
-\end_layout
 
 \begin_layout Subsection
 
@@ -2418,7 +2450,7 @@ noprefix "false"
 \end_inset
 
 ) auf die Tangentialebene 
-\begin_inset Formula $T$
+\begin_inset Formula $T^{\left(\alpha\right)}$
 \end_inset
 
  projiziert werden.
@@ -2802,7 +2834,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 Für die Tangentialebene 
-\begin_inset Formula $T$
+\begin_inset Formula $T^{\left(0\right)}$
 \end_inset
 
  folgt aus Gleichung
@@ -3262,7 +3294,7 @@ OK!
 
 \begin_layout Plain Layout
 Für die Tangentialebene 
-\begin_inset Formula $T$
+\begin_inset Formula $T^{\left(0\right)}$
 \end_inset
 
  folgt aus Gleichung

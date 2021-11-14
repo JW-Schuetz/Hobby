@@ -49,7 +49,6 @@ S( 3 ) = 0;
 
 % rotierte Punkte P, Q und S
 PAlpha = DAlpha * P;
-QAlpha = DAlpha * Q;
 SAlpha = DAlpha * S;
 
 % Test: ist Matrix DAlpha auch wirklich orthogonal?
