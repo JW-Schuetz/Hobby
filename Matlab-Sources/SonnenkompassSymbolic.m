@@ -62,12 +62,8 @@ PAlphaS = collect( PAlpha' * S, P );
 % Ausdruck P' * SAlpha bestimmen, collect: PSAlpha als Koeffizienten des Vektors P ausdrücken
 PSAlpha = collect( P' * SAlpha, P );
 
-% Hauptterm der zu lösende Gleichung (Erde wird gedreht)
-R_E = simplify( RE - PAlphaS / RE );
-R_E = R_E / LS;
-
 % Hauptterm der zu lösende Gleichung (Sonne wird gedreht)
-R_S = simplify( RE - PSAlpha / RE );
-R_S = R_S / LS;
+OmegaS = simplify( RE - PSAlpha / RE );
+OmegaS = OmegaS / LS;
 
-save( 'sonnenkompass.mat', 'Q', 'SAlpha', 'R_S', 'R_E' )
+save( 'sonnenkompass.mat', 'Q', 'SAlpha', 'OmegaS' )

@@ -6,7 +6,7 @@ clear
 
 format long
 
-load( 'sonnenkompass.mat', 'Q', 'SAlpha', 'R_S', 'R_E' )
+load( 'sonnenkompass.mat', 'Q', 'SAlpha', 'OmegaS' )
 
 % fixe Daten
 rE  = 6371000.8;            % mittlerer Erdradius [m] (GRS 80, WGS 84)
@@ -34,7 +34,7 @@ p3 = rE * cos( ort( 1 ) + psi );                    % z-Koordinate
 omega = 2 * pi / 365 * T;
 
 % Substitution
-mue0  = R_S / ( 1 + R_S );
+mue0  = OmegaS / ( 1 + OmegaS );
 x0    = mue0 * Q + ( 1 - mue0 ) * SAlpha;
 x0    = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
 

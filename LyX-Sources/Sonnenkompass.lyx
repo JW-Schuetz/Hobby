@@ -1711,7 +1711,7 @@ R & = & \frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
  
 \begin_inset Formula 
 \begin{eqnarray}
-\mu_{0}\left(\alpha\right) & = & \frac{R^{S}\left(\alpha\right)}{1+R^{S}\left(\alpha\right)}\label{eq:LösungsgleichungSonneGedreht}
+\mu_{0}\left(\alpha\right) & = & \frac{\varOmega^{S}\left(\alpha\right)}{1+\varOmega^{S}\left(\alpha\right)}\label{eq:LösungsgleichungSonneGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1726,7 +1726,7 @@ mit
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-R^{S}\left(\alpha\right) & = & \frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\right].
+\varOmega^{S}\left(\alpha\right) & = & \frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\right].
 \end{eqnarray*}
 
 \end_inset
@@ -2171,7 +2171,7 @@ Wegen
 folgt nach kurzer Umformung die zu lösende Gleichung 
 \begin_inset Formula 
 \begin{eqnarray}
-\mu_{0}\left(\alpha\right) & = & \frac{R^{E}\left(\alpha\right)}{1+R^{E}\left(\alpha\right)}\label{eq:LösungsgleichungErdeGedreht}
+\mu_{0}\left(\alpha\right) & = & \frac{\varOmega^{E}\left(\alpha\right)}{1+\varOmega^{E}\left(\alpha\right)}\label{eq:LösungsgleichungErdeGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -2278,7 +2278,7 @@ mit der Abkürzung
 \color white
 \begin_inset Formula 
 \begin{eqnarray*}
-R^{E}\left(\alpha\right) & = & \frac{1}{L}\left[R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}\right].
+\varOmega^{E}\left(\alpha\right) & = & \frac{1}{L}\left[R_{E}-\frac{\left(\underline{P}^{\alpha}\right)^{T}\underline{S}}{R_{E}}\right].
 \end{eqnarray*}
 
 \end_inset
