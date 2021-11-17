@@ -3486,8 +3486,8 @@ OK!
 
 \begin_layout Plain Layout
 \begin_inset Formula 
-\begin{eqnarray*}
-\left(\underline{P}^{\alpha}\right)^{T}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0\\
+\begin{eqnarray}
+\left(\underline{P}^{\alpha}\right)^{T}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0\nonumber \\
 \left(\cos\alpha,\sin\alpha,0\right)\left(\left(\begin{array}{c}
 x_{1}\\
 x_{2}\\
@@ -3496,16 +3496,16 @@ x_{3}
 \cos\alpha\\
 \sin\alpha\\
 0
-\end{array}\right)\right) & = & 0\\
+\end{array}\right)\right) & = & 0\nonumber \\
 \left(\cos\alpha,\sin\alpha,0\right)\left(\begin{array}{c}
 x_{1}-\cos\alpha\\
 x_{2}-\sin\alpha\\
 x_{3}
-\end{array}\right) & = & 0\\
-\cos\alpha\left(x_{1}-\cos\alpha\right)+\sin\alpha\left(x_{2}-\sin\alpha\right) & = & 0\\
-x_{1}\cos\alpha-\cos^{2}\alpha+x_{2}\sin\alpha-\sin^{2}\alpha & = & 0\\
-x_{1}\cos\alpha+x_{2}\sin\alpha & = & 1
-\end{eqnarray*}
+\end{array}\right) & = & 0\nonumber \\
+\cos\alpha\left(x_{1}-\cos\alpha\right)+\sin\alpha\left(x_{2}-\sin\alpha\right) & = & 0\nonumber \\
+x_{1}\cos\alpha-\cos^{2}\alpha+x_{2}\sin\alpha-\sin^{2}\alpha & = & 0\nonumber \\
+x_{1}\cos\alpha+x_{2}\sin\alpha & = & 1\label{eq:TangentialebeneSonderfall2}
+\end{eqnarray}
 
 \end_inset
 
@@ -3514,7 +3514,7 @@ x_{1}\cos\alpha+x_{2}\sin\alpha & = & 1
 
 \begin_layout Plain Layout
 und damit für 
-\begin_inset Formula $\alpha\neq\frac{n\pi}{2}\quad n\in\mathbb{Z}$
+\begin_inset Formula $\alpha\neq\pi\left(\frac{1}{2}+n\right)\quad n\in\mathbb{Z}$
 \end_inset
 
  
@@ -3531,11 +3531,90 @@ NOTOK!
 
  
 \begin_inset Formula 
-\begin{eqnarray}
-x_{1} & = & x_{2}\tan\alpha\label{eq:TangentialebeneSonderfall2}\\
-x_{2} & = & \text{beliebig}\nonumber \\
-x_{3} & = & \text{beliebig}.\nonumber 
-\end{eqnarray}
+\begin{eqnarray*}
+x_{1} & = & x_{2}\tan\alpha\\
+x_{2} & = & \text{beliebig}\\
+x_{3} & = & \text{beliebig}.
+\end{eqnarray*}
+
+\end_inset
+
+ Für die Verbindungsgerade folgt aus Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:VerbindungsgeradeErdeGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{G}_{E}^{\alpha} & = & \mu D_{\alpha}\underline{Q}+\left(1-\mu\right)\underline{S}\\
+ & = & \mu\left(R_{E}+L\right)\begin{pmatrix}\cos\alpha & -\sin\alpha & 0\\
+\sin\alpha & \cos\alpha & 0\\
+0 & 0 & 1
+\end{pmatrix}\left(\begin{array}{c}
+\cos\alpha\\
+\sin\alpha\\
+0
+\end{array}\right)+\left(1-\mu\right)\underline{S}\\
+ & = & \mu\left(R_{E}+L\right)\begin{pmatrix}\cos^{2}\alpha-\sin^{2}\alpha\\
+2\sin\alpha\cos\alpha\\
+0
+\end{pmatrix}+\left(1-\mu\right)\left(\begin{array}{c}
+R_{S}\\
+0\\
+0
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)+\left(1-\mu\right)R_{S}\\
+2\mu\left(R_{E}+L\right)\sin\alpha\cos\alpha\\
+0
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Einsetzen in Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TangentialebeneSonderfall2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) liefert 
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}\cos\alpha+x_{2}\sin\alpha & = & 1\\
+\left[\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)+\left(1-\mu\right)R_{S}\right]\cos\alpha+2\mu\left(R_{E}+L\right)\sin\alpha\cos\alpha\sin\alpha & = & 1\\
+\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)+\left(1-\mu\right)R_{S}+2\mu\left(R_{E}+L\right)\sin^{2}\alpha & = & 1\\
+\mu\left(R_{E}+L\right)\cos^{2}\alpha-\mu\left(R_{E}+L\right)\sin^{2}\alpha+\left(1-\mu\right)R_{S}+2\mu\left(R_{E}+L\right)\sin^{2}\alpha & = & 1\\
+\mu\left(R_{E}+L\right)\cos^{2}\alpha+\left(1-\mu\right)R_{S}+\mu\left(R_{E}+L\right)\sin^{2}\alpha & = & 1\\
+\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha+\sin^{2}\alpha\right)+\left(1-\mu\right)R_{S}+\mu\left(R_{E}+L\right)\sin^{2}\alpha & = & 1\\
+\mu R_{E}+\mu L+R_{S}-\mu R_{S} & = & 1\\
+\mu & = & 1-\\
+\end{eqnarray*}
 
 \end_inset
 
