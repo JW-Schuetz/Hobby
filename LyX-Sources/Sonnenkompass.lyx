@@ -337,13 +337,24 @@ im Punkt
 \end_layout
 
 \begin_layout Itemize
+die geographische Länge des Punktes 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ spiele keine Rolle, es wird für sie stets 
+\begin_inset Formula $\varphi=0$
+\end_inset
+
+ angenommen 
+\end_layout
+
+\begin_layout Itemize
 die Erdoberfläche um den Fusspunkt des Stabes herum werde durch eine Tangentiale
 bene an die Erdkugel angenähert 
 \end_layout
 
 \begin_layout Itemize
-es werden zwei voneinander unabhängige Zeiten betrachtet: die Jahreszeit
- 
+es werden zwei Zeiten betrachtet: die Jahreszeit 
 \begin_inset Formula $T\in\left[0,365\right)$
 \end_inset
 
@@ -363,8 +374,7 @@ der Ablauf der Tageszeit
 \begin_inset Formula $T$
 \end_inset
 
- unbeeinflusst lassen.
- 
+ unbeeinflusst lassen, die beiden Zeiten seien voneinander entkoppelt 
 \end_layout
 
 \begin_layout Standard
@@ -629,8 +639,12 @@ e_{3}
 \end_layout
 
 \begin_layout Standard
-ein  Einheitsvektor, der Richtung und Orientierung der Rotationsachse definiert
- (siehe dazu z.B.
+ein  Einheitsvektor 
+\begin_inset Formula $\left\Vert \underline{e}\right\Vert =1$
+\end_inset
+
+, der Richtung und Orientierung der Rotationsachse definiert (siehe dazu
+ z.B.
 \begin_inset space ~
 \end_inset
 
@@ -643,6 +657,15 @@ literal "false"
 \end_inset
 
 ).
+ 
+\end_layout
+
+\begin_layout Standard
+Die Erd-Rotationsachse 
+\begin_inset Formula $\underline{e}$
+\end_inset
+
+ ist wegen der Drehimpulserhaltung zeitinvariant.
  
 \end_layout
 
@@ -690,86 +713,88 @@ gegeben.
 status collapsed
 
 \begin_layout Plain Layout
-Test: Richtige Drehrichtung? 
-\end_layout
-
-\begin_layout Itemize
-Las Palmas mit 
-\begin_inset Formula $\alpha$
-\end_inset
-
-: 
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-\begin_inset Formula $p_{1}$
-\end_inset
-
- = 6.120498588419732e+06 
+Für die Drehmatrix 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $p_{2}$
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & \sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
+\end{eqnarray*}
+
 \end_inset
 
- = -1.690265903818174e+06 
+
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $p_{3}$
+kann man schreiben 
+\begin_inset Formula $D_{\alpha}=G_{\alpha}+U_{\alpha}$
 \end_inset
 
- = 0.521669630649337e+06 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Las Palmas mit 
-\begin_inset Formula $\alpha\longrightarrow\alpha+0.01$
-\end_inset
-
-: 
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-\begin_inset Formula $p_{1}$
-\end_inset
-
- = 6.135758053921022e+06 
+ mit dem gerade und dem ungeraden Anteil 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $p_{2}$
+\begin_inset Formula 
+\begin{eqnarray*}
+G_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & 0 & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+0 & \cos\alpha & 0\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & 0 & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}\\
+U_{\alpha} & = & \begin{pmatrix}0 & -\cos\psi\sin\alpha & 0\\
+\cos\psi\sin\alpha & 0 & -\sin\psi\sin\alpha\\
+0 & \sin\psi\sin\alpha & 0
+\end{pmatrix}\\
+ & = & \sin\alpha\begin{pmatrix}0 & -\cos\psi & 0\\
+\cos\psi & 0 & -\sin\psi\\
+0 & \sin\psi & 0
+\end{pmatrix}.
+\end{eqnarray*}
+
 \end_inset
 
- = -1.636103258942508e+06 
+
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $p_{3}$
+Es folgt für 
+\begin_inset Formula $D_{\left(-\alpha\right)}$
 \end_inset
 
- =0.515053618394264e+06 
+ der Zusammenhang 
 \end_layout
 
-\end_deeper
 \begin_layout Plain Layout
-Die 
-\begin_inset Formula $p_{1}$
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{\left(-\alpha\right)} & = & G_{\left(-\alpha\right)}+U_{\left(-\alpha\right)}\\
+ & = & G_{\alpha}-U_{\alpha}
+\end{eqnarray*}
+
 \end_inset
 
- -Komponente wird grösser, die 
-\begin_inset Formula $p_{2}$
+
+\end_layout
+
+\begin_layout Plain Layout
+und damit folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{\alpha}-D_{\left(-\alpha\right)} & = & G_{\alpha}+U_{\alpha}-G_{\alpha}+U_{\alpha}\\
+ & = & 2U_{\alpha}\\
+ & = & 2\sin\alpha\begin{pmatrix}0 & -\cos\psi & 0\\
+\cos\psi & 0 & -\sin\psi\\
+0 & \sin\psi & 0
+\end{pmatrix}.
+\end{eqnarray*}
+
 \end_inset
 
-- und 
-\begin_inset Formula $p_{3}$
-\end_inset
 
-- Komponenten werden kleiner.
- Erwartungsgemäss!
 \end_layout
 
 \end_inset
@@ -810,32 +835,6 @@ literal "false"
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_layout Standard
-Der Rotationswinkel 
-\begin_inset Formula $\alpha=0$
-\end_inset
-
- gehört somit stets zur Tageszeit 0 Uhr UTC±0.
- 
-\end_layout
-
-\begin_layout Standard
-Der Zusammenhang zwischen der UTC±0 Tageszeit 
-\begin_inset Formula $t$
-\end_inset
-
- in Stunden und Rotationswinkel 
-\begin_inset Formula $\alpha$
-\end_inset
-
- ist durch 
-\begin_inset Formula $t=\frac{12}{\pi}\alpha$
-\end_inset
-
- gegeben.
  
 \end_layout
 
@@ -911,6 +910,19 @@ dabei ist
  
 \end_layout
 
+\begin_layout Standard
+Für jede Wahl der Jahreszeit 
+\begin_inset Formula $T$
+\end_inset
+
+ soll sichergestellt sein, dass 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ den Sonnenhöchststand beschreibt.
+ 
+\end_layout
+
 \begin_layout Section
 Fusspunkt des Stabes 
 \end_layout
@@ -925,7 +937,7 @@ Der Ort
 \end_inset
 
 , der geographischen Länge 
-\begin_inset Formula $\varphi$
+\begin_inset Formula $\varphi=0$
 \end_inset
 
 , dem Erdradius 
@@ -970,8 +982,8 @@ p_{3}
 mit 
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{1} & = & R_{E}\sin\left(\frac{\pi}{2}-\Theta+\psi\right)\cos\varphi\\
-p_{2} & = & R_{E}\sin\left(\frac{\pi}{2}-\Theta+\psi\right)\sin\varphi\\
+p_{1} & = & R_{E}\sin\left(\frac{\pi}{2}-\Theta+\psi\right)\\
+p_{2} & = & 0\\
 p_{3} & = & R_{E}\cos\left(\frac{\pi}{2}-\Theta+\psi\right).
 \end{eqnarray*}
 
@@ -1242,7 +1254,7 @@ Berücksichtigt man die Erdrotation durch die Drehmatrix
 \end_inset
 
  so folgt für die gedrehte Tangentialebene 
-\begin_inset Formula $T^{\left(\alpha\right)}$
+\begin_inset Formula $T^{\alpha}$
 \end_inset
 
  aus den Gleichungen
@@ -1319,6 +1331,7 @@ noprefix "false"
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1848,15 +1861,7 @@ Dazu wird der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- um um seinen negativen Längenwinkel 
-\begin_inset Formula $-\varphi$
-\end_inset
-
- um die 
-\begin_inset Formula $x_{3}$
-\end_inset
-
--Achse und anschliessend um den Winkel 
+ um den Winkel 
 \begin_inset Formula $\frac{\pi}{2}-\left(\Theta+\psi\right)$
 \end_inset
 
@@ -1865,43 +1870,7 @@ Dazu wird der Punkt
 \end_inset
 
 -Achse gedreht.
- 
-\end_layout
-
-\begin_layout Standard
-Die Drehung um die 
-\begin_inset Formula $x_{3}$
-\end_inset
-
--Achse um den Winkel 
-\begin_inset Formula $\varphi$
-\end_inset
-
- wird durch die Matrix 
-\begin_inset Formula 
-\begin{equation}
-D_{\varphi}^{x_{3}}=\left(\begin{array}{ccc}
-\cos\varphi & -\sin\varphi & 0\\
-\sin\varphi & \cos\varphi & 0\\
-0 & 0 & 1
-\end{array}\right)\label{eq:DrehmatrixPhi}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-und die Drehung um die 
-\begin_inset Formula $x_{2}$
-\end_inset
-
--Achse um den Winkel 
-\begin_inset Formula $\Theta$
-\end_inset
-
- wird durch die Matrix 
+ Diese Drehung wird durch die Matrix 
 \begin_inset Formula 
 \begin{equation}
 D_{\Theta}^{x_{2}}=\left(\begin{array}{ccc}
@@ -1938,7 +1907,7 @@ Der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- liegt nach diesen Drehungen auf dem Äquator, 
+ liegt nach dieser Drehung auf dem Äquator, 
 \begin_inset Formula $0°$
 \end_inset
 
@@ -1951,7 +1920,7 @@ Der Punkt
 \end_inset
 
 -Achse überein.
- Die Trajektorienpunkte können dann mittels der Projektionsabbildung 
+ Die Trajektorienpunkte können nun mittels der Projektionsabbildung 
 \begin_inset Formula 
 \begin{equation}
 A=\left(\begin{array}{ccc}
@@ -1978,20 +1947,6 @@ Es ergibt sich also mit den Abbildungen
 (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:DrehmatrixPhi"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-,
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
 reference "eq:DrehmatrixTheta"
 plural "false"
 caps "false"
@@ -2012,7 +1967,7 @@ noprefix "false"
 ) für die auf die Tangentialebene projizierten Punkte 
 \begin_inset Formula 
 \begin{equation}
-\underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
+\underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
 \end{equation}
 
 \end_inset
@@ -2450,7 +2405,7 @@ noprefix "false"
 \end_inset
 
 ) auf die Tangentialebene 
-\begin_inset Formula $T^{\left(\alpha\right)}$
+\begin_inset Formula $T^{\alpha}$
 \end_inset
 
  projiziert werden.
@@ -2674,25 +2629,234 @@ D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}D_
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Section
 Überprüfung 
 \end_layout
 
 \begin_layout Plain Layout
-Es werden Spezialfälle daraufhin untersucht, ob die obige Herleitung erwartungsg
-emässe Ergebnisse liefert.
+Es werden einige Spezialfälle daraufhin untersucht, ob die obige Herleitung
+ erwartungsgemässe Ergebnisse liefert.
  
 \end_layout
 
 \begin_layout Subsection
+Zeitpunkt Sommersonnenwende 
+\end_layout
+
+\begin_layout Itemize
+Zum Zeitpunkt der Sommersonnenwende sollte für einen Punkt 
+\begin_inset Formula $\underline{P}=\left(\begin{array}{ccc}
+p_{1}, & 0, & p_{3}\end{array}\right)^{T}$
+\end_inset
+
+ mit der geographischen Länge 
+\begin_inset Formula $0°$
+\end_inset
+
+ gelten 
+\begin_inset Formula 
+\begin{equation}
+A_{z}D_{\alpha}\underline{P}=A_{z}D_{\left(-\alpha\right)}\underline{P}\label{eq:ForderungZ}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+mit der Projektion auf die 
+\begin_inset Formula $z$
+\end_inset
+
+-Komponente 
+\begin_inset Formula 
+\[
+A_{z}=\left(\begin{array}{ccc}
+0, & 0, & 1\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Man erhält wegen der Zerlegung von 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ in einen bezüglich 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ geraden und einen ungeraden Anteil 
+\begin_inset Formula 
+\[
+D_{\alpha}=G_{\alpha}+U_{\alpha}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+der Forderung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ForderungZ"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{z}\left(G_{\alpha}+U_{\alpha}\right)\underline{P} & = & A_{z}\left(G_{\left(-\alpha\right)}+U_{\left(-\alpha\right)}\right)\underline{P}\\
+A_{z}\left(G_{\alpha}+U_{\alpha}\right)\underline{P} & = & A_{z}\left(G_{\alpha}-U_{\alpha}\right)\underline{P}\\
+A_{z}U_{\alpha}\underline{P} & = & -A_{z}U_{\alpha}\underline{P}\\
+A_{z}U_{\alpha}\underline{P} & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Aus Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DrehmatrixAlpha"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt für den ungeraden Anteil von 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+U_{\alpha}=\sin\alpha\begin{pmatrix}0 & -\cos\psi & 0\\
+\cos\psi & 0 & -\sin\psi\\
+0 & \sin\psi & 0
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und somit 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{z}U_{\alpha}\underline{P} & = & A_{z}\sin\alpha\begin{pmatrix}0 & -\cos\psi & 0\\
+\cos\psi & 0 & -\sin\psi\\
+0 & \sin\psi & 0
+\end{pmatrix}\underline{P}\\
+ & = & A_{z}\begin{pmatrix}0\\
+p_{1}\cos\psi-p_{2}\sin\psi\\
+0
+\end{pmatrix}\sin\alpha\\
+ & = & \left(\begin{array}{ccc}
+0, & 0, & 1\end{array}\right)\begin{pmatrix}0\\
+p_{1}\cos\psi-p_{2}\sin\psi\\
+0
+\end{pmatrix}\sin\alpha\\
+ & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Das Ergebnis ist erwartungskonform.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Entsprechend sollte für die 
+\begin_inset Formula $y$
+\end_inset
+
+-Komponente mit 
+\begin_inset Formula $A_{y}=\left(\begin{array}{ccc}
+0, & 1, & 0\end{array}\right)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+A_{y}D_{\alpha}\underline{P}=-A_{y}D_{\left(-\alpha\right)}\underline{P}\label{eq:ForderungY}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+gelten.
+ Man sieht sofort, dass 
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{Y}U_{\alpha}\underline{P} & = & \left(p_{1}\cos\psi-p_{2}\sin\psi\right)\sin\alpha
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+ungerade ist.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Das Ergebnis ist erwartungskonform.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
 Neigung Erdachse 
-\begin_inset Formula $0$
+\begin_inset Formula $0°$
 \end_inset
 
 , geographische Breite und Länge 
-\begin_inset Formula $0$
+\begin_inset Formula $0°$
+\end_inset
+
+, Punkt mit 
+\begin_inset Formula $p_{2}=p_{3}=0$
 \end_inset
 
  
@@ -2701,6 +2865,10 @@ Neigung Erdachse
 \begin_layout Plain Layout
 Es wird angenommen 
 \begin_inset Formula $\psi=\Theta=\varphi=0$
+\end_inset
+
+ und 
+\begin_inset Formula $p_{2}=p_{3}=0$
 \end_inset
 
 .
@@ -2726,7 +2894,7 @@ noprefix "false"
 
 \end_inset
 
-) für die spezielle Drehmatrix 
+) für die Drehmatrix 
 \begin_inset Note Note
 status open
 
@@ -2834,7 +3002,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 Für die Tangentialebene 
-\begin_inset Formula $T^{\left(0\right)}$
+\begin_inset Formula $T^{0}$
 \end_inset
 
  folgt aus Gleichung
@@ -2898,7 +3066,7 @@ OK!
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray}
-x_{1} & = & R_{E}\label{eq:TangentialebeneSonderfall}\\
+x_{1} & = & R_{E}\label{eq:TangentialebeneSonderfall1}\\
 x_{2} & = & \text{beliebig}\nonumber \\
 x_{3} & = & \text{beliebig}.\nonumber 
 \end{eqnarray}
@@ -2984,7 +3152,7 @@ Einsetzen in Gleichung
 (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:TangentialebeneSonderfall"
+reference "eq:TangentialebeneSonderfall1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3070,19 +3238,9 @@ Einsetzen in
 \end_inset
 
  liefert wegen 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Siehe Nebenrechnung in SonnenkompassTest.m
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Formula 
 \[
-1-\mu=\frac{1}{L+R_{E}-R_{S}\cos\alpha}
+1-\mu_{0}=\frac{1}{L+R_{E}-R_{S}\cos\alpha}
 \]
 
 \end_inset
@@ -3294,10 +3452,10 @@ OK!
 
 \begin_layout Plain Layout
 Für die Tangentialebene 
-\begin_inset Formula $T^{\left(0\right)}$
+\begin_inset Formula $T^{\alpha}$
 \end_inset
 
- folgt aus Gleichung
+ folgt mit Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -3318,7 +3476,7 @@ status open
 \begin_layout Plain Layout
 
 \color green
-???
+OK!
 \end_layout
 
 \end_inset
@@ -3330,25 +3488,23 @@ status open
 \begin_inset Formula 
 \begin{eqnarray*}
 \left(\underline{P}^{\alpha}\right)^{T}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0\\
-R_{E}^{2}\left(\cos\left(\alpha+\varphi\right),\sin\left(\alpha+\varphi\right),0\right)\left(\left(\begin{array}{c}
+\left(\cos\alpha,\sin\alpha,0\right)\left(\left(\begin{array}{c}
 x_{1}\\
 x_{2}\\
 x_{3}
 \end{array}\right)-\left(\begin{array}{c}
-\cos\left(\alpha+\varphi\right)\\
-\sin\left(\alpha+\varphi\right)\\
+\cos\alpha\\
+\sin\alpha\\
 0
 \end{array}\right)\right) & = & 0\\
-\left(\cos\left(\alpha+\varphi\right),\sin\left(\alpha+\varphi\right),0\right)\left(\begin{array}{c}
-x_{1}-\cos\left(\alpha+\varphi\right)\\
-x_{2}-\sin\left(\alpha+\varphi\right)\\
+\left(\cos\alpha,\sin\alpha,0\right)\left(\begin{array}{c}
+x_{1}-\cos\alpha\\
+x_{2}-\sin\alpha\\
 x_{3}
 \end{array}\right) & = & 0\\
-\cos\left(\alpha+\varphi\right)\left[x_{1}-\cos\left(\alpha+\varphi\right)\right]+\sin\left(\alpha+\varphi\right)\left[x_{2}-\sin\left(\alpha+\varphi\right)\right] & = & 0\\
-\frac{\cos\left(\alpha+\varphi\right)}{\sin\left(\alpha+\varphi\right)}\left[x_{1}-\cos\left(\alpha+\varphi\right)\right]+x_{2}-\sin\left(\alpha+\varphi\right) & = & 0\\
-\cot\left(\alpha+\varphi\right)\left[x_{1}-\cos\left(\alpha+\varphi\right)\right]+x_{2}-\sin\left(\alpha+\varphi\right) & = & 0\\
-x_{2} & = & \sin\left(\alpha+\varphi\right)+\cot\left(\alpha+\varphi\right)\cos\left(\alpha+\varphi\right)-x_{1}\cot\left(\alpha+\varphi\right)\\
-x_{2} & = & \frac{1}{\sin\left(\alpha+\varphi\right)}-x_{1}\cot\left(\alpha+\varphi\right)
+\cos\alpha\left(x_{1}-\cos\alpha\right)+\sin\alpha\left(x_{2}-\sin\alpha\right) & = & 0\\
+x_{1}\cos\alpha-\cos^{2}\alpha+x_{2}\sin\alpha-\sin^{2}\alpha & = & 0\\
+x_{1}\cos\alpha+x_{2}\sin\alpha & = & 1
 \end{eqnarray*}
 
 \end_inset
@@ -3357,18 +3513,29 @@ x_{2} & = & \frac{1}{\sin\left(\alpha+\varphi\right)}-x_{1}\cot\left(\alpha+\var
 \end_layout
 
 \begin_layout Plain Layout
-und es folgt für 
-\begin_inset Formula $\alpha+\varphi\neq n\pi\qquad n=0,\pm1,\cdots$
+und damit für 
+\begin_inset Formula $\alpha\neq\frac{n\pi}{2}\quad n\in\mathbb{Z}$
 \end_inset
 
  
-\end_layout
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
+
+\color green
+NOTOK!
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
-\begin{eqnarray*}
-x_{2}+x_{1}\cot\left(\alpha+\varphi\right) & = & \frac{1}{\sin\left(\alpha+\varphi\right)}.
-\end{eqnarray*}
+\begin{eqnarray}
+x_{1} & = & x_{2}\tan\alpha\label{eq:TangentialebeneSonderfall2}\\
+x_{2} & = & \text{beliebig}\nonumber \\
+x_{3} & = & \text{beliebig}.\nonumber 
+\end{eqnarray}
 
 \end_inset
 

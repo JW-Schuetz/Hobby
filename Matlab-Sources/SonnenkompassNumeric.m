@@ -15,28 +15,25 @@ psi = 23.44 / 180.0 * pi;	% Winkel Erd-Rotationsachse senkrecht zur Ekliptik [ra
 ssw = datetime( '21.06.2021' ); % Datum Sommersonnenwende
 
 % variable Daten
-lS      = 1.5;                  % Stablänge [m]
+lS  = 1.5;                      % Stablänge [m]
 tag = datetime( '12.10.2021' ); % Datum
 % Ort: Las Palmas de Gran Canaria, P.º las Canteras, 74
-tOffset = 1;                    % Zeitzone am 12.10.2021: UTC+1
-ort     = [ 28.136746041614316, -15.438275482887885 ] / 180.0 * pi;  % Breite/Länge
-% Umrechnungen
-ort = [ pi / 2 - ort( 1 ), ort( 2 ) ];	% Geographische- in Kugelkoordinaten
-T   = days( tag - ssw );                % Jahreszeit [Tage seit Sommersonnenwende]
+breite  = 28.136746041614316 / 180.0 * pi;
 
-% Kugelkoordinaten des Fusspunkt des Stabes, dabei Neigung der 
-% Erd-Rotationsachse berücksichtigen
-p1 = rE * sin( ort( 1 ) + psi ) * cos( ort( 2 ) );	% x-Koordinate
-p2 = rE * sin( ort( 1 ) + psi ) * sin( ort( 2 ) );	% y-Koordinate
-p3 = rE * cos( ort( 1 ) + psi );                    % z-Koordinate
+breite = pi / 2 - breite;	% Geographische- in Kugelkoordinaten umrechnen
+T      = days( tag - ssw );	% Jahreszeit [Tage seit Sommersonnenwende]
+omega  = 2 * pi / 365 * T;  % Jahreszeitwinkel
 
-% Jahreszeitwinkel
-omega = 2 * pi / 365 * T;
+% Kugelkoordinaten des Fusspunkt des Stabes, geographische Länge 0°, 
+% dabei Neigung der Erd-Rotationsachse berücksichtigen
+p1 = rE * sin( breite + psi );	% x-Koordinate
+p2 = rE * sin( omega );         % y-Koordinate
+p3 = rE * cos( breite + psi );	% z-Koordinate
 
 % Substitution
-mue0  = OmegaS / ( 1 + OmegaS );
-x0    = mue0 * Q + ( 1 - mue0 ) * SAlpha;
-x0    = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
+mue0 = OmegaS / ( 1 + OmegaS );
+x0   = mue0 * Q + ( 1 - mue0 ) * SAlpha;
+x0   = subs( x0 );    % Zahlenwerte substituieren (bis auf alpha)
 
 % numerische Auswertung, Plot
 N = 50;    % Anzahl Punkte
@@ -47,20 +44,20 @@ if( rem( N, 2 ) ~= 0 )
     N = N + 1;
 end
 
-% min: Anzahl Minuten (um den Mittag herum)
+% minutes: Anzahl Minuten (um den Mittag herum)
 % Trajektorie in Las Palmas: ds = 3cm/10min. (ca., experimentell ermittelt)
-minutes = 24*60;    % 24 Stunden
+minutes = 60;    % 24 Stunden
 delta   = ( pi / 720 * minutes ) / N;	% Winkel-Delta
 
 pts     = zeros( N + 1, 3 );    % [m]
 y       = zeros( N + 1, 2 );    % [m]
-alp     = zeros( N + 1, 2 );    % [rad]
+t       = zeros( N + 1, 2 );    % [h]
 abstand = zeros( N + 1, 2 );    % [m]
 
 % Zeitpunkte berechnen
 for i = 1 : N + 1
-	alp( i ) = -( i - 1 - N / 2 ) * delta;
-    alpha    = alp( i );
+	t( i ) = -( i - 1 - N / 2 ) * delta;    % Stunden
+    alpha  = 12 * t( i ) / pi;
 
     mue = eval( subs( mue0 ) );  % in mue0 alpha substituieren
     if( mue > 1 )
@@ -73,17 +70,17 @@ end
 % Koordinatentransformation
 for i = 1 : N + 1
     [ a, b ] = MapToTangentialPlane( pts( i, 1 ), pts( i, 2 ), pts( i, 3 ), ...
-                    -ort( 2 ), pi / 2 - ( ort( 1 ) + psi ) );
+                    0, pi / 2 - ( breite + psi ) );
     abstand( i ) = sqrt( a^2 + b^2 );
     y( i, : )    = [ a, b ];
 end
 
 [ minAbstand, ndx ] = min( abstand );
-minAlpha            = alp( ndx( 1 ) ) / pi * 180; % [°]
+mint               = t( ndx( 1 ) )
 
 % Plotten der Ergebnisse
 figure
-title( 'Trajektorie Schattenende' )
+title( 'Trajektorie des Schattenendes' )
 
 hold 'on'
 box 'on'
@@ -101,5 +98,7 @@ ylabel( 'Süd-Nord [m]' )
 plot( 0, 0, 'o', 'MarkerSize', 5, 'MarkerFaceColor', 'r' )
 % Schatten-Trajektorie plotten
 plot( y( :, 1 ), y( :, 2 ), 'Color', 'k', 'LineWidth', 2 )
+% Parameter plotten
+% plot( 0, 0, 'o', 'MarkerSize', 2, 'MarkerFaceColor', 'b' )
 
 legend( 'Stabposition' )
