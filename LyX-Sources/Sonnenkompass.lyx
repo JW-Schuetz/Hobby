@@ -1268,7 +1268,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-G_{S}:\qquad\underline{x}_{S}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:VerbindungsgeradeSonneGedreht}
+G_{S}^{\alpha}:\qquad\underline{x}_{S}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:VerbindungsgeradeSonneGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1326,7 +1326,7 @@ Gesucht ist der Schnittpunkt der Geraden
 \noun off
 \color none
 
-\begin_inset Formula $G_{S}$
+\begin_inset Formula $G_{S}^{\alpha}$
 \end_inset
 
 
@@ -1356,8 +1356,11 @@ noprefix "false"
 
 \end_inset
 
-) mit der Tangentialebene oder anders formuliert, gesucht wird der Geradenparame
-ter 
+) mit der Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ oder anders formuliert, gesucht wird der Geradenparameter 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -1654,7 +1657,7 @@ Koordinatentransformation
 
 \begin_layout Standard
 Die gefundenen Trajektorienpunkte 
-\begin_inset Formula $\underline{x}_{0}\left(\alpha\right)$
+\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
  sind im Koordinatensystem 
@@ -1835,20 +1838,21 @@ noprefix "false"
 \end_inset
 
 ) und
-\begin_inset space ~
-\end_inset
+\end_layout
 
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ErgebnisErdeGedreht"
-plural "false"
-caps "false"
-noprefix "false"
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\underline{x}^{E}\left(\alpha\right)=PD_{\left(\frac{\pi}{2}-\left(\Theta+\psi\right)\right)}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right)\label{eq:ErgebnisErdeGedreht}
+\end{equation}
 
 \end_inset
 
-) die Bedingung 
+
+\end_layout
+
+\begin_layout Standard
+die Bedingung 
 \begin_inset Formula 
 \begin{eqnarray}
 \underline{x}^{S}\left(\alpha\right) & = & D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right)\label{eq:Aequivalenz}
@@ -1862,20 +1866,21 @@ hinreichend.
 
 \begin_layout Standard
 Aus Gleichung
-\begin_inset space ~
-\end_inset
+\end_layout
 
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:LösungspunkteErdeGedreht"
-plural "false"
-caps "false"
-noprefix "false"
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}\label{eq:LösungspunkteErdeGedreht}
+\end{eqnarray}
 
 \end_inset
 
-) folgt aber mit Gleichung
+
+\end_layout
+
+\begin_layout Standard
+folgt aber mit Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -1889,7 +1894,21 @@ noprefix "false"
 
 \end_inset
 
-) die zu beweisende Äquivalenz
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+die zu beweisende Äquivalenz
 \begin_inset space ~
 \end_inset
 
