@@ -639,7 +639,7 @@ e_{3}
 \end_layout
 
 \begin_layout Standard
-ein  Einheitsvektor 
+ein Vektor mit 
 \begin_inset Formula $\left\Vert \underline{e}\right\Vert =1$
 \end_inset
 
@@ -1336,7 +1336,7 @@ noprefix "false"
 
 \begin_layout Standard
 Die Punkte der Verbindungsgerade 
-\begin_inset Formula $\underline{G}$
+\begin_inset Formula $G$
 \end_inset
 
  der Sonne 
@@ -1367,7 +1367,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{G} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\label{eq:Verbindungsgerade}
+G:\qquad\underline{x} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\label{eq:Verbindungsgerade}
 \end{eqnarray}
 
 \end_inset
@@ -1417,7 +1417,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{G}_{S}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)D_{\left(-\alpha\right)}\underline{S}\nonumber \\
+G_{S}:\qquad\underline{x}_{S}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)D_{\left(-\alpha\right)}\underline{S}\nonumber \\
  & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:VerbindungsgeradeSonneGedreht}
 \end{eqnarray}
 
@@ -1507,7 +1507,7 @@ Hier wird für
 
 \end_inset
 
- 
+
 \color blue
  
 \end_layout
@@ -1528,9 +1528,35 @@ Lösung durch Fixierung der Erde
 
 \begin_layout Standard
 Gesucht ist der Schnittpunkt der Geraden 
-\begin_inset Formula $\underline{G}_{S}^{\alpha}$
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $G_{S}$
 \end_inset
 
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
  nach Gleichung
 \begin_inset space ~
 \end_inset
@@ -1979,7 +2005,7 @@ noprefix "false"
 
 \color white
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Subsection
 
@@ -2096,6 +2122,8 @@ noprefix "false"
 \end_inset
 
 ) liefert 
+\color inherit
+
 \begin_inset Formula 
 \begin{eqnarray*}
 \left(\underline{P}^{\alpha}\right)^{T}\left[\mu\underline{Q}^{\alpha}+\left(1-\mu\right)\underline{S}-\underline{P}^{\alpha}\right] & = & 0.
@@ -3656,8 +3684,8 @@ die Beziehung
 0
 \end{array}\right)\\
  & = & \left(\begin{array}{c}
-\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)-\frac{LR_{S}}{R_{S}-R_{E}-L}\\
-2\mu\left(R_{E}+L\right)\sin\alpha\cos\alpha\\
+\frac{R_{S}-R_{E}}{R_{S}-R_{E}-L}\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)-\frac{LR_{S}}{R_{S}-R_{E}-L}\\
+2\frac{R_{S}-R_{E}}{R_{S}-R_{E}-L}\left(R_{E}+L\right)\sin\alpha\cos\alpha\\
 0
 \end{array}\right).
 \end{eqnarray*}
