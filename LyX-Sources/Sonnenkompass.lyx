@@ -3488,23 +3488,23 @@ OK!
 \begin_inset Formula 
 \begin{eqnarray}
 \left(\underline{P}^{\alpha}\right)^{T}\left(\underline{x}-\underline{P}^{\alpha}\right) & = & 0\nonumber \\
-\left(\cos\alpha,\sin\alpha,0\right)\left(\left(\begin{array}{c}
+R_{E}\left(\cos\alpha,\sin\alpha,0\right)\left(\left(\begin{array}{c}
 x_{1}\\
 x_{2}\\
 x_{3}
-\end{array}\right)-\left(\begin{array}{c}
+\end{array}\right)-R_{E}\left(\begin{array}{c}
 \cos\alpha\\
 \sin\alpha\\
 0
 \end{array}\right)\right) & = & 0\nonumber \\
 \left(\cos\alpha,\sin\alpha,0\right)\left(\begin{array}{c}
-x_{1}-\cos\alpha\\
-x_{2}-\sin\alpha\\
+x_{1}-R_{E}\cos\alpha\\
+x_{2}-R_{E}\sin\alpha\\
 x_{3}
 \end{array}\right) & = & 0\nonumber \\
-\cos\alpha\left(x_{1}-\cos\alpha\right)+\sin\alpha\left(x_{2}-\sin\alpha\right) & = & 0\nonumber \\
-x_{1}\cos\alpha-\cos^{2}\alpha+x_{2}\sin\alpha-\sin^{2}\alpha & = & 0\nonumber \\
-x_{1}\cos\alpha+x_{2}\sin\alpha & = & 1\label{eq:TangentialebeneSonderfall2}
+\cos\alpha\left(x_{1}-R_{E}\cos\alpha\right)+\sin\alpha\left(x_{2}-R_{E}\sin\alpha\right) & = & 0\nonumber \\
+x_{1}\cos\alpha-R_{E}\cos^{2}\alpha+x_{2}\sin\alpha-R_{E}\sin^{2}\alpha & = & 0\nonumber \\
+x_{1}\cos\alpha+x_{2}\sin\alpha & = & R_{E}\label{eq:TangentialebeneSonderfall2}
 \end{eqnarray}
 
 \end_inset
@@ -3539,7 +3539,7 @@ x_{3} & = & \text{beliebig}.
 
 \end_inset
 
- Für die Verbindungsgerade folgt aus Gleichung
+Für die Verbindungsgerade folgt aus Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -3606,14 +3606,60 @@ noprefix "false"
 ) liefert 
 \begin_inset Formula 
 \begin{eqnarray*}
-x_{1}\cos\alpha+x_{2}\sin\alpha & = & 1\\
-\left[\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)+\left(1-\mu\right)R_{S}\right]\cos\alpha+2\mu\left(R_{E}+L\right)\sin\alpha\cos\alpha\sin\alpha & = & 1\\
-\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)+\left(1-\mu\right)R_{S}+2\mu\left(R_{E}+L\right)\sin^{2}\alpha & = & 1\\
-\mu\left(R_{E}+L\right)\cos^{2}\alpha-\mu\left(R_{E}+L\right)\sin^{2}\alpha+\left(1-\mu\right)R_{S}+2\mu\left(R_{E}+L\right)\sin^{2}\alpha & = & 1\\
-\mu\left(R_{E}+L\right)\cos^{2}\alpha+\left(1-\mu\right)R_{S}+\mu\left(R_{E}+L\right)\sin^{2}\alpha & = & 1\\
-\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha+\sin^{2}\alpha\right)+\left(1-\mu\right)R_{S}+\mu\left(R_{E}+L\right)\sin^{2}\alpha & = & 1\\
-\mu R_{E}+\mu L+R_{S}-\mu R_{S} & = & 1\\
-\mu & = & 1-\\
+x_{1}\cos\alpha+x_{2}\sin\alpha & = & R_{E}\\
+\left[\mu_{0}\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)+\left(1-\mu_{0}\right)R_{S}\right]\cos\alpha+2\mu_{0}\left(R_{E}+L\right)\sin\alpha\cos\alpha\sin\alpha & = & R_{E}\\
+\mu_{0}\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)+\left(1-\mu_{0}\right)R_{S}+2\mu_{0}\left(R_{E}+L\right)\sin^{2}\alpha & = & R_{E}\\
+\mu_{0}\left(R_{E}+L\right)\cos^{2}\alpha-\mu_{0}\left(R_{E}+L\right)\sin^{2}\alpha+\left(1-\mu_{0}\right)R_{S}+2\mu_{0}\left(R_{E}+L\right)\sin^{2}\alpha & = & R_{E}\\
+\mu_{0}\left(R_{E}+L\right)\cos^{2}\alpha+\left(1-\mu_{0}\right)R_{S}+\mu_{0}\left(R_{E}+L\right)\sin^{2}\alpha & = & R_{E}\\
+\mu_{0}\left(R_{E}+L\right)\left(\cos^{2}\alpha+\sin^{2}\alpha\right)+\left(1-\mu_{0}\right)R_{S} & = & R_{E}\\
+\mu_{0}R_{E}+\mu_{0}L+R_{S}-\mu_{0}R_{S} & = & R_{E}\\
+\mu_{0}\left(R_{E}+L-R_{S}\right) & = & R_{E}-R_{S}\\
+\mu_{0} & = & \frac{R_{S}-R_{E}}{R_{S}-R_{E}-L}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Einsetzen in 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+ liefert wegen 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+1-\mu_{0} & = & 1-\frac{R_{S}-R_{E}}{R_{S}-R_{E}-L}\\
+ & = & \frac{R_{S}-R_{E}-L-R_{S}+R_{E}}{R_{S}-R_{E}-L}\\
+ & = & \frac{-L}{R_{S}-R_{E}-L}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+die Beziehung 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0} & = & \left(\begin{array}{c}
+\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)+\left(1-\mu\right)R_{S}\\
+2\mu\left(R_{E}+L\right)\sin\alpha\cos\alpha\\
+0
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+\mu\left(R_{E}+L\right)\left(\cos^{2}\alpha-\sin^{2}\alpha\right)-\frac{LR_{S}}{R_{S}-R_{E}-L}\\
+2\mu\left(R_{E}+L\right)\sin\alpha\cos\alpha\\
+0
+\end{array}\right).
 \end{eqnarray*}
 
 \end_inset
