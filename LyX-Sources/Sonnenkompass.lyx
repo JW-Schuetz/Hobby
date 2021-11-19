@@ -349,17 +349,21 @@ die geographische Länge des Punktes
 \end_layout
 
 \begin_layout Itemize
-die Erdoberfläche um den Fusspunkt des Stabes herum werde durch eine Tangentiale
-bene an die Erdkugel angenähert 
+die Erdoberfläche um den Fusspunk des Stabes herum werde durch eine Tangentialeb
+ene an die Erdkugel im Punkt t 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ angenähert 
 \end_layout
 
 \begin_layout Itemize
 es werden zwei Zeiten betrachtet: die Jahreszeit 
-\begin_inset Formula $T\in\left[0,365\right)$
+\begin_inset Formula $T^{*}\in\left[0,365\right)$
 \end_inset
 
 , gemessen in Tagen und die Tageszeit 
-\begin_inset Formula $t\in\left[0,24\right)$
+\begin_inset Formula $t^{*}\in\left[0,24\right)$
 \end_inset
 
 , gemessen in Stunden 
@@ -367,11 +371,11 @@ es werden zwei Zeiten betrachtet: die Jahreszeit
 
 \begin_layout Itemize
 der Ablauf der Tageszeit 
-\begin_inset Formula $t$
+\begin_inset Formula $t^{*}$
 \end_inset
 
  soll die Jahreszeit 
-\begin_inset Formula $T$
+\begin_inset Formula $T^{*}$
 \end_inset
 
  unbeeinflusst lassen, die beiden Zeiten seien voneinander entkoppelt 
@@ -493,16 +497,16 @@ Matlab-Sources
 \begin_layout Standard
 Gesucht wird die Trajektorie des Schattens des Stabendes auf der Tangentialebene
  in Abhängigkeit von der der Tageszeit 
-\begin_inset Formula $t$
+\begin_inset Formula $t^{*}$
 \end_inset
 
 .
  Die Jahreszeit 
-\begin_inset Formula $T$
+\begin_inset Formula $T^{*}$
 \end_inset
 
- hat ebenfalls Einfluss auf die Trajektorie und soll als Parameter betrachtet
- werden.
+ hat ebenfalls Einfluss auf die Trajektorie und soll als weiterer Parameter
+ betrachtet werden.
  
 \begin_inset VSpace bigskip
 \end_inset
@@ -584,8 +588,7 @@ Den Ort der Sonne um den Winkel
 \end_layout
 
 \begin_layout Standard
-Der zweite Fall erscheint analytisch etwas einfacher zu sein und wird im
- folgenden gewählt.
+Der zweite Fall ist analytisch etwas einfacher und wird im folgenden gewählt.
  
 \end_layout
 
@@ -665,7 +668,7 @@ Die Erd-Rotationsachse
 \begin_inset Formula $\underline{e}$
 \end_inset
 
- ist wegen der Drehimpulserhaltung zeitinvariant.
+ ist wegen der Drehimpulserhaltung invariant gegenüber Tages- und Jahreszeiten.
  
 \end_layout
 
@@ -708,7 +711,7 @@ e_{3} & = & \cos\psi.\nonumber
 
 \begin_layout Standard
 gegeben.
- Für die Drehmatrix folgt 
+ Für die Drehmatrix folgt damit 
 \begin_inset Note Note
 status collapsed
 
@@ -875,7 +878,7 @@ noprefix "false"
 
 \begin_layout Standard
 Für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinkels 
-\begin_inset Formula $\omega T$
+\begin_inset Formula $\omega T^{*}$
 \end_inset
 
  mit 
@@ -888,9 +891,9 @@ Für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinkels
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\underline{S}=R_{S}\left(\begin{array}{c}
-\cos\left(\omega T\right)\\
-\sin\left(\omega T\right)\\
+\underline{S}\left(T^{*}\right)=R_{S}\left(\begin{array}{c}
+\cos\left(\omega T^{*}\right)\\
+\sin\left(\omega T^{*}\right)\\
 0
 \end{array}\right),\label{eq:Ort der Sonne}
 \end{equation}
@@ -902,7 +905,7 @@ Für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinkels
 
 \begin_layout Standard
 dabei ist 
-\begin_inset Formula $T\in\left[0,365\right)$
+\begin_inset Formula $T^{*}\in\left[0,365\right)$
 \end_inset
 
  die Jahreszeit, gemessen in der Tagesdifferenz zum 21.
@@ -912,19 +915,23 @@ dabei ist
 
 \begin_layout Standard
 Für jede Wahl der Jahreszeit 
-\begin_inset Formula $T$
+\begin_inset Formula $T^{*}$
 \end_inset
 
  soll sichergestellt sein, dass 
 \begin_inset Formula $\alpha=0$
 \end_inset
 
- den Sonnenhöchststand beschreibt.
+ den Sonnenhöchststand beschreibt, also 
+\begin_inset Formula $t^{*}$
+\end_inset
+
+ die Mittagszeit ist.
  
 \end_layout
 
 \begin_layout Section
-Fusspunkt des Stabes 
+Fusspunkt und Endpunkt des Stabes 
 \end_layout
 
 \begin_layout Standard
@@ -997,7 +1004,7 @@ Dabei wurde die geographischen Breite durch
 \begin_inset Formula $\Theta-\psi\longrightarrow\frac{\pi}{2}-\Theta+\psi$
 \end_inset
 
- ins Kugelkoordinatensystem umgerechnet (siehe dazu z.B.
+ in das Kugelkoordinatensystem umgerechnet (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -1011,10 +1018,6 @@ literal "false"
 
 ).
  
-\end_layout
-
-\begin_layout Section
-Endpunkt des Stabes 
 \end_layout
 
 \begin_layout Standard
@@ -1039,6 +1042,10 @@ Für den Punkt
 
 \begin_layout Section
 Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1114,7 +1121,11 @@ Die Ableitungen sind im Berührpunkt
 \end_layout
 
 \begin_layout Standard
-Für die implizite Gleichung der Tangentialebene im Berührpunkt 
+Für die implizite Gleichung der Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ im Berührpunkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -1150,7 +1161,7 @@ oder in vektorieller Schreibweise
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{P}^{T}\left(\underline{x}-\underline{P}\right) & = & 0.\label{eq:Tangentialebene}
+T:\qquad\underline{P}^{T}\left(\underline{x}-\underline{P}\right) & = & 0.\label{eq:Tangentialebene}
 \end{eqnarray}
 
 \end_inset
@@ -1191,7 +1202,7 @@ Die Punkte der Verbindungsgerade
 \end_inset
 
  der Sonne 
-\begin_inset Formula $\underline{S}$
+\begin_inset Formula $\underline{S}\left(T^{*}\right)$
 \end_inset
 
  mit dem Stabende 
@@ -1218,7 +1229,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-G:\qquad\underline{x} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\label{eq:Verbindungsgerade}
+G:\qquad\underline{x} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(T^{*}\right)\label{eq:Verbindungsgerade}
 \end{eqnarray}
 
 \end_inset
@@ -1243,7 +1254,7 @@ Berücksichtigt man die Drehung der Sonne durch die Drehmatrix
  und fixiert die Erde, dann folgt mit 
 \begin_inset Formula 
 \begin{equation}
-\underline{S}^{\alpha}=D_{\left(-\alpha\right)}\underline{S}\label{eq:SonneGedreht}
+\underline{S}^{\alpha}\left(T^{*}\right)=D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)\label{eq:SonneGedreht}
 \end{equation}
 
 \end_inset
@@ -1268,7 +1279,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-G_{S}^{\alpha}:\qquad\underline{x}_{S}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:VerbindungsgeradeSonneGedreht}
+G_{S}^{\alpha}:\qquad\underline{x}_{S}^{\alpha} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)\label{eq:VerbindungsgeradeSonneGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1385,7 +1396,7 @@ noprefix "false"
 ) mit der Bedingung 
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\label{eq:GesuchterPunktSonneGedreht}
+\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)\label{eq:GesuchterPunktSonneGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1434,7 +1445,7 @@ noprefix "false"
 ) liefert 
 \begin_inset Formula 
 \begin{eqnarray*}
-\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}-\underline{P}\right] & = & 0.
+\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)-\underline{P}\right] & = & 0.
 \end{eqnarray*}
 
 \end_inset
@@ -1643,7 +1654,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}.\label{eq:LösungspunkteSonneGedreht}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right).\label{eq:LösungspunkteSonneGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1749,7 +1760,11 @@ A=\left(\begin{array}{ccc}
 \end_layout
 
 \begin_layout Standard
-auf die Tangentialebene projiziert werden.
+auf die Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ projiziert werden.
  
 \end_layout
 
@@ -1837,7 +1852,15 @@ noprefix "false"
 
 \end_inset
 
-) und
+) und der entprechenden Gleichung für den Fall 
+\begin_inset Quotes gld
+\end_inset
+
+Erde gedreht
+\begin_inset Quotes grd
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1865,13 +1888,21 @@ hinreichend.
 \end_layout
 
 \begin_layout Standard
-Aus Gleichung
+Aus der Gleichung für den Fall 
+\begin_inset Quotes gld
+\end_inset
+
+Erde gedreht
+\begin_inset Quotes grd
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}\label{eq:LösungspunkteErdeGedreht}
+\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}\left(T^{*}\right)\label{eq:LösungspunkteErdeGedreht}
 \end{eqnarray}
 
 \end_inset
@@ -1894,21 +1925,7 @@ noprefix "false"
 
 \end_inset
 
-) 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-die zu beweisende Äquivalenz
+) die zu beweisende Äquivalenz
 \begin_inset space ~
 \end_inset
 
@@ -1928,8 +1945,8 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}D_{\left(-\alpha\right)}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)D_{\left(-\alpha\right)}\underline{S}\\
- & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\\
+D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}D_{\left(-\alpha\right)}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)\\
+ & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right)\\
  & = & \underline{x}_{0}^{S}\left(\alpha\right).
 \end{eqnarray*}
 

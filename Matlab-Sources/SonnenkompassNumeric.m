@@ -25,10 +25,12 @@ T      = days( tag - ssw );	% Jahreszeit [Tage seit Sommersonnenwende]
 omega  = 2 * pi / 365 * T;  % Jahreszeitwinkel
 
 % Kugelkoordinaten des Fusspunkt des Stabes, geographische Länge 0°, 
-% dabei Neigung der Erd-Rotationsachse berücksichtigen
+% dabei Neigung der Erd-Rotationsachse psi berücksichtigen
 p1 = rE * sin( breite + psi );	% x-Koordinate
-p2 = rE * sin( omega );         % y-Koordinate
-p3 = rE * cos( breite + psi );	% z-Koordinate
+p2 = 0;                         % y-Koordinate
+p3 = rE * cos( breite + psi );  % z-Koordinate
+
+[ p1, p2, p3 ] = RotateAroundEarthAxis( p1, p2, p3, psi, omega );
 
 % Substitution
 mue0 = OmegaS / ( 1 + OmegaS );
@@ -69,14 +71,18 @@ end
 
 % Koordinatentransformation
 for i = 1 : N + 1
-    [ a, b ] = MapToTangentialPlane( pts( i, 1 ), pts( i, 2 ), pts( i, 3 ), ...
-                    0, pi / 2 - ( breite + psi ) );
+    [ x1, x2, x3 ] = RotateAroundEarthAxis( pts( i, 1 ), pts( i, 2 ), ...
+                        pts( i, 3 ), psi, -omega );
+    [ a, b ] = MapToTangentialPlane( x1, x2, x3, 0, pi / 2 - ( breite + psi ) );
+
     abstand( i ) = sqrt( a^2 + b^2 );
     y( i, : )    = [ a, b ];
 end
 
 [ minAbstand, ndx ] = min( abstand );
-mint               = t( ndx( 1 ) )
+mint                = t( ndx( 1 ) );
+sprintf( 'Minimaler Abstand [m]: %1.3f\tZeitpunkt [s]: %1.1f', ...
+    minAbstand( 1 ) , abs( mint ) )
 
 % Plotten der Ergebnisse
 figure
