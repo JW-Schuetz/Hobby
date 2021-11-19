@@ -31,7 +31,7 @@ p2 = 0;                         % y-Koordinate
 p3 = rE * cos( breite + psi );  % z-Koordinate
 
 % Ort der Jahreszeit entsprechend drehen, dass zum Sonnenhöchststand alpha=0 gilt
-[ p1, p2, p3 ] = RotateAroundEarthAxis( DAlpha, p1, p2, p3, omega );
+[ p1, p2, p3 ] = RotateDAlpha( DAlpha, p1, p2, p3, omega );
 
 % Test: hat der Punkt P den Winkel omega zwischen x1- und x2-Achse?
 atan2( p2, p1 )
@@ -68,7 +68,7 @@ end
 % Koordinatentransformation
 for i = 1 : N
     % Ort der Jahreszeit entsprechend zurückdrehen
-	[ x1, x2, x3 ] = RotateAroundEarthAxis( DAlpha, pts( i, 1 ), ...
+	[ x1, x2, x3 ] = RotateDAlpha( DAlpha, pts( i, 1 ), ...
                         pts( i, 2 ), pts( i, 3 ), -omega );
 
     [ a, b ] = MapToTangentialPlane( x1, x2, x3, 0, ...
