@@ -6,7 +6,7 @@ clear
 
 format long
 
-load( 'sonnenkompass.mat', 'Q', 'SAlpha', 'OmegaS' )
+load( 'sonnenkompass.mat', 'DAlpha', 'Q', 'SAlpha', 'OmegaS' )
 
 % fixe Daten
 rE  = 6371000.8;            % mittlerer Erdradius [m] (GRS 80, WGS 84)
@@ -31,7 +31,10 @@ p2 = 0;                         % y-Koordinate
 p3 = rE * cos( breite + psi );  % z-Koordinate
 
 % Ort der Jahreszeit entsprechend drehen, dass zum Sonnenhöchststand alpha=0 gilt
-[ p1, p2, p3 ] = RotateAroundEarthAxis( p1, p2, p3, psi, omega );
+[ p1, p2, p3 ] = RotateAroundEarthAxis( DAlpha, p1, p2, p3, omega );
+
+% Test: hat der Punkt P den Winkel omega zwischen x1- und x2-Achse?
+atan2( p2, p1 )
 
 % Substitution
 mue0 = OmegaS / ( 1 + OmegaS );
@@ -65,8 +68,9 @@ end
 % Koordinatentransformation
 for i = 1 : N
     % Ort der Jahreszeit entsprechend zurückdrehen
-    [ x1, x2, x3 ] = RotateAroundEarthAxis( pts( i, 1 ), pts( i, 2 ), pts( i, 3 ), ...
-                        psi, -omega );
+	[ x1, x2, x3 ] = RotateAroundEarthAxis( DAlpha, pts( i, 1 ), ...
+                        pts( i, 2 ), pts( i, 3 ), -omega );
+
     [ a, b ] = MapToTangentialPlane( x1, x2, x3, 0, ...
                     pi / 2 - ( breite + psi ) );
 
@@ -76,7 +80,7 @@ end
 
 [ minAbstand, ndx ] = min( abstand );
 mint                = t( ndx( 1 ) );
-sprintf( 'Minimaler Abstand [m]: %1.3f\tZeitpunkt [h]: %1.1f', ...
+sprintf( 'Minimaler Abstand: %1.2f m\tZeitpunkt: %1.1f min', ...
     minAbstand( 1 ) , abs( mint ) )
 
 % Plotten der Ergebnisse
@@ -90,7 +94,7 @@ axis( 'equal' )
 
 squareSize = 2; % [m]
 xlim( squareSize * [ -1, 1 ] );
-ylim( squareSize * [ -1, 1 ] );
+ylim( squareSize * [ -0.1, 1 ] );
 
 xlabel( 'West-Ost [m]' )
 ylabel( 'Süd-Nord [m]' )
@@ -102,4 +106,4 @@ plot( y( :, 1 ), y( :, 2 ), 'Color', 'k', 'LineWidth', 2 )
 % Parameter plotten
 % plot( 0, 0, 'o', 'MarkerSize', 2, 'MarkerFaceColor', 'b' )
 
-legend( 'Stabposition' )
+legend( 'Stabposition', 'Trajektorie' )

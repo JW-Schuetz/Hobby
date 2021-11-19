@@ -66,4 +66,4 @@ PSAlpha = collect( P' * SAlpha, P );
 OmegaS = simplify( RE - PSAlpha / RE );
 OmegaS = OmegaS / LS;
 
-save( 'sonnenkompass.mat', 'Q', 'SAlpha', 'OmegaS' )
+save( 'sonnenkompass.mat', 'DAlpha', 'Q', 'SAlpha', 'OmegaS' )

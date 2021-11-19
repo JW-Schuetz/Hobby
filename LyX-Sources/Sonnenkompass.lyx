@@ -926,8 +926,107 @@ Für jede Wahl der Jahreszeit
 \begin_inset Formula $t^{*}$
 \end_inset
 
- die Mittagszeit ist.
+ Mittags 12 Uhr ist.
+ Dazu werden die mit der Erde verbundenen Punkte um einen Winkel 
+\begin_inset Formula $\alpha^{*}$
+\end_inset
+
+ um die Erdrotationsachse gedreht, sodass 
+\begin_inset Formula $\underline{P}^{*}$
+\end_inset
+
+ gerade den Winkel 
+\begin_inset Formula $\omega T^{*}$
+\end_inset
+
+ besitzt.
+ Es folgt die Forderung an 
+\begin_inset Formula $\alpha^{*}$
+\end_inset
+
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\arctan\left(\frac{p_{2}^{*}}{p_{1}^{*}}\right) & = & \omega T^{*}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+oder 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{p_{2}^{*}}{p_{1}^{*}} & = & \tan\left(\omega T^{*}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+p_{1}^{*}\\
+p_{2}^{*}\\
+p_{3}^{*}
+\end{array}\right) & = & D_{\alpha^{*}}\left(\begin{array}{c}
+p_{1}\\
+0\\
+p_{3}
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wegen der Wahl des Punktes 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ auf der geographischen Länge 
+\begin_inset Formula $\varphi=0$
+\end_inset
+
+ gilt 
+\begin_inset Formula $p_{2}=0$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $p_{1}^{*}$
+\end_inset
+
+ und 
+\begin_inset Formula $p_{2}^{*}$
+\end_inset
+
+ folgt mit der Drehmatrix nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DrehmatrixAlpha"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
 \end_layout
 
 \begin_layout Section
@@ -1957,7 +2056,7 @@ D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}D_
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Section
 Überprüfung 
