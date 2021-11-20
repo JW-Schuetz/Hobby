@@ -17,6 +17,7 @@ function SonnenkompassNumeric
 
     ssw    = datetime( '21.06.2021' );	% Datum Sommersonnenwende
     tag    = datetime( '12.10.2021' );	% Datum
+    tag    = datetime( '21.06.2021' );	% Datum
     T      = days( tag - ssw );         % Jahreszeit [Tage seit Sommersonnenwende]
 	omega  = 2 * pi / 365 * T;          % Jahreszeitwinkel
 
@@ -108,7 +109,7 @@ function plotIt( t, y )
     ylabel( 'Süd-Nord [m]' )
 
     % Ort des Stabes plotten
-    plot( 0, 0, 'o', 'MarkerSize', 5, 'MarkerFaceColor', 'r' )
+    plot( 0, 0, 'o', 'MarkerSize', 10, 'MarkerFaceColor', 'r' )
     % Schatten-Trajektorie plotten
     plot( y( :, 1 ), y( :, 2 ), '-o', 'MarkerSize', 2, 'Color', 'k', 'LineWidth', 1 )
 

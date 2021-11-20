@@ -1942,6 +1942,10 @@ D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}D_
 Ergebnisse 
 \end_layout
 
+\begin_layout Subsection
+Vergleich mit empirisch ermittelten Resultaten 
+\end_layout
+
 \begin_layout Standard
 Abbildung
 \begin_inset space ~
@@ -1961,6 +1965,9 @@ noprefix "false"
  des Stabes für Las Palmas de Gran Canaria am 12.10.2021.
  Zwischen den Markierungen der Trajektorie liegen jeweils 10 Minuten.
  Für die Stablänge wurde 1.5 m angenommen.
+ Markiert sind zwei Punkte im zeitlichen Abstand von 20 Minuten (13:50 Uhr
+ und 14:10 Uhr), ihr Abstand beträgt 21.31 cm.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1977,7 +1984,7 @@ status open
 \begin_inset Graphics
 	filename SchattenTrajektorie.eps
 	lyxscale 160
-	scale 60
+	scale 55
 
 \end_inset
 
@@ -2025,6 +2032,7 @@ Leider habe ich vor Ort weder die genaue Länge des Stabes noch die genaue
 \end_inset
 
 .
+ Dieses Ergebnis passt recht gut zum rechnerisch ermittelten Abstand.
  
 \end_layout
 
@@ -2041,14 +2049,14 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename LasPalmas-12.10.2021-13Uhr33.jpeg
-	scale 20
+	scale 18
 
 \end_inset
 
 
 \begin_inset Graphics
 	filename LasPalmas-12.10.2021-13Uhr55.jpeg
-	scale 20
+	scale 18
 
 \end_inset
 
@@ -2057,6 +2065,45 @@ status open
 
 \begin_layout Plain Layout
 Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SchattenTrajektorieSSW.eps
+	lyxscale 160
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schattentrajektorie zur Sommersonnenwende am 21.06.2021 in Las Palmas
 \end_layout
 
 \end_inset
