@@ -46,8 +46,9 @@ function SonnenkompassNumeric
 
     % Substitution
     mue0 = omegaS / ( 1 + omegaS );
-	mue0 = subs( mue0 );    % Zahlenwerte substituieren (alle bis auf alpha)
-    
+	mue0 = subs( mue0, 'p3', p3 );	% Zahlenwert für p3 substituieren
+ 	mue0 = subs( mue0 );            % Zahlenwerte substituieren (alle bis auf alpha)
+   
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
     x0 = subs( x0 );      % Zahlenwerte substituieren (alle bis auf alpha)
 
