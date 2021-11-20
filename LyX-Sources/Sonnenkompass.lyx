@@ -922,12 +922,20 @@ Für jede Wahl der Jahreszeit
 \begin_inset Formula $\alpha=0$
 \end_inset
 
- den Sonnenhöchststand beschreibt, also 
+ den Sonnenhöchststand beschreibt, dass also 
 \begin_inset Formula $t^{*}$
 \end_inset
 
  Mittags 12 Uhr ist.
- Dazu werden die mit der Erde verbundenen Punkte um einen Winkel 
+ 
+\end_layout
+
+\begin_layout Standard
+Dazu wird der Stabfusspunkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ um einen Winkel 
 \begin_inset Formula $\alpha^{*}$
 \end_inset
 
@@ -935,11 +943,11 @@ Für jede Wahl der Jahreszeit
 \begin_inset Formula $\underline{P}^{*}$
 \end_inset
 
- gerade den Winkel 
+ mit dem Winkel 
 \begin_inset Formula $\omega T^{*}$
 \end_inset
 
- besitzt.
+ übereinstimmt.
  Dazu muss 
 \end_layout
 
@@ -958,7 +966,7 @@ Für jede Wahl der Jahreszeit
 gefordert werden oder 
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{p_{2}^{*}}{p_{1}^{*}} & = & \tan\left(\omega T^{*}\right)
+\frac{p_{2}^{*}}{p_{1}^{*}} & = & \tan\left(\omega T^{*}\right)=\gamma
 \end{eqnarray*}
 
 \end_inset
@@ -999,57 +1007,26 @@ Es gilt
 \begin_inset Formula $\varphi=0$
 \end_inset
 
-.
  
 \end_layout
 
 \begin_layout Standard
-(p1*cos(psi)*sin(alpha) - p2*sin(alpha)*sin(psi))/(p1*(cos(alpha) - sin(psi)^2*(
-cos(alpha) - 1)) - p2*cos(psi)*sin(psi)*(cos(alpha) - 1))
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\frac{p_{1}\cos\psi\sin\alpha-p_{2}\sin\alpha\sin\psi}{p_{1}\left[\cos\alpha-\sin^{2}\psi\left(\cos\alpha-1\right)-p_{2}\left[\cos\psi\sin\psi\left(\cos\alpha-1\right)\right]\right]}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Für 
-\begin_inset Formula $p_{1}^{*}$
-\end_inset
-
- und 
-\begin_inset Formula $p_{2}^{*}$
-\end_inset
-
- folgt mit der Drehmatrix nach Gleichung
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:DrehmatrixAlpha"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
-\[
-p_{1}^{*}=
-\]
+\begin{eqnarray*}
+\frac{p_{2}^{*}}{p_{1}^{*}} & = & \frac{\sin\alpha^{*}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)}{p_{1}\left[\cos\alpha^{*}-\sin^{2}\psi\left(\cos\alpha^{*}-1\right)\right]-p_{3}\cos\psi\sin\psi\left(\cos\alpha^{*}-1\right)}.
+\end{eqnarray*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Wegen 
+\begin_inset Formula $p_{1}^{2}+p_{3}^{2}=1$
+\end_inset
+
+ kann man schreiben 
 \end_layout
 
 \begin_layout Section

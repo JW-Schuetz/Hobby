@@ -31,10 +31,8 @@ function SonnenkompassNumeric
     p2 = 0;                         % y-Koordinate
     p3 = rE * cos( breite + psi );  % z-Koordinate
 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Drehwinkel bestimmen für Sonnenhöchststand bei alpha=0
     alphaShift = calculateShiftAngle( dAlpha, alpha, psi, omega, p1, p2, p3 );
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     % Ort der Jahreszeit entsprechend drehen
     [ p1, p2, p3 ] = RotateDAlpha( dAlpha, psi, p1, p2, p3, alphaShift );
@@ -47,6 +45,8 @@ function SonnenkompassNumeric
     % Substitution
     mue0 = omegaS / ( 1 + omegaS );
 
+	mue0 = subs( mue0, 'rS', rS );	% Zahlenwert für rS substituieren
+	mue0 = subs( mue0, 'lS', lS );	% Zahlenwert für lS substituieren
 	mue0 = subs( mue0, 'p1', p1 );	% Zahlenwert für p1 substituieren
 	mue0 = subs( mue0, 'p2', p2 );	% Zahlenwert für p2 substituieren
 	mue0 = subs( mue0, 'p3', p3 );	% Zahlenwert für p3 substituieren
@@ -102,6 +102,21 @@ function SonnenkompassNumeric
     plotIt( y )
 end
 
+function [ x1, x2, x3 ] = rotateX3( phi, x1, x2, x3 )
+    c = cos( phi );
+    s = sin( phi );
+
+    D = [ c, -s, 0;
+          s,  c, 0;
+          0,  0, 1 ];
+
+    x = D * [ x1; x2; x3 ];
+
+    x1 = x( 1 );
+    x2 = x( 2 );
+    x3 = x( 3 );
+end
+
 function plotIt( y )
     % Plotten der Ergebnisse
     figure
@@ -127,17 +142,9 @@ function plotIt( y )
     legend( 'Stabposition', 'Trajektorie' )
 end
 
-function alphaShift = calculateShiftAngle( dAlpha, alpha, psiLocal, omega, p1, p2, p3 )
+function alphaShift = calculateShiftAngle( dAlpha, alpha, psi, omega, p1, p2, p3 )
     % Drehwinkel bestimmen
-    alpha = sym( alpha );
-    psiLocal   = sym( psiLocal );
-    omega = sym( omega );
-    p1    = sym( p1 );
-    p2    = sym( p2 );
-    p3    = sym( p3 );
-
-    % psi substituieren
-    dAlpha = subs( dAlpha, 'psi', psiLocal );
+    dAlpha = subs( dAlpha, 'psi', psi );    % psi substituieren
 
     x = dAlpha * [ p1; p2; p3 ];
 
@@ -156,16 +163,7 @@ end
 function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, phi, theta )
     % Punkt drehen um x3-Achse um den Winkel phi
     if( phi ~= 0 )
-        c = cos( phi );
-        s = sin( phi );
-        D = [ c, -s, 0;
-              s,  c, 0;
-              0,  0, 1 ];
-
-        x = D * [ x1; x2; x3 ];
-        x1 = x( 1 );
-        x2 = x( 2 );
-        x3 = x( 3 );
+        [ x1, x2, x3 ] = rotateX3( phi, x1, x2, x3 );
     end
 
     % Punkt drehen um x2-Achse und den Winkel theta
