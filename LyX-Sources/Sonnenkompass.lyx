@@ -1966,7 +1966,7 @@ noprefix "false"
  Zwischen den Markierungen der Trajektorie liegen jeweils 10 Minuten.
  Für die Stablänge wurde 1.5 m angenommen.
  Markiert sind zwei Punkte im zeitlichen Abstand von 20 Minuten (13:50 Uhr
- und 14:10 Uhr), ihr Abstand beträgt 21.31 cm.
+ und 14:10 Uhr), ihr Abstand beträgt 22.48 cm.
  
 \end_layout
 
@@ -2017,7 +2017,17 @@ Schattentrajektorie am 12.10.2021 in Las Palmas
 
 \begin_layout Standard
 Ebenfalls am 12.10.2021 sind die nachfolgenden Fotos entstanden.
- Im ersten der beiden Fotos sieht man das gelbe Fussende des Stabes.
+ Im ersten der beiden Fotos der Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SchattenFotos"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ sieht man das gelbe Fussende des Stabes.
  Der Zeitunterschied beider Aufnahmen beträgt 22 Minuten.
  In dieser Zeit ist der Schatten ca.
  20 cm weiter gewandert
@@ -2064,6 +2074,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SchattenFotos"
+
+\end_inset
+
 Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr 
 \end_layout
 
@@ -2118,6 +2134,21 @@ Schattentrajektorie zur Sommersonnenwende am 21.06.2021 in Las Palmas
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Bewertung der Genauigkeit 
+\end_layout
+
+\begin_layout Standard
+Entgegen der Annahme der Methode zur Bestimmung der Nord-Richtung per Sonnenstan
+d, ist die Schattentrajektorie keine Gerade.
+ Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
+ vernachlässigbar.
+ Wenn man eine Uhr zur Verfügung hat, kann man die Genauigkeit stark verbessern,
+ indem man Schattenpunkte untersucht, die symmetrisch um den Mittagszeitpunkt
+ liegen.
+ 
 \end_layout
 
 \begin_layout Standard

@@ -87,10 +87,10 @@ function SonnenkompassNumeric
     sprintf( 'Minimaler Abstand: %1.2f m\tZeitpunkt: %1.1f min', ...
         minAbstand( 1 ) , abs( mint ) )
 
-    plotIt( t, y )
+    plotIt( y )
 end
 
-function plotIt( t, y )
+function plotIt( y )
     % Plotten der Ergebnisse
     figure
 
@@ -112,6 +112,9 @@ function plotIt( t, y )
     plot( 0, 0, 'o', 'MarkerSize', 10, 'MarkerFaceColor', 'r' )
     % Schatten-Trajektorie plotten
     plot( y( :, 1 ), y( :, 2 ), '-o', 'MarkerSize', 2, 'Color', 'k', 'LineWidth', 1 )
+    % Markierung 12 Uhr
+	text( 0, 0.3, '\downarrow', 'HorizontalAlignment', 'center' )
+	text( 0, 0.4, '12:00 Uhr', 'HorizontalAlignment', 'center' )
 
     legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
 end
