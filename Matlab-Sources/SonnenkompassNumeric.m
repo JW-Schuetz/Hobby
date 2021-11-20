@@ -1,29 +1,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Numerische Lösung des Problems "Sonnenkompass"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#ok<*UNRCH>
 function SonnenkompassNumeric
     clc
     clear
 
     format long
 
-    load( 'sonnenkompass.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' )
+    load( 'sonnenkompass.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
 
     % fixe Daten
-    rE  = 6371000.8;            % mittlerer Erdradius [m] (GRS 80, WGS 84)
-    rS  = 149597870700;         % AE, mittlerer Abstand Erde - Sonne [m]
-    psi = 23.44 / 180.0 * pi;	% Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
-    ssw = datetime( '21.06.2021' ); % Datum Sommersonnenwende
+    rE  = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
+    rS  = 149597870700;             % AE, mittlerer Abstand Erde - Sonne [m]
+    psi = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
+
+    ssw    = datetime( '21.06.2021' );	% Datum Sommersonnenwende
+    tag    = datetime( '12.10.2021' );	% Datum
+    T      = days( tag - ssw );         % Jahreszeit [Tage seit Sommersonnenwende]
+	omega  = 2 * pi / 365 * T;          % Jahreszeitwinkel
 
     % variable Daten
     lS  = 1.5;                      % Stablänge [m]
-    tag = datetime( '12.10.2021' ); % Datum
     % Ort: Las Palmas de Gran Canaria, P.º las Canteras, 74
     breite  = 28.136746041614316 / 180.0 * pi;
-
     breite = pi / 2 - breite;	% Geographische- in Kugelkoordinaten umrechnen
-    T      = days( tag - ssw );	% Jahreszeit [Tage seit Sommersonnenwende]
-    omega  = 2 * pi / 365 * T;  % Jahreszeitwinkel
 
     % Kugelkoordinaten des Fusspunkt des Stabes, geographische Länge 0°, 
     % dabei Neigung der Erd-Rotationsachse psi berücksichtigen
@@ -31,26 +32,16 @@ function SonnenkompassNumeric
     p2 = 0;                         % y-Koordinate
     p3 = rE * cos( breite + psi );  % z-Koordinate
 
-    % Drehwinkel bestimmen für Sonnenhöchststand bei alpha=0
-    alphaShift = calculateShiftAngle( dAlpha, alpha, psi, omega, p1, p2, p3 );
-
-    % Ort der Jahreszeit entsprechend drehen
-    [ p1, p2, p3 ] = RotateDAlpha( dAlpha, psi, p1, p2, p3, alphaShift );
-
-	% Überprüfung des gefundenen Winkels
-    if( abs( omega - atan2( p2, p1 ) ) > 0.01 )
-        error( 'Wrong shift angle' )
-    end
-
     % Substitution
     mue0 = omegaS / ( 1 + omegaS );
 
-	mue0 = subs( mue0, 'rS', rS );	% Zahlenwert für rS substituieren
-	mue0 = subs( mue0, 'lS', lS );	% Zahlenwert für lS substituieren
-	mue0 = subs( mue0, 'p1', p1 );	% Zahlenwert für p1 substituieren
-	mue0 = subs( mue0, 'p2', p2 );	% Zahlenwert für p2 substituieren
-	mue0 = subs( mue0, 'p3', p3 );	% Zahlenwert für p3 substituieren
- 	mue0 = subs( mue0 );            % Zahlenwerte substituieren (alle anderen bis auf alpha)
+	mue0 = subs( mue0, 'omega', omega );	% Zahlenwert für omega substituieren
+	mue0 = subs( mue0, 'rS', rS );          % Zahlenwert für rS substituieren
+	mue0 = subs( mue0, 'lS', lS );          % Zahlenwert für lS substituieren
+	mue0 = subs( mue0, 'p1', p1 );          % Zahlenwert für p1 substituieren
+	mue0 = subs( mue0, 'p2', p2 );          % Zahlenwert für p2 substituieren
+	mue0 = subs( mue0, 'p3', p3 );          % Zahlenwert für p3 substituieren
+ 	mue0 = subs( mue0 );                    % Zahlenwerte substituieren (alle anderen bis auf alpha)
 
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
     x0 = subs( x0 );      % Zahlenwerte substituieren (alle bis auf alpha)
@@ -58,16 +49,16 @@ function SonnenkompassNumeric
     % Trajektorie in Las Palmas ca.: ds = 3cm/10min. (experimentell ermittelt)
     % numerische Auswertung, Plotten
     N       = 100;          % Anzahl Punkte
-    minutes = 120;          % Anzahl Minuten (ab Mittags Sonnenhöchststand =12Uhr?)
+    minutes = 60 * 24;      % Anzahl Minuten
     delta   = minutes / N;	% Delta Minuten
 
-    pts     = zeros( N, 3 );    % [m]
-    y       = zeros( N, 2 );    % [m]
-    t       = zeros( N, 1 );    % [h]
-    abstand = zeros( N, 1 );    % [m]
+    pts     = zeros( N + 1, 3 );    % [m]
+    y       = zeros( N + 1, 2 );    % [m]
+    t       = zeros( N + 1, 1 );    % [h]
+    abstand = zeros( N + 1, 1 );    % [m]
 
     % Zeitpunkte berechnen
-    for i = 1 : N
+    for i = 1 : N + 1
         t( i ) = ( i - 1 ) * delta;     % t in Minuten 
         alpha  = pi / 720 * t( i );
 
@@ -82,13 +73,9 @@ function SonnenkompassNumeric
     end
 
     % Koordinatentransformation
-    for i = 1 : N
-        % Ort der Jahreszeit entsprechend zurückdrehen
-        [ x1, x2, x3 ] = RotateDAlpha( dAlpha, psi, pts( i, 1 ), ...
-                            pts( i, 2 ), pts( i, 3 ), -alphaShift );
-
-        [ a, b ] = MapToTangentialPlane( x1, x2, x3, 0, ...
-                        pi / 2 - ( breite + psi ) );
+    for i = 1 : N + 1
+        [ a, b ] = MapToTangentialPlane( pts( i, 1 ), pts( i, 2 ), ...
+                        pts( i, 3 ), 0, pi / 2 - ( breite + psi ) );
 
         abstand( i ) = sqrt( a^2 + b^2 );
         y( i, : )    = [ a, b ];
@@ -100,21 +87,6 @@ function SonnenkompassNumeric
         minAbstand( 1 ) , abs( mint ) )
 
     plotIt( y )
-end
-
-function [ x1, x2, x3 ] = rotateX3( phi, x1, x2, x3 )
-    c = cos( phi );
-    s = sin( phi );
-
-    D = [ c, -s, 0;
-          s,  c, 0;
-          0,  0, 1 ];
-
-    x = D * [ x1; x2; x3 ];
-
-    x1 = x( 1 );
-    x2 = x( 2 );
-    x3 = x( 3 );
 end
 
 function plotIt( y )
@@ -142,24 +114,6 @@ function plotIt( y )
     legend( 'Stabposition', 'Trajektorie' )
 end
 
-function alphaShift = calculateShiftAngle( dAlpha, alpha, psi, omega, p1, p2, p3 )
-    % Drehwinkel bestimmen
-    dAlpha = subs( dAlpha, 'psi', psi );    % psi substituieren
-
-    x = dAlpha * [ p1; p2; p3 ];
-
-    solution = solve( x( 2 ) == tan( omega ) * x( 1 ), alpha, 'real', true );
-    if( ~isempty( solution ) )
-        alphaShift = eval( solution );
-
-        % falls mehrere Lösungen gefunden werden: die grösste nehmen
-        alphaShift = sort( alphaShift, 'descend' );
-        alphaShift = alphaShift( 1 );
-    else
-        error( 'No solution found' )
-    end
-end
-
 function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, phi, theta )
     % Punkt drehen um x3-Achse um den Winkel phi
     if( phi ~= 0 )
@@ -168,16 +122,7 @@ function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, phi, theta )
 
     % Punkt drehen um x2-Achse und den Winkel theta
     if( theta ~= 0 )
-        c = cos( theta );
-        s = sin( theta );
-        D = [  c, 0, s;
-               0, 1, 0;
-              -s, 0, c ];
-
-        x = D * [ x1; x2; x3 ];
-        x1 = x( 1 );
-        x2 = x( 2 );
-        x3 = x( 3 );
+        [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 );
     end
 
     % Projizieren auf die Tangentialebene
@@ -185,20 +130,37 @@ function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, phi, theta )
           0, 0, 1 ];
 
     x = A * [ x1; x2; x3 ];
+
     x2 = x( 1 );
     x3 = x( 2 );
 end
 
-function [ x1, x2, x3 ] = RotateDAlpha( dAlpha, psi, x1, x2, x3, alpha )
-    % Punkt um den Winkel alpha drehen um Erdrotations-Achse 
-    if( alpha ~= 0 )
-        dAlpha = subs( dAlpha, 'psi', psi );
-        dAlpha = eval( subs( dAlpha ) );
+function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
+    c = cos( theta );
+    s = sin( theta );
 
-        x  = dAlpha * [ x1; x2; x3 ];
+    D = [  c, 0, s;
+           0, 1, 0;
+          -s, 0, c ];
 
-        x1 = x( 1 );
-        x2 = x( 2 );
-        x3 = x( 3 );
-    end
+    x = D * [ x1; x2; x3 ];
+
+    x1 = x( 1 );
+    x2 = x( 2 );
+    x3 = x( 3 );
+end
+
+function [ x1, x2, x3 ] = rotateX3( phi, x1, x2, x3 )
+    c = cos( phi );
+    s = sin( phi );
+
+    D = [ c, -s, 0;
+          s,  c, 0;
+          0,  0, 1 ];
+
+    x = D * [ x1; x2; x3 ];
+
+    x1 = x( 1 );
+    x2 = x( 2 );
+    x3 = x( 3 );
 end
