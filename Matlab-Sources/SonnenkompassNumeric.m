@@ -48,8 +48,8 @@ function SonnenkompassNumeric
 
     % Trajektorie in Las Palmas ca.: ds = 3cm/10min. (experimentell ermittelt)
     % numerische Auswertung, Plotten
-    N       = 100;          % Anzahl Punkte
     minutes = 60 * 24;      % Anzahl Minuten
+    N       = minutes / 10;	% Anzahl Punkte
     delta   = minutes / N;	% Delta Minuten
 
     pts     = zeros( N + 1, 3 );    % [m]
@@ -86,12 +86,13 @@ function SonnenkompassNumeric
     sprintf( 'Minimaler Abstand: %1.2f m\tZeitpunkt: %1.1f min', ...
         minAbstand( 1 ) , abs( mint ) )
 
-    plotIt( y )
+    plotIt( t, y )
 end
 
-function plotIt( y )
+function plotIt( t, y )
     % Plotten der Ergebnisse
     figure
+
     title( 'Trajektorie des Schattenendes' )
 
     hold 'on'
@@ -99,7 +100,7 @@ function plotIt( y )
     grid 'on'
     axis( 'equal' )
 
-    squareSize = 2; % [m]
+    squareSize = 2;     % [m]
     xlim( squareSize * [ -1, 1 ] );
     ylim( squareSize * [ -0.1, 1 ] );
 
@@ -109,9 +110,9 @@ function plotIt( y )
     % Ort des Stabes plotten
     plot( 0, 0, 'o', 'MarkerSize', 5, 'MarkerFaceColor', 'r' )
     % Schatten-Trajektorie plotten
-    plot( y( :, 1 ), y( :, 2 ), 'Color', 'k', 'LineWidth', 2 )
+    plot( y( :, 1 ), y( :, 2 ), '-o', 'MarkerSize', 2, 'Color', 'k', 'LineWidth', 1 )
 
-    legend( 'Stabposition', 'Trajektorie' )
+    legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
 end
 
 function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, phi, theta )
