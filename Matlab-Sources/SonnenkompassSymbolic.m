@@ -4,26 +4,48 @@
 clc
 clear
 
-% Symbol-Definitionen
-Omega = sym( 'omega', 'real' );     % Jahreszeiteinfluss
-Psi   = sym( 'psi', 'real' );       % Komplementwinkel Erd-Rotationsachse zur Ekliptik
-RS    = sym( 'rS', 'real' );        % Abstand Erde - Sonne
-RE    = sym( 'rE', 'real' );        % Erdradius
-LS    = sym( 'lS', 'real' );        % Stablänge
+%#ok<*UNRCH> 
+
+alt = false;
+
+% Symbol-Definitionen:
+if( alt )
+    syms Omega Psi RS RE LS real
+else
+    Omega = sym( 'omega', 'real' );     % Jahreszeiteinfluss
+    Psi   = sym( 'psi', 'real' );       % Komplementwinkel Erd-Rotationsachse zur Ekliptik
+    RS    = sym( 'rS', 'real' );        % Abstand Erde - Sonne
+    RE    = sym( 'rE', 'real' );        % Erdradius
+    LS    = sym( 'lS', 'real' );        % Stablänge
+end
 
 % Einheitsvektor Rotationsachse
-E      = sym( 'e', [ 3, 1 ], 'real' );
+if( alt )
+    syms E [ 3, 1 ] real
+else
+    E = sym( 'e', [ 3, 1 ], 'real' );
+end
+
 E( 1 ) = sin( Psi );
 E( 2 ) = 0;
 E( 3 ) = cos( Psi );
 
 % Erd-Rotationswinkel (2*pi/24h), alpha=0 -> Mittags d.h.Sonnenhöchststand
-Alpha = sym( 'alfa', 'real' );
-ca    = cos( Alpha );
-sa    = sin( Alpha );
+if( alt )
+    syms Alpha real
+else
+    Alpha = sym( 'alfa', 'real' );
+end
+
+ca = cos( Alpha );
+sa = sin( Alpha );
 
 % Drehmatrix
-DAlpha = sym( 'dAlpha', [ 3, 3 ], 'real' );
+if( alt )
+    syms DAlpha [ 3, 3 ] real
+else
+    DAlpha = sym( 'dAlpha', [ 3, 3 ], 'real' );
+end
 
 DAlpha( 1, 1 ) = E( 1 )^2        * ( 1 - ca ) + ca;             % 1. Spalte
 DAlpha( 2, 1 ) = E( 2 ) * E( 1 ) * ( 1 - ca ) + E( 3 ) * sa;
@@ -38,11 +60,21 @@ DAlpha( 2, 3 ) = E( 2 ) * E( 3 ) * ( 1 - ca ) - E( 1 ) * sa;
 DAlpha( 3, 3 ) = E( 3 )^2        * ( 1 - ca ) + ca;
 
 % Fusspunkt des Stabes auf der Erdoberfläche und Stabende
-P = sym( 'p', [ 3, 1 ], 'real' );
+if( alt )
+	syms P [ 3, 1 ] real
+else
+    P = sym( 'p', [ 3, 1 ], 'real' );
+end
+
 Q = ( 1 + LS / RE ) * P;
 
 % Sonne
-S = sym( 's', [ 3, 1 ], 'real' );
+if( alt )
+    syms S [ 3, 1 ] real
+else
+    S = sym( 's', [ 3, 1 ], 'real' );
+end
+
 S( 1 ) = RS * cos( Omega );
 S( 2 ) = RS * sin( Omega );
 S( 3 ) = 0;

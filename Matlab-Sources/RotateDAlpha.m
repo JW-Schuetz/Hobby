@@ -1,4 +1,4 @@
-function [ x1, x2, x3 ] = RotateDAlpha( DAlpha, x1, x2, x3, alfa )
+function [ x1, x2, x3 ] = RotateDAlpha( DAlpha, psi, x1, x2, x3, alfa )
     % Punkt um den Winkel alpha drehen um Erdrotations-Achse 
     if( alfa ~= 0 )
         DAlphaNumeric = eval( subs( DAlpha ) );
