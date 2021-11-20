@@ -6,7 +6,7 @@ clear
 
 format long
 
-load( 'sonnenkompass.mat', 'DAlpha', 'Q', 'SAlpha', 'OmegaS' )
+load( 'sonnenkompass.mat', 'Alpha', 'DAlpha', 'Q', 'SAlpha', 'OmegaS' )
 
 % fixe Daten
 rE  = 6371000.8;            % mittlerer Erdradius [m] (GRS 80, WGS 84)
@@ -31,10 +31,24 @@ p2 = 0;                         % y-Koordinate
 p3 = rE * cos( breite + psi );  % z-Koordinate
 
 % Ort der Jahreszeit entsprechend drehen, dass zum Sonnenhöchststand alpha=0 gilt
-[ p1, p2, p3 ] = RotateDAlpha( DAlpha, p1, p2, p3, omega );
+% Drehwinkel bestimmen
+tOmega = tan( omega );
 
-% Test: hat der Punkt P den Winkel omega zwischen x1- und x2-Achse?
-atan2( p2, p1 )
+u1 = sym( 'p1' );
+u3 = sym( 'p3' );
+
+x = DAlpha * [ u1; 0; u3 ];
+x = subs( x );
+
+oMega      = eval( solve( x( 2 ) == tOmega * x( 1 ), Alpha ) );
+alphaShift = real( oMega( 2 ) );
+% Ort der Jahreszeit entsprechend drehen, dass zum Sonnenhöchststand alpha=0 gilt
+[ p1, p2, p3 ] = RotateDAlpha( DAlpha, p1, p2, p3, alphaShift );
+
+% Überprüfung des gefundenen Winkels
+if( abs( omega - atan2( p2, p1 ) ) > 0.01 )
+    error( 'Drehwinkel' )
+end
 
 % Substitution
 mue0 = OmegaS / ( 1 + OmegaS );
@@ -55,7 +69,7 @@ abstand = zeros( N, 1 );    % [m]
 % Zeitpunkte berechnen
 for i = 1 : N
 	t( i ) = ( i - 1 ) * delta;     % t in Minuten 
-    alpha  = pi / 720 * t( i );
+    alfa   = pi / 720 * t( i );
 
     mue = eval( subs( mue0 ) );  % in mue0 alpha substituieren
     if( mue > 1 )
@@ -69,7 +83,7 @@ end
 for i = 1 : N
     % Ort der Jahreszeit entsprechend zurückdrehen
 	[ x1, x2, x3 ] = RotateDAlpha( DAlpha, pts( i, 1 ), ...
-                        pts( i, 2 ), pts( i, 3 ), -omega );
+                        pts( i, 2 ), pts( i, 3 ), -alphaShift );
 
     [ a, b ] = MapToTangentialPlane( x1, x2, x3, 0, ...
                     pi / 2 - ( breite + psi ) );

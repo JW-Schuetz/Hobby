@@ -940,11 +940,7 @@ Für jede Wahl der Jahreszeit
 \end_inset
 
  besitzt.
- Es folgt die Forderung an 
-\begin_inset Formula $\alpha^{*}$
-\end_inset
-
- 
+ Dazu muss 
 \end_layout
 
 \begin_layout Standard
@@ -959,7 +955,7 @@ Für jede Wahl der Jahreszeit
 \end_layout
 
 \begin_layout Standard
-oder 
+gefordert werden oder 
 \begin_inset Formula 
 \begin{eqnarray*}
 \frac{p_{2}^{*}}{p_{1}^{*}} & = & \tan\left(\omega T^{*}\right)
@@ -991,7 +987,11 @@ p_{3}
 \end_layout
 
 \begin_layout Standard
-Wegen der Wahl des Punktes 
+Es gilt 
+\begin_inset Formula $p_{2}=0$
+\end_inset
+
+ wegen der Wahl des Punktes 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -999,12 +999,24 @@ Wegen der Wahl des Punktes
 \begin_inset Formula $\varphi=0$
 \end_inset
 
- gilt 
-\begin_inset Formula $p_{2}=0$
+.
+ 
+\end_layout
+
+\begin_layout Standard
+(p1*cos(psi)*sin(alpha) - p2*sin(alpha)*sin(psi))/(p1*(cos(alpha) - sin(psi)^2*(
+cos(alpha) - 1)) - p2*cos(psi)*sin(psi)*(cos(alpha) - 1))
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{p_{1}\cos\psi\sin\alpha-p_{2}\sin\alpha\sin\psi}{p_{1}\left[\cos\alpha-\sin^{2}\psi\left(\cos\alpha-1\right)-p_{2}\left[\cos\psi\sin\psi\left(\cos\alpha-1\right)\right]\right]}$
 \end_inset
 
-.
- Für 
+
+\end_layout
+
+\begin_layout Standard
+Für 
 \begin_inset Formula $p_{1}^{*}$
 \end_inset
 
@@ -1027,6 +1039,17 @@ noprefix "false"
 \end_inset
 
 ) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{1}^{*}=
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

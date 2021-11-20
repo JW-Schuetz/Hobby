@@ -18,7 +18,7 @@ E( 2 ) = 0;
 E( 3 ) = cos( Psi );
 
 % Erd-Rotationswinkel (2*pi/24h), alpha=0 -> Mittags d.h.Sonnenhöchststand
-Alpha = sym( 'alpha', 'real' );
+Alpha = sym( 'alfa', 'real' );
 ca    = cos( Alpha );
 sa    = sin( Alpha );
 
@@ -51,11 +51,6 @@ S( 3 ) = 0;
 PAlpha = DAlpha * P;
 SAlpha = DAlpha * S;
 
-% Test: ist Matrix DAlpha auch wirklich orthogonal?
-if( simplify( DAlpha' * DAlpha ) ~= eye( 3 ) )
-    error( 'Diese Meldung sollte NIE angezeigt werden!' )
-end
-
 % Ausdruck PAlpha' * S bestimmen, collect: PAlphaS als Koeffizienten des Vektors P ausdrücken
 PAlphaS = collect( PAlpha' * S, P );
 
@@ -66,4 +61,4 @@ PSAlpha = collect( P' * SAlpha, P );
 OmegaS = simplify( RE - PSAlpha / RE );
 OmegaS = OmegaS / LS;
 
-save( 'sonnenkompass.mat', 'DAlpha', 'Q', 'SAlpha', 'OmegaS' )
+save( 'sonnenkompass.mat', 'Alpha', 'DAlpha', 'Q', 'SAlpha', 'OmegaS' )
