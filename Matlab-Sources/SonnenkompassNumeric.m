@@ -46,9 +46,12 @@ function SonnenkompassNumeric
 
     % Substitution
     mue0 = omegaS / ( 1 + omegaS );
+
+	mue0 = subs( mue0, 'p1', p1 );	% Zahlenwert für p1 substituieren
+	mue0 = subs( mue0, 'p2', p2 );	% Zahlenwert für p2 substituieren
 	mue0 = subs( mue0, 'p3', p3 );	% Zahlenwert für p3 substituieren
- 	mue0 = subs( mue0 );            % Zahlenwerte substituieren (alle bis auf alpha)
-   
+ 	mue0 = subs( mue0 );            % Zahlenwerte substituieren (alle anderen bis auf alpha)
+
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
     x0 = subs( x0 );      % Zahlenwerte substituieren (alle bis auf alpha)
 
@@ -147,5 +150,57 @@ function alphaShift = calculateShiftAngle( dAlpha, alpha, psiLocal, omega, p1, p
         alphaShift = alphaShift( 1 );
     else
         error( 'No solution found' )
+    end
+end
+
+function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, phi, theta )
+    % Punkt drehen um x3-Achse um den Winkel phi
+    if( phi ~= 0 )
+        c = cos( phi );
+        s = sin( phi );
+        D = [ c, -s, 0;
+              s,  c, 0;
+              0,  0, 1 ];
+
+        x = D * [ x1; x2; x3 ];
+        x1 = x( 1 );
+        x2 = x( 2 );
+        x3 = x( 3 );
+    end
+
+    % Punkt drehen um x2-Achse und den Winkel theta
+    if( theta ~= 0 )
+        c = cos( theta );
+        s = sin( theta );
+        D = [  c, 0, s;
+               0, 1, 0;
+              -s, 0, c ];
+
+        x = D * [ x1; x2; x3 ];
+        x1 = x( 1 );
+        x2 = x( 2 );
+        x3 = x( 3 );
+    end
+
+    % Projizieren auf die Tangentialebene
+    A = [ 0, 1, 0;
+          0, 0, 1 ];
+
+    x = A * [ x1; x2; x3 ];
+    x2 = x( 1 );
+    x3 = x( 2 );
+end
+
+function [ x1, x2, x3 ] = RotateDAlpha( dAlpha, psi, x1, x2, x3, alpha )
+    % Punkt um den Winkel alpha drehen um Erdrotations-Achse 
+    if( alpha ~= 0 )
+        dAlpha = subs( dAlpha, 'psi', psi );
+        dAlpha = eval( subs( dAlpha ) );
+
+        x  = dAlpha * [ x1; x2; x3 ];
+
+        x1 = x( 1 );
+        x2 = x( 2 );
+        x3 = x( 3 );
     end
 end
