@@ -37,7 +37,7 @@ function SonnenkompassNumeric
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     % Ort der Jahreszeit entsprechend drehen
-    [ p1, p2, p3 ] = RotateDAlpha( dAlpha, psi, p1, p2, p3, alphaShift );
+    [ p1, p2, ~ ] = RotateDAlpha( dAlpha, psi, p1, p2, p3, alphaShift );
 
 	% Überprüfung des gefundenen Winkels
     if( abs( omega - atan2( p2, p1 ) ) > 0.01 )
@@ -48,8 +48,8 @@ function SonnenkompassNumeric
     mue0 = omegaS / ( 1 + omegaS );
 	mue0 = subs( mue0 );    % Zahlenwerte substituieren (alle bis auf alpha)
     
-    x0   = mue0 * q + ( 1 - mue0 ) * sAlpha;
-    x0   = subs( x0 );      % Zahlenwerte substituieren (alle bis auf alpha)
+    x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
+    x0 = subs( x0 );      % Zahlenwerte substituieren (alle bis auf alpha)
 
     % Trajektorie in Las Palmas ca.: ds = 3cm/10min. (experimentell ermittelt)
     % numerische Auswertung, Plotten
@@ -63,7 +63,6 @@ function SonnenkompassNumeric
     abstand = zeros( N, 1 );    % [m]
 
     % Zeitpunkte berechnen
-
     for i = 1 : N
         t( i ) = ( i - 1 ) * delta;     % t in Minuten 
         alpha  = pi / 720 * t( i );
@@ -94,6 +93,10 @@ function SonnenkompassNumeric
     sprintf( 'Minimaler Abstand: %1.2f m\tZeitpunkt: %1.1f min', ...
         minAbstand( 1 ) , abs( mint ) )
 
+    plotIt( y )
+end
+
+function plotIt( y )
     % Plotten der Ergebnisse
     figure
     title( 'Trajektorie des Schattenendes' )
@@ -114,8 +117,6 @@ function SonnenkompassNumeric
     plot( 0, 0, 'o', 'MarkerSize', 5, 'MarkerFaceColor', 'r' )
     % Schatten-Trajektorie plotten
     plot( y( :, 1 ), y( :, 2 ), 'Color', 'k', 'LineWidth', 2 )
-    % Parameter plotten
-    % plot( 0, 0, 'o', 'MarkerSize', 2, 'MarkerFaceColor', 'b' )
 
     legend( 'Stabposition', 'Trajektorie' )
 end
