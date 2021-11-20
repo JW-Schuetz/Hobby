@@ -37,7 +37,7 @@ function SonnenkompassNumeric
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     % Ort der Jahreszeit entsprechend drehen
-    [ p1, p2, ~ ] = RotateDAlpha( dAlpha, psi, p1, p2, p3, alphaShift );
+    [ p1, p2, p3 ] = RotateDAlpha( dAlpha, psi, p1, p2, p3, alphaShift );
 
 	% Überprüfung des gefundenen Winkels
     if( abs( omega - atan2( p2, p1 ) ) > 0.01 )
@@ -67,9 +67,11 @@ function SonnenkompassNumeric
         t( i ) = ( i - 1 ) * delta;     % t in Minuten 
         alpha  = pi / 720 * t( i );
 
-        mue = eval( subs( mue0, 'alpha', alpha ) );  % alpha substituieren, ausrechnen
+        mue = subs( mue0, 'alpha', alpha );  % in mue0 alpha substituieren
+        mue = eval( mue );
         if( mue > 1 )
-            pts( i, : ) = eval( subs( x0, 'alpha', alpha ) )';  % in x0 alpha substituieren
+            x           = subs( x0, 'alpha', alpha )';  % in x0 alpha substituieren
+            pts( i, : ) = eval( x )';
         else
             pts( i, : ) = [ Inf, Inf, Inf ];
         end
