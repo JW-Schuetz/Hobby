@@ -4,93 +4,54 @@
 clc
 clear
 
-%#ok<*UNRCH> 
+syms omega real             % Jahreszeiteinfluss
+syms psi real               % Komplementwinkel Erd-Rotationsachse zur Ekliptik
+syms rS real                % Abstand Erde - Sonne
+syms rE real                % Erdradius
+syms lS real                % Stablänge
+syms e [ 3, 1 ] real        % Einheitsvektor Rotationsachse
+syms alpha real              % Erd-Rotationswinkel (2*pi/24h)
+syms dAlpha [ 3, 3 ] real   % Drehmatrix
+syms p [ 3, 1 ] real        % Fusspunkt des Stabes auf der Erdoberfläche und Stabende
+syms s [ 3, 1 ] real        % Sonnenposition in Bezug zum Erdmittelpunkt
 
-alt = false;
+e( 1 ) = sin( psi );
+e( 2 ) = 0;
+e( 3 ) = cos( psi );
 
-% Symbol-Definitionen:
-if( alt )
-    syms Omega Psi RS RE LS real
-else
-    Omega = sym( 'omega', 'real' );     % Jahreszeiteinfluss
-    Psi   = sym( 'psi', 'real' );       % Komplementwinkel Erd-Rotationsachse zur Ekliptik
-    RS    = sym( 'rS', 'real' );        % Abstand Erde - Sonne
-    RE    = sym( 'rE', 'real' );        % Erdradius
-    LS    = sym( 'lS', 'real' );        % Stablänge
-end
+ca = cos( alpha );
+sa = sin( alpha );
 
-% Einheitsvektor Rotationsachse
-if( alt )
-    syms E [ 3, 1 ] real
-else
-    E = sym( 'e', [ 3, 1 ], 'real' );
-end
+dAlpha( 1, 1 ) = e( 1 )^2        * ( 1 - ca ) + ca;             % 1. Spalte
+dAlpha( 2, 1 ) = e( 2 ) * e( 1 ) * ( 1 - ca ) + e( 3 ) * sa;
+dAlpha( 3, 1 ) = e( 3 ) * e( 1 ) * ( 1 - ca ) - e( 2 ) * sa;
 
-E( 1 ) = sin( Psi );
-E( 2 ) = 0;
-E( 3 ) = cos( Psi );
+dAlpha( 1, 2 ) = e( 1 ) * e( 2 ) * ( 1 - ca ) - e( 3 ) * sa;    % 2. Spalte
+dAlpha( 2, 2 ) = e( 2 )^2        * ( 1 - ca ) + ca;
+dAlpha( 3, 2 ) = e( 3 ) * e( 2 ) * ( 1 - ca ) + e( 1 ) * sa;
 
-% Erd-Rotationswinkel (2*pi/24h), alpha=0 -> Mittags d.h.Sonnenhöchststand
-if( alt )
-    syms Alpha real
-else
-    Alpha = sym( 'alfa', 'real' );
-end
+dAlpha( 1, 3 ) = e( 1 ) * e( 3 ) * ( 1 - ca ) + e( 2 ) * sa;    % 3. Spalte
+dAlpha( 2, 3 ) = e( 2 ) * e( 3 ) * ( 1 - ca ) - e( 1 ) * sa;
+dAlpha( 3, 3 ) = e( 3 )^2        * ( 1 - ca ) + ca;
 
-ca = cos( Alpha );
-sa = sin( Alpha );
+q = ( 1 + lS / rE ) * p;
 
-% Drehmatrix
-if( alt )
-    syms DAlpha [ 3, 3 ] real
-else
-    DAlpha = sym( 'dAlpha', [ 3, 3 ], 'real' );
-end
-
-DAlpha( 1, 1 ) = E( 1 )^2        * ( 1 - ca ) + ca;             % 1. Spalte
-DAlpha( 2, 1 ) = E( 2 ) * E( 1 ) * ( 1 - ca ) + E( 3 ) * sa;
-DAlpha( 3, 1 ) = E( 3 ) * E( 1 ) * ( 1 - ca ) - E( 2 ) * sa;
-
-DAlpha( 1, 2 ) = E( 1 ) * E( 2 ) * ( 1 - ca ) - E( 3 ) * sa;    % 2. Spalte
-DAlpha( 2, 2 ) = E( 2 )^2        * ( 1 - ca ) + ca;
-DAlpha( 3, 2 ) = E( 3 ) * E( 2 ) * ( 1 - ca ) + E( 1 ) * sa;
-
-DAlpha( 1, 3 ) = E( 1 ) * E( 3 ) * ( 1 - ca ) + E( 2 ) * sa;    % 3. Spalte
-DAlpha( 2, 3 ) = E( 2 ) * E( 3 ) * ( 1 - ca ) - E( 1 ) * sa;
-DAlpha( 3, 3 ) = E( 3 )^2        * ( 1 - ca ) + ca;
-
-% Fusspunkt des Stabes auf der Erdoberfläche und Stabende
-if( alt )
-	syms P [ 3, 1 ] real
-else
-    P = sym( 'p', [ 3, 1 ], 'real' );
-end
-
-Q = ( 1 + LS / RE ) * P;
-
-% Sonne
-if( alt )
-    syms S [ 3, 1 ] real
-else
-    S = sym( 's', [ 3, 1 ], 'real' );
-end
-
-S( 1 ) = RS * cos( Omega );
-S( 2 ) = RS * sin( Omega );
-S( 3 ) = 0;
+s( 1 ) = rS * cos( omega );
+s( 2 ) = rS * sin( omega );
+s( 3 ) = 0;
 
 % rotierte Punkte P, Q und S
-PAlpha = DAlpha * P;
-SAlpha = DAlpha * S;
+pAlpha = dAlpha * p;
+sAlpha = dAlpha * s;
 
 % Ausdruck PAlpha' * S bestimmen, collect: PAlphaS als Koeffizienten des Vektors P ausdrücken
-PAlphaS = collect( PAlpha' * S, P );
+pAlphaS = collect( pAlpha' * s, p );
 
 % Ausdruck P' * SAlpha bestimmen, collect: PSAlpha als Koeffizienten des Vektors P ausdrücken
-PSAlpha = collect( P' * SAlpha, P );
+pSAlpha = collect( p' * sAlpha, p );
 
 % Hauptterm der zu lösende Gleichung (Sonne wird gedreht)
-OmegaS = simplify( RE - PSAlpha / RE );
-OmegaS = OmegaS / LS;
+omegaS = simplify( rE - pSAlpha / rE );
+omegaS = omegaS / lS;
 
-save( 'sonnenkompass.mat', 'Alpha', 'DAlpha', 'Q', 'SAlpha', 'OmegaS' )
+save( 'sonnenkompass.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' )

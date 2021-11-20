@@ -7,7 +7,7 @@ function SonnenkompassNumeric
 
     format long
 
-    load( 'sonnenkompass.mat', 'Alpha', 'DAlpha', 'Q', 'SAlpha', 'OmegaS' )
+    load( 'sonnenkompass.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' )
 
     % fixe Daten
     rE  = 6371000.8;            % mittlerer Erdradius [m] (GRS 80, WGS 84)
@@ -33,11 +33,11 @@ function SonnenkompassNumeric
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Drehwinkel bestimmen für Sonnenhöchststand bei alpha=0
-    alphaShift = calculateShiftAngle( Alpha, DAlpha, psi, omega, p1, p2, p3 );
+    alphaShift = calculateShiftAngle( dAlpha, alpha, psi, omega, p1, p2, p3 );
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     % Ort der Jahreszeit entsprechend drehen
-    [ p1, p2, p3 ] = RotateDAlpha( DAlpha, psi, p1, p2, p3, alphaShift );
+    [ p1, p2, p3 ] = RotateDAlpha( dAlpha, psi, p1, p2, p3, alphaShift );
 
 	% Überprüfung des gefundenen Winkels
     if( abs( omega - atan2( p2, p1 ) ) > 0.01 )
@@ -45,9 +45,11 @@ function SonnenkompassNumeric
     end
 
     % Substitution
-    mue0 = OmegaS / ( 1 + OmegaS );
-    x0   = mue0 * Q + ( 1 - mue0 ) * SAlpha;
-    x0   = subs( x0 );    % Zahlenwerte substituieren (alle bis auf alpha)
+    mue0 = omegaS / ( 1 + omegaS );
+	mue0 = subs( mue0 );    % Zahlenwerte substituieren (alle bis auf alpha)
+    
+    x0   = mue0 * q + ( 1 - mue0 ) * sAlpha;
+    x0   = subs( x0 );      % Zahlenwerte substituieren (alle bis auf alpha)
 
     % Trajektorie in Las Palmas ca.: ds = 3cm/10min. (experimentell ermittelt)
     % numerische Auswertung, Plotten
@@ -61,13 +63,14 @@ function SonnenkompassNumeric
     abstand = zeros( N, 1 );    % [m]
 
     % Zeitpunkte berechnen
+
     for i = 1 : N
         t( i ) = ( i - 1 ) * delta;     % t in Minuten 
-        alfa   = pi / 720 * t( i );
+        alpha  = pi / 720 * t( i );
 
-        mue = eval( subs( mue0 ) );  % in mue0 alpha substituieren
+        mue = eval( subs( mue0, 'alpha', alpha ) );  % alpha substituieren, ausrechnen
         if( mue > 1 )
-            pts( i, : ) = eval( subs( x0 ) )';  % in x0 alpha substituieren
+            pts( i, : ) = eval( subs( x0, 'alpha', alpha ) )';  % in x0 alpha substituieren
         else
             pts( i, : ) = [ Inf, Inf, Inf ];
         end
@@ -76,7 +79,7 @@ function SonnenkompassNumeric
     % Koordinatentransformation
     for i = 1 : N
         % Ort der Jahreszeit entsprechend zurückdrehen
-        [ x1, x2, x3 ] = RotateDAlpha( DAlpha, psi, pts( i, 1 ), ...
+        [ x1, x2, x3 ] = RotateDAlpha( dAlpha, psi, pts( i, 1 ), ...
                             pts( i, 2 ), pts( i, 3 ), -alphaShift );
 
         [ a, b ] = MapToTangentialPlane( x1, x2, x3, 0, ...
@@ -87,7 +90,7 @@ function SonnenkompassNumeric
     end
 
     [ minAbstand, ndx ] = min( abstand );
-    mint                = t( ndx( 1 ) );
+    mint                = t( ndx );
     sprintf( 'Minimaler Abstand: %1.2f m\tZeitpunkt: %1.1f min', ...
         minAbstand( 1 ) , abs( mint ) )
 
@@ -117,18 +120,21 @@ function SonnenkompassNumeric
     legend( 'Stabposition', 'Trajektorie' )
 end
 
-function alphaShift = calculateShiftAngle( Alpha, DAlpha, psi, omega, p1, p2, p3 )
+function alphaShift = calculateShiftAngle( dAlpha, alpha, psiLocal, omega, p1, p2, p3 )
     % Drehwinkel bestimmen
-    tOmega = tan( omega );
+    alpha = sym( alpha );
+    psiLocal   = sym( psiLocal );
+    omega = sym( omega );
+    p1    = sym( p1 );
+    p2    = sym( p2 );
+    p3    = sym( p3 );
 
-    u1 = sym( 'p1' );
-    u2 = sym( 'p2' );
-    u3 = sym( 'p3' );
+    % psi substituieren
+    dAlpha = subs( dAlpha, 'psi', psiLocal );
 
-    x = DAlpha * [ u1; u2; u3 ];
-    x = subs( x );
+    x = dAlpha * [ p1; p2; p3 ];
 
-    solution = solve( x( 2 ) == tOmega * x( 1 ), Alpha, 'real', true );
+    solution = solve( x( 2 ) == tan( omega ) * x( 1 ), alpha, 'real', true );
     if( ~isempty( solution ) )
         alphaShift = eval( solution );
 
