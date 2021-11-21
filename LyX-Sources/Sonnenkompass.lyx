@@ -627,12 +627,12 @@ Die tägliche Rotation der Erde um ihre Rotationsachse wird in Abhängigkeit
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-D_{\alpha} & = & \begin{pmatrix}e_{1}^{2}\left(1-\cos\alpha\right)+\cos\alpha & e_{1}e_{2}\left(1-\cos\alpha\right)-e_{3}\sin\alpha & e_{1}e_{3}\left(1-\cos\alpha\right)+e_{2}\sin\alpha\\
+\[
+D_{\alpha}=\begin{pmatrix}e_{1}^{2}\left(1-\cos\alpha\right)+\cos\alpha & e_{1}e_{2}\left(1-\cos\alpha\right)-e_{3}\sin\alpha & e_{1}e_{3}\left(1-\cos\alpha\right)+e_{2}\sin\alpha\\
 e_{2}e_{1}\left(1-\cos\alpha\right)+e_{3}\sin\alpha & e_{2}^{2}\left(1-\cos\alpha\right)+\cos\alpha & e_{2}e_{3}\left(1-\cos\alpha\right)-e_{1}\sin\alpha\\
 e_{3}e_{1}\left(1-\cos\alpha\right)-e_{2}\sin\alpha & e_{3}e_{2}\left(1-\cos\alpha\right)+e_{1}\sin\alpha & e_{3}^{2}\left(1-\cos\alpha\right)+\cos\alpha
 \end{pmatrix}
-\end{eqnarray*}
+\]
 
 \end_inset
 
@@ -642,13 +642,13 @@ e_{3}e_{1}\left(1-\cos\alpha\right)-e_{2}\sin\alpha & e_{3}e_{2}\left(1-\cos\alp
 \begin_layout Standard
 beschrieben, dabei ist 
 \begin_inset Formula 
-\begin{eqnarray*}
-\underline{e} & = & \left(\begin{array}{c}
+\[
+\underline{e}=\left(\begin{array}{c}
 e_{1}\\
 e_{2}\\
 e_{3}
 \end{array}\right)
-\end{eqnarray*}
+\]
 
 \end_inset
 
@@ -818,12 +818,12 @@ D_{\alpha}-D_{\left(-\alpha\right)} & = & G_{\alpha}+U_{\alpha}-G_{\alpha}+U_{\a
 
  
 \begin_inset Formula 
-\begin{eqnarray}
-D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+\begin{equation}
+D_{\alpha}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
 \cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
 \cos\psi\sin\psi\left(1-\cos\alpha\right) & \sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
 \end{pmatrix},\label{eq:DrehmatrixAlpha}
-\end{eqnarray}
+\end{equation}
 
 \end_inset
 
@@ -1021,9 +1021,9 @@ Für den Punkt
 
  gilt 
 \begin_inset Formula 
-\begin{eqnarray}
-\underline{Q} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}.\label{eq:Endpunkt}
-\end{eqnarray}
+\begin{equation}
+\underline{Q}=\left(1+\frac{L}{R_{E}}\right)\underline{P}.\label{eq:Endpunkt}
+\end{equation}
 
 \end_inset
 
@@ -1052,9 +1052,9 @@ Die Kugel mit Radius
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-f(x_{1},x_{2},x_{3}) & = & \sum_{i}x_{i}^{2}-R_{E}^{2},\label{eq:Kugel}
-\end{eqnarray}
+\begin{equation}
+f(x_{1},x_{2},x_{3})=\sum_{i}x_{i}^{2}-R_{E}^{2},\label{eq:Kugel}
+\end{equation}
 
 \end_inset
 
@@ -1092,9 +1092,9 @@ literal "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\sum_{i}\frac{\partial f}{\partial x_{i}}\left(x_{i}-p_{i}\right) & = & 0.
-\end{eqnarray*}
+\[
+\sum_{i}\frac{\partial f}{\partial x_{i}}\left(x_{i}-p_{i}\right)=0.
+\]
 
 \end_inset
 
@@ -1125,9 +1125,9 @@ Für die implizite Gleichung der Tangentialebene
 
  folgt schliesslich für die Kugel der Ausdruck 
 \begin_inset Formula 
-\begin{eqnarray*}
-\sum_{i}p_{i}\left(x_{i}-p_{i}\right) & = & 0
-\end{eqnarray*}
+\[
+\sum_{i}p_{i}\left(x_{i}-p_{i}\right)=0
+\]
 
 \end_inset
 
@@ -1140,9 +1140,9 @@ oder in vektorieller Schreibweise
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-\forall\underline{x}\in T:\;\underline{P}^{T}\left(\underline{x}-\underline{P}\right) & = & 0.\label{eq:Tangentialebene}
-\end{eqnarray}
+\begin{equation}
+\forall\underline{x}\in T:\;\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0.\label{eq:Tangentialebene}
+\end{equation}
 
 \end_inset
 
@@ -1208,9 +1208,9 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-\forall\underline{x}\in G:\;\underline{x} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(T^{*}\right)\label{eq:Verbindungsgerade}
-\end{eqnarray}
+\begin{equation}
+\forall\underline{x}\in G:\;\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(T^{*}\right)\label{eq:Verbindungsgerade}
+\end{equation}
 
 \end_inset
 
@@ -1258,9 +1258,9 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-\forall\underline{x}\in G_{S}^{\alpha}:\;\underline{x} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)\label{eq:VerbindungsgeradeSonneGedreht}
-\end{eqnarray}
+\begin{equation}
+\forall\underline{x}\in G_{S}^{\alpha}:\;\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)\label{eq:VerbindungsgeradeSonneGedreht}
+\end{equation}
 
 \end_inset
 
@@ -1375,9 +1375,9 @@ noprefix "false"
 
 ) mit der Bedingung 
 \begin_inset Formula 
-\begin{eqnarray}
-\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)\label{eq:GesuchterPunktSonneGedreht}
-\end{eqnarray}
+\begin{equation}
+\underline{x}_{0}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)\label{eq:GesuchterPunktSonneGedreht}
+\end{equation}
 
 \end_inset
 
@@ -1424,9 +1424,9 @@ noprefix "false"
 
 ) liefert 
 \begin_inset Formula 
-\begin{eqnarray*}
-\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)-\underline{P}\right] & = & 0.
-\end{eqnarray*}
+\[
+\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)-\underline{P}\right]=0.
+\]
 
 \end_inset
 
@@ -1528,9 +1528,9 @@ R & = & \frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
 
  
 \begin_inset Formula 
-\begin{eqnarray}
-\mu_{0}\left(\alpha\right) & = & \frac{\varOmega^{S}\left(\alpha\right)}{1+\varOmega^{S}\left(\alpha\right)}\label{eq:LösungsgleichungSonneGedreht}
-\end{eqnarray}
+\begin{equation}
+\mu_{0}\left(\alpha\right)=\frac{\varOmega^{S}\left(\alpha\right)}{1+\varOmega^{S}\left(\alpha\right)}\label{eq:LösungsgleichungSonneGedreht}
+\end{equation}
 
 \end_inset
 
@@ -1543,9 +1543,9 @@ mit
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\varOmega^{S}\left(\alpha\right) & = & \frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\right].
-\end{eqnarray*}
+\[
+\varOmega^{S}\left(\alpha\right)=\frac{1}{L}\left(R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\right).
+\]
 
 \end_inset
 
@@ -1633,9 +1633,9 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right).\label{eq:LösungspunkteSonneGedreht}
-\end{eqnarray}
+\begin{equation}
+\underline{x}_{0}^{S}\left(\alpha\right)=\mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right).\label{eq:LösungspunkteSonneGedreht}
+\end{equation}
 
 \end_inset
 
@@ -1856,7 +1856,7 @@ Erde gedreht
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\underline{x}^{E}\left(\alpha\right)=PD_{\left(\frac{\pi}{2}-\left(\Theta+\psi\right)\right)}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right)\label{eq:ErgebnisErdeGedreht}
+\underline{x}^{E}\left(\alpha\right)=PD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}D_{\left(-\varphi\right)}^{x_{3}}D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right)\label{eq:ErgebnisErdeGedreht}
 \end{equation}
 
 \end_inset
@@ -1867,9 +1867,9 @@ Erde gedreht
 \begin_layout Standard
 die Bedingung 
 \begin_inset Formula 
-\begin{eqnarray}
-\underline{x}^{S}\left(\alpha\right) & = & D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right)\label{eq:Aequivalenz}
-\end{eqnarray}
+\begin{equation}
+\underline{x}^{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{x}_{0}^{E}\left(\alpha\right)\label{eq:Aequivalenz}
+\end{equation}
 
 \end_inset
 
@@ -1905,9 +1905,9 @@ Erde gedreht
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-\underline{x}_{0}^{E}\left(\alpha\right) & = & \mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}\left(T^{*}\right)\label{eq:LösungspunkteErdeGedreht}
-\end{eqnarray}
+\begin{equation}
+\underline{x}_{0}^{E}\left(\alpha\right)=\mu_{0}\underline{Q}^{\alpha}+\left(1-\mu_{0}\right)\underline{S}\left(T^{*}\right)\label{eq:LösungspunkteErdeGedreht}
+\end{equation}
 
 \end_inset
 
@@ -3039,9 +3039,9 @@ Für die Hypotenuse
 
  gilt 
 \begin_inset Formula 
-\begin{eqnarray*}
-H^{2} & = & h^{2}+\left(R_{S}-R_{E}-d\right)^{2}
-\end{eqnarray*}
+\[
+H^{2}=h^{2}+\left(R_{S}-R_{E}-d\right)^{2}
+\]
 
 \end_inset
 
