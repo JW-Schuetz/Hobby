@@ -15,9 +15,12 @@ x = simplify( lS * tan( alpha + asin( h / H ) ) );
 breite = 28.136746041614316 / 180.0 * pi;
 psi    = 23.44 / 180.0 * pi;
 
-x = subs( x, 'alpha', breite - psi );
 x = subs( x, 'lS', 1.5 );
 x = subs( x, 'rE', 6371000.8 );
 x = subs( x, 'sE', 149597870700.0 );
 
-eval( x )
+% Sommersonnenwende
+res = subs( x, 'alpha', breite - psi );
+eval( res )% Wintersonnenwende
+res = subs( x, 'alpha', breite + psi );
+eval( res )
