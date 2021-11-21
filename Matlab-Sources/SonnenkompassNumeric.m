@@ -17,9 +17,9 @@ function SonnenkompassNumeric
 
     ssw    = datetime( '21.06.2021' );	% Datum Sommersonnenwende
     tag    = datetime( '12.10.2021' );	% Datum
-    tag    = datetime( '21.12.2021' );	% Datum
+%     tag    = datetime( '21.12.2021' );	% Datum
     T      = days( tag - ssw );         % Jahreszeit [Tage seit Sommersonnenwende]
-	omega  = 2 * pi / 365 * T;          % Jahreszeitwinkel
+    omega  = 2 * pi / 365 * T;          % Jahreszeitwinkel
 
     % variable Daten
     lS  = 1.5;                      % Stablänge [m]
@@ -36,13 +36,13 @@ function SonnenkompassNumeric
     % Substitution
     mue0 = omegaS / ( 1 + omegaS );
 
-	mue0 = subs( mue0, 'omega', omega );	% Zahlenwert für omega substituieren
-	mue0 = subs( mue0, 'rS', rS );          % Zahlenwert für rS substituieren
-	mue0 = subs( mue0, 'lS', lS );          % Zahlenwert für lS substituieren
-	mue0 = subs( mue0, 'p1', p1 );          % Zahlenwert für p1 substituieren
-	mue0 = subs( mue0, 'p2', p2 );          % Zahlenwert für p2 substituieren
-	mue0 = subs( mue0, 'p3', p3 );          % Zahlenwert für p3 substituieren
- 	mue0 = subs( mue0 );                    % Zahlenwerte substituieren (alle anderen bis auf alpha)
+    mue0 = subs( mue0, 'omega', omega );	% Zahlenwert für omega substituieren
+    mue0 = subs( mue0, 'rS', rS );          % Zahlenwert für rS substituieren
+    mue0 = subs( mue0, 'lS', lS );          % Zahlenwert für lS substituieren
+    mue0 = subs( mue0, 'p1', p1 );          % Zahlenwert für p1 substituieren
+    mue0 = subs( mue0, 'p2', p2 );          % Zahlenwert für p2 substituieren
+    mue0 = subs( mue0, 'p3', p3 );          % Zahlenwert für p3 substituieren
+    mue0 = subs( mue0 );                    % Zahlenwerte substituieren (alle anderen bis auf alpha)
 
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
     x0 = subs( x0 );      % Zahlenwerte substituieren (alle bis auf alpha)
@@ -82,10 +82,8 @@ function SonnenkompassNumeric
         y( i, : )    = [ a, b ];
     end
 
-    [ minAbstand, ndx ] = min( abstand );
-    mint                = t( ndx );
-    sprintf( 'Minimaler Abstand: %1.2f m\tZeitpunkt: %1.1f min', ...
-        minAbstand( 1 ) , abs( mint ) )
+    [ minAbstand, ~ ] = min( abstand );
+    sprintf( 'Minimaler Abstand: %1.2f m', minAbstand( 1 ) )
 
     plotIt( y )
 end
