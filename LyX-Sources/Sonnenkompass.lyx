@@ -2941,6 +2941,109 @@ Dieses Ergebnis ist erwartungskonform, denn
 \end_inset
 
  
+\begin_inset Note Note
+status open
+
+\begin_layout Section
+Überprüfung
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompassHelp.eps
+	lyxscale 170
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Überprüfung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Für das rechtwinklige Dreieck (A) links gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sin\alpha & = & \frac{h}{R+L}\\
+h & = & \left(R+L\right)\sin\alpha
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und 
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\alpha & = & \frac{R+x}{R+L}\\
+x & = & \left(R+L\right)\cos\alpha-R
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Für die Hypotenuse 
+\begin_inset Formula $H$
+\end_inset
+
+ des rechtwinkligen Dreiecks (B) rechts gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+H^{2} & = & h^{2}+\left(S-R-x\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und für den Winkel 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sin\gamma & = & \frac{h}{H}\\
+\gamma & = & \arcsin\left(\frac{h}{H}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
