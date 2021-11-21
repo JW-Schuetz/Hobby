@@ -111,7 +111,7 @@ function plotIt( y )
     % Ort des Stabes plotten
     plot( 0, 0, 'o', 'MarkerSize', 10, 'MarkerFaceColor', 'r' )
     % Schatten-Trajektorie plotten
-    plot( y( :, 1 ), y( :, 2 ), '-o', 'MarkerSize', 2, 'Color', 'k', 'LineWidth', 1 )
+    plot( y( :, 1 ), y( :, 2 ), '-o', 'MarkerSize', 5, 'Color', 'k', 'LineWidth', 1 )
     % Markierung 12 Uhr
 	text( 0, 1.8, '\uparrow', 'HorizontalAlignment', 'center' )
 	text( 0, 1.7, '12:00 Uhr', 'HorizontalAlignment', 'center' )

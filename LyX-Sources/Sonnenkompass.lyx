@@ -1987,8 +1987,8 @@ noprefix "false"
  Breite) am 12.10.2021.
  Zwischen den Markierungen der Trajektorie liegen jeweils 10 Minuten.
  Für die Stablänge wurde 1.5 m angenommen.
- Markiert sind zwei Punkte im zeitlichen Abstand von 20 Minuten (13:50 Uhr
- und 14:10 Uhr), ihr Abstand beträgt 22.48 cm.
+ Markiert sind zwei Punkte im zeitlichen Abstand von 20 Minuten (13:30 Uhr
+ und 13:50 Uhr), ihr geometrischer Abstand beträgt 20.28 cm.
  
 \end_layout
 
@@ -2049,13 +2049,13 @@ noprefix "false"
 
 \end_inset
 
- sieht man das gelbe Fussende des Stabes.
+ sieht man unten das gelbe Fussende des Stabes.
  Der Zeitunterschied beider Aufnahmen beträgt 22 Minuten.
  In dieser Zeit ist der Schatten ca.
  20 cm weiter gewandert.
  Dieses Ergebnis passt recht gut zum rechnerisch ermittelten Abstand
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Leider habe ich vor Ort weder die genaue Länge des Stabes noch die genaue
@@ -2082,6 +2082,7 @@ status open
 \begin_inset Graphics
 	filename LasPalmas-12.10.2021-13Uhr33.jpeg
 	scale 18
+	BoundingBox 0bp 0bp 1200bp 1600bp
 
 \end_inset
 
@@ -2089,6 +2090,7 @@ status open
 \begin_inset Graphics
 	filename LasPalmas-12.10.2021-13Uhr55.jpeg
 	scale 18
+	BoundingBox 0bp 0bp 1200bp 1600bp
 
 \end_inset
 
