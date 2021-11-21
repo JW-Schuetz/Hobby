@@ -12,7 +12,7 @@ function SonnenkompassNumeric
 
     % fixe Daten
     rE  = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
-    rS  = 149597870700;             % AE, mittlerer Abstand Erde - Sonne [m]
+    rS  = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
     psi = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
 
     ssw    = datetime( '21.06.2021' );	% Datum Sommersonnenwende
