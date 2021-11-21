@@ -2984,22 +2984,22 @@ status open
 
 \begin_layout Plain Layout
 Für das linke rechtwinklige Dreieck (A) mit der Hypotenuse 
-\begin_inset Formula $R+L$
+\begin_inset Formula $R_{E}+L$
 \end_inset
 
- und den Katheden 
+ und den Katheten 
 \begin_inset Formula $h$
 \end_inset
 
  und 
-\begin_inset Formula $R+x$
+\begin_inset Formula $R_{E}+d$
 \end_inset
 
  gilt 
 \begin_inset Formula 
 \begin{eqnarray*}
-\sin\alpha & = & \frac{h}{R+L}\\
-h & = & \left(R+L\right)\sin\alpha
+\sin\alpha & = & \frac{h}{R_{E}+L}\\
+h & = & \left(R_{E}+L\right)\sin\alpha
 \end{eqnarray*}
 
 \end_inset
@@ -3011,8 +3011,8 @@ h & = & \left(R+L\right)\sin\alpha
 und 
 \begin_inset Formula 
 \begin{eqnarray*}
-\cos\alpha & = & \frac{R+d}{R+L}\\
-d & = & \left(R+L\right)\cos\alpha-R
+\cos\alpha & = & \frac{R_{E}+d}{R_{E}+L}\\
+d & = & \left(R_{E}+L\right)\cos\alpha-R_{E}
 \end{eqnarray*}
 
 \end_inset
@@ -3029,18 +3029,18 @@ Für die Hypotenuse
 \begin_inset Formula $H$
 \end_inset
 
- und den Katheden 
+ und den Katheten 
 \begin_inset Formula $h$
 \end_inset
 
  und 
-\begin_inset Formula $S-R-d$
+\begin_inset Formula $R_{S}-R_{E}-d$
 \end_inset
 
  gilt 
 \begin_inset Formula 
 \begin{eqnarray*}
-H^{2} & = & h^{2}+\left(S-R-d\right)
+H^{2} & = & h^{2}+\left(R_{S}-R_{E}-d\right)^{2}
 \end{eqnarray*}
 
 \end_inset
@@ -3070,10 +3070,17 @@ Für den Winkel
 \begin_inset Formula $\psi$
 \end_inset
 
- folgt 
+ folgt wegen der Winkelsumme im Dreieck (A,B) 
+\begin_inset Formula $\alpha+\psi+\gamma=\pi$
+\end_inset
+
+ die Gleichung 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
-\psi=\pi-\gamma
+\psi=\pi-\alpha-\gamma
 \]
 
 \end_inset
@@ -3086,7 +3093,11 @@ und für
 \begin_inset Formula $\lambda$
 \end_inset
 
- folgt 
+ folgt damit wegen 
+\begin_inset Formula $\lambda+\psi=\pi$
+\end_inset
+
+ die Gleichung 
 \begin_inset Formula 
 \[
 \lambda=\pi-\psi.
@@ -3098,31 +3109,50 @@ und für
 \end_layout
 
 \begin_layout Plain Layout
-Wir haben jetzt ein rechtwinkliges Dreieck (C) mit der Hypotenuse 
+Wir haben jetzt ein rechtwinkliges Dreieck (C) mit den Katheten 
 \begin_inset Formula $L$
 \end_inset
 
- und dem Winkel 
+ und 
+\begin_inset Formula $x$
+\end_inset
+
+ und mit dem Winkel 
 \begin_inset Formula $\lambda$
 \end_inset
 
 .
- Es gilt weiterhin für den gesuchten Punkt 
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Es gilt weiterhin für den gesuchten Punkt 
 \begin_inset Formula $x$
 \end_inset
 
  auf der Tangente 
+\begin_inset Formula 
+\[
+\tan\lambda=\frac{x}{L}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+oder 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\tan\lambda & = & \frac{x}{L}\\
 x & = & L\tan\lambda\\
  & = & L\tan\left(\pi-\psi\right)\\
- & = & L\tan\left(\pi-\pi+\gamma\right)\\
- & = & L\tan\gamma\\
- & = & L\tan\arcsin\left(\frac{h}{H}\right)\\
+ & = & L\tan\left[\pi-\left(\pi-\alpha-\gamma\right)\right]\\
+ & = & L\tan\left(\alpha+\gamma\right)\\
+ & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right].
 \end{eqnarray*}
 
 \end_inset
