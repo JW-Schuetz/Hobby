@@ -14,17 +14,24 @@ function SonnenkompassNumeric
     rE  = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
     rS  = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
     psi = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
-
-    ssw    = datetime( '21.06.2021' );	% Datum Sommersonnenwende
-    tag    = datetime( '12.10.2021' );	% Datum
-%     tag    = datetime( '21.12.2021' );	% Datum
-    T      = days( tag - ssw );         % Jahreszeit [Tage seit Sommersonnenwende]
-    omega  = 2 * pi / 365 * T;          % Jahreszeitwinkel
+    ssw = datetime( '21.06.2021' );	% Datum Sommersonnenwende
 
     % variable Daten
-    lS  = 1.5;                      % Stablänge [m]
-    % Ort: Las Palmas de Gran Canaria, P.º las Canteras, 74
-    breite  = 28.136746041614316 / 180.0 * pi;
+    ort = 'Höchst';
+
+    switch( ort )
+        case 'Höchst'
+            lS     = 1.76;                              % Stablänge [m]
+            breite = 49.800760064804244 / 180.0 * pi;	% Höchst/Odenwald
+            tag    = datetime( '06.11.2021' );          % Datum
+        case 'LasPalmas'
+            lS     = 1.5;                               % Stablänge [m]
+            breite = 28.136746041614316 / 180.0 * pi;	% Las Palmas de Gran Canaria
+            tag    = datetime( '12.10.2021' );          % Datum
+    end
+
+    T     = days( tag - ssw );	% Jahreszeit [Tage seit Sommersonnenwende]
+    omega = 2 * pi / 365 * T;	% Jahreszeitwinkel
     breite = pi / 2 - breite;	% Geographische- in Kugelkoordinaten umrechnen
 
     % Kugelkoordinaten des Fusspunkt des Stabes, geographische Länge 0°, 
@@ -99,7 +106,7 @@ function plotIt( y )
     grid 'on'
     axis( 'equal' )
 
-    squareSize = 2;     % [m]
+    squareSize = 20;     % [m]
     xlim( squareSize * [ -1, 1 ] );
     ylim( squareSize * [ -0.1, 1 ] );
 
@@ -111,8 +118,8 @@ function plotIt( y )
     % Schatten-Trajektorie plotten
     plot( y( :, 1 ), y( :, 2 ), '-o', 'MarkerSize', 5, 'Color', 'k', 'LineWidth', 1 )
     % Markierung 12 Uhr
-	text( 0, 1.8, '\uparrow', 'HorizontalAlignment', 'center' )
-	text( 0, 1.7, '12:00 Uhr', 'HorizontalAlignment', 'center' )
+	text( 0, 6.8, '\uparrow', 'HorizontalAlignment', 'center' )
+	text( 0, 6.7, '12:00 Uhr', 'HorizontalAlignment', 'center' )
 
     legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
 end
