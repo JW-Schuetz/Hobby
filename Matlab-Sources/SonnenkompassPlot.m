@@ -10,7 +10,7 @@ function SonnenkompassPlot()
     end
 
     % Daten so verschieben, dass der minimale Abstand zum Stab im
-    % Mittelelement des Datensatzes ist. Die Zeit in Minuten ist ndx - 1.
+    % Mittelelement des Datensatzes ist. Die Zeit in Minuten ist (ndx - 1).
     [ minAbstand, ndx ] = min( abstand );
 
     %         ... mitte ...
