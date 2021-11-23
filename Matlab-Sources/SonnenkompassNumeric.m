@@ -8,7 +8,7 @@ function SonnenkompassNumeric
 
     format long
 
-    load( 'sonnenkompass.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
 
     % variable Daten
     ort = 'LasPalmas';
@@ -62,19 +62,19 @@ function SonnenkompassNumeric
 
     % Trajektorie in Las Palmas ca.: ds = 3cm/10min. (experimentell ermittelt)
     % numerische Auswertung, Plotten
-    minutes = 60 * 24;      % Anzahl Minuten
-    N       = minutes;      % Anzahl Punkte
+    M = 60 * 24;	% Anzahl Minuten (60*24=1Tag)
+    N = M + 1;      % Anzahl Punkte
 
-    pts     = zeros( N + 1, 3 );    % [m]
-    y       = zeros( N + 1, 2 );    % [m]
-    t       = zeros( N + 1, 1 );    % [min]
-    abstand = zeros( N + 1, 1 );    % [m]
+    pts     = zeros( N, 3 );    % [m]
+    y       = zeros( N, 2 );    % [m]
+    t       = zeros( N, 1 );    % [min]
+    abstand = zeros( N, 1 );    % [m]
 
-    delta = minutes / N;	% Delta Minuten
+    delta = M / ( N - 1 );	% Delta Minuten
     % Position und Zeitpunkt berechnen
-    for i = 1 : N + 1
-        t( i ) = ( i - 1 ) * delta;     % t in Minuten 
-        alpha  = t( i ) / ( 720 * pi ); % 2*pi[rad]=60*24[min], [rad]=60*24/(2*pi)[min]
+    for i = 1 : N
+        t( i ) = ( i - 1 ) * delta;     % t in Minuten (0 bis 60*24 + 1)
+        alpha  = 2 * pi / M * t( i );
 
         mue = subs( mue0, 'alpha', alpha );  % in mue0 alpha substituieren
         mue = eval( mue );
@@ -87,7 +87,7 @@ function SonnenkompassNumeric
     end
 
     % Projektion auf Tangentialebene
-    for i = 1 : N + 1
+    for i = 1 : N
         [ a, b ] = MapToTangentialPlane( pts( i, 1 ), pts( i, 2 ), ...
                         pts( i, 3 ), 0, pi / 2 - ( breite + psi ) );
 

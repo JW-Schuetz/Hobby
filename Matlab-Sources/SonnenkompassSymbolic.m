@@ -54,4 +54,4 @@ pSAlpha = collect( p' * sAlpha, p );
 omegaS = simplify( rE - pSAlpha / rE );
 omegaS = omegaS / lS;
 
-save( 'sonnenkompass.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' )
+save( 'SonnenkompassSymbolic.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' )

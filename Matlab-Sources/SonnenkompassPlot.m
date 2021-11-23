@@ -14,8 +14,8 @@ function SonnenkompassPlot()
     [ minAbstand, ndx ] = min( abstand );
 
     %         ... mitte ...
-    % 1, 2, ..., (N+1)/2, ..., N
-    mitte   = ( N + 1 ) / 2;
+    % 1, 2, ..., (N-1)/2, ..., N
+    mitte   = ( N - 1 ) / 2;
     shift   = mitte - ndx;
     y       = circshift( y, shift );
 
@@ -23,9 +23,9 @@ function SonnenkompassPlot()
 
     figure
     title( 'Schattentrajektorie' )
-    hold 'on'
-    box 'on'
-    grid 'on'
+    hold( 'on' )
+    box( 'on' )
+    grid( 'on' )
     axis( 'equal' )
     xlabel( 'West-Ost [m]' )
     ylabel( 'Süd-Nord [m]' )
@@ -38,7 +38,7 @@ function SonnenkompassPlot()
     % Ort des Stabes plotten
     plot( 0, 0, 'o', 'MarkerSize', 10, 'MarkerFaceColor', 'r' )
     % Schatten-Trajektorie plotten
-    mndx = 1 : 20 : mitte;
+    mndx = 1 : 10 : mitte + 1;
     plot( y( :, 1 ), y( :, 2 ), '-o', 'MarkerSize', 3, 'MarkerIndices', mndx, ...
         'Color', 'k', 'LineWidth', 1 )
     % Markierung 12 Uhr
