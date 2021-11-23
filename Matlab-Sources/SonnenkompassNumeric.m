@@ -10,28 +10,34 @@ function SonnenkompassNumeric
 
     load( 'sonnenkompass.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
 
+    % variable Daten
+    ort = 'LasPalmas';
+
+    switch( ort )
+        case 'Hoechst'
+            lS     = 1.76;                              % Stablänge [m]
+            breite = 49.800760064804244 / 180.0 * pi;	% Höchst/Odenwald
+            datum  = '06.11.2021';                      % Datum
+        case 'LasPalmas'
+            lS     = 1.5;                               % Stablänge [m]
+            breite = 28.136746041614316 / 180.0 * pi;	% Las Palmas de Gran Canaria
+            datum  = '12.10.2021';                      % Datum
+    end
+
+    fileName = [ ort, '-', datum, '.mat' ];
+    if( isfile( fileName ) )
+        error( 'File "%s" existiert bereits!', fileName )
+    end
+
     % fixe Daten
     rE  = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
     rS  = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
     psi = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
     ssw = datetime( '21.06.2021' );	% Datum Sommersonnenwende
 
-    % variable Daten
-    ort = 'Höchst';
-
-    switch( ort )
-        case 'Höchst'
-            lS     = 1.76;                              % Stablänge [m]
-            breite = 49.800760064804244 / 180.0 * pi;	% Höchst/Odenwald
-            tag    = datetime( '06.11.2021' );          % Datum
-        case 'LasPalmas'
-            lS     = 1.5;                               % Stablänge [m]
-            breite = 28.136746041614316 / 180.0 * pi;	% Las Palmas de Gran Canaria
-            tag    = datetime( '12.10.2021' );          % Datum
-    end
-
-    T     = days( tag - ssw );	% Jahreszeit [Tage seit Sommersonnenwende]
-    omega = 2 * pi / 365 * T;	% Jahreszeitwinkel
+	tag    = datetime( datum );
+    T      = days( tag - ssw );	% Jahreszeit [Tage seit Sommersonnenwende]
+    omega  = 2 * pi / 365 * T;	% Jahreszeitwinkel
     breite = pi / 2 - breite;	% Geographische- in Kugelkoordinaten umrechnen
 
     % Kugelkoordinaten des Fusspunkt des Stabes, geographische Länge 0°, 
@@ -57,18 +63,18 @@ function SonnenkompassNumeric
     % Trajektorie in Las Palmas ca.: ds = 3cm/10min. (experimentell ermittelt)
     % numerische Auswertung, Plotten
     minutes = 60 * 24;      % Anzahl Minuten
-    N       = minutes / 10;	% Anzahl Punkte
-    delta   = minutes / N;	% Delta Minuten
+    N       = minutes;      % Anzahl Punkte
 
     pts     = zeros( N + 1, 3 );    % [m]
     y       = zeros( N + 1, 2 );    % [m]
-    t       = zeros( N + 1, 1 );    % [h]
+    t       = zeros( N + 1, 1 );    % [min]
     abstand = zeros( N + 1, 1 );    % [m]
 
-    % Zeitpunkte berechnen
+    delta = minutes / N;	% Delta Minuten
+    % Position und Zeitpunkt berechnen
     for i = 1 : N + 1
         t( i ) = ( i - 1 ) * delta;     % t in Minuten 
-        alpha  = pi / 720 * t( i );
+        alpha  = t( i ) / ( 720 * pi ); % 2*pi[rad]=60*24[min], [rad]=60*24/(2*pi)[min]
 
         mue = subs( mue0, 'alpha', alpha );  % in mue0 alpha substituieren
         mue = eval( mue );
@@ -80,48 +86,16 @@ function SonnenkompassNumeric
         end
     end
 
-    % Koordinatentransformation
+    % Projektion auf Tangentialebene
     for i = 1 : N + 1
         [ a, b ] = MapToTangentialPlane( pts( i, 1 ), pts( i, 2 ), ...
                         pts( i, 3 ), 0, pi / 2 - ( breite + psi ) );
 
-        abstand( i ) = sqrt( a^2 + b^2 );
         y( i, : )    = [ a, b ];
+        abstand( i ) = sqrt( a^2 + b^2 );
     end
 
-    [ minAbstand, ~ ] = min( abstand );
-    sprintf( 'Minimaler Abstand: %1.2f m', minAbstand( 1 ) )
-
-    plotIt( y )
-end
-
-function plotIt( y )
-    % Plotten der Ergebnisse
-    figure
-
-    title( 'Trajektorie des Schattenendes' )
-
-    hold 'on'
-    box 'on'
-    grid 'on'
-    axis( 'equal' )
-
-    squareSize = 20;     % [m]
-    xlim( squareSize * [ -1, 1 ] );
-    ylim( squareSize * [ -0.1, 1 ] );
-
-    xlabel( 'West-Ost [m]' )
-    ylabel( 'Süd-Nord [m]' )
-
-    % Ort des Stabes plotten
-    plot( 0, 0, 'o', 'MarkerSize', 10, 'MarkerFaceColor', 'r' )
-    % Schatten-Trajektorie plotten
-    plot( y( :, 1 ), y( :, 2 ), '-o', 'MarkerSize', 5, 'Color', 'k', 'LineWidth', 1 )
-    % Markierung 12 Uhr
-	text( 0, 6.8, '\uparrow', 'HorizontalAlignment', 'center' )
-	text( 0, 6.7, '12:00 Uhr', 'HorizontalAlignment', 'center' )
-
-    legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
+    save( fileName, 'y', 'abstand' )
 end
 
 function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, phi, theta )
@@ -146,6 +120,7 @@ function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, phi, theta )
 end
 
 function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
+    % Punkt drehen um x2-Achse und den Winkel theta
     c = cos( theta );
     s = sin( theta );
 
@@ -161,6 +136,7 @@ function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
 end
 
 function [ x1, x2, x3 ] = rotateX3( phi, x1, x2, x3 )
+    % Punkt drehen um x3-Achse um den Winkel phi
     c = cos( phi );
     s = sin( phi );
 
