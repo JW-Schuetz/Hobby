@@ -9,9 +9,6 @@ function SonnenkompassPlot()
     ndx = ~isnan( y( :, 2 ) );
     y   = y( ndx, : );
 
-    % Nullstelle in West-Ost-Koordinate suchen
-    find( y( :, 2 ) < 0 )
-
     N = size( y, 1 );
 
     figure

@@ -1,14 +1,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Numerische Lösung des Problems "Sonnenkompass"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%#ok<*UNRCH>
 function SonnenkompassNumeric
     clc
     clear
 
     format long
 
-    load( 'SonnenkompassSymbolic.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'dAlpha', ...
+          'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
 
     % Variable Daten
     ort = 'LasPalmas';
@@ -63,7 +63,7 @@ function SonnenkompassNumeric
     x0   = mue0 * q + ( 1 - mue0 ) * sAlpha;
 
     % Zahlenwerte bis auf alpha substituieren (explizit wg. NotUsed-MatLab-Warnungen)
-    mue0 = subs( mue0, 'omega', omega );	
+    mue0 = subs( mue0, 'omega', omega );
     mue0 = subs( mue0, 'rS',    rS );
     mue0 = subs( mue0, 'lS',    lS );
     mue0 = subs( mue0, 'p1',    p1 );
@@ -101,8 +101,8 @@ function SonnenkompassNumeric
         end
 
         % Projektion auf Tangentialebene
-        [ a, b ]  = MapToTangentialPlane( pts1, pts2, pts3, offset );
-        y( i, : ) = [ t, a, b ];
+        [ y1, y2 ] = MapToTangentialPlane( pts1, pts2, pts3, offset );
+        y( i, : )  = [ t, y1, y2 ];
     end
 
     save( fileName, 'y' )
