@@ -911,7 +911,7 @@ literal "false"
 
 \end_inset
 
- und Abbildung
+, Abbildung
 \begin_inset space ~
 \end_inset
 
@@ -943,7 +943,7 @@ status open
 
 \end_inset
 
-
+ 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -971,7 +971,8 @@ Bewegung der Erde um die Sonne (nicht massstäblich)
 \end_layout
 
 \begin_layout Standard
-Für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinkels 
+Deshalb gilt für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinke
+ls 
 \begin_inset Formula $\omega T^{*}$
 \end_inset
 
@@ -979,7 +980,7 @@ Für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinkels
 \begin_inset Formula $\omega=\frac{2\pi}{365}$
 \end_inset
 
- gilt deshalb die Gleichung 
+ die Gleichung 
 \end_layout
 
 \begin_layout Standard
@@ -1369,7 +1370,7 @@ Hier wird für
 \end_layout
 
 \begin_layout Section
-Problemlösung 
+Analytische Problemlösung 
 \end_layout
 
 \begin_layout Subsection
@@ -1723,7 +1724,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-Koordinatentransformation 
+Projektion auf die Tangentialebene 
 \end_layout
 
 \begin_layout Standard
@@ -1736,7 +1737,7 @@ Die gefundenen Trajektorienpunkte
 \end_inset
 
  gegeben.
- Sie sollen aber auf das zweidimensionale Koordinatensystem der Tangentialebene
+ Sie sollen aber auf ein zweidimensionales Koordinatensystem der Tangentialebene
  abgebildet werden, das eine identische Metrik besitzt und dessen Ursprung
  durch den Stabfusspunkt 
 \begin_inset Formula $\underline{P}$
@@ -1855,6 +1856,227 @@ noprefix "false"
 \end_inset
 
 ) für die auf die Tangentialebene projizierten Punkte 
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection*
+Nullstelle 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+ der West-Ost-Koordinate 
+\end_layout
+
+\begin_layout Plain Layout
+Für die Koordinatenkomponente in West-Ost-Richtung 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ erhält man mit Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ErgebnisSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) zunächst den Ausdruck 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+y_{1}\\
+y_{2}
+\end{array}\right)=\left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\left(\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Und daraus 
+\begin_inset Formula 
+\[
+y_{1}=\left(\begin{array}{ccc}
+0 & 1 & 0\end{array}\right)\left(\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right)=x_{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Weiter folgt für 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ wegen 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right) & = & \left(\begin{array}{ccc}
+\cos\Theta & 0 & \sin\Theta\\
+0 & 1 & 0\\
+-\sin\Theta & 0 & \cos\Theta
+\end{array}\right)\left(\begin{array}{c}
+z_{1}\\
+z_{2}\\
+z_{3}
+\end{array}\right)=\left(\begin{array}{c}
+\cos\Theta z_{1}+\sin\Theta z_{3}\\
+z_{2}\\
+-\sin\Theta z_{1}+\cos\Theta z_{3}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+der Ausdruck 
+\begin_inset Formula 
+\[
+x_{2}=z_{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Und damit folgt der Ausdruck 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+z_{1}\\
+z_{2}\\
+z_{3}
+\end{array}\right) & = & \underline{x}_{0}^{S}\left(\alpha\right)\\
+ & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und wegen 
+\begin_inset Formula $P_{2}=Q_{2}=0$
+\end_inset
+
+ genügt es 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+z_{1}\\
+z_{2}\\
+z_{3}
+\end{array}\right) & = & \left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right)\\
+ & = & \left(1-\mu_{0}\right)\underline{D}_{\left(-\alpha\right)}S\left(T^{*}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+weiter zu untersuchen.
+ Man erhält für die 2.
+ Komponente 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ den Ausdruck 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+z_{2} & = & \left(1-\mu_{0}\right)\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}\underline{S}\left(T^{*}\right)\\
+ & = & \left(1-\mu_{0}\right)R_{S}\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}\left(\begin{array}{c}
+\cos\left(\omega T^{*}\right)\\
+\sin\left(\omega T^{*}\right)\\
+0
+\end{array}\right)\\
+ & = & \left(1-\mu_{0}\right)R_{S}\left(\begin{array}{ccc}
+-\cos\psi\sin\alpha, & \cos\alpha, & \sin\psi\sin\alpha\end{array}\right)\left(\begin{array}{c}
+\cos\left(\omega T^{*}\right)\\
+\sin\left(\omega T^{*}\right)\\
+0
+\end{array}\right)\\
+ & = & \left(1-\mu_{0}\right)R_{S}\left[-\cos\psi\sin\alpha\cos\left(\omega T^{*}\right)+\cos\alpha\sin\left(\omega T^{*}\right)\right].
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Die Nullstelle 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+ erhält durch Lösung der Gleichung 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\sin\alpha_{0}}{\cos\alpha_{0}} & = & \frac{1}{\cos\psi}\frac{\sin\left(\omega T^{*}\right)}{\cos\left(\omega T^{*}\right)}\\
+\alpha_{0} & = & \arctan\left[\frac{1}{\cos\psi}\frac{\sin\left(\omega T^{*}\right)}{\cos\left(\omega T^{*}\right)}\right].
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:ErgebnisSonneGedreht}
@@ -1892,6 +2114,14 @@ noprefix "false"
 
 ) lösbar und wird hier nicht näher behandelt.
  
+\end_layout
+
+\begin_layout Section
+Numerische Problemlösung 
+\end_layout
+
+\begin_layout Standard
+xxx
 \end_layout
 
 \begin_layout Section
@@ -1984,7 +2214,7 @@ noprefix "false"
 
 \end_inset
 
- sieht man unten das gelbe Fussende des Stabes.
+ sieht man unten am Bildrand das gelbe Fussende des Stabes.
  Der Zeitunterschied beider Aufnahmen beträgt 22 Minuten.
  In dieser Zeit ist der Schatten ca.
  20 cm weiter gewandert.

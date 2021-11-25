@@ -1,25 +1,18 @@
 function SonnenkompassPlot()
+    clc
+    clear
+
     % Ergebnisdaten laden
-    load( 'LasPalmas-12.10.2021.mat', 'y', 'abstand' )
+    load( 'LasPalmas-12.10.2021.mat', 'y' )
 
-    % sicherstellen, dass Datenlänge ungerade ist
+    % Aufräumen
+    ndx = ~isnan( y( :, 2 ) );
+    y   = y( ndx, : );
+
+    % Nullstelle in West-Ost-Koordinate suchen
+    find( y( :, 2 ) < 0 )
+
     N = size( y, 1 );
-    if( mod( N, 2 ) == 0 )  % N gerade?
-        y( end )       = [];
-        abstand( end ) = [];
-    end
-
-    % Daten so verschieben, dass der minimale Abstand zum Stab im
-    % Mittelelement des Datensatzes ist. Die Zeit in Minuten ist (ndx - 1).
-    [ minAbstand, ndx ] = min( abstand );
-
-    %         ... mitte ...
-    % 1, 2, ..., (N-1)/2, ..., N
-    mitte   = ( N - 1 ) / 2;
-    shift   = mitte - ndx;
-    y       = circshift( y, shift );
-
-    sprintf( 'Minimaler Abstand: %1.4f m', minAbstand )
 
     figure
     title( 'Schattentrajektorie' )
@@ -38,8 +31,8 @@ function SonnenkompassPlot()
     % Ort des Stabes plotten
     plot( 0, 0, 'o', 'MarkerSize', 10, 'MarkerFaceColor', 'r' )
     % Schatten-Trajektorie plotten
-    mndx = 1 : 10 : mitte + 1;
-    plot( y( :, 1 ), y( :, 2 ), '-o', 'MarkerSize', 3, 'MarkerIndices', mndx, ...
+    mndx = 1 : 10 : N;
+    plot( y( :, 2 ), y( :, 3 ), '-o', 'MarkerSize', 3, 'MarkerIndices', mndx, ...
         'Color', 'k', 'LineWidth', 1 )
     % Markierung 12 Uhr
 	text( 0, 1.7, '\uparrow', 'HorizontalAlignment', 'center' )

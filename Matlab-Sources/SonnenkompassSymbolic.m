@@ -40,18 +40,12 @@ s( 1 ) = rS * cos( omega );
 s( 2 ) = rS * sin( omega );
 s( 3 ) = 0;
 
-% rotierte Punkte P, Q und S
-pAlpha = dAlpha * p;
-sAlpha = dAlpha * s;
-
-% Ausdruck PAlpha' * S bestimmen, collect: PAlphaS als Koeffizienten des Vektors P ausdrücken
-pAlphaS = collect( pAlpha' * s, p );
-
-% Ausdruck P' * SAlpha bestimmen, collect: PSAlpha als Koeffizienten des Vektors P ausdrücken
+% Sonne wird gedreht
+sAlpha  = dAlpha * s;
+% PSAlpha als Koeffizienten des Vektors P ausdrücken 
 pSAlpha = collect( p' * sAlpha, p );
-
-% Hauptterm der zu lösende Gleichung (Sonne wird gedreht)
-omegaS = simplify( rE - pSAlpha / rE );
-omegaS = omegaS / lS;
+% Hauptterm der zu lösende Gleichung 
+omegaS  = simplify( rE - pSAlpha / rE );
+omegaS  = omegaS / lS;
 
 save( 'SonnenkompassSymbolic.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' )
