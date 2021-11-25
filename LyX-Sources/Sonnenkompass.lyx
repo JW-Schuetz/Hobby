@@ -971,7 +971,7 @@ Bewegung der Erde um die Sonne (nicht massstäblich)
 \end_layout
 
 \begin_layout Standard
-Deshalb gilt für den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinke
+Deshalb kann man den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinke
 ls 
 \begin_inset Formula $\omega T^{*}$
 \end_inset
@@ -980,7 +980,7 @@ ls
 \begin_inset Formula $\omega=\frac{2\pi}{365}$
 \end_inset
 
- die Gleichung 
+ durch 
 \end_layout
 
 \begin_layout Standard
@@ -990,7 +990,7 @@ ls
 \cos\left(\omega T^{*}\right)\\
 \sin\left(\omega T^{*}\right)\\
 0
-\end{array}\right).\label{eq:Ort der Sonne}
+\end{array}\right)\label{eq:Ort der Sonne}
 \end{equation}
 
 \end_inset
@@ -999,7 +999,8 @@ ls
 \end_layout
 
 \begin_layout Standard
-Dabei ist 
+beschreiben.
+ Dabei ist 
 \begin_inset Formula $T^{*}\in\left[0,365\right)$
 \end_inset
 
@@ -1660,11 +1661,7 @@ noprefix "false"
 \begin_inset Formula $\mu_{0}>1$
 \end_inset
 
- (und damit 
-\begin_inset Formula $R<0$
-\end_inset
-
-) gelten.
+ gelten.
  
 \end_layout
 
@@ -1893,14 +1890,6 @@ noprefix "false"
 
 ) lösbar und wird hier nicht näher behandelt.
  
-\end_layout
-
-\begin_layout Section
-Numerische Problemlösung 
-\end_layout
-
-\begin_layout Standard
-xxx
 \end_layout
 
 \begin_layout Section
