@@ -665,7 +665,8 @@ e_{3}e_{1}\left(1-\cos\alpha\right)-e_{2}\sin\alpha & e_{3}e_{2}\left(1-\cos\alp
 \end_layout
 
 \begin_layout Standard
-beschrieben, dabei ist 
+beschrieben.
+ Dabei ist 
 \begin_inset Formula 
 \[
 \underline{e}=\left(\begin{array}{c}
@@ -694,7 +695,7 @@ Die Erd-Rotationsachse
 \begin_inset Formula $\underline{e}$
 \end_inset
 
- ist wegen der Drehimpulserhaltung invariant gegenüber Tages- und Jahreszeiten.
+ ist wegen der Drehimpulserhaltung zeitinvariant.
  
 \end_layout
 
@@ -873,8 +874,7 @@ Jahreszeitabhängigkeit
 
 \begin_layout Standard
 Der jahreszeitliche Einfluss wird durch eine Kreisbewegung der Sonne um
- die (als im Koordinatenursprung fixiert angenommene) Erde berücksichtigt
- (siehe Abbildungen
+ die Erde berücksichtigt (siehe Abbildungen
 \begin_inset space ~
 \end_inset
 
@@ -926,53 +926,8 @@ noprefix "false"
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename SonnenKompassTop.eps
-	lyxscale 150
-	scale 40
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Problemskizze3"
-
-\end_inset
-
-Bewegung der Erde um die Sonne (nicht massstäblich) 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Deshalb kann man den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinke
-ls 
+ Man kann deshalb den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwink
+els 
 \begin_inset Formula $\omega T^{*}$
 \end_inset
 
@@ -1009,8 +964,45 @@ beschreiben.
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompassTop.eps
+	lyxscale 150
+	scale 40
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Problemskizze3"
+
+\end_inset
+
+Bewegung der Erde um die Sonne (nicht massstäblich)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Section
-Fusspunkt und Endpunkt des Stabes 
+Fuss- und Endpunkt des Stabes 
 \end_layout
 
 \begin_layout Standard
@@ -1101,7 +1093,7 @@ Für den Punkt
 \begin_inset Formula $L$
 \end_inset
 
- gilt 
+ gilt damit 
 \begin_inset Formula 
 \begin{equation}
 \underline{Q}=\left(1+\frac{L}{R_{E}}\right)\underline{P}.\label{eq:Endpunkt}
@@ -1135,7 +1127,7 @@ Die Kugel mit Radius
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-f(x_{1},x_{2},x_{3})=\sum_{i}x_{i}^{2}-R_{E}^{2},\label{eq:Kugel}
+f(x_{1},x_{2},x_{3})=\sum_{i}x_{i}^{2}-R_{E}^{2}.\label{eq:Kugel}
 \end{equation}
 
 \end_inset
@@ -1144,7 +1136,7 @@ f(x_{1},x_{2},x_{3})=\sum_{i}x_{i}^{2}-R_{E}^{2},\label{eq:Kugel}
 \end_layout
 
 \begin_layout Standard
-für den Index gilt hier und im folgenden 
+Für den Index gilt hier und im folgenden 
 \begin_inset Formula $i\in\left[1,3\right]$
 \end_inset
 
@@ -1208,7 +1200,7 @@ Für die implizite Gleichung der Tangentialebene
  folgt schliesslich für die Kugel der Ausdruck 
 \begin_inset Formula 
 \[
-\sum_{i}p_{i}\left(x_{i}-p_{i}\right)=0
+\sum_{i}p_{i}\left(x_{i}-p_{i}\right)=0.
 \]
 
 \end_inset
@@ -1217,18 +1209,23 @@ Für die implizite Gleichung der Tangentialebene
 \end_layout
 
 \begin_layout Standard
-oder in vektorieller Schreibweise 
+In vektorieller Schreibweise lässt sich die Tangentialebene durch 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\forall\underline{x}\in T:\;\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0.\label{eq:Tangentialebene}
+\forall\underline{x}\in T:\;\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0\label{eq:Tangentialebene}
 \end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+charakterisieren.
+ 
 \end_layout
 
 \begin_layout Section
@@ -1300,12 +1297,39 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-gegeben, dabei gilt 
-\begin_inset Formula $\mu\geq0$
+gegeben.
+ Hier wird für 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+ der Punkt 
+\begin_inset Formula $\underline{S}^{\alpha}\left(T^{*}\right)$
+\end_inset
+
+ beschrieben, für 
+\begin_inset Formula $\mu=1$
+\end_inset
+
+ der Punkt 
+\begin_inset Formula $\underline{Q}$
 \end_inset
 
 .
  
+\end_layout
+
+\begin_layout Section
+Analytische Problemlösung 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:FixierungErde"
+
+\end_inset
+
+Lösung durch Fixierung der Erde 
 \end_layout
 
 \begin_layout Standard
@@ -1313,7 +1337,7 @@ Berücksichtigt man die Drehung der Sonne durch die Drehmatrix
 \begin_inset Formula $D_{\left(-\alpha\right)}$
 \end_inset
 
- und fixiert die Erde, dann folgt mit 
+ und fixiert die Erde, dann folgt mit der Abkürzung 
 \begin_inset Formula 
 \begin{equation}
 \underline{S}^{\alpha}\left(T^{*}\right)=D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)\label{eq:SonneGedreht}
@@ -1335,53 +1359,18 @@ noprefix "false"
 
 \end_inset
 
-) 
+) die Darstellung 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\forall\underline{x}\in G_{S}^{\alpha}:\;\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)\label{eq:VerbindungsgeradeSonneGedreht}
+\forall\underline{x}\in G_{S}^{\alpha}:\;\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right).\label{eq:VerbindungsgeradeSonneGedreht}
 \end{equation}
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Hier wird für 
-\begin_inset Formula $\mu=0$
-\end_inset
-
- wird der Punkt 
-\begin_inset Formula $\underline{S}^{\alpha}\left(T^{*}\right)$
-\end_inset
-
-, für 
-\begin_inset Formula $\mu=1$
-\end_inset
-
- wird der Punkt 
-\begin_inset Formula $\underline{Q}$
-\end_inset
-
- beschrieben.
- 
-\end_layout
-
-\begin_layout Section
-Analytische Problemlösung 
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:FixierungErde"
-
-\end_inset
-
-Lösung durch Fixierung der Erde 
 \end_layout
 
 \begin_layout Standard
@@ -1520,7 +1509,7 @@ Wegen
 \begin_inset Formula $\underline{P}^{T}\underline{P}=R_{E}^{2}$
 \end_inset
 
- folgt nach kurzer Rechnung die zu lösende Gleichung 
+ folgt nach kurzer Rechnung die Bestimmungsgleichung 
 \begin_inset Note Note
 status collapsed
 
@@ -1620,13 +1609,13 @@ R & = & \frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
 \end_layout
 
 \begin_layout Standard
-mit 
+mit der Abkürzung 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\varOmega^{S}\left(\alpha\right)=\frac{1}{L}\left(R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\right).
+\varOmega^{S}\left(\alpha\right)=\frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}}\right].
 \]
 
 \end_inset
@@ -1692,21 +1681,7 @@ noprefix "false"
 \begin_inset Formula $\mu_{0}\left(\alpha\right)$
 \end_inset
 
- durch Einsetzen in Gleichung
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:GesuchterPunktSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) zu 
+ zu 
 \end_layout
 
 \begin_layout Standard
@@ -1735,17 +1710,18 @@ Die gefundenen Trajektorienpunkte
 
  gegeben.
  Sie sollen aber auf ein zweidimensionales Koordinatensystem der Tangentialebene
- abgebildet werden, das eine identische Metrik besitzt und dessen Ursprung
- durch den Stabfusspunkt 
+ abgebildet werden.
+ Dieses Koordinatensystem soll eine identische Metrik besitzen und sein
+ Ursprung soll im Stabfusspunkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- gebildet wird.
+ liegen.
  
 \end_layout
 
 \begin_layout Standard
-Dazu wird der Punkt 
+Zur Bestimmung dieses Koordinatensystemes wird zunächst der Punkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -1803,11 +1779,11 @@ Der Punkt
 \begin_inset Formula $0°$
 \end_inset
 
- Länge, und stimmt mit der 
+ Länge, und liegt auf der 
 \begin_inset Formula $x_{1}$
 \end_inset
 
--Achse überein.
+-Achse.
  Die Trajektorienpunkte können nun mittels der Projektionsabbildung 
 \begin_inset Formula 
 \begin{equation}
@@ -1828,31 +1804,7 @@ auf die Tangentialebene
 \end_inset
 
  projiziert werden.
- 
-\end_layout
-
-\begin_layout Standard
-Es ergibt sich also mit den Abbildungen (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:DrehmatrixTheta"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- und 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Projektion"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) für die auf die Tangentialebene projizierten Punkte 
+ Es ergibt sich also 
 \begin_inset Formula 
 \begin{equation}
 \underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:ErgebnisSonneGedreht}
@@ -1874,7 +1826,7 @@ Lösung durch Fixierung der Sonne
 \end_layout
 
 \begin_layout Standard
-Dieser Ansatz ist analog zum obigen Unterabschnitt
+Dieser äquivalente Ansatz ist analog zum obigen Unterabschnitt
 \begin_inset space ~
 \end_inset
 
@@ -1924,8 +1876,44 @@ noprefix "false"
  Breite) am 12.10.2021.
  Zwischen den Markierungen der Trajektorie liegen jeweils 10 Minuten.
  Für die Stablänge wurde 1.5 m angenommen.
- Markiert sind zwei Punkte im zeitlichen Abstand von 20 Minuten (13:30 Uhr
- und 13:50 Uhr), ihr geometrischer Abstand beträgt 20.28 cm.
+ Die Koordinaten zweier Punkte im zeitlichen Abstand von 20 Minuten (13:30
+ Uhr und 13:50 Uhr) sind dargestellt, ihr geometrischer Abstand beträgt
+ 20.28 cm.
+ 
+\end_layout
+
+\begin_layout Standard
+Die entsprechende Trajektorie für die Wintersonnenwende am 21.12.2021 findet
+ sich in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SchattentrajektorieWSW"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Man beachte die von Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schattentrajektorie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ abweichende Skalierung.
  
 \end_layout
 
@@ -1982,7 +1970,7 @@ noprefix "false"
 
 \end_inset
 
- sieht man unten am Bildrand das gelbe Fussende des Stabes.
+ sieht man am unteren Bildrand das gelbe Fussende des Stabes.
  Der Zeitunterschied beider Aufnahmen beträgt 22 Minuten.
  In dieser Zeit ist der Schatten ca.
  20 cm weiter gewandert.
@@ -2072,6 +2060,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SchattentrajektorieWSW"
+
+\end_inset
+
 Schattentrajektorie zur Wintersonnenwende am 21.12.2021 in Las Palmas
 \end_layout
 
@@ -2091,12 +2085,12 @@ Bewertung der Genauigkeit
 
 \begin_layout Standard
 Entgegen der obigen Annahme der Methode zur Bestimmung der Nord-Richtung
- per Sonnenstand, ist die Schattentrajektorie keine Gerade.
+ per Sonnenstand, ist die Schattentrajektorie keine Gerade, nicht einmal
+ näherungsweise.
  Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
  vernachlässigbar.
- Wenn man eine Uhr zur Verfügung hat, kann man die Genauigkeit optimieren,
- indem man Schattenzeitpunkte untersucht, die symmetrisch um den Mittagszeitpunk
-t liegen.
+ Die genaue Nordrichtung erhält man nur, wenn man Schattenzeitpunkte untersucht,
+ die symmetrisch um den Mittagszeitpunkt liegen.
  
 \end_layout
 
