@@ -918,7 +918,7 @@ literal "false"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Problemskizze3"
+reference "fig:ErdJahresUmlauf"
 plural "false"
 caps "false"
 noprefix "false"
@@ -972,23 +972,22 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename SonnenKompassTop.eps
-	lyxscale 150
-	scale 40
+	filename SonnenKompassTopHelp.eps
+	scale 30
 
 \end_inset
 
- 
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Problemskizze3"
+name "fig:ErdJahresUmlauf"
 
 \end_inset
 
-Bewegung der Erde um die Sonne (nicht massstäblich)
+Umlauf der Erde um die Sonne, nicht massstäblich
 \end_layout
 
 \end_inset
@@ -998,7 +997,7 @@ Bewegung der Erde um die Sonne (nicht massstäblich)
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Section
@@ -2096,7 +2095,7 @@ Entgegen der obigen Annahme der Methode zur Bestimmung der Nord-Richtung
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Section
 Überprüfung 
@@ -2122,7 +2121,18 @@ p_{1}, & 0, & p_{3}\end{array}\right)^{T}$
 \begin_inset Formula $0°$
 \end_inset
 
- gelten 
+ gelten
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+...
+ wegen der Symmetrie.
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
 A_{z}D_{\alpha}\underline{P}=A_{z}D_{\left(-\alpha\right)}\underline{P}\label{eq:ForderungZ}
@@ -2243,14 +2253,18 @@ und somit
 A_{z}U_{\alpha}\underline{P} & = & A_{z}\sin\alpha\begin{pmatrix}0 & -\cos\psi & 0\\
 \cos\psi & 0 & -\sin\psi\\
 0 & \sin\psi & 0
-\end{pmatrix}\underline{P}\\
+\end{pmatrix}\left(\begin{array}{c}
+p_{1}\\
+0\\
+p_{3}
+\end{array}\right)\\
  & = & A_{z}\begin{pmatrix}0\\
-p_{1}\cos\psi-p_{2}\sin\psi\\
+p_{1}\cos\psi-p_{3}\sin\psi\\
 0
 \end{pmatrix}\sin\alpha\\
  & = & \left(\begin{array}{ccc}
 0, & 0, & 1\end{array}\right)\begin{pmatrix}0\\
-p_{1}\cos\psi-p_{2}\sin\psi\\
+p_{1}\cos\psi-p_{3}\sin\psi\\
 0
 \end{pmatrix}\sin\alpha\\
  & = & 0.
@@ -2748,7 +2762,11 @@ Drehen des Punktes um
 \begin_inset Formula $\Theta+\psi=0$
 \end_inset
 
- um die 
+ (also um 
+\begin_inset Formula $0°$
+\end_inset
+
+) um die 
 \begin_inset Formula $x_{2}$
 \end_inset
 
@@ -2757,6 +2775,27 @@ Drehen des Punktes um
 \end_inset
 
  unverändert.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Dieses Ergebnis ist erwartungskonform, denn 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+ liegt auf der Tangentialebene mit 
+\begin_inset Formula $x_{1}=R_{E}$
+\end_inset
+
+ und für 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ führt die Trajektorie durch 
+\begin_inset Formula $x_{2}=0$
+\end_inset
+
+.
  
 \end_layout
 
@@ -2775,7 +2814,11 @@ noprefix "false"
 
 \end_inset
 
-) folgt für die Koordinaten der Tangentialebene 
+) folgt für die Koordinaten 
+\begin_inset Formula $\left(y_{1},y_{2}\right)$
+\end_inset
+
+ der Tangentialebene 
 \begin_inset Note Note
 status open
 
@@ -2790,7 +2833,7 @@ OK!
  
 \begin_inset Formula 
 \begin{eqnarray*}
-\underline{x}_{0} & = & \left(\begin{array}{ccc}
+\underline{y} & = & \left(\begin{array}{ccc}
 0 & 1 & 0\\
 0 & 0 & 1
 \end{array}\right)\left(\begin{array}{c}
@@ -2809,24 +2852,165 @@ R_{E}\\
 
 \end_layout
 
+\begin_layout Subsubsection*
+Problem Trajektorienrichtung 
+\end_layout
+
 \begin_layout Plain Layout
-Dieses Ergebnis ist erwartungskonform, denn 
-\begin_inset Formula $\underline{x}_{0}$
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompassTopHelp.eps
+	scale 50
+
 \end_inset
 
- legt auf der Tangentialebene mit 
-\begin_inset Formula $x_{1}=R_{E}$
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ErdUmlauf"
+
 \end_inset
 
- und für 
-\begin_inset Formula $\alpha=0$
+Umlauf der Erde um die Sonne, Position am 21.10.2021 
+\end_layout
+
 \end_inset
 
- führt die Trajektorie durch 
-\begin_inset Formula $x_{2}=0$
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
-.
+
+\end_layout
+
+\begin_layout Plain Layout
+Der erste gefundene Trajektorienpunkt für Las Palmas am 12.10.2021 ist 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Koordinaten 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3},\alpha,t,y_{1},y_{2}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.349585678710100e+06 m 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.568055905141423e+03 m 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.219319606455093e+05 m 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+164.75°
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+659 min, 10 h 59 min 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1568.055905141423 m 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+263.1481320470921 m 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Das ist weit im Osten.
+ Ich erwarte aber, dass die Trajektorie im Westen, also mit negativer 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+-Komponente, beginnt.
  
 \end_layout
 
@@ -2834,7 +3018,7 @@ Dieses Ergebnis ist erwartungskonform, denn
 
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Section
 Überprüfung per Trigonometrie 
@@ -2861,7 +3045,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Überprüfung per Trigonometrie
+Überprüfung per Trigonometrie 
 \end_layout
 
 \end_inset
@@ -3052,9 +3236,115 @@ x & = & L\tan\lambda\\
 
 \end_layout
 
+\begin_layout Plain Layout
+Die numerische Ergebnisse sind für Las Palmas sind (siehe MatLab-Quelle
+ 
+\begin_inset Quotes gld
 \end_inset
 
-  
+TigonometrischerTest.m
+\begin_inset Quotes grd
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zeitpunkt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+min.
+ Trajektorienabstand zum Stab [m]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SSW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.123241951044209
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+WSW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.891081510194158
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Beide Ergebnisse stimmen sehr gut mit den oben durch Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ErgebnisSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) errechneten Ergebnissen überein.
+ 
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Bibliography

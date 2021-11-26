@@ -25,9 +25,9 @@ function SonnenkompassNumeric
     end
 
     fileName = [ ort, '-', datum, '.mat' ];
-%     if( isfile( fileName ) )
+    if( isfile( fileName ) )
 %         error( 'File "%s" existiert bereits!', fileName )
-%     end
+    end
 
     % Fixe Daten
     rE  = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
@@ -74,7 +74,7 @@ function SonnenkompassNumeric
 
     % Numerische Auswertung
     M = 60 * 24;	% Anzahl Minuten (1 Tag = 60*24 Stunden)
-    N = M + 1;      % Anzahl Punkte
+    N = 1 * M + 1;	% Anzahl Punkte
 
     y = zeros( N, 3 );    % [m]
 
