@@ -3,7 +3,7 @@ function SonnenkompassPlot()
     clear
 
     % Ergebnisdaten laden
-    load( 'LasPalmas-21.12.2021.mat', 'y' )
+    load( 'LasPalmas-12.10.2021.mat', 'y' )
 
     % Aufräumen
     ndx = ~isnan( y( :, 2 ) );

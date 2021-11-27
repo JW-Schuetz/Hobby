@@ -378,7 +378,11 @@ der Ablauf der Tageszeit
 \begin_inset Formula $T^{*}$
 \end_inset
 
- unbeeinflusst lassen, die beiden Zeiten seien also voneinander entkoppelt.
+ unbeeinflusst lassen, die beiden Zeiten seien also voneinander entkoppelt
+\end_layout
+
+\begin_layout Itemize
+der lokale tägliche Sonnenhöchststand wird für 12 Uhr mittags angenommen.
  
 \end_layout
 
@@ -2173,7 +2177,7 @@ Entgegen der obigen Annahme der Methode zur Bestimmung der Nord-Richtung
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Section
 Überprüfung 
@@ -2938,12 +2942,12 @@ Problem Trajektorienrichtung
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompassTopHelp.eps
-	scale 50
+	scale 33
 
 \end_inset
 
@@ -2957,7 +2961,7 @@ name "fig:ErdUmlauf"
 
 \end_inset
 
-Umlauf der Erde um die Sonne, Position am 21.10.2021 
+Umlauf der Erde um die Sonne, Position zur SSW und am 12.10.2021 
 \end_layout
 
 \end_inset
@@ -2974,8 +2978,13 @@ Umlauf der Erde um die Sonne, Position am 21.10.2021
 
 \end_layout
 
+\begin_layout Enumerate
+Las Palmas am 12.10.2021 
+\end_layout
+
+\begin_deeper
 \begin_layout Plain Layout
-Der erste gefundene Trajektorienpunkt für Las Palmas am 12.10.2021 ist 
+Der erste gefundene Trajektorienpunkt ist 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3003,7 +3012,7 @@ Koordinaten
 \begin_inset Text
 
 \begin_layout Plain Layout
-6.349585678710100e+06 m 
+6.349598914727012e+06 m 
 \end_layout
 
 \end_inset
@@ -3014,7 +3023,7 @@ Koordinaten
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.568055905141423e+03 m 
+6.017943782065755e+02 m 
 \end_layout
 
 \end_inset
@@ -3025,7 +3034,7 @@ Koordinaten
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.219319606455093e+05 m 
+5.217708557900113e+05 m 
 \end_layout
 
 \end_inset
@@ -3036,7 +3045,7 @@ Koordinaten
 \begin_inset Text
 
 \begin_layout Plain Layout
-164.75°
+24.5°
 \end_layout
 
 \end_inset
@@ -3047,7 +3056,7 @@ Koordinaten
 \begin_inset Text
 
 \begin_layout Plain Layout
-659 min, 10 h 59 min 
+98 min, 1 h 38 min 
 \end_layout
 
 \end_inset
@@ -3058,7 +3067,7 @@ Koordinaten
 \begin_inset Text
 
 \begin_layout Plain Layout
-1568.055905141423 m 
+601.7943782065755 m 
 \end_layout
 
 \end_inset
@@ -3069,7 +3078,7 @@ Koordinaten
 \begin_inset Text
 
 \begin_layout Plain Layout
-263.1481320470921 m 
+101.5004701131256 m 
 \end_layout
 
 \end_inset
@@ -3089,9 +3098,131 @@ Das ist weit im Osten.
 \end_inset
 
 -Komponente, beginnt.
+ Ausserdem ist die Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+ mit 98 Minuten für den ersten Schattenwurf extrem kurz.
+ Ich hätte eher ca.
+ 8 Stunden erwartet.
  
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+Las Palmas zur WSW 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Der erste gefundene Trajektorienpunkt ist 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Koordinaten 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3},\alpha,t,y_{1},y_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.349531514376390e+06 m
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.827336464607460e+03 m
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.225912327113156e+05 m
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+104.0°
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+416 min, 6 h 56 min
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1827.336464607460 m
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+924.6414667064673e m
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_inset
 
  
