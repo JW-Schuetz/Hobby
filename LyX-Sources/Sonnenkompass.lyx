@@ -918,7 +918,7 @@ literal "false"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:ErdJahresUmlauf"
+reference "fig:Erd-JahresUmlauf"
 plural "false"
 caps "false"
 noprefix "false"
@@ -983,7 +983,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:ErdJahresUmlauf"
+name "fig:Erd-JahresUmlauf"
 
 \end_inset
 
