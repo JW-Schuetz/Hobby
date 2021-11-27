@@ -21,7 +21,7 @@ function SonnenkompassNumeric
         case 'LasPalmas'
             lS        = 1.5;                                % Stablänge [m]
             breiteGeo = 28.136746041614316 / 180.0 * pi;	% Las Palmas de Gran Canaria
-            datum     = '12.10.2021';                       % Datum
+            datum     = '21.12.2021';                       % Datum
     end
 
     fileName = [ ort, '-', datum, '.mat' ];

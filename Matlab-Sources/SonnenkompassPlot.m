@@ -3,7 +3,7 @@ function SonnenkompassPlot()
     clear
 
     % Ergebnisdaten laden
-    load( 'LasPalmas-12.10.2021.mat', 'y' )
+    load( 'LasPalmas-21.12.2021.mat', 'y' )
 
     % Aufräumen
     ndx = ~isnan( y( :, 2 ) );
@@ -23,7 +23,7 @@ function SonnenkompassPlot()
     ylabel( 'Süd-Nord [m]' )
 
     % Darstellungsbereich in Metern
-    squareSize = 2;     % [m]
+    squareSize = 6;     % [m]
     xlim( squareSize * [ -1, 1 ] );
     ylim( squareSize * [ -0.1, 1 ] );
 
@@ -35,7 +35,7 @@ function SonnenkompassPlot()
         'Color', 'k', 'LineWidth', 1 )
     % Markierung 12 Uhr
 	text( 0, 1.7, '\uparrow', 'HorizontalAlignment', 'center' )
-	text( 0, 1.5, '12:00 Uhr', 'HorizontalAlignment', 'center' )
+	text( 0, 1.3, '12:00 Uhr', 'HorizontalAlignment', 'center' )
 
     legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
 end

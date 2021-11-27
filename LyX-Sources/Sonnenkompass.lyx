@@ -1941,7 +1941,7 @@ noprefix "false"
  Für die Stablänge wurde 1.5 m angenommen.
  Die Koordinaten zweier Punkte im zeitlichen Abstand von 20 Minuten (13:30
  Uhr und 13:50 Uhr) sind dargestellt, ihr geometrischer Abstand beträgt
- 20.28 cm.
+ 21.3 cm.
  
 \end_layout
 
@@ -2018,7 +2018,58 @@ Schattentrajektorie am 12.10.2021 in Las Palmas
 \end_layout
 
 \begin_layout Standard
-Ebenfalls am 12.10.2021 sind die nachfolgenden Fotos entstanden.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SchattenTrajektorieWSW.eps
+	lyxscale 160
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SchattentrajektorieWSW"
+
+\end_inset
+
+Schattentrajektorie zur Wintersonnenwende am 21.12.2021 in Las Palmas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Korrespondierend zur Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schattentrajektorie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ sind am 12.10.2021 die nachfolgenden Fotos entstanden.
  Im ersten der beiden Fotos der Abbildung
 \begin_inset space ~
 \end_inset
@@ -2039,7 +2090,7 @@ noprefix "false"
  20 cm weiter gewandert.
  Dieses Ergebnis passt recht gut zum rechnerisch ermittelten Abstand
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Leider habe ich vor Ort weder die genaue Länge des Stabes noch die genaue
@@ -2105,43 +2156,6 @@ Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename SchattenTrajektorieWSW.eps
-	lyxscale 160
-	scale 50
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:SchattentrajektorieWSW"
-
-\end_inset
-
-Schattentrajektorie zur Wintersonnenwende am 21.12.2021 in Las Palmas
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Bewertung der Genauigkeit 
 \end_layout
@@ -2159,7 +2173,7 @@ Entgegen der obigen Annahme der Methode zur Bestimmung der Nord-Richtung
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Section
 Überprüfung 
@@ -3082,7 +3096,7 @@ Das ist weit im Osten.
 
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Section
 Überprüfung per Trigonometrie 
