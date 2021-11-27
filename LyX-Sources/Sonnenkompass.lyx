@@ -284,7 +284,7 @@ Problemformulierung
 \end_layout
 
 \begin_layout Standard
-Es werden die folgenden vereinfachenden Annahmen getroffen: 
+Es werden die folgenden Annahmen getroffen: 
 \end_layout
 
 \begin_layout Itemize
@@ -337,11 +337,11 @@ im Punkt
 \end_layout
 
 \begin_layout Itemize
-die geographische Länge des Punktes 
+für die geographische Länge des Punktes 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- spiele keine Rolle, es wird für sie stets 
+ wird stets 
 \begin_inset Formula $\varphi=0$
 \end_inset
 
@@ -410,7 +410,7 @@ name "fig:Problemskizze1"
 
 \end_inset
 
-Problemskizze (nicht massstäblich, Sommersonnenwende, 21.
+Problemskizze (nicht massstäblich, Sommersonnenwende (SSW), 21.
  Juni) 
 \end_layout
 
@@ -448,7 +448,7 @@ name "fig:Problemskizze2"
 
 \end_inset
 
-Problemskizze (nicht massstäblich, Wintersonnenwende, 21.
+Problemskizze (nicht massstäblich, Wintersonnenwende (WSW), 21.
  Dezember) 
 \end_layout
 
@@ -704,7 +704,7 @@ Die Erd-Rotationsachse
 \end_layout
 
 \begin_layout Standard
-Zum Zeitpunkt der Sommersonnenwende, am 21.
+Zum Zeitpunkt der SSW, am 21.
  Juni, liegt die Rotationsachse in der 
 \begin_inset Formula $\left(x_{1},x_{3}\right)$
 \end_inset
@@ -963,11 +963,11 @@ beschreiben.
 \begin_inset Formula $T^{*}\in\left[0,365\right)$
 \end_inset
 
- die Jahreszeit, gemessen in Tagen seit der Sommersonnenwende am 21.
+ die Jahreszeit, gemessen in Tagen seit der SSW am 21.
  Juni.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Erdposition 
@@ -1945,13 +1945,12 @@ noprefix "false"
  Für die Stablänge wurde 1.5 m angenommen.
  Die Koordinaten zweier Punkte im zeitlichen Abstand von 20 Minuten (13:30
  Uhr und 13:50 Uhr) sind dargestellt, ihr geometrischer Abstand beträgt
- 21.3 cm.
+ 20.33 cm.
  
 \end_layout
 
 \begin_layout Standard
-Die entsprechende Trajektorie für die Wintersonnenwende am 21.12.2021 findet
- sich in Abbildung
+Die entsprechende Trajektorie für die WSW  am 21.12.2021 findet sich in Abbildung
 \begin_inset space ~
 \end_inset
 
@@ -2045,7 +2044,7 @@ name "fig:SchattentrajektorieWSW"
 
 \end_inset
 
-Schattentrajektorie zur Wintersonnenwende am 21.12.2021 in Las Palmas
+Schattentrajektorie zur WSW am 21.12.2021 in Las Palmas
 \end_layout
 
 \end_inset
@@ -2190,11 +2189,11 @@ Es werden einige Spezialfälle daraufhin untersucht, ob die obige Herleitung
 \end_layout
 
 \begin_layout Subsection
-Zeitpunkt Sommersonnenwende 
+Zeitpunkt SSW 
 \end_layout
 
 \begin_layout Itemize
-Zum Zeitpunkt der Sommersonnenwende sollte für einen Punkt 
+Zum Zeitpunkt der SSW sollte für einen Punkt 
 \begin_inset Formula $\underline{P}=\left(\begin{array}{ccc}
 p_{1}, & 0, & p_{3}\end{array}\right)^{T}$
 \end_inset
