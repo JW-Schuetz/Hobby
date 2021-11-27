@@ -10,7 +10,7 @@ function SonnenkompassPlot()
     y   = y( ndx, : );
 
     N = size( y, 1 );
-    
+
 %     minAbstand = min( sqrt( y( :, 2 ).^2 + y( :, 3 ).^2 ) )
 
     figure

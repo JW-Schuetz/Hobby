@@ -911,7 +911,7 @@ literal "false"
 
 \end_inset
 
-, Abbildung
+, und die Abbildung
 \begin_inset space ~
 \end_inset
 
@@ -943,7 +943,7 @@ els
 \begin{equation}
 \underline{S}\left(T^{*}\right)=R_{S}\left(\begin{array}{c}
 \cos\left(\omega T^{*}\right)\\
-\sin\left(\omega T^{*}\right)\\
+-\sin\left(\omega T^{*}\right)\\
 0
 \end{array}\right)\label{eq:Ort der Sonne}
 \end{equation}
@@ -961,6 +961,70 @@ beschreiben.
 
  die Jahreszeit, gemessen in Tagen seit der Sommersonnenwende am 21.
  Juni.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Erdposition 
+\begin_inset Formula $\left(p_{1}^{E},p_{2}^{E},p_{3}^{E}\right)$
+\end_inset
+
+ im Sonnen-Koordinatensystem 
+\begin_inset Formula $\left(x_{1}^{S},x_{2}^{S},x_{3}^{S}\right)$
+\end_inset
+
+ als Funktion der Jahreszeit 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1}^{E} & = & -R_{S}\cos\left(\omega T^{*}\right)\\
+p_{2}^{E} & = & -R_{S}\sin\left(\omega T^{*}\right)\\
+p_{3}^{E} & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Sonnenposition 
+\begin_inset Formula $\left(p_{1}^{S},p_{2}^{S},p_{3}^{S}\right)$
+\end_inset
+
+ im Sonnen-Koordinatensystem 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
+\end_inset
+
+ als Funktion der Jahreszeit 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1}^{S} & = & R_{S}\cos\left(\omega T^{*}\right)\\
+p_{2}^{S} & = & -R_{S}\sin\left(\omega T^{*}\right)\\
+p_{3}^{S} & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  
 \end_layout
 
