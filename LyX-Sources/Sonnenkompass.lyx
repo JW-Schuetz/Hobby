@@ -1796,6 +1796,132 @@ Die gefundenen Trajektorienpunkte
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Projektion.eps
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Orthogonalprojektion"
+
+\end_inset
+
+Orthogonalprojektion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Gegeben sei im 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ für 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+ eine affine Gerade 
+\begin_inset Formula $\forall x_{i}\in G:x_{2}=ax_{1}+b$
+\end_inset
+
+ und ein Punkt 
+\begin_inset Formula $\underline{P}=\left(p_{1},p_{2}\right)$
+\end_inset
+
+
+\begin_inset Formula $^{T}$
+\end_inset
+
+.
+ Gesucht ist der Punkt 
+\begin_inset Formula $\underline{P}^{'}\in G$
+\end_inset
+
+, der den kleinsten Abstand zum Punkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ besitzt.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Der Abstand ist durch 
+\begin_inset Formula $f\left(x_{1}\right)=\sqrt{\left(p_{1}-x_{1}\right)^{2}+\left(p_{2}-ax_{1}-b\right)^{2}}$
+\end_inset
+
+gegeben.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Es muss gelten 
+\begin_inset Formula $\frac{\partial}{\partial x_{1}}f\left(x_{1}\right)=0$
+\end_inset
+
+, also 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial x_{1}}f\left(x_{1}\right) & = & \frac{1}{2}\left[\left(p_{1}-x_{1}\right)^{2}+\left(p_{2}-ax_{1}-b\right)^{2}\right]^{-\frac{3}{2}}\left[-2\left(p_{1}-x_{1}\right)-2a\left(p_{2}-ax_{1}-b\right)\right]\\
+ & = & \left[\left(p_{1}-x_{1}\right)^{2}+\left(p_{2}-ax_{1}-b\right)^{2}\right]^{-\frac{3}{2}}\left[-\left(p_{1}-x_{1}\right)-a\left(p_{2}-ax_{1}-b\right)\right]\\
+ & = & \frac{-p_{1}+x_{1}-ap_{2}+a^{2}x_{1}+ab}{\sqrt{\left(p_{1}-x_{1}\right)^{2}+\left(p_{2}-ax_{1}-b\right)^{2}}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Für ein Extremum muss gelten 
+\begin_inset Formula 
+\[
+-p_{1}+x_{1}-ap_{2}+a^{2}x_{1}+ab=0
+\]
+
+\end_inset
+
+und damit 
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1} & = & \frac{p_{1}+ap_{2}-ab}{1+a^{2}}\\
+x_{2} & = & ax_{1}+b.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Zur Bestimmung dieses Koordinatensystemes wird zunächst der Punkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
@@ -1854,7 +1980,7 @@ Der Punkt
 \begin_inset Formula $0°$
 \end_inset
 
- Länge, und liegt auf der 
+ Länge, und befindet sich somit auf der 
 \begin_inset Formula $x_{1}$
 \end_inset
 
