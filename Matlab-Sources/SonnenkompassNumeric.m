@@ -11,22 +11,21 @@ function SonnenkompassNumeric
           'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
 
     % Variable Daten
-    ort = 'LasPalmas';
+    ort   = 'LasPalmas';
+	datum = '12.10.2021';
 
     switch( ort )
         case 'Hoechst'
             lS        = 1.76;                               % Stablänge [m]
             breiteGeo = 49.800760064804244 / 180.0 * pi;	% Höchst/Odenwald
-            datum     = '06.11.2021';                       % Datum
+
         case 'LasPalmas'
             lS        = 1.5;                                % Stablänge [m]
             breiteGeo = 28.136746041614316 / 180.0 * pi;	% Las Palmas de Gran Canaria
-            datum     = '21.12.2021';                       % Datum
-    end
 
-    fileName = [ ort, '-', datum, '.mat' ];
-    if( isfile( fileName ) )
-%         error( 'File "%s" existiert bereits!', fileName )
+        case 'Aequator'
+            lS        = 1.5;                                % Stablänge [m]
+            breiteGeo = 0;                                  % Äquator
     end
 
     % Fixe Daten
@@ -34,6 +33,17 @@ function SonnenkompassNumeric
     rS  = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
     psi = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
     ssw = datetime( '21.06.2021' );	% Datum SSW
+
+    if( psi == 0 )
+        psiTxt = '-Psi0';
+    else
+        psiTxt = '';
+    end
+
+    fileName = [ ort, '-', datum, psiTxt, '.mat' ];
+    if( isfile( fileName ) )
+%         error( 'File "%s" existiert bereits!', fileName )
+    end
 
 	tag    = datetime( datum );
     T      = days( tag - ssw );     % Jahreszeit [Tage seit SSW]
@@ -106,40 +116,6 @@ function SonnenkompassNumeric
     end
 
     save( fileName, 'y' )
-end
-
-function alphaShift = calculateShiftAngle( dAlpha, alpha, psi, omega, p1, p2, p3 )
-    % Drehwinkel bestimmen, abhängig von Jahreszeit
-    dAlpha = subs( dAlpha, 'psi', psi );    % psi substituieren
-
-    x = dAlpha * [ p1; p2; p3 ];
-
-    solution = solve( x( 2 ) == tan( omega ) * x( 1 ), alpha, 'real', true );
-    if( ~isempty( solution ) )
-        alphaShift = eval( solution );
-
-        % Es gibt 2 Lösungen, sie unterscheiden sich nach RotateDAlpha() um pi:
-        % 1. Lösung: omega - atan2( p2, p1 ) = 0
-        % 2. Lösung: omega - atan2( p2, p1 ) = pi
-        alphaShift = sort( alphaShift, 'descend' );
-        alphaShift = alphaShift( 1 );
-    else
-        error( 'No solution found' )
-    end
-end
-
-function [ x1, x2, x3 ] = RotateDAlpha( dAlpha, psi, x1, x2, x3, alpha )
-    % Punkt um den Winkel alpha drehen um Erdrotations-Achse 
-    if( alpha ~= 0 )
-        dAlpha = subs( dAlpha, 'psi', psi );
-        dAlpha = eval( subs( dAlpha ) );
-
-        x  = dAlpha * [ x1; x2; x3 ];
-
-        x1 = x( 1 );
-        x2 = x( 2 );
-        x3 = x( 3 );
-    end
 end
 
 function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, theta )

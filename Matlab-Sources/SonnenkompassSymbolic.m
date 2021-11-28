@@ -40,8 +40,9 @@ s( 1 ) =  rS * cos( omega );
 s( 2 ) = -rS * sin( omega );
 s( 3 ) = 0;
 
-% Sonne wird gedreht
-sAlpha  = dAlpha * s;
+% Sonne wird um -alpha gedreht
+dMinusAlpha = subs( dAlpha, 'alpha', str2sym( '-alpha' ) );
+sAlpha      = dMinusAlpha * s;
 % PSAlpha als Koeffizienten des Vektors P ausdrücken 
 pSAlpha = collect( p' * sAlpha, p );
 % Hauptterm der zu lösende Gleichung 
