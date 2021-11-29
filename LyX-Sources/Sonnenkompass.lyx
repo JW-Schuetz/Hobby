@@ -1394,23 +1394,27 @@ noprefix "false"
 
 \begin_layout Standard
 gegeben.
- Für 
+ Der Parameter 
+\begin_inset Formula $\mu$
+\end_inset
+
+ beschreibt für 
 \begin_inset Formula $\mu=0$
 \end_inset
 
- wird der Punkt 
+ den Punkt 
 \begin_inset Formula $\underline{S}^{\alpha}\left(T^{*}\right)$
 \end_inset
 
- beschrieben, für 
+, für 
 \begin_inset Formula $\mu=1$
 \end_inset
 
- der Punkt 
+ wird der Punkt 
 \begin_inset Formula $\underline{Q}$
 \end_inset
 
-.
+ beschrieben.
  
 \end_layout
 
@@ -1939,7 +1943,7 @@ Der Punkt
 \end_inset
 
 -Achse.
- Die Trajektorienpunkte 
+ Die 3-dimensionalen Trajektorienpunkte 
 \begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
@@ -1963,11 +1967,7 @@ auf die
 \end_inset
 
 -Ebene projiziert werden.
- 
-\end_layout
-
-\begin_layout Standard
-Es ergibt sich schliesslich die 2-dimensionalen Trajektorie 
+ Es ergibt sich schliesslich die gesuchte 2-dimensionalen Trajektorie 
 \begin_inset Formula 
 \begin{equation}
 \underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
@@ -2028,8 +2028,9 @@ Las Palmas de Gran Canaria
 
 \begin_layout Standard
 Die Schattentrajektorie und den Standort des Stabes für den Strand in Las
- Palmas de Gran Canaria (28.136746041614316° Breite) für die SSW am 21.06.2021
- und für die WSW am 21.12.2021 findet sich in den Abbildungen
+ Palmas \SpecialChar allowbreak
+(28.136746041614316° Breite) für die SSW am 21.06.2021 und für die
+ WSW am 21.12.2021 findet sich in den Abbildungen
 \begin_inset space ~
 \end_inset
 
