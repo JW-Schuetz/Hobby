@@ -662,7 +662,7 @@ Tageszeitabhängigkeit
 \begin_layout Standard
 Die tägliche Rotation der Erde um ihre Rotationsachse wird in Abhängigkeit
  des Rotationswinkels 
-\begin_inset Formula $\alpha\in\left[0,2\pi\right]$
+\begin_inset Formula $\alpha\in\left[0,2\pi\right)$
 \end_inset
 
  durch die Drehmatrix (siehe dazu z.B.
@@ -980,7 +980,7 @@ els
 \begin{equation}
 \underline{S}\left(T^{*}\right)=R_{S}\left(\begin{array}{c}
 \cos\left(\omega T^{*}\right)\\
--\sin\left(\omega T^{*}\right)\\
+\sin\left(\omega T^{*}\right)\\
 0
 \end{array}\right)\label{eq:Ort der Sonne}
 \end{equation}
@@ -1000,7 +1000,7 @@ beschreiben.
  Juni.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Erdposition 
@@ -1051,7 +1051,7 @@ Sonnenposition
 \begin_inset Formula 
 \begin{eqnarray*}
 p_{1}^{S} & = & R_{S}\cos\left(\omega T^{*}\right)\\
-p_{2}^{S} & = & -R_{S}\sin\left(\omega T^{*}\right)\\
+p_{2}^{S} & = & R_{S}\sin\left(\omega T^{*}\right)\\
 p_{3}^{S} & = & 0.
 \end{eqnarray*}
 
@@ -2193,7 +2193,7 @@ noprefix "false"
  zeigt die berechnete Schattentrajektorie ebenfalls für Las Palmas, aber
  für den 12.10.2021.
  Die Koordinaten der beiden markierten Punkte sind dargestellt, ihr geometrische
-r Abstand beträgt 20.33 cm, ihr zeitlicher Abstand beträgt 20 Minuten (13:30
+r Abstand beträgt 20.18 cm, ihr zeitlicher Abstand beträgt 20 Minuten (13:30
  Uhr und 13:50 Uhr).
  
 \begin_inset Float figure

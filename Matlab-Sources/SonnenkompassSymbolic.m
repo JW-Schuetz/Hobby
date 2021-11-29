@@ -36,8 +36,8 @@ dAlpha( 3, 3 ) = e( 3 )^2        * ( 1 - ca ) + ca;
 
 q = ( 1 + lS / rE ) * p;
 
-s( 1 ) =  rS * cos( omega );
-s( 2 ) = -rS * sin( omega );
+s( 1 ) = rS * cos( omega );
+s( 2 ) = rS * sin( omega );
 s( 3 ) = 0;
 
 % Sonne wird um -alpha gedreht

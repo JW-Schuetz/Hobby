@@ -3,7 +3,7 @@ function SonnenkompassPlot()
     clear
 
     ort    = 'LasPalmas';
-    datum  = '21.06.2021';
+    datum  = '12.10.2021';
 
 	switch( ort )
         case 'LasPalmas'
