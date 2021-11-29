@@ -1786,7 +1786,7 @@ Projektion auf die Tangentialebene
 \end_layout
 
 \begin_layout Standard
-Die gefundenen Trajektorienpunkte 
+Die gefundenen 3-dimensionalen Trajektorienpunkte 
 \begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
@@ -1795,10 +1795,10 @@ Die gefundenen Trajektorienpunkte
 \end_inset
 
  gegeben.
- Sie sollen aber auf ein zweidimensionales Koordinatensystem der Tangentialebene
+ Sie sollen auf ein zweidimensionales Koordinatensystem der Tangentialebene
  abgebildet werden.
- Dieses Koordinatensystem soll eine identische Metrik besitzen und sein
- Ursprung soll im Stabfusspunkt 
+ Dieses Koordinatensystem soll identische Metrik besitzen und sein Ursprung
+ soll im Stabfusspunkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -1808,7 +1808,7 @@ Die gefundenen Trajektorienpunkte
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -1921,11 +1921,15 @@ D.h.
 \end_layout
 
 \begin_layout Standard
-Zur Bestimmung dieses Koordinatensystemes wird zunächst der Punkt 
+Zur Bestimmung dieser Abbildung werden 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- um den Winkel 
+ und die Trajektorienpunkte 
+\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
+\end_inset
+
+ zunächst um den Winkel 
 \begin_inset Formula $\frac{\pi}{2}-\left(\Theta+\psi\right)$
 \end_inset
 
@@ -1933,8 +1937,7 @@ Zur Bestimmung dieses Koordinatensystemes wird zunächst der Punkt
 \begin_inset Formula $x_{2}$
 \end_inset
 
--Achse gedreht.
- Diese Drehung wird durch die Matrix 
+-Achse gedreht, diese Drehung wird durch die Matrix 
 \begin_inset Formula 
 \begin{equation}
 D_{\Theta}^{x_{2}}=\left(\begin{array}{ccc}
@@ -1984,7 +1987,11 @@ Der Punkt
 \end_inset
 
 -Achse.
- Die Trajektorienpunkte können nun mittels der Projektionsabbildung 
+ Die Trajektorienpunkte 
+\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
+\end_inset
+
+ können nun mittels der Projektionsabbildung 
 \begin_inset Formula 
 \begin{equation}
 A=\left(\begin{array}{ccc}
@@ -1999,15 +2006,19 @@ A=\left(\begin{array}{ccc}
 \end_layout
 
 \begin_layout Standard
-auf die Tangentialebene 
-\begin_inset Formula $T$
+auf die 
+\begin_inset Formula $\left(x_{2},x_{3}\right)$
 \end_inset
 
- projiziert werden.
- Es ergibt sich also 
+-Ebene projiziert werden.
+ 
+\end_layout
+
+\begin_layout Standard
+Es ergibt sich schliesslich die 2-dimensionalen Trajektorie 
 \begin_inset Formula 
 \begin{equation}
-\underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:ErgebnisSonneGedreht}
+\underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
 \end{equation}
 
 \end_inset
