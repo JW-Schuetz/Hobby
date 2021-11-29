@@ -106,6 +106,15 @@ Kein Datum
  
 \end_layout
 
+\begin_layout Section*
+Widmung 
+\end_layout
+
+\begin_layout Standard
+Für Waldemar, meinem netten Gastgeber in Las Palmas.
+ 
+\end_layout
+
 \begin_layout Section
 Fragestellung 
 \end_layout
@@ -379,6 +388,7 @@ der Ablauf der Tageszeit
 \end_inset
 
  unbeeinflusst lassen, die beiden Zeiten seien also voneinander entkoppelt
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -388,12 +398,13 @@ der lokale tägliche Sonnenhöchststand wird für 12 Uhr mittags angenommen
 
 \begin_layout Itemize
 die Sommersonnenwende (SSW) ist am 21.
- Juni
+ Juni 
 \end_layout
 
 \begin_layout Itemize
 die Wintersonnenwende (WSW) ist am 21.
  Dezember.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1843,7 +1854,11 @@ Alle Punkte
 \begin_inset Formula $\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0$
 \end_inset
 
- erfüllen, liegen in der Tangentialebene des Punktes 
+ erfüllen, liegen in der Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ des Punktes 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -1892,7 +1907,11 @@ D.h.
 \begin_inset Formula $\underline{P}$
 \end_inset
 
-, liegt also im orthogonalen Komplement.
+, liegt also im orthogonalen Komplement von 
+\begin_inset Formula $T$
+\end_inset
+
+.
  
 \end_layout
 
@@ -2298,7 +2317,7 @@ name "fig:SchattenFotos"
 
 \end_inset
 
-Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr  
+Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr 
 \end_layout
 
 \end_inset
