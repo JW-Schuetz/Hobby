@@ -5,27 +5,18 @@ function SonnenkompassNumeric
     clc
     clear
 
-    format long
-
-    load( 'SonnenkompassSymbolic.mat', 'alpha', 'dAlpha', ...
-          'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
 
     % Variable Daten
     ort   = 'LasPalmas';
 	datum = '12.10.2021';
 
-    switch( ort )
-        case 'Hoechst'
-            lS        = 1.76;                               % Stablänge [m]
-            breiteGeo = 49.800760064804244 / 180.0 * pi;	% Höchst/Odenwald
+    fileName = [ ort, '-', datum, '.mat' ];
 
+    switch( ort )
         case 'LasPalmas'
             lS        = 1.5;                                % Stablänge [m]
             breiteGeo = 28.136746041614316 / 180.0 * pi;	% Las Palmas de Gran Canaria
-
-        case 'Aequator'
-            lS        = 1.5;                                % Stablänge [m]
-            breiteGeo = 0;                                  % Äquator
     end
 
     % Fixe Daten
@@ -33,17 +24,6 @@ function SonnenkompassNumeric
     rS  = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
     psi = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
     ssw = datetime( '21.06.2021' );	% Datum SSW
-
-    if( psi == 0 )
-        psiTxt = '-Psi0';
-    else
-        psiTxt = '';
-    end
-
-    fileName = [ ort, '-', datum, psiTxt, '.mat' ];
-    if( isfile( fileName ) )
-%         error( 'File "%s" existiert bereits!', fileName )
-    end
 
 	tag    = datetime( datum );
     T      = days( tag - ssw );     % Jahreszeit [Tage seit SSW]
@@ -57,18 +37,6 @@ function SonnenkompassNumeric
     p2 = 0;                         % y-Koordinate
     p3 = rE * cos( breite + psi );  % z-Koordinate
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%    % Drehwinkel bestimmen für Sonnenhöchststand bei alpha=0
-%     alphaShift = calculateShiftAngle( dAlpha, alpha, psi, omega, p1, p2, p3 );
-% 
-%     % Ort der Jahreszeit entsprechend drehen
-%     [ p1, p2, p3 ] = RotateDAlpha( dAlpha, psi, p1, p2, p3, alphaShift );
-% 
-% 	% Überprüfung des gefundenen Winkels
-%     if( abs( omega - atan2( p2, p1 ) ) > 0.0001 )
-%         error( 'Wrong shift angle' )
-%     end
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     mue0 = omegaS / ( 1 + omegaS );
     x0   = mue0 * q + ( 1 - mue0 ) * sAlpha;
 
@@ -142,22 +110,6 @@ function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
     D = [  c, 0, s;
            0, 1, 0;
           -s, 0, c ];
-
-    x = D * [ x1; x2; x3 ];
-
-    x1 = x( 1 );
-    x2 = x( 2 );
-    x3 = x( 3 );
-end
-
-function [ x1, x2, x3 ] = rotateX3( phi, x1, x2, x3 )
-    % Punkt drehen um x3-Achse um den Winkel phi
-    c = cos( phi );
-    s = sin( phi );
-
-    D = [ c, -s, 0;
-          s,  c, 0;
-          0,  0, 1 ];
 
     x = D * [ x1; x2; x3 ];
 

@@ -4,8 +4,6 @@ function SonnenkompassPlot()
 
     ort    = 'LasPalmas';
     datum  = '21.06.2021';
-    psiTxt = '';
-%     psiTxt = '-Psi0';
 
 	switch( ort )
         case 'LasPalmas'
@@ -28,27 +26,19 @@ function SonnenkompassPlot()
                     yUhrZeit   = 1.4;
                     squareSize = 6;
             end
-        case 'Hoechst'
-                    arrowType  = '\uparrow';
-                    yArrow     = 1.7;
-                    yUhrZeit   = 1.4;
-                    squareSize = 6;
-        case 'Aequator'
-                    arrowType  = '\downarrow';
-                    yArrow     = 0.2;
-                    yUhrZeit   = 0.25;
-                    squareSize = 1;
 	end
 
     % Ergebnisdaten laden
-    load( [ ort, '-', datum, psiTxt, '.mat' ], 'y' )
+    load( [ ort, '-', datum, '.mat' ], 'y' )
 
-    % Aufräumen, NaN-Elemente entfernen
+    % NaN-Elemente entfernen
     ndx = ~isnan( y( :, 2 ) );
     y   = y( ndx, : );
+
     % nach y( :, 2 ) aufsteigend sortieren
     [ ~, ndx ] = sort( y( :, 2 ) );
     y          = y( ndx, : );
+
     % evtl. doppelte Abszissenwerte entfernen
     [ ~, ndx ] = unique( y( :, 2 ) );
     y          = y( ndx, : );

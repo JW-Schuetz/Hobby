@@ -10,7 +10,7 @@ syms rS real                % Abstand Erde - Sonne
 syms rE real                % Erdradius
 syms lS real                % Stablänge
 syms e [ 3, 1 ] real        % Einheitsvektor Rotationsachse
-syms alpha real              % Erd-Rotationswinkel (2*pi/24h)
+syms alpha real             % Erd-Rotationswinkel (2*pi/24h)
 syms dAlpha [ 3, 3 ] real   % Drehmatrix
 syms p [ 3, 1 ] real        % Fusspunkt des Stabes auf der Erdoberfläche und Stabende
 syms s [ 3, 1 ] real        % Sonnenposition in Bezug zum Erdmittelpunkt
@@ -49,4 +49,4 @@ pSAlpha = collect( p' * sAlpha, p );
 omegaS  = simplify( rE - pSAlpha / rE );
 omegaS  = omegaS / lS;
 
-save( 'SonnenkompassSymbolic.mat', 'alpha', 'dAlpha', 'q', 'sAlpha', 'omegaS' )
+save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS' )

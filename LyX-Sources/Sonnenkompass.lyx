@@ -1077,7 +1077,7 @@ name "fig:Erd-JahresUmlauf"
 
 \end_inset
 
-Umlauf der Erde um die Sonne
+Umlauf der Erde um die Sonne 
 \end_layout
 
 \end_inset
@@ -1821,7 +1821,7 @@ name "fig:Orthogonalprojektion"
 
 \end_inset
 
-Orthogonalprojektion
+Orthogonalprojektion 
 \end_layout
 
 \end_inset
@@ -1835,59 +1835,46 @@ Orthogonalprojektion
 \end_layout
 
 \begin_layout Plain Layout
-Gegeben sei im 
-\begin_inset Formula $\mathbb{R}^{2}$
+Alle Punkte 
+\begin_inset Formula $\underline{x}$
 \end_inset
 
- für 
-\begin_inset Formula $i=1,2$
+, die die Bedingung 
+\begin_inset Formula $\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0$
 \end_inset
 
- eine affine Gerade 
-\begin_inset Formula $\forall x_{i}\in G:x_{2}=ax_{1}+b$
-\end_inset
-
- und ein Punkt 
-\begin_inset Formula $\underline{P}=\left(p_{1},p_{2}\right)$
-\end_inset
-
-
-\begin_inset Formula $^{T}$
-\end_inset
-
-.
- Gesucht ist der Punkt 
-\begin_inset Formula $\underline{P}^{'}\in G$
-\end_inset
-
-, der den kleinsten Abstand zum Punkt 
+ erfüllen, liegen in der Tangentialebene des Punktes 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- besitzt.
+ der Kugeloberfläche.
  
 \end_layout
 
 \begin_layout Plain Layout
-Der Abstand ist durch 
-\begin_inset Formula $f\left(x_{1}\right)=\sqrt{\left(p_{1}-x_{1}\right)^{2}+\left(p_{2}-ax_{1}-b\right)^{2}}$
+Man kann jeden Punkt 
+\begin_inset Formula $\underline{x}\in\mathbb{R}^{3}$
 \end_inset
 
-gegeben.
+ als Summe 
+\begin_inset Formula $\underline{x}=\underline{x}^{'}+\underline{r}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\underline{P}^{T}\left(\underline{x}^{'}-\underline{P}\right)=0$
+\end_inset
+
+ schreiben.
  
 \end_layout
 
 \begin_layout Plain Layout
-Es muss gelten 
-\begin_inset Formula $\frac{\partial}{\partial x_{1}}f\left(x_{1}\right)=0$
-\end_inset
-
-, also 
+Einsetzen liefert 
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{\partial}{\partial x_{1}}f\left(x_{1}\right) & = & \frac{1}{2}\left[\left(p_{1}-x_{1}\right)^{2}+\left(p_{2}-ax_{1}-b\right)^{2}\right]^{-\frac{3}{2}}\left[-2\left(p_{1}-x_{1}\right)-2a\left(p_{2}-ax_{1}-b\right)\right]\\
- & = & \left[\left(p_{1}-x_{1}\right)^{2}+\left(p_{2}-ax_{1}-b\right)^{2}\right]^{-\frac{3}{2}}\left[-\left(p_{1}-x_{1}\right)-a\left(p_{2}-ax_{1}-b\right)\right]\\
- & = & \frac{-p_{1}+x_{1}-ap_{2}+a^{2}x_{1}+ab}{\sqrt{\left(p_{1}-x_{1}\right)^{2}+\left(p_{2}-ax_{1}-b\right)^{2}}}.
+\underline{P}^{T}\left(\underline{x^{'}}+\underline{r}-\underline{P}\right) & = & \underline{P}^{T}\left(\underline{x^{'}}-\underline{P}\right)+\underline{P}^{T}\underline{r}\\
+ & = & \underline{P}^{T}\underline{r}\\
+ & = & 0.
 \end{eqnarray*}
 
 \end_inset
@@ -1896,24 +1883,17 @@ Es muss gelten
 \end_layout
 
 \begin_layout Plain Layout
-Für ein Extremum muss gelten 
-\begin_inset Formula 
-\[
--p_{1}+x_{1}-ap_{2}+a^{2}x_{1}+ab=0
-\]
-
+D.h.
+ der Vektor 
+\begin_inset Formula $\underline{r}$
 \end_inset
 
-und damit 
-\begin_inset Formula 
-\begin{eqnarray*}
-x_{1} & = & \frac{p_{1}+ap_{2}-ab}{1+a^{2}}\\
-x_{2} & = & ax_{1}+b.
-\end{eqnarray*}
-
+ steht senkrecht auf 
+\begin_inset Formula $\underline{P}$
 \end_inset
 
-
+, liegt also im orthogonalen Komplement.
+ 
 \end_layout
 
 \end_inset
@@ -1972,15 +1952,15 @@ Der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- liegt nach dieser Drehung auf dem Äquator, 
+ liegt nach dieser Drehung auf dem Äquator (
 \begin_inset Formula $0°$
 \end_inset
 
- Breite, 
+ Breite und 
 \begin_inset Formula $0°$
 \end_inset
 
- Länge, und befindet sich somit auf der 
+ Länge) und befindet sich somit auf der 
 \begin_inset Formula $x_{1}$
 \end_inset
 
@@ -2126,7 +2106,7 @@ name "fig:SchattentrajektorieSSW"
 
 \end_inset
 
-Schattentrajektorie zur SSW am 21.06.2021 in Las Palmas
+Schattentrajektorie zur SSW am 21.06.2021 in Las Palmas 
 \end_layout
 
 \end_inset
@@ -2163,7 +2143,7 @@ name "fig:SchattentrajektorieWSW"
 
 \end_inset
 
-Schattentrajektorie zur WSW am 21.12.2021 in Las Palmas
+Schattentrajektorie zur WSW am 21.12.2021 in Las Palmas 
 \end_layout
 
 \end_inset
@@ -2220,7 +2200,7 @@ name "fig:Schattentrajektorie"
 
 \end_inset
 
-Schattentrajektorie am 12.10.2021 in Las Palmas
+Schattentrajektorie am 12.10.2021 in Las Palmas 
 \end_layout
 
 \end_inset
@@ -2318,7 +2298,7 @@ name "fig:SchattenFotos"
 
 \end_inset
 
-Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr 
+Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr  
 \end_layout
 
 \end_inset
@@ -2340,41 +2320,20 @@ Bewertung der Genauigkeit
 \end_layout
 
 \begin_layout Standard
-Entgegen der obigen Annahme der Methode zur Bestimmung der Nord-Richtung
- per Sonnenstand, ist die Schattentrajektorie keine Gerade - nicht einmal
- näherungsweise.
- Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
+Entgegen der obigen Annahme der oben beschriebenen Methode zur Bestimmung
+ der Nord-Richtung per Sonnenstand, ist die Schattentrajektorie keine Gerade
+ - nicht einmal näherungsweise.
+ 
+\end_layout
+
+\begin_layout Standard
+Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
  vernachlässigbar.
- Wie man den Abbildungen
-\begin_inset space ~
-\end_inset
+ 
+\end_layout
 
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:SchattentrajektorieSSW"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- und
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:SchattentrajektorieWSW"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- entnehmen kann, erreicht die Missweisung den Bereich von 45°.
- Die genaue Nordrichtung erhält man nur, wenn man Schattenzeitpunkte untersucht,
+\begin_layout Standard
+Die genaue Nordrichtung erhält man nur, wenn man Schattenzeitpunkte untersucht,
  die symmetrisch um den Mittagszeitpunkt liegen.
  
 \end_layout
