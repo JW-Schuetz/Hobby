@@ -243,8 +243,8 @@ Vektoren werden durch einen Unterstrich kenntlich gemacht (
 \end_inset
 
 .
- Matrizen werden nicht besonders bezeichnet, sie ergeben sich aus ihrem
- Kontext.
+ Matrizen werden nicht besonders bezeichnet, sie unterscheiden sich von
+ Skalaren durch den Kontext.
  
 \begin_inset VSpace bigskip
 \end_inset
@@ -937,9 +937,7 @@ Jahreszeitabhängigkeit
 \end_layout
 
 \begin_layout Standard
-Der jahreszeitliche Einfluss wird durch eine Kreisbewegung der Sonne um
- die Erde berücksichtigt.
- Die Erde bewegt sich rechtshändig um die Sonne (siehe dazu z.B.
+Die Erde bewegt sich rechtshändig um die Sonne (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -966,8 +964,14 @@ noprefix "false"
 \end_inset
 
 ).
- Man kann deshalb den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwink
-els 
+ 
+\end_layout
+
+\begin_layout Standard
+In dieser Arbeit wird der jahreszeitliche Einfluss dazu äquivalent durch
+ eine Kreisbewegung der Sonne um die fixiert angenommene Erde berücksichtigt.
+ Man kann deshalb im Erd-Koordinatensystem den Ort der Sonne als Funktion
+ des jahreszeitlichen Umlaufwinkels 
 \begin_inset Formula $\omega T^{*}$
 \end_inset
 
@@ -1896,7 +1900,7 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \end_inset
 
 .
- Damit ist die Tangentialebene parallel zur 
+ Damit ist dann die Tangentialebene parallel zur 
 \begin_inset Formula $\left(x_{2},x_{3}\right)$
 \end_inset
 
@@ -1964,6 +1968,10 @@ Der Punkt
 \end_inset
 
  liegt nach dieser Drehung bei 
+\begin_inset Formula $x_{1}=R_{E}$
+\end_inset
+
+ und 
 \begin_inset Formula $x_{2}=x_{3}=0$
 \end_inset
 
@@ -1973,7 +1981,7 @@ Der Punkt
 
 \begin_layout Standard
 Die 3-dimensionalen gedrehten Trajektorienpunkte 
-\begin_inset Formula $D_{\frac{\pi}{2}-\left(\Theta+\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)$
+\begin_inset Formula $D_{\left(\frac{\pi}{2}-\Theta-\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
  können nun mittels der Projektionsabbildung 
@@ -2001,11 +2009,24 @@ auf die
 \end_inset
 
  projiziert werden.
- Es ergibt sich schliesslich für die Punkte der gesuchten 2-dimensionalen
+ Der Punkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ wird auf den Ursprung 
+\begin_inset Formula $\underline{0}$
+\end_inset
+
+ abgebildet.
+ 
+\end_layout
+
+\begin_layout Standard
+Es ergibt sich schliesslich für die Punkte der gesuchten 2-dimensionalen
  Trajektorie 
 \begin_inset Formula 
 \begin{equation}
-\underline{x}^{S}\left(\alpha\right)=AD_{\frac{\pi}{2}-\left(\Theta+\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
+\underline{x}^{S}\left(\alpha\right)=AD_{\left(\frac{\pi}{2}-\Theta-\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
 \end{equation}
 
 \end_inset
