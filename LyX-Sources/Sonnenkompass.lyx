@@ -1122,7 +1122,7 @@ p_{3}
 \end_inset
 
 bestimmt sich aus der geographischen Breite 
-\begin_inset Formula $\Theta$
+\begin_inset Formula $\Theta_{G}$
 \end_inset
 
 , der geographischen Länge 
@@ -1152,9 +1152,9 @@ literal "false"
 ) 
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{1} & = & R_{E}\sin\left(\Theta-\psi\right)=R_{E}\sin\left(\frac{\pi}{2}-\Theta+\psi\right)\\
+p_{1} & = & R_{E}\sin\left(\Theta_{G}-\psi\right)=R_{E}\sin\left(\frac{\pi}{2}-\Theta_{G}+\psi\right)\\
 p_{2} & = & 0\\
-p_{3} & = & R_{E}\cos\left(\Theta-\psi\right)=R_{E}\cos\left(\frac{\pi}{2}-\Theta+\psi\right).
+p_{3} & = & R_{E}\cos\left(\Theta_{G}-\psi\right)=R_{E}\cos\left(\frac{\pi}{2}-\Theta_{G}+\psi\right).
 \end{eqnarray*}
 
 \end_inset
@@ -1168,11 +1168,11 @@ Dabei wurde die um
 \end_inset
 
  korrigierte geographischen Breite 
-\begin_inset Formula $\Theta-\psi$
+\begin_inset Formula $\Theta_{G}-\psi$
 \end_inset
 
  durch 
-\begin_inset Formula $\frac{\pi}{2}-\Theta+\psi$
+\begin_inset Formula $\Theta=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)$
 \end_inset
 
  ins Kugelkoordinatensystem 
@@ -1400,7 +1400,7 @@ noprefix "false"
 
 \begin_layout Standard
 gegeben.
- Der Parameter 
+ Der reelle Geradenparameter 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -1571,7 +1571,8 @@ Wegen
 \begin_inset Formula $\underline{P}^{T}\underline{P}=R_{E}^{2}$
 \end_inset
 
- folgt nach kurzer Rechnung die Bestimmungsgleichung 
+ folgt nach kurzer Rechnung die Bestimmungsgleichung für den Geradenparameter
+ 
 \begin_inset Note Note
 status collapsed
 
@@ -1604,11 +1605,11 @@ folgt durch Einsetzen
  & = & \mu\left(\underline{P}^{T}\underline{Q}-\underline{P}^{T}\underline{S}^{\alpha}\right)+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
  & = & \mu\left[\underline{P}^{T}\left(1+\frac{L}{R_{E}}\right)\underline{P}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
  & = & \mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left[R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left[R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right]-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
- & = & \mu\left[R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}+LR_{E}\right]-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
- & = & \mu\left[R+LR_{E}\right]-R\\
- & = & \mu\left(L+\frac{R}{R_{E}}\right)-\frac{R}{R_{E}}
+ & = & \mu\left(R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right)+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
+ & = & \mu\left(R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right)-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
+ & = & \mu\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}+LR_{E}\right)-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
+ & = & \mu\left(\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}+1\right)-\left(\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}\right)\\
+ & = & \mu\left(\Omega+1\right)-\Omega
 \end{eqnarray*}
 
 \end_inset
@@ -1617,40 +1618,30 @@ folgt durch Einsetzen
 \end_layout
 
 \begin_layout Plain Layout
-mit
+oder 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\Omega & = & \mu\left(1+\Omega\right)\\
+\mu & = & \frac{\Omega}{1+\Omega}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-R=R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}
+\Omega=\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
 \]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-folgt 
-\begin_inset Formula 
-\begin{eqnarray*}
-0 & = & \mu\left(L+\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\right)-\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{R_{E}}\\
- & = & \mu\left(1+\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}\right)-\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Oder auch 
-\begin_inset Formula 
-\begin{eqnarray*}
-\mu\left(1+R\right) & = & R\\
-R & = & \frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
-\end{eqnarray*}
 
 \end_inset
 
@@ -1756,11 +1747,14 @@ Die gefundenen 3-dimensionalen Trajektorienpunkte
 \begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
 \end_inset
 
- gegeben.
+ der als fixiert angenommenen Erde gegeben.
  Sie sollen auf ein zweidimensionales Koordinatensystem der Tangentialebene
- abgebildet werden.
- Dieses Koordinatensystem soll identische Metrik besitzen und sein Ursprung
- soll im Stabfusspunkt 
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ abgebildet werden, das identische Metrik besitzen soll.
+ Sein Ursprung soll im Stabfusspunkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -1884,24 +1878,29 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- zusammen mit der Tangentialebene 
-\begin_inset Formula $T$
+ um die 
+\begin_inset Formula $x_{2}$
 \end_inset
 
- und den Trajektorienpunkten 
-\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
-\end_inset
-
- über den Ursprung der 
+-Achse über den Ursprung der 
 \begin_inset Formula $\left(x_{2},x_{3}\right)$
 \end_inset
 
 -Ebene gedreht.
+ Mitgedreht wird die Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ und die Trajektorienpunkte 
+\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
+\end_inset
+
+.
  Damit ist die Tangentialebene parallel zur 
 \begin_inset Formula $\left(x_{2},x_{3}\right)$
 \end_inset
 
--Ebene.
+-Ebene angeordnet.
  Anschliessend werden die Trajektorienpunkte 
 \begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
@@ -1910,21 +1909,24 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \begin_inset Formula $\left(x_{2},x_{3}\right)$
 \end_inset
 
--Ebene projiziert.
+-Ebene, oder dazu äquivalent, die Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+, projiziert.
  
 \end_layout
 
 \begin_layout Standard
-Dazu wird zunächst um den Winkel 
-\begin_inset Formula $\frac{\pi}{2}-\left(\Theta+\psi\right)$
+Der notwendige Drehwinkel ist durch 
+\begin_inset Formula $\Theta=\Theta_{G}-\psi$
 \end_inset
 
- um die 
+ gegeben, die Drehmatrix um die 
 \begin_inset Formula $x_{2}$
 \end_inset
 
--Achse gedreht.
- Diese Drehung wird durch die Matrix 
+-Achse wird durch 
 \begin_inset Formula 
 \begin{equation}
 D_{\Theta}^{x_{2}}=\left(\begin{array}{ccc}
@@ -1961,21 +1963,17 @@ Der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- liegt nach dieser Drehung auf dem Äquator (
-\begin_inset Formula $0°$
+ liegt nach dieser Drehung bei 
+\begin_inset Formula $x_{2}=x_{3}=0$
 \end_inset
 
- Breite und 
-\begin_inset Formula $0°$
-\end_inset
+.
+ 
+\end_layout
 
- Länge) und befindet sich somit auf der 
-\begin_inset Formula $x_{1}$
-\end_inset
-
--Achse.
- Die 3-dimensionalen Trajektorienpunkte 
-\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
+\begin_layout Standard
+Die 3-dimensionalen gedrehten Trajektorienpunkte 
+\begin_inset Formula $D_{\frac{\pi}{2}-\left(\Theta+\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
  können nun mittels der Projektionsabbildung 
@@ -1997,12 +1995,17 @@ auf die
 \begin_inset Formula $\left(x_{2},x_{3}\right)$
 \end_inset
 
--Ebene projiziert werden.
- Es ergibt sich schliesslich die Punkte der gesuchten 2-dimensionalen Trajektori
-e 
+-Ebene bzw.
+ Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ projiziert werden.
+ Es ergibt sich schliesslich für die Punkte der gesuchten 2-dimensionalen
+ Trajektorie 
 \begin_inset Formula 
 \begin{equation}
-\underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
+\underline{x}^{S}\left(\alpha\right)=AD_{\frac{\pi}{2}-\left(\Theta+\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
 \end{equation}
 
 \end_inset
