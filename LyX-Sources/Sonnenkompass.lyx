@@ -111,7 +111,15 @@ Widmung
 \end_layout
 
 \begin_layout Standard
-Für Waldemar, meinem netten Gastgeber in Las Palmas.
+Für das Geburtstags-
+\begin_inset Quotes grd
+\end_inset
+
+Kind
+\begin_inset Quotes grd
+\end_inset
+
+ Waldemar, meinem netten Gastgeber in Las Palmas.
  
 \end_layout
 
@@ -918,7 +926,7 @@ Die zum Rotationswinkel
 \end_inset
 
  gehörige Tageszeit in Stunden ist durch 
-\begin_inset Formula $t^{*}=12\frac{\alpha}{\pi}$
+\begin_inset Formula $t^{*}=\frac{12}{\pi}\alpha$
 \end_inset
 
  gegeben.
@@ -1145,9 +1153,9 @@ literal "false"
 ) 
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{1} & = & R_{E}\sin\left(\frac{\pi}{2}-\Theta+\psi\right)\\
+p_{1} & = & R_{E}\sin\left(\Theta-\psi\right)=R_{E}\sin\left(\frac{\pi}{2}-\Theta+\psi\right)\\
 p_{2} & = & 0\\
-p_{3} & = & R_{E}\cos\left(\frac{\pi}{2}-\Theta+\psi\right).
+p_{3} & = & R_{E}\cos\left(\Theta-\psi\right)=R_{E}\cos\left(\frac{\pi}{2}-\Theta+\psi\right).
 \end{eqnarray*}
 
 \end_inset
@@ -1156,8 +1164,16 @@ p_{3} & = & R_{E}\cos\left(\frac{\pi}{2}-\Theta+\psi\right).
 \end_layout
 
 \begin_layout Standard
-Dabei wurde die geographischen Breite durch 
-\begin_inset Formula $\Theta-\psi\longrightarrow\frac{\pi}{2}-\Theta+\psi$
+Dabei wurde die um 
+\begin_inset Formula $\psi$
+\end_inset
+
+ korrigierte geographischen Breite 
+\begin_inset Formula $\Theta-\psi$
+\end_inset
+
+ durch 
+\begin_inset Formula $\frac{\pi}{2}-\Theta+\psi$
 \end_inset
 
  ins Kugelkoordinatensystem 
@@ -1181,15 +1197,15 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Für den Punkt 
-\begin_inset Formula $\underline{Q}$
-\end_inset
-
- am Ende des Stabes der Länge 
+Mit der Stablänge 
 \begin_inset Formula $L$
 \end_inset
 
- gilt damit 
+ gilt für den Stabendpunkt 
+\begin_inset Formula $\underline{Q}$
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
 \underline{Q}=\left(1+\frac{L}{R_{E}}\right)\underline{P}.\label{eq:Endpunkt}
@@ -1329,7 +1345,15 @@ Verbindungsgerade
 \end_layout
 
 \begin_layout Standard
-Die Sonne befindet sich nach Gleichung
+Die Punkte der Verbindungsgerade 
+\begin_inset Formula $G$
+\end_inset
+
+ der Sonne 
+\begin_inset Formula $\underline{S}\left(T^{*}\right)$
+\end_inset
+
+, nach Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -1343,28 +1367,11 @@ noprefix "false"
 
 \end_inset
 
-) im Punkt 
-\begin_inset Formula $\underline{S}\left(T^{*}\right)$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Die Punkte der Verbindungsgerade 
-\begin_inset Formula $G$
-\end_inset
-
- der Sonne 
-\begin_inset Formula $\underline{S}\left(T^{*}\right)$
-\end_inset
-
- mit dem Stabende 
+), mit dem Stabende 
 \begin_inset Formula $\underline{Q}$
 \end_inset
 
- nach Gleichung
+, nach Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -1378,7 +1385,7 @@ noprefix "false"
 
 \end_inset
 
-) sind durch 
+), sind durch 
 \end_layout
 
 \begin_layout Standard
@@ -1760,9 +1767,6 @@ Die gefundenen 3-dimensionalen Trajektorienpunkte
 
  liegen.
  
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -1873,19 +1877,46 @@ D.h.
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
-Zur Bestimmung dieser Abbildung werden 
+Zur Bestimmung dieser Abbildung wird der Punkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- und die Trajektorienpunkte 
+ zusammen mit der Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ und den Trajektorienpunkten 
 \begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
- zunächst um den Winkel 
+ über den Ursprung der 
+\begin_inset Formula $\left(x_{2},x_{3}\right)$
+\end_inset
+
+-Ebene gedreht.
+ Damit ist die Tangentialebene parallel zur 
+\begin_inset Formula $\left(x_{2},x_{3}\right)$
+\end_inset
+
+-Ebene.
+ Anschliessend werden die Trajektorienpunkte 
+\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
+\end_inset
+
+ auf die 
+\begin_inset Formula $\left(x_{2},x_{3}\right)$
+\end_inset
+
+-Ebene projiziert.
+ 
+\end_layout
+
+\begin_layout Standard
+Dazu wird zunächst um den Winkel 
 \begin_inset Formula $\frac{\pi}{2}-\left(\Theta+\psi\right)$
 \end_inset
 
@@ -1893,7 +1924,8 @@ Zur Bestimmung dieser Abbildung werden
 \begin_inset Formula $x_{2}$
 \end_inset
 
--Achse gedreht, diese Drehung wird durch die Matrix 
+-Achse gedreht.
+ Diese Drehung wird durch die Matrix 
 \begin_inset Formula 
 \begin{equation}
 D_{\Theta}^{x_{2}}=\left(\begin{array}{ccc}
@@ -1967,7 +1999,8 @@ auf die
 \end_inset
 
 -Ebene projiziert werden.
- Es ergibt sich schliesslich die gesuchte 2-dimensionalen Trajektorie 
+ Es ergibt sich schliesslich die Punkte der gesuchten 2-dimensionalen Trajektori
+e 
 \begin_inset Formula 
 \begin{equation}
 \underline{x}^{S}\left(\alpha\right)=AD_{\left[\frac{\pi}{2}-\left(\Theta+\psi\right)\right]}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
@@ -2183,7 +2216,8 @@ name "fig:Schattentrajektorie"
 
 \end_inset
 
-Schattentrajektorie am 12.10.2021 in Las Palmas 
+Schattentrajektorie am 12.10.2021 in Las Palmas mit den Punkten für 13:30
+ Uhr und 13:50 Uhr 
 \end_layout
 
 \end_inset
@@ -2317,7 +2351,7 @@ Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
 
 \begin_layout Standard
 Die genaue Nordrichtung erhält man z.B., wenn man Schattenzeitpunkte untersucht,
- die symmetrisch um den Mittagszeitpunkt liegen.
+ die symmetrisch um den Zeitpunkt des Sonnenhöchststandes liegen.
  
 \end_layout
 
