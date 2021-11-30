@@ -119,7 +119,8 @@ Kind
 \begin_inset Quotes grd
 \end_inset
 
- Waldemar, meinem netten Gastgeber in Las Palmas.
+ Waldemar, meinem netten Gastgeber in Las Palmas, zu seinem 73.
+ Geburtstag.
  
 \end_layout
 
@@ -158,7 +159,24 @@ das neue Schattenende des Stabes mit einem zweiten Stein markieren.
 \end_layout
 
 \begin_layout Standard
-Man erhält dann die Nordrichtung mittels der folgenden Regeln 
+Man erhält dann die Nordrichtung mittels der folgenden Regeln
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Die Methode wird in der Nähe der Pole scheitern, da das Stabende dort keinen
+ Schatten mehr wirft (und natürlich auch, weil dort keine Erde zum Hineinstecken
+ des Stabes vorhanden ist 
+\begin_inset Formula $\smiley$
+\end_inset
+
+).
+ 
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -191,17 +209,6 @@ name "R3"
 
 R3: auf der Nordhalbkugel der Erde zeigt der Schatten Richtung Norden, auf
  der Südhalbkugel Richtung Süden.
- 
-\end_layout
-
-\begin_layout Standard
-Die Methode wird in der Nähe der Pole scheitern, da das Stabende dort keinen
- Schatten mehr wirft (und natürlich auch, weil dort keine Erde zum Hineinstecken
- des Stabes vorhanden ist 
-\begin_inset Formula $\smiley$
-\end_inset
-
-).
  
 \end_layout
 
@@ -763,20 +770,7 @@ e_{3} & = & \cos\psi.\nonumber
 
 \begin_layout Standard
 gegeben.
- 
-\end_layout
-
-\begin_layout Standard
-Die Erd-Rotationsachse 
-\begin_inset Formula $\underline{e}$
-\end_inset
-
- ist wegen des Satzes der Drehimpulserhaltung zeitinvariant.
- 
-\end_layout
-
-\begin_layout Standard
-Für die Drehmatrix folgt mit Gleichung
+ Für die Drehmatrix folgt mit Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -917,11 +911,7 @@ literal "false"
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_layout Standard
-Die zum Rotationswinkel 
+ Die zum Rotationswinkel 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -930,6 +920,15 @@ Die zum Rotationswinkel
 \end_inset
 
  gegeben.
+ 
+\end_layout
+
+\begin_layout Standard
+Die Erd-Rotationsachse 
+\begin_inset Formula $\underline{e}$
+\end_inset
+
+ ist wegen des Satzes der Drehimpulserhaltung zeitinvariant.
  
 \end_layout
 
@@ -2332,21 +2331,27 @@ Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Bewertung der Genauigkeit 
 \end_layout
 
 \begin_layout Standard
-Entgegen der obigen Annahme der oben beschriebenen Methode zur Bestimmung
- der Nord-Richtung per Sonnenstand, ist die Schattentrajektorie keine Gerade
- - nicht einmal näherungsweise.
+Entgegen der Annahme der oben beschriebenen Methode zur Bestimmung der Nord-Rich
+tung per Sonnenstand, ist die Schattentrajektorie keine Gerade - nicht einmal
+ näherungsweise.
  
 \end_layout
 
 \begin_layout Standard
 Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
- vernachlässigbar.
- 
+ vernachlässigbar! 
 \end_layout
 
 \begin_layout Standard
