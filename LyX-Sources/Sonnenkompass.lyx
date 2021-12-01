@@ -264,7 +264,7 @@ Weiterhin werden Kugelkoordinaten
 \begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
 \end_inset
 
- verwendet, der Ursprung der Koordinatensysteme ist der Erdmittelpunkt.
+ verwendet, der Ursprung beider Koordinatensysteme ist der Erdmittelpunkt.
  Das kartesische Koordinatenpaar 
 \begin_inset Formula $\left(x_{1},x_{2}\right)$
 \end_inset
@@ -299,7 +299,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Section
-Problemformulierung 
+Annahmen 
 \end_layout
 
 \begin_layout Standard
@@ -494,7 +494,7 @@ Problemskizze, WSW, Sonnenhöchststand
 \end_layout
 
 \begin_layout Section
-Lösung 
+Generelles zur Lösung 
 \end_layout
 
 \begin_layout Standard
@@ -588,7 +588,7 @@ Den Ort der Sonne um den Winkel
 \end_layout
 
 \begin_layout Standard
-Hier wird nur der zweite Fall behandelt.
+Hier wird der zweite Fall behandelt.
  
 \end_layout
 
@@ -1075,7 +1075,7 @@ Fuss- und Endpunkt des Stabes
 \end_layout
 
 \begin_layout Standard
-Der Ort des Stabfusspunktes 
+Der Ort des Stabfusspunktes im Erd-Koordinatensystem 
 \begin_inset Formula 
 \[
 \underline{P}=\left(\begin{array}{c}
@@ -1170,7 +1170,7 @@ Mit der Stablänge
 \begin_inset Formula $\underline{Q}$
 \end_inset
 
- 
+ im Erd-Koordinatensystem 
 \begin_inset Formula 
 \begin{equation}
 \underline{Q}=\left(1+\frac{L}{R_{E}}\right)\underline{P}.\label{eq:Endpunkt}
@@ -1284,7 +1284,8 @@ Für die implizite Gleichung der Tangentialebene
 \end_layout
 
 \begin_layout Standard
-In vektorieller Schreibweise lässt sich die Tangentialebene durch 
+In vektorieller Schreibweise lässt sich die Tangentialebene im Erd-Koordinatensy
+stem durch 
 \end_layout
 
 \begin_layout Standard
@@ -1892,12 +1893,12 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \end_inset
 
 -Achse so gedreht, dass er in der Ekliptik zu liegen kommt.
- Mitgedreht wird die Tangentialebene 
-\begin_inset Formula $T$
+ Mitgedreht werden die Trajektorienpunkte 
+\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
- und die Trajektorienpunkte 
-\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
+ und die Tangentialebene 
+\begin_inset Formula $T$
 \end_inset
 
  - damit ist dann die Tangentialebene parallel zur 
@@ -1930,7 +1931,7 @@ Der notwendige Drehwinkel um die
 \begin_inset Formula $\Theta_{G}-\psi$
 \end_inset
 
- gegeben, die Drehmatrix um die 
+, die Drehmatrix um die 
 \begin_inset Formula $x_{2}$
 \end_inset
 
