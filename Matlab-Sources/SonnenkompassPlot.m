@@ -3,7 +3,7 @@ function SonnenkompassPlot()
     clear
 
     ort    = 'LasPalmas';
-    datum  = '12.10.2021';
+    datum  = '23.09.2021';
 
 	switch( ort )
         case 'LasPalmas'
@@ -27,15 +27,15 @@ function SonnenkompassPlot()
                     squareSize = 6;
 
                 case '21.03.2021'
-                    arrowType  = '\uparrow';
+                    arrowType  = '\downarrow';
                     yArrow     = 1.7;
-                    yUhrZeit   = 1.4;
+                    yUhrZeit   = 2.0;
                     squareSize = 6;
 
-                case '21.09.2021'
-                    arrowType  = '\uparrow';
-                    yArrow     = 1.7;
-                    yUhrZeit   = 1.4;
+                case '23.09.2021'
+                    arrowType  = '\downarrow';
+                    yArrow     = 1.4;
+                    yUhrZeit   = 1.7;
                     squareSize = 6;
             end
 	end
@@ -67,7 +67,7 @@ function SonnenkompassPlot()
     sprintf( 'Minimum des Abstandes zum Stab: %1.4f', minimum )
 
     figure
-    title( 'Schattentrajektorie' )
+    title( [ 'Schattentrajektorie am ', string( datum ) ] )
     hold( 'on' )
     box( 'on' )
     grid( 'on' )
