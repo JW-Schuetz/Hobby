@@ -25,6 +25,18 @@ function SonnenkompassPlot()
                     yArrow     = 1.7;
                     yUhrZeit   = 1.4;
                     squareSize = 6;
+
+                case '21.03.2021'
+                    arrowType  = '\uparrow';
+                    yArrow     = 1.7;
+                    yUhrZeit   = 1.4;
+                    squareSize = 6;
+
+                case '21.09.2021'
+                    arrowType  = '\uparrow';
+                    yArrow     = 1.7;
+                    yUhrZeit   = 1.4;
+                    squareSize = 6;
             end
 	end
 
