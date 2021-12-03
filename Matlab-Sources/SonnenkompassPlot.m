@@ -3,7 +3,7 @@ function SonnenkompassPlot()
     clear
 
     ort    = 'LasPalmas';
-    datum  = '23.09.2021';
+    datum  = '21.12.2021';
 
 	switch( ort )
         case 'LasPalmas'
@@ -30,6 +30,12 @@ function SonnenkompassPlot()
                     arrowType  = '\downarrow';
                     yArrow     = 1.7;
                     yUhrZeit   = 2.0;
+                    squareSize = 6;
+
+                case '21.09.2021'
+                    arrowType  = '\downarrow';
+                    yArrow     = 1.4;
+                    yUhrZeit   = 1.7;
                     squareSize = 6;
 
                 case '23.09.2021'
