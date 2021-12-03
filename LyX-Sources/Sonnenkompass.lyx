@@ -249,6 +249,7 @@ Vektoren werden durch einen Unterstrich kenntlich gemacht (
 \begin_layout Standard
 Matrizen werden nicht besonders bezeichnet, sie sind von Skalaren durch
  den Kontext unterscheidbar.
+ 
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -879,6 +880,7 @@ literal "false"
 \end_inset
 
  gegeben.
+ 
 \begin_inset VSpace bigskip
 \end_inset
 
