@@ -1667,7 +1667,7 @@ Da im Ausdruck der Verbindungsgeraden mit
 \end_inset
 
  das Stabende beschrieben wird, muss für die Lösung 
-\begin_inset Formula $\mu_{0}>1$
+\begin_inset Formula $\mu_{0}\geq1$
 \end_inset
 
  gelten.
