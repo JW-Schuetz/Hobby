@@ -400,12 +400,15 @@ der Ablauf der Tageszeit
 
 \begin_layout Itemize
 die Sommersonnenwende (SSW) ist am 21.
- Juni 
+ Juni, die Wintersonnenwende (WSW) ist am 21.
+ Dezember 
 \end_layout
 
 \begin_layout Itemize
-die Wintersonnenwende (WSW) ist am 21.
- Dezember.
+das Frühlings- und Herbst-Äquinoktikum ist am 21.
+ März bzw.
+ am 21.
+ September.
  
 \end_layout
 
@@ -504,7 +507,8 @@ In der folgenden Arbeit wird zunächst die Verbindungsgerade zwischen der
  Dann werden die Schnittpunkte der verlängerten Verbindungsgeraden mit der
  Tangentialebene als Funktion der Tageszeit bestimmt.
  Schlussendlich werden die gefundenen Schnittpunkte auf die Tangentialebene
- projiziert um eine 2-dimensionale Darstellung zu erhalten.
+ projiziert.
+ Man erhält damit eine 2-dimensionale Darstellung.
  
 \end_layout
 
@@ -892,7 +896,7 @@ Die Erd-Rotationsachse
 \begin_inset Formula $\underline{e}$
 \end_inset
 
- ist wegen des Satzes der Drehimpulserhaltung zeitinvariant.
+ ist wegen des Drehimpuls-Erhaltungsatzes zeitinvariant.
  
 \end_layout
 
@@ -1196,7 +1200,7 @@ Die Kugel mit Radius
 \begin_inset Formula $R_{E}$
 \end_inset
 
- um den Ursprung ist mit 
+ um den Ursprung ist mit der Funktion 
 \begin_inset Formula 
 \[
 f(x_{1},x_{2},x_{3})=\sum_{i}x_{i}^{2}-R_{E}^{2}
@@ -1671,6 +1675,15 @@ Da im Ausdruck der Verbindungsgeraden mit
 \end_inset
 
  gelten.
+ Der Fall 
+\begin_inset Formula $\mu_{0}=1$
+\end_inset
+
+ ist relevant für Punkte 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+, die auf dem Äquator liegen.
  
 \end_layout
 
@@ -1890,11 +1903,11 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- um die 
+ so um die 
 \begin_inset Formula $x_{2}$
 \end_inset
 
--Achse so gedreht, dass er in der Ekliptik zu liegen kommt.
+-Achse gedreht, dass er in der Ekliptik zu liegen kommt.
  Mitgedreht werden die Trajektorienpunkte 
 \begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
@@ -1989,12 +2002,12 @@ Die 3-dimensionalen gedrehten Trajektorienpunkte
 
  können nun mittels der Projektionsabbildung 
 \begin_inset Formula 
-\[
+\begin{equation}
 A=\left(\begin{array}{ccc}
 0 & 1 & 0\\
 0 & 0 & 1
-\end{array}\right)
-\]
+\end{array}\right)\label{eq:Projektion}
+\end{equation}
 
 \end_inset
 
@@ -2102,8 +2115,9 @@ Las Palmas de Gran Canaria
 \begin_layout Standard
 Die Schattentrajektorie und den Standort des Stabes für den Strand in Las
  Palmas \SpecialChar allowbreak
-(28.136746041614316° Breite) für die SSW am 21.06.2021 und für die
- WSW am 21.12.2021 findet sich in den Abbildungen
+(28.136746041614316° Breite) für die SSW am 21.
+ Juni und für die WSW am 21.
+ Dezember findet sich in den Abbildungen
 \begin_inset space ~
 \end_inset
 
@@ -2162,7 +2176,8 @@ name "fig:SchattentrajektorieSSW"
 
 \end_inset
 
-Schattentrajektorie zur SSW am 21.06.2021 in Las Palmas 
+Schattentrajektorie zur SSW am 21.
+ Juni in Las Palmas 
 \end_layout
 
 \end_inset
@@ -2199,7 +2214,46 @@ name "fig:SchattentrajektorieWSW"
 
 \end_inset
 
-Schattentrajektorie zur WSW am 21.12.2021 in Las Palmas 
+Schattentrajektorie zur WSW am 21.
+ Dezember in Las Palmas 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SchattenTrajektorieFAE.eps
+	lyxscale 160
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SchattentrajektorieFAE"
+
+\end_inset
+
+Schattentrajektorie zum Frühlings-Äquinoktikum am 21.
+ März in Las Palmas
 \end_layout
 
 \end_inset
@@ -2220,6 +2274,27 @@ Abbildung
 
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "fig:SchattentrajektorieFAE"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ zeigt die berechnete Schattentrajektorie für den 21.
+ März, dem Frühlings-Äquinoktikum - das Herbst-Äquinoktikum hat eine identische
+ Trajektorie.
+ 
+\end_layout
+
+\begin_layout Standard
+Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:Schattentrajektorie"
 plural "false"
 caps "false"
@@ -2228,7 +2303,8 @@ noprefix "false"
 \end_inset
 
  zeigt die berechnete Schattentrajektorie ebenfalls für Las Palmas, aber
- für den 12.10.2021.
+ für den 12.
+ Oktober.
  Die Koordinaten der beiden markierten Punkte sind dargestellt, ihr geometrische
 r Abstand beträgt 20.18 cm, ihr zeitlicher Abstand beträgt 20 Minuten (13:30
  Uhr und 13:50 Uhr).
@@ -2256,8 +2332,8 @@ name "fig:Schattentrajektorie"
 
 \end_inset
 
-Schattentrajektorie am 12.10.2021 in Las Palmas mit den Punkten für 13:30
- Uhr und 13:50 Uhr 
+Schattentrajektorie am 12.
+ Oktober in Las Palmas mit den Punkten für 13:30 Uhr und 13:50 Uhr 
 \end_layout
 
 \end_inset
@@ -2285,7 +2361,8 @@ noprefix "false"
 
 \end_inset
 
- sind in Las Palmas am 12.10.2021 die nachfolgenden Fotos entstanden.
+ sind in Las Palmas am 12.
+ Oktober 2021 die nachfolgenden Fotos entstanden.
  Im ersten der beiden Fotos der Abbildung
 \begin_inset space ~
 \end_inset
@@ -2355,7 +2432,8 @@ name "fig:SchattenFotos"
 
 \end_inset
 
-Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr 
+Schatten in Las Palmas am 12.
+ Oktober 2021 um 13:33 Uhr und um 13:55 Uhr 
 \end_layout
 
 \end_inset
@@ -2367,13 +2445,6 @@ Schatten in Las Palmas am 12.10.2021 um 13:33 Uhr und um 13:55 Uhr
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -2392,7 +2463,8 @@ tung per Sonnenstand, ist die Schattentrajektorie keine Gerade - nicht einmal
 
 \begin_layout Standard
 Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
- vernachlässigbar! 
+ vernachlässigbar - sie kann z.B.
+ in Las Palmas bis zu 45° betragen! 
 \end_layout
 
 \begin_layout Standard
@@ -2733,21 +2805,11 @@ Erde fixiert, Sonne gedreht
 \end_layout
 
 \begin_layout Plain Layout
-Aus Gleichung
-\begin_inset space ~
+Für den Punkt 
+\begin_inset Formula $\underline{P}$
 \end_inset
 
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Fusspunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt im Kugelkoordinatensystem 
+ folgt im Kugelkoordinatensystem 
 \begin_inset Note Note
 status open
 
@@ -2871,7 +2933,7 @@ OK!
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray}
-x_{1} & = & R_{E}\label{eq:TangentialebeneSonderfall1}\\
+x_{1} & = & R_{E}\label{eq:TangentialebeneSonderfall}\\
 x_{2} & = & \text{beliebig}\nonumber \\
 x_{3} & = & \text{beliebig}.\nonumber 
 \end{eqnarray}
@@ -2889,7 +2951,7 @@ Für die Verbindungsgerade folgt aus Gleichung
 (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:VerbindungsgeradeSonneGedreht"
+reference "eq:Verbindungsgerade"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2957,7 +3019,7 @@ Einsetzen in Gleichung
 (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:TangentialebeneSonderfall1"
+reference "eq:TangentialebeneSonderfall"
 plural "false"
 caps "false"
 noprefix "false"
