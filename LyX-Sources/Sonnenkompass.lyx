@@ -506,8 +506,8 @@ In der folgenden Arbeit wird zunächst die Verbindungsgerade zwischen der
  Sonne und dem Stabendpunkt konstruiert.
  Dann werden die Schnittpunkte der verlängerten Verbindungsgeraden mit der
  Tangentialebene als Funktion der Tageszeit bestimmt.
- Schlussendlich werden die gefundenen Schnittpunkte auf die Tangentialebene
- projiziert.
+ Schlussendlich werden die gefundenen Schnittpunkte orthogonal auf die Tangentia
+lebene projiziert.
  Man erhält damit eine 2-dimensionale Darstellung.
  
 \end_layout
@@ -1773,8 +1773,8 @@ noprefix "false"
 \end_inset
 
  der Erde gegeben.
- Sie sollen auf ein zweidimensionales Koordinatensystem der Tangentialebene
- 
+ Sie sollen orthogonal auf ein zweidimensionales Koordinatensystem der Tangentia
+lebene 
 \begin_inset Formula $T$
 \end_inset
 
