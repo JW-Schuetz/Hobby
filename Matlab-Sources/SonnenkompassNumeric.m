@@ -65,7 +65,7 @@ function SonnenkompassNumeric
 
         mue = subs( mue0, 'alpha', alpha );  % in mue0 alpha substituieren
         mue = eval( mue );
-        if( mue >= 1 )
+        if( mue > 1 )
             x    = subs( x0, 'alpha', alpha )';  % in x0 alpha substituieren
             pts  = eval( x );
 

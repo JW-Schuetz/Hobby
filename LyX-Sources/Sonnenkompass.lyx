@@ -271,7 +271,7 @@ Weiterhin werden Kugelkoordinaten
 \end_inset
 
  spannt die Ekliptikalebene auf.
- Siehe die Problemskizzen in den Abbildungen
+ Siehe dazu die Problemskizzen in den Abbildungen
 \begin_inset space ~
 \end_inset
 
@@ -345,7 +345,8 @@ im Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- der Erdoberfläche befinde sich der Fusspunkt des Stabes der Länge 
+ der Erdoberfläche befinde sich der Fusspunkt des senkrecht orientierten
+ Stabes der Länge 
 \begin_inset Formula $L$
 \end_inset
 
@@ -396,6 +397,10 @@ der Ablauf der Tageszeit
 
  unbeeinflusst lassen, die beiden Zeiten seien also voneinander entkoppelt
  
+\end_layout
+
+\begin_layout Itemize
+der Sonnenhöchststand wird mit der Uhrzeit 12 Uhr identifiziert
 \end_layout
 
 \begin_layout Itemize
@@ -936,8 +941,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-In dieser Arbeit wird der jahreszeitliche Einfluss äquivalent durch eine
- Kreisbewegung der Sonne um die fixierte Erde berücksichtigt.
+In dieser Arbeit wird der jahreszeitliche Einfluss durch eine Kreisbewegung
+ der Sonne um die fixierte Erde berücksichtigt.
  Man kann deshalb im Erd-Koordinatensystem den Ort der Sonne als Funktion
  des jahreszeitlichen Umlaufwinkels 
 \begin_inset Formula $\omega T^{*}$
@@ -1671,19 +1676,10 @@ Da im Ausdruck der Verbindungsgeraden mit
 \end_inset
 
  das Stabende beschrieben wird, muss für die Lösung 
-\begin_inset Formula $\mu_{0}\geq1$
+\begin_inset Formula $\mu_{0}>1$
 \end_inset
 
  gelten.
- Der Fall 
-\begin_inset Formula $\mu_{0}=1$
-\end_inset
-
- ist relevant für Punkte 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
-, die auf dem Äquator liegen.
  
 \end_layout
 
