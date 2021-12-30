@@ -163,6 +163,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename PendelSimulation.eps
+	lyxscale 60
 	scale 20
 
 \end_inset
@@ -193,7 +194,7 @@ Mathematisches Pendel der Länge
 \end_layout
 
 \begin_layout Standard
-Für kartesische Koordinaten des Pendels folgt 
+Für die kartesischen Koordinaten des Pendels folgt 
 \begin_inset Formula 
 \begin{eqnarray*}
 x & = & L\sin\phi\\
