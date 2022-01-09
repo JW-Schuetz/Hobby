@@ -400,7 +400,8 @@ der Ablauf der Tageszeit
 \end_layout
 
 \begin_layout Itemize
-der Sonnenhöchststand wird mit der Uhrzeit 12 Uhr identifiziert
+der astronomische Mittag, also die Zeit des Sonnenhöchststandes wird mit
+ 12 Uhr identifiziert 
 \end_layout
 
 \begin_layout Itemize
@@ -441,7 +442,7 @@ name "fig:Problemskizze1"
 
 \end_inset
 
-Problemskizze, SSW, Sonnenhöchststand 
+Problemskizze, SSW, astronomischer Mittag 
 \end_layout
 
 \end_inset
@@ -478,7 +479,7 @@ name "fig:Problemskizze2"
 
 \end_inset
 
-Problemskizze, WSW, Sonnenhöchststand 
+Problemskizze, WSW, astronomischer Mittag 
 \end_layout
 
 \end_inset
@@ -2465,7 +2466,7 @@ Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
 
 \begin_layout Standard
 Die genaue Nordrichtung erhält man z.B., wenn man Schattenzeitpunkte untersucht,
- die symmetrisch um den Zeitpunkt des Sonnenhöchststandes liegen.
+ die symmetrisch um den Zeitpunkt des astronomischen Mittags liegen.
  
 \end_layout
 

@@ -163,8 +163,15 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename PendelSimulation.eps
-	lyxscale 60
+	lyxscale 70
 	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename PendelSimulation1.eps
+	lyxscale 70
 
 \end_inset
 
@@ -203,7 +210,7 @@ y & = & L\cos\phi.
 
 \end_inset
 
-
+ 
 \end_layout
 
 \end_body
