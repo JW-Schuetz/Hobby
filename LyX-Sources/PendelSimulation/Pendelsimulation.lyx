@@ -63,7 +63,7 @@
 \end_index
 \leftmargin 2cm
 \topmargin 1.5cm
-\rightmargin 2cm
+\rightmargin 1cm
 \bottommargin 1.5cm
 \secnumdepth 3
 \tocdepth 3
@@ -164,7 +164,7 @@ status open
 \begin_inset Graphics
 	filename PendelSimulation.eps
 	lyxscale 70
-	scale 20
+	scale 17
 
 \end_inset
 
@@ -172,6 +172,7 @@ status open
 \begin_inset Graphics
 	filename PendelSimulation1.eps
 	lyxscale 70
+	scale 17
 
 \end_inset
 
@@ -210,7 +211,208 @@ y & = & L\cos\phi.
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Beschreibung als dynamisches Sytem 
+\end_layout
+
+\begin_layout Subsection*
+Definition 
+\end_layout
+
+\begin_layout Standard
+In Anlehnung an 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Krabs-1"
+literal "false"
+
+\end_inset
+
+ wird ein dynamisches System (Fluss) auf 
+\begin_inset Formula $X$
+\end_inset
+
+ durch 
+\end_layout
+
+\begin_layout Itemize
+einen metrischen Raum 
+\begin_inset Formula $X$
+\end_inset
+
+ mit der Metrik 
+\begin_inset Formula $d$
+\end_inset
+
  
+\end_layout
+
+\begin_layout Itemize
+eine additive Halbgruppe 
+\begin_inset Formula $I$
+\end_inset
+
+ über den reellen Zahlen
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+D.h.
+ es gilt 
+\begin_inset Formula $0\in I$
+\end_inset
+
+ und für 
+\begin_inset Formula $r,s,t\in I$
+\end_inset
+
+ besitzt die Addition 
+\begin_inset Formula $+:I\times I\rightarrow I$
+\end_inset
+
+ die beiden Eigenschaften 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $r+s=s+r$
+\end_inset
+
+ und 
+\begin_inset Formula $\left(r+s\right)+t=r+\left(s+t\right).$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+und eine stetige Abbildung 
+\begin_inset Formula $\pi:X\times I\rightarrow X$
+\end_inset
+
+ mit den beiden Eigenschaften 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\forall x\in X:\pi\left(x,0\right)=x$
+\end_inset
+
+ (Identitätseigenschaft) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi\left(\pi\left(x,t\right),s\right)=\pi\left(x,t+s\right)$
+\end_inset
+
+ (Halbgruppeneigenschaft) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+definiert.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Motivation 
+\end_layout
+
+\begin_layout Standard
+Das Anfangswertproblem 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{dt}x\left(t\right) & = & x\left(t\right)\\
+x\left(0\right) & = & x_{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+besitzt die eindeutige Lösung 
+\begin_inset Formula 
+\begin{eqnarray*}
+x\left(t\right) & = & x_{0}\exp\left(t\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+oder 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\varphi\left(x,t\right) & = & x\exp\left(t\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zu zeigen ist die Halbgruppeneigenschaft 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\varphi\left(\varphi\left(x,t\right),s\right)=\varphi\left(x,t+s\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also 
+\begin_inset Formula 
+\begin{eqnarray*}
+\varphi\left(\varphi\left(x,t\right),s\right) & = & \varphi\left(x\exp\left(t\right),s\right)\\
+ & = & x\exp\left(t\right)\exp\left(s\right)\\
+ & = & x\exp\left(t+s\right)\\
+ & = & \varphi\left(x,t+s\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "Krabs-1"
+literal "false"
+
+\end_inset
+
+Dynamical Systems - Stability, Controllability and Chaotic Behaviour; Werner
+ Krabs, Stefan Pickl; Springer-Verlag, 2010 
 \end_layout
 
 \end_body

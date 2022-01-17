@@ -1129,11 +1129,11 @@ literal "false"
 
 ) 
 \begin_inset Formula 
-\begin{align*}
-p_{1} & =R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
-p_{2} & =0\\
-p_{3} & =R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right].
-\end{align*}
+\begin{align}
+p_{1} & =R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\label{eq:StabFussPunkt}\\
+p_{2} & =0\nonumber \\
+p_{3} & =R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right].\nonumber 
+\end{align}
 
 \end_inset
 
@@ -1434,11 +1434,11 @@ noprefix "false"
 
 \end_inset
 
-) und fixiert die Erde, dann folgt mit der Abkürzung 
+) und fixiert die Erde, dann folgt mit dem gedrehten Ort der Sonne 
 \begin_inset Formula 
-\[
-\underline{S}^{\alpha}\left(T^{*}\right)=D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)
-\]
+\begin{equation}
+\underline{S}^{\alpha}\left(T^{*}\right)=D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)\label{eq:GedrehterSonnenOrt}
+\end{equation}
 
 \end_inset
 
@@ -1676,11 +1676,262 @@ Da im Ausdruck der Verbindungsgeraden mit
 \begin_inset Formula $\mu=1$
 \end_inset
 
- das Stabende beschrieben wird, muss für die Lösung 
+ das Stabende beschrieben wird, muss 
 \begin_inset Formula $\mu_{0}>1$
 \end_inset
 
+ und damit 
+\begin_inset Formula $\varOmega^{S}<-1$
+\end_inset
+
  gelten.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection*
+Bedingung 
+\begin_inset Formula $\frac{x}{1+x}>1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Fall 
+\begin_inset Formula $1+x>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Es folgt 
+\begin_inset Formula $x>1+x$
+\end_inset
+
+ oder 
+\begin_inset Formula $0>1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Dies ist offensichtlich falsch.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Also existiert für diesen Fall keine Lösung.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fall 
+\begin_inset Formula $1+x<0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Es folgt 
+\begin_inset Formula $x<1+x$
+\end_inset
+
+ oder 
+\begin_inset Formula $0<1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Dies ist offensichtlich richtig.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Also existiert für diesen Fall eine Lösung, nämlich 
+\begin_inset Formula $x<-1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Aus der Bedingung 
+\begin_inset Formula 
+\[
+\varOmega^{S}<-1
+\]
+
+\end_inset
+
+folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}}\right] & < & -1\\
+R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}} & < & -L\\
+R_{E}+L-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}} & < & 0\\
+\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}} & > & R_{E}+L.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Mit dem Stabfusspunkt (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:StabFussPunkt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{align*}
+p_{1} & =R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
+p_{2} & =0\\
+p_{3} & =R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right],
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit dem gedrehten Ort der Sonne (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GedrehterSonnenOrt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\underline{S}^{\alpha}\left(T^{*}\right)=D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit dem Ort der Sonne (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Ort der Sonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\underline{S}\left(T^{*}\right)=R_{S}\left(\begin{array}{c}
+\cos\left(\omega T^{*}\right)\\
+\sin\left(\omega T^{*}\right)\\
+0
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und mit der Drehmatrix als Funktion des Winkels 
+\begin_inset Formula $-\alpha$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}} & = & \frac{1}{R_{E}}\left(p_{1},0,p_{3}\right)\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}\\
+ & = & \frac{R_{S}}{R_{E}}\left(p_{1},0,p_{3}\right)\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha\\
+-\cos\psi\sin\alpha & \cos\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha
+\end{pmatrix}\left(\begin{array}{c}
+\cos\left(\omega T^{*}\right)\\
+\sin\left(\omega T^{*}\right)
+\end{array}\right)\\
+ & = & \frac{R_{S}}{R_{E}}\left(p_{1},p_{3}\right)\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha
+\end{pmatrix}\left(\begin{array}{c}
+\cos\left(\omega T^{*}\right)\\
+\sin\left(\omega T^{*}\right)
+\end{array}\right)\\
+ & = & R_{S}\left(\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right],\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\right)\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha
+\end{pmatrix}\left(\begin{array}{c}
+\cos\left(\omega T^{*}\right)\\
+\sin\left(\omega T^{*}\right)
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  
 \end_layout
 
@@ -2084,6 +2335,270 @@ Es ergibt sich schliesslich für die Punkte der gesuchten 2-dimensionalen
 \begin{equation}
 \underline{x}^{S}\left(\alpha\right)=AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
 \end{equation}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Den zum astronomischen Mittag gehörigen Winkel 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+ erhält man durch Auffinden des kürzesten Abstandes der Trajektorie zum
+ Koordinatenursprung, also durch Lösen des Problems 
+\begin_inset Formula 
+\[
+\min_{0\leq\alpha_{0}<2\pi}\left\Vert \underline{x}^{S}\left(\alpha_{0}\right)\right\Vert ^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Wegen des von 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+ unabhängigen Terms 
+\begin_inset Formula 
+\begin{eqnarray*}
+AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}} & = & \left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\left(\begin{array}{ccc}
+\cos\left(\Theta_{G}-\psi\right) & 0 & \sin\left(\Theta_{G}-\psi\right)\\
+0 & 1 & 0\\
+-\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
+\end{array}\right)\\
+ & = & \left(\begin{array}{ccc}
+0 & 1 & 0\\
+-\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt mit den Abkürzungen 
+\begin_inset Formula $\chi_{i}\left(\alpha_{0}\right)$
+\end_inset
+
+ aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LösungspunkteSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Es gilt (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LösungspunkteSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right)\\
+ & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit der Ableitung nach 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial\alpha}\left[\underline{x}_{0}^{S}\left(\alpha\right)\right] & = & \left(1-\mu_{0}\right)D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)\\
+ & = & \left(1-\mu_{0}\right)\frac{\partial}{\partial\alpha}\left[D_{\left(-\alpha\right)}\right]\underline{S}\left(T^{*}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Die Drehmatrix 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
+\]
+
+\end_inset
+
+besitzt wegen 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial\alpha}\left(\sin\alpha\right) & = & \cos\alpha\\
+\frac{\partial}{\partial\alpha}\left(\cos\alpha\right) & = & -\sin\alpha
+\end{eqnarray*}
+
+\end_inset
+
+die Ableitung 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\alpha}\left[D_{\left(-\alpha\right)}\right]=\begin{pmatrix}\sin^{2}\psi\left(1+\sin\alpha\right)-\sin\alpha & +\cos\psi\cos\alpha & \sin\psi\cos\psi\left(1+\sin\alpha\right)\\
+-\cos\psi\cos\alpha & -\sin\alpha & \sin\psi\cos\alpha\\
+\cos\psi\sin\psi\left(1+\sin\alpha\right) & -\sin\psi\cos\alpha & \cos^{2}\psi\left(1+\sin\alpha\right)-\sin\alpha
+\end{pmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underline{x}_{0}^{S}\left(\alpha_{0}\right)=\left[\begin{array}{c}
+\chi_{1}\left(\alpha_{0}\right)\\
+\chi_{2}\left(\alpha_{0}\right)\\
+\chi_{3}\left(\alpha_{0}\right)
+\end{array}\right]
+\]
+
+\end_inset
+
+wegen 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}^{S}\left(\alpha_{0}\right) & = & AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\left[\begin{array}{c}
+\chi_{1}\left(\alpha_{0}\right)\\
+\chi_{2}\left(\alpha_{0}\right)\\
+\chi_{3}\left(\alpha_{0}\right)
+\end{array}\right]\\
+ & = & \left(\begin{array}{ccc}
+0 & 1 & 0\\
+-\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
+\end{array}\right)\left[\begin{array}{c}
+\chi_{1}\left(\alpha_{0}\right)\\
+\chi_{2}\left(\alpha_{0}\right)\\
+\chi_{3}\left(\alpha_{0}\right)
+\end{array}\right]\\
+ & = & \left(\begin{array}{c}
+\chi_{2}\left(\alpha_{0}\right)\\
+-\sin\left(\Theta_{G}-\psi\right)\chi_{1}\left(\alpha_{0}\right)+\cos\left(\Theta_{G}-\psi\right)\chi_{3}\left(\alpha_{0}\right)
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+für die zu minimierende Funktion 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\Vert \underline{x}^{S}\left(\alpha_{0}\right)\right\Vert ^{2} & = & \chi_{2}^{2}\left(\alpha_{0}\right)+f^{2}\left(\alpha_{0}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit der Abkürzung 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+f\left(\alpha_{0}\right)=\sin\left(\Theta_{G}-\psi\right)\chi_{1}\left(\alpha_{0}\right)-\cos\left(\Theta_{G}-\psi\right)\chi_{3}\left(\alpha_{0}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Für die Ableitung nach 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+ folgt 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial\alpha_{0}}\left\Vert \underline{x}^{S}\left(\alpha_{0}\right)\right\Vert ^{2} & = & 2\chi_{2}\left(\alpha_{0}\right)\chi_{2}^{'}\left(\alpha_{0}\right)+2f\left(\alpha_{0}\right)f^{'}\left(\alpha_{0}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit 
+\begin_inset Formula 
+\[
+f^{'}\left(\alpha_{0}\right)=\sin\left(\Theta_{G}-\psi\right)\chi_{1}^{'}\left(\alpha_{0}\right)-\cos\left(\Theta_{G}-\psi\right)\chi_{3}^{'}\left(\alpha_{0}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+der hochgestellte Strich bedeutet dabei die Ableitung nach 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+.
+ 
+\end_layout
 
 \end_inset
 
