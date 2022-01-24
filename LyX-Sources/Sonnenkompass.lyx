@@ -946,22 +946,22 @@ In dieser Arbeit wird der jahreszeitliche Einfluss durch eine Kreisbewegung
  der Sonne um die fixierte Erde berücksichtigt.
  Man kann deshalb im Erd-Koordinatensystem den Ort der Sonne als Funktion
  des jahreszeitlichen Umlaufwinkels 
-\begin_inset Formula $\omega T^{*}$
+\begin_inset Formula 
+\begin{equation}
+\Omega=\omega T^{*}\label{eq:Omega}
+\end{equation}
+
 \end_inset
 
- mit 
-\begin_inset Formula $\omega=\frac{2\pi}{365}$
-\end_inset
-
- durch 
+durch 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \underline{S}\left(T^{*}\right)=R_{S}\left(\begin{array}{c}
-\cos\left(\omega T^{*}\right)\\
-\sin\left(\omega T^{*}\right)\\
+\cos\Omega\\
+\sin\Omega\\
 0
 \end{array}\right)\label{eq:Ort der Sonne}
 \end{equation}
@@ -974,6 +974,10 @@ In dieser Arbeit wird der jahreszeitliche Einfluss durch eine Kreisbewegung
 \begin_layout Standard
 beschreiben.
  Dabei ist 
+\begin_inset Formula $\omega=\frac{2\pi}{365}$
+\end_inset
+
+ und 
 \begin_inset Formula $T^{*}\in\left[0,365\right)$
 \end_inset
 
@@ -1002,8 +1006,8 @@ Erdposition
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{1}^{E} & = & -R_{S}\cos\left(\omega T^{*}\right)\\
-p_{2}^{E} & = & -R_{S}\sin\left(\omega T^{*}\right)\\
+p_{1}^{E} & = & -R_{S}\cos\Omega\\
+p_{2}^{E} & = & -R_{S}\sin\Omega\\
 p_{3}^{E} & = & 0.
 \end{eqnarray*}
 
@@ -1031,8 +1035,8 @@ Sonnenposition
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{1}^{S} & = & R_{S}\cos\left(\omega T^{*}\right)\\
-p_{2}^{S} & = & R_{S}\sin\left(\omega T^{*}\right)\\
+p_{1}^{S} & = & R_{S}\cos\Omega\\
+p_{2}^{S} & = & R_{S}\sin\Omega\\
 p_{3}^{S} & = & 0.
 \end{eqnarray*}
 
@@ -1600,7 +1604,7 @@ folgt durch Einsetzen
  & = & \mu\left(R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right)-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
  & = & \mu\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}+LR_{E}\right)-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
  & = & \mu\left(\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}+1\right)-\left(\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}\right)\\
- & = & \mu\left(\Omega+1\right)-\Omega
+ & = & \mu\left(\Omega^{S}+1\right)-\Omega^{S}
 \end{eqnarray*}
 
 \end_inset
@@ -1615,8 +1619,8 @@ oder
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\Omega & = & \mu\left(1+\Omega\right)\\
-\mu & = & \frac{\Omega}{1+\Omega}
+\Omega^{S} & = & \mu\left(1+\Omega^{S}\right)\\
+\mu & = & \frac{\Omega^{S}}{1+\Omega^{S}}
 \end{eqnarray*}
 
 \end_inset
@@ -1631,7 +1635,7 @@ mit
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-\Omega=\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
+\Omega^{S}=\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
 \]
 
 \end_inset
@@ -1658,9 +1662,9 @@ mit der Abkürzung
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\varOmega^{S}\left(\alpha\right)=\frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}}\right].
-\]
+\begin{equation}
+\varOmega^{S}\left(\alpha\right)=\frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}}\right].\label{eq:OmegaS}
+\end{equation}
 
 \end_inset
 
@@ -1690,16 +1694,65 @@ Da im Ausdruck der Verbindungsgeraden mit
 status open
 
 \begin_layout Subsection*
-Bedingung 
-\begin_inset Formula $\frac{x}{1+x}>1$
+Behauptung 
+\end_layout
+
+\begin_layout Plain Layout
+Aus der Bedingung 
+\begin_inset Formula $\mu_{0}>1$
+\end_inset
+
+ folgt 
+\begin_inset Formula 
+\[
+\frac{\varOmega^{S}}{1+\varOmega^{S}}>1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und damit muss gelten 
+\begin_inset Formula 
+\[
+\varOmega^{S}<-1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Beweis 
+\end_layout
+
+\begin_layout Itemize
+Fall 
+\begin_inset Formula $1+\varOmega^{S}=0$
 \end_inset
 
  
 \end_layout
 
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula $\varOmega^{S}=-1$
+\end_inset
+
+ und damit folgt ein Widerspruch zu 
+\begin_inset Formula $\frac{-1}{0}>1.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Fall 
-\begin_inset Formula $1+x>0$
+\begin_inset Formula $1+\varOmega^{S}>0$
 \end_inset
 
  
@@ -1708,31 +1761,26 @@ Fall
 \begin_deeper
 \begin_layout Plain Layout
 Es folgt 
-\begin_inset Formula $x>1+x$
+\begin_inset Formula $\varOmega^{S}>1+\varOmega^{S}$
 \end_inset
 
  oder 
-\begin_inset Formula $0>1$
+\begin_inset Formula $0>1.$
 \end_inset
 
-.
  
 \end_layout
 
 \begin_layout Plain Layout
 Dies ist offensichtlich falsch.
- 
-\end_layout
-
-\begin_layout Plain Layout
-Also existiert für diesen Fall keine Lösung.
+ Also existiert für diesen Fall keine Lösung.
  
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
 Fall 
-\begin_inset Formula $1+x<0$
+\begin_inset Formula $1+\varOmega^{S}<0$
 \end_inset
 
  
@@ -1741,55 +1789,51 @@ Fall
 \begin_deeper
 \begin_layout Plain Layout
 Es folgt 
-\begin_inset Formula $x<1+x$
+\begin_inset Formula $\varOmega^{S}<1+\varOmega^{S}$
 \end_inset
 
  oder 
-\begin_inset Formula $0<1$
+\begin_inset Formula $0<1.$
 \end_inset
 
-.
  
 \end_layout
 
 \begin_layout Plain Layout
 Dies ist offensichtlich richtig.
- 
-\end_layout
-
-\begin_layout Plain Layout
-Also existiert für diesen Fall eine Lösung, nämlich 
-\begin_inset Formula $x<-1$
+ Also existiert für diesen Fall eine Lösung, nämlich 
+\begin_inset Formula $\varOmega^{S}<-1.$
 \end_inset
 
-.
  
 \end_layout
 
 \end_deeper
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
 \end_inset
 
- 
-\begin_inset Note Note
-status open
+
+\end_layout
 
 \begin_layout Plain Layout
-Aus der Bedingung 
-\begin_inset Formula 
-\[
-\varOmega^{S}<-1
-\]
-
+Untersucht werden soll zunächst der Fall 
+\begin_inset Formula $\varOmega^{S}=-1$
 \end_inset
 
-folgt 
+.
+ Multiplikation mit 
+\begin_inset Formula $LR_{E}$
+\end_inset
+
+ liefert 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Formula 
-\begin{eqnarray*}
-\frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}}\right] & < & -1\\
-R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}} & < & -L\\
-R_{E}+L-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}} & < & 0\\
-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}} & > & R_{E}+L.
-\end{eqnarray*}
+\begin{equation}
+LR_{E}\varOmega^{S}=-LR_{E}.\label{eq:ZuLösen}
+\end{equation}
 
 \end_inset
 
@@ -1797,31 +1841,7 @@ R_{E}+L-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}} 
 \end_layout
 
 \begin_layout Plain Layout
-Mit dem Stabfusspunkt (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:StabFussPunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\begin_inset Formula 
-\begin{align*}
-p_{1} & =R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
-p_{2} & =0\\
-p_{3} & =R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right],
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-mit dem gedrehten Ort der Sonne (
+Mit dem gedrehten Ort der Sonne nach (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:GedrehterSonnenOrt"
@@ -1831,22 +1851,7 @@ noprefix "false"
 
 \end_inset
 
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\underline{S}^{\alpha}\left(T^{*}\right)=D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right),
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-mit dem Ort der Sonne (
+), mit dem Ort der Sonne nach (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Ort der Sonne"
@@ -1856,78 +1861,147 @@ noprefix "false"
 
 \end_inset
 
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\underline{S}\left(T^{*}\right)=R_{S}\left(\begin{array}{c}
-\cos\left(\omega T^{*}\right)\\
-\sin\left(\omega T^{*}\right)\\
-0
-\end{array}\right),
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-und mit der Drehmatrix als Funktion des Winkels 
+) und mit der Drehmatrix als Funktion des Winkels 
 \begin_inset Formula $-\alpha$
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
--\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix},
-\]
+ nach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DrehmatrixAlpha"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
+) kann man für die linke Seite der Ungleichung schreiben 
 \end_layout
 
 \begin_layout Plain Layout
-folgt 
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}} & = & \frac{1}{R_{E}}\left(p_{1},0,p_{3}\right)\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
--\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}\\
- & = & \frac{R_{S}}{R_{E}}\left(p_{1},0,p_{3}\right)\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha\\
--\cos\psi\sin\alpha & \cos\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha
-\end{pmatrix}\left(\begin{array}{c}
-\cos\left(\omega T^{*}\right)\\
-\sin\left(\omega T^{*}\right)
-\end{array}\right)\\
- & = & \frac{R_{S}}{R_{E}}\left(p_{1},p_{3}\right)\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha
-\end{pmatrix}\left(\begin{array}{c}
-\cos\left(\omega T^{*}\right)\\
-\sin\left(\omega T^{*}\right)
-\end{array}\right)\\
- & = & R_{S}\left(\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right],\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\right)\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha
-\end{pmatrix}\left(\begin{array}{c}
-\cos\left(\omega T^{*}\right)\\
-\sin\left(\omega T^{*}\right)
-\end{array}\right).
+LR_{E}\varOmega^{S} & = & \widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{C}.
 \end{eqnarray*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+Dabei gilt für die Abkürzungen (siehe dazu SonnenKompassSymbolicAddon.m)
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\widetilde{A} & = & -p_{1}R_{S}\cos\psi\sin\Omega+p_{2}R_{S}\cos\psi\cos\Omega+p_{3}R_{S}\sin\psi\sin\Omega\\
+\widetilde{B} & = & -p_{1}R_{S}\cos^{2}\psi\cos\Omega-p_{2}R_{S}\sin\Omega+p_{3}R_{S}\sin\psi\cos\psi\cos\Omega\\
+\widetilde{C} & = & R_{E}^{2}+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omega-p_{3}R_{S}\sin\psi\cos\psi\cos\Omega.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ZuLösen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt die zu lösende Gleichung 
+\begin_inset Formula $f\left(\alpha\right)=0$
+\end_inset
+
+ mit 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+f\left(\alpha\right)=\widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{C}+LR_{E}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+oder umformuliert 
+\begin_inset Formula 
+\[
+f\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C
+\]
+
+\end_inset
+
+und mit 
+\begin_inset Formula $p_{2}=0$
+\end_inset
+
+ (siehe (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:StabFussPunkt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)) 
+\begin_inset Formula 
+\begin{eqnarray*}
+A & = & -p_{1}R_{S}\cos\psi\sin\Omega+p_{3}R_{S}\sin\psi\sin\Omega\\
+B & = & -p_{1}R_{S}\cos^{2}\psi\cos\Omega+p_{3}R_{S}\sin\psi\cos\psi\cos\Omega\\
+C & = & R_{E}\left(R_{E}+L\right)+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omega-p_{3}R_{S}\sin\psi\cos\psi\cos\Omega.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Diese Gleichung hat mit 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ unter den Bedingungen 
+\begin_inset Formula 
+\begin{eqnarray*}
+C^{2} & \leq & A^{2}+B^{2}\\
+B & \neq & C
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+die beiden Lösungen 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\alpha=2\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right)+2\pi k.
+\]
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
@@ -2524,9 +2598,21 @@ wegen
 \end{array}\right]\\
  & = & \left(\begin{array}{c}
 \chi_{2}\left(\alpha_{0}\right)\\
--\sin\left(\Theta_{G}-\psi\right)\chi_{1}\left(\alpha_{0}\right)+\cos\left(\Theta_{G}-\psi\right)\chi_{3}\left(\alpha_{0}\right)
+f\left(\alpha_{0}\right)
 \end{array}\right)
 \end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt mit der Abkürzung 
+\begin_inset Formula 
+\[
+f\left(\alpha_{0}\right)=-\sin\left(\Theta_{G}-\psi\right)\chi_{1}\left(\alpha_{0}\right)+\cos\left(\Theta_{G}-\psi\right)\chi_{3}\left(\alpha_{0}\right)
+\]
 
 \end_inset
 
@@ -2537,23 +2623,8 @@ wegen
 für die zu minimierende Funktion 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\Vert \underline{x}^{S}\left(\alpha_{0}\right)\right\Vert ^{2} & = & \chi_{2}^{2}\left(\alpha_{0}\right)+f^{2}\left(\alpha_{0}\right)
+\left\Vert \underline{x}^{S}\left(\alpha_{0}\right)\right\Vert ^{2} & = & \chi_{2}^{2}\left(\alpha_{0}\right)+f^{2}\left(\alpha_{0}\right).
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-mit der Abkürzung 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-f\left(\alpha_{0}\right)=\sin\left(\Theta_{G}-\psi\right)\chi_{1}\left(\alpha_{0}\right)-\cos\left(\Theta_{G}-\psi\right)\chi_{3}\left(\alpha_{0}\right).
-\]
 
 \end_inset
 
@@ -2580,24 +2651,28 @@ Für die Ableitung nach
 \end_layout
 
 \begin_layout Plain Layout
-mit 
-\begin_inset Formula 
-\[
-f^{'}\left(\alpha_{0}\right)=\sin\left(\Theta_{G}-\psi\right)\chi_{1}^{'}\left(\alpha_{0}\right)-\cos\left(\Theta_{G}-\psi\right)\chi_{3}^{'}\left(\alpha_{0}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-der hochgestellte Strich bedeutet dabei die Ableitung nach 
+Der hochgestellte Strich bedeutet dabei die Ableitung nach 
 \begin_inset Formula $\alpha_{0}$
 \end_inset
 
 .
  
+\end_layout
+
+\begin_layout Plain Layout
+Für 
+\begin_inset Formula $f^{'}\left(\alpha_{0}\right)$
+\end_inset
+
+ folgt 
+\begin_inset Formula 
+\[
+f^{'}\left(\alpha_{0}\right)=-\sin\left(\Theta_{G}-\psi\right)\chi_{1}^{'}\left(\alpha_{0}\right)+\cos\left(\Theta_{G}-\psi\right)\chi_{3}^{'}\left(\alpha_{0}\right).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
