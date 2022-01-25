@@ -1832,7 +1832,7 @@ Untersucht werden soll zunächst der Fall
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
-LR_{E}\varOmega^{S}=-LR_{E}.\label{eq:ZuLösen}
+LR_{E}\varOmega^{S}=-LR_{E}.\label{eq:ZuLösen1}
 \end{equation}
 
 \end_inset
@@ -1911,7 +1911,7 @@ Dabei gilt für die Abkürzungen (siehe dazu SonnenKompassSymbolicAddon.m)
 Wegen (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:ZuLösen"
+reference "eq:ZuLösen1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1939,17 +1939,17 @@ f\left(\alpha\right)=\widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{
 \begin_layout Plain Layout
 oder umformuliert 
 \begin_inset Formula 
-\[
-f\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C
-\]
+\begin{equation}
+f\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C.\label{eq:ZuLösen2}
+\end{equation}
 
 \end_inset
 
-und mit 
+Mit 
 \begin_inset Formula $p_{2}=0$
 \end_inset
 
- (siehe (
+ aus (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:StabFussPunkt"
@@ -1959,12 +1959,12 @@ noprefix "false"
 
 \end_inset
 
-)) 
+) folgt 
 \begin_inset Formula 
 \begin{eqnarray*}
-A & = & -p_{1}R_{S}\cos\psi\sin\Omega+p_{3}R_{S}\sin\psi\sin\Omega\\
-B & = & -p_{1}R_{S}\cos^{2}\psi\cos\Omega+p_{3}R_{S}\sin\psi\cos\psi\cos\Omega\\
-C & = & R_{E}\left(R_{E}+L\right)+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omega-p_{3}R_{S}\sin\psi\cos\psi\cos\Omega.
+A & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\sin\Omega\\
+B & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\cos\psi\cos\Omega\\
+C & = & R_{E}^{2}-R_{S}\left(p_{1}\sin^{2}\psi+p_{3}\sin\psi\cos\psi\right)\cos\Omega.
 \end{eqnarray*}
 
 \end_inset
@@ -1973,35 +1973,28 @@ C & = & R_{E}\left(R_{E}+L\right)+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omeg
 \end_layout
 
 \begin_layout Plain Layout
-Diese Gleichung hat mit 
-\begin_inset Formula $k\in\mathbb{N}$
-\end_inset
-
- unter den Bedingungen 
-\begin_inset Formula 
-\begin{eqnarray*}
-C^{2} & \leq & A^{2}+B^{2}\\
-B & \neq & C
-\end{eqnarray*}
+Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ZuLösen2"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-die beiden Lösungen 
+) hat die beiden Lösungen (siehe dazu SolveEquation.m) 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-\alpha=2\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right)+2\pi k.
+\alpha_{\pm}=2\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
 \]
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
