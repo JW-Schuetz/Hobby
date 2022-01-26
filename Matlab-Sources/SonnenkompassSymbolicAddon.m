@@ -47,8 +47,8 @@ end
 
 A, B, C
 
-% Ausgabe diese Skripts:
-% ======================
+% Ausgabe dieses Skripts:
+% =======================
 % A = p3*rS*sin(omega)*sin(psi) + p2*rS*cos(omega)*cos(psi) - 
 %     p1*rS*cos(psi)*sin(omega)
 % B = p3*rS*cos(omega)*cos(psi)*sin(psi) - p1*rS*cos(omega)*cos(psi)^2 - 

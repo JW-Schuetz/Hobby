@@ -12,8 +12,8 @@ syms C real
 
 a, param, cond
 
-% Ausgabe diese Skripts:
-% ======================
+% Ausgabe dieses Skripts:
+% =======================
 % a = 
 %  2*atan((A - (A^2 + B^2 - C^2)^(1/2))/(B - C)) + 2*pi*k
 %  2*atan((A + (A^2 + B^2 - C^2)^(1/2))/(B - C)) + 2*pi*k
