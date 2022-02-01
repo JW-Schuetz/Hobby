@@ -46,15 +46,19 @@ function SonnenkompassNumeric
     mue0 = omegaS / ( 1 + omegaS );
     x0   = mue0 * q + ( 1 - mue0 ) * sAlpha;
 
-    % Zahlenwerte bis auf alpha substituieren (explizit wg. NotUsed-MatLab-Warnungen)
+    % Zahlenwerte bis auf alpha substituieren, explizit wegen
+	% NotUsed MatLab-Warnungen
     mue0 = subs( mue0, 'omega', omega );
     mue0 = subs( mue0, 'rS',    rS );
     mue0 = subs( mue0, 'lS',    lS );
     mue0 = subs( mue0, 'p1',    p1 );
     mue0 = subs( mue0, 'p2',    p2 );
     mue0 = subs( mue0, 'p3',    p3 );
+    mue0 = subs( mue0, 'rE',    rE );
     mue0 = subs( mue0, 'psi',   psi );
-    x0   = subs( x0 );  % Zahlenwerte bis auf alpha substituieren
+
+	% Zahlenwerte bis auf alpha substituieren (implizit)
+    x0 = subs( x0 );
 
     % Numerische Auswertung
     N = tEnd - tStart + 1;          % Anzahl der Zeitpunkte
@@ -69,12 +73,12 @@ function SonnenkompassNumeric
         mue = subs( mue0, 'alpha', alpha );	% in mue0 alpha substituieren
         mue = eval( mue );
         if( mue > 1 )
-            x    = subs( x0, 'alpha', alpha )';  % in x0 alpha substituieren
-            pts  = eval( x );
+            x = subs( x0, 'alpha', alpha )';  % in x0 alpha substituieren
+            x = eval( x );
 
-            pts1 = pts( 1 );
-            pts2 = pts( 2 );
-            pts3 = pts( 3 );
+            pts1 = x( 1 );
+            pts2 = x( 2 );
+            pts3 = x( 3 );
         else
             error( 'SonnenkompassNumeric: Keine Lösung!' )
         end

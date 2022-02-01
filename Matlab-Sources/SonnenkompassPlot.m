@@ -43,18 +43,6 @@ function SonnenkompassPlot()
     % Ergebnisdaten laden
     load( [ ort, '-', datum, '.mat' ], 'y' )
 
-    % NaN-Elemente entfernen
-    ndx = ~isnan( y( :, 2 ) );
-    y   = y( ndx, : );
-
-    % nach y( :, 2 ) aufsteigend sortieren
-    [ ~, ndx ] = sort( y( :, 2 ) );
-    y          = y( ndx, : );
-
-    % evtl. doppelte Abszissenwerte entfernen
-    [ ~, ndx ] = unique( y( :, 2 ) );
-    y          = y( ndx, : );
-
     N = size( y, 1 );
 
     % Minimaler Abstand Stab <-> Schattenende
