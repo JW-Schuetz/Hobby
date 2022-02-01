@@ -10,7 +10,7 @@ function SonnenkompassNumeric
 
     % Variable Daten
     ort   = 'LasPalmas';
-	datum = '21.09.2021';
+	datum = '12.10.2021';
 
     fileName = [ ort, '-', datum, '.mat' ];
 
@@ -38,11 +38,9 @@ function SonnenkompassNumeric
     p2 = 0;                         % y-Koordinate
     p3 = rE * cos( breite + psi );  % z-Koordinate
 
-    % Limits für zulässiges alpha berechnen (numerisch)
-    alphaPlus  = eval( alphaPlus );
-    alphaMinus = eval( alphaMinus );
-
-    deltaT = 12 * 60 * ( alphaMinus - alphaPlus ) / pi;  % in Minuten
+    % numerische Limits für zulässige Zeiten berechnen (Minuten)
+    tStart = ceil( 60 * 12 * eval( alphaPlus ) / pi );      % aufrunden
+    tEnd   = floor( 60 * 12 * eval( alphaMinus ) / pi );	% abrunden
 
     % Ausdrücke für mue0, x0
     mue0 = omegaS / ( 1 + omegaS );
@@ -59,19 +57,16 @@ function SonnenkompassNumeric
     x0   = subs( x0 );  % Zahlenwerte bis auf alpha substituieren
 
     % Numerische Auswertung
-    M = 60 * 24;	% Anzahl der Minuten pro Tag
-    N = 1 * M + 1;	% Anzahl Punkte
+    N = tEnd - tStart + 1;          % Anzahl der Zeitpunkte
 
     y = zeros( N, 3 );    % [m]
 
-    delta = M / ( N - 1 );	% Delta Minuten
-
     % Position und Zeitpunkt berechnen
     for i = 1 : N
-        t     = ( i - 1 ) * delta;     % t in Minuten (0 bis 60*24 + 1)
-        alpha = 2 * pi / M * t;
+        t     = tStart + ( i - 1 );     % t in Minuten
+        alpha = pi / ( 12 * 60 ) * t;	% zugehöriger Winkel
 
-        mue = subs( mue0, 'alpha', alpha );  % in mue0 alpha substituieren
+        mue = subs( mue0, 'alpha', alpha );	% in mue0 alpha substituieren
         mue = eval( mue );
         if( mue > 1 )
             x    = subs( x0, 'alpha', alpha )';  % in x0 alpha substituieren
@@ -81,9 +76,7 @@ function SonnenkompassNumeric
             pts2 = pts( 2 );
             pts3 = pts( 3 );
         else
-            pts1 = Inf;
-            pts2 = Inf;
-            pts3 = Inf;
+            error( 'SonnenkompassNumeric: Keine Lösung!' )
         end
 
         % Projektion auf Tangentialebene
