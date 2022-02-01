@@ -13,7 +13,7 @@ syms p3 real
 syms s real
 syms c real
 
-load( 'SonnenkompassSymbolic.mat', 'omegaS' )
+load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS' )
 
 z = simplify( lS * rE * omegaS );
 
@@ -45,7 +45,7 @@ if( probe ~= 0 )
     error( 'Probe A, B, C gescheitert!' )
 end
 
-A, B, C
+% A, B, C
 
 % Ausgabe dieses Skripts:
 % =======================

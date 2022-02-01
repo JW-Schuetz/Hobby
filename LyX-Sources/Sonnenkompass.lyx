@@ -401,7 +401,15 @@ der Ablauf der Tageszeit
 
 \begin_layout Itemize
 der astronomische Mittag, also die Zeit des Sonnenhöchststandes wird mit
- 12 Uhr identifiziert 
+ 
+\begin_inset Quotes gld
+\end_inset
+
+12 Uhr
+\begin_inset Quotes grd
+\end_inset
+
+ identifiziert 
 \end_layout
 
 \begin_layout Itemize
@@ -886,10 +894,14 @@ literal "false"
 \end_inset
 
  gehörige Tageszeit in Stunden ist durch 
-\begin_inset Formula $t^{*}=\frac{12}{\pi}\alpha$
+\begin_inset Formula 
+\begin{equation}
+t^{*}=\frac{12}{\pi}\alpha\label{eq:TagesZeit}
+\end{equation}
+
 \end_inset
 
- gegeben.
+gegeben.
  
 \begin_inset VSpace bigskip
 \end_inset
@@ -1684,321 +1696,25 @@ Da im Ausdruck der Verbindungsgeraden mit
 \begin_inset Formula $\mu_{0}>1$
 \end_inset
 
- und damit 
+ und dazu äquivalent 
 \begin_inset Formula $\varOmega^{S}<-1$
 \end_inset
 
- gelten.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Subsection*
-Behauptung 
-\end_layout
-
-\begin_layout Plain Layout
-Aus der Bedingung 
-\begin_inset Formula $\mu_{0}>1$
-\end_inset
-
- folgt 
-\begin_inset Formula 
-\[
-\frac{\varOmega^{S}}{1+\varOmega^{S}}>1
-\]
-
+ gelten (siehe dazu Abschnitt
+\begin_inset space ~
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-und damit muss gelten 
-\begin_inset Formula 
-\[
-\varOmega^{S}<-1.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Beweis 
-\end_layout
-
-\begin_layout Itemize
-Fall 
-\begin_inset Formula $1+\varOmega^{S}=0$
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-\begin_inset Formula $\varOmega^{S}=-1$
-\end_inset
-
- und damit folgt ein Widerspruch zu 
-\begin_inset Formula $\frac{-1}{0}>1.$
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Fall 
-\begin_inset Formula $1+\varOmega^{S}>0$
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-Es folgt 
-\begin_inset Formula $\varOmega^{S}>1+\varOmega^{S}$
-\end_inset
-
- oder 
-\begin_inset Formula $0>1.$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-Dies ist offensichtlich falsch.
- Also existiert für diesen Fall keine Lösung.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Fall 
-\begin_inset Formula $1+\varOmega^{S}<0$
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-Es folgt 
-\begin_inset Formula $\varOmega^{S}<1+\varOmega^{S}$
-\end_inset
-
- oder 
-\begin_inset Formula $0<1.$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-Dies ist offensichtlich richtig.
- Also existiert für diesen Fall eine Lösung, nämlich 
-\begin_inset Formula $\varOmega^{S}<-1.$
-\end_inset
-
- 
-\end_layout
-
-\end_deeper
-\begin_layout Plain Layout
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Untersucht werden soll zunächst der Fall 
-\begin_inset Formula $\varOmega^{S}=-1$
-\end_inset
-
-.
- Multiplikation mit 
-\begin_inset Formula $LR_{E}$
-\end_inset
-
- liefert 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-LR_{E}\varOmega^{S}=-LR_{E}.\label{eq:ZuLösen1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Mit dem gedrehten Ort der Sonne nach (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GedrehterSonnenOrt"
+reference "sec:Anhang"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-), mit dem Ort der Sonne nach (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Ort der Sonne"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) und mit der Drehmatrix als Funktion des Winkels 
-\begin_inset Formula $-\alpha$
-\end_inset
-
- nach (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:DrehmatrixAlpha"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) kann man für die linke Seite der Ungleichung schreiben 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-LR_{E}\varOmega^{S} & = & \widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{C}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Dabei gilt für die Abkürzungen (siehe dazu SonnenKompassSymbolicAddon.m)
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\widetilde{A} & = & -p_{1}R_{S}\cos\psi\sin\Omega+p_{2}R_{S}\cos\psi\cos\Omega+p_{3}R_{S}\sin\psi\sin\Omega\\
-\widetilde{B} & = & -p_{1}R_{S}\cos^{2}\psi\cos\Omega-p_{2}R_{S}\sin\Omega+p_{3}R_{S}\sin\psi\cos\psi\cos\Omega\\
-\widetilde{C} & = & R_{E}^{2}+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omega-p_{3}R_{S}\sin\psi\cos\psi\cos\Omega.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Wegen (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ZuLösen1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt die zu lösende Gleichung 
-\begin_inset Formula $f\left(\alpha\right)=0$
-\end_inset
-
- mit 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-f\left(\alpha\right)=\widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{C}+LR_{E}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-oder umformuliert 
-\begin_inset Formula 
-\begin{equation}
-f\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C.\label{eq:ZuLösen2}
-\end{equation}
-
-\end_inset
-
-Mit 
-\begin_inset Formula $p_{2}=0$
-\end_inset
-
- aus (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:StabFussPunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt 
-\begin_inset Formula 
-\begin{eqnarray*}
-A & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\sin\Omega\\
-B & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\cos\psi\cos\Omega\\
-C & = & R_{E}^{2}-R_{S}\left(p_{1}\sin^{2}\psi+p_{3}\sin\psi\cos\psi\right)\cos\Omega.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ZuLösen2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) hat die beiden Lösungen (siehe dazu SolveEquation.m) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\alpha_{\pm}=2\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
+).
  
 \end_layout
 
@@ -2358,7 +2074,15 @@ auf die
 status collapsed
 
 \begin_layout Plain Layout
-Nachrechnung (siehe SonnenkompassHelper.m): 
+Nachrechnung (siehe 
+\begin_inset Quotes gld
+\end_inset
+
+SonnenkompassHelper.m
+\begin_inset Quotes grd
+\end_inset
+
+): 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2407,7 +2131,7 @@ Es ergibt sich schliesslich für die Punkte der gesuchten 2-dimensionalen
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Den zum astronomischen Mittag gehörigen Winkel 
@@ -4152,6 +3876,391 @@ noprefix "false"
  
 \end_layout
 
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Anhang"
+
+\end_inset
+
+Anhang 
+\end_layout
+
+\begin_layout Subsection
+Behauptung 
+\end_layout
+
+\begin_layout Standard
+Aus 
+\begin_inset Formula $\frac{\varOmega^{S}}{1+\varOmega^{S}}>1$
+\end_inset
+
+ folgt 
+\begin_inset Formula $\varOmega^{S}<-1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis 
+\end_layout
+
+\begin_layout Itemize
+Fall 
+\begin_inset Formula $1+\varOmega^{S}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\varOmega^{S}=-1$
+\end_inset
+
+ und damit folgt der Widerspruch 
+\begin_inset Formula $\frac{\varOmega^{S}}{0}>1.$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fall 
+\begin_inset Formula $1+\varOmega^{S}>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Es folgt 
+\begin_inset Formula $\varOmega^{S}>1+\varOmega^{S}$
+\end_inset
+
+ oder 
+\begin_inset Formula $0>1.$
+\end_inset
+
+ Dies ist offensichtlich falsch.
+ Also existiert für diesen Fall keine Lösung.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fall 
+\begin_inset Formula $1+\varOmega^{S}<0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Es folgt 
+\begin_inset Formula $\varOmega^{S}<1+\varOmega^{S}$
+\end_inset
+
+ oder 
+\begin_inset Formula $0<1.$
+\end_inset
+
+ Dies ist offensichtlich richtig.
+ Also existiert für diesen Fall eine Lösung, nämlich 
+\begin_inset Formula $\varOmega^{S}<-1.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Limits für den Erddrehwinkel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Für welchen Bereich des Drehwinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ sind zulässige Lösungen (also solche mit 
+\begin_inset Formula $\varOmega^{S}<-1$
+\end_inset
+
+) zu erwarten?
+\end_layout
+
+\begin_layout Standard
+Untersucht werden soll zunächst der Fall der Gleichheit 
+\begin_inset Formula $\varOmega^{S}=-1$
+\end_inset
+
+.
+ Multiplikation mit 
+\begin_inset Formula $LR_{E}$
+\end_inset
+
+ liefert 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+LR_{E}\varOmega^{S}=-LR_{E}.\label{eq:ZuLösen1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit dem gedrehten Ort der Sonne nach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GedrehterSonnenOrt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), mit dem Ort der Sonne nach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Ort der Sonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) und mit der Drehmatrix als Funktion des negativen Erdrotations-Winkels
+ 
+\begin_inset Formula $-\alpha$
+\end_inset
+
+ nach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DrehmatrixAlpha"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) kann man für die linke Seite der Ungleichung schreiben 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+LR_{E}\varOmega^{S} & = & \widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{C}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dabei gilt für die Abkürzungen (siehe dazu die MatLab-Quelldatei 
+\begin_inset Quotes gld
+\end_inset
+
+SonnenKompassSymbolicAddon.m
+\begin_inset Quotes grd
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\widetilde{A} & = & -p_{1}R_{S}\cos\psi\sin\Omega+p_{2}R_{S}\cos\psi\cos\Omega+p_{3}R_{S}\sin\psi\sin\Omega\\
+\widetilde{B} & = & -p_{1}R_{S}\cos^{2}\psi\cos\Omega-p_{2}R_{S}\sin\Omega+p_{3}R_{S}\sin\psi\cos\psi\cos\Omega\\
+\widetilde{C} & = & R_{E}^{2}+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omega-p_{3}R_{S}\sin\psi\cos\psi\cos\Omega.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wegen Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ZuLösen1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula $f\left(\alpha\right)=0$
+\end_inset
+
+ mit 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f\left(\alpha\right)=\widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{C}+LR_{E}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+oder umformuliert 
+\begin_inset Formula 
+\begin{equation}
+f\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C.\label{eq:ZuLösen2}
+\end{equation}
+
+\end_inset
+
+Mit 
+\begin_inset Formula $p_{2}=0$
+\end_inset
+
+ aus
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:StabFussPunkt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+A & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\sin\Omega\\
+B & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\cos\psi\cos\Omega\\
+C & = & R_{E}^{2}-R_{S}\left(p_{1}\sin^{2}\psi+p_{3}\sin\psi\cos\psi\right)\cos\Omega.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ZuLösen2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) hat für 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ die Lösungen (siehe dazu z.B.
+ die MatLab-Quelldatei 
+\begin_inset Quotes gld
+\end_inset
+
+SolveEquation.m
+\begin_inset Quotes grd
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{\pm}=2\pi k+2\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
+\]
+
+\end_inset
+
+Die beiden physikalisch richtigen Lösungen sind 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{+} & = & 2\arctan\left(\frac{A+\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right)\\
+\alpha_{-} & = & 2\pi+2\arctan\left(\frac{A-\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Der Bereich des Erdrotationswinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ mit zulässigen Lösungen ist also durch 
+\begin_inset Formula $\Delta_{\alpha}=\alpha_{-}-\alpha_{+}$
+\end_inset
+
+ gegeben und entspricht nach Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TagesZeit"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) einem Zeitraum von 
+\begin_inset Formula $\Delta_{t}=\frac{12}{\pi}\Delta_{\alpha}$
+\end_inset
+
+ Stunden.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -4161,7 +4270,7 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Drehmatrix 
+https://de.wikipedia.org/iki/Drehmatrix 
 \end_layout
 
 \begin_layout Bibliography

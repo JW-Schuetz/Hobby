@@ -40,6 +40,9 @@ s( 1 ) = rS * cos( omega );
 s( 2 ) = rS * sin( omega );
 s( 3 ) = 0;
 
+% Limits für zulässiges alphas berechnen
+[ alphaPlus, alphaMinus ] = alphaLimits( rS, rE, p1, p3, psi, omega );
+
 % Sonne wird um -alpha gedreht
 dMinusAlpha = subs( dAlpha, 'alpha', str2sym( '-alpha' ) );
 sAlpha      = dMinusAlpha * s;
@@ -49,4 +52,5 @@ pSAlpha = collect( p' * sAlpha, p );
 omegaS  = simplify( rE - pSAlpha / rE );
 omegaS  = omegaS / lS;
 
-save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS' )
+save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
+      'alphaPlus', 'alphaMinus' )

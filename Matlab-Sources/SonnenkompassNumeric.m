@@ -5,7 +5,8 @@ function SonnenkompassNumeric
     clc
     clear
 
-    load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS' ) %#ok<NASGU>
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
+          'alphaPlus', 'alphaMinus' ) %#ok<NASGU>
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -37,6 +38,13 @@ function SonnenkompassNumeric
     p2 = 0;                         % y-Koordinate
     p3 = rE * cos( breite + psi );  % z-Koordinate
 
+    % Limits für zulässiges alpha berechnen (numerisch)
+    alphaPlus  = eval( alphaPlus );
+    alphaMinus = eval( alphaMinus );
+
+    deltaT = 12 * 60 * ( alphaMinus - alphaPlus ) / pi;  % in Minuten
+
+    % Ausdrücke für mue0, x0
     mue0 = omegaS / ( 1 + omegaS );
     x0   = mue0 * q + ( 1 - mue0 ) * sAlpha;
 
@@ -51,7 +59,7 @@ function SonnenkompassNumeric
     x0   = subs( x0 );  % Zahlenwerte bis auf alpha substituieren
 
     % Numerische Auswertung
-    M = 60 * 24;	% Anzahl Minuten (1 Tag = 60*24 Stunden)
+    M = 60 * 24;	% Anzahl der Minuten pro Tag
     N = 1 * M + 1;	% Anzahl Punkte
 
     y = zeros( N, 3 );    % [m]
