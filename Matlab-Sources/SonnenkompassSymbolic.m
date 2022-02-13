@@ -43,14 +43,20 @@ s( 3 ) = 0;
 % Limits für zulässiges alphas berechnen
 [ alphaPlus, alphaMinus ] = alphaLimits( rS, rE, p1, p3, psi, omega );
 
-% Sonne wird um -alpha gedreht
+% die Sonne wird um -alpha gedreht
 dMinusAlpha = subs( dAlpha, 'alpha', str2sym( '-alpha' ) );
 sAlpha      = dMinusAlpha * s;
+
 % PSAlpha als Koeffizienten des Vektors P ausdrücken 
 pSAlpha = collect( p' * sAlpha, p );
-% Hauptterm der zu lösende Gleichung 
-omegaS  = simplify( rE - pSAlpha / rE );
-omegaS  = omegaS / lS;
 
-save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
+% mue0 bestimmen
+omegaS = simplify( rE - pSAlpha / rE );
+omegaS = omegaS / lS;
+mue0   = omegaS / ( 1 + omegaS );
+
+% die drei von alpha abhängigen Komponenten von xS( alpha ) bestimmen
+[ chi1, chi2, chi3 ] = chi( rS, rE, lS, p1, p3, psi, mue0 );
+
+save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
       'alphaPlus', 'alphaMinus' )

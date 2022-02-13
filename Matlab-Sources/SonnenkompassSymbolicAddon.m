@@ -47,8 +47,8 @@ end
 
 % A, B, C
 
-% Ausgabe dieses Skripts:
-% =======================
+% Ausgabe dieses Skripts für A, B und C:
+% ======================================
 % A = p3*rS*sin(omega)*sin(psi) + p2*rS*cos(omega)*cos(psi) - 
 %     p1*rS*cos(psi)*sin(omega)
 % B = p3*rS*cos(omega)*cos(psi)*sin(psi) - p1*rS*cos(omega)*cos(psi)^2 - 
@@ -56,11 +56,12 @@ end
 % C = rE^2 - p1*rS*cos(omega) + p1*rS*cos(omega)*cos(psi)^2 - 
 %     p3*rS*cos(omega)*cos(psi)*sin(psi)
 
-% Kontrolle der Formeln in Sonnenkompass.lyx
+% Kontrolle der Formeln in Sonnenkompass.lyx, p2 -> 0
 A = subs( A, p2, 0 );
 B = subs( B, p2, 0 );
 C = subs( C, p2, 0 );
 
+% Formeln aus Sonnenkompass.lyx
 AS = - rS * ( p1 * cos( psi ) - p3 * sin( psi ) ) * sin( omega );
 BS = - rS * ( p1 * cos( psi ) - p3 * sin( psi ) ) * cos( psi ) * cos( omega );
 CS = rE^2 - rS * ( p1 * sin( psi )^2 + p3 * cos( psi ) * sin( psi ) ) * cos( omega );
@@ -78,4 +79,31 @@ end
 probe = simplify( C - CS );
 if( probe ~= 0 )
     error( 'LyX Probe C gescheitert!' )
+end
+
+% Kontrolle der Formeln des Anhanges in Sonnenkompass.lyx
+xi  = subs( sAlpha, rS, 1 );	% xi ist: D_(-alpha) * s
+dxi = diff( xi, alpha );        % Ableiten nach alpha
+
+% Formeln aus Sonnenkompass.lyx
+dxi1S = -cos( psi )^2 * sin( alpha ) * cos( omega ) + ...
+         cos( psi ) * cos( alpha ) * sin( omega );
+dxi2S = -cos( psi ) * cos( alpha ) * cos( omega ) - ...
+         sin( alpha ) * sin( omega );
+dxi3S =  cos( psi ) * sin( psi ) * sin( alpha ) * cos( omega ) - ...
+         sin( psi ) * cos( alpha ) * sin( omega );
+
+probe = simplify( dxi( 1 ) - dxi1S );
+if( probe ~= 0 )
+    error( 'LyX Probe dxi1 gescheitert!' )
+end
+
+probe = simplify( dxi( 2 ) - dxi2S );
+if( probe ~= 0 )
+    error( 'LyX Probe dxi2 gescheitert!' )
+end
+
+probe = simplify( dxi( 3 ) - dxi3S );
+if( probe ~= 0 )
+    error( 'LyX Probe dxi3 gescheitert!' )
 end

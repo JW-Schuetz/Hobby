@@ -3,7 +3,8 @@ function [ alphaPlus, alphaMinus ] = alphaLimits( rS, rE, p1, p3, psi, omega )
 % Die hier benutzten Formeln werden in "SonnenKompassSymbolicAddon.m"
 % verfifiziert.
 
-	as = - rS * ( p1 * cos( psi ) - p3 * sin( psi ) ) * sin( omega );
+	as = - rS * ( p1 * cos( psi ) - p3 * sin( psi ) ) ...
+            * sin( omega );
     bs = - rS * ( p1 * cos( psi ) - p3 * sin( psi ) ) * cos( psi ) ...
             * cos( omega );
     cs = rE^2 - rS * ( p1 * sin( psi )^2 + p3 * cos( psi ) * sin( psi ) ) ...

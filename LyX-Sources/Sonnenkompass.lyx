@@ -217,8 +217,8 @@ Vereinbarungen
 \end_layout
 
 \begin_layout Standard
-Im folgenden werden Basiskenntnisse der Geometrie und der linearen Algebra
- vorausgesetzt.
+Im folgenden werden Basiskenntnisse der Mathematik auf Abitur-Niveau vorausgeset
+zt.
  
 \end_layout
 
@@ -333,11 +333,15 @@ die Erde habe ideale Kugelgestalt mit dem Radius
 \end_layout
 
 \begin_layout Itemize
-die Erd-Rotationsachse habe einen Neigungswinkel 
+die Erd-Rotationsachse habe den Neigungswinkel 
 \begin_inset Formula $\psi$
 \end_inset
 
  zur Achse senkrecht auf der Ekliptikalebene 
+\end_layout
+
+\begin_layout Itemize
+die Erd-Präzession und Erd-Nutation werden vernachlässigt 
 \end_layout
 
 \begin_layout Itemize
@@ -400,7 +404,7 @@ der Ablauf der Tageszeit
 \end_layout
 
 \begin_layout Itemize
-der astronomische Mittag, also die Zeit des Sonnenhöchststandes wird mit
+der astronomische Mittag, also die Zeit des Sonnenhöchststandes, wird mit
  
 \begin_inset Quotes gld
 \end_inset
@@ -450,7 +454,7 @@ name "fig:Problemskizze1"
 
 \end_inset
 
-Problemskizze, SSW, astronomischer Mittag 
+Problemskizze, SSW, 12 Uhr 
 \end_layout
 
 \end_inset
@@ -487,7 +491,7 @@ name "fig:Problemskizze2"
 
 \end_inset
 
-Problemskizze, WSW, astronomischer Mittag 
+Problemskizze, WSW, 12 Uhr 
 \end_layout
 
 \end_inset
@@ -519,7 +523,8 @@ Generelles zur Lösung
 In der folgenden Arbeit wird zunächst die Verbindungsgerade zwischen der
  Sonne und dem Stabendpunkt konstruiert.
  Dann werden die Schnittpunkte der verlängerten Verbindungsgeraden mit der
- Tangentialebene als Funktion der Tageszeit bestimmt.
+ Tangentialebene der Erdoberfläche im Stabfusspunkt als Funktion der Tageszeit
+ bestimmt.
  Schlussendlich werden die gefundenen Schnittpunkte orthogonal auf die Tangentia
 lebene projiziert.
  Man erhält damit eine 2-dimensionale Darstellung.
@@ -619,7 +624,15 @@ Hier wird der zweite Fall behandelt.
 \end_layout
 
 \begin_layout Standard
-Zur Unterstützung der Problemlösung wird MatLab und seine 
+Zur Unterstützung der Problemlösung wird 
+\begin_inset Quotes gld
+\end_inset
+
+MatLab
+\begin_inset Quotes grd
+\end_inset
+
+ und seine 
 \begin_inset Quotes gld
 \end_inset
 
@@ -766,6 +779,10 @@ gegeben.
 \begin_inset Note Note
 status collapsed
 
+\begin_layout Subsection*
+Zerlegung in geraden und ungeraden Anteil 
+\end_layout
+
 \begin_layout Plain Layout
 Für die Drehmatrix 
 \end_layout
@@ -854,6 +871,75 @@ D_{\alpha}-D_{\left(-\alpha\right)} & = & G_{\alpha}+U_{\alpha}-G_{\alpha}+U_{\a
 \end_inset
 
  
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection*
+Ableitung 
+\end_layout
+
+\begin_layout Plain Layout
+Die Drehmatrix
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
+\]
+
+\end_inset
+
+besitzt wegen 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial\alpha}\left(\sin\alpha\right) & = & \cos\alpha\\
+\frac{\partial}{\partial\alpha}\left(\cos\alpha\right) & = & -\sin\alpha
+\end{eqnarray*}
+
+\end_inset
+
+die Ableitung 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+sin^2+cos^2=1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial\alpha}\left[D_{\left(-\alpha\right)}\right] & = & \begin{pmatrix}\sin^{2}\psi\sin\alpha-\sin\alpha & \cos\psi\cos\alpha & \sin\psi\cos\psi\sin\alpha\\
+-\cos\psi\cos\alpha & -\sin\alpha & \sin\psi\cos\alpha\\
+\cos\psi\sin\psi\sin\alpha & -\sin\psi\cos\alpha & \cos^{2}\psi\sin\alpha-\sin\alpha
+\end{pmatrix}\\
+ & = & \begin{pmatrix}\left(\sin^{2}\psi-1\right)\sin\alpha & \cos\psi\cos\alpha & \sin\psi\cos\psi\sin\alpha\\
+-\cos\psi\cos\alpha & -\sin\alpha & \sin\psi\cos\alpha\\
+\cos\psi\sin\psi\sin\alpha & -\sin\psi\cos\alpha & \left(\cos^{2}\psi-1\right)\sin\alpha
+\end{pmatrix}\\
+ & = & \begin{pmatrix}-\cos^{2}\psi\sin\alpha & \cos\psi\cos\alpha & \sin\psi\cos\psi\sin\alpha\\
+-\cos\psi\cos\alpha & -\sin\alpha & \sin\psi\cos\alpha\\
+\cos\psi\sin\psi\sin\alpha & -\sin\psi\cos\alpha & -\sin^{2}\psi\sin\alpha
+\end{pmatrix}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
 D_{\alpha}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
@@ -923,7 +1009,8 @@ Jahreszeitabhängigkeit
 \end_layout
 
 \begin_layout Standard
-Die Erde bewegt sich rechtshändig um die fixierte Sonne (siehe dazu z.B.
+Die Erde bewegt sich rechtshändig, also entgegen dem Uhrzeigersinn, um die
+ fixierte Sonne (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -1131,24 +1218,12 @@ bestimmt sich aus der geographischen Breite
 \begin_inset Formula $\psi$
 \end_inset
 
- zu (siehe dazu z.B.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Wikipedia3"
-literal "false"
-
-\end_inset
-
-) 
+ zu 
 \begin_inset Formula 
 \begin{align}
-p_{1} & =R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\label{eq:StabFussPunkt}\\
+p_{1} & =R_{E}\cos\left(\Theta_{G}-\psi\right)\label{eq:StabFussPunkt}\\
 p_{2} & =0\nonumber \\
-p_{3} & =R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right].\nonumber 
+p_{3} & =R_{E}\sin\left(\Theta_{G}-\psi\right).\nonumber 
 \end{align}
 
 \end_inset
@@ -1157,19 +1232,15 @@ p_{3} & =R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right].\nonum
 \end_layout
 
 \begin_layout Standard
-Dabei wurde die um 
-\begin_inset Formula $\psi$
-\end_inset
-
- korrigierte geographischen Breite 
+Dabei wurde die geographischen Breite 
 \begin_inset Formula $\Theta_{G}-\psi$
 \end_inset
 
- durch 
-\begin_inset Formula $\Theta=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)$
+ in den Polarwinkel 
+\begin_inset Formula $\Theta$
 \end_inset
 
- ins Kugelkoordinatensystem 
+ des Kugelkoordinatensystem 
 \begin_inset Formula $\left(r,\Theta,\varphi\right)$
 \end_inset
 
@@ -1383,7 +1454,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\forall\underline{x}\in G:\;\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(T^{*}\right)\label{eq:Verbindungsgerade}
+\forall\underline{x}\in G:\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(T^{*}\right)\label{eq:Verbindungsgerade}
 \end{equation}
 
 \end_inset
@@ -1478,7 +1549,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\forall\underline{x}\in G_{S}^{\alpha}:\;\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right).
+\forall\underline{x}\in G_{S}^{\alpha}:\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right).
 \]
 
 \end_inset
@@ -1777,7 +1848,7 @@ Die mit dem Winkel
 \end_layout
 
 \begin_layout Subsubsection
-Projektion auf die Tangentialebene 
+Die zweidimensionale Trajektorie 
 \end_layout
 
 \begin_layout Standard
@@ -1960,7 +2031,7 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \begin_inset Formula $\left(x_{2},x_{3}\right)$
 \end_inset
 
--Ebene, oder dazu äquivalent, die Tangentialebene 
+-Ebene, oder dazu äquivalent: die Tangentialebene 
 \begin_inset Formula $T$
 \end_inset
 
@@ -2073,6 +2144,10 @@ auf die
 \begin_inset Note Note
 status collapsed
 
+\begin_layout Subsection*
+Überprüfung 
+\end_layout
+
 \begin_layout Plain Layout
 Nachrechnung (siehe 
 \begin_inset Quotes gld
@@ -2120,277 +2195,22 @@ R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
 \end_layout
 
 \begin_layout Standard
-Es ergibt sich schliesslich für die Punkte der gesuchten 2-dimensionalen
+Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
  Trajektorie 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Trajektorie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
-\underline{x}^{S}\left(\alpha\right)=AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\in\mathbb{R}^{2}.\label{eq:ErgebnisSonneGedreht}
+\underline{x}^{S}\left(\alpha\right)=AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie}
 \end{equation}
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Den zum astronomischen Mittag gehörigen Winkel 
-\begin_inset Formula $\alpha_{0}$
-\end_inset
-
- erhält man durch Auffinden des kürzesten Abstandes der Trajektorie zum
- Koordinatenursprung, also durch Lösen des Problems 
-\begin_inset Formula 
-\[
-\min_{0\leq\alpha_{0}<2\pi}\left\Vert \underline{x}^{S}\left(\alpha_{0}\right)\right\Vert ^{2}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Wegen des von 
-\begin_inset Formula $\alpha_{0}$
-\end_inset
-
- unabhängigen Terms 
-\begin_inset Formula 
-\begin{eqnarray*}
-AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}} & = & \left(\begin{array}{ccc}
-0 & 1 & 0\\
-0 & 0 & 1
-\end{array}\right)\left(\begin{array}{ccc}
-\cos\left(\Theta_{G}-\psi\right) & 0 & \sin\left(\Theta_{G}-\psi\right)\\
-0 & 1 & 0\\
--\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
-\end{array}\right)\\
- & = & \left(\begin{array}{ccc}
-0 & 1 & 0\\
--\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-folgt mit den Abkürzungen 
-\begin_inset Formula $\chi_{i}\left(\alpha_{0}\right)$
-\end_inset
-
- aus (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:LösungspunkteSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Es gilt (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:LösungspunkteSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right)\\
- & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-mit der Ableitung nach 
-\begin_inset Formula $\alpha$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial}{\partial\alpha}\left[\underline{x}_{0}^{S}\left(\alpha\right)\right] & = & \left(1-\mu_{0}\right)D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)\\
- & = & \left(1-\mu_{0}\right)\frac{\partial}{\partial\alpha}\left[D_{\left(-\alpha\right)}\right]\underline{S}\left(T^{*}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Die Drehmatrix 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
--\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}
-\]
-
-\end_inset
-
-besitzt wegen 
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial}{\partial\alpha}\left(\sin\alpha\right) & = & \cos\alpha\\
-\frac{\partial}{\partial\alpha}\left(\cos\alpha\right) & = & -\sin\alpha
-\end{eqnarray*}
-
-\end_inset
-
-die Ableitung 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\frac{\partial}{\partial\alpha}\left[D_{\left(-\alpha\right)}\right]=\begin{pmatrix}\sin^{2}\psi\left(1+\sin\alpha\right)-\sin\alpha & +\cos\psi\cos\alpha & \sin\psi\cos\psi\left(1+\sin\alpha\right)\\
--\cos\psi\cos\alpha & -\sin\alpha & \sin\psi\cos\alpha\\
-\cos\psi\sin\psi\left(1+\sin\alpha\right) & -\sin\psi\cos\alpha & \cos^{2}\psi\left(1+\sin\alpha\right)-\sin\alpha
-\end{pmatrix}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\underline{x}_{0}^{S}\left(\alpha_{0}\right)=\left[\begin{array}{c}
-\chi_{1}\left(\alpha_{0}\right)\\
-\chi_{2}\left(\alpha_{0}\right)\\
-\chi_{3}\left(\alpha_{0}\right)
-\end{array}\right]
-\]
-
-\end_inset
-
-wegen 
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{x}^{S}\left(\alpha_{0}\right) & = & AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\left[\begin{array}{c}
-\chi_{1}\left(\alpha_{0}\right)\\
-\chi_{2}\left(\alpha_{0}\right)\\
-\chi_{3}\left(\alpha_{0}\right)
-\end{array}\right]\\
- & = & \left(\begin{array}{ccc}
-0 & 1 & 0\\
--\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
-\end{array}\right)\left[\begin{array}{c}
-\chi_{1}\left(\alpha_{0}\right)\\
-\chi_{2}\left(\alpha_{0}\right)\\
-\chi_{3}\left(\alpha_{0}\right)
-\end{array}\right]\\
- & = & \left(\begin{array}{c}
-\chi_{2}\left(\alpha_{0}\right)\\
-f\left(\alpha_{0}\right)
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-folgt mit der Abkürzung 
-\begin_inset Formula 
-\[
-f\left(\alpha_{0}\right)=-\sin\left(\Theta_{G}-\psi\right)\chi_{1}\left(\alpha_{0}\right)+\cos\left(\Theta_{G}-\psi\right)\chi_{3}\left(\alpha_{0}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-für die zu minimierende Funktion 
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\Vert \underline{x}^{S}\left(\alpha_{0}\right)\right\Vert ^{2} & = & \chi_{2}^{2}\left(\alpha_{0}\right)+f^{2}\left(\alpha_{0}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Für die Ableitung nach 
-\begin_inset Formula $\alpha_{0}$
-\end_inset
-
- folgt 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial}{\partial\alpha_{0}}\left\Vert \underline{x}^{S}\left(\alpha_{0}\right)\right\Vert ^{2} & = & 2\chi_{2}\left(\alpha_{0}\right)\chi_{2}^{'}\left(\alpha_{0}\right)+2f\left(\alpha_{0}\right)f^{'}\left(\alpha_{0}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Der hochgestellte Strich bedeutet dabei die Ableitung nach 
-\begin_inset Formula $\alpha_{0}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Plain Layout
-Für 
-\begin_inset Formula $f^{'}\left(\alpha_{0}\right)$
-\end_inset
-
- folgt 
-\begin_inset Formula 
-\[
-f^{'}\left(\alpha_{0}\right)=-\sin\left(\Theta_{G}-\psi\right)\chi_{1}^{'}\left(\alpha_{0}\right)+\cos\left(\Theta_{G}-\psi\right)\chi_{3}^{'}\left(\alpha_{0}\right).
-\]
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -2611,7 +2431,7 @@ noprefix "false"
  Oktober.
  Die Koordinaten der beiden markierten Punkte sind dargestellt, ihr geometrische
 r Abstand beträgt 20.18 cm, ihr zeitlicher Abstand beträgt 20 Minuten (13:30
- Uhr und 13:50 Uhr).
+ Uhr und 13:50 Uhr Ortszeit).
  
 \begin_inset Float figure
 wide false
@@ -2637,7 +2457,8 @@ name "fig:Schattentrajektorie"
 \end_inset
 
 Schattentrajektorie am 12.
- Oktober in Las Palmas mit den Punkten für 13:30 Uhr und 13:50 Uhr 
+ Oktober in Las Palmas mit den Punkten für 13:30 Uhr und 13:50 Uhr Ortszeit
+ 
 \end_layout
 
 \end_inset
@@ -2737,7 +2558,7 @@ name "fig:SchattenFotos"
 \end_inset
 
 Schatten in Las Palmas am 12.
- Oktober 2021 um 13:33 Uhr und um 13:55 Uhr 
+ Oktober 2021 um 13:33 Uhr und um 13:55 Uhr Ortszeit 
 \end_layout
 
 \end_inset
@@ -2773,7 +2594,7 @@ Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
 
 \begin_layout Standard
 Die genaue Nordrichtung erhält man z.B., wenn man Schattenzeitpunkte untersucht,
- die symmetrisch um den Zeitpunkt des astronomischen Mittags liegen.
+ die symmetrisch um den Zeitpunkt 12 Uhr des astronomischen Mittags liegen.
  
 \end_layout
 
@@ -3886,11 +3707,45 @@ name "sec:Anhang"
 Anhang 
 \end_layout
 
+\begin_layout Standard
+In diesem Anhang werden einige triviale aber schreib- und rechenintensive
+ Zusammenhänge dargestellt, die den obigen Gedankenfluss zu sehr gestört
+ hätten.
+ 
+\end_layout
+
 \begin_layout Subsection
-Behauptung 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Limits"
+
+\end_inset
+
+Limits für den Erdrotationswinkel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
+Für welchen Bereich des Drehwinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ sind zulässige Lösungen (also solche mit 
+\begin_inset Formula $\varOmega^{S}<-1$
+\end_inset
+
+) zu erwarten? 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection
+Behauptung
+\end_layout
+
+\begin_layout Plain Layout
 Aus 
 \begin_inset Formula $\frac{\varOmega^{S}}{1+\varOmega^{S}}>1$
 \end_inset
@@ -3903,7 +3758,7 @@ Aus
 \end_layout
 
 \begin_layout Subsubsection*
-Beweis 
+Beweis
 \end_layout
 
 \begin_layout Itemize
@@ -3911,11 +3766,11 @@ Fall
 \begin_inset Formula $1+\varOmega^{S}=0$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\varOmega^{S}=-1$
 \end_inset
 
@@ -3923,7 +3778,7 @@ Fall
 \begin_inset Formula $\frac{\varOmega^{S}}{0}>1.$
 \end_inset
 
- 
+
 \end_layout
 
 \end_deeper
@@ -3932,11 +3787,11 @@ Fall
 \begin_inset Formula $1+\varOmega^{S}>0$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Plain Layout
 Es folgt 
 \begin_inset Formula $\varOmega^{S}>1+\varOmega^{S}$
 \end_inset
@@ -3947,7 +3802,6 @@ Es folgt
 
  Dies ist offensichtlich falsch.
  Also existiert für diesen Fall keine Lösung.
- 
 \end_layout
 
 \end_deeper
@@ -3956,11 +3810,11 @@ Fall
 \begin_inset Formula $1+\varOmega^{S}<0$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Plain Layout
 Es folgt 
 \begin_inset Formula $\varOmega^{S}<1+\varOmega^{S}$
 \end_inset
@@ -3978,24 +3832,9 @@ Es folgt
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-Limits für den Erddrehwinkel 
-\begin_inset Formula $\alpha$
 \end_inset
 
  
-\end_layout
-
-\begin_layout Standard
-Für welchen Bereich des Drehwinkels 
-\begin_inset Formula $\alpha$
-\end_inset
-
- sind zulässige Lösungen (also solche mit 
-\begin_inset Formula $\varOmega^{S}<-1$
-\end_inset
-
-) zu erwarten?
 \end_layout
 
 \begin_layout Standard
@@ -4043,7 +3882,7 @@ noprefix "false"
 
 \end_inset
 
-) und mit der Drehmatrix als Funktion des negativen Erdrotations-Winkels
+) und mit der Drehmatrix als Funktion des negativen Erdrotationswinkels
  
 \begin_inset Formula $-\alpha$
 \end_inset
@@ -4058,13 +3897,13 @@ noprefix "false"
 
 \end_inset
 
-) kann man für die linke Seite der Ungleichung schreiben 
+) kann man für die linke Seite der obigen Gleichung schreiben 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-LR_{E}\varOmega^{S} & = & \widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{C}.
+LR_{E}\varOmega^{S} & = & A^{*}\sin\alpha+B^{*}\cos\alpha+C^{*}.
 \end{eqnarray*}
 
 \end_inset
@@ -4087,9 +3926,9 @@ SonnenKompassSymbolicAddon.m
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\widetilde{A} & = & -p_{1}R_{S}\cos\psi\sin\Omega+p_{2}R_{S}\cos\psi\cos\Omega+p_{3}R_{S}\sin\psi\sin\Omega\\
-\widetilde{B} & = & -p_{1}R_{S}\cos^{2}\psi\cos\Omega-p_{2}R_{S}\sin\Omega+p_{3}R_{S}\sin\psi\cos\psi\cos\Omega\\
-\widetilde{C} & = & R_{E}^{2}+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omega-p_{3}R_{S}\sin\psi\cos\psi\cos\Omega.
+A^{*} & = & -p_{1}R_{S}\cos\psi\sin\Omega+p_{2}R_{S}\cos\psi\cos\Omega+p_{3}R_{S}\sin\psi\sin\Omega\\
+B^{*} & = & -p_{1}R_{S}\cos^{2}\psi\cos\Omega-p_{2}R_{S}\sin\Omega+p_{3}R_{S}\sin\psi\cos\psi\cos\Omega\\
+C^{*} & = & R_{E}^{2}+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omega-p_{3}R_{S}\sin\psi\cos\psi\cos\Omega.
 \end{eqnarray*}
 
 \end_inset
@@ -4122,7 +3961,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-f\left(\alpha\right)=\widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{C}+LR_{E}
+g\left(\alpha\right)=A^{*}\sin\alpha+B^{*}\cos\alpha+C^{*}+LR_{E}
 \]
 
 \end_inset
@@ -4134,7 +3973,7 @@ f\left(\alpha\right)=\widetilde{A}\sin\alpha+\widetilde{B}\cos\alpha+\widetilde{
 oder umformuliert 
 \begin_inset Formula 
 \begin{equation}
-f\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C.\label{eq:ZuLösen2}
+g\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C.\label{eq:ZuLösen2}
 \end{equation}
 
 \end_inset
@@ -4209,12 +4048,13 @@ SolveEquation.m
 
 \end_inset
 
-Die beiden physikalisch richtigen Lösungen sind 
+Die beiden physikalisch richtigen Lösungen für die Erdrotationswinkel sind
+ 
 \begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{+} & = & 2\arctan\left(\frac{A+\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right)\\
-\alpha_{-} & = & 2\pi+2\arctan\left(\frac{A-\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
-\end{eqnarray*}
+\begin{eqnarray}
+\alpha_{+} & = & 2\arctan\left(\frac{A+\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right)\label{eq:LimitsAlpha}\\
+\alpha_{-} & = & 2\pi+2\arctan\left(\frac{A-\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -4222,8 +4062,30 @@ Die beiden physikalisch richtigen Lösungen sind
 \end_layout
 
 \begin_layout Standard
+Die zu 
+\begin_inset Formula $\alpha_{\pm}$
+\end_inset
+
+ gehörigen Grenz-Trajektorienpunkte sind durch Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Trajektorie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) bestimmt.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Der Bereich des Erdrotationswinkels 
@@ -4261,6 +4123,743 @@ noprefix "false"
 
 \end_layout
 
+\begin_layout Subsection
+Faktoren der Trajektorie 
+\end_layout
+
+\begin_layout Standard
+In Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Trajektorie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) ist der Faktor 
+\begin_inset Formula $AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}$
+\end_inset
+
+ von 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ unabhängig - für ihn ergibt sich 
+\begin_inset Formula 
+\begin{eqnarray*}
+AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}} & = & \left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\left(\begin{array}{ccc}
+\cos\left(\Theta_{G}-\psi\right) & 0 & \sin\left(\Theta_{G}-\psi\right)\\
+0 & 1 & 0\\
+-\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
+\end{array}\right)\\
+ & = & \left(\begin{array}{ccc}
+0 & 1 & 0\\
+-\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für die Komponenten des von 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ abhängigen Faktors 
+\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
+\end_inset
+
+ werden die Abkürzungen 
+\begin_inset Formula $\chi_{i}\left(\alpha\right),i=1\cdots3$
+\end_inset
+
+ eingeführt 
+\begin_inset Formula 
+\begin{equation}
+\underline{x}_{0}^{S}\left(\alpha\right)=\left[\begin{array}{c}
+\chi_{1}\left(\alpha\right)\\
+\chi_{2}\left(\alpha\right)\\
+\chi_{3}\left(\alpha\right)
+\end{array}\right].\label{eq:Chi}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für sie gilt 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Ffür Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LösungspunkteSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) gilt 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right)\\
+ & = & \mu_{0}\left(1+\frac{L}{R_{E}}\right)\underline{P}+\left(1-\mu_{0}\right)D_{\left(-\alpha\right)}R_{S}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)\\
+ & = & \mu_{0}\left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
+p_{1}\\
+0\\
+p_{3}
+\end{array}\right)+R_{S}\left(1-\mu_{0}\right)D_{\left(-\alpha\right)}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und wegen 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{\left(-\alpha\right)}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right) & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)\\
+ & = & \begin{pmatrix}\left[\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha\right] & \cos\psi\sin\alpha\\
+-\cos\psi\sin\alpha & \cos\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha
+\end{pmatrix}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega
+\end{array}\right)\\
+ & = & \begin{pmatrix}\left[\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha\right]\cos\Omega & +\cos\psi\sin\alpha\sin\Omega\\
+-\cos\psi\sin\alpha\cos\Omega & +\cos\alpha\sin\Omega\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right)\cos\Omega & -\sin\psi\sin\alpha\sin\Omega
+\end{pmatrix}\\
+ & = & \left(\begin{array}{c}
+\left[\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha\right]\cos\Omega+\cos\psi\sin\alpha\sin\Omega\\
+-\cos\psi\sin\alpha\cos\Omega+\cos\alpha\sin\Omega\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
+p_{1}\\
+0\\
+p_{3}
+\end{array}\right)+R_{S}\left(1-\mu_{0}\right)\left(\begin{array}{c}
+\sin^{2}\psi\left(1-\cos\alpha\right)\cos\Omega+\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\\
+-\cos\psi\sin\alpha\cos\Omega+\cos\alpha\sin\Omega\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega
+\end{array}\right)\\
+ & = & \left(R_{E}+L\right)\mu_{0}\left(\begin{array}{c}
+\cos\left(\Theta_{G}-\psi\right)\\
+0\\
+\sin\left(\Theta_{G}-\psi\right)
+\end{array}\right)+R_{S}\left(1-\mu_{0}\right)\left(\begin{array}{c}
+\sin^{2}\psi\left(1-\cos\alpha\right)\cos\Omega+\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\\
+-\cos\psi\sin\alpha\cos\Omega+\cos\alpha\sin\Omega\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\chi_{1}\left(\alpha\right) & = & \rho_{1}+\sigma_{1}\left(\alpha\right)\\
+\chi_{2}\left(\alpha\right) & = & \rho_{2}+\sigma_{2}\left(\alpha\right)\\
+\chi_{3}\left(\alpha\right) & = & \rho_{3}+\sigma_{3}\left(\alpha\right)
+\end{eqnarray*}
+
+\end_inset
+
+mit dem von 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ unabhängigen Anteil 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\rho_{1} & = & \left(R_{E}+L\right)\mu_{0}\cos\left(\Theta_{G}-\psi\right)\\
+\rho_{2} & = & 0\\
+\rho_{3} & = & \left(R_{E}+L\right)\mu_{0}\sin\left(\Theta_{G}-\psi\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und mit dem von 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ abhängigen Anteil 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\sigma_{1}\left(\alpha\right) & = & R_{S}\left(1-\mu_{0}\right)\left[\sin^{2}\psi\left(1-\cos\alpha\right)\cos\Omega+\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\right]\\
+\sigma_{2}\left(\alpha\right) & = & R_{S}\left(1-\mu_{0}\right)\left(-\cos\psi\sin\alpha\cos\Omega+\cos\alpha\sin\Omega\right)\\
+\sigma_{3}\left(\alpha\right) & = & R_{S}\left(1-\mu_{0}\right)\left[\cos\psi\sin\psi\left(1-\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega\right].
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Insgesamt folgt damit für die Trajektorienpunkte 
+\begin_inset Formula 
+\begin{eqnarray}
+\underline{x}^{S}\left(\alpha\right) & = & \left(\begin{array}{ccc}
+0 & 1 & 0\\
+-\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
+\end{array}\right)\left[\begin{array}{c}
+\chi_{1}\left(\alpha\right)\\
+\chi_{2}\left(\alpha\right)\\
+\chi_{3}\left(\alpha\right)
+\end{array}\right]\nonumber \\
+ & = & \left(\begin{array}{c}
+\chi_{2}\left(\alpha\right)\\
+f\left(\alpha\right)
+\end{array}\right)\label{eq:ErgebnisSonneGedreht}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit der Abkürzung 
+\begin_inset Formula 
+\begin{equation}
+f\left(\alpha\right)=-\sin\left(\Theta_{G}-\psi\right)\chi_{1}\left(\alpha\right)+\cos\left(\Theta_{G}-\psi\right)\chi_{3}\left(\alpha\right).\label{eq:f}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die 
+\begin_inset Formula $x$
+\end_inset
+
+-Achse der zu untersuchenden Trajektorie 
+\begin_inset Formula $y\left(x\right)$
+\end_inset
+
+ wird durch 
+\begin_inset Formula $\chi_{2}\left(\alpha\right)$
+\end_inset
+
+ gebildet und die 
+\begin_inset Formula $y$
+\end_inset
+
+-Achse durch 
+\begin_inset Formula $f\left(\alpha\right).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Steigung der Trajektorie 
+\end_layout
+
+\begin_layout Standard
+Die Steigung 
+\begin_inset Formula $S\left(x\right)$
+\end_inset
+
+ der Trajektorie 
+\begin_inset Formula $y\left(x\right)$
+\end_inset
+
+ errechnet sich mit den Abkürzungen nach den Gleichungen
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ErgebnisSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) und
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:f"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) zu (siehe dazu z.B.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia6"
+literal "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray}
+S\left(x\right) & = & \frac{dy\left(x\right)}{dx}=\frac{\frac{\partial f\left(\alpha\right)}{\partial\alpha}}{\frac{\partial\chi_{2}\left(\alpha\right)}{\partial\alpha}}\label{eq:SteigungAllgemein}\\
+ & = & -\sin\left(\Theta_{G}-\psi\right)\frac{\frac{\partial\chi_{1}\left(\alpha\right)}{\partial\alpha}}{\frac{\partial\chi_{2}\left(\alpha\right)}{\partial\alpha}}+\cos\left(\Theta_{G}-\psi\right)\frac{\frac{\partial\chi_{3}\left(\alpha\right)}{\partial\alpha}}{\frac{\partial\chi_{2}\left(\alpha\right)}{\partial\alpha}}\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und ist somit nicht von 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, sondern nur von Ableitungen 
+\begin_inset Formula $\frac{\partial\chi_{i}\left(\alpha\right)}{\partial\alpha}$
+\end_inset
+
+, abhängig.
+ Daher kann man den von 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ unabhängigen Summanden der Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LösungspunkteSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) ignorieren, es genügt den von 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ abhängigen Anteil zu berücksichtigen.
+ Ausserdem entfallen gemeinsame Faktoren durch die Quotientenbildung in
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SteigungAllgemein"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Der für die Ableitungsbildung und für die Steigung der Trajektorie relevante
+ Anteil ist somit durch 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underline{\xi}\left(\alpha\right)=D_{\left(-\alpha\right)}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gegeben.
+ Für die Drehmatrix um den Winkel 
+\begin_inset Formula $-\alpha$
+\end_inset
+
+ gilt wegen
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DrehmatrixAlpha"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\[
+D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und für ihre Ableitung nach 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\alpha}D_{\left(-\alpha\right)}=\begin{pmatrix}-\cos^{2}\psi\sin\alpha & \cos\psi\cos\alpha & \sin\psi\cos\psi\sin\alpha\\
+-\cos\psi\cos\alpha & -\sin\alpha & \sin\psi\cos\alpha\\
+\cos\psi\sin\psi\sin\alpha & -\sin\psi\cos\alpha & -\sin^{2}\psi\sin\alpha
+\end{pmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\chi_{i}\left(\alpha\right)}{\partial\alpha} & = & \frac{\partial}{\partial\alpha}\underline{\xi}\left(\alpha\right)\\
+ & = & \frac{\partial}{\partial\alpha}D_{\left(-\alpha\right)}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+-\cos^{2}\psi\sin\alpha\cos\Omega+\cos\psi\cos\alpha\sin\Omega\\
+-\cos\psi\cos\alpha\cos\Omega-\sin\alpha\sin\Omega\\
+\cos\psi\sin\psi\sin\alpha\cos\Omega-\sin\psi\cos\alpha\sin\Omega
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und für die Trajektoriensteigung folgt schliesslich 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{dy\left(x\right)}{dx}=-\sin\left(\Theta_{G}-\psi\right)\frac{\frac{\partial\chi_{1}\left(\alpha\right)}{\partial\alpha}}{\frac{\partial\chi_{2}\left(\alpha\right)}{\partial\alpha}}+\cos\left(\Theta_{G}-\psi\right)\frac{\frac{\partial\chi_{3}\left(\alpha\right)}{\partial\alpha}}{\frac{\partial\chi_{2}\left(\alpha\right)}{\partial\alpha}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+S\left(x\right) & = & \frac{\sin\left(\Theta_{G}-\psi\right)A\left(\alpha\right)-\cos\left(\Theta_{G}-\psi\right)B\left(\alpha\right)}{C\left(\alpha\right)}\label{eq:Steigung}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit den Abkürzungen 
+\begin_inset Formula 
+\begin{eqnarray*}
+A\left(\alpha\right) & = & -\cos^{2}\psi\sin\alpha\cos\Omega+\cos\psi\cos\alpha\sin\Omega\\
+B\left(\alpha\right) & = & \cos\psi\sin\psi\sin\alpha\cos\Omega-\sin\psi\cos\alpha\sin\Omega\\
+C\left(\alpha\right) & = & \cos\psi\cos\alpha\cos\Omega+\sin\alpha\sin\Omega.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Asymptoten der Trajektorie 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Die beiden Limits für den Erdrotationswinkel 
+\begin_inset Formula $\alpha_{\pm}$
+\end_inset
+
+ sind durch die Gleichungen
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LimitsAlpha"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) gegeben - die Trajektorienpunkte für diese Winkel ergeben sich aus den
+ Gleichungen
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ErgebnisSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Die Steigung für diese Winkel ergeben sich aus Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Steigung"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die beiden Asymptoten 
+\begin_inset Formula $y^{\pm}\left(x\right)$
+\end_inset
+
+ werden durch Punkte 
+\begin_inset Formula $\left(\begin{array}{c}
+x_{*}^{\pm}\\
+y_{*}^{\pm}
+\end{array}\right)$
+\end_inset
+
+ und die Steigungen 
+\begin_inset Formula $S\left(x_{*}^{\pm}\right)$
+\end_inset
+
+ in diesen Punkten definiert.
+ Es bietet sich an, für diese Punkte die in Unterabschnitt
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Limits"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) berechneten Punkte auszuwählen.
+ 
+\end_layout
+
+\begin_layout Standard
+Mit dem Ansatz einer Geradengleichung 
+\begin_inset Formula $y=ax+b$
+\end_inset
+
+ für die beiden Trajektorien erhält man 
+\begin_inset Formula 
+\[
+y_{*}^{\pm}=S\left(x_{*}^{\pm}\right)x_{*}^{\pm}+b^{\pm}
+\]
+
+\end_inset
+
+und die Werte von 
+\begin_inset Formula $b^{\pm}$
+\end_inset
+
+ ergeben sich zu 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b^{\pm}=y_{*}^{\pm}-S\left(x_{*}^{\pm}\right)x_{*}^{\pm}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Astronomischer Mittag 
+\end_layout
+
+\begin_layout Standard
+Der astronomische Mittag ist durch den Erdrotationswinkel 
+\begin_inset Formula $\alpha_{M}$
+\end_inset
+
+ gekennzeichnet, der zu einer verschwindenden Steigung der Tajektorie 
+\begin_inset Formula $y\left(x\right)$
+\end_inset
+
+ gehört.
+ Es muss also wegen Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Steigung"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) und mit der Abkürzung 
+\begin_inset Formula $T_{G}=\tan\left(\Theta_{G}-\psi\right)$
+\end_inset
+
+ gelten 
+\begin_inset Formula 
+\begin{eqnarray*}
+T_{G}\sin^{2}\psi\cos\Omega+T_{G}\sin^{2}\psi\cos\Omega\sin\alpha_{M}-T_{G}\cos\Omega\sin\alpha_{M}+T_{G}\cos\psi\sin\Omega\cos\alpha_{M}-\cos\psi\sin\psi\cos\Omega-\cos\psi\sin\psi\cos\Omega\sin\alpha_{M}+\sin\psi\sin\Omega\cos\alpha_{M} & = & 0\\
+\left(T_{G}\sin^{2}\psi-\cos\psi\sin\psi\right)\cos\Omega-T_{G}\left(\cos^{2}\psi+\cos\psi\sin\psi\right)\cos\Omega\sin\alpha_{M}+\left(T_{G}\cos\psi+\sin\psi\right)\sin\Omega\cos\alpha_{M} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Asymptoten der Trajektorien 
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -4270,7 +4869,12 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/iki/Drehmatrix 
+https://de.wikipedia.org/wiki/Drehmatrix; Abschnitt: Drehmatrizen des Raumes
+ 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -4282,7 +4886,7 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Erdachse 
+https://de.wikipedia.org/wiki/Erdrotation; Abschnitt: Rotationsachse 
 \end_layout
 
 \begin_layout Bibliography
@@ -4294,7 +4898,7 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Sonnensystem 
+https://de.wikipedia.org/wiki/Erdrotation 
 \end_layout
 
 \begin_layout Bibliography
@@ -4306,7 +4910,8 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Kugelkoordinaten 
+https://de.wikipedia.org/wiki/Kugelkoordinaten; Abschnitt: Andere Konventionen
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -4318,7 +4923,21 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Tangentialebene 
+https://de.wikipedia.org/wiki/Tangentialebene; Abschnitt: Tangentialebene
+ an eine implizit gegebene Fläche 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "6"
+key "Wikipedia6"
+literal "false"
+
+\end_inset
+
+https://en.wikipedia.org/wiki/Parametric_derivative, Abschnitt: First derivative
+ 
 \end_layout
 
 \end_body

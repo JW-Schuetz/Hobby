@@ -5,7 +5,7 @@ function SonnenkompassNumeric
     clc
     clear
 
-    load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
           'alphaPlus', 'alphaMinus' ) %#ok<NASGU>
 
     % Variable Daten
@@ -39,12 +39,19 @@ function SonnenkompassNumeric
     p3 = rE * cos( breite + psi );  % z-Koordinate
 
     % numerische Limits für zulässige Zeiten berechnen (Minuten)
-    tStart = ceil( 60 * 12 * eval( alphaPlus ) / pi );      % aufrunden
-    tEnd   = floor( 60 * 12 * eval( alphaMinus ) / pi );	% abrunden
+    alphaPlus  = eval( alphaPlus );
+    alphaMinus = eval( alphaMinus );
+    tStart = ceil( 60 * 12 * alphaPlus / pi );      % aufrunden
+    tEnd   = floor( 60 * 12 * alphaMinus / pi );	% abrunden
+
+    % Grenzsteigung der Trajektorie bei alphaPlus/alphaMinus
+    SPlus = steigung( alphaPlus, psi, omega, offset );
+    xPlusStern = 0;
+    yPlusStern = 0;
+    bPlus = yPlusStern - SPlus * xPlusStern;
 
     % Ausdrücke für mue0, x0
-    mue0 = omegaS / ( 1 + omegaS );
-    x0   = mue0 * q + ( 1 - mue0 ) * sAlpha;
+    x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
 
     % Zahlenwerte bis auf alpha substituieren, explizit wegen
 	% NotUsed MatLab-Warnungen
@@ -61,9 +68,9 @@ function SonnenkompassNumeric
     x0 = subs( x0 );
 
     % Numerische Auswertung
-    N = tEnd - tStart + 1;          % Anzahl der Zeitpunkte
+    N = tEnd - tStart + 1;	% Anzahl der Zeitpunkte
 
-    y = zeros( N, 3 );    % [m]
+    y = zeros( N, 3 );      % [m]
 
     % Position und Zeitpunkt berechnen
     for i = 1 : N
@@ -121,4 +128,15 @@ function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
     x1 = x( 1 );
     x2 = x( 2 );
     x3 = x( 3 );
+end
+
+function s = steigung( alpha, psi, omega, offset )
+    A = -cos( psi )^2 * sin( alpha ) * cos( omega ) + ...
+         cos( psi ) * cos( alpha ) * sin( omega );
+    B =  cos( psi ) * sin( psi ) * sin( alpha ) * cos( omega ) - ...
+         sin( psi ) * cos( alpha ) * sin( omega );
+    C =  cos( psi ) * cos( alpha ) * cos( omega ) + ...
+         sin( alpha ) * sin( omega );
+
+	s = ( sin( offset ) * A - cos( offset ) * B ) / C;
 end
