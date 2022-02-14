@@ -419,14 +419,7 @@ der astronomische Mittag, also die Zeit des Sonnenhöchststandes, wird mit
 \begin_layout Itemize
 die Sommersonnenwende (SSW) ist am 21.
  Juni, die Wintersonnenwende (WSW) ist am 21.
- Dezember 
-\end_layout
-
-\begin_layout Itemize
-das Frühlings- und Herbst-Äquinoktikum ist am 21.
- März bzw.
- am 21.
- September.
+ Dezember.
  
 \end_layout
 
@@ -3685,6 +3678,13 @@ noprefix "false"
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
