@@ -41,7 +41,7 @@ function SonnenkompassPlot()
 	end
 
     % Ergebnisdaten laden
-    load( [ ort, '-', datum, '.mat' ], 'y' )
+    load( [ ort, '-', datum, '.mat' ], 'y', 'sPlus', 'alphaHighNoon' )
 
     N = size( y, 1 );
 
@@ -49,10 +49,12 @@ function SonnenkompassPlot()
     [ minimum, minNdx ] = min( sqrt( y( :, 2 ).^2 + y( :, 3 ).^2 ) );
     minH                = y( minNdx, 2 ); % y1 des Minimums
 
-    % y1-Achse verschieben um minH, d.h. Minimum ist damit bei y1=0
-    y( :, 2 ) = y( :, 2 ) - minH;
-
-    sprintf( 'Minimum des Abstandes zum Stab: %1.4f', minimum )
+    minHAlt = 60 * 12 * alphaHighNoon / pi;
+% 
+%     % y1-Achse verschieben um minH, d.h. Minimum ist damit bei y1=0
+%     y( :, 2 ) = y( :, 2 ) - minH;
+% 
+%     sprintf( 'Minimum des Abstandes zum Stab: %1.4f', minimum )
 
     figure
     title( 'Schattentrajektorie' )
@@ -71,11 +73,11 @@ function SonnenkompassPlot()
     plot( 0, 0, 'o', 'MarkerSize', 10, 'MarkerFaceColor', 'r' )
 
     % Schatten-Trajektorie plotten, Markerindizes zentrisch ausrichten
-    if( minNdx ~= 0 )
-        mndx = [ minNdx : -10 : 1, minNdx + 10 : 10 : N ];
-    else
+%     if( minNdx ~= 0 )
+%         mndx = [ minNdx : -10 : 1, minNdx + 10 : 10 : N ];
+%     else
         mndx = 1 : 10 : N;
-    end
+%     end
 
     plot( y( :, 2 ), y( :, 3 ), '-o', 'MarkerSize', 3, 'MarkerIndices', mndx, ...
         'Color', 'k', 'LineWidth', 1 )

@@ -5,6 +5,7 @@ clc
 clear
 
 syms omega real             % Jahreszeiteinfluss
+syms thetaG real            % Geographische Breite des Stabes
 syms psi real               % Komplementwinkel Erd-Rotationsachse zur Ekliptik
 syms rS real                % Abstand Erde - Sonne
 syms rE real                % Erdradius
@@ -50,13 +51,18 @@ sAlpha      = dMinusAlpha * s;
 % PSAlpha als Koeffizienten des Vektors P ausdrücken 
 pSAlpha = collect( p' * sAlpha, p );
 
+% Steigung der Trajektorie und astronomischen Mittag bestimmen
+[ sPlus, sMinus, alphaHighNoon ] = steigung( alpha, psi, omega, ...
+                                    thetaG - psi );
+
 % mue0 bestimmen
 omegaS = simplify( rE - pSAlpha / rE );
 omegaS = omegaS / lS;
 mue0   = omegaS / ( 1 + omegaS );
 
 % die drei von alpha abhängigen Komponenten von xS( alpha ) bestimmen
-[ chi1, chi2, chi3 ] = chi( rS, rE, lS, p1, p3, psi, mue0 );
+[ chi1, chi2, chi3 ] = chi( rS, rE, lS, alpha, omega, thetaG, psi, mue0 );
 
 save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
-      'alphaPlus', 'alphaMinus' )
+      'alphaPlus', 'alphaMinus', 'sPlus', 'sMinus', 'alphaHighNoon', ...
+      'chi1', 'chi2', 'chi3' )

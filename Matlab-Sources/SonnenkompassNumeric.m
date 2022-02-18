@@ -6,7 +6,8 @@ function SonnenkompassNumeric
     clear
 
     load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
-          'alphaPlus', 'alphaMinus' ) %#ok<NASGU>
+          'alphaPlus', 'alphaMinus', 'sPlus', 'sMinus', 'alphaHighNoon', ...
+          'chi1', 'chi2', 'chi3' ) %#ok<NASGU>
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -16,8 +17,8 @@ function SonnenkompassNumeric
 
     switch( ort )
         case 'LasPalmas'
-            lS        = 1.5;                                % Stablänge [m]
-            breiteGeo = 28.136746041614316 / 180.0 * pi;	% Las Palmas de Gran Canaria
+            lS     = 1.5;                               % Stablänge [m]
+            thetaG = 28.136746041614316 / 180.0 * pi;	% geographische Breite Las Palmas
     end
 
     % Fixe Daten
@@ -29,14 +30,13 @@ function SonnenkompassNumeric
 	tag    = datetime( datum );
     T      = days( tag - ssw );     % Jahreszeit [Tage seit SSW]
     omega  = 2 * pi / 365 * T;      % Jahreszeitwinkel ab SSW
-    breite = pi / 2 - breiteGeo;    % Geographische- in Kugelkoordinaten umrechnen
-    offset = breiteGeo - psi;       % Elevations-Winkeloffset für die Projektion
+    offset = thetaG - psi;          % Elevations-Winkeloffset für die Projektion
 
     % Kugelkoordinaten des Fusspunkt des Stabes, geographische Länge 0°, dabei 
     % Neigung der Erd-Rotationsachse psi berücksichtigen
-    p1 = rE * sin( breite + psi );	% x-Koordinate
+    p1 = rE * cos( offset );        % x-Koordinate
     p2 = 0;                         % y-Koordinate
-    p3 = rE * cos( breite + psi );  % z-Koordinate
+    p3 = rE * sin( offset );        % z-Koordinate
 
     % numerische Limits für zulässige Zeiten berechnen (Minuten)
     alphaPlus  = eval( alphaPlus );
@@ -44,11 +44,10 @@ function SonnenkompassNumeric
     tStart = ceil( 60 * 12 * alphaPlus / pi );      % aufrunden
     tEnd   = floor( 60 * 12 * alphaMinus / pi );	% abrunden
 
-    % Grenzsteigung der Trajektorie bei alphaPlus/alphaMinus
-    SPlus = steigung( alphaPlus, psi, omega, offset );
-    xPlusStern = 0;
-    yPlusStern = 0;
-    bPlus = yPlusStern - SPlus * xPlusStern;
+    % numerisch Steigungswerte für alphaPlus und astronomischen Mittag bestimmen
+	sPlus         = eval( subs( sPlus, 'alpha', 'alphaPlus' ) );
+    alphaHighNoon = eval( alphaHighNoon );
+    tHighNoon     = 60 * 12 * alphaHighNoon / pi;
 
     % Ausdrücke für mue0, x0
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
@@ -95,7 +94,7 @@ function SonnenkompassNumeric
         y( i, : )  = [ t, y1, y2 ];
     end
 
-    save( fileName, 'y' )
+    save( fileName, 'y', 'sPlus', 'alphaHighNoon' )
 end
 
 function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, theta )
@@ -128,15 +127,4 @@ function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
     x1 = x( 1 );
     x2 = x( 2 );
     x3 = x( 3 );
-end
-
-function s = steigung( alpha, psi, omega, offset )
-    A = -cos( psi )^2 * sin( alpha ) * cos( omega ) + ...
-         cos( psi ) * cos( alpha ) * sin( omega );
-    B =  cos( psi ) * sin( psi ) * sin( alpha ) * cos( omega ) - ...
-         sin( psi ) * cos( alpha ) * sin( omega );
-    C =  cos( psi ) * cos( alpha ) * cos( omega ) + ...
-         sin( alpha ) * sin( omega );
-
-	s = ( sin( offset ) * A - cos( offset ) * B ) / C;
 end
