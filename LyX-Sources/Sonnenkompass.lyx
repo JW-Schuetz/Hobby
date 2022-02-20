@@ -433,7 +433,7 @@ name "fig:Problemskizze1"
 
 \end_inset
 
-Problemskizze, SSW, 12 Uhr 
+Problemskizze, SSW, astronomischer Mittag 
 \end_layout
 
 \end_inset
@@ -470,7 +470,7 @@ name "fig:Problemskizze2"
 
 \end_inset
 
-Problemskizze, WSW, 12 Uhr 
+Problemskizze, WSW, astronomischer Mittag 
 \end_layout
 
 \end_inset
@@ -1586,6 +1586,12 @@ zulässt.
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Lösungspunkt"
+
+\end_inset
+
 Lösungspunkt 
 \end_layout
 
@@ -2564,12 +2570,12 @@ tung per Sonnenstand, ist die Schattentrajektorie keine Gerade - nicht einmal
 \begin_layout Standard
 Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
  vernachlässigbar - sie kann z.B.
- in Las Palmas bis zu 45° betragen! 
+ in Las Palmas beinahe bis zu 45° betragen! 
 \end_layout
 
 \begin_layout Standard
 Die genaue Nordrichtung erhält man z.B., wenn man Schattenzeitpunkte untersucht,
- die symmetrisch um den Zeitpunkt 12 Uhr des astronomischen Mittags liegen.
+ die symmetrisch um den Zeitpunkt des astronomischen Mittags liegen.
  
 \end_layout
 
@@ -3703,7 +3709,17 @@ Beweis der Ungleichung
 \end_layout
 
 \begin_layout Subsubsection*
-Behauptung 
+Behauptung aus Unterabschnitt 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Lösungspunkt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3872,7 +3888,7 @@ In diesem Unterabschnitt soll die Frage geklärt werden, für welchen Bereich
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Für eine reelle positive Zahl 
@@ -3895,33 +3911,6 @@ Für eine reelle positive Zahl
  
 \end_layout
 
-\begin_layout Plain Layout
-Man kann die letzte Gleichung als Bestimmungsgleichung für die unbekannte
- Variable 
-\begin_inset Formula $\varepsilon$
-\end_inset
-
- auffassen und nach 
-\begin_inset Formula $\varepsilon$
-\end_inset
-
- lösen.
- 
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Subsection*
-
-\end_layout
-
 \end_inset
 
  
@@ -3933,7 +3922,7 @@ Bestimmung des Drehwinkels
 \end_inset
 
  für 
-\begin_inset Formula $\varOmega^{S}=-1$
+\begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
 \end_inset
 
  
@@ -3941,7 +3930,7 @@ Bestimmung des Drehwinkels
 
 \begin_layout Standard
 Untersucht werden soll zunächst der Fall der Gleichheit 
-\begin_inset Formula $\varOmega^{S}=-1$
+\begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
 \end_inset
 
 .
@@ -3955,7 +3944,7 @@ Untersucht werden soll zunächst der Fall der Gleichheit
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-LR_{E}\varOmega^{S}=-LR_{E}.\label{eq:Zu-Lösen1}
+LR_{E}\varOmega^{S}\left(\alpha\right)=-LR_{E}.\label{eq:Zu-Lösen1}
 \end{equation}
 
 \end_inset
@@ -4005,7 +3994,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-LR_{E}\varOmega^{S} & = & A^{*}\sin\alpha+B^{*}\cos\alpha+C^{*}.
+LR_{E}\varOmega^{S}\left(\alpha\right) & = & A^{*}\sin\alpha+B^{*}\cos\alpha+C^{*}.
 \end{eqnarray*}
 
 \end_inset
@@ -4127,7 +4116,7 @@ noprefix "false"
 \end_inset
 
 ) hat für 
-\begin_inset Formula $k\in\mathbb{N}$
+\begin_inset Formula $k_{\pm}\in\mathbb{N}$
 \end_inset
 
  die Lösungen (siehe dazu z.B.
@@ -4145,7 +4134,7 @@ SolveEquation.m
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\alpha_{\pm}=2\pi k+2\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
+\frac{\alpha_{\pm}}{2}=\pi k_{\pm}+\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
 \]
 
 \end_inset
@@ -4159,7 +4148,7 @@ Bestimmung des Drehwinkels
 \end_inset
 
  für 
-\begin_inset Formula $\varOmega^{S}<-1$
+\begin_inset Formula $\varOmega^{S}\left(\alpha\right)<-1$
 \end_inset
 
  
@@ -4167,22 +4156,31 @@ Bestimmung des Drehwinkels
 
 \begin_layout Standard
 Die Frage lautet: Wie muss 
-\begin_inset Formula $k$
+\begin_inset Formula $k_{\pm}$
 \end_inset
 
- gewählt werden, damit im Intervall 
-\begin_inset Formula $\alpha_{+}$
-\end_inset
-
- und 
-\begin_inset Formula $\alpha_{-}$
-\end_inset
-
- die zulässigen Lösungen mit 
-\begin_inset Formula $\varOmega^{S}+\varepsilon<-1$
+ gewählt werden, damit die zulässigen Lösungen im Intervall 
+\begin_inset Formula $\left[\alpha_{-},\alpha_{+}\right]$
 \end_inset
 
  liegen? 
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\color red
+Still to do!
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4194,8 +4192,8 @@ Die beiden physikalisch richtigen Lösungen für die Erdrotationswinkel sind
  
 \begin_inset Formula 
 \begin{eqnarray}
-\alpha_{+} & = & 2\arctan\left(\frac{A+\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right)\label{eq:LimitsAlpha}\\
-\alpha_{-} & = & 2\pi+2\arctan\left(\frac{A-\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).\nonumber 
+\frac{\alpha_{+}}{2} & = & \arctan\left(\frac{A+\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right)\label{eq:LimitsAlpha}\\
+\frac{\alpha_{-}}{2} & = & \pi+\arctan\left(\frac{A-\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -4974,10 +4972,20 @@ noprefix "false"
 
 \end_inset
 
-) und (
+), (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:SchattentrajektorieFAE"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schattentrajektorie"
 plural "false"
 caps "false"
 noprefix "false"
@@ -4992,7 +5000,7 @@ noprefix "false"
 \begin_inset Quotes grd
 \end_inset
 
- identifiziert.
+ bezeichnet.
  
 \end_layout
 
