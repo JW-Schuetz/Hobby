@@ -52,8 +52,8 @@ sAlpha      = dMinusAlpha * s;
 pSAlpha = collect( p' * sAlpha, p );
 
 % Steigung der Trajektorie und astronomischen Mittag bestimmen
-[ sPlus, sMinus, alphaHighNoon ] = steigung( alpha, psi, omega, ...
-                                    thetaG - psi );
+[ sPlus, alphaHighNoon ] = steigung( alpha, psi, omega, ...
+                                     thetaG - psi );
 
 % mue0 bestimmen
 omegaS = simplify( rE - pSAlpha / rE );
@@ -61,8 +61,7 @@ omegaS = omegaS / lS;
 mue0   = omegaS / ( 1 + omegaS );
 
 % die drei von alpha abhängigen Komponenten von xS( alpha ) bestimmen
-[ chi1, chi2, chi3 ] = chi( rS, rE, lS, alpha, omega, thetaG, psi, mue0 );
+[ chi2, f ] = chi( rS, rE, lS, alpha, omega, thetaG, psi, mue0 );
 
 save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
-      'alphaPlus', 'alphaMinus', 'sPlus', 'sMinus', 'alphaHighNoon', ...
-      'chi1', 'chi2', 'chi3' )
+      'alphaPlus', 'alphaMinus', 'sPlus', 'alphaHighNoon', 'chi2', 'f' )

@@ -40,21 +40,12 @@ function SonnenkompassPlot()
             end
 	end
 
-    % Ergebnisdaten laden
-    load( [ ort, '-', datum, '.mat' ], 'y', 'sPlus', 'alphaHighNoon' )
+    % Ergebnisdaten laden, Trajektoriensteigung
+    load( [ ort, '-', datum, '.mat' ], 'y' )
 
-    N = size( y, 1 );
-
-    % Minimaler Abstand Stab <-> Schattenende
-    [ minimum, minNdx ] = min( sqrt( y( :, 2 ).^2 + y( :, 3 ).^2 ) );
-    minH                = y( minNdx, 2 ); % y1 des Minimums
-
-    minHAlt = 60 * 12 * alphaHighNoon / pi;
-% 
-%     % y1-Achse verschieben um minH, d.h. Minimum ist damit bei y1=0
-%     y( :, 2 ) = y( :, 2 ) - minH;
-% 
-%     sprintf( 'Minimum des Abstandes zum Stab: %1.4f', minimum )
+    % Minimaler Abstand Stab <-> Schattenende und sein Index bestimmen,
+    % minNdx ist Index des astronomischen Mittags (AM)
+    [ minDistance, minNdx ] = min( sqrt( y( :, 1 ).^2 + y( :, 2 ).^2 ) );
 
     figure
     title( 'Schattentrajektorie' )
@@ -72,19 +63,20 @@ function SonnenkompassPlot()
     % Ort des Stabes plotten
     plot( 0, 0, 'o', 'MarkerSize', 10, 'MarkerFaceColor', 'r' )
 
-    % Schatten-Trajektorie plotten, Markerindizes zentrisch ausrichten
-%     if( minNdx ~= 0 )
-%         mndx = [ minNdx : -10 : 1, minNdx + 10 : 10 : N ];
-%     else
-        mndx = 1 : 10 : N;
-%     end
+    % Schatten-Trajektorie plotten (mittig zum AM)
+    N = size( y, 1 );
+    plot( y( minNdx : -1 : 1, 1 ), y( minNdx : -1 : 1, 2 ), '-o', ...
+         'MarkerSize', 3, 'MarkerIndices', 1 : 10 : minNdx, ...
+         'Color', 'k', 'LineWidth', 1 )
+    plot( y( minNdx : N, 1 ), y( minNdx : N, 2 ), '-o', 'MarkerSize', 3, ...
+         'MarkerIndices', 11 : 10 : minNdx, 'Color', 'k', 'LineWidth', 1 )
 
-    plot( y( :, 2 ), y( :, 3 ), '-o', 'MarkerSize', 3, 'MarkerIndices', mndx, ...
-        'Color', 'k', 'LineWidth', 1 )
-
-    % Markierung 12 Uhr
+    % Markierung AM
 	text( 0, yArrow, arrowType, 'HorizontalAlignment', 'center' )
-	text( 0, yUhrZeit, '12:00 Uhr', 'HorizontalAlignment', 'center' )
+	text( 0, yUhrZeit, 'astronomischer Mittag', 'HorizontalAlignment', ...
+          'center' )
 
     legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
+
+	sprintf( 'Minimum des Abstandes zum Stab: %1.2f Meter', minDistance )
 end

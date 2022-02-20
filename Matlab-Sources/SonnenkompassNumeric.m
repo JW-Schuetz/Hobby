@@ -6,8 +6,8 @@ function SonnenkompassNumeric
     clear
 
     load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
-          'alphaPlus', 'alphaMinus', 'sPlus', 'sMinus', 'alphaHighNoon', ...
-          'chi1', 'chi2', 'chi3' ) %#ok<NASGU>
+          'alphaPlus', 'alphaMinus', 'sPlus', 'alphaHighNoon', ...
+          'chi2', 'f' ) %#ok<NASGU>
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -39,15 +39,28 @@ function SonnenkompassNumeric
     p3 = rE * sin( offset );        % z-Koordinate
 
     % numerische Limits für zulässige Zeiten berechnen (Minuten)
-    alphaPlus  = eval( alphaPlus );
-    alphaMinus = eval( alphaMinus );
-    tStart = ceil( 60 * 12 * alphaPlus / pi );      % aufrunden
-    tEnd   = floor( 60 * 12 * alphaMinus / pi );	% abrunden
+    tStart = ceil( 60 * 12 * eval( alphaPlus ) / pi ) + 10;     % aufrunden
+    tEnd   = floor( 60 * 12 * eval( alphaMinus ) / pi ) - 10;	% abrunden
 
-    % numerisch Steigungswerte für alphaPlus und astronomischen Mittag bestimmen
-	sPlus         = eval( subs( sPlus, 'alpha', 'alphaPlus' ) );
-    alphaHighNoon = eval( alphaHighNoon );
-    tHighNoon     = 60 * 12 * alphaHighNoon / pi;
+    % numerisch Grenz-Steigungswerte bestimmen, es gilt sPlus == sMinus
+	sPlus = eval( subs( sPlus, 'alpha', 'alphaPlus' ) );
+    sPlus = eval( sPlus );
+
+    % Symptotenparameter bestimmen
+    xPlus = eval( subs( chi2, 'alpha', 'alphaPlus' ) );
+    xPlus = eval( xPlus );
+    yPlus = eval( subs( f, 'alpha', 'alphaPlus' ) );
+    yPlus = eval( yPlus );
+    bPlus = yPlus - sPlus * xPlus;
+
+    % Zeit des astronomischen Mittags bestimmen
+    tHighNoon = 60 * 12 * ( eval( alphaHighNoon ) + pi ) / pi;
+    if( tStart >= tHighNoon || tEnd < tHighNoon )
+        error( 'Interner Fehler!' )
+    end
+
+    % eins der Zeitsamples soll genau bei t = tHighNoon sein
+    tOffset = fix( tHighNoon ) - tHighNoon;
 
     % Ausdrücke für mue0, x0
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
@@ -69,38 +82,44 @@ function SonnenkompassNumeric
     % Numerische Auswertung
     N = tEnd - tStart + 1;	% Anzahl der Zeitpunkte
 
-    y = zeros( N, 3 );      % [m]
+    y = zeros( N, 4 );      % Trajektorie und Asymptote [m]
 
     % Position und Zeitpunkt berechnen
     for i = 1 : N
-        t     = tStart + ( i - 1 );     % t in Minuten
-        alpha = pi / ( 12 * 60 ) * t;	% zugehöriger Winkel
+        t     = tStart - tOffset + ( i - 1 );	% t in Minuten
+        alpha = pi / ( 12 * 60 ) * t;           % zugehöriger Winkel
 
-        mue = subs( mue0, 'alpha', alpha );	% in mue0 alpha substituieren
+        mue = subs( mue0, 'alpha', alpha );     % in mue0 alpha substituieren
         mue = eval( mue );
         if( mue > 1 )
-            x = subs( x0, 'alpha', alpha )';  % in x0 alpha substituieren
+            x = subs( x0, 'alpha', alpha )';	% in x0 alpha substituieren
             x = eval( x );
 
-            pts1 = x( 1 );
-            pts2 = x( 2 );
-            pts3 = x( 3 );
+            pts1 = x( 1 );  % x1-Koordinate
+            pts2 = x( 2 );  % x2-Koordinate
+            pts3 = x( 3 );  % x3-Koordinate
         else
             error( 'SonnenkompassNumeric: Keine Lösung!' )
         end
 
-        % Projektion auf Tangentialebene
-        [ y1, y2 ] = MapToTangentialPlane( pts1, pts2, pts3, offset );
-        y( i, : )  = [ t, y1, y2 ];
+        % Projektion der Trajektorie auf die Tangentialebene
+        [ y1, y2 ] = MapTrajektoryToTangentialPlane( pts1, pts2, pts3, offset );
+        [ y3, y4 ] = Asymptote( pts1, sPlus, bPlus );
+        y( i, : )  = [ y1, y2, y3, y4 ];
     end
 
-    save( fileName, 'y', 'sPlus', 'alphaHighNoon' )
+    save( fileName, 'y' )
 end
 
-function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, theta )
+function [ y1, y2 ] = Asymptote( x1, sPlus, bPlus )
+    y1 = 0;
+    y2 = 0;
+end
+
+function [ y1, y2 ] = MapTrajektoryToTangentialPlane( x1, x2, x3, theta )
     % Punkt drehen um x2-Achse und den Winkel theta
     if( theta ~= 0 )
-        [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 );
+        [ ~, y1, y2 ] = rotateX2( theta, x1, x2, x3 );
     end
 
     % Projizieren auf die Tangentialebene
@@ -109,8 +128,8 @@ function [ x2, x3 ] = MapToTangentialPlane( x1, x2, x3, theta )
 
     x = A * [ x1; x2; x3 ];
 
-    x2 = x( 1 );
-    x3 = x( 2 );
+    y1 = x( 1 );
+    y2 = x( 2 );
 end
 
 function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
