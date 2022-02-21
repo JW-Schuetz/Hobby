@@ -43,24 +43,20 @@ function SonnenkompassNumeric
     tEnd   = floor( 60 * 12 * eval( alphaMinus ) / pi ) - 10;	% abrunden
 
     % numerisch Grenz-Steigungswerte bestimmen, es gilt sPlus == sMinus
-	sPlus = eval( subs( sPlus, 'alpha', 'alphaPlus' ) );
-    sPlus = eval( sPlus );
+	sPlus = eval( subs( sPlus, 'alpha', '0' ) );
+%     sPlus = eval( sPlus );
 
-    % Symptotenparameter bestimmen
-    xPlus = eval( subs( chi2, 'alpha', 'alphaPlus' ) );
-    xPlus = eval( xPlus );
-    yPlus = eval( subs( f, 'alpha', 'alphaPlus' ) );
-    yPlus = eval( yPlus );
-    bPlus = yPlus - sPlus * xPlus;
+    % Parameter der Symptote bestimmen
+    xPlus = eval( subs( chi2, 'alpha', '0' ) );
+%     xPlus = eval( xPlus );
+    yPlus = eval( subs( f, 'alpha', '0' ) );
+%     yPlus = eval( yPlus );
 
     % Zeit des astronomischen Mittags bestimmen
     tHighNoon = 60 * 12 * ( eval( alphaHighNoon ) + pi ) / pi;
     if( tStart >= tHighNoon || tEnd < tHighNoon )
         error( 'Interner Fehler!' )
     end
-
-    % eins der Zeitsamples soll genau bei t = tHighNoon sein
-    tOffset = fix( tHighNoon ) - tHighNoon;
 
     % Ausdrücke für mue0, x0
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
@@ -79,10 +75,12 @@ function SonnenkompassNumeric
 	% Zahlenwerte bis auf alpha substituieren (implizit)
     x0 = subs( x0 );
 
+    % eins der Zeitsamples soll genau bei t = tHighNoon sein
+    tOffset = fix( tHighNoon ) - tHighNoon;
+
     % Numerische Auswertung
     N = tEnd - tStart + 1;	% Anzahl der Zeitpunkte
-
-    y = zeros( N, 4 );      % Trajektorie und Asymptote [m]
+    y = zeros( N, 3 );      % x, y_trajektorie und y_asymptote [m]
 
     % Position und Zeitpunkt berechnen
     for i = 1 : N
@@ -103,17 +101,16 @@ function SonnenkompassNumeric
         end
 
         % Projektion der Trajektorie auf die Tangentialebene
-        [ y1, y2 ] = MapTrajektoryToTangentialPlane( pts1, pts2, pts3, offset );
-        [ y3, y4 ] = Asymptote( pts1, sPlus, bPlus );
-        y( i, : )  = [ y1, y2, y3, y4 ];
+        [ x, y1 ] = MapTrajektoryToTangentialPlane( pts1, pts2, pts3, offset );
+        y2        = Asymptote( x, sPlus, xPlus, yPlus );
+        y( i, : ) = [ x, y1, y2 ];
     end
 
     save( fileName, 'y' )
 end
 
-function [ y1, y2 ] = Asymptote( x1, sPlus, bPlus )
-    y1 = 0;
-    y2 = 0;
+function y = Asymptote( x, sPlus, xPlus, yPlus )
+    y = sPlus * ( x - xPlus ) + yPlus;
 end
 
 function [ y1, y2 ] = MapTrajektoryToTangentialPlane( x1, x2, x3, theta )

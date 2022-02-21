@@ -14,25 +14,25 @@ function SonnenkompassPlot()
                     yUhrZeit   = 1.4;
                     squareSize = 2;
 
-                case '21.06.2021'
+                case '21.06.2021'   % SSW
                     arrowType  = '\downarrow';
                     yArrow     = 0.3;
                     yUhrZeit   = 0.35;
                     squareSize = 1;
 
-                case '21.12.2021'
+                case '21.12.2021'   % WSW
                     arrowType  = '\uparrow';
                     yArrow     = 1.7;
                     yUhrZeit   = 1.4;
                     squareSize = 6;
 
-                case '21.03.2021'
+                case '21.03.2021'   % Frühlings-Äquinoktikum 
                     arrowType  = '\downarrow';
                     yArrow     = 1.7;
                     yUhrZeit   = 2.0;
                     squareSize = 6;
 
-                case '21.09.2021'
+                case '21.09.2021'   % Herbst-Äquinoktikum
                     arrowType  = '\downarrow';
                     yArrow     = 1.4;
                     yUhrZeit   = 1.7;
@@ -75,6 +75,12 @@ function SonnenkompassPlot()
 	text( 0, yArrow, arrowType, 'HorizontalAlignment', 'center' )
 	text( 0, yUhrZeit, 'astronomischer Mittag', 'HorizontalAlignment', ...
           'center' )
+
+    % Asymptoten plotten
+%     plot( y( minNdx : -1 : 1, 1 ), y( minNdx : -1 : 1, 3 ), ...
+%           'Color', 'r', 'LineWidth', 1 )
+    plot( y( minNdx : N, 1 ), y( minNdx : N, 3 ), 'Color', 'r', ...
+          'LineWidth', 1 )
 
     legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
 
