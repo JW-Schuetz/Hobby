@@ -119,7 +119,7 @@ end
 function [ y1, y2 ] = MapTrajektoryToTangentialPlane( x1, x2, x3, theta )
     % Punkt drehen um x2-Achse und den Winkel theta
     if( theta ~= 0 )
-        [ ~, y1, y2 ] = rotateX2( theta, x1, x2, x3 );
+        [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 );
     end
 
     % Projizieren auf die Tangentialebene
