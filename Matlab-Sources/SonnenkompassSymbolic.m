@@ -65,3 +65,66 @@ mue0   = omegaS / ( 1 + omegaS );
 
 save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
       'alphaPlus', 'alphaMinus', 'sPlus', 'alphaHighNoon', 'chi2', 'f' )
+
+function [ alphaPlus, alphaMinus ] = alphaLimits( rS, rE, p1, p3, psi, omega )
+% Limits für den Erdrotationswinkel alpha (Tageszeit)
+% Die hier benutzten Formeln werden in "SonnenKompassSymbolicAddon.m"
+% verfifiziert.
+
+	as = - rS * ( p1 * cos( psi ) - p3 * sin( psi ) ) ...
+            * sin( omega );
+    bs = - rS * ( p1 * cos( psi ) - p3 * sin( psi ) ) * cos( psi ) ...
+            * cos( omega );
+    cs = rE^2 - rS * ( p1 * sin( psi )^2 + p3 * cos( psi ) * sin( psi ) ) ...
+            * cos( omega );
+
+    wurzel  = sqrt( as^2 + bs^2 - cs^2 );
+    nenner  = bs - cs;
+    zPlus   = as + wurzel;
+    zMinus  = as - wurzel;
+
+    alphaPlus  = 2 * atan2( zPlus,  nenner );
+    alphaMinus = 2 * ( atan2( zMinus, nenner ) + pi );
+end
+
+function [ sPlus, highNoon ] = steigung( alpha, psi, omega, offset )
+    % Steigung der Trajektorie und astronomischer Mittag
+    A = -cos( psi )^2 * sin( alpha ) * cos( omega ) + ...
+         cos( psi ) * cos( alpha ) * sin( omega );
+    B = -cos( psi ) * sin( psi ) * sin( alpha ) * cos( omega ) + ...
+         sin( psi ) * cos( alpha ) * sin( omega );
+    C =  cos( psi ) * cos( alpha ) * cos( omega ) + ...
+         sin( alpha ) * sin( omega );
+
+	s     = ( sin( offset ) * A + cos( offset ) * B ) / C;
+    sPlus = simplify(  s );
+
+    highNoon = atan2( tan( omega ), cos( psi ) );
+end
+
+function [ chi2, f ] = chi( rS, rE, lS, alpha, omega, thetaG, psi, mue0 )
+    offset = thetaG - psi;
+
+    fak  = ( rE + lS ) * mue0;
+    rho1 = fak * cos( offset );
+    rho2 = 0;
+    rho3 = fak * sin( offset );
+
+    fak  = rS * ( 1 - mue0 );
+    sig1 = sin( psi )^2 * ( 1 - cos( alpha ) ) * cos( omega ) + ...
+           cos( alpha ) * cos( omega ) + ...
+           cos( psi ) * sin( alpha ) * sin( omega );
+    sig1 = fak * sig1;
+    sig2 = -cos( psi ) * sin( alpha ) * cos( omega ) + ...
+           cos( alpha ) * sin( omega );
+    sig2 = fak * sig2;
+    sig3 = cos( psi ) * sin( psi ) * ( 1 - cos( alpha ) ) * cos( omega ) ...
+           - sin( psi ) * sin( alpha ) * sin( omega );
+    sig3 = fak * sig3;
+
+    chi1 = simplify( rho1 + sig1 );
+    chi2 = simplify( rho2 + sig2 );
+    chi3 = simplify( rho3 + sig3 );
+
+    f = -sin( offset ) * chi1 + cos( offset ) * chi3;
+end

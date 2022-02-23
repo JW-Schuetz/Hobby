@@ -77,8 +77,8 @@ function SonnenkompassPlot()
           'center' )
 
     % Asymptoten plotten
-%     plot( y( minNdx : -1 : 1, 1 ), y( minNdx : -1 : 1, 3 ), ...
-%           'Color', 'r', 'LineWidth', 1 )
+    plot( y( minNdx : -1 : 1, 1 ), y( minNdx : -1 : 1, 3 ), ...
+          'Color', 'r', 'LineWidth', 1 )
     plot( y( minNdx : N, 1 ), y( minNdx : N, 3 ), 'Color', 'r', ...
           'LineWidth', 1 )
 

@@ -43,14 +43,25 @@ function SonnenkompassNumeric
     tEnd   = floor( 60 * 12 * eval( alphaMinus ) / pi ) - 10;	% abrunden
 
     % numerisch Grenz-Steigungswerte bestimmen, es gilt sPlus == sMinus
-	sPlus = eval( subs( sPlus, 'alpha', '0' ) );
-%     sPlus = eval( sPlus );
+	sPlus = eval( subs( sPlus, 'alpha', 'alphaHighNoon' ) );
+    sPlus = eval( sPlus );
 
     % Parameter der Symptote bestimmen
-    xPlus = eval( subs( chi2, 'alpha', '0' ) );
-%     xPlus = eval( xPlus );
-    yPlus = eval( subs( f, 'alpha', '0' ) );
-%     yPlus = eval( yPlus );
+    xPlus = eval( subs( chi2, 'alpha', 'alphaHighNoon' ) );
+    xPlus = eval( xPlus );
+    yPlus = eval( subs( f, 'alpha', 'alphaHighNoon' ) );
+    yPlus = eval( yPlus );
+
+%     % Test-Environment
+% 	ahn = eval( alphaHighNoon );
+% 	delta = 0.1 : 0.1 : 1;
+% 	ahnP = ahn + delta;
+% 	ahnM = ahn - delta;
+%     ahn = sort( [ ahnM, ahn, ahnP ] );
+%     for n = 1 : length( ahn )
+%         yPlus( n ) = eval( subs( f, 'alpha', ahn( n ) ) );
+%     end
+%     plot( yPlus )
 
     % Zeit des astronomischen Mittags bestimmen
     tHighNoon = 60 * 12 * ( eval( alphaHighNoon ) + pi ) / pi;

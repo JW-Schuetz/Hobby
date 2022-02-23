@@ -161,12 +161,13 @@ das neue Schattenende des Stabes mit einem zweiten Stein markieren.
 \begin_layout Standard
 Man erhält dann die Nordrichtung mittels der folgenden Regeln
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Die Methode wird in der Nähe der Pole scheitern, da das Stabende dort keinen
- Schatten mehr wirft (und natürlich auch, weil dort keine Erde zum Hineinstecken
- des Stabes vorhanden ist 
+Die Methode wird in der Nähe der Pole scheitern, da das Stabende in Abhängigkeit
+ der Jahreszeit evtl.
+ keinen Schatten wirft (und natürlich auch, weil dort nicht immer Erde zum
+ Hineinstecken des Stabes vorhanden ist 
 \begin_inset Formula $\smiley$
 \end_inset
 
@@ -1375,7 +1376,7 @@ stem durch
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\forall\underline{x}\in T:\;\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0\label{eq:Tangentialebene}
+\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0\label{eq:Tangentialebene}
 \end{equation}
 
 \end_inset
@@ -1439,7 +1440,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\forall\underline{x}\in G:\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(T^{*}\right)\label{eq:Verbindungsgerade}
+\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(T^{*}\right)\label{eq:Verbindungsgerade}
 \end{equation}
 
 \end_inset
@@ -1534,7 +1535,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\forall\underline{x}\in G_{S}^{\alpha}:\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right).
+\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right).
 \]
 
 \end_inset
@@ -1813,7 +1814,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\underline{x}_{0}^{S}\left(\alpha\right)=\mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right).\label{eq:LösungspunkteSonneGedreht}
+\underline{x}_{0}^{S}\left(\alpha\right)=\mu_{0}\left(\alpha\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha\right)\right]\underline{S}^{\alpha}\left(T^{*}\right).\label{eq:LösungspunkteSonneGedreht}
 \end{equation}
 
 \end_inset
@@ -3658,7 +3659,7 @@ WSW
 \end_layout
 
 \begin_layout Standard
-Beide Ergebnisse stimmen sehr gut mit den oben errechneten Ergebnissen überein.
+Beide Ergebnisse stimmen mit den oben errechneten Ergebnissen überein.
  
 \end_layout
 
@@ -4115,7 +4116,7 @@ status open
 
 \color red
 Still to do! Die implementierte Lösung führt zu Problemen im Fall der Sommersonn
-enwende: Interner Fehler!
+enwende: Interner Fehler! 
 \end_layout
 
 \end_inset
@@ -4265,7 +4266,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-\underline{x}_{0}^{S}\left(\alpha\right)=\mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right)
+\underline{x}_{0}^{S}\left(\alpha\right)=\mu_{0}\left(\alpha\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha\right)\right]\underline{S}^{\alpha}\left(T^{*}\right)
 \]
 
 \end_inset
@@ -4301,7 +4302,7 @@ status open
 \begin_layout Standard
 Für sie gilt 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Für Gleichung
@@ -4324,17 +4325,17 @@ noprefix "false"
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\underline{Q}+\left(1-\mu_{0}\right)\underline{S}^{\alpha}\left(T^{*}\right)\\
- & = & \mu_{0}\left(1+\frac{L}{R_{E}}\right)\underline{P}+\left(1-\mu_{0}\right)D_{\left(-\alpha\right)}R_{S}\left(\begin{array}{c}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\left(\alpha\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha\right)\right]\underline{S}^{\alpha}\left(T^{*}\right)\\
+ & = & \mu_{0}\left(\alpha\right)\left(1+\frac{L}{R_{E}}\right)\underline{P}+\left[1-\mu_{0}\left(\alpha\right)\right]D_{\left(-\alpha\right)}R_{S}\left(\begin{array}{c}
 \cos\Omega\\
 \sin\Omega\\
 0
 \end{array}\right)\\
- & = & \mu_{0}\left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
+ & = & \mu_{0}\left(\alpha\right)\left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
 p_{1}\\
 0\\
 p_{3}
-\end{array}\right)+R_{S}\left(1-\mu_{0}\right)D_{\left(-\alpha\right)}\left(\begin{array}{c}
+\end{array}\right)+R_{S}\left[1-\mu_{0}\left(\alpha\right)\right]D_{\left(-\alpha\right)}\left(\begin{array}{c}
 \cos\Omega\\
 \sin\Omega\\
 0
@@ -4411,20 +4412,20 @@ folgt
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\left(\alpha\right)\left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
 p_{1}\\
 0\\
 p_{3}
-\end{array}\right)+R_{S}\left(1-\mu_{0}\right)\left(\begin{array}{c}
+\end{array}\right)+R_{S}\left[1-\mu_{0}\left(\alpha\right)\right]\left(\begin{array}{c}
 \sin^{2}\psi\left(1-\cos\alpha\right)\cos\Omega+\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\\
 -\cos\psi\sin\alpha\cos\Omega+\cos\alpha\sin\Omega\\
 \cos\psi\sin\psi\left(1-\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega
 \end{array}\right)\\
- & = & \left(R_{E}+L\right)\mu_{0}\left(\begin{array}{c}
+ & = & \left(R_{E}+L\right)\mu_{0}\left(\alpha\right)\left(\begin{array}{c}
 \cos\left(\Theta_{G}-\psi\right)\\
 0\\
 \sin\left(\Theta_{G}-\psi\right)
-\end{array}\right)+R_{S}\left(1-\mu_{0}\right)\left(\begin{array}{c}
+\end{array}\right)+R_{S}\left[1-\mu_{0}\left(\alpha\right)\right]\left(\begin{array}{c}
 \sin^{2}\psi\left(1-\cos\alpha\right)\cos\Omega+\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\\
 -\cos\psi\sin\alpha\cos\Omega+\cos\alpha\sin\Omega\\
 \cos\psi\sin\psi\left(1-\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega
@@ -4461,9 +4462,9 @@ mit dem von
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\rho_{1} & = & \left(R_{E}+L\right)\mu_{0}\cos\left(\Theta_{G}-\psi\right)\\
+\rho_{1} & = & \left(R_{E}+L\right)\mu_{0}\left(\alpha\right)\cos\left(\Theta_{G}-\psi\right)\\
 \rho_{2} & = & 0\\
-\rho_{3} & = & \left(R_{E}+L\right)\mu_{0}\sin\left(\Theta_{G}-\psi\right)
+\rho_{3} & = & \left(R_{E}+L\right)\mu_{0}\left(\alpha\right)\sin\left(\Theta_{G}-\psi\right)
 \end{eqnarray*}
 
 \end_inset
@@ -4482,9 +4483,9 @@ und mit dem von
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\sigma_{1}\left(\alpha\right) & = & R_{S}\left(1-\mu_{0}\right)\left[\sin^{2}\psi\left(1-\cos\alpha\right)\cos\Omega+\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\right]\\
-\sigma_{2}\left(\alpha\right) & = & R_{S}\left(1-\mu_{0}\right)\left(-\cos\psi\sin\alpha\cos\Omega+\cos\alpha\sin\Omega\right)\\
-\sigma_{3}\left(\alpha\right) & = & R_{S}\left(1-\mu_{0}\right)\left[\cos\psi\sin\psi\left(1-\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega\right].
+\sigma_{1}\left(\alpha\right) & = & R_{S}\left[1-\mu_{0}\left(\alpha\right)\right]\left[\sin^{2}\psi\left(1-\cos\alpha\right)\cos\Omega+\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\right]\\
+\sigma_{2}\left(\alpha\right) & = & R_{S}\left[1-\mu_{0}\left(\alpha\right)\right]\left(-\cos\psi\sin\alpha\cos\Omega+\cos\alpha\sin\Omega\right)\\
+\sigma_{3}\left(\alpha\right) & = & R_{S}\left[1-\mu_{0}\left(\alpha\right)\right]\left[\cos\psi\sin\psi\left(1-\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega\right].
 \end{eqnarray*}
 
 \end_inset
@@ -4534,7 +4535,7 @@ status open
 \begin_layout Plain Layout
 
 \color red
-Hier hat sich irgendein Fehler eingeschlichen! 
+Hier hat sich irgendein Fehler eingeschlichen? 
 \end_layout
 
 \begin_layout Plain Layout
