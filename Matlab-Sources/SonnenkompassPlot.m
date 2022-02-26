@@ -40,12 +40,15 @@ function SonnenkompassPlot()
             end
 	end
 
-    % Ergebnisdaten laden, Trajektoriensteigung
+    % Ergebnisdaten laden
+    % Trajektorie: x = y( :, 1 ), y = y( :, 2 )
+    % Asymtote:    x = y( :, 1 ), y = y( :, 3 )
     load( [ ort, '-', datum, '.mat' ], 'y' )
 
     % Minimaler Abstand Stab <-> Schattenende und sein Index bestimmen,
-    % minNdx ist Index des astronomischen Mittags (AM)
-    [ minDistance, minNdx ] = min( sqrt( y( :, 1 ).^2 + y( :, 2 ).^2 ) );
+    % minNdx ist Index des astronomischen Mittags (AM). 
+    % Hier wird genutzt, dass gilt: y( minNdx, 1 ) = 0
+    [ minDistance, minNdx ] = min( y( :, 2 ) );
 
     figure
     title( 'Schattentrajektorie' )

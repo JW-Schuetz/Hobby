@@ -62,7 +62,7 @@
 \color #008000
 \end_index
 \leftmargin 2cm
-\topmargin 1.5cm
+\topmargin 1cm
 \rightmargin 2cm
 \bottommargin 1.5cm
 \secnumdepth 3
@@ -161,7 +161,7 @@ das neue Schattenende des Stabes mit einem zweiten Stein markieren.
 \begin_layout Standard
 Man erhält dann die Nordrichtung mittels der folgenden Regeln
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Die Methode wird in der Nähe der Pole scheitern, da das Stabende in Abhängigkeit
@@ -301,6 +301,12 @@ noprefix "false"
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Annahmen"
+
+\end_inset
+
 Annahmen 
 \end_layout
 
@@ -323,6 +329,10 @@ die Erde bewege sich in der Ekliptikalebene auf einer idealen Kreisbahn
 \end_inset
 
  um die Sonne 
+\end_layout
+
+\begin_layout Itemize
+die Erde benötige 365 Tage für einen Umlauf um die Sonne 
 \end_layout
 
 \begin_layout Itemize
@@ -421,6 +431,8 @@ status open
 	filename SonnenKompass.eps
 	lyxscale 200
 	scale 65
+	BoundingBox 0bp 0bp 769bp 259bp
+	clip
 
 \end_inset
 
@@ -458,6 +470,8 @@ status open
 	filename SonnenKompass1.eps
 	lyxscale 200
 	scale 65
+	BoundingBox 0bp 0bp 769bp 259bp
+	clip
 
 \end_inset
 
@@ -501,7 +515,8 @@ Generelles zur Lösung
 
 \begin_layout Standard
 In der folgenden Arbeit soll der Verlauf des Schattens des Stabendpunktes
- als Funktion der Tageszeit berechnet werden.
+ als Funktion der Tageszeit für einen vorgegebenen Tag im Jahr berechnet
+ werden.
  
 \end_layout
 
@@ -511,9 +526,9 @@ Dazu wird zunächst die Verbindungsgerade zwischen der Sonne und dem Endpunkt
  Dann werden die Schnittpunkte der verlängerten Verbindungsgeraden mit der
  Tangentialebene der Erdoberfläche im Fusspunkt des Stabes als Funktion
  der Tageszeit bestimmt.
- Schlussendlich werden die gefundenen Schnittpunkte orthogonal auf die Tangentia
-lebene projiziert.
- Man erhält damit eine 2-dimensionale Darstellung des Schattenverlaufes.
+ Schlussendlich werden die gefundenen Schnittpunkte im 3-dimensionealen
+ Raum orthogonal auf die Tangentialebene projiziert.
+ Man erhält damit die 2-dimensionale Darstellung des Schattenverlaufes.
  
 \end_layout
 
@@ -525,8 +540,8 @@ lebene projiziert.
 \end_layout
 
 \begin_layout Standard
-Es sind zwei äquivalente Lösungsansätze denkbar, die Erdrotation zu berücksichti
-gen 
+Es sind zwei äquivalente Lösungsansätze denkbar, die Rotation der Erde um
+ ihre Rotationsachse zu berücksichtigen 
 \begin_inset Note Note
 status collapsed
 
@@ -996,7 +1011,7 @@ Jahreszeitabhängigkeit
 
 \begin_layout Standard
 Die Erde bewegt sich rechtshändig, also entgegen dem Uhrzeigersinn, um die
- fixierte Sonne (siehe dazu z.B.
+ Sonne (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -1028,12 +1043,12 @@ noprefix "false"
 
 \begin_layout Standard
 In dieser Arbeit wird der jahreszeitliche Einfluss durch eine Kreisbewegung
- der Sonne um die fixierte Erde berücksichtigt.
+ der Sonne um die als fixiert angenommene Erde berücksichtigt.
  Man kann deshalb im Erd-Koordinatensystem den Ort der Sonne als Funktion
  des jahreszeitlichen Umlaufwinkels 
 \begin_inset Formula 
 \begin{equation}
-\Omega=\omega T^{*}\label{eq:Omega}
+\Omega=\frac{2\pi}{365}T^{*}\label{eq:Omega}
 \end{equation}
 
 \end_inset
@@ -1059,10 +1074,6 @@ durch
 \begin_layout Standard
 beschreiben.
  Dabei ist 
-\begin_inset Formula $\omega=\frac{2\pi}{365}$
-\end_inset
-
- und 
 \begin_inset Formula $T^{*}\in\left[0,365\right)$
 \end_inset
 
@@ -1176,65 +1187,15 @@ Fuss- und Endpunkt des Stabes
 \end_layout
 
 \begin_layout Standard
-Der Ort des Stabfusspunktes im Erd-Koordinatensystem 
-\begin_inset Formula 
-\[
-\underline{P}=\left(\begin{array}{c}
-p_{1}\\
-p_{2}\\
-p_{3}
-\end{array}\right)
-\]
-
-\end_inset
-
-bestimmt sich aus der geographischen Breite 
+Aus der vorgegebenen geographischen Breite 
 \begin_inset Formula $\Theta_{G}$
 \end_inset
 
-, der geographischen Länge 
-\begin_inset Formula $\varphi=0$
+ des Stabfusspunktes folgt für den Winkel zur Erd-Rotationsachse 
+\begin_inset Formula $\frac{\pi}{2}-\Theta_{G}$
 \end_inset
 
-, dem Erdradius 
-\begin_inset Formula $R_{E}$
-\end_inset
-
- und dem Achsneigungswinkel 
-\begin_inset Formula $\psi$
-\end_inset
-
- zu 
-\begin_inset Formula 
-\begin{align}
-p_{1} & =R_{E}\cos\left(\Theta_{G}-\psi\right)\label{eq:StabFussPunkt}\\
-p_{2} & =0\nonumber \\
-p_{3} & =R_{E}\sin\left(\Theta_{G}-\psi\right).\nonumber 
-\end{align}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Dabei wurde die geographischen Breite 
-\begin_inset Formula $\Theta_{G}-\psi$
-\end_inset
-
- in den Polarwinkel 
-\begin_inset Formula $\Theta$
-\end_inset
-
- des Kugelkoordinatensystem 
-\begin_inset Formula $\left(r,\Theta,\varphi\right)$
-\end_inset
-
- umgerechnet (siehe dazu z.B.
-\begin_inset space ~
-\end_inset
-
-
+ (siehe dazu 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Wikipedia4"
@@ -1243,7 +1204,79 @@ literal "false"
 \end_inset
 
 ).
+ Berücksichtigt man noch den Neigungswinkel 
+\begin_inset Formula $\psi$
+\end_inset
+
+ der Erdrotationsachse zur Ekliptik, dann folgt für den Polarwinkel im Erd-Kugel
+koordinatensystem 
+\begin_inset Formula $\left(r,\Theta,\varphi\right)$
+\end_inset
+
+ der Ausdruck 
+\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}+\psi=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)$
+\end_inset
+
+.
  
+\end_layout
+
+\begin_layout Standard
+Für die Komponenten des Stab-Fusspunkts 
+\begin_inset Formula $\underline{P}=\left(p_{1},p_{2},p_{3}\right)^{T}$
+\end_inset
+
+ gelten damit wegen der in Abschnitt 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Annahmen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ getroffenen Annahme 
+\begin_inset Formula $\varphi=0$
+\end_inset
+
+ die Gleichungen 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\color green
+OK!
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1} & = & R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
+p_{2} & = & 0\\
+p_{3} & = & R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+oder auch 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1} & = & R_{E}\cos\left(\Theta_{G}-\psi\right)\\
+p_{2} & = & 0\\
+p_{3} & = & R_{E}\sin\left(\Theta_{G}-\psi\right).
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1255,7 +1288,7 @@ Mit der Stablänge
 \begin_inset Formula $\underline{Q}$
 \end_inset
 
- im Erd-Koordinatensystem 
+ 
 \begin_inset Formula 
 \begin{equation}
 \underline{Q}=\left(1+\frac{L}{R_{E}}\right)\underline{P}.\label{eq:Endpunkt}
@@ -1872,12 +1905,11 @@ lebene
 \begin_inset Formula $T$
 \end_inset
 
- abgebildet werden.
- Sein Ursprung soll im Stabfusspunkt 
+ abgebildet werden dessen Ursprung soll im Stabfusspunkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- liegen.
+ liegen soll.
  
 \begin_inset Note Note
 status collapsed
@@ -3489,22 +3521,20 @@ und für den Winkel
 \end_layout
 
 \begin_layout Standard
-Für den Winkel 
+Für 
 \begin_inset Formula $\psi$
 \end_inset
 
- folgt wegen der Winkelsumme im Dreieck (A,B) 
+ folgt wegen der Winkelsumme 
 \begin_inset Formula $\alpha+\psi+\gamma=\pi$
 \end_inset
 
- die Gleichung 
-\end_layout
-
-\begin_layout Standard
+ im Dreieck (A,B) die Gleichung 
 \begin_inset Formula $\psi=\pi-\alpha-\gamma$
 \end_inset
 
- und für 
+.
+ Für 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -3516,11 +3546,7 @@ Für den Winkel
 \begin_inset Formula $\lambda=\pi-\psi.$
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Standard
-Wir haben jetzt ein rechtwinkliges Dreieck (C) mit den Katheten 
+ Wir haben ein rechtwinkliges Dreieck (C) mit den Katheten 
 \begin_inset Formula $L$
 \end_inset
 
@@ -3533,38 +3559,47 @@ Wir haben jetzt ein rechtwinkliges Dreieck (C) mit den Katheten
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Es gilt weiterhin für den gesuchten Punkt 
+ Es gilt weiterhin für den gesuchten Punkt 
 \begin_inset Formula $x$
 \end_inset
 
  auf der Tangente 
-\begin_inset Formula 
-\[
-\tan\lambda=\frac{x}{L}
-\]
-
+\begin_inset Formula $\tan\lambda=\frac{x}{L}$
 \end_inset
 
+ oder umgeformt 
+\begin_inset Note Note
+status collapsed
 
+\begin_layout Subsection*
+Nebenrechnung 
 \end_layout
 
-\begin_layout Standard
-oder 
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 x & = & L\tan\lambda\\
  & = & L\tan\left(\pi-\psi\right)\\
  & = & L\tan\left[\pi-\left(\pi-\alpha-\gamma\right)\right]\\
  & = & L\tan\left(\alpha+\gamma\right)\\
- & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right].
+ & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right]
 \end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+x & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right].\label{eq:TestTrigonometrie}
+\end{eqnarray}
 
 \end_inset
 
@@ -3572,8 +3607,8 @@ x & = & L\tan\lambda\\
 \end_layout
 
 \begin_layout Standard
-Die numerische Ergebnisse sind für Las Palmas sind (siehe MatLab-Quelle
- 
+Die numerische Ergebnisse dieser Gleichung stimmen mit den oben errechneten
+ Ergebnissen überein (siehe MatLab-Quelle 
 \begin_inset Quotes gld
 \end_inset
 
@@ -3581,85 +3616,7 @@ TigonometrischerTest.m
 \begin_inset Quotes grd
 \end_inset
 
-) 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Zeitpunkt
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-min.
- Trajektorienabstand zum Stab [m]
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-SSW
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.123241951044209
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-WSW
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.891081510194158
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Beide Ergebnisse stimmen mit den oben errechneten Ergebnissen überein.
+).
  
 \end_layout
 
@@ -3688,7 +3645,7 @@ noprefix "false"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4109,14 +4066,20 @@ Die Frage lautet: Wie muss
 \begin_layout Standard
 
 \color red
+Still to do! 
+\end_layout
+
+\begin_layout Standard
+
+\color red
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 
 \color red
-Still to do! Die implementierte Lösung führt zu Problemen im Fall der Sommersonn
-enwende: Interner Fehler! 
+Die implementierte Lösung führt zu Problemen im Fall der Sommersonnenwende:
+ Interner Fehler! 
 \end_layout
 
 \end_inset
@@ -4302,7 +4265,7 @@ status open
 \begin_layout Standard
 Für sie gilt 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Für Gleichung
@@ -4529,13 +4492,36 @@ f\left(\alpha\right)=-\sin\left(\Theta_{G}-\psi\right)\chi_{1}\left(\alpha\right
 \end_layout
 
 \begin_layout Standard
+Die 
+\begin_inset Formula $x$
+\end_inset
+
+-Achse der zu untersuchenden Trajektorie 
+\begin_inset Formula $y\left(x\right)$
+\end_inset
+
+ wird durch 
+\begin_inset Formula $\chi_{2}\left(\alpha\right)$
+\end_inset
+
+ gebildet und die 
+\begin_inset Formula $y$
+\end_inset
+
+-Achse durch 
+\begin_inset Formula $f\left(\alpha\right).$
+\end_inset
+
+ 
+\color red
+
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 \color red
-Hier hat sich irgendein Fehler eingeschlichen? 
+Hier hat sich irgendein Fehler eingeschlichen?
 \end_layout
 
 \begin_layout Plain Layout
@@ -4557,7 +4543,7 @@ Keine Übereinstimmung bei
 \begin_inset Formula $y_{1}$
 \end_inset
 
-=1.11 m)! 
+=1.11 m)!
 \end_layout
 
 \begin_layout Plain Layout
@@ -4566,33 +4552,9 @@ Keine Übereinstimmung bei
 \begin_inset Formula $y_{2}$
 \end_inset
 
-=0 stimmt, Steigung=0 stimmt auch! 
+=0 stimmt, Steigung=0 stimmt auch!
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Die 
-\begin_inset Formula $x$
-\end_inset
-
--Achse der zu untersuchenden Trajektorie 
-\begin_inset Formula $y\left(x\right)$
-\end_inset
-
- wird durch 
-\begin_inset Formula $\chi_{2}\left(\alpha\right)$
-\end_inset
-
- gebildet und die 
-\begin_inset Formula $y$
-\end_inset
-
--Achse durch 
-\begin_inset Formula $f\left(\alpha\right).$
 \end_inset
 
  
@@ -4704,7 +4666,7 @@ und wegen
 
   speziell 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 

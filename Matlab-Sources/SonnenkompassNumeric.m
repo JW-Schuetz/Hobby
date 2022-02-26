@@ -52,25 +52,23 @@ function SonnenkompassNumeric
     yPlus = eval( subs( f, 'alpha', 'alphaHighNoon' ) );
     yPlus = eval( yPlus );
 
-%     % Test-Environment
-% 	ahn = eval( alphaHighNoon );
-% 	delta = 0.1 : 0.1 : 1;
-% 	ahnP = ahn + delta;
-% 	ahnM = ahn - delta;
-%     ahn = sort( [ ahnM, ahn, ahnP ] );
-%     for n = 1 : length( ahn )
-%         yPlus( n ) = eval( subs( f, 'alpha', ahn( n ) ) );
-%     end
-%     plot( yPlus )
-
     % Zeit des astronomischen Mittags bestimmen
     tHighNoon = 60 * 12 * ( eval( alphaHighNoon ) + pi ) / pi;
     if( tStart >= tHighNoon || tEnd < tHighNoon )
         error( 'Interner Fehler!' )
     end
 
-    % Ausdrücke für mue0, x0
+    % die dreidimensionale Trajektorie
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Test-Environment
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    thetaGSym = sym( 'thetaG', 'real' );
+    psiSym    = sym( 'psi', 'real' );
+    [ y1, y2 ] = MapTrajektoryToTangentialPlane( x0( 1 ), x0( 2 ), x0( 3 ), ...
+                    thetaGSym - psiSym );
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     % Zahlenwerte bis auf alpha substituieren, explizit wegen
 	% NotUsed MatLab-Warnungen
@@ -131,9 +129,7 @@ function [ y1, y2 ] = MapTrajektoryToTangentialPlane( x1, x2, x3, theta )
     end
 
     % Projizieren auf die Tangentialebene
-    A = [ 0, 1, 0;
-          0, 0, 1 ];
-
+    A = [ 0, 1, 0; 0, 0, 1 ];
     x = A * [ x1; x2; x3 ];
 
     y1 = x( 1 );
