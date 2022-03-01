@@ -47,8 +47,8 @@ function SonnenkompassPlot()
 
     % Minimaler Abstand Stab <-> Schattenende und sein Index bestimmen,
     % minNdx ist Index des astronomischen Mittags (AM). 
-    % Hier wird genutzt, dass gilt: y( minNdx, 1 ) = 0
-    [ minDistance, minNdx ] = min( y( :, 2 ) );
+    [ ~, minNdx ] = min( abs( y( :, 1 ) ) );
+    minDistance   = y( minNdx, 2 );
 
     figure
     title( 'Schattentrajektorie' )
@@ -79,11 +79,11 @@ function SonnenkompassPlot()
 	text( 0, yUhrZeit, 'astronomischer Mittag', 'HorizontalAlignment', ...
           'center' )
 
-    % Asymptoten plotten
-    plot( y( minNdx : -1 : 1, 1 ), y( minNdx : -1 : 1, 3 ), ...
-          'Color', 'r', 'LineWidth', 1 )
-    plot( y( minNdx : N, 1 ), y( minNdx : N, 3 ), 'Color', 'r', ...
-          'LineWidth', 1 )
+%     % Asymptoten plotten
+%     plot( y( minNdx : -1 : 1, 1 ), y( minNdx : -1 : 1, 3 ), ...
+%           'Color', 'r', 'LineWidth', 1 )
+%     plot( y( minNdx : N, 1 ), y( minNdx : N, 3 ), 'Color', 'r', ...
+%           'LineWidth', 1 )
 
     legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
 

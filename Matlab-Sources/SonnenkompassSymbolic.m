@@ -42,9 +42,6 @@ function SonnenkompassSymbolic
     s( 2 ) = rS * sin( omega );
     s( 3 ) = 0;
 
-    % Limits für zulässiges alphas berechnen
-    [ alphaPlus, alphaMinus ] = alphaLimits( rS, rE, p( 1 ), p( 3 ), psi, omega );
-
     % die Sonne wird um -alpha gedreht
     dMinusAlpha = subs( dAlpha, 'alpha', str2sym( '-alpha' ) );
     sAlpha      = dMinusAlpha * s;
@@ -52,83 +49,67 @@ function SonnenkompassSymbolic
     % PSAlpha als Koeffizienten des Vektors P ausdrücken 
     pSAlpha = collect( p' * sAlpha, p );
 
-    % Steigung der Trajektorie und astronomischen Mittag bestimmen
-    [ sPlus, alphaHighNoon ] = steigung( alpha, psi, omega, ...
-                                         thetaG - psi );
+    % astronomischen Mittag bestimmen, Hauptwert
+    alphaHighNoon = atan2( tan( omega ), cos( psi ) );
 
     % omegaS und mue0 bestimmen
     omegaS = simplify( rE - pSAlpha / rE );
     omegaS = omegaS / lS;
-    mue0   = omegaS / ( 1 + omegaS );
 
-    % die drei von alpha abhängigen Komponenten von xS( alpha ) bestimmen
-    [ chi2, f ] = chi( rS, rE, lS, alpha, omega, thetaG, psi, mue0 );
+    % Lösung von omegaS==-1 finden
+    s = solve( omegaS == -1, alpha, 'Real', true, 'ReturnConditions', true );
+    alphaPlus  = s.alpha( 1 );
+    alphaMinus = s.alpha( 2 );
 
-    save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', 'mue0', ...
-          'alphaPlus', 'alphaMinus', 'sPlus', 'alphaHighNoon', 'chi2', 'f' )
+    % mue0 berechnen
+    mue0 = omegaS / ( 1 + omegaS );
+
+    % die dreidimensionale Trajektorie
+    x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
+
+    % die zweidimensioname Trajektorie
+    y0 = MapToPlane( x0, thetaG, psi );
+
+    % Ableitung der Trajektorien-Komponenten nach alpha
+    y0Strich = diff( y0, 'alpha' );
+
+    % Steigung der Trajektorie 
+    sPlus = y0Strich( 2 ) / y0Strich( 1 );
+
+    save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
+          'mue0', 'alphaPlus', 'alphaMinus', 'sPlus', 'alphaHighNoon', ...
+          'x0', 'y0' )
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [ alphaPlus, alphaMinus ] = alphaLimits( rS, rE, p1, p3, psi, omega )
-    % Limits für den Erdrotationswinkel alpha (Tageszeit)
-    % Die hier benutzten Formeln werden in "SonnenKompassSymbolicAddon.m"
-    % verfifiziert.
-	as = - rS * ( p1 * cos( psi ) - p3 * sin( psi ) ) ...
-            * sin( omega );
-    bs = - rS * ( p1 * cos( psi ) - p3 * sin( psi ) ) * cos( psi ) ...
-            * cos( omega );
-    cs = rE^2 - rS * ( p1 * sin( psi )^2 + p3 * cos( psi ) * sin( psi ) ) ...
-            * cos( omega );
+function y = MapToPlane( x0, thetaG, psi )
+    theta = thetaG - psi;
 
-    wurzel  = sqrt( as^2 + bs^2 - cs^2 );
-    nenner  = bs - cs;
-    zPlus   = as + wurzel;
-    zMinus  = as - wurzel;
+    % Punkt drehen um x2-Achse und den Winkel theta
+    if( theta ~= 0 )
+        [ x1, x2, x3 ] = rotateX2( theta, x0( 1 ), x0( 2 ), x0( 3 ) );
+    end
 
-    alphaPlus  = 2 * atan2( zPlus,  nenner );
-    alphaMinus = 2 * ( atan2( zMinus, nenner ) + pi );
+    % Projizieren auf die Tangentialebene
+    A = [ 0, 1, 0; 0, 0, 1 ];
+    x = A * [ x1; x2; x3 ];
+
+    y = [ x( 1 ); x( 2 ) ];
 end
 
-function [ sPlus, highNoon ] = steigung( alpha, psi, omega, offset )
-    % Steigung der Trajektorie und astronomischer Mittag
-    A = -cos( psi )^2 * sin( alpha ) * cos( omega ) + ...
-         cos( psi ) * cos( alpha ) * sin( omega );
-    B = -cos( psi ) * sin( psi ) * sin( alpha ) * cos( omega ) + ...
-         sin( psi ) * cos( alpha ) * sin( omega );
-    C =  cos( psi ) * cos( alpha ) * cos( omega ) + ...
-         sin( alpha ) * sin( omega );
+function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
+    % Punkt drehen um x2-Achse und den Winkel theta
+    c = cos( theta );
+    s = sin( theta );
 
-	s     = ( sin( offset ) * A + cos( offset ) * B ) / C;
-    sPlus = simplify(  s );
+    D = [  c, 0, s;
+           0, 1, 0;
+          -s, 0, c ];
 
-    highNoon = atan2( tan( omega ), cos( psi ) );
-end
+    x = D * [ x1; x2; x3 ];
 
-function [ chi2, f ] = chi( rS, rE, lS, alpha, omega, thetaG, psi, mue0 )
-    % Die zweidimensionale Trajektorie mit (x,y)=(chi2,f)
-    offset = thetaG - psi;
-
-    fak  = ( rE + lS ) * mue0;
-    rho1 = fak * cos( offset );
-    rho2 = 0;
-    rho3 = fak * sin( offset );
-
-    fak  = rS * ( 1 - mue0 );
-    sig1 = sin( psi )^2 * ( 1 - cos( alpha ) ) * cos( omega ) + ...
-           cos( alpha ) * cos( omega ) + ...
-           cos( psi ) * sin( alpha ) * sin( omega );
-    sig1 = fak * sig1;
-    sig2 = -cos( psi ) * sin( alpha ) * cos( omega ) + ...
-           cos( alpha ) * sin( omega );
-    sig2 = fak * sig2;
-    sig3 = cos( psi ) * sin( psi ) * ( 1 - cos( alpha ) ) * cos( omega ) ...
-           - sin( psi ) * sin( alpha ) * sin( omega );
-    sig3 = fak * sig3;
-
-    chi1 = simplify( rho1 + sig1 );
-    chi2 = simplify( rho2 + sig2 );
-    chi3 = simplify( rho3 + sig3 );
-
-    f = -sin( offset ) * chi1 + cos( offset ) * chi3;
+    x1 = x( 1 );
+    x2 = x( 2 );
+    x3 = x( 3 );
 end

@@ -1,3 +1,4 @@
+%#ok<*NASGU> 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Numerische Lösung des Problems "Sonnenkompass"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -7,7 +8,7 @@ function SonnenkompassNumeric
 
     load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
           'alphaPlus', 'alphaMinus', 'sPlus', 'alphaHighNoon', ...
-          'chi2', 'f' ) %#ok<NASGU>
+          'x0', 'y0' )
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -39,115 +40,37 @@ function SonnenkompassNumeric
     p3 = rE * sin( offset );        % z-Koordinate
 
     % numerische Limits für zulässige Zeiten berechnen (Minuten)
+    k = 0;
     tStart = ceil( 60 * 12 * eval( alphaPlus ) / pi ) + 10;     % aufrunden
+    k = 1;
     tEnd   = floor( 60 * 12 * eval( alphaMinus ) / pi ) - 10;	% abrunden
 
-    % numerisch Grenz-Steigungswerte bestimmen, es gilt sPlus == sMinus
-	sPlus = eval( subs( sPlus, 'alpha', 'alphaHighNoon' ) );
-    sPlus = eval( sPlus );
-
-    % Parameter der Symptote bestimmen
-    xPlus = eval( subs( chi2, 'alpha', 'alphaHighNoon' ) );
-    xPlus = eval( xPlus );
-    yPlus = eval( subs( f, 'alpha', 'alphaHighNoon' ) );
-    yPlus = eval( yPlus );
-
     % Zeit des astronomischen Mittags bestimmen
-    tHighNoon = 60 * 12 * ( eval( alphaHighNoon ) + pi ) / pi;
+    tHighNoon = 60 * 12 * eval( alphaHighNoon + k * pi ) / pi;
     if( tStart >= tHighNoon || tEnd < tHighNoon )
         error( 'Interner Fehler!' )
     end
 
-    % die dreidimensionale Trajektorie
-    x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Test-Environment
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    thetaGSym = sym( 'thetaG', 'real' );
-    psiSym    = sym( 'psi', 'real' );
-    [ y1, y2 ] = MapTrajektoryToTangentialPlane( x0( 1 ), x0( 2 ), x0( 3 ), ...
-                    thetaGSym - psiSym );
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-    % Zahlenwerte bis auf alpha substituieren, explizit wegen
-	% NotUsed MatLab-Warnungen
-    mue0 = subs( mue0, 'omega', omega );
-    mue0 = subs( mue0, 'rS',    rS );
-    mue0 = subs( mue0, 'lS',    lS );
-    mue0 = subs( mue0, 'p1',    p1 );
-    mue0 = subs( mue0, 'p2',    p2 );
-    mue0 = subs( mue0, 'p3',    p3 );
-    mue0 = subs( mue0, 'rE',    rE );
-    mue0 = subs( mue0, 'psi',   psi );
-
-	% Zahlenwerte bis auf alpha substituieren (implizit)
-    x0 = subs( x0 );
-
-    % eins der Zeitsamples soll genau bei t = tHighNoon sein
+    % eins der Zeitsamples soll genau bei t = tHighNoon liegen
     tOffset = fix( tHighNoon ) - tHighNoon;
 
     % Numerische Auswertung
     N = tEnd - tStart + 1;	% Anzahl der Zeitpunkte
-    y = zeros( N, 3 );      % x, y_trajektorie und y_asymptote [m]
+    y = zeros( N, 2 );      % Trajektorie [m]
+
+	% Zahlenwerte bis auf alpha substituieren
+    y0 = subs( y0 );
 
     % Position und Zeitpunkt berechnen
     for i = 1 : N
         t     = tStart - tOffset + ( i - 1 );	% t in Minuten
         alpha = pi / ( 12 * 60 ) * t;           % zugehöriger Winkel
 
-        mue = subs( mue0, 'alpha', alpha );     % in mue0 alpha substituieren
-        mue = eval( mue );
-        if( mue > 1 )
-            x = subs( x0, 'alpha', alpha )';	% in x0 alpha substituieren
-            x = eval( x );
+        yLoc = subs( y0, 'alpha', alpha )';     % in x0 alpha substituieren
+        yLoc = eval( yLoc );
 
-            pts1 = x( 1 );  % x1-Koordinate
-            pts2 = x( 2 );  % x2-Koordinate
-            pts3 = x( 3 );  % x3-Koordinate
-        else
-            error( 'SonnenkompassNumeric: Keine Lösung!' )
-        end
-
-        % Projektion der Trajektorie auf die Tangentialebene
-        [ x, y1 ] = MapTrajektoryToTangentialPlane( pts1, pts2, pts3, offset );
-        y2        = Asymptote( x, sPlus, xPlus, yPlus );
-        y( i, : ) = [ x, y1, y2 ];
+        y( i, : ) = [ yLoc( 1 ), yLoc( 2 ) ];
     end
 
     save( fileName, 'y' )
-end
-
-function y = Asymptote( x, sPlus, xPlus, yPlus )
-    y = sPlus * ( x - xPlus ) + yPlus;
-end
-
-function [ y1, y2 ] = MapTrajektoryToTangentialPlane( x1, x2, x3, theta )
-    % Punkt drehen um x2-Achse und den Winkel theta
-    if( theta ~= 0 )
-        [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 );
-    end
-
-    % Projizieren auf die Tangentialebene
-    A = [ 0, 1, 0; 0, 0, 1 ];
-    x = A * [ x1; x2; x3 ];
-
-    y1 = x( 1 );
-    y2 = x( 2 );
-end
-
-function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
-    % Punkt drehen um x2-Achse und den Winkel theta
-    c = cos( theta );
-    s = sin( theta );
-
-    D = [  c, 0, s;
-           0, 1, 0;
-          -s, 0, c ];
-
-    x = D * [ x1; x2; x3 ];
-
-    x1 = x( 1 );
-    x2 = x( 2 );
-    x3 = x( 3 );
 end
