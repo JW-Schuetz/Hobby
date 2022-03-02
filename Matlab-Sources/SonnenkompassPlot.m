@@ -8,6 +8,12 @@ function SonnenkompassPlot()
 	switch( ort )
         case 'LasPalmas'
             switch datum
+                case '12.04.2021'
+                    arrowType  = '\downarrow';
+                    yArrow     = 1.3;
+                    yUhrZeit   = 1.4;
+                    squareSize = 2;
+
                 case '12.10.2021'
                     arrowType  = '\downarrow';
                     yArrow     = 1.3;
@@ -41,8 +47,6 @@ function SonnenkompassPlot()
 	end
 
     % Ergebnisdaten laden
-    % Trajektorie: x = y( :, 1 ), y = y( :, 2 )
-    % Asymtote:    x = y( :, 1 ), y = y( :, 3 )
     load( [ ort, '-', datum, '.mat' ], 'y' )
 
     % Minimaler Abstand Stab <-> Schattenende und sein Index bestimmen,

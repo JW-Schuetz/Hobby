@@ -17,10 +17,12 @@ function SonnenkompassSymbolic
     p      = sym( 'p', [ 3, 1 ], 'real' );      % Fusspunkt des Stabes auf der Erdoberfläche und Stabende
     s      = sym( 's', [ 3, 1 ], 'real' );      % Sonnenposition in Bezug zum Erdmittelpunkt
 
+    % Einheitsvektor
     e( 1 ) = sin( psi );
     e( 2 ) = 0;
     e( 3 ) = cos( psi );
 
+    % Drehmatrix
     ca = cos( alpha );
     sa = sin( alpha );
 
@@ -36,8 +38,10 @@ function SonnenkompassSymbolic
     dAlpha( 2, 3 ) = e( 2 ) * e( 3 ) * ( 1 - ca ) - e( 1 ) * sa;
     dAlpha( 3, 3 ) = e( 3 )^2        * ( 1 - ca ) + ca;
 
+    % Stabendpunkt
     q = ( 1 + lS / rE ) * p;
 
+    % Sonnenposition im Jahresverlauf
     s( 1 ) = rS * cos( omega );
     s( 2 ) = rS * sin( omega );
     s( 3 ) = 0;
@@ -49,17 +53,16 @@ function SonnenkompassSymbolic
     % PSAlpha als Koeffizienten des Vektors P ausdrücken 
     pSAlpha = collect( p' * sAlpha, p );
 
-    % astronomischen Mittag bestimmen, Hauptwert
-    alphaHighNoon = atan2( tan( omega ), cos( psi ) );
-
-    % omegaS und mue0 bestimmen
+    % omegaS bestimmen
     omegaS = simplify( rE - pSAlpha / rE );
     omegaS = omegaS / lS;
 
     % Lösung von omegaS==-1 finden
     s = solve( omegaS == -1, alpha, 'Real', true, 'ReturnConditions', true );
-    alphaPlus  = s.alpha( 1 );
-    alphaMinus = s.alpha( 2 );
+    alphaMinus = s.alpha( 1 );
+    alphaPlus  = s.alpha( 2 );
+    alphaPara  = s.parameters;
+    alphaCond  = s.conditions;
 
     % mue0 berechnen
     mue0 = omegaS / ( 1 + omegaS );
@@ -73,12 +76,9 @@ function SonnenkompassSymbolic
     % Ableitung der Trajektorien-Komponenten nach alpha
     y0Strich = diff( y0, 'alpha' );
 
-    % Steigung der Trajektorie 
-    sPlus = y0Strich( 2 ) / y0Strich( 1 );
-
     save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
-          'mue0', 'alphaPlus', 'alphaMinus', 'sPlus', 'alphaHighNoon', ...
-          'x0', 'y0' )
+          'mue0', 'alphaPlus', 'alphaMinus', 'alphaCond', 'alphaPara', ...
+          'y0Strich', 'x0', 'y0' )
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

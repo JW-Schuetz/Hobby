@@ -7,7 +7,7 @@ function SonnenkompassNumeric
     clear
 
     load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
-          'alphaPlus', 'alphaMinus', 'sPlus', 'alphaHighNoon', ...
+          'alphaPlus', 'alphaMinus', 'alphaCond', 'alphaPara', 'y0Strich', ...
           'x0', 'y0' )
 
     % Variable Daten
@@ -39,35 +39,65 @@ function SonnenkompassNumeric
     p2 = 0;                         % y-Koordinate
     p3 = rE * sin( offset );        % z-Koordinate
 
-    % numerische Limits für zulässige Zeiten berechnen (Minuten)
-    k = 0;
-    tStart = ceil( 60 * 12 * eval( alphaPlus ) / pi ) + 10;     % aufrunden
-    k = 1;
-    tEnd   = floor( 60 * 12 * eval( alphaMinus ) / pi ) - 10;	% abrunden
+	% Zahlenwerte bis auf alpha substituieren
+    y0 = subs( y0 );
 
-    % Zeit des astronomischen Mittags bestimmen
-    tHighNoon = 60 * 12 * eval( alphaHighNoon + k * pi ) / pi;
+    % numerische Limits für zulässige Zeiten berechnen (Minuten)
+    k = sym( 'k', 'integer' );
+
+    k         = subs( 'k', 0 );
+    alphaPlus = subs( alphaPlus );
+    tStart    = ceil( 60 * 12 * alphaPlus / pi ) + 10;	% aufrunden
+    tStart    = double( tStart );
+
+    k          = subs( 'k', 1 );
+    alphaMinus = subs( alphaMinus );
+    tEnd       = floor( 60 * 12 * alphaMinus / pi ) - 10;	% abrunden
+    tEnd       = double( tEnd );
+
+    % astronomischer Mittag 
+    alphaHighNoon = atan2( tan( omega ), cos( psi ) ) + k * pi;
+
+    % Überprüfung von alphaHighNoon: Steigung sollte 0 sein
+    sPlusHN = subs( y0Strich( 2 ), 'alpha', alphaHighNoon );
+	if( double( subs( sPlusHN ) ) > 1e-12 )
+        error( 'Interner Fehler: Steigung am astronomischen Mittag ~= 0' )
+	end
+
+    tHighNoon = 60 * 12 * double( alphaHighNoon ) / pi;
     if( tStart >= tHighNoon || tEnd < tHighNoon )
-        error( 'Interner Fehler!' )
+        error( 'Interner Fehler: astronomischen Mittag nicht im Zeitintervall' )
     end
+
+	% Steigung und Trajektorienpunkt bei alpha = alphaPlus
+    ap = sym( 'ap', 'real' );
+    ap = alphaPlus / 2;
+
+    % Steigung
+    sPlus = subs( s, 'alpha', ap );
+    sPlus = double( subs( sPlus ) );
+
+    % Trajektorie x-Achse
+    y01 = subs( y0( 1 ), 'alpha', ap );
+    y01 = double( subs( y01 ) );
+
+    % Trajektorie y-Achse
+    y02 = subs( y0( 2 ), 'alpha', ap );
+    y02 = double( subs( y02 ) );
 
     % eins der Zeitsamples soll genau bei t = tHighNoon liegen
     tOffset = fix( tHighNoon ) - tHighNoon;
 
     % Numerische Auswertung
-    N = tEnd - tStart + 1;	% Anzahl der Zeitpunkte
-    y = zeros( N, 2 );      % Trajektorie [m]
-
-	% Zahlenwerte bis auf alpha substituieren
-    y0 = subs( y0 );
+    N = tEnd - tStart + 1;      % Anzahl der Zeitpunkte
+    y = zeros( N, 2 );          % Trajektorie, Asymptote [m]
 
     % Position und Zeitpunkt berechnen
     for i = 1 : N
         t     = tStart - tOffset + ( i - 1 );	% t in Minuten
         alpha = pi / ( 12 * 60 ) * t;           % zugehöriger Winkel
 
-        yLoc = subs( y0, 'alpha', alpha )';     % in x0 alpha substituieren
-        yLoc = eval( yLoc );
+        yLoc = subs( y0, 'alpha', alpha )';     % in y0 alpha substituieren
 
         y( i, : ) = [ yLoc( 1 ), yLoc( 2 ) ];
     end
