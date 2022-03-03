@@ -46,17 +46,17 @@ function SonnenkompassNumeric
     k = sym( 'k', 'integer' );
 
     k         = subs( 'k', 0 );
-    alphaPlus = subs( alphaPlus );
-    tStart    = ceil( 60 * 12 * alphaPlus / pi ) + 10;	% aufrunden
-    tStart    = double( tStart );
-
-    k          = subs( 'k', 1 );
     alphaMinus = subs( alphaMinus );
-    tEnd       = floor( 60 * 12 * alphaMinus / pi ) - 10;	% abrunden
-    tEnd       = double( tEnd );
+    tStart    = ceil( 60 * 12 * double( alphaMinus ) / pi ) + 10;	% aufrunden
+
+    k         = subs( 'k', 1 );
+    alphaPlus = subs( alphaPlus );
+    tEnd      = floor( 60 * 12 * double( alphaPlus ) / pi ) - 10;	% abrunden
 
     % astronomischer Mittag 
+    k             = subs( 'k', 1 );
     alphaHighNoon = atan2( tan( omega ), cos( psi ) ) + k * pi;
+    tHighNoon     = floor( 60 * 12 * double( alphaHighNoon ) / pi );
 
     % Überprüfung von alphaHighNoon: Steigung sollte 0 sein
     sPlusHN = subs( y0Strich( 2 ), 'alpha', alphaHighNoon );
@@ -74,7 +74,7 @@ function SonnenkompassNumeric
     ap = alphaPlus / 2;
 
     % Steigung
-    sPlus = subs( s, 'alpha', ap );
+    sPlus = subs( y0Strich, 'alpha', ap );
     sPlus = double( subs( sPlus ) );
 
     % Trajektorie x-Achse

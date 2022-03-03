@@ -17,7 +17,10 @@ function SonnenkompassSymbolic
     p      = sym( 'p', [ 3, 1 ], 'real' );      % Fusspunkt des Stabes auf der Erdoberfläche und Stabende
     s      = sym( 's', [ 3, 1 ], 'real' );      % Sonnenposition in Bezug zum Erdmittelpunkt
 
-    % Einheitsvektor
+    % der Längengrad ist stets 0°
+    p( 2 ) = 0;
+
+    % Einheitsvektor Rotationsachse
     e( 1 ) = sin( psi );
     e( 2 ) = 0;
     e( 3 ) = cos( psi );
@@ -58,11 +61,13 @@ function SonnenkompassSymbolic
     omegaS = omegaS / lS;
 
     % Lösung von omegaS==-1 finden
-    s = solve( omegaS == -1, alpha, 'Real', true, 'ReturnConditions', true );
-    alphaMinus = s.alpha( 1 );
-    alphaPlus  = s.alpha( 2 );
-    alphaPara  = s.parameters;
-    alphaCond  = s.conditions;
+    res = solve( omegaS == -1, alpha, 'Real', true, ...
+            'ReturnConditions', true );
+
+    alphaPlus  = res.alpha( 2 );
+    alphaMinus = res.alpha( 1 );
+    alphaPara  = res.parameters;
+    alphaCond  = res.conditions;
 
     % mue0 berechnen
     mue0 = omegaS / ( 1 + omegaS );
