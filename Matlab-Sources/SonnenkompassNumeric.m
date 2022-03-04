@@ -8,7 +8,7 @@ function SonnenkompassNumeric
 
     load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
           'alphaPlus', 'alphaMinus', 'alphaCond', 'alphaPara', 'y0Strich', ...
-          'x0', 'y0' )
+          'y0' )
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -45,18 +45,22 @@ function SonnenkompassNumeric
     % numerische Limits für zulässige Zeiten berechnen (Minuten)
     k = sym( 'k', 'integer' );
 
-    k         = subs( 'k', 0 );
-    alphaMinus = subs( alphaMinus );
-    tStart    = ceil( 60 * 12 * double( alphaMinus ) / pi ) + 10;	% aufrunden
+    k          = subs( 'k', 0 );
+    alphaMinus = double( subs( alphaMinus ) );
+    tStart     = ceil( 60 * 12 * alphaMinus / pi ) + 10;	% aufrunden
 
     k         = subs( 'k', 1 );
-    alphaPlus = subs( alphaPlus );
-    tEnd      = floor( 60 * 12 * double( alphaPlus ) / pi ) - 10;	% abrunden
+    alphaPlus = double( subs( alphaPlus ) );
+    tEnd      = floor( 60 * 12 * alphaPlus / pi ) - 10;	% abrunden
 
     % astronomischer Mittag 
-    k             = subs( 'k', 1 );
-    alphaHighNoon = atan2( tan( omega ), cos( psi ) ) + k * pi;
-    tHighNoon     = floor( 60 * 12 * double( alphaHighNoon ) / pi );
+    alphaHighNoon = double( atan2( tan( omega ), cos( psi ) ) + k * pi );
+    tHighNoon     = floor( 60 * 12 * alphaHighNoon / pi );
+
+    tHighNoon = 60 * 12 * alphaHighNoon / pi;
+    if( tStart >= tHighNoon || tEnd < tHighNoon )
+        error( 'Interner Fehler: astronomischen Mittag nicht im Zeitintervall' )
+    end
 
     % Überprüfung von alphaHighNoon: Steigung sollte 0 sein
     sPlusHN = subs( y0Strich( 2 ), 'alpha', alphaHighNoon );
@@ -64,33 +68,12 @@ function SonnenkompassNumeric
         error( 'Interner Fehler: Steigung am astronomischen Mittag ~= 0' )
 	end
 
-    tHighNoon = 60 * 12 * double( alphaHighNoon ) / pi;
-    if( tStart >= tHighNoon || tEnd < tHighNoon )
-        error( 'Interner Fehler: astronomischen Mittag nicht im Zeitintervall' )
-    end
-
-	% Steigung und Trajektorienpunkt bei alpha = alphaPlus
-    ap = sym( 'ap', 'real' );
-    ap = alphaPlus / 2;
-
-    % Steigung
-    sPlus = subs( y0Strich, 'alpha', ap );
-    sPlus = double( subs( sPlus ) );
-
-    % Trajektorie x-Achse
-    y01 = subs( y0( 1 ), 'alpha', ap );
-    y01 = double( subs( y01 ) );
-
-    % Trajektorie y-Achse
-    y02 = subs( y0( 2 ), 'alpha', ap );
-    y02 = double( subs( y02 ) );
-
     % eins der Zeitsamples soll genau bei t = tHighNoon liegen
     tOffset = fix( tHighNoon ) - tHighNoon;
 
     % Numerische Auswertung
     N = tEnd - tStart + 1;      % Anzahl der Zeitpunkte
-    y = zeros( N, 2 );          % Trajektorie, Asymptote [m]
+    y = zeros( N, 2 );          % Trajektorie [m]
 
     % Position und Zeitpunkt berechnen
     for i = 1 : N
@@ -98,8 +81,9 @@ function SonnenkompassNumeric
         alpha = pi / ( 12 * 60 ) * t;           % zugehöriger Winkel
 
         yLoc = subs( y0, 'alpha', alpha )';     % in y0 alpha substituieren
+        yLoc = double( yLoc );
 
-        y( i, : ) = [ yLoc( 1 ), yLoc( 2 ) ];
+        y( i, 1 : 2 ) = [ yLoc( 1 ), yLoc( 2 ) ];   % Trajektorie
     end
 
     save( fileName, 'y' )

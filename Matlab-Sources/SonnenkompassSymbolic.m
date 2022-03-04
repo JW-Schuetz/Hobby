@@ -75,7 +75,7 @@ function SonnenkompassSymbolic
     % die dreidimensionale Trajektorie
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
 
-    % die zweidimensioname Trajektorie
+    % die zweidimensionale Trajektorie
     y0 = MapToPlane( x0, thetaG, psi );
 
     % Ableitung der Trajektorien-Komponenten nach alpha
@@ -83,7 +83,7 @@ function SonnenkompassSymbolic
 
     save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
           'mue0', 'alphaPlus', 'alphaMinus', 'alphaCond', 'alphaPara', ...
-          'y0Strich', 'x0', 'y0' )
+          'y0Strich', 'y0' )
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

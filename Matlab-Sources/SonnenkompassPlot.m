@@ -83,12 +83,6 @@ function SonnenkompassPlot()
 	text( 0, yUhrZeit, 'astronomischer Mittag', 'HorizontalAlignment', ...
           'center' )
 
-%     % Asymptoten plotten
-%     plot( y( minNdx : -1 : 1, 1 ), y( minNdx : -1 : 1, 3 ), ...
-%           'Color', 'r', 'LineWidth', 1 )
-%     plot( y( minNdx : N, 1 ), y( minNdx : N, 3 ), 'Color', 'r', ...
-%           'LineWidth', 1 )
-
     legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
 
 	sprintf( 'Minimum des Abstandes zum Stab: %1.2f Meter', minDistance )

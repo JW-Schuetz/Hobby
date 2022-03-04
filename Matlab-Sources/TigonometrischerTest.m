@@ -21,8 +21,19 @@ x = subs( x, 'sE', 149597870700.0 );
 
 % Sommersonnenwende
 res = subs( x, 'alpha', breite - psi );
-eval( res )
+double( res )
 
 % Wintersonnenwende
 res = subs( x, 'alpha', breite + psi );
-eval( res )
+double( res )
+
+% Ausgabe dieses Skripts:
+
+% ans =
+% 
+%     0.1232
+% 
+% 
+% ans =
+% 
+%     1.8911
