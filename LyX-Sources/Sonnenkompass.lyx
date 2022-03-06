@@ -429,7 +429,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompass.eps
-	lyxscale 200
+	lyxscale 250
 	scale 65
 	BoundingBox 0bp 0bp 769bp 259bp
 	clip
@@ -468,7 +468,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompass1.eps
-	lyxscale 200
+	lyxscale 250
 	scale 65
 	BoundingBox 0bp 0bp 769bp 259bp
 	clip
@@ -1223,6 +1223,86 @@ koordinatensystem
 
 \begin_layout Standard
 Für die Komponenten des Stab-Fusspunkts 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection*
+Nebenrechnung 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompass3.eps
+	lyxscale 200
+	scale 65
+	BoundingBox 0bp 0bp 769bp 259bp
+	clip
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Problemskizze3"
+
+\end_inset
+
+Problemskizze, SSW, astronomischer Mittag
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Gegeben ist im nicht geneigten 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
+\end_inset
+
+-Koordinatensystem die geographische Breite 
+\begin_inset Formula $\Theta_{G}$
+\end_inset
+
+ des Stabfusspunktes.
+ Es gilt für den Polarwinkel des Stabfusspunktes 
+\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Im um den Winkel 
+\begin_inset Formula $\psi$
+\end_inset
+
+ geneigten Koordinatensystem wird der Polarwinkel 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ des Stabfusspunktes grösser.
+ Es folgt 
+\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}+\psi=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
 \underline{P}=\left(p_{1},p_{2},p_{3}\right)^{T}\label{eq:StabFusspunkt}
@@ -1245,18 +1325,6 @@ noprefix "false"
 \end_inset
 
  die Gleichungen 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\color green
-OK!
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Formula 
 \begin{eqnarray*}
 p_{1} & = & R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
@@ -1793,11 +1861,11 @@ Da im Ausdruck der Verbindungsgeraden mit
 \end_inset
 
  das Stabende beschrieben wird, muss 
-\begin_inset Formula $\mu_{0}>1$
+\begin_inset Formula $\mu_{0}\left(\alpha\right)>1$
 \end_inset
 
-, und damit auch 
-\begin_inset Formula $\varOmega^{S}<-1$
+, und damit 
+\begin_inset Formula $\varOmega^{S}\left(\alpha\right)<-1$
 \end_inset
 
  (siehe dazu den Beweis im Anhang
@@ -1816,6 +1884,98 @@ noprefix "false"
 
 ), gelten.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Für die Bedingung 
+\begin_inset Formula $\varOmega^{S}\left(\alpha\right)<-1$
+\end_inset
+
+ gibt es zwei Lösungen 
+\begin_inset Formula $\alpha=\alpha^{\pm}$
+\end_inset
+
+ die jeweils einen additiven Term 
+\begin_inset Formula $\pm2\pi k^{\pm}$
+\end_inset
+
+ mit 
+\begin_inset Formula $k^{\pm}\in\left[0,1,2,\cdots\right]$
+\end_inset
+
+ besitzen.
+ Es gilt also mit den Lösungs-Hauptwerten 
+\begin_inset Formula $\alpha_{0}^{\pm}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\alpha^{\pm}=\alpha_{0}^{\pm}\pm2\pi k^{\pm}.
+\]
+
+\end_inset
+
+Wie bestimmt man 
+\begin_inset Formula $k^{+}$
+\end_inset
+
+ und 
+\begin_inset Formula $k^{-}$
+\end_inset
+
+ ? 
+\end_layout
+
+\begin_layout Plain Layout
+Forderungen: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha^{+}$
+\end_inset
+
+ und 
+\begin_inset Formula $\alpha^{-}$
+\end_inset
+
+ sollen beide positiv sein 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha^{0}$
+\end_inset
+
+ des Sonnenhöchststandes soll zwischen 
+\begin_inset Formula $\alpha^{+}$
+\end_inset
+
+ und 
+\begin_inset Formula $\alpha^{-}$
+\end_inset
+
+ liegen, also soll entweder 
+\begin_inset Formula $\alpha^{+}<\alpha^{0}<\alpha^{-}$
+\end_inset
+
+ oder 
+\begin_inset Formula $\alpha^{-}<\alpha^{0}<\alpha^{+}$
+\end_inset
+
+ gelten.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

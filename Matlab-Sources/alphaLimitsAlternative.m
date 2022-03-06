@@ -1,4 +1,4 @@
-function [ alphaPlus, alphaMinus, conditions, parameters ] = ...
+function [ alphaPlus, alphaMinus ] = ...
                 alphaLimitsAlternative( omegaS, alpha )
     % Alternative Lösung von: omegaS(alpha)=-1
     c = sym( 'c', 'real' );
@@ -34,8 +34,6 @@ function [ alphaPlus, alphaMinus, conditions, parameters ] = ...
 
     alphaPlus  = res.alpha( 1 );
     alphaMinus = res.alpha( 2 );
-    conditions = res.conditions;
-    parameters = res.parameters;
 
     alphaPlus = subs( alphaPlus, 'A', 'a' );
     alphaPlus = subs( alphaPlus, 'B', 'b' );

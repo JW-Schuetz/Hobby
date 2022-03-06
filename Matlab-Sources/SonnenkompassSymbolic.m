@@ -66,8 +66,6 @@ function SonnenkompassSymbolic
 
     alphaPlus  = res.alpha( 2 );
     alphaMinus = res.alpha( 1 );
-    alphaPara  = res.parameters;
-    alphaCond  = res.conditions;
 
     % mue0 berechnen
     mue0 = omegaS / ( 1 + omegaS );
@@ -82,8 +80,7 @@ function SonnenkompassSymbolic
     y0Strich = diff( y0, 'alpha' );
 
     save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
-          'mue0', 'alphaPlus', 'alphaMinus', 'alphaCond', 'alphaPara', ...
-          'y0Strich', 'y0' )
+          'mue0', 'alphaPlus', 'alphaMinus', 'y0Strich', 'y0' )
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

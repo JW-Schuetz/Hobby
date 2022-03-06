@@ -6,23 +6,22 @@ function SonnenkompassNumeric
     clc
     clear
 
-    load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'mue0', ...
-          'alphaPlus', 'alphaMinus', 'alphaCond', 'alphaPara', 'y0Strich', ...
-          'y0' )
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
+          'mue0', 'alphaPlus', 'alphaMinus', 'y0Strich', 'y0' )
 
     % Variable Daten
     ort   = 'LasPalmas';
-	datum = '12.10.2021';
+	datum = '30.06.2021';
 
     fileName = [ ort, '-', datum, '.mat' ];
 
     switch( ort )
         case 'LasPalmas'
-            lS     = 1.5;                               % Stablänge [m]
-            thetaG = 28.136746041614316 / 180.0 * pi;	% geographische Breite Las Palmas
+            breite = 28.136746041614316 / 180.0 * pi;	% geographische Breite Las Palmas
     end
 
     % Fixe Daten
+	lS  = 1.5;                      % Stablänge [m]
     rE  = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
     rS  = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
     psi = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
@@ -31,13 +30,13 @@ function SonnenkompassNumeric
 	tag    = datetime( datum );
     T      = days( tag - ssw );     % Jahreszeit [Tage seit SSW]
     omega  = 2 * pi / 365 * T;      % Jahreszeitwinkel ab SSW
-    offset = thetaG - psi;          % Elevations-Winkeloffset für die Projektion
+    thetaG = breite - psi;          % geo. Breite
 
     % Kugelkoordinaten des Fusspunkt des Stabes, geographische Länge 0°, dabei 
     % Neigung der Erd-Rotationsachse psi berücksichtigen
-    p1 = rE * cos( offset );        % x-Koordinate
+    p1 = rE * cos( thetaG );        % x-Koordinate
     p2 = 0;                         % y-Koordinate
-    p3 = rE * sin( offset );        % z-Koordinate
+    p3 = rE * sin( thetaG );        % z-Koordinate
 
 	% Zahlenwerte bis auf alpha substituieren
     y0 = subs( y0 );
@@ -45,7 +44,7 @@ function SonnenkompassNumeric
     % numerische Limits für zulässige Zeiten berechnen (Minuten)
     k = sym( 'k', 'integer' );
 
-    k          = subs( 'k', 0 );
+    k          = subs( 'k', 1 );
     alphaMinus = double( subs( alphaMinus ) );
     tStart     = ceil( 60 * 12 * alphaMinus / pi ) + 10;	% aufrunden
 
