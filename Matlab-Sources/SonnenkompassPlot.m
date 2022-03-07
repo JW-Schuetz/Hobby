@@ -22,20 +22,20 @@ function SonnenkompassPlot()
 
                 case '21.06.2021'   % SSW
                     arrowType  = '\downarrow';
-                    yArrow     = 0.3;
-                    yUhrZeit   = 0.35;
-                    squareSize = 1;
+                    yArrow     = 3.0;
+                    yUhrZeit   = 3.35;
+                    squareSize = 6;
 
                 case '30.06.2021'
                     arrowType  = '\downarrow';
-                    yArrow     = 0.3;
-                    yUhrZeit   = 0.35;
-                    squareSize = 1;
+                    yArrow     = 3.0;
+                    yUhrZeit   = 3.35;
+                    squareSize = 6;
 
                 case '21.12.2021'   % WSW
-                    arrowType  = '\uparrow';
-                    yArrow     = 1.7;
-                    yUhrZeit   = 1.4;
+                    arrowType  = '\downarrow';
+                    yArrow     = 3.5;
+                    yUhrZeit   = 4.0;
                     squareSize = 6;
 
                 case '21.03.2021'   % Frühlings-Äquinoktikum 

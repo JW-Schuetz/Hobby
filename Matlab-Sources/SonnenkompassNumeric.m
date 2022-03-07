@@ -11,7 +11,7 @@ function SonnenkompassNumeric
 
     % Variable Daten
     ort   = 'LasPalmas';
-	datum = '12.10.2021';
+	datum = '12.04.2021';
 
     fileName = [ ort, '-', datum, '.mat' ];
 
@@ -30,7 +30,7 @@ function SonnenkompassNumeric
 	tag    = datetime( datum );
     T      = days( tag - ssw );         % Jahreszeit [Tage seit SSW]
     omega  = 2 * pi / 365 * T;          % Jahreszeitwinkel ab SSW
-    theta  = pi / 2 - (thetaG - psi );	% Polarwinkel in Kugelkoordinaten
+    theta  = pi / 2 - ( thetaG - psi );	% Polarwinkel in Kugelkoordinaten
 
     % Kugelkoordinaten des Fusspunkt des Stabes, geographische Länge 0°, dabei 
     % Neigung der Erd-Rotationsachse psi berücksichtigen
@@ -41,25 +41,9 @@ function SonnenkompassNumeric
 	% Zahlenwerte bis auf alpha substituieren
     y0 = subs( y0 );
 
-    % numerische Limits für zulässige Zeiten berechnen (Minuten)
-    k = sym( 'k', 'integer' );
-
-    k          = subs( 'k', 0 );
-    alphaMinus = double( subs( alphaMinus ) );
-    tStart     = ceil( 60 * 12 * alphaMinus / pi ) + 10;	% aufrunden
-
-    k         = subs( 'k', 1 );
-    alphaPlus = double( subs( alphaPlus ) );
-    tEnd      = floor( 60 * 12 * alphaPlus / pi ) - 10;	% abrunden
-
-    % astronomischer Mittag 
-    alphaHighNoon = double( atan2( tan( omega ), cos( psi ) ) + k * pi );
-    tHighNoon     = floor( 60 * 12 * alphaHighNoon / pi );
-
-    tHighNoon = 60 * 12 * alphaHighNoon / pi;
-    if( tStart >= tHighNoon || tEnd < tHighNoon )
-        error( 'Interner Fehler: astronomischen Mittag nicht im Zeitintervall' )
-    end
+    % astronomischer Mittag
+    alphaHighNoon = double( atan2( tan( omega ), cos( psi ) ) + pi );
+    tHighNoon     = 60 * 12 * alphaHighNoon / pi;
 
     % Überprüfung von alphaHighNoon: Steigung sollte 0 sein
     sPlusHN = subs( y0Strich( 2 ), 'alpha', alphaHighNoon );
@@ -67,19 +51,19 @@ function SonnenkompassNumeric
         error( 'Interner Fehler: Steigung am astronomischen Mittag ~= 0' )
 	end
 
-    % eins der Zeitsamples soll genau bei t = tHighNoon liegen
-    tOffset = fix( tHighNoon ) - tHighNoon;
+    tStart = tHighNoon - 300;  % Endzeitpunkt = AM - 300 Minuten
+    tEnd   = tHighNoon + 301;  % Endzeitpunkt = AM + 301 Minuten
 
     % Numerische Auswertung
-    N = tEnd - tStart + 1;      % Anzahl der Zeitpunkte
-    y = zeros( N, 2 );          % Trajektorie [m]
+    N = fix( tEnd - tStart + 1 );	% Anzahl der Zeitpunkte
+    y = zeros( N, 2 );              % Trajektorie [m]
 
     % Position und Zeitpunkt berechnen
     for i = 1 : N
-        t     = tStart - tOffset + ( i - 1 );	% t in Minuten
-        alpha = pi / ( 12 * 60 ) * t;           % zugehöriger Winkel
+        t     = tStart + ( i - 1 );	% t in Minuten
+        alpha( i ) = double( pi / ( 12 * 60 ) * t );           % zugehöriger Winkel
 
-        yLoc = subs( y0, 'alpha', alpha )';     % in y0 alpha substituieren
+        yLoc = subs( y0, 'alpha', alpha( i ) )';     % in y0 alpha substituieren
         yLoc = double( yLoc );
 
         y( i, 1 : 2 ) = [ yLoc( 1 ), yLoc( 2 ) ];   % Trajektorie
