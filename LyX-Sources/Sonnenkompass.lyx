@@ -1030,7 +1030,7 @@ literal "false"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Erd-JahresUmlauf"
+reference "fig:Erd-Jahres-Umlauf"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1048,7 +1048,7 @@ In dieser Arbeit wird der jahreszeitliche Einfluss durch eine Kreisbewegung
  des jahreszeitlichen Umlaufwinkels 
 \begin_inset Formula 
 \begin{equation}
-\Omega=\frac{2\pi}{365}T^{*}\label{eq:Omega}
+\Omega\left(T^{*}\right)=\frac{2\pi}{365}T^{*}\label{eq:Omega}
 \end{equation}
 
 \end_inset
@@ -1060,8 +1060,8 @@ durch
 \begin_inset Formula 
 \begin{equation}
 \underline{S}\left(T^{*}\right)=R_{S}\left(\begin{array}{c}
-\cos\Omega\\
-\sin\Omega\\
+\cos\Omega\left(T^{*}\right)\\
+\sin\Omega\left(T^{*}\right)\\
 0
 \end{array}\right)\label{eq:Ort der Sonne}
 \end{equation}
@@ -1165,7 +1165,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Erd-JahresUmlauf"
+name "fig:Erd-Jahres-Umlauf"
 
 \end_inset
 
@@ -1176,6 +1176,169 @@ Umlauf der Erde um die Sonne
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es soll nun noch der tageszeitliche Erd-Rotationswinkel 
+\begin_inset Formula $\alpha=\alpha^{*}+\alpha_{t}$
+\end_inset
+
+ für jeden Jahreszeitpunkt 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+ so gewählt werden, dass sich für 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ gerade Sonnenhöchststand einstellt.
+ Die dazu notwendige Winkelkorrektur 
+\begin_inset Formula $\alpha^{*}$
+\end_inset
+
+
+\begin_inset Formula $\left(T^{*}\right)$
+\end_inset
+
+ soll im folgenden bestimmt werden (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sonnen-Jahres-Umlauf"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompassTopHelp1.eps
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sonnen-Jahres-Umlauf"
+
+\end_inset
+
+Umlauf der Sonne um die Erde, Korrekturwinkel 
+\begin_inset Formula $\alpha^{*}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für den Fall 
+\begin_inset Formula $T^{*}=0$
+\end_inset
+
+, also für die SSW, ist dies konstruktionsbedingt bereits erfüllt - es gilt
+ 
+\begin_inset Formula $\alpha^{*}\left(0\right)=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Für andere Zeitpunkte 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+ muss (wegen des gleichschenkligen Dreieckes mit dem Spitzenwinkel 
+\begin_inset Formula $\alpha^{*}$
+\end_inset
+
+ und mit den beiden Schenkeln der Länge 
+\begin_inset Formula $R_{S}$
+\end_inset
+
+) gelten (siehe dazu z.B.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia7"
+literal "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha^{*}\left(T^{*}\right) & = & 2\arcsin\frac{\sqrt{\left[x_{1}^{\text{SSW}}-x_{1}\left(T^{*}\right)\right]^{2}+\left[x_{2}^{\text{SSW}}-x_{2}\left(T^{*}\right)\right]^{2}}}{2R_{S}}\\
+ & = & 2\arcsin\frac{\sqrt{\left[R_{S}-x_{1}\left(T^{*}\right)\right]^{2}+x_{2}^{2}\left(T^{*}\right)}}{2R_{S}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wegen Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Ort der Sonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}\left(T^{*}\right) & = & R_{S}\cos\Omega\left(T^{*}\right)\\
+x_{2}\left(T^{*}\right) & = & R_{S}\sin\Omega\left(T^{*}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und damit 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha^{*}\left(T^{*}\right) & = & 2\arcsin\frac{\sqrt{\left[R_{S}-R_{S}\cos\Omega\left(T^{*}\right)\right]^{2}+R_{S}^{2}\sin^{2}\Omega\left(T^{*}\right)}}{2R_{S}}\\
+ & = & 2\arcsin\frac{\sqrt{\left[1-\cos\Omega\left(T^{*}\right)\right]^{2}+\sin^{2}\Omega\left(T^{*}\right)}}{2}\\
+ & = & 2\arcsin\frac{\sqrt{1-2\cos\Omega\left(T^{*}\right)+\cos^{2}\Omega\left(T^{*}\right)+\sin^{2}\Omega\left(T^{*}\right)}}{2}\\
+ & = & 2\arcsin\left[\frac{\sqrt{2}}{2}\sqrt{1-\cos\Omega\left(T^{*}\right)}\right]\\
+ & =
+\end{eqnarray*}
 
 \end_inset
 
@@ -1329,21 +1492,7 @@ noprefix "false"
 \begin{eqnarray*}
 p_{1} & = & R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
 p_{2} & = & 0\\
-p_{3} & = & R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-oder auch 
-\begin_inset Formula 
-\begin{eqnarray*}
-p_{1} & = & R_{E}\cos\left(\Theta_{G}-\psi\right)\\
-p_{2} & = & 0\\
-p_{3} & = & R_{E}\sin\left(\Theta_{G}-\psi\right).
+p_{3} & = & R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right].
 \end{eqnarray*}
 
 \end_inset
@@ -1868,7 +2017,7 @@ Da im Ausdruck der Verbindungsgeraden mit
 \begin_inset Formula $\varOmega^{S}\left(\alpha\right)<-1$
 \end_inset
 
- (siehe dazu den Beweis im Anhang
+ gelten (siehe dazu den Beweis im Anhang
 \begin_inset space ~
 \end_inset
 
@@ -1882,7 +2031,7 @@ noprefix "false"
 
 \end_inset
 
-), gelten.
+).
  
 \end_layout
 
@@ -2395,13 +2544,6 @@ Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Ergebnisse 
 \end_layout
@@ -2774,13 +2916,6 @@ Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
 Die genaue Nordrichtung erhält man z.B., wenn man Schattenzeitpunkte untersucht,
  die symmetrisch um den Zeitpunkt des astronomischen Mittags liegen.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -3811,7 +3946,7 @@ Behauptung
 \end_layout
 
 \begin_layout Standard
-Im aus Unterabschnitt 
+Im Unterabschnitt 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Lösungspunkt"
@@ -3821,7 +3956,11 @@ noprefix "false"
 
 \end_inset
 
- wird die folgende Behauptung aufgestellt 
+ wird die folgende Behauptung aufgestellt.
+\end_layout
+
+\begin_layout Standard
+Aus 
 \begin_inset Formula 
 \begin{equation}
 \frac{\varOmega^{S}}{1+\varOmega^{S}}>1\label{eq:Prämisse}
@@ -3911,7 +4050,7 @@ noprefix "false"
 \end_inset
 
  Dies ist offensichtlich falsch.
- Also existiert für diesen Fall keine Lösung.
+ Es existiert für diesen Fall keine Lösung.
  
 \end_layout
 
@@ -4506,6 +4645,19 @@ literal "false"
 
 https://en.wikipedia.org/wiki/Parametric_derivative, Abschnitt: First derivative
  
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "7"
+key "Wikipedia7"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Gleichschenkliges_Dreieck, Abschnitt: Berechnung
+ und Konstruktion 
 \end_layout
 
 \end_body

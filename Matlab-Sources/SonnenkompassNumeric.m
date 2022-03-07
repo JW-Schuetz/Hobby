@@ -11,13 +11,13 @@ function SonnenkompassNumeric
 
     % Variable Daten
     ort   = 'LasPalmas';
-	datum = '30.06.2021';
+	datum = '12.10.2021';
 
     fileName = [ ort, '-', datum, '.mat' ];
 
     switch( ort )
         case 'LasPalmas'
-            breite = 28.136746041614316 / 180.0 * pi;	% geographische Breite Las Palmas
+            thetaG = 28.136746041614316 / 180.0 * pi;	% geographische Breite Las Palmas
     end
 
     % Fixe Daten
@@ -25,18 +25,18 @@ function SonnenkompassNumeric
     rE  = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
     rS  = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
     psi = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
-    ssw = datetime( '21.06.2021' );	% Datum SSW
 
+    ssw    = datetime( '21.06.2021' );	% Datum SSW
 	tag    = datetime( datum );
-    T      = days( tag - ssw );     % Jahreszeit [Tage seit SSW]
-    omega  = 2 * pi / 365 * T;      % Jahreszeitwinkel ab SSW
-    thetaG = breite - psi;          % geo. Breite
+    T      = days( tag - ssw );         % Jahreszeit [Tage seit SSW]
+    omega  = 2 * pi / 365 * T;          % Jahreszeitwinkel ab SSW
+    theta  = pi / 2 - (thetaG - psi );	% Polarwinkel in Kugelkoordinaten
 
     % Kugelkoordinaten des Fusspunkt des Stabes, geographische Länge 0°, dabei 
     % Neigung der Erd-Rotationsachse psi berücksichtigen
-    p1 = rE * cos( thetaG );        % x-Koordinate
+    p1 = rE * sin( theta );         % x-Koordinate
     p2 = 0;                         % y-Koordinate
-    p3 = rE * sin( thetaG );        % z-Koordinate
+    p3 = rE * cos( theta );         % z-Koordinate
 
 	% Zahlenwerte bis auf alpha substituieren
     y0 = subs( y0 );
@@ -44,7 +44,7 @@ function SonnenkompassNumeric
     % numerische Limits für zulässige Zeiten berechnen (Minuten)
     k = sym( 'k', 'integer' );
 
-    k          = subs( 'k', 1 );
+    k          = subs( 'k', 0 );
     alphaMinus = double( subs( alphaMinus ) );
     tStart     = ceil( 60 * 12 * alphaMinus / pi ) + 10;	% aufrunden
 
