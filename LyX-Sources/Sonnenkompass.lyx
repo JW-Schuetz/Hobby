@@ -1192,7 +1192,7 @@ Es soll nun noch der tageszeitliche Erd-Rotationswinkel
 \end_inset
 
  so gewählt werden, dass sich für ihn gerade der Sonnenhöchststand einstellt.
- Die dazu notwendige Winkelkorrektur ist durch Gleichung (
+ Der dazu notwendige Winkel ist durch Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Omega"
@@ -2654,7 +2654,7 @@ noprefix "false"
  für den 12.
  Oktober.
  Die Koordinaten der beiden markierten Punkte sind dargestellt, ihr geometrische
-r Abstand beträgt 20.18 cm, ihr zeitlicher Abstand beträgt 20 Minuten (13:30
+r Abstand beträgt 20.21 cm, ihr zeitlicher Abstand beträgt 20 Minuten (13:30
  Uhr und 13:50 Uhr Ortszeit).
  
 \begin_inset Float figure
@@ -2817,8 +2817,9 @@ Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
 \end_layout
 
 \begin_layout Standard
-Die genaue Nordrichtung erhält man z.B., wenn man Schattenzeitpunkte untersucht,
- die symmetrisch um den Zeitpunkt des astronomischen Mittags liegen.
+Die genaue Nordrichtung erhält man, z.B.
+ wenn man Schattenzeitpunkte untersucht, die symmetrisch um den Zeitpunkt
+ des astronomischen Mittags liegen.
  
 \end_layout
 
