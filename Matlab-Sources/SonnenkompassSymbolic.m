@@ -49,7 +49,7 @@ function SonnenkompassSymbolic
     s( 2 ) = rS * sin( omega );
     s( 3 ) = 0;
 
-    % die Sonne wird um -alpha gedreht
+    % die Sonne um -alpha drehen
     dMinusAlpha = subs( dAlpha, 'alpha', str2sym( '-alpha' ) );
     sAlpha      = dMinusAlpha * s;
 
@@ -60,27 +60,19 @@ function SonnenkompassSymbolic
     omegaS = simplify( rE - pSAlpha / rE );
     omegaS = omegaS / lS;
 
-    % Lösung von omegaS==-1 finden
-    res = solve( omegaS == -1, alpha, 'Real', true, ...
-            'ReturnConditions', true );
-
-    alphaPlus  = res.alpha( 2 );
-    alphaMinus = res.alpha( 1 );
-
-    % mue0 berechnen
+    % mue0 bestimmen
     mue0 = omegaS / ( 1 + omegaS );
 
-    % die dreidimensionale Trajektorie
+    % die dreidimensionale Trajektorie bestimmen
     x0 = mue0 * q + ( 1 - mue0 ) * sAlpha;
 
-    % die zweidimensionale Trajektorie
+    % die zweidimensionale Trajektorie bestimmen
     y0 = MapToPlane( x0, thetaG, psi );
 
-    % Ableitung der Trajektorien-Komponenten nach alpha
+    % Ableitung der Trajektorien-Komponenten nach alpha bestimmen
     y0Strich = diff( y0, 'alpha' );
 
-    save( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
-          'mue0', 'alphaPlus', 'alphaMinus', 'y0Strich', 'y0' )
+    save( 'SonnenkompassSymbolic.mat', 'alpha', 'y0Strich', 'y0' )
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

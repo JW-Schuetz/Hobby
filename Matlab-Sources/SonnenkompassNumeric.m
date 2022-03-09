@@ -6,12 +6,11 @@ function SonnenkompassNumeric
     clc
     clear
 
-    load( 'SonnenkompassSymbolic.mat', 'alpha', 'q', 'sAlpha', 'omegaS', ...
-          'mue0', 'alphaPlus', 'alphaMinus', 'y0Strich', 'y0' )
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'y0Strich', 'y0' )
 
     % Variable Daten
     ort   = 'LasPalmas';
-	datum = '12.04.2021';
+	datum = '12.10.2021';
 
     fileName = [ ort, '-', datum, '.mat' ];
 
@@ -21,10 +20,11 @@ function SonnenkompassNumeric
     end
 
     % Fixe Daten
-	lS  = 1.5;                      % Stablänge [m]
-    rE  = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
-    rS  = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
-    psi = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
+    TNum = 60 * 5;                   % Zeitraum der num. Auswertung [min]
+	lS   = 1.5;                      % Stablänge [m]
+    rE   = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
+    rS   = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
+    psi  = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
 
     ssw    = datetime( '21.06.2021' );	% Datum SSW
 	tag    = datetime( datum );
@@ -51,8 +51,8 @@ function SonnenkompassNumeric
         error( 'Interner Fehler: Steigung am astronomischen Mittag ~= 0' )
 	end
 
-    tStart = tHighNoon - 300;  % Endzeitpunkt = AM - 300 Minuten
-    tEnd   = tHighNoon + 301;  % Endzeitpunkt = AM + 301 Minuten
+    tStart = tHighNoon - TNum;      % Endzeitpunkt = AM - TNum Minuten
+    tEnd   = tHighNoon + 1 + TNum;	% Endzeitpunkt = AM + TNum Minuten
 
     % Numerische Auswertung
     N = fix( tEnd - tStart + 1 );	% Anzahl der Zeitpunkte

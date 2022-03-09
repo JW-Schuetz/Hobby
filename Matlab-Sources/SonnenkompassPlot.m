@@ -14,7 +14,7 @@ function SonnenkompassPlot()
                     yUhrZeit   = 1.4;
                     squareSize = 2;
 
-                case '12.10.2021'
+                case '12.10.2021'   % mein Besuch bei Waldemar
                     arrowType  = '\downarrow';
                     yArrow     = 1.3;
                     yUhrZeit   = 1.4;

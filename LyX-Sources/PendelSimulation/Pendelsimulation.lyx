@@ -262,9 +262,9 @@ eine additive Halbgruppe
 \begin_inset Formula $I$
 \end_inset
 
- über den reellen Zahlen
+ über den reellen Zahlen 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 D.h.
@@ -326,6 +326,34 @@ und eine stetige Abbildung
 \begin_layout Standard
 definiert.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Wo geht die Metrik 
+\begin_inset Formula $d$
+\end_inset
+
+ ein? Hier noch nirgends! 
+\end_layout
+
+\begin_layout Itemize
+Die Halbgruppeneigenschaft ist (zusammen mit der Identitätseigenshaft) die
+ Grundlage der Beschreibung der Entwicklung eines Startwertes 
+\begin_inset Formula $x$
+\end_inset
+
+ in Abhängigkeit von der Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subsection*
@@ -335,10 +363,10 @@ Motivation
 \begin_layout Standard
 Das Anfangswertproblem 
 \begin_inset Formula 
-\begin{eqnarray*}
-\frac{d}{dt}x\left(t\right) & = & x\left(t\right)\\
-x\left(0\right) & = & x_{0}
-\end{eqnarray*}
+\begin{eqnarray}
+\frac{d}{dt}x\left(t\right) & = & x\left(t\right)\label{eq:AWP}\\
+x\left(0\right) & = & x_{0}\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -348,9 +376,9 @@ x\left(0\right) & = & x_{0}
 \begin_layout Standard
 besitzt die eindeutige Lösung 
 \begin_inset Formula 
-\begin{eqnarray*}
-x\left(t\right) & = & x_{0}\exp\left(t\right)
-\end{eqnarray*}
+\begin{eqnarray}
+x\left(t\right) & = & x_{0}\exp\left(t\right).\label{eq:Lösung}
+\end{eqnarray}
 
 \end_inset
 
@@ -358,13 +386,17 @@ x\left(t\right) & = & x_{0}\exp\left(t\right)
 \end_layout
 
 \begin_layout Standard
-oder 
+Beschreibt man diese Lösung durch die Abbildung 
+\begin_inset Formula $\pi$
+\end_inset
+
+, so gilt 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\varphi\left(x,t\right) & = & x\exp\left(t\right).
+\pi\left(x,t\right) & = & x\exp\left(t\right).
 \end{eqnarray*}
 
 \end_inset
@@ -372,14 +404,18 @@ oder
 
 \end_layout
 
+\begin_layout Subsubsection*
+Behauptung Halbgruppeneigenschaft 
+\end_layout
+
 \begin_layout Standard
-Zu zeigen ist die Halbgruppeneigenschaft 
+Es gilt die Halbgruppeneigenschaft 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\varphi\left(\varphi\left(x,t\right),s\right)=\varphi\left(x,t+s\right).
+\pi\left(\pi\left(x,t\right),s\right)=\pi\left(x,t+s\right).
 \]
 
 \end_inset
@@ -387,14 +423,79 @@ Zu zeigen ist die Halbgruppeneigenschaft
 
 \end_layout
 
+\begin_layout Subsubsection*
+Beweis Halbgruppeneigenschaft 
+\end_layout
+
 \begin_layout Standard
-Also 
+Wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Lösung"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) gilt für 
+\begin_inset Formula $x$
+\end_inset
+
+ und 
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\pi\left(x,t\right) & = & x\exp\left(t\right)\label{eq:Annahme}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und dann gilt für 
+\begin_inset Formula $x\rightarrow\pi\left(x,t\right)$
+\end_inset
+
+ und 
+\begin_inset Formula $t\rightarrow s$
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
-\varphi\left(\varphi\left(x,t\right),s\right) & = & \varphi\left(x\exp\left(t\right),s\right)\\
- & = & x\exp\left(t\right)\exp\left(s\right)\\
- & = & x\exp\left(t+s\right)\\
- & = & \varphi\left(x,t+s\right).
+\pi\left(x,t\right) & = & \pi\left(x,t\right)\exp\left(s\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und somit durch Einsetzen von (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Annahme"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi\left(x,t\right) & = & x\exp\left(t\right)\exp\left(s\right)\\
+ & = & x\exp\left(t+s\right)\;\blacksquare
 \end{eqnarray*}
 
 \end_inset
