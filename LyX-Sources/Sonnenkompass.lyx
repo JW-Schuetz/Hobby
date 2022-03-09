@@ -4431,7 +4431,11 @@ Der astronomische Mittag ist durch den Erdrotationswinkel
 \end_inset
 
  gehört.
- Es gilt 
+ Mit 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ gilt 
 \begin_inset Note Note
 status collapsed
 
@@ -4464,7 +4468,7 @@ Nebenrechnung
  
 \begin_inset Formula 
 \begin{eqnarray*}
-\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+\pi n.
+\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi.
 \end{eqnarray*}
 
 \end_inset
