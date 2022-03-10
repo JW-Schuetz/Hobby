@@ -376,9 +376,9 @@ x\left(0\right) & = & x_{0}\nonumber
 \begin_layout Standard
 besitzt die eindeutige Lösung 
 \begin_inset Formula 
-\begin{eqnarray}
-x\left(t\right) & = & x_{0}\exp\left(t\right).\label{eq:Lösung}
-\end{eqnarray}
+\begin{eqnarray*}
+x\left(t\right) & = & x_{0}\exp\left(t\right).
+\end{eqnarray*}
 
 \end_inset
 
@@ -395,9 +395,9 @@ Beschreibt man diese Lösung durch die Abbildung
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\pi\left(x,t\right) & = & x\exp\left(t\right).
-\end{eqnarray*}
+\begin{eqnarray}
+\pi\left(x,t\right) & = & x\exp\left(t\right).\label{eq:Projektion}
+\end{eqnarray}
 
 \end_inset
 
@@ -431,7 +431,7 @@ Beweis Halbgruppeneigenschaft
 Wegen (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:Lösung"
+reference "eq:Projektion"
 plural "false"
 caps "false"
 noprefix "false"
@@ -452,7 +452,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\pi\left(x,t\right) & = & x\exp\left(t\right)\label{eq:Annahme}
+\pi\left(x,t\right) & = & x\exp\left(t\right).\label{eq:Annahme}
 \end{eqnarray}
 
 \end_inset
@@ -461,7 +461,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-und dann gilt für 
+Dann gilt für 
 \begin_inset Formula $x\rightarrow\pi\left(x,t\right)$
 \end_inset
 
