@@ -64,7 +64,7 @@
 \leftmargin 2cm
 \topmargin 1.5cm
 \rightmargin 1cm
-\bottommargin 1.5cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -119,7 +119,8 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename PendelSimulation1.eps
-	scale 17
+	scale 30
+	BoundingBox 0bp 0bp 1193bp 884bp
 
 \end_inset
 
@@ -273,7 +274,7 @@ mit
 \end_layout
 
 \begin_layout Section*
-Beschreibung als dynamisches Sytem 
+Beschreibung als dynamisches System 
 \end_layout
 
 \begin_layout Subsection*
@@ -331,11 +332,12 @@ eine additive Halbgruppe
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $r+s=s+r$
-\end_inset
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Kommunativgesetz:} &  & r+s=s+r\\
+\text{Assoziativgesetz:} &  & \left(r+s\right)+t=r+\left(s+t\right)
+\end{eqnarray*}
 
- und 
-\begin_inset Formula $\left(r+s\right)+t=r+\left(s+t\right)$
 \end_inset
 
 
@@ -347,25 +349,26 @@ und eine stetige Abbildung
 \begin_inset Formula $\pi:X\times I\rightarrow X$
 \end_inset
 
- mit den beiden Eigenschaften 
+ mit den für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ geltenden Eigenschaften 
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $\forall x\in X:\pi\left(x,0\right)=x$
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Identitätseigenschaft:} &  & \pi\left(x,0\right)=x\\
+\text{Halbgruppeneigenschaft:} &  & \pi\left(\pi\left(x,t\right),s\right)=\pi\left(x,t+s\right)
+\end{eqnarray*}
+
 \end_inset
 
- (Identitätseigenschaft) 
+
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula $\pi\left(\pi\left(x,t\right),s\right)=\pi\left(x,t+s\right)$
-\end_inset
-
- (Halbgruppeneigenschaft) 
-\end_layout
-
-\end_deeper
 \begin_layout Standard
 definiert.
  
@@ -399,8 +402,9 @@ Die Halbgruppeneigenschaft ist (zusammen mit der Identitätseigenshaft) die
  
 \end_layout
 
+\end_deeper
 \begin_layout Subsection*
-Motivation 1
+Motivation 
 \end_layout
 
 \begin_layout Standard
