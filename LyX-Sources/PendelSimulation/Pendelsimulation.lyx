@@ -334,7 +334,7 @@ eine additive Halbgruppe
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\text{Kommunativgesetz:} &  & r+s=s+r\\
+\text{Kommutativgesetz:} &  & r+s=s+r\\
 \text{Assoziativgesetz:} &  & \left(r+s\right)+t=r+\left(s+t\right)
 \end{eqnarray*}
 
