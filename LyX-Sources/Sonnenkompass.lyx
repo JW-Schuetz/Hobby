@@ -2464,8 +2464,7 @@ Las Palmas de Gran Canaria
 Die Schattentrajektorie und den Standort des Stabes für den Strand in Las
  Palmas \SpecialChar allowbreak
 (28.136746041614316° Breite) für die SSW am 21.
- Juni und für die WSW am 21.
- Dezember findet sich in den Abbildungen
+ Juni findet sich in der Abbildung
 \begin_inset space ~
 \end_inset
 
@@ -2479,21 +2478,7 @@ noprefix "false"
 
 \end_inset
 
- und
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:SchattentrajektorieWSW"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
+ - die WSW unterscheidet sich nicht.
  Zwischen den Markierungen der Trajektorie  liegen jeweils 10 Minuten.
  Für die Stablänge wurde 1.5 m angenommen.
  Man beachte die unterschiedlichen Skalierungen der beiden Abbildungen.
@@ -2526,44 +2511,6 @@ name "fig:SchattentrajektorieSSW"
 
 Schattentrajektorie zur SSW am 21.
  Juni in Las Palmas 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename SchattenTrajektorieWSW.eps
-	lyxscale 160
-	scale 50
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:SchattentrajektorieWSW"
-
-\end_inset
-
-Schattentrajektorie zur WSW am 21.
- Dezember in Las Palmas 
 \end_layout
 
 \end_inset
@@ -2820,7 +2767,13 @@ Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
 Die genaue Nordrichtung erhält man, z.B.
  wenn man Schattenzeitpunkte untersucht, die symmetrisch um den Zeitpunkt
  des astronomischen Mittags liegen.
- 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

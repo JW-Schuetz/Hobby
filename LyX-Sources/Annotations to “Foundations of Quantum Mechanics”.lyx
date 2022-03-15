@@ -209,7 +209,7 @@ Zeige durch Integration über
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\left(\frac{1}{2}ml^{2}\right)\left[\frac{d\phi\left(t\right)}{dt}\right]^{2}-mgl\cos\phi\left(t\right) & = & E,
+\left(\frac{1}{2}ml^{2}\right)\left[\frac{d\phi\left(t\right)}{dt}\right]^{2}-mgl\cos\phi\left(t\right) & = & E
 \end{eqnarray*}
 
 \end_inset
