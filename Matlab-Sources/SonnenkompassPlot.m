@@ -5,7 +5,7 @@ function SonnenkompassPlot()
     ort    = 'LasPalmas';
     datum  = '12.10.2021';
 
-	switch( ort )
+    switch( ort )
         case 'LasPalmas'
             switch datum
                 case '12.04.2021'
@@ -50,7 +50,7 @@ function SonnenkompassPlot()
                     yUhrZeit   = 1.7;
                     squareSize = 6;
             end
-	end
+    end
 
     % Ergebnisdaten laden
     load( [ ort, '-', datum, '.mat' ], 'y' )
@@ -85,11 +85,11 @@ function SonnenkompassPlot()
          'MarkerIndices', 11 : 10 : minNdx, 'Color', 'k', 'LineWidth', 1 )
 
     % Markierung AM
-	text( 0, yArrow, arrowType, 'HorizontalAlignment', 'center' )
-	text( 0, yUhrZeit, 'astronomischer Mittag', 'HorizontalAlignment', ...
+    text( 0, yArrow, arrowType, 'HorizontalAlignment', 'center' )
+    text( 0, yUhrZeit, 'astronomischer Mittag', 'HorizontalAlignment', ...
           'center' )
 
     legend( 'Stabposition', 'Trajektorie, 10 Minuten-Intervalle' )
 
-	sprintf( 'Minimum des Abstandes zum Stab: %1.2f Meter', minDistance )
+    sprintf( 'Minimum des Abstandes zum Stab: %1.2f Meter', minDistance )
 end
