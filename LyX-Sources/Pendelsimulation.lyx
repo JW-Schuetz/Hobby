@@ -1,0 +1,925 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\pagestyle{empty}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1.5cm
+\rightmargin 1cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Pendelsimulation 
+\end_layout
+
+\begin_layout Author
+Jürgen Womser-Schütz, https://github.com/JW-Schuetz 
+\end_layout
+
+\begin_layout Date
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kein Datum!
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section*
+Mathematisches Pendel 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename PendelSimulation/PendelSimulation.eps
+	scale 30
+	BoundingBox 0bp 0bp 1193bp 884bp
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pendel"
+
+\end_inset
+
+Mathematisches Pendel der Länge 
+\begin_inset Formula $L$
+\end_inset
+
+ und der Masse 
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Auf das Pendel der Länge 
+\begin_inset Formula $L$
+\end_inset
+
+ und mit der Masse 
+\begin_inset Formula $m$
+\end_inset
+
+ (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pendel"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) wirkt zunächst mit der Erdbeschleunigung 
+\begin_inset Formula $g$
+\end_inset
+
+ die Gewichtskraft 
+\begin_inset Formula $F_{G}=mg$
+\end_inset
+
+.
+ Man kann sie in einen radialen Anteil 
+\begin_inset Formula $F_{R}$
+\end_inset
+
+ und einen tangentialen Anteil 
+\begin_inset Formula $F_{T}$
+\end_inset
+
+ zerlegen.
+ Für die Dynamik des Pendels ist nur die tangentiale Komponente relevant.
+ Es gilt für sie 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{T}=F_{G}\sin\phi.
+\]
+
+\end_inset
+
+Mit den Newtonschen Gesetzen gilt 
+\begin_inset Formula 
+\[
+F_{T}=-mL\frac{d^{2}\phi}{d^{2}t}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit folgt für den Auslenkungswinkel 
+\begin_inset Formula $\phi\left(t\right)$
+\end_inset
+
+ als Funktion der Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+ die Differentialgleichung 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsubsection*
+Nebenrechnung 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{G}\sin\phi & = & -mL\frac{d^{2}\phi}{dt^{2}}\\
+mg\sin\phi & = & -mL\frac{d^{2}\phi}{dt^{2}}\\
+\frac{d^{2}\phi}{dt^{2}}+\frac{g}{L}\sin\phi & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d^{2}\phi\left(t\right)}{dt^{2}}+\omega^{2}\sin\phi\left(t\right) & = & 0\label{eq:Pendelgleichung}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula 
+\begin{eqnarray}
+\omega & = & \sqrt{\frac{g}{L}}.\label{eq:Omega}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Phasenraumdarstellung 
+\end_layout
+
+\begin_layout Standard
+Mit den Definitionen 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+x_{1}\left(t\right) & = & \phi\left(t\right)\label{eq:DefinitionPhasenraum}\\
+x_{2}\left(t\right) & = & \frac{d}{dt}\phi\left(t\right)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+folgt aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Pendelgleichung"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) die Phasenraumdarstellung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}x_{1}\left(t\right) & = & x_{2}\left(t\right)\label{eq:Phasenraum}\\
+\frac{d}{dt}x_{2}\left(t\right) & = & -\omega^{2}\sin x_{1}\left(t\right).\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DefinitionPhasenraum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Phasenraum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}}{dt^{2}}x_{1}\left(t\right)=-\omega^{2}\sin x_{1}\left(t\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und durch Anwendung der Kettenregel (siehe dazu z.B.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia1"
+literal "false"
+
+\end_inset
+
+) 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Durch Anwendung der Kettenregel 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{d\phi}\left[f\left(g\left(\phi\right)\right)\right] & = & \frac{df\left(g\right)}{dg}\frac{dg\left(\phi\right)}{d\phi}
+\end{eqnarray*}
+
+\end_inset
+
+folgt für die 2.
+ Ableitung von 
+\begin_inset Formula $\phi\left(t\right)$
+\end_inset
+
+ nach der Zeit 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ddot{\phi} & = & \frac{d\dot{\phi}}{dt}\\
+ & = & \dot{\frac{d\phi}{d\phi}\frac{d\phi}{dt}}\\
+ & = & \dot{\phi}\frac{d\dot{\phi}}{d\phi}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Ebenso durch Anwendung der Kettenregel folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{d\phi}\left(\frac{1}{2}\dot{\phi}^{2}\right) & = & \frac{d}{d\phi}\left[f\left(g\left(\phi\right)\right)\right]\\
+ & = & \dot{\phi}\frac{d\dot{\phi}}{d\phi}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es gilt also 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{d\phi}\left(\frac{1}{2}\dot{\phi}^{2}\left(t\right)\right) & = & \frac{d^{2}\phi\left(t\right)}{dt^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{d\phi}\left[f\left(g\left(\phi\right)\right)\right] & = & \frac{df\left(g\right)}{dg}\frac{dg\left(\phi\right)}{d\phi}\label{eq:Kettenregel}
+\end{eqnarray}
+
+\end_inset
+
+ergibt sich daraus 
+\begin_inset Formula 
+\[
+\frac{d^{2}}{dt^{2}}x_{1}\left(t\right)=-\omega^{2}\sin x_{1}\left(t\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Beschreibung als dynamisches System 
+\end_layout
+
+\begin_layout Standard
+In Anlehnung an 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Krabs-1"
+literal "false"
+
+\end_inset
+
+ wird ein dynamisches System (Fluss) auf 
+\begin_inset Formula $X$
+\end_inset
+
+ durch 
+\end_layout
+
+\begin_layout Itemize
+einen metrischen Raum 
+\begin_inset Formula $X$
+\end_inset
+
+ mit der Metrik 
+\begin_inset Formula $d$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+eine additive Halbgruppe 
+\begin_inset Formula $I$
+\end_inset
+
+ über den reellen Zahlen, d.h.
+ es gilt 
+\begin_inset Formula $I\subset\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $0\in I$
+\end_inset
+
+ und für 
+\begin_inset Formula $r,s,t\in I$
+\end_inset
+
+ besitzt die Addition 
+\begin_inset Formula $+:I\times I\rightarrow I$
+\end_inset
+
+ die beiden Eigenschaften 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Kommutativgesetz:} &  & r+s=s+r\\
+\text{Assoziativgesetz:} &  & \left(r+s\right)+t=r+\left(s+t\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+und eine stetige Abbildung 
+\begin_inset Formula $\pi:X\times I\rightarrow X$
+\end_inset
+
+ mit den für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ geltenden Eigenschaften 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Identitätseigenschaft:} &  & \pi\left(x,0\right)=x\\
+\text{Halbgruppeneigenschaft:} &  & \pi\left(\pi\left(x,t\right),s\right)=\pi\left(x,t+s\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+definiert.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Wo geht die Metrik 
+\begin_inset Formula $d$
+\end_inset
+
+ ein? Hier noch nirgends! 
+\end_layout
+
+\begin_layout Itemize
+Die Halbgruppeneigenschaft ist (zusammen mit der Identitätseigenshaft) die
+ Grundlage der Beschreibung der Entwicklung eines Startwertes 
+\begin_inset Formula $x$
+\end_inset
+
+ in Abhängigkeit von der Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection*
+Motivation
+\end_layout
+
+\begin_layout Plain Layout
+Sei 
+\begin_inset Formula $X=\mathbb{R}$
+\end_inset
+
+ und 
+\begin_inset Formula $I=\mathbb{R}$
+\end_inset
+
+.
+ Das Anfangswertproblem 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}x\left(t\right) & = & x\left(t\right)\label{eq:AWP}\\
+x\left(0\right) & = & x_{0}\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+besitzt die eindeutige Lösung 
+\begin_inset Formula 
+\begin{eqnarray*}
+x\left(t\right) & = & x_{0}\exp\left(t\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Beschreibung dieser Lösung durch die Abbildung 
+\begin_inset Formula $\pi$
+\end_inset
+
+ liefert
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray}
+\pi\left(x_{0},t\right) & = & x_{0}\exp\left(t\right).\label{eq:Projektion}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Behauptung Halbgruppeneigenschaft
+\end_layout
+
+\begin_layout Plain Layout
+Es gilt die Halbgruppeneigenschaft
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\pi\left(\pi\left(x,t\right),s\right)=\pi\left(x,t+s\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis Halbgruppeneigenschaft
+\end_layout
+
+\begin_layout Plain Layout
+Wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Projektion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) gilt für 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray}
+\pi\left(x_{0},t\right) & = & x_{0}\exp\left(t\right).\label{eq:Annahme}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Dann gilt für 
+\begin_inset Formula $x_{0}\rightarrow\pi\left(x_{0},t\right)$
+\end_inset
+
+ und 
+\begin_inset Formula $t\rightarrow s$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi\left(x_{0},t\right) & = & \pi\left(x_{0},t\right)\exp\left(s\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und somit durch Einsetzen von (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Annahme"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi\left(x_{0},t\right) & = & x_{0}\exp\left(t\right)\exp\left(s\right)\\
+ & = & x_{0}\exp\left(t+s\right)\;\blacksquare
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection*
+Definitionen 
+\end_layout
+
+\begin_layout Subsubsection*
+Trajektorie durch Punkt 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Formula 
+\[
+\gamma_{I}\left(x\right)=\left\{ \pi\left(x,t\right)\mid t\in I\right\} =\cup_{t\in I}\left\{ \pi\left(x,t\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Limitmenge Punkt 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{I}\left(x\right)=\cap_{t\in I}\overline{\gamma_{I}\left(\pi\left(x,t\right)\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im folgenden wird auf 
+\begin_inset Formula $I$
+\end_inset
+
+ die Existenz von Ordnungsrelationen 
+\begin_inset Formula $\leq$
+\end_inset
+
+ und 
+\begin_inset Formula $\geq$
+\end_inset
+
+ vorausgesetzt und es wird nur noch der Spezialfall 
+\begin_inset Formula $I=\mathbb{R}$
+\end_inset
+
+ betrachtet.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Positive und negative Halbtrajektorien 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\gamma_{-}\left(x\right) & = & \left\{ \pi\left(x,t\right)\mid t\leq0\right\} \\
+\gamma_{+}\left(x\right) & = & \left\{ \pi\left(x,t\right)\mid t\geq0\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Alpha- und Omegalimits 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+A\left(x\right) & = & \cap_{t\in I}\overline{\gamma_{-}\left(\pi\left(x,t\right)\right)}\\
+\Omega\left(x\right) & = & \cap_{t\in I}\overline{\gamma_{+}\left(\pi\left(x,t\right)\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Invarianz 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ ist invariant, falls 
+\begin_inset Formula $\gamma_{\mathbb{R}}\left(x\right)\subseteq A$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Sätze 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ ist genau dann invariant, falls gilt 
+\begin_inset Formula $A=\cup_{x\in A}\gamma_{\mathbb{R}}\left(x\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Mit 
+\begin_inset Formula $A$
+\end_inset
+
+ ist auch 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ invariant.
+ 
+\end_layout
+
+\begin_layout Itemize
+Für alle 
+\begin_inset Formula $x$
+\end_inset
+
+ ist 
+\begin_inset Formula $\Omega\left(x\right)$
+\end_inset
+
+ invariant und abgeschlossen.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "Krabs-1"
+literal "false"
+
+\end_inset
+
+Dynamical Systems - Stability, Controllability and Chaotic Behaviour; Werner
+ Krabs, Stefan Pickl; Springer-Verlag, 2010 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "Wikipedia1"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Kettenregel 
+\end_layout
+
+\end_body
+\end_document
