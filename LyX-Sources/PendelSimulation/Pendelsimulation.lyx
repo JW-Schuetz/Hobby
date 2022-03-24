@@ -483,6 +483,10 @@ eine additive Halbgruppe
 
  über den reellen Zahlen, d.h.
  es gilt 
+\begin_inset Formula $I\subset\mathbb{R}$
+\end_inset
+
+ mit 
 \begin_inset Formula $0\in I$
 \end_inset
 
@@ -575,7 +579,7 @@ Die Halbgruppeneigenschaft ist (zusammen mit der Identitätseigenshaft) die
 status collapsed
 
 \begin_layout Subsection*
-Motivation 
+Motivation
 \end_layout
 
 \begin_layout Plain Layout
@@ -617,7 +621,7 @@ Beschreibung dieser Lösung durch die Abbildung
 \begin_inset Formula $\pi$
 \end_inset
 
- liefert 
+ liefert
 \end_layout
 
 \begin_layout Plain Layout
@@ -632,11 +636,11 @@ Beschreibung dieser Lösung durch die Abbildung
 \end_layout
 
 \begin_layout Subsubsection*
-Behauptung Halbgruppeneigenschaft 
+Behauptung Halbgruppeneigenschaft
 \end_layout
 
 \begin_layout Plain Layout
-Es gilt die Halbgruppeneigenschaft 
+Es gilt die Halbgruppeneigenschaft
 \end_layout
 
 \begin_layout Plain Layout
@@ -651,7 +655,7 @@ Es gilt die Halbgruppeneigenschaft
 \end_layout
 
 \begin_layout Subsubsection*
-Beweis Halbgruppeneigenschaft 
+Beweis Halbgruppeneigenschaft
 \end_layout
 
 \begin_layout Plain Layout
@@ -673,7 +677,7 @@ noprefix "false"
 \begin_inset Formula $t$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -740,7 +744,11 @@ Definitionen
 \end_layout
 
 \begin_layout Subsubsection*
-Trajektorien 
+Trajektorie durch Punkt 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subsection*
@@ -755,6 +763,46 @@ Trajektorien
 \end_layout
 
 \begin_layout Subsubsection*
+Limitmenge Punkt 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{I}\left(x\right)=\cap_{t\in I}\overline{\gamma_{I}\left(\pi\left(x,t\right)\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im folgenden wird auf 
+\begin_inset Formula $I$
+\end_inset
+
+ die Existenz von Ordnungsrelationen 
+\begin_inset Formula $\leq$
+\end_inset
+
+ und 
+\begin_inset Formula $\geq$
+\end_inset
+
+ vorausgesetzt und es wird nur noch der Spezialfall 
+\begin_inset Formula $I=\mathbb{R}$
+\end_inset
+
+ betrachtet.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
 Positive und negative Halbtrajektorien 
 \end_layout
 
@@ -764,21 +812,6 @@ Positive und negative Halbtrajektorien
 \gamma_{-}\left(x\right) & = & \left\{ \pi\left(x,t\right)\mid t\leq0\right\} \\
 \gamma_{+}\left(x\right) & = & \left\{ \pi\left(x,t\right)\mid t\geq0\right\} 
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-Limitmengen 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-L_{I}\left(x\right)=\cap_{t\in I}\overline{\gamma_{I}\left(\pi\left(x,t\right)\right)}
-\]
 
 \end_inset
 
@@ -851,14 +884,15 @@ Mit
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\Omega\left(x\right)$
-\end_inset
-
- ist abgeschlossen und invariant für alle 
+Für alle 
 \begin_inset Formula $x$
 \end_inset
 
-.
+ ist 
+\begin_inset Formula $\Omega\left(x\right)$
+\end_inset
+
+ invariant und abgeschlossen.
  
 \end_layout
 
