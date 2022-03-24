@@ -436,7 +436,7 @@ Es gilt also
 ergibt sich daraus 
 \begin_inset Formula 
 \[
-\frac{d^{2}}{dt^{2}}x_{1}\left(t\right)=-\omega^{2}\sin x_{1}\left(t\right)
+\frac{d^{2}}{dt^{2}}x_{1}\left(t\right)=-\omega^{2}\sin x_{1}\left(t\right).
 \]
 
 \end_inset
@@ -446,10 +446,6 @@ ergibt sich daraus
 
 \begin_layout Section*
 Beschreibung als dynamisches System 
-\end_layout
-
-\begin_layout Subsection*
-Definition 
 \end_layout
 
 \begin_layout Standard
@@ -739,6 +735,133 @@ noprefix "false"
  
 \end_layout
 
+\begin_layout Subsection*
+Definitionen 
+\end_layout
+
+\begin_layout Subsubsection*
+Trajektorien 
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Formula 
+\[
+\gamma_{I}\left(x\right)=\left\{ \pi\left(x,t\right)\mid t\in I\right\} =\cup_{t\in I}\left\{ \pi\left(x,t\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Positive und negative Halbtrajektorien 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\gamma_{-}\left(x\right) & = & \left\{ \pi\left(x,t\right)\mid t\leq0\right\} \\
+\gamma_{+}\left(x\right) & = & \left\{ \pi\left(x,t\right)\mid t\geq0\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Limitmengen 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{I}\left(x\right)=\cap_{t\in I}\overline{\gamma_{I}\left(\pi\left(x,t\right)\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Alpha- und Omegalimits 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+A\left(x\right) & = & \cap_{t\in I}\overline{\gamma_{-}\left(\pi\left(x,t\right)\right)}\\
+\Omega\left(x\right) & = & \cap_{t\in I}\overline{\gamma_{+}\left(\pi\left(x,t\right)\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Invarianz 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ ist invariant, falls 
+\begin_inset Formula $\gamma_{\mathbb{R}}\left(x\right)\subseteq A$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Sätze 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ ist genau dann invariant, falls gilt 
+\begin_inset Formula $A=\cup_{x\in A}\gamma_{\mathbb{R}}\left(x\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Mit 
+\begin_inset Formula $A$
+\end_inset
+
+ ist auch 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ invariant.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Omega\left(x\right)$
+\end_inset
+
+ ist abgeschlossen und invariant für alle 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -761,7 +884,7 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Kettenregel
+https://de.wikipedia.org/wiki/Kettenregel 
 \end_layout
 
 \end_body
