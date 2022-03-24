@@ -794,7 +794,8 @@ Im folgenden wird auf
 \begin_inset Formula $\geq$
 \end_inset
 
- vorausgesetzt und es wird nur noch der Spezialfall 
+ vorausgesetzt.
+ Aus diesem Grund wird nur noch der Spezialfall 
 \begin_inset Formula $I=\mathbb{R}$
 \end_inset
 
@@ -862,11 +863,11 @@ Sätze
 \begin_inset Formula $A$
 \end_inset
 
- ist genau dann invariant, falls gilt 
+ ist genau dann invariant, falls 
 \begin_inset Formula $A=\cup_{x\in A}\gamma_{\mathbb{R}}\left(x\right)$
 \end_inset
 
-.
+ gilt.
  
 \end_layout
 
