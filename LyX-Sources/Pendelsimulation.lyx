@@ -483,14 +483,14 @@ eine additive Halbgruppe
 
  über den reellen Zahlen, d.h.
  es gilt 
-\begin_inset Formula $I\subset\mathbb{R}$
+\begin_inset Formula $I\subseteq\mathbb{R}$
 \end_inset
 
- mit 
+ und mit 
 \begin_inset Formula $0\in I$
 \end_inset
 
- und für 
+ und 
 \begin_inset Formula $r,s,t\in I$
 \end_inset
 
@@ -516,7 +516,7 @@ eine additive Halbgruppe
 
 \end_deeper
 \begin_layout Itemize
-und eine stetige Abbildung 
+eine stetige Abbildung 
 \begin_inset Formula $\pi:X\times I\rightarrow X$
 \end_inset
 
@@ -754,7 +754,7 @@ Trajektorie durch Punkt
 \begin_layout Subsection*
 \begin_inset Formula 
 \[
-\gamma_{I}\left(x\right)=\left\{ \pi\left(x,t\right)\mid t\in I\right\} =\cup_{t\in I}\left\{ \pi\left(x,t\right)\right\} 
+\gamma_{I}\left(x\right)=\cup_{t\in I}\left\{ \pi\left(x,t\right)\right\} 
 \]
 
 \end_inset
@@ -893,7 +893,169 @@ Für alle
 \begin_inset Formula $\Omega\left(x\right)$
 \end_inset
 
- invariant und abgeschlossen.
+ invariant.
+ 
+\begin_inset Formula $\Omega\left(x\right)$
+\end_inset
+
+ ist abgeschlossen.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Beispiel 
+\end_layout
+
+\begin_layout Standard
+Es sei 
+\begin_inset Formula $X=\mathbb{R}^{2}$
+\end_inset
+
+ und 
+\begin_inset Formula $I=\mathbb{R}$
+\end_inset
+
+.
+ Für die Abbildung 
+\begin_inset Formula $\pi$
+\end_inset
+
+ gelte 
+\begin_inset Formula $\pi\left(x,t\right)=x_{0}$
+\end_inset
+
+, die Trajektorie 
+\begin_inset Formula $\gamma_{\mathbb{R}}\left(x\right)$
+\end_inset
+
+ besteht also nur aus dem isolierten Punkt 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Die Abbildung 
+\begin_inset Formula $\pi\left(x,t\right)$
+\end_inset
+
+ ist stetig.
+ 
+\end_layout
+
+\begin_layout Itemize
+Die 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Identitätseigenschaft 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+der Abbildung 
+\begin_inset Formula $\pi\left(x,t\right)$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ ist erfüllt.
+ 
+\end_layout
+
+\begin_layout Itemize
+Die 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Halbgruppeneigenschaft 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+der Abbildung 
+\begin_inset Formula $\pi\left(x,t\right)$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ ist erfüllt.
+ 
+\end_layout
+
+\begin_layout Itemize
+Die Trajektorie ist nicht offen, denn ihr Punkt 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ist kein innerer Punkt.
+ 
+\end_layout
+
+\begin_layout Itemize
+Die Trajektorie ist abgeschlossen, denn ihr Komplement 
+\begin_inset Formula $\mathbb{R}^{2}\setminus\left\{ x_{0}\right\} $
+\end_inset
+
+ ist offen.
  
 \end_layout
 
