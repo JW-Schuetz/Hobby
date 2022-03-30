@@ -118,7 +118,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename PendelSimulation/PendelSimulation.eps
+	filename PendelSimulation/PendelSimulation1.eps
 	scale 30
 	BoundingBox 0bp 0bp 1193bp 884bp
 
@@ -1188,7 +1188,7 @@ es gilt:
 \begin_inset Formula $\Omega\left(x\right)=\left\{ x_{0}\right\} $
 \end_inset
 
- ist invariant  
+ ist invariant 
 \end_layout
 
 \end_inset
