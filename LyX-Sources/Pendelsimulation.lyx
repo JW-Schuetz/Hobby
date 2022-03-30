@@ -540,6 +540,7 @@ eine stetige Abbildung
 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 definiert.
  
@@ -551,7 +552,7 @@ Wo geht die Metrik
 \begin_inset Formula $d$
 \end_inset
 
- ein? Hier noch nirgends! 
+ ein? Hier noch nirgends!
 \end_layout
 
 \begin_layout Itemize
@@ -565,7 +566,6 @@ Die Halbgruppeneigenschaft ist (zusammen mit der Identitätseigenshaft) die
 \end_inset
 
 .
- 
 \end_layout
 
 \end_inset
@@ -573,7 +573,6 @@ Die Halbgruppeneigenschaft ist (zusammen mit der Identitätseigenshaft) die
  
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 \begin_inset Note Note
 status collapsed
