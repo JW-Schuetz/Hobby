@@ -457,7 +457,7 @@ literal "false"
 
 \end_inset
 
- wird ein dynamisches System (Fluss) auf 
+ wird ein dynamisches System (auch Fluss genannt) auf 
 \begin_inset Formula $X$
 \end_inset
 
@@ -743,7 +743,7 @@ Definitionen
 \end_layout
 
 \begin_layout Subsubsection*
-Trajektorie (Orbit) durch Punkt 
+Trajektorie (auch Orbit genannt) durch Punkt 
 \begin_inset Formula $x\in X$
 \end_inset
 
@@ -761,8 +761,67 @@ Trajektorie (Orbit) durch Punkt
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Es existieren also zwei Teilmengen 
+\begin_inset Formula $A$
+\end_inset
+
+ und 
+\begin_inset Formula $B$
+\end_inset
+
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Punkte, die Elemente einer Trajektorie sind 
+\begin_inset Formula $\gamma_{\mathbb{R}}\left(x\right)\neq\{\}$
+\end_inset
+
+ und Punkte, die dies nicht sind 
+\begin_inset Formula $\gamma_{\mathbb{R}}\left(x\right)=\{\}$
+\end_inset
+
+.
+ Also 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+A & = & \left\{ x\in X\mid\gamma_{\mathbb{R}}\left(x\right)\neq\{\}\right\} \\
+B & = & \left\{ x\in X\mid\gamma_{\mathbb{R}}\left(x\right)=\{\}\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es gilt 
+\begin_inset Formula 
+\[
+X=A+B.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection*
-Limitmenge Punkt 
+Limitmenge im Punkt 
 \begin_inset Formula $x\in X$
 \end_inset
 
@@ -791,6 +850,10 @@ Im folgenden wird auf
 
  und 
 \begin_inset Formula $\geq$
+\end_inset
+
+ auf 
+\begin_inset Formula $I$
 \end_inset
 
  vorausgesetzt.
@@ -839,6 +902,7 @@ Invarianz
 \end_layout
 
 \begin_layout Standard
+Eine Teilmenge 
 \begin_inset Formula $A\subseteq X$
 \end_inset
 
@@ -877,6 +941,20 @@ Für jedes
 
 .
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Was ist mit den Punkten 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ , die nicht Element einer Trajektorie sind? 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -959,7 +1037,7 @@ Ein Punkt
 
 \begin_layout Standard
 existiert.
- Die Zahl 
+ Diese Zahl 
 \begin_inset Formula $p$
 \end_inset
 
