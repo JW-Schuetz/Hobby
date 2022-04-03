@@ -449,23 +449,7 @@ Beschreibung als dynamisches System
 \end_layout
 
 \begin_layout Standard
-In Anlehnung an 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Krabs-1"
-literal "false"
-
-\end_inset
-
- wird ein dynamisches System (auch Fluss genannt) auf 
-\begin_inset Formula $X$
-\end_inset
-
- durch 
-\end_layout
-
-\begin_layout Itemize
-einen metrischen Raum 
+Es sei ein metrischer Raum 
 \begin_inset Formula $X$
 \end_inset
 
@@ -473,16 +457,13 @@ einen metrischen Raum
 \begin_inset Formula $d$
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Itemize
-eine additive Halbgruppe 
+ sowie eine additive Halbgruppe 
 \begin_inset Formula $I$
 \end_inset
 
- über den reellen Zahlen, d.h.
- es gilt 
+ über den reellen Zahlen vorgegeben.
+ D.h.
+ es gelte 
 \begin_inset Formula $I\subseteq\mathbb{R}$
 \end_inset
 
@@ -501,12 +482,11 @@ eine additive Halbgruppe
  die beiden Eigenschaften 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
 \text{Kommutativgesetz:} &  & r+s=s+r\\
-\text{Assoziativgesetz:} &  & \left(r+s\right)+t=r+\left(s+t\right)
+\text{Assoziativgesetz:} &  & \left(r+s\right)+t=r+\left(s+t\right).
 \end{eqnarray*}
 
 \end_inset
@@ -514,8 +494,23 @@ eine additive Halbgruppe
 
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
+\begin_layout Standard
+In Anlehnung an 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Krabs-1"
+literal "false"
+
+\end_inset
+
+ wird ein dynamisches System auf 
+\begin_inset Formula $X$
+\end_inset
+
+ (auch Fluss genannt) durch 
+\end_layout
+
+\begin_layout Standard
 eine stetige Abbildung 
 \begin_inset Formula $\pi:X\times I\rightarrow X$
 \end_inset
@@ -527,7 +522,6 @@ eine stetige Abbildung
  geltenden Eigenschaften 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
@@ -540,42 +534,11 @@ eine stetige Abbildung
 
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 definiert.
  
 \begin_inset Note Note
-status collapsed
-
-\begin_layout Itemize
-Wo geht die Metrik 
-\begin_inset Formula $d$
-\end_inset
-
- ein? Hier noch nirgends!
-\end_layout
-
-\begin_layout Itemize
-Die Halbgruppeneigenschaft ist (zusammen mit der Identitätseigenshaft) die
- Grundlage der Beschreibung der Entwicklung eines Startwertes 
-\begin_inset Formula $x$
-\end_inset
-
- in Abhängigkeit von der Zeit 
-\begin_inset Formula $t$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Subsection*
 Motivation
@@ -620,7 +583,7 @@ Beschreibung dieser Lösung durch die Abbildung
 \begin_inset Formula $\pi$
 \end_inset
 
- liefert
+ liefert 
 \end_layout
 
 \begin_layout Plain Layout
@@ -635,11 +598,11 @@ Beschreibung dieser Lösung durch die Abbildung
 \end_layout
 
 \begin_layout Subsubsection*
-Behauptung Halbgruppeneigenschaft
+Behauptung Halbgruppeneigenschaft 
 \end_layout
 
 \begin_layout Plain Layout
-Es gilt die Halbgruppeneigenschaft
+Es gilt die Halbgruppeneigenschaft 
 \end_layout
 
 \begin_layout Plain Layout
@@ -654,7 +617,7 @@ Es gilt die Halbgruppeneigenschaft
 \end_layout
 
 \begin_layout Subsubsection*
-Beweis Halbgruppeneigenschaft
+Beweis Halbgruppeneigenschaft 
 \end_layout
 
 \begin_layout Plain Layout
@@ -676,7 +639,7 @@ noprefix "false"
 \begin_inset Formula $t$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -813,6 +776,15 @@ X=A+B.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+Es gibt ebenfalls Punkte, die Element der Limitmenge 
+\begin_inset Formula $L_{I}\left(x\right)$
+\end_inset
+
+ sind.
+ 
 \end_layout
 
 \end_inset
