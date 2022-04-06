@@ -538,7 +538,7 @@ eine stetige Abbildung
 definiert.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Subsection*
 Motivation
@@ -699,6 +699,17 @@ noprefix "false"
 \end_inset
 
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Da existieren doch bestimmt Zusammenhänge zu den Faserbündeln! Und damit
+ zu den Grundlagen der theoretischen Physik! 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -917,11 +928,30 @@ Für jedes
 status open
 
 \begin_layout Plain Layout
-Was ist mit den Punkten 
+Wie ist die Bewegung definiert für Punkte 
 \begin_inset Formula $x\in X$
 \end_inset
 
- , die nicht Element einer Trajektorie sind? 
+, die nicht Element einer Trajektorie sind? Es wird ja definiert, dass jedes
+ 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ein Bildpunkt existiert.
+ Ist das ein Widerspruch? 
+\end_layout
+
+\begin_layout Plain Layout
+Nein, denn 
+\begin_inset Formula $\pi$
+\end_inset
+
+ ist auf ganz 
+\begin_inset Formula $X$
+\end_inset
+
+ definiert.
+ 
 \end_layout
 
 \end_inset
@@ -941,6 +971,16 @@ Eine Teilmenge
  wird minimal genannt, falls sie nichtleer, abgeschlossen und invariant
  ist und falls keine ihrer echten Untermengen diese Eigenschaften besitzt.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
