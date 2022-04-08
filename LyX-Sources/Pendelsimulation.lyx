@@ -720,11 +720,7 @@ Zu Bündeln, die nicht nur lokal, sondern auch global ein Produkt
 \begin_inset Formula $X$
 \end_inset
 
- ist die Basis, 
-\begin_inset Formula $I$
-\end_inset
-
- die Faser und 
+ ist die Basismenge, 
 \begin_inset Formula $\pi$
 \end_inset
 
@@ -736,8 +732,15 @@ Zu Bündeln, die nicht nur lokal, sondern auch global ein Produkt
 \begin_inset Formula $X$
 \end_inset
 
+ und 
+\begin_inset Formula $\pi^{-1}\left(x\right)$
+\end_inset
+
+ die Faser über 
+\begin_inset Formula $x$
+\end_inset
+
 .
- 
 \end_layout
 
 \end_inset
@@ -786,15 +789,8 @@ Es existieren also zwei Teilmengen
 \end_inset
 
 .
- Punkte, die Elemente einer Trajektorie sind 
-\begin_inset Formula $\gamma_{\mathbb{R}}\left(x\right)\neq\{\}$
-\end_inset
-
- und Punkte, die dies nicht sind 
-\begin_inset Formula $\gamma_{\mathbb{R}}\left(x\right)=\{\}$
-\end_inset
-
-.
+ Punkte, die Elemente einer Trajektorie sind und Punkte, die dies nicht
+ sind.
  Also 
 \end_layout
 
@@ -802,7 +798,7 @@ Es existieren also zwei Teilmengen
 \begin_inset Formula 
 \begin{eqnarray*}
 A & = & \left\{ x\in X\mid\gamma_{\mathbb{R}}\left(x\right)\neq\{\}\right\} \\
-B & = & \left\{ x\in X\mid\gamma_{\mathbb{R}}\left(x\right)=\{\}\right\} 
+B & = & \left\{ x\in X\mid\gamma_{\mathbb{R}}\left(x\right)=\{\}\right\} .
 \end{eqnarray*}
 
 \end_inset
@@ -814,7 +810,7 @@ B & = & \left\{ x\in X\mid\gamma_{\mathbb{R}}\left(x\right)=\{\}\right\}
 Es gilt 
 \begin_inset Formula 
 \[
-X=A+B.
+X=A\cup B.
 \]
 
 \end_inset
@@ -984,7 +980,7 @@ Nein, denn
 \end_inset
 
  definiert.
- 
+ ???
 \end_layout
 
 \end_inset
@@ -1004,16 +1000,6 @@ Eine Teilmenge
  wird minimal genannt, falls sie nichtleer, abgeschlossen und invariant
  ist und falls keine ihrer echten Untermengen diese Eigenschaften besitzt.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection*
