@@ -224,8 +224,8 @@ Ein solches System ist der magnetische Monopol.
 \end_layout
 
 \begin_layout Standard
-Magnetische Monopole sind z.Z.
- noch hypothetisch, es gibt aber starke Indizien für ihre Existenz.
+Magnetische Monopole sind noch nicht beobachtet worden, es gibt aber starke
+ Indizien für ihre Existenz.
  Insbesondere wäre die Quantisierung der elektrischen Elementarladung eine
  direkte Folge der Existenz des magnetischen Monopols 
 \begin_inset CommandInset citation
@@ -300,7 +300,11 @@ mit dem Normalenvektor
 \begin_inset Formula $\underline{t}$
 \end_inset
 
- ihres Randes 
+ ihres Randes
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Formula $s$
 \end_inset
 
@@ -650,16 +654,17 @@ Für
 \begin_inset Formula $U=\mathbb{R}^{3}-\underline{0}$
 \end_inset
 
- gelten die folgenden Eigenschaften
+ gilt
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Hinweis: für den Fall 
 \begin_inset Formula $\pi_{2}\left(U\right)\neq0$
 \end_inset
 
- betrachte man eine 2-Sphäre, die den Ursprung umschliesst.
+ betrachte man z.B.
+ eine 2-Sphäre, die den Ursprung umschliesst.
 \end_layout
 
 \end_inset
