@@ -3829,20 +3829,6 @@ Behauptung
 \end_layout
 
 \begin_layout Standard
-Im Unterabschnitt 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Lösungspunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- wird die folgende Behauptung aufgestellt.
-\end_layout
-
-\begin_layout Standard
 Aus 
 \begin_inset Formula 
 \begin{equation}
@@ -3975,6 +3961,16 @@ noprefix "false"
 \begin_inset Formula $\varOmega^{S}<-1.$
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\color red
  
 \end_layout
 

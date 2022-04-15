@@ -1,0 +1,539 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1cm
+\rightmargin 2cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Hopfbündel
+\end_layout
+
+\begin_layout Author
+Jürgen Womser-Schütz, https://github.com/JW-Schuetz 
+\end_layout
+
+\begin_layout Date
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kein Datum
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Keine Seitennummerierung!
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section*
+3-Sphäre 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Die 3-Sphäre 
+\begin_inset Formula $S^{3}\subset\mathbb{R}^{4}$
+\end_inset
+
+ ist mit 
+\begin_inset Formula $\underline{p}=\left(p_{1},p_{2},p_{3,},p_{4}\right)\in\mathbb{R}^{4}$
+\end_inset
+
+ definiert durch 
+\begin_inset Formula $\left\Vert \underline{p}\right\Vert =1.$
+\end_inset
+
+ Identifiziert man durch die Korrespondenz 
+\begin_inset Formula 
+\[
+\left(x^{1},y^{1},x^{2},y^{2}\right)\leftrightarrow\left(x^{1}+iy^{1},x^{2}+iy^{2}\right)
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\mathbb{\mathbb{C}}^{2}$
+\end_inset
+
+, dann erhält man 
+\begin_inset Formula 
+\begin{equation}
+S^{3}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|^{2}+\left|z^{2}\right|^{2}=1\right\} .\label{eq:S3-Allgemein}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diese Darstellung von 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ ist von 4 Parametern abhängig, aber nur 3 sind nötig.
+ Also macht man z.B.
+ mit 
+\begin_inset Formula $r_{1},r_{2}\geq0$
+\end_inset
+
+ und 
+\begin_inset Formula $\xi_{1},\xi_{2}\in\mathbb{R}$
+\end_inset
+
+ den Ansatz 
+\begin_inset Formula $z^{1}=r_{1}\exp\left(i\xi_{1}\right)$
+\end_inset
+
+ und 
+\begin_inset Formula $z^{2}=r_{2}\exp\left(i\xi_{2}\right)$
+\end_inset
+
+.
+ Es muss wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:S3-Allgemein"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) gelten 
+\begin_inset Formula $r_{1}^{2}+r_{2}^{2}=1$
+\end_inset
+
+.
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Behauptung 
+\end_layout
+
+\begin_layout Standard
+Es existiert für jedes Tupel 
+\begin_inset Formula $\left(r_{1},r_{2}\right)$
+\end_inset
+
+ mit 
+\begin_inset Formula $r_{1},r_{2}\geq0$
+\end_inset
+
+ und 
+\begin_inset Formula $r_{1}^{2}+r_{2}^{2}=1$
+\end_inset
+
+ ein eindeutig bestimmter Winkel 
+\begin_inset Formula $\phi\in\left[0,\frac{\pi}{2}\right]$
+\end_inset
+
+ mit 
+\begin_inset Formula $r_{1}=\cos\left(\phi\right)$
+\end_inset
+
+ und 
+\begin_inset Formula $r_{2}=\sin\left(\phi\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis 
+\end_layout
+
+\begin_layout Standard
+Zu 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ kann man den Winkel 
+\begin_inset Formula $\phi_{1}=\arccos\left(r_{1}\right)$
+\end_inset
+
+ hinzubestimmen und zu 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+ den Winkel 
+\begin_inset Formula $\phi_{2}=\arcsin\left(r_{2}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Aus 
+\begin_inset Formula $r_{1}^{2}+r_{2}^{2}=1$
+\end_inset
+
+ folgt 
+\begin_inset Formula $r_{2}=\pm\sqrt{1-r_{1}^{2}}$
+\end_inset
+
+ und wegen 
+\begin_inset Formula $r_{2}\geq0$
+\end_inset
+
+ kommt nur das positive Vorzeichen in Frage.
+ Also gilt 
+\begin_inset Formula $r_{2}=\sqrt{1-r_{1}^{2}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Wegen (siehe dazu 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia1"
+literal "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\[
+\arccos\left(x\right)=\arcsin\left(\sqrt{1-x^{2}}\right)
+\]
+
+\end_inset
+
+ergibt sich 
+\begin_inset Formula 
+\[
+\phi_{2}=\arcsin\left(r_{2}\right)=\arcsin\left(\sqrt{1-r_{1}^{2}}\right)=\arccos\left(r_{1}\right)=\phi_{1}.
+\]
+
+\end_inset
+
+Die beiden Winkel 
+\begin_inset Formula $\phi_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $\phi_{2}$
+\end_inset
+
+ sind also identisch.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\color red
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Man erhält aus der obigen Behauptung mit 
+\begin_inset Formula $\phi\rightarrow\frac{\phi}{2}$
+\end_inset
+
+ die Parametrierung für 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+S^{3}=\left\{ \left(\cos\left(\frac{\phi}{2}\right)\exp\left(i\xi_{1}\right),\sin\left(\frac{\phi}{2}\right)\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R},0\leq\frac{\phi}{2}\leq\frac{\pi}{2},\right\} .\label{eq:S3-Spezialisiert}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es werden im folgenden drei Fälle für die Beträge von 
+\begin_inset Formula $z^{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $z^{2}$
+\end_inset
+
+ behandelt.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Fall 1: 
+\begin_inset Formula $\left|z^{1}\right|^{2}=\left|z^{2}\right|^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:S3-Spezialisiert"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula $\cos\left(\frac{\phi}{2}\right)=\sin\left(\frac{\phi}{2}\right)$
+\end_inset
+
+ und damit 
+\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{4}$
+\end_inset
+
+ und 
+\begin_inset Formula $\left|z^{1}\right|=\left|z^{2}\right|=\frac{\sqrt{2}}{2}$
+\end_inset
+
+.
+ Die 3-Sphäre 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ ist in diesem Fall der Torus 
+\begin_inset Formula 
+\begin{equation}
+T_{1}=\left\{ \left(\frac{\sqrt{2}}{2}\exp\left(i\xi_{1}\right),\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R}\right\} .\label{eq:S3-Fall1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Fall 2: 
+\begin_inset Formula $\left|z^{1}\right|^{2}\leq\left|z^{2}\right|^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:S3-Spezialisiert"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula $\cos\left(\frac{\phi}{2}\right)\leq\sin\left(\frac{\phi}{2}\right)$
+\end_inset
+
+ und wegen 
+\begin_inset Formula $\frac{\phi}{2}\in\left[0,\frac{\pi}{2}\right]$
+\end_inset
+
+ ergibt sich 
+\begin_inset Formula $\frac{\pi}{4}\leq\frac{\phi}{2}\leq\frac{\pi}{2}$
+\end_inset
+
+.
+ Für das untere Limit 
+\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{4}$
+\end_inset
+
+ ergibt sich 
+\begin_inset Formula $T_{2}=T_{1}$
+\end_inset
+
+.
+ Für das obere Limit 
+\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{2}$
+\end_inset
+
+ folgt 
+\begin_inset Formula $z^{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula $z^{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Fall 3: 
+\begin_inset Formula $\left|z^{1}\right|^{2}\geq\left|z^{2}\right|^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "Naber"
+literal "false"
+
+\end_inset
+
+Topology, Geometry and Gauge fields; Naber, Gregory; Springer Science+Business
+ Media; 2011
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "Wikipedia1"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Formelsammlung_Trigonometrie#Additionstheoreme;
+ Abschnitt: Umrechnung in andere trigonometrische Funktionen
+\end_layout
+
+\end_body
+\end_document
