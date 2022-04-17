@@ -213,16 +213,192 @@ noprefix "false"
 
 \end_inset
 
-) gelten 
+) 
 \begin_inset Formula $r_{1}^{2}+r_{2}^{2}=1$
+\end_inset
+
+ gelten.
+ 
+\end_layout
+
+\begin_layout Standard
+Man erhält die Parametrierung für 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ (siehe dazu den Anhang) 
+\begin_inset Formula 
+\begin{equation}
+S^{3}=\left\{ \left(\cos\left(\frac{\phi}{2}\right)\exp\left(i\xi_{1}\right),\sin\left(\frac{\phi}{2}\right)\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R},0\leq\frac{\phi}{2}\leq\frac{\pi}{2},\right\} .\label{eq:S3-Spezialisiert}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es werden im folgenden drei Fälle für die Beträge von 
+\begin_inset Formula $z^{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $z^{2}$
+\end_inset
+
+ behandelt.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Fall 1: 
+\begin_inset Formula $\left|z^{1}\right|^{2}=\left|z^{2}\right|^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:S3-Spezialisiert"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula $\cos\left(\frac{\phi}{2}\right)=\sin\left(\frac{\phi}{2}\right)$
+\end_inset
+
+ und damit 
+\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{4}$
+\end_inset
+
+ und 
+\begin_inset Formula $\left|z^{1}\right|=\left|z^{2}\right|=\frac{\sqrt{2}}{2}$
+\end_inset
+
+.
+ Die 3-Sphäre 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ in diesem Fall ist der 2-dimensionale Torus 
+\begin_inset Formula 
+\begin{equation}
+T_{1}=\left\{ \left(\frac{\sqrt{2}}{2}\exp\left(i\xi_{1}\right),\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R}\right\} .\label{eq:S3-Fall1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Fall 2: 
+\begin_inset Formula $\left|z^{1}\right|^{2}\leq\left|z^{2}\right|^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:S3-Spezialisiert"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula $\cos\left(\frac{\phi}{2}\right)\leq\sin\left(\frac{\phi}{2}\right)$
+\end_inset
+
+ und wegen 
+\begin_inset Formula $\frac{\phi}{2}\in\left[0,\frac{\pi}{2}\right]$
+\end_inset
+
+ ergibt sich 
+\begin_inset Formula $\frac{\pi}{4}\leq\frac{\phi}{2}\leq\frac{\pi}{2}$
 \end_inset
 
 .
  
-\begin_inset VSpace bigskip
+\end_layout
+
+\begin_layout Standard
+Für das untere Limit 
+\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{4}$
+\end_inset
+
+ ergibt sich 
+\begin_inset Formula $T_{2}=T_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Für das obere Limit 
+\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{2}$
+\end_inset
+
+ folgt 
+\begin_inset Formula $z^{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula $z^{2}=1$
+\end_inset
+
+ und das ergibt die Kreislinie 
+\begin_inset Formula 
+\begin{equation}
+T_{2}=\left\{ \left(0,\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{2}\in\mathbb{R}\right\} .\label{eq:S3-Fall2}
+\end{equation}
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Für jeden Wert 
+\begin_inset Formula $\frac{\phi}{2}$
+\end_inset
+
+ dazwischen ergibt sich ebenfalls ein 2-dimensionaler Torus, der zwischen
+ den beiden Tori 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ liegt.
+ Zusammengenommen entsteht ein 3-dimensionaler Vollturus als Vereinigung
+ all dieser 2-dimensionalen Tori.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Fall 3: 
+\begin_inset Formula $\left|z^{1}\right|^{2}\geq\left|z^{2}\right|^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Part*
+Anhang 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -292,7 +468,8 @@ Aus
 \begin_inset Formula $r_{2}=\pm\sqrt{1-r_{1}^{2}}$
 \end_inset
 
- und wegen 
+.
+ Wegen 
 \begin_inset Formula $r_{2}\geq0$
 \end_inset
 
@@ -339,6 +516,32 @@ Die beiden Winkel
 \end_inset
 
  sind also identisch.
+ 
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $x\geq0$
+\end_inset
+
+ gilt 
+\begin_inset Formula $0\leq\arcsin\left(x\right)\leq\frac{\pi}{2}$
+\end_inset
+
+ und 
+\begin_inset Formula $0\leq\arccos\left(x\right)\leq\frac{\pi}{2}$
+\end_inset
+
+.
+ Für den Winkel 
+\begin_inset Formula $\phi$
+\end_inset
+
+ gilt also 
+\begin_inset Formula $\phi\in\left[0,\frac{\pi}{2}\right]$
+\end_inset
+
+.
 \begin_inset space ~
 \end_inset
 
@@ -348,157 +551,6 @@ Die beiden Winkel
 
 
 \color red
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Man erhält aus der obigen Behauptung mit 
-\begin_inset Formula $\phi\rightarrow\frac{\phi}{2}$
-\end_inset
-
- die Parametrierung für 
-\begin_inset Formula $S^{3}$
-\end_inset
-
- 
-\begin_inset Formula 
-\begin{equation}
-S^{3}=\left\{ \left(\cos\left(\frac{\phi}{2}\right)\exp\left(i\xi_{1}\right),\sin\left(\frac{\phi}{2}\right)\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R},0\leq\frac{\phi}{2}\leq\frac{\pi}{2},\right\} .\label{eq:S3-Spezialisiert}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Es werden im folgenden drei Fälle für die Beträge von 
-\begin_inset Formula $z^{1}$
-\end_inset
-
- und 
-\begin_inset Formula $z^{2}$
-\end_inset
-
- behandelt.
- 
-\end_layout
-
-\begin_layout Subsection*
-Fall 1: 
-\begin_inset Formula $\left|z^{1}\right|^{2}=\left|z^{2}\right|^{2}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Aus (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:S3-Spezialisiert"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt 
-\begin_inset Formula $\cos\left(\frac{\phi}{2}\right)=\sin\left(\frac{\phi}{2}\right)$
-\end_inset
-
- und damit 
-\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{4}$
-\end_inset
-
- und 
-\begin_inset Formula $\left|z^{1}\right|=\left|z^{2}\right|=\frac{\sqrt{2}}{2}$
-\end_inset
-
-.
- Die 3-Sphäre 
-\begin_inset Formula $S^{3}$
-\end_inset
-
- ist in diesem Fall der Torus 
-\begin_inset Formula 
-\begin{equation}
-T_{1}=\left\{ \left(\frac{\sqrt{2}}{2}\exp\left(i\xi_{1}\right),\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R}\right\} .\label{eq:S3-Fall1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Fall 2: 
-\begin_inset Formula $\left|z^{1}\right|^{2}\leq\left|z^{2}\right|^{2}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Aus (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:S3-Spezialisiert"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt 
-\begin_inset Formula $\cos\left(\frac{\phi}{2}\right)\leq\sin\left(\frac{\phi}{2}\right)$
-\end_inset
-
- und wegen 
-\begin_inset Formula $\frac{\phi}{2}\in\left[0,\frac{\pi}{2}\right]$
-\end_inset
-
- ergibt sich 
-\begin_inset Formula $\frac{\pi}{4}\leq\frac{\phi}{2}\leq\frac{\pi}{2}$
-\end_inset
-
-.
- Für das untere Limit 
-\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{4}$
-\end_inset
-
- ergibt sich 
-\begin_inset Formula $T_{2}=T_{1}$
-\end_inset
-
-.
- Für das obere Limit 
-\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{2}$
-\end_inset
-
- folgt 
-\begin_inset Formula $z^{1}=0$
-\end_inset
-
-, 
-\begin_inset Formula $z^{2}=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Fall 3: 
-\begin_inset Formula $\left|z^{1}\right|^{2}\geq\left|z^{2}\right|^{2}$
-\end_inset
-
  
 \end_layout
 
