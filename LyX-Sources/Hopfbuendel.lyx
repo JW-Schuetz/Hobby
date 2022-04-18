@@ -6,7 +6,7 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage{a4}
+% \usepackage{a4}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -86,7 +86,7 @@
 \begin_body
 
 \begin_layout Title
-Hopfbündel
+Hopfbündel 
 \end_layout
 
 \begin_layout Author
@@ -99,32 +99,6 @@ status open
 
 \begin_layout Plain Layout
 Kein Datum
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Keine Seitennummerierung!
 \end_layout
 
 \end_inset
@@ -322,12 +296,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Kreislinie 
-\begin_inset Formula $K$
+Torus 
+\begin_inset Formula $T$
 \end_inset
 
- und Torus 
-\begin_inset Formula $T$
+ und Kreislinie 
+\begin_inset Formula $K=\left\{ 0\right\} \times S^{1}$
 \end_inset
 
  
@@ -442,7 +416,11 @@ Für jeden Wert
 \begin_inset Formula $T_{\frac{\phi}{2}}$
 \end_inset
 
- entsteht ein Vollturus.
+ entsteht der Volltorus 
+\begin_inset Formula $K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} $
+\end_inset
+
+.
  
 \end_layout
 
@@ -470,7 +448,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+xxx 
 \end_layout
 
 \end_inset
@@ -521,7 +499,7 @@ Es existiert für jedes Tupel
 \end_layout
 
 \begin_layout Subsubsection*
-Beweis 1 
+Beweis 
 \end_layout
 
 \begin_layout Standard
