@@ -145,9 +145,9 @@ Die 3-Sphäre
 
 , dann erhält man für die 3-Sphäre 
 \begin_inset Formula 
-\begin{equation}
-S^{3}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|^{2}+\left|z^{2}\right|^{2}=1\right\} .\label{eq:S3-Allgemein}
-\end{equation}
+\[
+S^{3}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|^{2}+\left|z^{2}\right|^{2}=1\right\} .
+\]
 
 \end_inset
 
@@ -178,17 +178,7 @@ Diese Darstellung von
 \end_inset
 
 .
- Es muss wegen (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:S3-Allgemein"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
+ Es muss dann 
 \begin_inset Formula $r_{1}^{2}+r_{2}^{2}=1$
 \end_inset
 
@@ -354,15 +344,11 @@ Für das untere Limit
 \end_inset
 
  ergibt sich 
-\begin_inset Formula $T_{2}=T$
+\begin_inset Formula $T$
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Für das obere Limit 
+ Für das obere Limit 
 \begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{2}$
 \end_inset
 
@@ -376,22 +362,14 @@ Für das obere Limit
 
  und das ergibt die Kreislinie 
 \begin_inset Formula 
-\begin{equation}
-K=\left\{ \left(0,\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{2}\in\mathbb{R}\right\} \label{eq:S3-Fall2}
-\end{equation}
+\begin{eqnarray*}
+K & = & \left\{ \left(0,\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{2}\in\mathbb{R}\right\} \\
+ & = & \left\{ 0\right\} \times S^{1}.
+\end{eqnarray*}
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-oder als kartesisches Produkt dargestellt 
-\begin_inset Formula $K=\left\{ 0\right\} \times S^{1}$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
@@ -399,12 +377,20 @@ Für jeden Wert
 \begin_inset Formula $\frac{\phi}{2}$
 \end_inset
 
- dazwischen ergibt sich jeweils ein 2-dimensionaler Torus 
+ zwischen 
+\begin_inset Formula $\frac{\pi}{4}$
+\end_inset
+
+ und 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ ergibt sich jeweils ein 2-dimensionaler Torus 
 \begin_inset Formula $T_{\frac{\phi}{2}}$
 \end_inset
 
  mit 
-\begin_inset Formula $T_{\frac{\phi}{2}}\subseteq T_{2}$
+\begin_inset Formula $T_{\frac{\phi}{2}}\subseteq T$
 \end_inset
 
 .
@@ -417,7 +403,11 @@ Für jeden Wert
 \end_inset
 
  entsteht der Volltorus 
-\begin_inset Formula $K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} $
+\begin_inset Formula 
+\begin{equation}
+K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} \label{eq:S3-Fall2}
+\end{equation}
+
 \end_inset
 
 .
@@ -448,7 +438,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-xxx 
+ 
 \end_layout
 
 \end_inset
