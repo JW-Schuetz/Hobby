@@ -194,7 +194,7 @@ Man erhält so die Parametrierung für
  (siehe dazu im Anhang die Behauptung 1) 
 \begin_inset Formula 
 \begin{equation}
-S^{3}=\left\{ \left(\cos\left(\frac{\phi}{2}\right)\exp\left(i\xi_{1}\right),\sin\left(\frac{\phi}{2}\right)\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R},0\leq\frac{\phi}{2}\leq\frac{\pi}{2},\right\} .\label{eq:S3-Spezialisiert}
+S^{3}=\left\{ \left(\cos\left(\phi\right)\exp\left(i\xi_{1}\right),\sin\left(\phi\right)\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R},0\leq\phi\leq\frac{\pi}{2},\right\} .\label{eq:S3-Spezialisiert}
 \end{equation}
 
 \end_inset
@@ -235,11 +235,11 @@ noprefix "false"
 \end_inset
 
 ) folgt 
-\begin_inset Formula $\cos\left(\frac{\phi}{2}\right)=\sin\left(\frac{\phi}{2}\right)$
+\begin_inset Formula $\cos\left(\phi\right)=\sin\left(\phi\right)$
 \end_inset
 
  und damit 
-\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{4}$
+\begin_inset Formula $\phi=\frac{\pi}{4}$
 \end_inset
 
  und 
@@ -323,15 +323,15 @@ noprefix "false"
 \end_inset
 
 ) folgt 
-\begin_inset Formula $\cos\left(\frac{\phi}{2}\right)\leq\sin\left(\frac{\phi}{2}\right)$
+\begin_inset Formula $\cos\left(\phi\right)\leq\sin\left(\phi\right)$
 \end_inset
 
  und wegen 
-\begin_inset Formula $\frac{\phi}{2}\in\left[0,\frac{\pi}{2}\right]$
+\begin_inset Formula $\phi\in\left[0,\frac{\pi}{2}\right]$
 \end_inset
 
  ergibt sich 
-\begin_inset Formula $\frac{\pi}{4}\leq\frac{\phi}{2}\leq\frac{\pi}{2}$
+\begin_inset Formula $\frac{\pi}{4}\leq\phi\leq\frac{\pi}{2}$
 \end_inset
 
 .
@@ -340,16 +340,30 @@ noprefix "false"
 
 \begin_layout Standard
 Für das untere Limit 
-\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{4}$
+\begin_inset Formula $\phi=\frac{\pi}{4}$
 \end_inset
 
- ergibt sich 
+ ergibt sich der Torus 
 \begin_inset Formula $T$
 \end_inset
 
-.
- Für das obere Limit 
-\begin_inset Formula $\frac{\phi}{2}=\frac{\pi}{2}$
+ aus Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:S3-Fall1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Für das obere Limit 
+\begin_inset Formula $\phi=\frac{\pi}{4}$
 \end_inset
 
  folgt 
@@ -361,10 +375,13 @@ Für das untere Limit
 \end_inset
 
  und das ergibt die Kreislinie 
+\begin_inset Formula $K=\left\{ 0\right\} \times S^{1}$
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
-K & = & \left\{ \left(0,\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{2}\in\mathbb{R}\right\} \\
- & = & \left\{ 0\right\} \times S^{1}.
+K & = & \left\{ \left(0,\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{2}\in\mathbb{R}\right\} .
 \end{eqnarray*}
 
 \end_inset
@@ -374,40 +391,40 @@ K & = & \left\{ \left(0,\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad
 
 \begin_layout Standard
 Für jeden Wert 
-\begin_inset Formula $\frac{\phi}{2}$
+\begin_inset Formula $\phi$
 \end_inset
 
- zwischen 
-\begin_inset Formula $\frac{\pi}{4}$
-\end_inset
-
- und 
-\begin_inset Formula $\frac{\pi}{2}$
+ aus dem Intervall 
+\begin_inset Formula $\left[\frac{\pi}{4},\frac{\pi}{2}\right)$
 \end_inset
 
  ergibt sich jeweils ein 2-dimensionaler Torus 
-\begin_inset Formula $T_{\frac{\phi}{2}}$
-\end_inset
-
- mit 
-\begin_inset Formula $T_{\frac{\phi}{2}}\subseteq T$
+\begin_inset Formula $T_{\phi}$
 \end_inset
 
 .
- Durch die Vereinigung der Kreislinie 
-\begin_inset Formula $K$
+ Durch die Vereinigung aller 2-dimensionalen Tori 
+\begin_inset Formula $T_{\phi}$
 \end_inset
 
- und aller 2-dimensionalen Tori 
-\begin_inset Formula $T_{\frac{\phi}{2}}$
+ und der Kreislinie 
+\begin_inset Formula $K$
 \end_inset
 
  entsteht der Volltorus 
 \begin_inset Formula 
 \begin{equation}
-K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} \label{eq:S3-Fall2}
+K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} .\label{eq:S3-Fall2}
 \end{equation}
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit der Oberfläche 
+\begin_inset Formula $T$
 \end_inset
 
 .
@@ -438,17 +455,44 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:S3-Spezialisiert"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula $\cos\left(\phi\right)\geq\sin\left(\phi\right)$
+\end_inset
+
+ und wegen 
+\begin_inset Formula $\phi\in\left[0,\frac{\pi}{2}\right]$
+\end_inset
+
+ ergibt sich 
+\begin_inset Formula $0\leq\phi\leq\frac{\pi}{4}$
+\end_inset
+
+.
  
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Part*
@@ -537,7 +581,7 @@ Aus
 \end_layout
 
 \begin_layout Standard
-Wegen (siehe dazu 
+Wegen der Identität (siehe dazu 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Wikipedia1"
