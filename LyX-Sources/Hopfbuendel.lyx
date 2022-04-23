@@ -286,7 +286,13 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Torus 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Torus"
+
+\end_inset
+
+2D-Torus 
 \begin_inset Formula $T$
 \end_inset
 
@@ -343,11 +349,12 @@ Für das untere Limit
 \begin_inset Formula $\phi=\frac{\pi}{4}$
 \end_inset
 
- ergibt sich der Torus 
+ ergibt sich der 2D-Torus 
 \begin_inset Formula $T$
 \end_inset
 
- aus Gleichung (
+ des 1.
+ Falles nach Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:S3-Fall1"
@@ -363,7 +370,7 @@ noprefix "false"
 
 \begin_layout Standard
 Für das obere Limit 
-\begin_inset Formula $\phi=\frac{\pi}{4}$
+\begin_inset Formula $\phi=\frac{\pi}{2}$
 \end_inset
 
  folgt 
@@ -374,14 +381,14 @@ Für das obere Limit
 \begin_inset Formula $z^{2}=1$
 \end_inset
 
- und das ergibt die Kreislinie 
-\begin_inset Formula $K=\left\{ 0\right\} \times S^{1}$
+ und das ergibt die horizontale Kreislinie 
+\begin_inset Formula $K_{H}=\left\{ 0\right\} \times S^{1}$
 \end_inset
 
  
 \begin_inset Formula 
 \begin{eqnarray*}
-K & = & \left\{ \left(0,\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{2}\in\mathbb{R}\right\} .
+K_{H} & = & \left\{ \left(0,\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{2}\in\mathbb{R}\right\} .
 \end{eqnarray*}
 
 \end_inset
@@ -408,13 +415,13 @@ Für jeden Wert
 \end_inset
 
  und der Kreislinie 
-\begin_inset Formula $K$
+\begin_inset Formula $K_{H}$
 \end_inset
 
- entsteht der Volltorus 
+ entsteht der 3D-Torus 
 \begin_inset Formula 
 \begin{equation}
-K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} .\label{eq:S3-Fall2}
+K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} \label{eq:S3-Fall2}
 \end{equation}
 
 \end_inset
@@ -427,7 +434,17 @@ mit der Oberfläche
 \begin_inset Formula $T$
 \end_inset
 
-.
+ (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Torus"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  
 \end_layout
 
@@ -455,6 +472,20 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Volltorus"
+
+\end_inset
+
+3D-Torus 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+ und Kreislinie 
+\begin_inset Formula $K=S^{1}\times\left\{ 0\right\} $
+\end_inset
+
 
 \end_layout
 
@@ -493,6 +524,91 @@ noprefix "false"
 
 .
  
+\end_layout
+
+\begin_layout Standard
+Für das obere Limit 
+\begin_inset Formula $\phi=\frac{\pi}{4}$
+\end_inset
+
+ ergibt sich wieder der Torus 
+\begin_inset Formula $T$
+\end_inset
+
+ des 1.
+ Falles nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:S3-Fall1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Für das untere Limit 
+\begin_inset Formula $\phi=0$
+\end_inset
+
+ folgt 
+\begin_inset Formula $z^{1}=1$
+\end_inset
+
+, 
+\begin_inset Formula $z^{2}=0$
+\end_inset
+
+ und das ergibt die vertikale Kreislinie 
+\begin_inset Formula $K_{V}=S^{1}\times\left\{ 0\right\} $
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+K_{V} & = & \left\{ \left(\frac{\sqrt{2}}{2}\exp\left(i\xi_{1}\right),0\right):\quad\xi_{1}\in\mathbb{R}\right\} .
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für jeden Wert 
+\begin_inset Formula $\phi$
+\end_inset
+
+ aus dem Intervall 
+\begin_inset Formula $\left(0,\frac{\pi}{4}\right]$
+\end_inset
+
+ ergibt sich jeweils ein 2-dimensionaler Torus 
+\begin_inset Formula $T_{\phi}$
+\end_inset
+
+.
+ Durch die Vereinigung aller 2-dimensionalen Tori 
+\begin_inset Formula $T_{\phi}$
+\end_inset
+
+ und der Kreislinie 
+\begin_inset Formula $K_{V}$
+\end_inset
+
+ entsteht der 3D-Torus 
+\begin_inset Formula 
+\[
+K_{2}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\geq\left|z^{2}\right|\right\} .
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part*
