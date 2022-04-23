@@ -251,7 +251,7 @@ noprefix "false"
 \begin_inset Formula $S^{3}$
 \end_inset
 
- in diesem Fall ist der 2-dimensionale Torus 
+ in diesem Fall ist der 2-dimensionale (2D) Torus 
 \begin_inset Formula 
 \begin{equation}
 T=\left\{ \left(\frac{\sqrt{2}}{2}\exp\left(i\xi_{1}\right),\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R}\right\} .\label{eq:S3-Fall1}
@@ -531,7 +531,7 @@ Für das obere Limit
 \begin_inset Formula $\phi=\frac{\pi}{4}$
 \end_inset
 
- ergibt sich wieder der Torus 
+ ergibt sich wieder der 2D-Torus 
 \begin_inset Formula $T$
 \end_inset
 
@@ -600,7 +600,17 @@ Für jeden Wert
 \begin_inset Formula $K_{V}$
 \end_inset
 
- entsteht der 3D-Torus 
+ entsteht der 3D-Torus (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Volltorus"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
 \begin_inset Formula 
 \[
 K_{2}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\geq\left|z^{2}\right|\right\} .
