@@ -421,7 +421,7 @@ Für jeden Wert
 \end_inset
 
 .
- Durch die Vereinigung alle dieser 2-dimensionalen Tori 
+ Durch die Vereinigung all dieser 2-dimensionalen Tori 
 \begin_inset Formula $T_{\phi}$
 \end_inset
 
@@ -620,7 +620,7 @@ Für jeden Wert
 \end_inset
 
 .
- Durch die Vereinigung alle dieser 2-dimensionalen Tori 
+ Durch die Vereinigung all dieser 2-dimensionalen Tori 
 \begin_inset Formula $T_{\phi}$
 \end_inset
 
@@ -680,6 +680,54 @@ verschränkter
 
  vollständig ausfüllen.
  
+\end_layout
+
+\begin_layout Section*
+Faserbündel 
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $\underline{p}=\left(z^{1},z^{2}\right)\in S_{3}$
+\end_inset
+
+ und 
+\begin_inset Formula $g\in S^{1}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $pg=\left(z^{1},z^{2}\right)g=\left(z^{1}g,z^{2}g\right)\in S^{3}.$
+\end_inset
+
+ Falls 
+\begin_inset Formula $g_{1},g_{2}\in S^{1}$
+\end_inset
+
+ gilt für alle 
+\begin_inset Formula $p\in S^{3}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(pg_{1}\right)g_{2}=p\left(g_{1}g_{2}\right).$
+\end_inset
+
+ Die Identität in 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ ist 
+\begin_inset Formula $e=\exp\left(i0\right)$
+\end_inset
+
+ und es gilt 
+\begin_inset Formula $pe=p$
+\end_inset
+
+ für alle 
+\begin_inset Formula $p\in S^{3}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Part*
