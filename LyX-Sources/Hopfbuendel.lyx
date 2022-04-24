@@ -203,7 +203,11 @@ S^{3}=\left\{ \left(\cos\left(\phi\right)\exp\left(i\xi_{1}\right),\sin\left(\ph
 \end_layout
 
 \begin_layout Standard
-Es werden im folgenden drei Fälle für die Beträge von 
+Um sich eine Vorstellung dieser Parametrierung von 
+\begin_inset Formula $S_{3}$
+\end_inset
+
+ machen zu können werden im folgenden drei Fälle für die Beträge von 
 \begin_inset Formula $z^{1}$
 \end_inset
 
@@ -251,7 +255,7 @@ noprefix "false"
 \begin_inset Formula $S^{3}$
 \end_inset
 
- in diesem Fall ist der 2-dimensionale (2D) Torus 
+ in diesem Fall ist der 2-dimensionale Torus (2D-Torus) 
 \begin_inset Formula 
 \begin{equation}
 T=\left\{ \left(\frac{\sqrt{2}}{2}\exp\left(i\xi_{1}\right),\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{1},\xi_{2}\in\mathbb{R}\right\} .\label{eq:S3-Fall1}
@@ -296,8 +300,8 @@ name "fig:Torus"
 \begin_inset Formula $T$
 \end_inset
 
- und Kreislinie 
-\begin_inset Formula $K=\left\{ 0\right\} \times S^{1}$
+ und horizontale Kreislinie 
+\begin_inset Formula $\left\{ 0\right\} \times S^{1}$
 \end_inset
 
  
@@ -353,8 +357,7 @@ Für das untere Limit
 \begin_inset Formula $T$
 \end_inset
 
- des 1.
- Falles nach Gleichung (
+ nach Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:S3-Fall1"
@@ -405,12 +408,12 @@ Für jeden Wert
 \begin_inset Formula $\left[\frac{\pi}{4},\frac{\pi}{2}\right)$
 \end_inset
 
- ergibt sich jeweils ein 2-dimensionaler Torus 
+ ergibt sich jeweils ein 2D-Torus 
 \begin_inset Formula $T_{\phi}$
 \end_inset
 
 .
- Durch die Vereinigung aller 2-dimensionalen Tori 
+ Durch die Vereinigung alle dieser 2-dimensionalen Tori 
 \begin_inset Formula $T_{\phi}$
 \end_inset
 
@@ -421,7 +424,7 @@ Für jeden Wert
  entsteht der 3D-Torus 
 \begin_inset Formula 
 \begin{equation}
-K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} \label{eq:S3-Fall2}
+K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} ,\label{eq:S3-Fall2}
 \end{equation}
 
 \end_inset
@@ -430,11 +433,11 @@ K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\
 \end_layout
 
 \begin_layout Standard
-mit der Oberfläche 
+der 
 \begin_inset Formula $T$
 \end_inset
 
- (siehe Abbildung 
+ als Oberfläche hat (siehe Abbildung 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Torus"
@@ -482,8 +485,8 @@ name "fig:Volltorus"
 \begin_inset Formula $K_{1}$
 \end_inset
 
- und Kreislinie 
-\begin_inset Formula $K=S^{1}\times\left\{ 0\right\} $
+ und vertikale Kreislinie 
+\begin_inset Formula $S^{1}\times\left\{ 0\right\} $
 \end_inset
 
 
@@ -535,8 +538,7 @@ Für das obere Limit
 \begin_inset Formula $T$
 \end_inset
 
- des 1.
- Falles nach Gleichung (
+ nach Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:S3-Fall1"
@@ -579,6 +581,24 @@ K_{V} & = & \left\{ \left(\frac{\sqrt{2}}{2}\exp\left(i\xi_{1}\right),0\right):\
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $K_{V}$
+\end_inset
+
+ erscheint in Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Volltorus"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ als Gerade, ist aber eine Kreislinie durch einen Punkt im Unendlichen.
+ 
+\end_layout
+
+\begin_layout Standard
 Für jeden Wert 
 \begin_inset Formula $\phi$
 \end_inset
@@ -587,12 +607,12 @@ Für jeden Wert
 \begin_inset Formula $\left(0,\frac{\pi}{4}\right]$
 \end_inset
 
- ergibt sich jeweils ein 2-dimensionaler Torus 
+ ergibt sich jeweils ein 2D-Torus 
 \begin_inset Formula $T_{\phi}$
 \end_inset
 
 .
- Durch die Vereinigung aller 2-dimensionalen Tori 
+ Durch die Vereinigung alle dieser 2-dimensionalen Tori 
 \begin_inset Formula $T_{\phi}$
 \end_inset
 
@@ -619,6 +639,24 @@ K_{2}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Die Späre 
+\begin_inset Formula $S_{3}$
+\end_inset
+
+ stellt sich also als Vereinigung zweier verschränkter Torimengen dar, die
+ den 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\begin_inset Formula $^{3}$
+\end_inset
+
+ vollständig ausfüllen.
+ 
 \end_layout
 
 \begin_layout Part*
