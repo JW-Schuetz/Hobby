@@ -107,7 +107,7 @@ Kein Datum
 \end_layout
 
 \begin_layout Section*
-3-Sphäre 
+Die 3-Sphäre 
 \begin_inset Formula $S^{3}$
 \end_inset
 
@@ -135,7 +135,7 @@ Die 3-Sphäre
 
 \end_inset
 
- 
+das Kontinuum 
 \begin_inset Formula $\mathbb{R}^{4}$
 \end_inset
 
@@ -207,7 +207,7 @@ Um sich eine Vorstellung dieser Parametrierung von
 \begin_inset Formula $S_{3}$
 \end_inset
 
- machen zu können werden im folgenden drei Fälle für die Beträge von 
+ machen zu können, werden im folgenden drei Fälle für die Beträge von 
 \begin_inset Formula $z^{1}$
 \end_inset
 
@@ -215,7 +215,15 @@ Um sich eine Vorstellung dieser Parametrierung von
 \begin_inset Formula $z^{2}$
 \end_inset
 
- behandelt.
+ (und damit von 
+\begin_inset Formula $\cos\left(\phi\right)$
+\end_inset
+
+ und 
+\begin_inset Formula $\sin\left(\phi\right)$
+\end_inset
+
+) behandelt.
  
 \end_layout
 
@@ -646,8 +654,23 @@ Die Späre
 \begin_inset Formula $S_{3}$
 \end_inset
 
- stellt sich also als Vereinigung zweier verschränkter Torimengen dar, die
- den 
+ stellt sich also als Vereinigung zweier miteinander 
+\begin_inset Quotes gld
+\end_inset
+
+verschränkter
+\begin_inset Quotes grd
+\end_inset
+
+ 3D-Tori 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $K_{2}$
+\end_inset
+
+ dar, die den 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
