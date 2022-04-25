@@ -678,12 +678,12 @@ verschränkter
 \begin_inset Formula $^{3}$
 \end_inset
 
- vollständig ausfüllen.
+ vollständig ausfüllt.
  
 \end_layout
 
 \begin_layout Section*
-Faserbündel 
+Hauptfaserbündel (Prinzipalbündel)
 \end_layout
 
 \begin_layout Standard
@@ -696,9 +696,18 @@ Für
 \end_inset
 
  gilt 
-\begin_inset Formula $pg=\left(z^{1},z^{2}\right)g=\left(z^{1}g,z^{2}g\right)\in S^{3}.$
+\begin_inset Formula $pg=\left(z^{1},z^{2}\right)g=\left(z^{1}g,z^{2}g\right)\in S^{3}$
 \end_inset
 
+, die Abbildung 
+\begin_inset Formula $pg$
+\end_inset
+
+ ist aus 
+\begin_inset Formula $C^{\infty}$
+\end_inset
+
+.
  Falls 
 \begin_inset Formula $g_{1},g_{2}\in S^{1}$
 \end_inset
@@ -728,6 +737,24 @@ Für
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+Diese Eigenschaften machen die Abbildung 
+\begin_inset Formula $\left(p,g\right)\rightarrow pg$
+\end_inset
+
+ zu einer stetigen Rechtsoperation der Liegruppe 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ auf der Mannigfaltigkeit 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Part*
