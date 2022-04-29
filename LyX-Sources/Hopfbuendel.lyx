@@ -683,7 +683,7 @@ verschränkter
 \end_layout
 
 \begin_layout Section*
-Hauptfaserbündel (Prinzipalbündel)
+Hauptfaserbündel (Prinzipalbündel) 
 \end_layout
 
 \begin_layout Standard
@@ -696,11 +696,11 @@ Für
 \end_inset
 
  gilt 
-\begin_inset Formula $pg=\left(z^{1},z^{2}\right)g=\left(z^{1}g,z^{2}g\right)\in S^{3}$
+\begin_inset Formula $\underline{p}g=\left(z^{1},z^{2}\right)g=\left(z^{1}g,z^{2}g\right)\in S^{3}$
 \end_inset
 
 , die Abbildung 
-\begin_inset Formula $pg$
+\begin_inset Formula $\left(\underline{p},g\right)\rightarrow\underline{p}g$
 \end_inset
 
  ist aus 
@@ -713,11 +713,11 @@ Für
 \end_inset
 
  gilt für alle 
-\begin_inset Formula $p\in S^{3}$
+\begin_inset Formula $\underline{p}\in S^{3}$
 \end_inset
 
  
-\begin_inset Formula $\left(pg_{1}\right)g_{2}=p\left(g_{1}g_{2}\right).$
+\begin_inset Formula $\left(\underline{p}g_{1}\right)g_{2}=\underline{p}\left(g_{1}g_{2}\right).$
 \end_inset
 
  Die Identität in 
@@ -729,11 +729,11 @@ Für
 \end_inset
 
  und es gilt 
-\begin_inset Formula $pe=p$
+\begin_inset Formula $\underline{p}e=p$
 \end_inset
 
  für alle 
-\begin_inset Formula $p\in S^{3}$
+\begin_inset Formula $\underline{p}\in S^{3}$
 \end_inset
 
 .
@@ -742,7 +742,7 @@ Für
 
 \begin_layout Standard
 Diese Eigenschaften machen die Abbildung 
-\begin_inset Formula $\left(p,g\right)\rightarrow pg$
+\begin_inset Formula $\left(\underline{p},g\right)\rightarrow\underline{p}g$
 \end_inset
 
  zu einer stetigen Rechtsoperation der Liegruppe 
@@ -754,6 +754,61 @@ Diese Eigenschaften machen die Abbildung
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+Für fixe 
+\begin_inset Formula $\underline{p}\in S^{3}$
+\end_inset
+
+ wird der Orbit von 
+\begin_inset Formula $\underline{p}$
+\end_inset
+
+ als die Teilmenge 
+\begin_inset Formula $\left\{ \underline{p}g:g\in S^{1}\right\} $
+\end_inset
+
+ von 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ definiert, die durch das Durchlaufen aller 
+\begin_inset Formula $g\in S^{1}$
+\end_inset
+
+ entsteht.
+ Der Orbit von 
+\begin_inset Formula $\underline{p}$
+\end_inset
+
+ ist ein Kreis in 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ durch den Punkt 
+\begin_inset Formula $\underline{p}$
+\end_inset
+
+.
+ Man kann zeigen, dass dieser Kreis sogar ein Grosskreis auf 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ ist (also die Schnittmenge von 
+\begin_inset Formula $S^{3}\subseteq\mathbb{R}^{4}$
+\end_inset
+
+ mit einer 2D-Ebene in 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+) der auf einem der Tori liegt, die zusammen 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ bilden.
  
 \end_layout
 
