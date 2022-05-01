@@ -140,7 +140,7 @@ das Kontinuum
 \end_inset
 
  mit 
-\begin_inset Formula $\mathbb{\mathbb{C}}^{2}$
+\begin_inset Formula $\mathbb{C}^{2}$
 \end_inset
 
 , dann erhält man für die 3-Sphäre 
@@ -310,6 +310,14 @@ name "fig:Torus"
 
  und horizontale Kreislinie 
 \begin_inset Formula $\left\{ 0\right\} \times S^{1}$
+\end_inset
+
+, modifiziert nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Naber"
+literal "false"
+
 \end_inset
 
  
@@ -495,6 +503,14 @@ name "fig:Volltorus"
 
  und vertikale Kreislinie 
 \begin_inset Formula $S^{1}\times\left\{ 0\right\} $
+\end_inset
+
+, modifiziert nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Naber"
+literal "false"
+
 \end_inset
 
 
@@ -725,7 +741,7 @@ Für
 \end_inset
 
  ist 
-\begin_inset Formula $e=\exp\left(i0\right)$
+\begin_inset Formula $e=\exp\left(i0\right)=1$
 \end_inset
 
  und es gilt 
@@ -758,7 +774,7 @@ Diese Eigenschaften machen die Abbildung
 \end_layout
 
 \begin_layout Standard
-Für fixe 
+Für einen fixen Punkt 
 \begin_inset Formula $\underline{p}\in S^{3}$
 \end_inset
 
@@ -792,23 +808,20 @@ Für fixe
 \end_inset
 
 .
- Man kann zeigen, dass dieser Kreis sogar ein Grosskreis auf 
-\begin_inset Formula $S^{3}$
-\end_inset
-
- ist (also die Schnittmenge von 
+ Man kann zeigen, dass dieser Kreis sogar ein Grosskreis (also die Schnittmenge
+ von 
 \begin_inset Formula $S^{3}\subseteq\mathbb{R}^{4}$
 \end_inset
 
- mit einer 2D-Ebene in 
+ mit einer linearen Hyperebene des 
 \begin_inset Formula $\mathbb{R}^{4}$
 \end_inset
 
-) der auf einem der Tori liegt, die zusammen 
+) auf 
 \begin_inset Formula $S^{3}$
 \end_inset
 
- bilden.
+ ist (siehe dazu im Anhang die Behauptung 2).
  
 \end_layout
 
@@ -965,8 +978,76 @@ Für
 \end_inset
 
 
-\color red
+\end_layout
+
+\begin_layout Subsubsection*
+Behauptung 2 
+\end_layout
+
+\begin_layout Standard
+Der Orbit 
+\begin_inset Formula $\left\{ \underline{p}g:g\in S^{1}\right\} $
+\end_inset
+
+ eines Punktes 
+\begin_inset Formula $\underline{p}\in S^{3}$
+\end_inset
+
+ der stetigen Rechtsoperation 
+\begin_inset Formula $\underline{p}g$
+\end_inset
+
+ bildet einen Grosskreis in 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+.
  
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis 
+\end_layout
+
+\begin_layout Standard
+Der Orbit eines Punktes 
+\begin_inset Formula $\underline{p}\in S^{3}$
+\end_inset
+
+ lässt sich durch 
+\begin_inset Formula 
+\[
+\left\{ \left(z_{1}\exp\left(i\alpha\right),z_{2}\exp\left(i\alpha\right)\right):\quad\left|z^{1}\right|^{2}+\left|z^{2}\right|^{2}=1,\quad\alpha\in\left[0,2\pi\right)\right\} 
+\]
+
+\end_inset
+
+darstellen, eine lineare Hyperebene des 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ durch 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -985,7 +1066,7 @@ literal "false"
 
 \end_inset
 
-Topology, Geometry and Gauge fields; Naber, Gregory; Springer Science+Business
+Topology, Geometry and Gauge Fields; Naber, Gregory; Springer Science+Business
  Media; 2011
 \end_layout
 
