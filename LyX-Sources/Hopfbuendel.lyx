@@ -120,22 +120,14 @@ Die 3-Sphäre
 \end_inset
 
  ist mit 
-\begin_inset Formula $\underline{p}=\left(p_{1},p_{2},p_{3,},p_{4}\right)\in\mathbb{R}^{4}$
+\begin_inset Formula $\underline{p}\in\mathbb{R}^{4}$
 \end_inset
 
  definiert durch 
 \begin_inset Formula $\left\Vert \underline{p}\right\Vert =1.$
 \end_inset
 
- Identifiziert man durch die Korrespondenz 
-\begin_inset Formula 
-\[
-\left(x^{1},y^{1},x^{2},y^{2}\right)\leftrightarrow\left(x^{1}+iy^{1},x^{2}+iy^{2}\right)
-\]
-
-\end_inset
-
-das Kontinuum 
+ Identifiziert man 
 \begin_inset Formula $\mathbb{R}^{4}$
 \end_inset
 
@@ -143,10 +135,37 @@ das Kontinuum
 \begin_inset Formula $\mathbb{C}^{2}$
 \end_inset
 
-, dann erhält man für die 3-Sphäre 
+ durch die Korrespondenz 
+\begin_inset Formula 
+\begin{equation}
+\left(x_{1},x_{2},x_{3},x_{4}\right)\leftrightarrow\left(x_{1}+ix_{2},x_{3}+ix_{4}\right)\label{eq:Korrespondenz}
+\end{equation}
+
+\end_inset
+
+dann erhält man für die 3-Sphäre 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+...
+ da 
+\begin_inset Formula $\left\Vert x_{1},x_{2},x_{3},x_{4}\right\Vert =1$
+\end_inset
+
+ äquivalent zu 
+\begin_inset Formula $\left\Vert \left|x_{1}+ix_{2}\right|,\left|x_{3}+ix_{4}\right|\right\Vert $
+\end_inset
+
+ ist.
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \[
-S^{3}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|^{2}+\left|z^{2}\right|^{2}=1\right\} .
+S^{3}=\left\{ \left(z_{1},z_{2}\right)\in\mathbb{C}^{2}:\quad\left|z_{1}\right|^{2}+\left|z_{2}\right|^{2}=1\right\} .
 \]
 
 \end_inset
@@ -170,11 +189,11 @@ Diese Darstellung von
 \end_inset
 
  den Ansatz 
-\begin_inset Formula $z^{1}=r_{1}\exp\left(i\xi_{1}\right)$
+\begin_inset Formula $z_{1}=r_{1}\exp\left(i\xi_{1}\right)$
 \end_inset
 
  und 
-\begin_inset Formula $z^{2}=r_{2}\exp\left(i\xi_{2}\right)$
+\begin_inset Formula $z_{2}=r_{2}\exp\left(i\xi_{2}\right)$
 \end_inset
 
 .
@@ -187,7 +206,7 @@ Diese Darstellung von
 \end_layout
 
 \begin_layout Standard
-Man erhält so die Parametrierung für 
+Man erhält die Parametrierung für 
 \begin_inset Formula $S^{3}$
 \end_inset
 
@@ -207,20 +226,16 @@ Um sich eine Vorstellung dieser Parametrierung von
 \begin_inset Formula $S_{3}$
 \end_inset
 
- machen zu können, werden im folgenden drei Fälle für die Beträge von 
-\begin_inset Formula $z^{1}$
-\end_inset
-
- und 
-\begin_inset Formula $z^{2}$
+ machen zu können, werden im folgenden drei Fälle für den Winkel 
+\begin_inset Formula $\phi$
 \end_inset
 
  (und damit von 
-\begin_inset Formula $\cos\left(\phi\right)$
+\begin_inset Formula $\left|z_{1}\right|=\cos\left(\phi\right)$
 \end_inset
 
  und 
-\begin_inset Formula $\sin\left(\phi\right)$
+\begin_inset Formula $\left|z_{2}\right|=\sin\left(\phi\right)$
 \end_inset
 
 ) behandelt.
@@ -229,33 +244,24 @@ Um sich eine Vorstellung dieser Parametrierung von
 
 \begin_layout Subsection*
 Fall 1: 
-\begin_inset Formula $\left|z^{1}\right|^{2}=\left|z^{2}\right|^{2}$
+\begin_inset Formula $\cos\left(\phi\right)=\sin\left(\phi\right)$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\left|z_{1}\right|=\left|z_{2}\right|$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Standard
-Aus (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:S3-Spezialisiert"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt 
-\begin_inset Formula $\cos\left(\phi\right)=\sin\left(\phi\right)$
-\end_inset
-
- und damit 
+Es folgt 
 \begin_inset Formula $\phi=\frac{\pi}{4}$
 \end_inset
 
  und 
-\begin_inset Formula $\left|z^{1}\right|=\left|z^{2}\right|=\frac{\sqrt{2}}{2}$
+\begin_inset Formula $\left|z_{1}\right|=\left|z_{2}\right|=\frac{\sqrt{2}}{2}$
 \end_inset
 
 .
@@ -276,7 +282,12 @@ T=\left\{ \left(\frac{\sqrt{2}}{2}\exp\left(i\xi_{1}\right),\frac{\sqrt{2}}{2}\e
 
 \begin_layout Subsection*
 Fall 2: 
-\begin_inset Formula $\left|z^{1}\right|^{2}\leq\left|z^{2}\right|^{2}$
+\begin_inset Formula $\cos\left(\phi\right)\leq\sin\left(\phi\right)$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\left|z_{1}\right|\leq\left|z_{2}\right|$
 \end_inset
 
  
@@ -338,34 +349,16 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Aus (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:S3-Spezialisiert"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt 
-\begin_inset Formula $\cos\left(\phi\right)\leq\sin\left(\phi\right)$
-\end_inset
-
- und wegen 
+Wegen 
 \begin_inset Formula $\phi\in\left[0,\frac{\pi}{2}\right]$
 \end_inset
 
- ergibt sich 
+ folgt 
 \begin_inset Formula $\frac{\pi}{4}\leq\phi\leq\frac{\pi}{2}$
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Für das untere Limit 
+ Für das untere Limit 
 \begin_inset Formula $\phi=\frac{\pi}{4}$
 \end_inset
 
@@ -384,27 +377,15 @@ noprefix "false"
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_layout Standard
-Für das obere Limit 
+ Für das obere Limit 
 \begin_inset Formula $\phi=\frac{\pi}{2}$
 \end_inset
 
- folgt 
-\begin_inset Formula $z^{1}=0$
-\end_inset
-
-, 
-\begin_inset Formula $z^{2}=1$
-\end_inset
-
- und das ergibt die horizontale Kreislinie 
+ folgt die horizontale Kreislinie 
 \begin_inset Formula $K_{H}=\left\{ 0\right\} \times S^{1}$
 \end_inset
 
- 
+ oder 
 \begin_inset Formula 
 \begin{eqnarray*}
 K_{H} & = & \left\{ \left(0,\frac{\sqrt{2}}{2}\exp\left(i\xi_{2}\right)\right):\quad\xi_{2}\in\mathbb{R}\right\} .
@@ -440,7 +421,7 @@ Für jeden Wert
  entsteht der 3D-Torus 
 \begin_inset Formula 
 \begin{equation}
-K_{1}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\leq\left|z^{2}\right|\right\} ,\label{eq:S3-Fall2}
+K_{1}=\left\{ \left(z_{1},z_{2}\right)\in\mathbb{C}^{2}:\quad\left|z_{1}\right|\leq\left|z_{2}\right|\right\} ,\label{eq:S3-Fall2}
 \end{equation}
 
 \end_inset
@@ -469,7 +450,12 @@ noprefix "false"
 
 \begin_layout Subsection*
 Fall 3: 
-\begin_inset Formula $\left|z^{1}\right|^{2}\geq\left|z^{2}\right|^{2}$
+\begin_inset Formula $\cos\left(\phi\right)\geq\sin\left(\phi\right)$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\left|z_{1}\right|\geq\left|z_{2}\right|$
 \end_inset
 
  
@@ -527,34 +513,16 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Aus (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:S3-Spezialisiert"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt 
-\begin_inset Formula $\cos\left(\phi\right)\geq\sin\left(\phi\right)$
-\end_inset
-
- und wegen 
+Wegen 
 \begin_inset Formula $\phi\in\left[0,\frac{\pi}{2}\right]$
 \end_inset
 
- ergibt sich 
+ folgt 
 \begin_inset Formula $0\leq\phi\leq\frac{\pi}{4}$
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Für das obere Limit 
+ Für das obere Limit 
 \begin_inset Formula $\phi=\frac{\pi}{4}$
 \end_inset
 
@@ -573,27 +541,15 @@ noprefix "false"
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_layout Standard
-Für das untere Limit 
+ Für das untere Limit 
 \begin_inset Formula $\phi=0$
 \end_inset
 
- folgt 
-\begin_inset Formula $z^{1}=1$
-\end_inset
-
-, 
-\begin_inset Formula $z^{2}=0$
-\end_inset
-
- und das ergibt die vertikale Kreislinie 
+ ergibt die vertikale Kreislinie 
 \begin_inset Formula $K_{V}=S^{1}\times\left\{ 0\right\} $
 \end_inset
 
- 
+ oder 
 \begin_inset Formula 
 \begin{eqnarray*}
 K_{V} & = & \left\{ \left(\frac{\sqrt{2}}{2}\exp\left(i\xi_{1}\right),0\right):\quad\xi_{1}\in\mathbb{R}\right\} .
@@ -657,7 +613,7 @@ noprefix "false"
 ) 
 \begin_inset Formula 
 \[
-K_{2}=\left\{ \left(z^{1},z^{2}\right)\in\mathbb{C}^{2}:\quad\left|z^{1}\right|\geq\left|z^{2}\right|\right\} .
+K_{2}=\left\{ \left(z_{1},z_{2}\right)\in\mathbb{C}^{2}:\quad\left|z_{1}\right|\geq\left|z_{2}\right|\right\} .
 \]
 
 \end_inset
@@ -704,7 +660,7 @@ Hauptfaserbündel (Prinzipalbündel)
 
 \begin_layout Standard
 Für 
-\begin_inset Formula $\underline{p}=\left(z^{1},z^{2}\right)\in S_{3}$
+\begin_inset Formula $\underline{p}=\left(z_{1},z_{2}\right)\in S_{3}$
 \end_inset
 
  und 
@@ -712,7 +668,7 @@ Für
 \end_inset
 
  gilt 
-\begin_inset Formula $\underline{p}g=\left(z^{1},z^{2}\right)g=\left(z^{1}g,z^{2}g\right)\in S^{3}$
+\begin_inset Formula $\underline{p}g=\left(z_{1},z_{2}\right)g=\left(z_{1}g,z_{2}g\right)\in S^{3}$
 \end_inset
 
 , die Abbildung 
@@ -783,10 +739,14 @@ Für einen fixen Punkt
 \end_inset
 
  als die Teilmenge 
-\begin_inset Formula $\left\{ \underline{p}g:g\in S^{1}\right\} $
+\begin_inset Formula 
+\begin{equation}
+\left\{ \underline{p}g:g\in S^{1}\right\} \subseteq S^{3}\label{eq:Orbit}
+\end{equation}
+
 \end_inset
 
- von 
+von 
 \begin_inset Formula $S^{3}$
 \end_inset
 
@@ -1014,29 +974,123 @@ Der Orbit eines Punktes
 \begin_inset Formula $\underline{p}\in S^{3}$
 \end_inset
 
- lässt sich durch 
-\begin_inset Formula 
-\[
-\left\{ \left(z_{1}\exp\left(i\alpha\right),z_{2}\exp\left(i\alpha\right)\right):\quad\left|z^{1}\right|^{2}+\left|z^{2}\right|^{2}=1,\quad\alpha\in\left[0,2\pi\right)\right\} 
-\]
+ lässt sich wegen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Orbit"
+plural "false"
+caps "false"
+noprefix "false"
 
-\end_inset
-
-darstellen, eine lineare Hyperebene des 
-\begin_inset Formula $\mathbb{R}^{4}$
 \end_inset
 
  durch 
+\begin_inset Formula 
+\[
+\left\{ \left(z_{1}\exp\left(i\alpha\right),z_{2}\exp\left(i\alpha\right)\right):\quad\left|z_{1}\right|^{2}+\left|z_{2}\right|^{2}=1,\quad\alpha\in\left[0,2\pi\right)\right\} 
+\]
+
+\end_inset
+
+darstellen.
+ 
 \end_layout
 
 \begin_layout Standard
+Eine lineare Hyperebene des 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ ist durch 
+\begin_inset Formula $a_{1}x_{1}+b_{1}x_{2}+a_{2}x_{3}\,+b_{2}x_{4}=0$
+\end_inset
+
+ gegeben, dabei muss wenigstens einer der Parameter 
+\begin_inset Formula $a_{1},b_{1},a_{2},b_{2}$
+\end_inset
+
+ ungleich 
+\begin_inset Formula $0$
+\end_inset
+
+ sein (siehe dazu 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia2"
+literal "false"
+
+\end_inset
+
+).
+ Mit der Korrespondenz (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Korrespondenz"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
+\left(x_{1},x_{2},x_{3},x_{4}\right)\leftrightarrow\left(x_{1}+ix_{2},x_{3}+ix_{4}\right)
 \]
 
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+ zwischen 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathbb{C}^{2}$
+\end_inset
+
+ folgt für die Hyperebene mit 
+\begin_inset Formula $w_{1}=a_{1}+ib_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $w_{2}=a_{1}+ib_{1}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left\{ \left(w_{1},w_{2}\right):\quad\right\} 
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula $a_{1}+ib_{1}\neq0$
+\end_inset
+
+ oder 
+\begin_inset Formula $a_{2}+ib_{2}\neq0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Die Schnittmenge einer dieser Hyperebenen mit 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ ist 
 \end_layout
 
 \begin_layout Standard
@@ -1081,6 +1135,18 @@ literal "false"
 
 https://de.wikipedia.org/wiki/Formelsammlung_Trigonometrie#Additionstheoreme;
  Abschnitt: Umrechnung in andere trigonometrische Funktionen
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "3"
+key "Wikipedia2"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Koordinatenform
 \end_layout
 
 \end_body
