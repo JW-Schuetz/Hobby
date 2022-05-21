@@ -815,56 +815,6 @@ Beweis
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Paragraph*
-Sonderfall 
-\begin_inset Formula $x_{i}=\frac{1}{4}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-Es gilt 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\Vert \left(x_{1},x_{2},x_{3},x_{4}\right)\right\Vert ^{2} & = & \sum_{n=1}^{4}\left|x_{n}\right|^{2}\\
- & = & \sum_{n=1}^{4}\frac{1}{16}\\
- & = & \frac{1}{4}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-und 
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\Vert \left(x_{1}+ix_{2},x_{3}+ix_{4}\right)\right\Vert ^{2} & = & \left|x_{1}+ix_{2}\right|^{2}+\left|x_{3}+ix_{4}\right|^{2}\\
- & = & 2\left|\frac{1}{4}+\frac{1}{4}i\right|^{2}\\
- & = & \frac{1}{8}\left|1+i\right|^{2}\\
- & = & \frac{2}{8}\\
- & = & \frac{1}{4}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
 Wegen 
 \begin_inset Formula $x_{i}\in\mathbb{R}$
 \end_inset
@@ -885,70 +835,7 @@ literal "false"
 
 \end_inset
 
-) gelten die folgenden Umformungen.
- 
-\end_layout
-
-\begin_layout Standard
-Von 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:A1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- nach 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:A2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-: 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\Vert \left(x_{1},x_{2},x_{3},x_{4}\right)\right\Vert ^{2} & = & \left|x_{1}\right|^{2}+\left|x_{2}\right|^{2}+\left|x_{3}\right|^{2}+\left|x_{4}\right|^{2}\\
- & = & x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+x_{4}^{2}\\
- & = & \left|x_{1}+ix_{2}\right|^{2}+\left|x_{3}+ix_{4}\right|^{2}\\
- & = & \left\Vert \left(x_{1}+ix_{2},x_{3}+ix_{4}\right)\right\Vert ^{2}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Von 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:A2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- nach 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:A1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-: 
+) gelten die in beiden Richtungen gültigen Umformungen 
 \end_layout
 
 \begin_layout Standard
@@ -1156,15 +1043,11 @@ Beweis
 \end_layout
 
 \begin_layout Standard
-Fehlt noch.
-\end_layout
+Der Orbit 
+\begin_inset Formula $O_{p}$
+\end_inset
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Der Orbit eines Punktes 
+ eines Punktes 
 \begin_inset Formula $\underline{p}\in S^{3}$
 \end_inset
 
@@ -1179,6 +1062,23 @@ noprefix "false"
 \end_inset
 
  durch 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\{ \underline{p}g:g\in S^{1}\right\} \subseteq S^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \[
 \left\{ \left(z_{1}\exp\left(i\alpha\right),z_{2}\exp\left(i\alpha\right)\right):\quad\left|z_{1}\right|^{2}+\left|z_{2}\right|^{2}=1,\quad\alpha\in\left[0,2\pi\right)\right\} 
@@ -1190,7 +1090,7 @@ darstellen.
  
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Eine lineare Hyperebene des 
 \begin_inset Formula $\mathbb{R}^{4}$
 \end_inset
@@ -1243,53 +1143,42 @@ status open
 
 \end_inset
 
- zwischen 
-\begin_inset Formula $\mathbb{R}^{4}$
-\end_inset
-
- und 
+ folgt für die Hyperebene in 
 \begin_inset Formula $\mathbb{C}^{2}$
 \end_inset
 
- folgt für die Hyperebene mit 
-\begin_inset Formula $w_{1}=a_{1}+ib_{1}$
-\end_inset
-
- und 
-\begin_inset Formula $w_{2}=a_{1}+ib_{1}$
-\end_inset
-
- 
+ die Darstellung 
 \begin_inset Formula 
 \[
-\left\{ \left(w_{1},w_{2}\right):\quad\right\} 
+(a_{1}+ib_{1})w_{1}+(a_{2}+ib_{2})w_{2}=0
 \]
 
 \end_inset
 
- 
-\begin_inset Formula $a_{1}+ib_{1}\neq0$
+dabei gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+w_{1} & = & x_{1}+ix_{2}\\
+w_{2} & = & x_{3}+ix_{4}.
+\end{eqnarray*}
+
 \end_inset
 
- oder 
-\begin_inset Formula $a_{2}+ib_{2}\neq0$
-\end_inset
-
-.
  
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Die Schnittmenge einer dieser Hyperebenen mit 
-\begin_inset Formula $S^{3}$
+\begin_inset Formula $O_{p}$
 \end_inset
 
- ist 
+ ist ...
+ 
 \end_layout
 
-\end_inset
-
-
+\begin_layout Standard
+Der Rest fehlt noch.
+ 
 \end_layout
 
 \begin_layout Standard
