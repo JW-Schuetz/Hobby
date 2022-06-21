@@ -1075,69 +1075,75 @@ Für eine lineare Hyperebene im
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- gilt mit 
-\begin_inset Formula $abc\neq0$
-\end_inset
-
- 
+ gilt 
 \begin_inset Formula 
 \begin{equation}
-ax_{1}+bx_{2}+cx_{3}=0.\label{eq:G2}
+ax_{1}+bx_{2}+cx_{3}=0\label{eq:G2}
 \end{equation}
 
 \end_inset
 
-Jede dieser Hyperebenen sollte sich mit der Kugeloberfläche in einem Grosskreis
- schneiden.
- 
+
+\end_layout
+
+\begin_layout Plain Layout
+dabei dürfen die 
+\begin_inset Formula $a,b,c\in\mathbb{R}$
+\end_inset
+
+ nicht alle gleichzeitig 
+\begin_inset Formula $0$
+\end_inset
+
+ sein, d.h.
+ es muss gelten 
+\begin_inset Formula $a\neq0$
+\end_inset
+
+ oder 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+ oder 
+\begin_inset Formula $c\neq0$
+\end_inset
+
+.
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-Also z.B.
- auch die Hyperebene mit 
-\begin_inset Formula $a=1,b=c=0$
+...
+ d.h.
+ es muss wahr sein (mit dem logischen UND 
+\begin_inset Formula $\bullet$
 \end_inset
 
-.
- 
+ ) 
+\begin_inset Formula 
+\[
+\overline{\left(a=0\right)\bullet\left(b=0\right)\bullet\left(c=0\right)}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-Es muss wegen (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:G1"
-plural "false"
-caps "false"
-noprefix "false"
+oder (mit dem logischen ODER 
+\begin_inset Formula $+$
+\end_inset
+
+ ) 
+\begin_inset Formula 
+\[
+\left(a\neq0\right)+\left(b\neq0\right)+\left(c\neq0\right).
+\]
 
 \end_inset
 
-) gelten 
-\begin_inset Formula $x_{1}^{2}+x_{2}^{2}+x_{3}^{2}=1$
-\end_inset
 
- und wegen (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:G2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\begin_inset Formula $x_{1}=0$
-\end_inset
-
- insgesamt also 
-\begin_inset Formula $x_{2}^{2}+x_{3}^{2}=1$
-\end_inset
-
-.
- 
 \end_layout
 
 \end_inset
@@ -1146,7 +1152,18 @@ noprefix "false"
 \end_layout
 
 \begin_layout Plain Layout
-Elimination von 
+Jede dieser Hyperebenen sollte sich mit der Kugeloberfläche in einem Grosskreis
+ schneiden.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Für die Schnittpunkte erhält man z.B.
+ im Fall 
+\begin_inset Formula $c\neq0$
+\end_inset
+
+ durch Elimination von 
 \begin_inset Formula $x_{3}$
 \end_inset
 
@@ -1170,22 +1187,12 @@ noprefix "false"
 
 \end_inset
 
-) liefert 
+) 
 \begin_inset Formula 
 \begin{eqnarray*}
 x_{1}^{2}+x_{2}^{2}+\left(\frac{a}{c}x_{1}+\frac{b}{c}x_{2}\right)^{2} & = & 1\\
 x_{1}^{2}+\left(\frac{a}{c}\right)^{2}x_{1}^{2}+2\frac{ab}{c^{2}}x_{1}x_{2}+x_{2}^{2}+\left(\frac{b}{c}\right)^{2}x_{2}^{2} & = & 1\\
-\left[1+\left(\frac{a}{c}\right)^{2}\right]x_{1}^{2}+2\frac{ab}{c^{2}}x_{1}x_{2}+\left[1+\left(\frac{b}{c}\right)^{2}\right]x_{2}^{2} & = & 1\\
-\left(c^{2}+a^{2}\right)x_{1}^{2}+2abx_{1}x_{2}+\left(c^{2}+b^{2}\right)x_{2}^{2} & = & 1\\
-\\
-A^{2}+2AB+B^{2} & = & 1\\
-A^{2} & = & \left(c^{2}+a^{2}\right)x_{1}^{2}\\
-B^{2} & = & \left(c^{2}+b^{2}\right)x_{2}^{2}\\
-2AB & = & \pm2\sqrt{c^{2}+a^{2}}x_{1}\sqrt{c^{2}+b^{2}}x_{2}\\
- & = & \pm2\sqrt{\left(c^{2}+a^{2}\right)\left(c^{2}+b^{2}\right)}x_{1}x_{2}\\
- & = & \pm2\sqrt{\left(c^{2}+a^{2}\right)\left(c^{2}+b^{2}\right)}x_{1}x_{2}\\
-\\
-x_{1}^{2}+\frac{2ab}{c^{2}+a^{2}}x_{1}x_{2}+\frac{\left(c^{2}+b^{2}\right)x_{2}^{2}}{c^{2}+a^{2}}-\frac{1}{c^{2}+a^{2}} & = & 0.
+\left[1+\left(\frac{a}{c}\right)^{2}\right]x_{1}^{2}+2\frac{ab}{c^{2}}x_{1}x_{2}+\left[1+\left(\frac{b}{c}\right)^{2}\right]x_{2}^{2} & = & 1
 \end{eqnarray*}
 
 \end_inset
@@ -1194,16 +1201,95 @@ x_{1}^{2}+\frac{2ab}{c^{2}+a^{2}}x_{1}x_{2}+\frac{\left(c^{2}+b^{2}\right)x_{2}^
 \end_layout
 
 \begin_layout Plain Layout
-wegen 
-\begin_inset Formula $\left(a+b\right)^{2}=a^{2}+2ab+b^{2}$
+oder mit 
+\begin_inset Formula 
+\[
+M=\left(\begin{array}{cc}
+1+\frac{a^{2}}{c^{2}} & \frac{ab}{c^{2}}\\
+\frac{ab}{c^{2}} & 1+\frac{b^{2}}{c^{2}}
+\end{array}\right)
+\]
+
 \end_inset
 
- folgt 
+als Matrixgleichung formuliert 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Mit 
+\begin_inset Formula $c\neq0$
+\end_inset
+
+ gilt für die Determinante 
+\begin_inset Formula $\det\left(M\right)=\frac{1}{c^{2}}\left(a^{2}+b^{2}+c^{2}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Eigenwertgleichung
 \end_layout
 
 \begin_layout Plain Layout
-Dies ist ein Grosskreis.
+\begin_inset Formula 
+\begin{eqnarray*}
+M\underline{e} & = & \lambda\underline{e}\\
+\left(\begin{array}{cc}
+1+\frac{a^{2}}{c^{2}} & \frac{ab}{c^{2}}\\
+\frac{ab}{c^{2}} & 1+\frac{b^{2}}{c^{2}}
+\end{array}\right)\left(\begin{array}{c}
+e_{1}\\
+e_{2}
+\end{array}\right) & = & \lambda\left(\begin{array}{c}
+e_{1}\\
+e_{2}
+\end{array}\right)\\
+\left(\begin{array}{cc}
+1+\frac{a^{2}}{c^{2}}-\lambda & \frac{ab}{c^{2}}\\
+\frac{ab}{c^{2}} & 1+\frac{b^{2}}{c^{2}}-\lambda
+\end{array}\right)\left(\begin{array}{c}
+e_{1}\\
+e_{2}
+\end{array}\right) & = & \left(\begin{array}{c}
+0\\
+0
+\end{array}\right)\\
+\left(1+\frac{a^{2}}{c^{2}}-\lambda\right)\left(1+\frac{b^{2}}{c^{2}}-\lambda\right)-\left(\frac{ab}{c^{2}}\right)^{2} & = & 0\\
+\left(c^{2}+a^{2}-\lambda c^{2}\right)\left(c^{2}+b^{2}-\lambda c^{2}\right)-a^{2}b^{2} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{cc}
+x_{1} & x_{2}\end{array}\right)M\left(\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right) & = & 1.
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1257,7 +1343,7 @@ noprefix "false"
 
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 also: 
@@ -1347,10 +1433,6 @@ z_{2} & = & \sin\left(\phi\right)\exp\left(i\xi_{2}\right).
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Es folgen mit den Abkürzungen 
 \begin_inset Formula 
 \begin{eqnarray*}
@@ -1364,13 +1446,9 @@ z_{2}^{I} & = & \sin\left(\phi\right)\sin\left(\xi_{2}\right)
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 die in Real- und Imaginärteil getrennten Beziehungen 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 wegen: 
@@ -1483,6 +1561,19 @@ literal "false"
 \end_inset
 
 https://en.wikipedia.org/wiki/Hopf_fibration
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "6"
+key "Lawson"
+literal "false"
+
+\end_inset
+
+Solving Least Squares Problems; Lawson, Charles L.
+  & Hanson, Richard J.; SIAM 1995
 \end_layout
 
 \end_body

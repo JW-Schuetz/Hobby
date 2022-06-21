@@ -2479,11 +2479,188 @@ Ergebnisse
 \end_layout
 
 \begin_layout Subsection
-Vergleich mit empirisch ermittelten Resultaten 
+Las Palmas de Gran Canaria 
 \end_layout
 
 \begin_layout Subsubsection
-Las Palmas de Gran Canaria 
+Vergleich mit empirisch ermittelten Resultaten 
+\end_layout
+
+\begin_layout Standard
+Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schattentrajektorie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ zeigt die berechnete Schattentrajektorie für Las Palmas am 12.
+ Oktober.
+ Die Koordinaten der beiden markierten Punkte (13:28 Uhr und 13:48 Uhr Ortszeit)
+ sind dargestellt, ihr geometrischer Abstand beträgt 16.16 cm, ihr zeitlicher
+ Abstand beträgt 20 Minuten.
+ Für die Stablänge wurde 1.5 m angenommen.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SchattenTrajektorie.eps
+	lyxscale 230
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schattentrajektorie"
+
+\end_inset
+
+Schattentrajektorie am 12.
+ Oktober in Las Palmas.
+ Der Sonnenhöchststand ist an diesem Tag in Las Palmas um 13:48 Uhr (siehe
+ z.B.
+  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cactus2000"
+literal "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Korrespondierend zur Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schattentrajektorie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ sind in Las Palmas am 12.
+ Oktober 2021 die nachfolgenden Fotos entstanden.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename LasPalmas-12.10.2021-13Uhr33.jpeg
+	scale 23
+	BoundingBox 0bp 0bp 1200bp 1600bp
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename LasPalmas-12.10.2021-13Uhr55.jpeg
+	scale 23
+	BoundingBox 0bp 0bp 1200bp 1600bp
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SchattenFotos"
+
+\end_inset
+
+Schatten in Las Palmas am 12.
+ Oktober 2021 um 13:33 Uhr und um 13:55 Uhr Ortszeit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im ersten der beiden Fotos der Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SchattenFotos"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ sieht man am unteren Bildrand das gelbe Fussende des Stabes.
+ Der Zeitunterschied beider Aufnahmen beträgt 22 Minuten.
+ In dieser Zeit ist der Schatten ca.
+ 20 cm weiter gewandert.
+ Dieses Ergebnis passt recht gut zum rechnerisch ermittelten Abstand von
+ ca.
+ 17 cm
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Leider habe ich vor Ort weder die genaue Länge des Stabes noch die genaue
+ Länge der Trajektorie gemessen.
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+SSW und WSW 
 \end_layout
 
 \begin_layout Standard
@@ -2505,8 +2682,6 @@ noprefix "false"
 \end_inset
 
  - die WSW unterscheidet sich nicht.
- Zwischen den Markierungen der Trajektorie liegen jeweils 10 Minuten.
- Für die Stablänge wurde 1.5 m angenommen.
  
 \end_layout
 
@@ -2546,6 +2721,10 @@ Schattentrajektorie zur SSW am 21.
 \end_inset
 
  
+\end_layout
+
+\begin_layout Subsubsection
+Frühlings- und Herbst-Äquinoktikum 
 \end_layout
 
 \begin_layout Standard
@@ -2605,170 +2784,6 @@ noprefix "false"
  März, dem Frühlings-Äquinoktikum - das Herbst-Äquinoktikum hat eine identische
  Trajektorie.
  
-\end_layout
-
-\begin_layout Standard
-Abbildung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Schattentrajektorie"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- zeigt die berechnete Schattentrajektorie ebenfalls für Las Palmas, aber
- für den 12.
- Oktober.
- Die Koordinaten der beiden markierten Punkte sind dargestellt, ihr geometrische
-r Abstand beträgt 20.21 cm, ihr zeitlicher Abstand beträgt 20 Minuten (13:30
- Uhr bis 13:50 Uhr Ortszeit).
- 
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename SchattenTrajektorie.eps
-	lyxscale 230
-	scale 50
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Schattentrajektorie"
-
-\end_inset
-
-Schattentrajektorie am 12.
- Oktober in Las Palmas mit den Punkten für 13:30 Uhr und 13:50 Uhr Ortszeit
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Korrespondierend zur Abbildung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Schattentrajektorie"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- sind in Las Palmas am 12.
- Oktober 2021 die nachfolgenden Fotos entstanden.
- Im ersten der beiden Fotos der Abbildung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:SchattenFotos"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- sieht man am unteren Bildrand das gelbe Fussende des Stabes.
- Der Zeitunterschied beider Aufnahmen beträgt 22 Minuten.
- In dieser Zeit ist der Schatten ca.
- 20 cm weiter gewandert.
- Dieses Ergebnis passt recht gut zum rechnerisch ermittelten Abstand
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Leider habe ich vor Ort weder die genaue Länge des Stabes noch die genaue
- Länge der Trajektorie gemessen.
-\end_layout
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename LasPalmas-12.10.2021-13Uhr33.jpeg
-	scale 23
-	BoundingBox 0bp 0bp 1200bp 1600bp
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename LasPalmas-12.10.2021-13Uhr55.jpeg
-	scale 23
-	BoundingBox 0bp 0bp 1200bp 1600bp
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:SchattenFotos"
-
-\end_inset
-
-Schatten in Las Palmas am 12.
- Oktober 2021 um 13:33 Uhr und um 13:55 Uhr Ortszeit 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -4450,6 +4465,35 @@ Nebenrechnung
 
 \end_layout
 
+\begin_layout Subsection
+Die zweidimensionale Trajektorie (Alternative) 
+\end_layout
+
+\begin_layout Standard
+Die Trajektorienpunkte nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GesuchterPunktSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) liegen in einem affinen Unterraum des 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+, den man durch 
+\begin_inset Formula $ax_{1}+bx_{2}+cx_{3}=d$
+\end_inset
+
+ beschreiben kann.
+ Die Parameter dieses Unterraumes können aus den berechneten Trajektorienpunkten
+ durch eine Least-Squares-Optimierung bestimmt werden.
+ 
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -4541,6 +4585,19 @@ literal "false"
 
 https://de.wikipedia.org/wiki/Gleichschenkliges_Dreieck, Abschnitt: Berechnung
  und Konstruktion 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "8"
+key "Cactus2000"
+literal "false"
+
+\end_inset
+
+https://www.cactus2000.de/sun/city.php?id=Las+Palmas+de+Gran+Canaria&year=2021&mont
+h=10&c=ES 
 \end_layout
 
 \end_body
