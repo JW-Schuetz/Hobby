@@ -1328,7 +1328,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename SonnenKompass3.eps
+	filename ../../Hobby - Kopie/LyX-Sources/SonnenKompass3.eps
 	lyxscale 200
 	scale 65
 	BoundingBox 0bp 0bp 769bp 259bp
@@ -2165,7 +2165,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Projektion.eps
+	filename ../../Hobby - Kopie/LyX-Sources/Projektion.eps
 
 \end_inset
 
@@ -2593,7 +2593,7 @@ status open
 
 
 \begin_inset Graphics
-	filename LasPalmas-12.10.2021-13Uhr55.jpeg
+	filename ../../Hobby - Kopie/LyX-Sources/LasPalmas-12.10.2021-13Uhr55.jpeg
 	scale 23
 	BoundingBox 0bp 0bp 1200bp 1600bp
 
@@ -4466,7 +4466,7 @@ Nebenrechnung
 \end_layout
 
 \begin_layout Subsection
-Die zweidimensionale Trajektorie (Alternative) 
+Alternative zur Bestimmung der zweidimensionalen Trajektorie 
 \end_layout
 
 \begin_layout Standard
@@ -4485,12 +4485,74 @@ noprefix "false"
 \end_inset
 
 , den man durch 
-\begin_inset Formula $ax_{1}+bx_{2}+cx_{3}=d$
+\begin_inset Formula 
+\[
+ax_{1}+bx_{2}+cx_{3}=d
+\]
+
 \end_inset
 
- beschreiben kann.
- Die Parameter dieses Unterraumes können aus den berechneten Trajektorienpunkten
+beschreiben kann.
+ Die Parameter dieses Unterraumes können aus den berechneten 
+\begin_inset Formula $N$
+\end_inset
+
+ Trajektorienpunkten 
+\begin_inset Formula $\left(x_{1}^{n},x_{2}^{n},x_{3}^{n}\right)$
+\end_inset
+
+ für 
+\begin_inset Formula $n=1,\cdots,N$
+\end_inset
+
  durch eine Least-Squares-Optimierung bestimmt werden.
+ Dazu wird das LS-Problem gelöst (siehe dazu zB.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIAM"
+literal "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\[
+\min_{a,b,c,d}\sum_{n=1}^{N}\mid ax_{1}^{n}+bx_{2}^{n}+cx_{3}^{n}-d\mid^{2}.
+\]
+
+\end_inset
+
+Anders formuliert 
+\begin_inset Formula 
+\[
+\min_{a,b,c,d}\left\Vert A\underline{z}\right\Vert 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula 
+\[
+A=\left(\begin{array}{cccc}
+x_{1}^{1} & x_{2}^{1} & x_{3}^{1} & -1\\
+x_{1}^{2} & x_{2}^{2} & x_{3}^{2} & -1\\
+\vdots & \vdots & \vdots & -1\\
+x_{1}^{N} & x_{2}^{N} & x_{3}^{N} & -1
+\end{array}\right)
+\]
+
+\end_inset
+
+und 
+\begin_inset Formula $\underline{z}=\left(a,b,c,d\right)^{T}$
+\end_inset
+
+.
  
 \end_layout
 
@@ -4598,6 +4660,19 @@ literal "false"
 
 https://www.cactus2000.de/sun/city.php?id=Las+Palmas+de+Gran+Canaria&year=2021&mont
 h=10&c=ES 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "9"
+key "SIAM"
+literal "false"
+
+\end_inset
+
+Solving Least Squares Problems; Lawson, C.L.; Hanson, R.J.; SIAM Classics in
+ Applied Mathematics 15; 1995
 \end_layout
 
 \end_body
