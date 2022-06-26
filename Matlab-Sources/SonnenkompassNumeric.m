@@ -6,7 +6,7 @@ function SonnenkompassNumeric
     clc
     clear
 
-    load( 'SonnenkompassSymbolic.mat', 'alpha', 'y0Strich', 'y0' )
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0Strich' )
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -39,6 +39,7 @@ function SonnenkompassNumeric
     p3 = rE * cos( theta );         % z-Koordinate
 
     % Zahlenwerte bis auf alpha substituieren
+    x0 = subs( x0 );
     y0 = subs( y0 );
 
     % astronomischer Mittag
@@ -56,18 +57,25 @@ function SonnenkompassNumeric
 
     % Numerische Auswertung
     N = fix( tEnd - tStart + 1 );	% Anzahl der Zeitpunkte
-    y = zeros( N, 2 );              % Trajektorie [m]
+    x = zeros( N, 3 );              % Trajektorie 3-dim [m]
+    y = zeros( N, 2 );              % Trajektorie 2-dim [m]
 
     % Position und Zeitpunkt berechnen
     for i = 1 : N
-        t     = tStart + ( i - 1 );	% t in Minuten
-        alpha( i ) = double( pi / ( 12 * 60 ) * t );           % zugehöriger Winkel
+        t          = tStart + ( i - 1 );                % t in Minuten
+        alpha( i ) = double( pi / ( 12 * 60 ) * t );    % zugehöriger Winkel
 
-        yLoc = subs( y0, 'alpha', alpha( i ) )';     % in y0 alpha substituieren
+        t         = subs( x0, 'alpha', alpha( i ) )';   % in x0 alpha substituieren
+        x( i, : ) = double( t );                        % Trajektorie 3-dim
+
+        yLoc = subs( y0, 'alpha', alpha( i ) )';        % in y0 alpha substituieren
         yLoc = double( yLoc );
 
-        y( i, 1 : 2 ) = [ yLoc( 1 ), yLoc( 2 ) ];   % Trajektorie
+        y( i, 1 : 2 ) = [ yLoc( 1 ), yLoc( 2 ) ];       % Trajektorie 2-dim
     end
 
-    save( fileName, 'y' )
+    % Least-Squares für a,b,c,d
+    [ a, b, c, d ] = lsq( x );
+
+    save( fileName, a, b, c, d, 'y' )
 end

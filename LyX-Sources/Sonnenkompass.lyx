@@ -270,7 +270,15 @@ Vektoren werden durch einen Unterstrich kenntlich gemacht (
 \end_inset
 
 .
- 
+ Es wird die 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+-Norm 
+\begin_inset Formula $\left\Vert \underline{x}\right\Vert $
+\end_inset
+
+ benutzt.
 \end_layout
 
 \begin_layout Standard
@@ -4480,21 +4488,25 @@ noprefix "false"
 
 \end_inset
 
-) liegen in einem affinen Unterraum des 
+) liegen alle in einem Tangentialraum der Erdkugel (Radius 
+\begin_inset Formula $R_{E}$
+\end_inset
+
+), einem affinen Unterraum des 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
 , den man durch 
 \begin_inset Formula 
 \[
-ax_{1}+bx_{2}+cx_{3}=d
+ax_{1}+bx_{2}+cx_{3}=R_{E}
 \]
 
 \end_inset
 
 beschreiben kann.
  Die Parameter 
-\begin_inset Formula $a,b,c,f$
+\begin_inset Formula $a,b,c$
 \end_inset
 
  dieses Unterraumes können aus den 
@@ -4513,7 +4525,7 @@ beschreiben kann.
  Dazu wird das LS-Problem 
 \begin_inset Formula 
 \[
-\min_{a,b,c,d}\sum_{n=1}^{N}\mid ax_{1}^{n}+bx_{2}^{n}+cx_{3}^{n}-d\mid^{2}
+\min_{a,b,c}\sum_{n=1}^{N}\mid ax_{1}^{n}+bx_{2}^{n}+cx_{3}^{n}-R_{E}\mid^{2}
 \]
 
 \end_inset
@@ -4531,11 +4543,12 @@ literal "false"
 
 \end_inset
 
-) oder anders formuliert 
+).
+ Man kann das Problem umformulieren als 
 \begin_inset Formula 
-\[
-\min_{a,b,c,d}\left\Vert A\underline{z}\right\Vert 
-\]
+\begin{equation}
+\min_{a,b,c}\left\Vert A\underline{x}-\underline{R}_{E}\right\Vert ^{2}\label{eq:LS}
+\end{equation}
 
 \end_inset
 
@@ -4544,17 +4557,17 @@ literal "false"
 
 \begin_layout Standard
 mit der 
-\begin_inset Formula $N\times4$
+\begin_inset Formula $N\times3$
 \end_inset
 
 -Matrix 
 \begin_inset Formula 
 \begin{eqnarray*}
-A & = & \left(\begin{array}{cccc}
-x_{1}^{1} & x_{2}^{1} & x_{3}^{1} & -1\\
-x_{1}^{2} & x_{2}^{2} & x_{3}^{2} & -1\\
-\vdots & \vdots & \vdots & -1\\
-x_{1}^{N} & x_{2}^{N} & x_{3}^{N} & -1
+A & = & \left(\begin{array}{ccc}
+x_{1}^{1} & x_{2}^{1} & x_{3}^{1}\\
+x_{1}^{2} & x_{2}^{2} & x_{3}^{2}\\
+\vdots & \vdots & \vdots\\
+x_{1}^{N} & x_{2}^{N} & x_{3}^{N}
 \end{array}\right)
 \end{eqnarray*}
 
@@ -4564,11 +4577,143 @@ x_{1}^{N} & x_{2}^{N} & x_{3}^{N} & -1
 \end_layout
 
 \begin_layout Standard
-und 
-\begin_inset Formula $\underline{z}=\left(a,b,c,d\right)^{T}$
+dem Vektor 
+\begin_inset Formula $\underline{R}_{E}=\left(R_{E},\cdots,R_{E}\right)^{T}$
+\end_inset
+
+ und mit 
+\begin_inset Formula $\underline{x}=\left(a,b,c\right)^{T}$
 \end_inset
 
 .
+ Die Matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ habe den Rang 3.
+ 
+\end_layout
+
+\begin_layout Standard
+Es existiert eine Zerlegung 
+\begin_inset Formula $A=HRK^{T}$
+\end_inset
+
+ der Matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ in eine orthogonale 
+\begin_inset Formula $N\times N$
+\end_inset
+
+-Matrix 
+\begin_inset Formula $H$
+\end_inset
+
+, eine orthogonale 
+\begin_inset Formula $3\times3$
+\end_inset
+
+-Matrix 
+\begin_inset Formula $K$
+\end_inset
+
+ und eine rechte obere 
+\begin_inset Formula $N\times3$
+\end_inset
+
+-Dreiecksmatrix 
+\begin_inset Formula 
+\begin{eqnarray*}
+R & = & \left(\begin{array}{cc}
+R_{11} & 0\\
+0 & 0
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula $\det\left(R_{11}\right)\neq0$
+\end_inset
+
+.
+ Mit dieser Zerlegung ist jede Lösung 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+ von (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LS"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) durch 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underline{x}_{0}=K\left(\begin{array}{c}
+\underline{\widetilde{y}}_{1}\\
+\underline{y}_{2}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+darstellbar (siehe Theorem 2.3 in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIAM"
+literal "false"
+
+\end_inset
+
+).
+ Dabei ist 
+\begin_inset Formula $\underline{y}_{2}$
+\end_inset
+
+ ein beliebiger 
+\begin_inset Formula $?\times?$
+\end_inset
+
+-Vektor und 
+\begin_inset Formula $\underline{\widetilde{y}}_{1}$
+\end_inset
+
+ ist die Lösung von 
+\begin_inset Formula $R_{11}\underline{y}_{1}=\underline{g}_{1}$
+\end_inset
+
+.
+ Dabei gilt für 
+\begin_inset Formula $\underline{g}_{1}$
+\end_inset
+
+ die Darstellung 
+\begin_inset Formula $\left(\begin{array}{c}
+\underline{g}_{1}\\
+\underline{g}_{2}
+\end{array}\right)=H^{T}\underline{R}_{E}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Bibliography
