@@ -2593,7 +2593,7 @@ status open
 
 
 \begin_inset Graphics
-	filename ../../Hobby - Kopie/LyX-Sources/LasPalmas-12.10.2021-13Uhr55.jpeg
+	filename LasPalmas-12.10.2021-13Uhr55.jpeg
 	scale 23
 	BoundingBox 0bp 0bp 1200bp 1600bp
 
@@ -4493,7 +4493,11 @@ ax_{1}+bx_{2}+cx_{3}=d
 \end_inset
 
 beschreiben kann.
- Die Parameter dieses Unterraumes können aus den berechneten 
+ Die Parameter 
+\begin_inset Formula $a,b,c,f$
+\end_inset
+
+ dieses Unterraumes können aus den 
 \begin_inset Formula $N$
 \end_inset
 
@@ -4506,7 +4510,19 @@ beschreiben kann.
 \end_inset
 
  durch eine Least-Squares-Optimierung bestimmt werden.
- Dazu wird das LS-Problem gelöst (siehe dazu zB.
+ Dazu wird das LS-Problem 
+\begin_inset Formula 
+\[
+\min_{a,b,c,d}\sum_{n=1}^{N}\mid ax_{1}^{n}+bx_{2}^{n}+cx_{3}^{n}-d\mid^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gelöst (siehe dazu zB.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4515,15 +4531,7 @@ literal "false"
 
 \end_inset
 
-) 
-\begin_inset Formula 
-\[
-\min_{a,b,c,d}\sum_{n=1}^{N}\mid ax_{1}^{n}+bx_{2}^{n}+cx_{3}^{n}-d\mid^{2}.
-\]
-
-\end_inset
-
-Anders formuliert 
+) oder anders formuliert 
 \begin_inset Formula 
 \[
 \min_{a,b,c,d}\left\Vert A\underline{z}\right\Vert 
@@ -4535,25 +4543,32 @@ Anders formuliert
 \end_layout
 
 \begin_layout Standard
-mit 
+mit der 
+\begin_inset Formula $N\times4$
+\end_inset
+
+-Matrix 
 \begin_inset Formula 
-\[
-A=\left(\begin{array}{cccc}
+\begin{eqnarray*}
+A & = & \left(\begin{array}{cccc}
 x_{1}^{1} & x_{2}^{1} & x_{3}^{1} & -1\\
 x_{1}^{2} & x_{2}^{2} & x_{3}^{2} & -1\\
 \vdots & \vdots & \vdots & -1\\
 x_{1}^{N} & x_{2}^{N} & x_{3}^{N} & -1
 \end{array}\right)
-\]
+\end{eqnarray*}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 und 
 \begin_inset Formula $\underline{z}=\left(a,b,c,d\right)^{T}$
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Bibliography
