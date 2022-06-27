@@ -4590,7 +4590,7 @@ dem Vektor
 \begin_inset Formula $M$
 \end_inset
 
- habe den Rang 3.
+ habe kein Rangdefizit.
  
 \end_layout
 
@@ -4644,7 +4644,7 @@ mit der
 \end_inset
 
  habe den Rang 
-\begin_inset Formula $r\leq\max\left(n,m\right)$
+\begin_inset Formula $k\leq\max\left(n,m\right)$
 \end_inset
 
 .
@@ -4664,7 +4664,7 @@ literal "false"
 
 \end_inset
 
- dem Theorem 2.3, so existiert für 
+ dem Theorem 3.19, so existiert für 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4688,17 +4688,37 @@ literal "false"
 \begin_inset Formula $K$
 \end_inset
 
- und eine rechte obere 
+ und eine 
 \begin_inset Formula $m\times n$
 \end_inset
 
--Dreiecksmatrix der Gestalt 
+-Matrix 
+\begin_inset Formula $R$
+\end_inset
+
+ der Form 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(m\times n\right)=\left(\begin{array}{cc}
+\left(k\times k\right) & \left(k\times\left(n-k\right)\right)\\
+\left(\left(m-k\right)\times k\right) & \left(\left(m-k\right)\times\left(n-k\right)\right)
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
 R & = & \left(\begin{array}{cc}
 R_{11} & 0\\
 0 & 0
-\end{array}\right).
+\end{array}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -4707,27 +4727,72 @@ R_{11} & 0\\
 \end_layout
 
 \begin_layout Standard
-Dabei ist 
-\begin_inset Formula $R_{11}$
-\end_inset
-
- eine invertierbare 
+mit der invertierbaren 
 \begin_inset Formula $k\times k$
 \end_inset
 
--Matrix.
+-Matrix 
+\begin_inset Formula $R_{11}$
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
-Zur Problemlösung definiert man einerseits 
+Nach Theorem 2.3 in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIAM"
+literal "false"
+
+\end_inset
+
+ definiert man zur Problemlösung einerseits 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Formula 
-\[
+\begin{eqnarray*}
+\left\Vert A\underline{x}-\underline{b}\right\Vert ^{2} & = & \left\Vert HRK^{T}\underline{x}-\underline{b}\right\Vert ^{2}\\
+ & = & \left\Vert RK^{T}\underline{x}-H^{T}\underline{b}\right\Vert ^{2}\\
+ & = & \left\Vert R\left(\begin{array}{c}
+\underline{y}_{1}\\
+\underline{y}_{2}
+\end{array}\right)-\left(\begin{array}{c}
+\underline{g}_{1}\\
+\underline{g}_{2}
+\end{array}\right)\right\Vert ^{2}\\
+ & = & \left\Vert \left(\begin{array}{c}
+R_{11}\underline{y}_{1}\\
+\underline{0}
+\end{array}\right)-\left(\begin{array}{c}
+\underline{g}_{1}\\
+\underline{g}_{2}
+\end{array}\right)\right\Vert ^{2}\\
+ & = & \left\Vert \left(\begin{array}{c}
+R_{11}\underline{y}_{1}-\underline{g}_{1}\\
+-\underline{g}_{2}
+\end{array}\right)\right\Vert ^{2}\\
+ & = & \left\Vert R_{11}\underline{y}_{1}-\underline{g}_{1}\right\Vert ^{2}+\left\Vert \underline{g}_{2}\right\Vert ^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
 \left(\begin{array}{c}
 \underline{g}_{1}\\
 \underline{g}_{2}
-\end{array}\right)=H^{T}\underline{b}
-\]
+\end{array}\right)=H^{T}\underline{b}\label{eq:HTB}
+\end{equation}
 
 \end_inset
 
@@ -4814,12 +4879,12 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \underline{x}_{0}=K\left(\begin{array}{c}
 \underline{\widetilde{y}}_{1}\\
 \underline{y}_{2}
-\end{array}\right)
-\]
+\end{array}\right)\label{eq:Lösung-LS}
+\end{equation}
 
 \end_inset
 
@@ -4837,6 +4902,227 @@ darstellbar.
 \end_inset
 
  beliebig wählbar.
+ Wählt man 
+\begin_inset Formula $\underline{y}_{2}=\underline{0}$
+\end_inset
+
+, so erhält man die Lösung mit kleinster Nom 
+\begin_inset Formula $\left\Vert \underline{x}_{0}\right\Vert $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis von (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Lösung-LS"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+Aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LSAllgemein"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt mit 
+\begin_inset Formula $A=HRK^{T}$
+\end_inset
+
+ aufgrund der Orthogonalität von 
+\begin_inset Formula $H$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\Vert A\underline{x}-\underline{b}\right\Vert ^{2}=\left\Vert RK^{T}\underline{x}-H^{T}\underline{b}\right\Vert ^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Einsetzen der Lösung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Lösung-LS"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) in 
+\begin_inset Formula $RK^{T}\underline{x}$
+\end_inset
+
+ liefert aufgrund der Orthogonalität von 
+\begin_inset Formula $K$
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\begin{array}{cc}
+R_{11} & 0\\
+0 & 0
+\end{array}\right)\left(\begin{array}{c}
+\underline{\widetilde{y}}_{1}\\
+\underline{y}_{2}
+\end{array}\right)\bowtie\left(\begin{array}{c}
+\begin{array}{cc}
+\left(k\times k\right) & \left(k\times\left(n-k\right)\right)\\
+\left(\left(m-k\right)\times k\right) & \left(\left(m-k\right)\times\left(n-k\right)\right)
+\end{array}\end{array}\right)\left(\begin{array}{c}
+\left(k\times1\right)\\
+\left(\left(n-k\right)\times1\right)
+\end{array}\right)\bowtie\left(\begin{array}{c}
+k\times1\\
+\left(m-k\right)\times1
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+RK^{T}\underline{x} & = & RK^{T}K\left(\begin{array}{c}
+\underline{\widetilde{y}}_{1}\\
+\underline{y}_{2}
+\end{array}\right)\\
+ & = & R\left(\begin{array}{c}
+\underline{\widetilde{y}}_{1}\\
+\underline{y}_{2}
+\end{array}\right)\\
+ & = & \left(\begin{array}{cc}
+R_{11} & 0\\
+0 & 0
+\end{array}\right)\left(\begin{array}{c}
+\underline{\widetilde{y}}_{1}\\
+\underline{y}_{2}
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+R_{11}\underline{\widetilde{y}}_{1}\\
+\underline{0}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Einsetzen von (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:HTB"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) in liefert 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\Vert A\underline{x}-\underline{b}\right\Vert ^{2} & = & \left\Vert \left(\begin{array}{c}
+R_{11}\underline{\widetilde{y}}_{1}\\
+\underline{0}
+\end{array}\right)-\left(\begin{array}{c}
+\underline{g}_{1}\\
+\underline{g}_{2}
+\end{array}\right)\right\Vert ^{2}\\
+ & = & \left\Vert \left(\begin{array}{c}
+R_{11}\underline{\widetilde{y}}_{1}-\underline{g}_{1}\\
+-\underline{g}_{2}
+\end{array}\right)\right\Vert ^{2}\\
+ & = & \left\Vert R_{11}\underline{\widetilde{y}}_{1}-\underline{g}_{1}\right\Vert ^{2}+\left\Vert \underline{g}_{2}\right\Vert ^{2}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Minimum 
+\begin_inset Formula $\left\Vert \underline{g}_{2}\right\Vert ^{2}$
+\end_inset
+
+ wird für 
+\begin_inset Formula $R_{11}\underline{\widetilde{y}}_{1}=\underline{g}_{1}$
+\end_inset
+
+ angenommen.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Spezialisierte Lösung des LS-Problems 
+\end_layout
+
+\begin_layout Standard
+Die Matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ des zu lösenden LS-Problem (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LS"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) hat Rang 
+\begin_inset Formula $3$
+\end_inset
+
+.
+ Deshalb ist die Matrix 
+\begin_inset Formula $R$
+\end_inset
+
+ wegen 
+\begin_inset Formula $k=n$
+\end_inset
+
+ eine linke obere Dreiecksmatrix.
  
 \end_layout
 
