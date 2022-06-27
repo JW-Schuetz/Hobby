@@ -4547,7 +4547,7 @@ literal "false"
  Man kann das Problem umformulieren als 
 \begin_inset Formula 
 \begin{equation}
-\min_{a,b,c}\left\Vert A\underline{x}-\underline{R}_{E}\right\Vert ^{2}\label{eq:LS}
+\min_{a,b,c}\left\Vert M\underline{x}-\underline{R}_{E}\right\Vert ^{2}\label{eq:LS}
 \end{equation}
 
 \end_inset
@@ -4563,12 +4563,12 @@ mit der
 -Matrix 
 \begin_inset Formula 
 \begin{eqnarray*}
-A & = & \left(\begin{array}{ccc}
+M & = & \left(\begin{array}{ccc}
 x_{1}^{1} & x_{2}^{1} & x_{3}^{1}\\
 x_{1}^{2} & x_{2}^{2} & x_{3}^{2}\\
 \vdots & \vdots & \vdots\\
 x_{1}^{N} & x_{2}^{N} & x_{3}^{N}
-\end{array}\right)
+\end{array}\right),
 \end{eqnarray*}
 
 \end_inset
@@ -4587,24 +4587,93 @@ dem Vektor
 
 .
  Die Matrix 
-\begin_inset Formula $A$
+\begin_inset Formula $M$
 \end_inset
 
  habe den Rang 3.
  
 \end_layout
 
+\begin_layout Subsubsection*
+Allgemeines LS-Problem 
+\end_layout
+
 \begin_layout Standard
-Es existiert eine Zerlegung 
-\begin_inset Formula $A=HRK^{T}$
+Das allgemeine LS-Problem ist nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIAM"
+literal "false"
+
 \end_inset
 
- der Matrix 
+ beschrieben durch 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\min_{\underline{x}}\left\Vert A\underline{x}-\underline{b}\right\Vert ^{2}\label{eq:LSAllgemein}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit der 
+\begin_inset Formula $m\times n$
+\end_inset
+
+-Matrix 
 \begin_inset Formula $A$
 \end_inset
 
+ und dem 
+\begin_inset Formula $m$
+\end_inset
+
+-Vektor 
+\begin_inset Formula $\underline{b}$
+\end_inset
+
+.
+ Die Matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ habe den Rang 
+\begin_inset Formula $r\leq\max\left(n,m\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Allgemeine Lösung des LS-Problems 
+\end_layout
+
+\begin_layout Standard
+Folgt man in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIAM"
+literal "false"
+
+\end_inset
+
+ dem Theorem 2.3, so existiert für 
+\begin_inset Formula $A$
+\end_inset
+
+ eine Zerlegung 
+\begin_inset Formula $A=HRK^{T}$
+\end_inset
+
  in eine orthogonale 
-\begin_inset Formula $N\times N$
+\begin_inset Formula $m\times m$
 \end_inset
 
 -Matrix 
@@ -4612,7 +4681,7 @@ Es existiert eine Zerlegung
 \end_inset
 
 , eine orthogonale 
-\begin_inset Formula $3\times3$
+\begin_inset Formula $n\times n$
 \end_inset
 
 -Matrix 
@@ -4620,16 +4689,16 @@ Es existiert eine Zerlegung
 \end_inset
 
  und eine rechte obere 
-\begin_inset Formula $N\times3$
+\begin_inset Formula $m\times n$
 \end_inset
 
--Dreiecksmatrix 
+-Dreiecksmatrix der Gestalt 
 \begin_inset Formula 
 \begin{eqnarray*}
 R & = & \left(\begin{array}{cc}
 R_{11} & 0\\
 0 & 0
-\end{array}\right)
+\end{array}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -4638,19 +4707,102 @@ R_{11} & 0\\
 \end_layout
 
 \begin_layout Standard
-mit 
-\begin_inset Formula $\det\left(R_{11}\right)\neq0$
+Dabei ist 
+\begin_inset Formula $R_{11}$
+\end_inset
+
+ eine invertierbare 
+\begin_inset Formula $k\times k$
+\end_inset
+
+-Matrix.
+ 
+\end_layout
+
+\begin_layout Standard
+Zur Problemlösung definiert man einerseits 
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+\underline{g}_{1}\\
+\underline{g}_{2}
+\end{array}\right)=H^{T}\underline{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit dem 
+\begin_inset Formula $k$
+\end_inset
+
+-Vektor 
+\begin_inset Formula $\underline{g}_{1}$
+\end_inset
+
+ und dem 
+\begin_inset Formula $\left(m-k\right)$
+\end_inset
+
+-Vektor 
+\begin_inset Formula $\underline{g}_{2}$
+\end_inset
+
+ und andererseits 
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+\underline{y}_{1}\\
+\underline{y}_{2}
+\end{array}\right)=K^{T}\underline{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit dem 
+\begin_inset Formula $k$
+\end_inset
+
+-Vektor 
+\begin_inset Formula $\underline{y}_{1}$
+\end_inset
+
+ und dem 
+\begin_inset Formula $\left(n-k\right)$
+\end_inset
+
+-Vektor 
+\begin_inset Formula $\underline{y}_{2}$
 \end_inset
 
 .
- Mit dieser Zerlegung ist jede Lösung 
+ 
+\end_layout
+
+\begin_layout Standard
+Bezeichnet man mit 
+\begin_inset Formula $\underline{\widetilde{y}}_{1}$
+\end_inset
+
+ die eindeutige Lösung von 
+\begin_inset Formula $R_{11}\underline{y}_{1}=\underline{g}_{1}$
+\end_inset
+
+, so ist jede Lösung 
 \begin_inset Formula $\underline{x}_{0}$
 \end_inset
 
  von (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:LS"
+reference "eq:LSAllgemein"
 plural "false"
 caps "false"
 noprefix "false"
@@ -4675,44 +4827,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-darstellbar (siehe Theorem 2.3 in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "SIAM"
-literal "false"
-
+darstellbar.
+ Dabei ist der 
+\begin_inset Formula $\left(n-k\right)$
 \end_inset
 
-).
- Dabei ist 
+-Vektor 
 \begin_inset Formula $\underline{y}_{2}$
 \end_inset
 
- ein beliebiger 
-\begin_inset Formula $?\times?$
-\end_inset
-
--Vektor und 
-\begin_inset Formula $\underline{\widetilde{y}}_{1}$
-\end_inset
-
- ist die Lösung von 
-\begin_inset Formula $R_{11}\underline{y}_{1}=\underline{g}_{1}$
-\end_inset
-
-.
- Dabei gilt für 
-\begin_inset Formula $\underline{g}_{1}$
-\end_inset
-
- die Darstellung 
-\begin_inset Formula $\left(\begin{array}{c}
-\underline{g}_{1}\\
-\underline{g}_{2}
-\end{array}\right)=H^{T}\underline{R}_{E}$
-\end_inset
-
-.
+ beliebig wählbar.
  
 \end_layout
 
