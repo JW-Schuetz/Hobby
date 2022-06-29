@@ -74,8 +74,5 @@ function SonnenkompassNumeric
         y( i, 1 : 2 ) = [ yLoc( 1 ), yLoc( 2 ) ];       % Trajektorie 2-dim
     end
 
-    % Least-Squares für a,b,c,d
-    [ a, b, c, d ] = lsq( x );
-
-    save( fileName, a, b, c, d, 'y' )
+    save( fileName, 'rE', 'x', 'y' )
 end

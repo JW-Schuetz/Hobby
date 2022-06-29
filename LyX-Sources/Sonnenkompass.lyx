@@ -4488,7 +4488,7 @@ noprefix "false"
 
 \end_inset
 
-) liegen alle in einem Tangentialraum der Erdkugel (Radius 
+) liegen alle in einer Tangentialfläche der Erdkugel (Radius 
 \begin_inset Formula $R_{E}$
 \end_inset
 
@@ -4510,22 +4510,22 @@ beschreiben kann.
 \end_inset
 
  dieses Unterraumes können aus den 
-\begin_inset Formula $N$
+\begin_inset Formula $M>3$
 \end_inset
 
  Trajektorienpunkten 
-\begin_inset Formula $\left(x_{1}^{n},x_{2}^{n},x_{3}^{n}\right)$
+\begin_inset Formula $\left(x_{1}^{m},x_{2}^{m},x_{3}^{m}\right)$
 \end_inset
 
  für 
-\begin_inset Formula $n=1,\cdots,N$
+\begin_inset Formula $m=1,\cdots,M$
 \end_inset
 
  durch eine Least-Squares-Optimierung bestimmt werden.
  Dazu wird das LS-Problem 
 \begin_inset Formula 
 \[
-\min_{a,b,c}\sum_{n=1}^{N}\mid ax_{1}^{n}+bx_{2}^{n}+cx_{3}^{n}-R_{E}\mid^{2}
+\min_{a,b,c}\sum_{m=1}^{M}\mid ax_{1}^{m}+bx_{2}^{m}+cx_{3}^{m}-R_{E}\mid^{2}
 \]
 
 \end_inset
@@ -4544,10 +4544,14 @@ literal "false"
 \end_inset
 
 ).
- Man kann das Problem umformulieren als 
+ Man kann das Problem mit 
+\begin_inset Formula $\underline{x}=\left(a,b,c\right)^{T}$
+\end_inset
+
+ umformulieren 
 \begin_inset Formula 
 \begin{equation}
-\min_{a,b,c}\left\Vert M\underline{x}-\underline{R}_{E}\right\Vert ^{2}\label{eq:LS}
+\min_{\underline{x}}\left\Vert A\underline{x}-\underline{R}_{E}\right\Vert ^{2}\label{eq:LS}
 \end{equation}
 
 \end_inset
@@ -4557,18 +4561,18 @@ literal "false"
 
 \begin_layout Standard
 mit der 
-\begin_inset Formula $N\times3$
+\begin_inset Formula $M\times3$
 \end_inset
 
 -Matrix 
 \begin_inset Formula 
 \begin{eqnarray*}
-M & = & \left(\begin{array}{ccc}
+A & = & \left(\begin{array}{ccc}
 x_{1}^{1} & x_{2}^{1} & x_{3}^{1}\\
 x_{1}^{2} & x_{2}^{2} & x_{3}^{2}\\
 \vdots & \vdots & \vdots\\
-x_{1}^{N} & x_{2}^{N} & x_{3}^{N}
-\end{array}\right),
+x_{1}^{M} & x_{2}^{M} & x_{3}^{M}
+\end{array}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -4581,24 +4585,28 @@ dem Vektor
 \begin_inset Formula $\underline{R}_{E}=\left(R_{E},\cdots,R_{E}\right)^{T}$
 \end_inset
 
- und mit 
-\begin_inset Formula $\underline{x}=\left(a,b,c\right)^{T}$
-\end_inset
-
 .
- Die Matrix 
-\begin_inset Formula $M$
+ Die Spalten der Matrix 
+\begin_inset Formula $A$
 \end_inset
 
- habe kein Rangdefizit.
+ werden als linear unabhängig angenommen, 
+\begin_inset Formula $A$
+\end_inset
+
+ hat also kein Rangdefizit.
  
 \end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Subsubsection*
 Allgemeines LS-Problem 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Das allgemeine LS-Problem ist nach 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4610,7 +4618,7 @@ literal "false"
  beschrieben durch 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
 \min_{\underline{x}}\left\Vert A\underline{x}-\underline{b}\right\Vert ^{2}\label{eq:LSAllgemein}
@@ -4621,7 +4629,7 @@ literal "false"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 mit der 
 \begin_inset Formula $m\times n$
 \end_inset
@@ -4655,8 +4663,8 @@ mit der
 Allgemeine Lösung des LS-Problems 
 \end_layout
 
-\begin_layout Standard
-Folgt man in 
+\begin_layout Plain Layout
+Folgt man dem Theorem 3.19 in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SIAM"
@@ -4664,7 +4672,7 @@ literal "false"
 
 \end_inset
 
- dem Theorem 3.19, so existiert für 
+, so existiert für 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4726,7 +4734,7 @@ R_{11} & 0\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 mit der invertierbaren 
 \begin_inset Formula $k\times k$
 \end_inset
@@ -4739,7 +4747,7 @@ mit der invertierbaren
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Nach Theorem 2.3 in 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4750,7 +4758,7 @@ literal "false"
 
  definiert man zur Problemlösung einerseits 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -4799,7 +4807,7 @@ R_{11}\underline{y}_{1}-\underline{g}_{1}\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 mit dem 
 \begin_inset Formula $k$
 \end_inset
@@ -4830,7 +4838,7 @@ mit dem
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 mit dem 
 \begin_inset Formula $k$
 \end_inset
@@ -4851,7 +4859,7 @@ mit dem
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bezeichnet man mit 
 \begin_inset Formula $\underline{\widetilde{y}}_{1}$
 \end_inset
@@ -4877,7 +4885,7 @@ noprefix "false"
 ) durch 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
 \underline{x}_{0}=K\left(\begin{array}{c}
@@ -4891,7 +4899,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 darstellbar.
  Dabei ist der 
 \begin_inset Formula $\left(n-k\right)$
@@ -4928,7 +4936,7 @@ noprefix "false"
 ) 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Aus (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4950,7 +4958,7 @@ noprefix "false"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \left\Vert A\underline{x}-\underline{b}\right\Vert ^{2}=\left\Vert RK^{T}\underline{x}-H^{T}\underline{b}\right\Vert ^{2}.
@@ -4961,7 +4969,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Einsetzen der Lösung (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5012,7 +5020,7 @@ k\times1\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 RK^{T}\underline{x} & = & RK^{T}K\left(\begin{array}{c}
@@ -5041,7 +5049,7 @@ R_{11}\underline{\widetilde{y}}_{1}\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Einsetzen von (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5055,7 +5063,7 @@ noprefix "false"
 ) in liefert 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 \left\Vert A\underline{x}-\underline{b}\right\Vert ^{2} & = & \left\Vert \left(\begin{array}{c}
@@ -5077,7 +5085,7 @@ R_{11}\underline{\widetilde{y}}_{1}-\underline{g}_{1}\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Das Minimum 
 \begin_inset Formula $\left\Vert \underline{g}_{2}\right\Vert ^{2}$
 \end_inset
@@ -5090,16 +5098,45 @@ Das Minimum
  
 \end_layout
 
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Subsubsection*
-Spezialisierte Lösung des LS-Problems 
+Lösung durch QR-Zerlegung 
 \end_layout
 
 \begin_layout Standard
 Die Matrix 
-\begin_inset Formula $M$
+\begin_inset Formula $A$
 \end_inset
 
- des zu lösenden LS-Problem (
+ wird in eine orthogonale 
+\begin_inset Formula $3\times3$
+\end_inset
+
+-Matrix 
+\begin_inset Formula $Q$
+\end_inset
+
+ und in eine obere 
+\begin_inset Formula $M\times3$
+\end_inset
+
+-Dreiecksmatrix 
+\begin_inset Formula $R=\left(\begin{array}{c}
+R_{1}\\
+0
+\end{array}\right)$
+\end_inset
+
+ zerlegt.
+ Man erhält aufgrund der Orthogonalität von 
+\begin_inset Formula $Q$
+\end_inset
+
+ für den zu minimierenden Term aus (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:LS"
@@ -5109,21 +5146,39 @@ noprefix "false"
 
 \end_inset
 
-) hat Rang 
-\begin_inset Formula $3$
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\Vert A\underline{x}-\underline{R}_{E}\right\Vert ^{2} & = & \left\Vert QR\underline{x}-\underline{R}_{E}\right\Vert ^{2}\\
+ & = & \left\Vert R\underline{x}-Q^{T}\underline{R}_{E}\right\Vert ^{2}\\
+ & = & \left\Vert \left(\begin{array}{c}
+R_{1}\\
+0
+\end{array}\right)\underline{x}-Q^{T}\underline{R}_{E}\right\Vert ^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit der Definition 
+\begin_inset Formula $\left(\begin{array}{c}
+\underline{c}\\
+\underline{d}
+\end{array}\right)=Q^{T}\underline{R}_{E}$
+\end_inset
+
+ folgt für die Lösung 
+\begin_inset Formula $\underline{x}_{0}=R_{1}^{-1}\underline{c}$
+\end_inset
+
+ und für den Wert des Minimums 
+\begin_inset Formula $\left\Vert \underline{d}\right\Vert ^{2}$
 \end_inset
 
 .
- Deshalb ist die Matrix 
-\begin_inset Formula $R$
-\end_inset
-
- wegen 
-\begin_inset Formula $k=n$
-\end_inset
-
- eine linke obere Dreiecksmatrix.
- 
 \end_layout
 
 \begin_layout Bibliography

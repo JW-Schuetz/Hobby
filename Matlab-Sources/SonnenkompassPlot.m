@@ -53,7 +53,19 @@ function SonnenkompassPlot()
     end
 
     % Ergebnisdaten laden
-    load( [ ort, '-', datum, '.mat' ], 'y' )
+    load( [ ort, '-', datum, '.mat' ], 'rE', 'x', 'y' )
+
+    % Least-Squares für a,b,c
+    [ a, b, c ] = lsq( x, rE );
+
+    % Überprüfung
+    maximum = 0;
+    for n = 1 : length( x )
+        delta = abs( a * x( n, 1 ) + b * x( n, 2 ) + c * x( n, 3 ) - rE );
+        if( delta > maximum )
+            maximum = delta;
+        end
+    end
 
     % Minimaler Abstand Stab <-> Schattenende und sein Index bestimmen,
     % minNdx ist Index des astronomischen Mittags (AM). 
