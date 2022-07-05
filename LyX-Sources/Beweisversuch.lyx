@@ -1,0 +1,314 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Prädikatenlogik
+\end_layout
+
+\begin_layout Subsection*
+Beispiel 1
+\end_layout
+
+\begin_layout Standard
+Seien 
+\begin_inset Formula $A$
+\end_inset
+
+ und 
+\begin_inset Formula $B$
+\end_inset
+
+ Mengen mit den Elementen 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ und 
+\begin_inset Formula $b\in B$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Eine Funktion 
+\begin_inset Formula $f$
+\end_inset
+
+ von 
+\begin_inset Formula $A$
+\end_inset
+
+ nach 
+\begin_inset Formula $B$
+\end_inset
+
+, in Zeichen 
+\begin_inset Formula $f\colon A\rightarrow B$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+, ist 
+\begin_inset Formula $f$
+\end_inset
+
+ eine Relation 
+\begin_inset Formula $f\subset A\times B$
+\end_inset
+
+ falls gilt:
+\end_layout
+
+\begin_layout Itemize
+es gibt für 
+\begin_inset Formula $a$
+\end_inset
+
+ mindestens einen Funktionswert: 
+\begin_inset Formula 
+\[
+\forall a\exists b\left(\left(a,b\right)\in f\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+es gibt für 
+\begin_inset Formula $a$
+\end_inset
+
+ höchstens einen Funktionswert: 
+\begin_inset Formula 
+\[
+\forall a\forall b\forall c\left(\left(\left(a,b\right)\in f\land\left(a,c\right)\in f\right)\rightarrow b=c\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit der eingänglicheren Schreibweise 
+\begin_inset Formula $\left(a,c\right)\in f\Longleftrightarrow f\left(a\right)=c$
+\end_inset
+
+ folgt für die beiden Aussagen
+\begin_inset Formula 
+\begin{equation}
+\forall a\exists b\left(f\left(a\right)=b\right)\label{eq:Aussage 1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\forall a\forall b\forall c\left(\left(f\left(a\right)=b\land f\left(a\right)=c\right)\rightarrow b=c\right)\label{eq:Aussage 2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es sollte sich damit formal beweisen lassen: Zu jedem 
+\begin_inset Formula $a$
+\end_inset
+
+ gibt es genau einen Funktionswert 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis 
+\end_layout
+
+\begin_layout Standard
+Wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Äqui2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Aussage 2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+\forall b\forall c\left(\exists a\left(f\left(a\right)=b\land f\left(a\right)=c\right)\rightarrow b=c\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Beispiel 2 
+\end_layout
+
+\begin_layout Standard
+Kontraposition: 
+\begin_inset Formula $\left(A\rightarrow B\right)\rightarrow\left(\lnot B\rightarrow\lnot A\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Anhang: Einige Abkürzungen und Äquivalenzen
+\end_layout
+
+\begin_layout Subsubsection*
+Abkürzungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(F\rightarrow G\right) & \equiv & \left(\lnot F\vee G\right)\\
+\left(F\longleftrightarrow G\right) & \equiv & \left(F\rightarrow G\right)\wedge\left(G\rightarrow F\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Äquivalenzen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\forall x\left(P\rightarrow Qx\right) & \leftrightarrow & \left(P\rightarrow\forall xQx\right)\label{eq:Äqui1}\\
+\forall x\left(Px\rightarrow Q\right) & \leftrightarrow & \left(\exists xPx\rightarrow Q\right)\label{eq:Äqui2}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

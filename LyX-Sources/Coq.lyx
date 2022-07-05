@@ -1,0 +1,544 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Coq-Grundlagen
+\end_layout
+
+\begin_layout Section*
+Gallina
+\end_layout
+
+\begin_layout Paragraph*
+Liste von Typen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Typ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bedeutung
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{nat}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+natürliche Zahl, inklusive der 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Z$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Menge 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{Prop}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aussage
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{list }A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Liste von Elementen des Typs 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\times B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Paar der Typen 
+\begin_inset Formula $A$
+\end_inset
+
+ und 
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ausdrücke (expressions) bestehen aus Konstanten und Bezeichnern (identifiers)
+\end_layout
+
+\begin_layout Standard
+Jeder Ausdruck besitzt einen Typ
+\end_layout
+
+\begin_layout Standard
+Der Typ eines Bezeichners ist üblicherweise durch eine Deklaration gegeben
+\end_layout
+
+\begin_layout Standard
+Regeln zur Bildung zusammengesetzter Ausdrücke beinhalten Typregeln (typing
+ rules), die den Zusammenhang des Typs der Teilausdrücke und des Typs des
+ zusammengesetzten Ausdruckes beschreiben
+\end_layout
+
+\begin_layout Standard
+Zum Beispiel ist 
+\begin_inset Formula $Z$
+\end_inset
+
+ der Typ der ganzen Zahlen 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+.
+ Die Konstante 
+\begin_inset Formula $-6$
+\end_inset
+
+ besitzt den Typ 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ Die Konstante 
+\begin_inset Formula $\text{true}$
+\end_inset
+
+ hat den Typ bool.
+ 
+\begin_inset Formula $-6*\text{true}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ ist kein wohlgeformter Ausdruck.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Der Typ der natürlichen Zahlen (inklusive der 0) wird 
+\begin_inset Formula $\text{nat}$
+\end_inset
+
+ genannt.
+ Es gibt eine Funktion Nachfolger, die die nächste natürliche Zahl zu einer
+ gegebenen liefert.
+ Typoperatoren erlauben es, den Typ 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ zu konstruieren, den Typ von Paaren 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ wobei 
+\begin_inset Formula $a$
+\end_inset
+
+ vom Typ 
+\begin_inset Formula $A$
+\end_inset
+
+ und 
+\begin_inset Formula $b$
+\end_inset
+
+ vom Typ 
+\begin_inset Formula $B$
+\end_inset
+
+ ist.
+ Der Typ 
+\begin_inset Formula $\text{list }A$
+\end_inset
+
+ einer Liste von Elementen des Typs 
+\begin_inset Formula $A$
+\end_inset
+
+ und der Typ 
+\begin_inset Formula $A\rightarrow B$
+\end_inset
+
+ von Funktionen, die ein Argument des Typs 
+\begin_inset Formula $A$
+\end_inset
+
+ in ein Ergebnis des Typs 
+\begin_inset Formula $B$
+\end_inset
+
+ abbilden.
+\end_layout
+
+\begin_layout Standard
+Beispiel: Das Funktional, das jede Funktion 
+\begin_inset Formula $f$
+\end_inset
+
+ von 
+\begin_inset Formula $\text{nat}$
+\end_inset
+
+ nach 
+\begin_inset Formula $Z$
+\end_inset
+
+ und jede natürliche Zahl 
+\begin_inset Formula $n$
+\end_inset
+
+ auf den Wert 
+\begin_inset Formula $\sum_{i=0}^{i=n}f\left(i\right)$
+\end_inset
+
+ abbildet, kann in Callina definiert werden und hat den Typ 
+\begin_inset Formula $\left(\text{nat}\rightarrow Z\right)\rightarrow\text{nat}\rightarrow Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Assertion, Proposition: Aussage (Behauptung)
+\end_layout
+
+\begin_layout Itemize
+Conjecture: Annahme (Hypothese)
+\end_layout
+
+\begin_layout Standard
+Aussagen können wahr, falsch oder Annahmen sein
+\end_layout
+
+\begin_layout Standard
+Aussagen können bewiesen werden
+\end_layout
+
+\begin_layout Standard
+Aussagen besitzen den Typ 
+\begin_inset Formula $\text{Prop}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Jeder Typ ist auch ein Term und besitzt einen Typ
+\end_layout
+
+\begin_layout Standard
+Die Aussage 
+\begin_inset Formula $3\leq7$
+\end_inset
+
+ ist gleichzeitig der Typ aller Beweise, dass 3 kleiner gleich 7 ist, und
+ ein Term vom Typ 
+\begin_inset Formula $\text{Prop}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Prädikate erlauben das Bilden parametrisierter Aussagen
+\end_layout
+
+\begin_layout Standard
+Beispiele: Das Prädikat 
+\begin_inset Quotes gld
+\end_inset
+
+bin eine Primzahl
+\begin_inset Quotes grd
+\end_inset
+
+ erlaubt es, Aussagen wie 
+\begin_inset Quotes gld
+\end_inset
+
+7 ist eine Primzahl
+\begin_inset Quotes grd
+\end_inset
+
+ zu formulieren.
+ Dieses Prädikat kann als eine Funktion des Typs 
+\begin_inset Formula $\text{nat}\rightarrow\text{Prop}$
+\end_inset
+
+ aufgefasst werden.
+ Das Prädikat 
+\begin_inset Quotes gld
+\end_inset
+
+bin eine sortierte Liste
+\begin_inset Quotes grd
+\end_inset
+
+ hat den Typ 
+\begin_inset Formula $\left(\text{list }Z\right)\rightarrow\text{Prop}$
+\end_inset
+
+ und die binäre Relation 
+\begin_inset Formula $\leq$
+\end_inset
+
+ den Typ 
+\begin_inset Formula $Z\rightarrow Z\rightarrow\text{Prop}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Argumente können selbst Prädikate sein
+\end_layout
+
+\begin_layout Standard
+Beispiel: Die Aussage 
+\begin_inset Quotes gld
+\end_inset
+
+bin eine transitive Relation auf 
+\begin_inset Formula $Z$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+ ist ein Prädikat mit dem Typ 
+\begin_inset Formula $\left(Z\rightarrow Z\rightarrow\text{Prop}\right)\rightarrow\text{Prop}$
+\end_inset
+
+.
+ Polymorphe Transitivität besitzt den Typ 
+\begin_inset Formula $\left(Z\rightarrow Z\rightarrow\text{Prop}\right)\rightarrow\text{Prop}$
+\end_inset
+
+ für jeden Typ 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
