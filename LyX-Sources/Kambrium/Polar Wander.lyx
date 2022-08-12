@@ -1,0 +1,913 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Kinematik
+\end_layout
+
+\begin_layout Itemize
+Definition Drehimpuls 
+\begin_inset Formula $\underline{L}=\underline{r}\times\underline{p}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Definition Drehmoment 
+\begin_inset Formula $\underline{M}=\underline{r}\times\underline{F}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Aus dem Newtonschen Gesetz 
+\begin_inset Formula $\underline{F}=\frac{d\underline{p}}{dt}$
+\end_inset
+
+ folgt mit 
+\begin_inset Formula $\underline{p}=m\underline{v}$
+\end_inset
+
+ für das Drehmoment 
+\begin_inset Formula $\underline{M}=\underline{r}\times\frac{d\left(m\underline{v}\right)}{dt}$
+\end_inset
+
+ und mit 
+\end_layout
+
+\begin_layout Section*
+Starre Körper
+\end_layout
+
+\begin_layout Itemize
+Ein starrer Körper 
+\begin_inset Formula $S_{N}$
+\end_inset
+
+ im 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ wird durch 
+\begin_inset Formula $N$
+\end_inset
+
+ Punkte 
+\begin_inset Formula $P_{n}\quad n=1,\cdots,N$
+\end_inset
+
+ mit 
+\begin_inset Formula $N\geq1$
+\end_inset
+
+ und mit paarweise festen Abständen 
+\begin_inset Formula $\Vert P_{i}-P_{j}\Vert\neq0$
+\end_inset
+
+ für alle 
+\begin_inset Formula $\forall i\neq j$
+\end_inset
+
+ definiert.
+\end_layout
+
+\begin_layout Itemize
+Die Punktabstände sind vorgegeben und werden im folgenden Zwangsbedingungen
+ genannt.
+ Ihre Anzahl wird als Funktion der Punktanzahl 
+\begin_inset Formula $N$
+\end_inset
+
+ mit 
+\begin_inset Formula $Z_{N}$
+\end_inset
+
+ bezeichnet.
+ Es ist anschaulich klar, dass 
+\begin_inset Formula $Z_{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula $Z_{2}=1$
+\end_inset
+
+ und 
+\begin_inset Formula $Z_{3}=3$
+\end_inset
+
+ gilt.
+\end_layout
+
+\begin_layout Itemize
+Erweitert man den starren Körper 
+\begin_inset Formula $S_{N}$
+\end_inset
+
+ mit 
+\begin_inset Formula $N\geq3$
+\end_inset
+
+ um einen Punkt 
+\begin_inset Formula $P_{N+1}$
+\end_inset
+
+ zu einem starren Körper 
+\begin_inset Formula $S_{N+1}$
+\end_inset
+
+, so muss man 
+\begin_inset Formula $P_{N+1}$
+\end_inset
+
+ mit mindestens 
+\begin_inset Formula $3$
+\end_inset
+
+ Punkten aus 
+\begin_inset Formula $S_{N}$
+\end_inset
+
+ verbinden.
+ Verbindet man 
+\begin_inset Formula $P_{N+1}$
+\end_inset
+
+ mit weniger als 
+\begin_inset Formula $3$
+\end_inset
+
+ Punkten, ist das Ergebnis wegen der neuen Bewegungsfreiheitsgrade kein
+ starrer Körper mehr.
+\end_layout
+
+\begin_layout Itemize
+Für die Anzahl 
+\begin_inset Formula $Z_{N+1}$
+\end_inset
+
+ der Zwangsbedingungen des starren Körpers 
+\begin_inset Formula $S_{N+1}$
+\end_inset
+
+ mit 
+\begin_inset Formula $N\geq3$
+\end_inset
+
+ gilt also die Rekursionsbeziehung 
+\begin_inset Formula 
+\begin{eqnarray}
+Z_{N+1}-Z_{N} & = & 3.\label{eq:Rekursion}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Aus dem linearen Ansatz 
+\begin_inset Formula $Z_{N}=aN+b$
+\end_inset
+
+ folgt wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Rekursion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula $a=3$
+\end_inset
+
+.
+ Wegen 
+\begin_inset Formula $Z_{3}=3$
+\end_inset
+
+ folgt 
+\begin_inset Formula $b=-6$
+\end_inset
+
+.
+ Also gilt für 
+\begin_inset Formula $N\geq3$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+Z_{N} & = & 3N-6.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Man erhält für Anzahl der Zwangsbedingungen 
+\begin_inset Formula 
+\begin{eqnarray}
+Z_{N} & = & \left\{ \begin{array}{ccc}
+N-1 & \quad\text{für} & \quad N<3\\
+3N-6 & \text{\quad für} & \quad N\geq3
+\end{array}\right..\label{eq:Anzahl der Zwangsbedingungen}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Kinematik starrer Körper
+\end_layout
+
+\begin_layout Itemize
+Wir betrachten zwei Koordinatensysteme: das Laborsystem 
+\begin_inset Formula $U$
+\end_inset
+
+ mit den Koordinaten 
+\begin_inset Formula $\left(u,v,w\right)^{T}$
+\end_inset
+
+ und das körperfeste System 
+\begin_inset Formula $X$
+\end_inset
+
+ mit den Koordinaten 
+\begin_inset Formula $\left(x,y,z\right)^{T}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Das Laborsystem 
+\begin_inset Formula $U$
+\end_inset
+
+ sei ein Intertialsystem
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+...
+ also unbeschleunigt!
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Der Ursprung des körperfesten Systems 
+\begin_inset Formula $X$
+\end_inset
+
+ sei im Laborsystem 
+\begin_inset Formula $U$
+\end_inset
+
+ durch die Koordinaten 
+\begin_inset Formula $\underline{u}_{0}\left(t\right)=\left(u_{0}\left(t\right),v_{0}\left(t\right),w_{0}\left(t\right)\right)^{T}$
+\end_inset
+
+ gegeben.
+\end_layout
+
+\begin_layout Itemize
+Ein körperfester Punkt 
+\begin_inset Formula $\underline{x}\left(t\right)=\left(x\left(t\right),y\left(t\right),z\left(t\right)\right)^{T}$
+\end_inset
+
+ aus 
+\begin_inset Formula $X$
+\end_inset
+
+ hat im Laborsystem 
+\begin_inset Formula $U$
+\end_inset
+
+ die zeitliche Darstellung 
+\begin_inset Formula $\underline{u}\left(t\right)=\underline{u}_{0}\left(t\right)+\underline{x}\left(t\right)$
+\end_inset
+
+ mit der Geschwindigkeit im Laborsystem 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d\underline{u}\left(t\right)}{dt} & = & \frac{d\underline{u}_{0}\left(t\right)}{dt}+\frac{d\underline{x}\left(t\right)}{dt}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Translation im körperfesten System 
+\begin_inset Formula $X$
+\end_inset
+
+ mit Geschwindigkeit 
+\begin_inset Formula $\underline{v}\left(t\right)$
+\end_inset
+
+ mit Startwert 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $\underline{x}\left(t\right)=\underline{v}t+\underline{x}_{0}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Rotation um den Ursprung im körperfesten System 
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Formula $\underline{x}\left(t\right)=D\underline{x}_{0}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Analogie Translation 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ Rotation: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Trägheitsmoment (Tensor 2.
+ Stufe) 
+\begin_inset Formula $\varTheta$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ Masse (Skalar) 
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Winkel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ Ort 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Winkelgeschwindigkeit 
+\begin_inset Formula $\underline{\omega}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ Geschwindigkeit 
+\begin_inset Formula $\underline{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Winkelbeschleunigung 
+\begin_inset Formula $\underline{\alpha}=\frac{d\underline{\omega}}{dt}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ Beschleunigung 
+\begin_inset Formula $\underline{a}=\frac{d\underline{v}}{dt}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Drehimpuls 
+\begin_inset Formula $\underline{L}=\varTheta\underline{\omega}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ Impuls 
+\begin_inset Formula $\underline{p}=m\underline{v}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Drehmoment 
+\begin_inset Formula $\underline{M}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ Kraft 
+\begin_inset Formula $\underline{F}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Drehimpulssatz 
+\begin_inset Formula $\underline{M}=\frac{d\underline{L}}{dt}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ Newtonsches Gesetz 
+\begin_inset Formula $\underline{F}=\frac{d\underline{p}}{dt}$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Der Drehimpulssatz folgt direkt aus dem Newtonschen Gesetz:
+\end_layout
+
+\begin_layout Plain Layout
+Mit dem Ortsvektor 
+\begin_inset Formula $\underline{r}$
+\end_inset
+
+ des Teilchens der Masse 
+\begin_inset Formula $m$
+\end_inset
+
+ und seinem Impuls 
+\begin_inset Formula $\underline{p}$
+\end_inset
+
+ ist sein Drehimpuls (Definition) 
+\begin_inset Formula $\underline{L}=\underline{r}\times\underline{p}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Für dessen zeitliche Ableitung gilt 
+\begin_inset Formula 
+\begin{equation}
+\dot{\underline{L}}=\frac{d\underline{L}}{dt}=\frac{d}{dt}\left(\underline{r}\times\underline{p}\right)=\frac{d\underline{r}}{dt}\times\underline{p}+\underline{r}\times\frac{d\underline{p}}{dt}.\label{eq:Drehimpulsänderung}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Für das Drehmoment einer am Teilchen angreifenden Kraft 
+\begin_inset Formula $\underline{F}$
+\end_inset
+
+ gilt (Definition) 
+\begin_inset Formula $\underline{M}=\underline{r}\times\underline{F}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Mit dem Newtonschen Gesetz 
+\begin_inset Formula $\underline{F}=\frac{d\underline{p}}{dt}$
+\end_inset
+
+ ergibt sich daraus zusammen mit (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Drehimpulsänderung"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{M} & = & \underline{r}\times\frac{d\underline{p}}{dt}\\
+ & = & \dot{\underline{L}}-\frac{d\underline{r}}{dt}\times\underline{p}\\
+ & = & \dot{\underline{L}}-\underline{v}\times\underline{p}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Wegen 
+\begin_inset Formula $\underline{v}\times\underline{p}=m\left(\underline{v}\times\underline{v}\right)=\underline{0}$
+\end_inset
+
+ folgt der Drehimpulssatz 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{M} & = & \dot{\underline{L}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection*
+Zusammenfassung von 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Goldreich"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Das Trägheitsmoment hat 3 Komponenten, die man Hauptträgheitsachsen nennt.
+\end_layout
+
+\begin_layout Itemize
+Ein starrer Körper kann entweder um die Hauptträgheitsachse mit dem grössten
+ oder um die mit dem kleinsten Trägheitsmoment Euler-Nutationen ausführen.
+\end_layout
+
+\begin_layout Itemize
+Die Gesamtdrehmomente 
+\begin_inset Formula $H_{i}\left(t\right)$
+\end_inset
+
+ mit den Hauptträgheitsmomenten 
+\begin_inset Formula $J_{i}\left(t\right)$
+\end_inset
+
+, den Winkelgeschwindigkeiten 
+\begin_inset Formula $\Omega_{i}\left(t\right)$
+\end_inset
+
+ und den vorgegebenen Drehmomenten 
+\begin_inset Formula $h_{i}\left(t\right)$
+\end_inset
+
+ ergibt sich der Zusammenhang
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Die vorgegebenen Drehmomente 
+\begin_inset Formula $\underline{h}\left(t\right)$
+\end_inset
+
+ sind durch den Materialfluss im quasistarren Körper bezogen auf die Hauptträghe
+itsachsen verursacht.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{i}\left(t\right) & = & J_{i}\left(t\right)\Omega_{i}\left(t\right)+h_{i}\left(t\right)
+\end{eqnarray*}
+
+\end_inset
+
+ oder nach 
+\begin_inset Formula $\Omega_{i}$
+\end_inset
+
+ aufgelöst 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Omega_{i}\left(t\right) & = & \frac{H_{i}\left(t\right)-h_{i}\left(t\right)}{J_{i}\left(t\right)}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Vektoriell geschrieben (der Unterstrich bezeichnet Spaltenvektoren) ergibt
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{\Omega}\left(t\right) & = & J\left(t\right)\left[\underline{H}\left(t\right)-\underline{h}\left(t\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+ mit der Diagonalmatrix 
+\begin_inset Formula $J\left(t\right)=\left(\begin{array}{ccc}
+\frac{1}{J_{1}\left(t\right)}\\
+ & \frac{1}{J_{2}\left(t\right)}\\
+ &  & \frac{1}{J_{3}\left(t\right)}
+\end{array}\right).$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Es gilt in den Koordinaten des mitrotierenden Bezugssystems
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d\underline{H}}{dt} & = & \underline{H}\times\underline{\Omega}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Im folgenden sind (mit Ausnahme von 
+\begin_inset Formula $\left\Vert \underline{H}\right\Vert $
+\end_inset
+
+?) alle auftretenden Grössen von der Zeit 
+\begin_inset Formula $t$
+\end_inset
+
+ abhängig.
+\end_layout
+
+\begin_layout Itemize
+Normierung auf 
+\begin_inset Formula $H=\left\Vert \underline{H}\right\Vert $
+\end_inset
+
+ liefert mit den Abkürzungen 
+\begin_inset Formula $x_{i}=\frac{H_{i}}{H}$
+\end_inset
+
+ und 
+\begin_inset Formula $\alpha_{i}=\frac{h_{i}}{H}$
+\end_inset
+
+ wegen 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\underline{\Omega}}{H} & = & J\left(\frac{\underline{H}}{H}-\frac{\underline{h}}{H}\right)\\
+ & = & J\left(\underline{x}-\underline{\alpha}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ die Beziehung 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{H^{2}}\frac{d\underline{H}}{dt} & = & \frac{\underline{H}}{H}\times\frac{\underline{\Omega}}{H}\\
+\frac{1}{H}\frac{d\underline{x}}{dt} & = & \underline{x}\times\left(J\underline{x}\right)-\underline{x}\times\left(J\underline{\alpha}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Wegen 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{a}\times\underline{b} & = & \left(\begin{array}{c}
+a_{2}b_{3}-a_{3}b_{2}\\
+a_{3}b_{1}-a_{1}b_{3}\\
+a_{1}b_{2}-a_{2}b_{1}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}\times\left(J\underline{x}\right) & = & \left(\begin{array}{c}
+\frac{x_{2}x_{3}}{J_{3}}-\frac{x_{3}x_{2}}{J_{2}}\\
+\frac{x_{3}x_{1}}{J_{1}}-\frac{x_{1}x_{3}}{J_{3}}\\
+\frac{x_{1}x_{2}}{J_{2}}-\frac{x_{2}x_{1}}{J_{1}}
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+x_{2}x_{3}\left(\frac{1}{J_{3}}-\frac{1}{J_{2}}\right)\\
+x_{1}x_{3}\left(\frac{1}{J_{1}}-\frac{1}{J_{3}}\right)\\
+x_{1}x_{2}\left(\frac{1}{J_{2}}-\frac{1}{J_{1}}\right)
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ und 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}\times\left(J\underline{\alpha}\right) & = & \left(\begin{array}{c}
+\frac{x_{2}\alpha_{3}}{J_{3}}-\frac{x_{3}\alpha_{2}}{J_{2}}\\
+\frac{x_{3}\alpha_{1}}{J_{1}}-\frac{x_{1}\alpha_{3}}{J_{3}}\\
+\frac{x_{1}\alpha_{2}}{J_{2}}-\frac{x_{2}\alpha_{1}}{J_{1}}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und schliesslich 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d\underline{x}}{dt} & = & H\left(\begin{array}{c}
+x_{2}x_{3}\left(\frac{1}{J_{3}}-\frac{1}{J_{2}}\right)-\frac{x_{2}\alpha_{3}}{J_{3}}+\frac{x_{3}\alpha_{2}}{J_{2}}\\
+x_{1}x_{3}\left(\frac{1}{J_{1}}-\frac{1}{J_{3}}\right)-\frac{x_{3}\alpha_{1}}{J_{1}}+\frac{x_{1}\alpha_{3}}{J_{3}}\\
+x_{1}x_{2}\left(\frac{1}{J_{2}}-\frac{1}{J_{1}}\right)-\frac{x_{1}\alpha_{2}}{J_{2}}+\frac{x_{2}\alpha_{1}}{J_{1}}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "Goldreich"
+literal "false"
+
+\end_inset
+
+ Peter Goldreich et.
+ al.; Some Remarks about Polar Wandering; Journal of Geophysical Research;
+ 1969
+\end_layout
+
+\end_body
+\end_document

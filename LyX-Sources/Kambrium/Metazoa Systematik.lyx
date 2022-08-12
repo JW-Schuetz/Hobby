@@ -1,0 +1,521 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth -2
+\tocdepth -2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Das Reich Metazoa (Vielzellige Tiere)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Metazoa (Vielzellige Tiere)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Porifera (Schwämme)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Placozoa (Plattentiere)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Eumetazoa (Gewebetiere)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Cnidaria (Nesseltiere)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Ctenophora (Rippenquallen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Bilateria (Zweiseitentiere)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Orthonectida
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Rhombozoa
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Xenacoelomorpha
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Deuterostomia (Neumünder)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Stamm Chordata (Chordatiere)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Urochordata (Manteltiere)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\color orange
+Notochordata
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Protostomia (Urmünder)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Chaetognatha (Pfeilwürmer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Entoprocta (Kelchwürmer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Cycliophora
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Gnathostomulida (Kiefermündchen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Micrognathozoa
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\color black
+Stamm Rotifera (Rädertierchen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Acanthocephala (Kratzwürmer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Stamm Gastrotricha (Bauchhärlinge)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Stamm Plathelminthes (Plattwürme)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Überstamm Lophotrochozoen
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Stamm Ectoprocta/Bryozoa (Moostierchen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Stamm Nemertini (Schnurwürmer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Stamm Annelida (Ringelwürmer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Stamm Mollusca (Weichtiere)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+\color red
+Brachiozoa
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Überstamm Ecdysozoa (Häutungstiere)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+\color blue
+Cycloneuralia
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Nematoida (Nematoiden)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+\color green
+Panarthropoda
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\color orange
+Notochordata
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Cephalochordata (Schädellose)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Unterstamm Vertebrata (Wirbeltiere)
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+\color red
+Brachiozoa
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Phoronida (Hufeisenwürmer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Brachiopoda (Armfüßer)
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+\color blue
+Cycloneuralia
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Nematoida
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Nematoda (Fadenwürmer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Nematomorpha (Saitenwürmer)
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Scalidophora
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Stamm Priapulida (Priapswürmer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Loricifera (Korsetttierchen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Kinorhyncha (Hakenrüssler)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+\color green
+Panarthropoda
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Tardigrada (Bärtierchen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Onychophora (Stummelfüßer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Lobopodia (Lobopoden)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Arthropoda (Gliederfüßer)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Myriapoda (Tausendfüßer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Hexapoda (Sechsfüßer)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Insecta (Insekten)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Entognatha (Sackkiefler)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Diplura (Doppelschwänze)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Protura (Beintastler)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Collembola (Springschwänze)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Unterstamm Chelicerata (Kieferklauenträger)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Klasse Pycnogonida (Asselspinnen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Xiphosura (Pfeilschwanzkrebse)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Arachnida (Spinnentiere)
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Scorpiones (Skorpione)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Uropygi (Geißelskorpione )
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Amblypygi (Geißelspinnen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Araneae (Webspinnen )
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Palpigradi (Palpenläufer)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Pseudoscorpiones (Pseudoskorpione)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Solifugae (Walzenspinnen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Opiliones (Weberknechte )
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Ricinulei (Kapuzenspinnen)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Acari (Milben)
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_body
+\end_document

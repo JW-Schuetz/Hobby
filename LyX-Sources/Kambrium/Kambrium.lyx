@@ -1,0 +1,2197 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\topmargin 2cm
+\rightmargin 1.5cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part*
+Übersicht (Figur 2, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Condon et. al."
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename U-Pb Ages.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Einbettung des Kambriums
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System (Periode)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silur
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ordovizium
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+Kambrium
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ediacarium
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cryogenium
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Kambrium
+\end_layout
+
+\begin_layout Itemize
+Serien und Stufen des Kambriums:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="5">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Serie
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stufe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alter / MJ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dauer / MJ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bemerkungen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.
+ Furongium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.
+ Duibium?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+489.5 – 
+\begin_inset Formula $\left(485.4\pm1.9\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.1
+\begin_inset Formula $\pm$
+\end_inset
+
+1.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.
+ Jiangshanium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+494 – 489.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.
+ Paibium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+497 – 494
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ Miaolingium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.
+ Guzhangium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500.5 – 497
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.
+ Drumium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+504.5 – 500.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Weifang Biota
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.
+ Wuliuan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+509 – 504.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Burgess Shale Biota (505 MJ)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+ -
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.
+ -
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+514 – 509
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ -
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+521 – 514
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chengjiang Biota (520 MJ)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+ Terreneuvium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+ -
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+529 – 521
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+ Fortunium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(541\pm1.0\right)$
+\end_inset
+
+ – 529
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\begin_inset Formula $\pm$
+\end_inset
+
+1.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Dauer: 
+\begin_inset Formula $\left(57.4±0.9\right)$
+\end_inset
+
+ MJ, zeitliche Mitte ca.
+ 513 MJ
+\end_layout
+
+\begin_layout Itemize
+Definition 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "McIlroy et. al."
+literal "true"
+
+\end_inset
+
+: Das Kambrium beginnt mit FAD des Spurenfossils 
+\begin_inset Quotes eld
+\end_inset
+
+Treptichnus pedum
+\begin_inset Quotes erd
+\end_inset
+
+, das dem FAD von 
+\begin_inset Quotes eld
+\end_inset
+
+Harlaniella podolica
+\begin_inset Quotes erd
+\end_inset
+
+ folgt.
+\end_layout
+
+\begin_layout Itemize
+Klima: Erwärmt sich im Verlauf.
+ Gegen Ende evtl.
+ keine Vereisung der Polkappen mehr und deshalb hoher Meeresspiegel.
+ Sauerstoffkonzentration von ca.
+ 12% auf ca.
+ 17% steigend (heute 21%).
+ Die Kohlenstoffdioxidkonzentration steigt von ca.
+ 0.45% auf einen absoluten Höhepunkt von 0.65% an der Kambrium/Ordovizium-Grenze
+ an (heute 0.04%).
+\end_layout
+
+\begin_layout Itemize
+Treibhausklima: Nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hearing et. al."
+literal "false"
+
+\end_inset
+
+ gab es eine 
+\begin_inset Formula $\delta{}^{18}O$
+\end_inset
+
+-Signatur in biogenen Phosphaten aus der Zeit zwischen 514 und 509 MJ, die
+ für eine Meerestemperatur von 20° bis 25° in südlichen Breiten von 65°
+ bis 70° (Rand der heutigen Antarktis) spricht.
+ Eine Simulationsrechnung ergibt für die Meeresoberflächentemperatur am
+ Äquator mehr als 35°.
+\end_layout
+
+\begin_layout Itemize
+Die 
+\begin_inset Quotes eld
+\end_inset
+
+Kambrische Explosion
+\begin_inset Quotes erd
+\end_inset
+
+ fand zu Beginn des Kambriums statt.
+\end_layout
+
+\begin_layout Itemize
+Polwanderung um ca.
+ 90° gegen Ende des Kambriums vor 500 bis 494 MJ, also 0.5 MJ nach dem Beginn
+ des Guzhangium bis zum Ende des Paibium.
+ Siehe 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jiao et. al."
+literal "true"
+
+\end_inset
+
+, Abbildung 11 und 12.
+\end_layout
+
+\begin_layout Itemize
+Im selben Zeitraum gab es die 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+-Anomalie (SPICE: Steptoean Positive Carbon Isotope Excursion).
+ Siehe 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jiao et. al."
+literal "true"
+
+\end_inset
+
+, Abbildung 11.
+\end_layout
+
+\begin_layout Itemize
+Nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kirschvink et. al."
+literal "true"
+
+\end_inset
+
+ gab es möglicherweise eine Polwanderung um ca.
+ 90° zu Beginn des Kambriums, im Terreneuvium, von 535 bis 520 MJ.
+\end_layout
+
+\begin_layout Itemize
+Die Tage waren nur 18 oder 19 Stunden lang 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lesch"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Die Solarkonstante im Kambrium ist ca.
+ 97% der heutigen Solarkonstante 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia 1"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Kambrische Kontinente: Gondwana, Laurentia, Baltica, Sibiria.
+\end_layout
+
+\begin_layout Itemize
+Nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Seilacher et. al."
+literal "true"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Flachwasser: Für das Ediacarium gibt es nur wenige Spurfossilien von Tieren,
+ die 
+\emph on
+horizontal
+\emph default
+ die Bio-Matten beweideten.
+ Es finden sich auch keine Arthropoden- und Nematoden-Spuren.
+ Die Situation veränderte sich zu Beginn des Kambriums.
+ Die Diversität der Surenfossilien vergrösserte sich dramatisch im Zusammenspiel
+ mit dem Beginn vertikaler Durchmischung der Biomatten.
+ Es kommt zum Verschwinden der Biomatten-Ökologe (
+\begin_inset Quotes eld
+\end_inset
+
+agronomic revolution
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+Tiefsee: Im Ediacarium gibt es bis hinein ins Mittelkambrium vorwiegend
+ Tierarten, die 
+\emph on
+horizontale 
+\emph default
+Bauten unterhalb der Biomatte anlegen (siehe 
+\begin_inset Quotes eld
+\end_inset
+
+Oldhamia
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Zu welchem Zeitpunkt die 
+\begin_inset Quotes eld
+\end_inset
+
+agronomic revolution
+\begin_inset Quotes erd
+\end_inset
+
+ auch die Tiefsee erreichte, ist unbekannt.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Nerites
+\begin_inset Quotes erd
+\end_inset
+
+, horizontale mäanderförmige Weidespuren der Biomatte, traten erst im Ordovizium
+ auf.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Butt et. al."
+literal "false"
+
+\end_inset
+
+ gab es bis zum Ende des Ediakarium nur Phytoplankton in den Ozeanen.
+ Zooplankton trat erst ab dem Kambrium auf.
+\end_layout
+
+\begin_layout Itemize
+Nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Butt et. al."
+literal "false"
+
+\end_inset
+
+ sind die ersten Bauten grabenden Tiere (vermutlich: Bilateria) auf die
+ Zeit von 545 bis 543 MJ (also ins Ediacarium) zu datieren.
+ Aber vermutlich ebenfalls die Spurenfossilien aus der Zeit vorher von 560
+ bis 555 MJ.
+ Die 565 MJ alten Spurenfossilien der 
+\begin_inset Quotes eld
+\end_inset
+
+Mistaken Point
+\begin_inset Quotes erd
+\end_inset
+
+-Lebewesen waren möglicherweise Nicht-Bilateria.
+\end_layout
+
+\begin_layout Itemize
+Metazoa (mehrzellige Tiere) entwickelten sich in der 1.
+ Hälfte des Cryogeniums (um 800 MJ) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Reis et. al."
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Die ersten Skelettteile finden sich ab Beginn des Kambriums, im Fortunium
+ (SSF: small shelly fauna) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Erwin et. al."
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part*
+Ediacarium
+\end_layout
+
+\begin_layout Itemize
+Vorgeschlagene Stufen des Ediacariums 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xiao et. al."
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stufe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alter / MJ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dauer / MJ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bemerkungen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Upper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+583 - 
+\begin_inset Formula $\left(541\pm1.0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+42
+\begin_inset Formula $\pm$
+\end_inset
+
+1.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+zuerst Gaskiers-Vereisung dann SWA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Middle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+605 - 583
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+22
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Weng’an Biota (570 MJ – 609 MJ)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lower
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+635 - 605
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Shuram-Wonoka 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+-Anomalie von bis zu -12.0 
+\begin_inset Formula $\permil$
+\end_inset
+
+, dauert ca.
+ 10 MJ im oberen Ediacarium: ca.
+ 570-560 MJ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Williams et. al."
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+FAD Ediacaria-Fauna, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Williams et. al."
+literal "false"
+
+\end_inset
+
+: Es wird für Nordwest-Kanada gezeigt, dass sich das FAD der Ediacara-Faunen
+ Abdrücke oberhalb der Junebeds befindet und nicht schon in der Sheepbed
+ Formation.
+ Dazu wird das Sheepbed Carbonat und die Gametrail Formation genauer untersucht.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Stratigraphie:
+\end_layout
+
+\begin_layout Itemize
+Gametrail Formation 
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+FAD of Ediacara-Fauna 
+\end_layout
+
+\begin_layout Itemize
+Junebeds 
+\end_layout
+
+\begin_layout Itemize
+Sheepbed Karbonat 
+\end_layout
+
+\begin_layout Itemize
+Sheepbed Formation 
+\end_layout
+
+\begin_layout Standard
+Die 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+-Anomalie der Gametrail Formation wird mit der SWA identifiziert.
+ Das FAD der Ediacaria-Fauna ist also bereits vor der SWA.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Gaskiers-Vereisung:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $580.0±1.0$
+\end_inset
+
+ nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Condon et. al."
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(579.63±0.15\right)$
+\end_inset
+
+ - 
+\begin_inset Formula $\left(579.88±0.44\right)$
+\end_inset
+
+ MJ, also Dauer von 0.34 MJ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pu et.al."
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Williams et. al."
+literal "false"
+
+\end_inset
+
+, Fig.
+ 13 tritt die typische Ediacara-Fauna erst nach der Gaskiers-Vereisung auf.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Doushantuo Formation: 635 - 551 MJ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Condon et. al."
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Cryogenium
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stufe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alter / MJ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dauer / MJ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bemerkungen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+635 - 720
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+85
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Bilateria entwickelten sich in der 2.
+ Hälfte des Cryogeniums (um 700 MJ), evtl.
+ auch erst zu Beginn des Ediacariums (um 620 MJ) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Reis et. al."
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Marinoische-Vereisung: 655 - 635 MJ
+\end_layout
+
+\begin_layout Itemize
+Sturtische-Vereisung: 717 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MacLennan et. al."
+literal "false"
+
+\end_inset
+
+ - 658 MJ
+\end_layout
+
+\begin_layout Itemize
+Islay 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+-Anomalie (mit 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+-Werten bis zu -12 
+\begin_inset Formula $\permil$
+\end_inset
+
+): 740-732 MJ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Riedman et. al."
+literal "false"
+
+\end_inset
+
+ bzw.
+ 735.25
+\begin_inset Formula $\pm$
+\end_inset
+
+0.25 MJ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MacLennan et. al."
+literal "false"
+
+\end_inset
+
+.
+ Sie soll nach dem Abstract von 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Strauss et.al"
+literal "false"
+
+\end_inset
+
+ die Sturtische Eiszeit um 15 Millionen Jahre vordatieren.
+ 
+\end_layout
+
+\begin_layout Part*
+Tonium
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stufe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alter / MJ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dauer / MJ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lagerstätten
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+720-1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+180
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+VSM Ogilvie Mtns., Canada im Zeitraum zwischen 752.7±5.5 MJ und 739.9±6.5 MJ
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rooney et. al"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+VSM Grand Canion, USA zwischen 751.0±7.6 MJ und 729.0±0.9 MJ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Riedman et. al."
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Warum gibt es eine singuläre 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+-Anomalie (-6 
+\begin_inset Formula $\permil$
+\end_inset
+
+) in der Horse Thief Springs Formation im Death Valley vor ca.
+ 785 MJ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Riedman et. al."
+literal "false"
+
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+Bitter Springs 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+-Anomalie: 811-789 MJ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Riedman et. al."
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Part*
+Kohlenstoff-Isotopenanalyse
+\end_layout
+
+\begin_layout Itemize
+Der im Meer in Form von Karbonaten abgelagerte Kohlenstoff zeigt nur geringe
+ 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+ Abweichungen im Vergleich zum im Meerwasser gelösten 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+ (Kapitel 11.1 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gadstein et. al."
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia 2"
+literal "false"
+
+\end_inset
+
+ hat der Erdmantel (also ohne biologische Aktivität) -5 
+\begin_inset Formula $\permil$
+\end_inset
+
+.
+ Photosynthese vergrössert diesen Wert.
+\end_layout
+
+\begin_layout Part*
+Allgemeines
+\end_layout
+
+\begin_layout Itemize
+MJ: Millionen Jahre
+\end_layout
+
+\begin_layout Itemize
+FAD: First Date of Appearance
+\end_layout
+
+\begin_layout Itemize
+Siliciclastic sediments are silica-based sediments, lacking carbon compounds,
+ which are formed from pre-existing rocks, by breakage, transportation and
+ redeposition to form sedimentary rock
+\end_layout
+
+\begin_layout Itemize
+SWA: Shuram-Wonoka 
+\begin_inset Formula $\delta{}^{13}C$
+\end_inset
+
+-Anomalie
+\end_layout
+
+\begin_layout Itemize
+VSM: Vase shaped microfossiles
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2018"
+key "Jiao et. al."
+literal "false"
+
+\end_inset
+
+Wen-Jun Jiao et.
+ al.; Paleomagnetism of a well-dated marine succession in South China: A
+ possible Late Cambrian true polar wander (TPW); 2018
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1997"
+key "Kirschvink et. al."
+literal "false"
+
+\end_inset
+
+Joseph L.
+ Kirschvink et.
+ al.; Evidence for a Large-Scale Reorganization of Early Cambrian Continental
+ Masses by Inertial Interchange True Polar Wander; 1997
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "Lesch"
+literal "false"
+
+\end_inset
+
+Prof.
+ Dr.
+ H.
+ Lesch; Sendung 
+\begin_inset Quotes eld
+\end_inset
+
+Alpha Centauri
+\begin_inset Quotes erd
+\end_inset
+
+ mit dem Titel 
+\begin_inset Quotes eld
+\end_inset
+
+Was geschah im Kambrium?
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "Wikipedia 1"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Klimawandel; Wikipedia-Artikel 
+\begin_inset Quotes eld
+\end_inset
+
+Klimawandel
+\begin_inset Quotes erd
+\end_inset
+
+ , Abschnitt 
+\begin_inset Quotes eld
+\end_inset
+
+Die Sonne
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2014"
+key "McIlroy et. al."
+literal "false"
+
+\end_inset
+
+Duncan McIlroy et.
+ al.; Ichnological evidence for the Cambrian explosion in the Ediacaran to
+ Cambrian succession of Tanafjord, Finnmark, northern Norway; 2014
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2005"
+key "Seilacher et. al."
+literal "false"
+
+\end_inset
+
+Adolf Seilacher et.
+ al.; Trace fossils in the Ediacaran–Cambrian transition: Behavioral diversificat
+ion, ecological turnover and environmental shift; 2005
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2003"
+key "Fredonkin"
+literal "false"
+
+\end_inset
+
+M.
+ Fredonkin; The Origin of the Metazoa in the light of Proterozoic fossil
+ record; http://evolbiol.ru/fedonkin_metazoa.htm; 2003
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2001"
+key "Ivantsov"
+literal "false"
+
+\end_inset
+
+A.Y.
+ Ivantsov; Vendia and Other Precambrian "Arthropods"; 2001
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2017"
+key "Butt et. al."
+literal "false"
+
+\end_inset
+
+G.E.
+ Butt et.
+ al.; The origin of the animals and a ‘Savannah’ hypothesis for early bilaterian
+ evolution; 2017
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2015"
+key "Reis et. al."
+literal "false"
+
+\end_inset
+
+M.
+ dos Reis et.
+ al.; Uncertainty in the Timing of Origin of Animals and the Limits of Precision
+ in Molecular Timescales; 2015
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2011"
+key "Erwin et. al."
+literal "false"
+
+\end_inset
+
+Erwin, D.H.
+ et.
+ al.; The Cambrian Conundrum; 2011
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2018"
+key "Hearing et. al."
+literal "false"
+
+\end_inset
+
+Hearing T.W., et.
+ al.; An early Cambrian greenhouse climate; 2018
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2016"
+key "Xiao et. al."
+literal "false"
+
+\end_inset
+
+Shuhai Xiao et.
+ al.; Towards an Ediacaran Time Scale: Problems, Protocols, and Prospects;
+ 2016
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2005"
+key "Condon et. al."
+literal "false"
+
+\end_inset
+
+Daniel Condon et.
+ al.; U-Pb Ages from the Neoproterozoic Doushantuo Formation, China; 2005
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2016"
+key "Pu et.al."
+literal "false"
+
+\end_inset
+
+Judy P.
+ Pu et.
+ al.; Dodging snowballs Geochronology of the Gaskiers glaciation and the
+ first appearance of the Ediacaran biota; 2016
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2014"
+key "Noble et.al."
+literal "false"
+
+\end_inset
+
+Stephen R.
+ Noble et.
+ al.; U-Pb geochronology and global context of the Charnian Supergroup, UK:
+ Constraints on the age of key Ediacaran fossil assemblages; 2014
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2012"
+key "Gadstein et. al."
+literal "false"
+
+\end_inset
+
+Gadstein F.M et.
+ al.; The Geologic Time Scale 2012; 2012
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2015"
+key "Rooney et. al"
+literal "false"
+
+\end_inset
+
+Alan D.
+ Rooney et.
+ al.; A Cryogenian chronology; 2015
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2014"
+key "Strauss et.al"
+literal "false"
+
+\end_inset
+
+Strauss et.
+ al.; 740 Ma vase-shaped microfossils from Yukon, Canada: Implications for
+ Neoproterozoic chronology and biostratigraphy; 2014
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2017"
+key "Williams et. al."
+literal "false"
+
+\end_inset
+
+George E.
+ Williams, Phillip W.
+ Schmidt; Shuram-Wonoka carbon isotope excursion: Ediacaran revolution in
+ the world ocean’s meridional overturning circulation; 2017
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2013"
+key "Macdonald et.al."
+literal "false"
+
+\end_inset
+
+Macdonald et.
+ al.; The stratigraphic relationship between the Shuram carbon isotope excursion,
+ the oxygenation of Neoproterozoic oceans, and the first appearance of the
+ Ediacara biota and bilaterian trace fossils in northwestern Canada; 2013
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "3"
+key "Wikipedia 2"
+literal "false"
+
+\end_inset
+
+https://en.wikipedia.org/wiki/Snowball_Earth#Cap_carbonate_rocks
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2017"
+key "MacLennan et. al."
+literal "false"
+
+\end_inset
+
+MacLennan et.
+ al; The arc of the Snowball: U-Pb dates constrain the Islay anomaly and
+ the initiation of the Sturtian glaciation; 2018
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2017"
+key "Riedman et. al."
+literal "false"
+
+\end_inset
+
+ Riedman et.
+ al.; Vase-shaped microfossil biostratigraphy with new data from Tasmania,
+ Svalbard, Greenland, Sweden and the Yukon; 2017
+\end_layout
+
+\end_body
+\end_document
