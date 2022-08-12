@@ -1,0 +1,737 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+The Illusion of Gravity, Juan Malcadena, 2005
+\end_layout
+
+\begin_layout Subsection*
+Rand
+\end_layout
+
+\begin_layout Itemize
+2 Raumdimensionen
+\end_layout
+
+\begin_layout Itemize
+1 Zeitdimension
+\end_layout
+
+\begin_layout Itemize
+keine Gravitation
+\end_layout
+
+\begin_layout Itemize
+Raumzeit: ?
+\end_layout
+
+\begin_layout Itemize
+Quantengravitation (Stringtheorie)
+\end_layout
+
+\begin_layout Itemize
+Teilchen: ähnlich Quarks und Gluonen mit 
+\begin_inset Formula $10^{60}$
+\end_inset
+
+ Farben
+\end_layout
+
+\begin_layout Itemize
+Gluonen bilden Ketten, eine spezielle Kette: Dualität zum Graviton
+\end_layout
+
+\begin_layout Subsection*
+Innere
+\end_layout
+
+\begin_layout Itemize
+3 Raumdimensionen
+\end_layout
+
+\begin_layout Itemize
+1 Zeitdimension
+\end_layout
+
+\begin_layout Itemize
+Gravitation
+\end_layout
+
+\begin_layout Itemize
+Raumzeit: anti-de Sitter 
+\end_layout
+
+\begin_layout Itemize
+Quantentheorie
+\end_layout
+
+\begin_layout Itemize
+Teilchen: Strings (u.a.
+ Quarks und Gluonen mit 
+\begin_inset Formula $3$
+\end_inset
+
+ Farben)
+\end_layout
+
+\begin_layout Itemize
+Graviton: Dualität zu einer speziellen Gluonenkette
+\end_layout
+
+\begin_layout Subsection*
+Interpretation
+\end_layout
+
+\begin_layout Itemize
+Graviton im 4-dimensionalen Inneren ist dual zu speziellen Gluonenkette
+ (also Teilchen) auf dem 3-dimensionalen Rand
+\end_layout
+
+\begin_layout Itemize
+Problem: unser Universum hat keine anti-de Sitter Raumzeit!
+\end_layout
+
+\begin_layout Subsection*
+Fakten
+\end_layout
+
+\begin_layout Itemize
+anti-de Sitter Raumzeiten sind statisch und haben einen Rand mit Zeitkoordinate
+\end_layout
+
+\begin_layout Itemize
+de Sitter Raumzeiten expandieren und haben keinen Rand mit Zeitkoordinate
+\end_layout
+
+\begin_layout Part*
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Information in the Holographic Universe, Bekenstein, 2007
+\end_layout
+
+\begin_layout Section*
+Theoretical results about black holes suggest that the universe could be
+ like a gigantic hologram
+\end_layout
+
+\begin_layout Standard
+Ask anybody what the physical world is made of, and you are likely to be
+ told matter and energy.
+ Yet if we have learned anything from engineering, biology and physics,
+ information is just as crucial an ingredient.
+ The robot at the automobile factory is supplied with metal and plastic
+ but can make nothing useful without copious instructions telling it which
+ part to weld to what and so on.
+ A ribosome in a cell in your body is supplied with amino acid building
+ blocks and is powered by energy released by the conversion of ATP to ADP,
+ but it can synthesize no proteins without the information brought to it
+ from the DNA in the cell's nucleus.
+ Likewise, a century of developments in physics has taught us that information
+ is a crucial player in physical systems and processes.
+ Indeed, a current trend, initiated by John A.
+ Wheeler of Princeton University, is to regard the physical world as made
+ of information, with energy and matter as incidentals.
+\end_layout
+
+\begin_layout Standard
+This viewpoint invites a new look at venerable questions.
+ The information storage capacity of devices such as hard-disk drives has
+ been increasing by leaps and bounds.
+ When will such progress halt? What is the ultimate information capacity
+ of a device that weighs, say, less than a gram and can fit inside a cubic
+ centimeter (roughly the size of a computer chip)? How much information
+ does it take to describe a whole universe? Could that description fit in
+ a computer's memory? Could we, as William Blake memorably penned, see a
+ world in a grain of sand, or is that idea no more than poetic license?
+\end_layout
+
+\begin_layout Standard
+Remarkably, recent developments in theoretical physics answer some of these
+ questions, and the answers might be important clues to the ultimate theory
+ of reality.
+ By studying the mysterious properties of black holes, physicists have deduced
+ absolute limits on how much information a region of space or a quantity
+ of matter and energy can hold.
+ Related results suggest that our universe, which we perceive to have three
+ spatial dimensions, might instead be written on a two-dimensional surface,
+ like a hologram.
+ Our everyday perceptions of the world as three-dimensional would then be
+ either a profound illusion or merely one of two alternative ways of viewing
+ reality.
+ A grain of sand may not encompass our world, but a flat screen might.
+\end_layout
+
+\begin_layout Subsection*
+A Tale of Two Entropies
+\end_layout
+
+\begin_layout Standard
+FORMAL INFORMATION theory originated in seminal 1948 papers by American
+ applied mathematician Claude E.
+ Shannon, who introduced today's most widely used measure of information
+ content: entropy.
+ Entropy had long been a central concept of thermodynamics, the branch of
+ physics dealing with heat.
+ Thermodynamic entropy is popularly described as the disorder in a physical
+ system.
+ 
+\color red
+In 1877 Austrian physicist Ludwig Boltzmann characterized it more precisely
+ in terms of the number of distinct microscopic states that the particles
+ composing a chunk of matter could be in while still looking like the same
+ macroscopic chunk of matter.
+
+\color inherit
+ For example, for the air in the room around you, one would count all the
+ ways that the individual gas molecules could be distributed in the room
+ and all the ways they could be moving.
+\end_layout
+
+\begin_layout Standard
+When Shannon cast about for a way to quantify the information contained
+ in, say, a message, he was led by logic to a formula with the same form
+ as Boltzmann's.
+ 
+\color red
+The Shannon entropy of a message is the number of binary digits, or bits,
+ needed to encode it.
+
+\color inherit
+ Shannon entropy does not enlighten us about the value of information, which
+ is highly dependent on context.
+ Yet as an objective measure of quantity of information, it has been enormously
+ useful in science and technology.
+ For instance, the design of every modern communications device--from cellular
+ phones to modems to compact-disc players--relies on Shannon entropy.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Thermodynamic entropy
+\color inherit
+ and 
+\color red
+Shannon entropy
+\color inherit
+ are conceptually equivalent: the number of arrangements that are counted
+ by Boltzmann entropy reflects the amount of Shannon information one would
+ need to implement any particular arrangement.
+ The two entropies have two salient (hervorstechend) differences, though.
+ First, the thermodynamic entropy used by a chemist or a refrigeration engineer
+ is expressed in units of energy divided by temperature, whereas the Shannon
+ entropy used by a communications engineer is in bits, essentially dimensionless.
+ That difference is merely (lediglich) a matter of convention.
+\end_layout
+
+\begin_layout Standard
+Even when reduced to common units, however, typical values of the two entropies
+ differ vastly in magnitude.
+ A silicon microchip carrying a gigabyte of data, for instance, has a Shannon
+ entropy of about 
+\begin_inset Formula $10^{10}$
+\end_inset
+
+ bits (one byte is eight bits), tremendously smaller than the chip's thermodynam
+ic entropy, which is about 
+\begin_inset Formula $10^{23}$
+\end_inset
+
+ bits at room temperature.
+ This discrepancy occurs because the entropies are computed for different
+ 
+\color green
+degrees of freedom
+\color inherit
+.
+ A degree of freedom is any quantity that can vary, such as a coordinate
+ specifying a particle's location or one component of its velocity.
+ The Shannon entropy of the chip cares only about the overall state of each
+ tiny transistor etched in the silicon crystal--the transistor is on or
+ off; it is a 0 or a 1--a single binary degree of freedom.
+\end_layout
+
+\begin_layout Standard
+Thermodynamic entropy, in contrast, depends on the states of all the billions
+ of atoms (and their roaming electrons) that make up each transistor.
+ As miniaturization brings closer the day when each atom will store one
+ bit of information for us, the useful Shannon entropy of the state-of-the-art
+ microchip will edge closer in magnitude to its material's thermodynamic
+ entropy.
+ When the two entropies are calculated for the same degrees of freedom,
+ they are equal.
+\end_layout
+
+\begin_layout Standard
+What are the ultimate degrees of freedom? Atoms, after all, are made of
+ electrons and nuclei, nuclei are agglomerations of protons and neutrons,
+ and those in turn are composed of quarks.
+ Many physicists today consider electrons and quarks to be excitations of
+ superstrings, which they hypothesize to be the most fundamental entities.
+ But the vicissitudes of a century of revelations in physics warn us not
+ to be dogmatic.
+ There could be more levels of structure in our universe than are dreamt
+ of in today's physics.
+\end_layout
+
+\begin_layout Standard
+One cannot calculate the ultimate information capacity of a chunk of matter
+ or, equivalently, its true thermodynamic entropy, without knowing the nature
+ of the ultimate constituents of matter or of the deepest level of structure,
+ which I shall refer to as level X.
+ (This ambiguity causes no problems in analyzing practical thermodynamics,
+ such as that of car engines, for example, because the quarks within the
+ atoms can be ignored--they do not change their states under the relatively
+ benign conditions in the engine.) Given the dizzying progress in miniaturization
+, one can playfully contemplate a day when quarks will serve to store informatio
+n, one bit apiece perhaps.
+ How much information would then fit into our one-centimeter cube? And how
+ much if we harness superstrings or even deeper, yet undreamt of levels?
+ Surprisingly, developments in gravitation physics in the past three decades
+ have supplied some clear answers to what seem to be elusive questions.
+\end_layout
+
+\begin_layout Subsection*
+Black Hole Thermodynamics
+\end_layout
+
+\begin_layout Standard
+A CENTRAL PLAYER in these developments is the black hole.
+ Black holes are a consequence of general relativity, Albert Einstein's
+ geometric theory of gravitation, initially published in 1915.
+ In this theory, gravitation arises from the curvature of spacetime, which
+ makes objects move as if they were pulled by a force.
+ Conversely, the curvature is caused by the presence of matter and energy.
+ According to Einstein's equations, a sufficiently dense concentration of
+ matter or energy will curve spacetime so extremely that it rends, forming
+ a black hole.
+ The laws of relativity forbid anything that went into a black hole from
+ coming out again, at least within the classical (nonquantum) description
+ of the physics.
+ The point of no return, called the event horizon of the black hole, is
+ of crucial importance.
+ In the simplest case, the horizon is a sphere, whose surface area is larger
+ for more massive black holes.
+\end_layout
+
+\begin_layout Standard
+It is impossible to determine what is inside a black hole.
+ No detailed information can emerge across the horizon and escape into the
+ outside world.
+ In disappearing forever into a black hole, however, a piece of matter does
+ leave some traces.
+ Its energy (we count any mass as energy in accordance with Einstein's E
+ = mc
+\begin_inset Formula $^{2}$
+\end_inset
+
+) is permanently reflected in an increment in the black hole's mass.
+ If the matter is captured while circling the hole, its associated angular
+ momentum is added to the black hole's angular momentum.
+ Both the mass and angular momentum of a black hole are measurable from
+ their effects on spacetime around the hole.
+ In this way, the laws of conservation of energy and angular momentum are
+ upheld by black holes.
+ Another fundamental law, the second law of thermodynamics, appears to be
+ violated.
+\end_layout
+
+\begin_layout Standard
+The second law of thermodynamics summarizes the familiar observation that
+ most processes in nature are irreversible: a teacup falls from the table
+ and shatters, but no one has ever seen shards jump up of their own accord
+ and assemble into a teacup.
+ The second law of thermodynamics forbids such inverse processes.
+ It states that the entropy of an isolated physical system can never decrease;
+ at best, entropy remains constant, and usually it increases.
+ This law is central to physical chemistry and engineering; it is arguably
+ the physical law with the greatest impact outside physics.
+\end_layout
+
+\begin_layout Standard
+As first emphasized by Wheeler, when matter disappears into a black hole,
+ its entropy is gone for good, and the second law seems to be transcended,
+ made irrelevant.
+ A clue to resolving this puzzle came in 1970, when Demetrious Christodoulou,
+ then a graduate student of Wheeler's at Princeton, and Stephen Hawking
+ of the University of Cambridge independently proved that in various processes,
+ such as black hole mergers, the total area of the event horizons never
+ decreases.
+ The analogy with the tendency of entropy to increase led me to propose
+ in 1972 that a black hole has entropy proportional to the area of its horizon
+ [see illustration on this page].
+ I conjectured that when matter falls into a black hole, the increase in
+ black hole entropy always compensates or overcompensates for the lost entropy
+ of the matter.
+ More generally, the sum of black hole entropies and the ordinary entropy
+ outside the black holes cannot decrease.
+ This is the generalized second law--GSL for short.
+\end_layout
+
+\begin_layout Standard
+The GSL has passed a large number of stringent, if purely theoretical, tests.
+ When a star collapses to form a black hole, the black hole entropy greatly
+ exceeds the star's entropy.
+ In 1974 Hawking demonstrated that a black hole spontaneously emits thermal
+ radiation, now known as Hawking radiation, by a quantum process.
+ The Christodoulou-Hawking theorem fails in the face of this phenomenon
+ (the mass of the black hole, and therefore its horizon area, decreases),
+ but the GSL copes with it: the entropy of the emergent radiation more than
+ compensates for the decrement in black hole entropy, so the GSL is preserved.
+ In 1986 Rafael D.
+ Sorkin of Syracuse University exploited the horizon's role in barring informati
+on inside the black hole from influencing affairs outside to show that the
+ GSL (or something very similar to it) must be valid for any conceivable
+ process that black holes undergo.
+ His deep argument makes it clear that the entropy entering the GSL is that
+ calculated down to level X, whatever that level may be.
+\end_layout
+
+\begin_layout Standard
+Hawking's radiation process allowed him to determine the proportionality
+ constant between black hole entropy and horizon area: black hole entropy
+ is precisely one quarter of the event horizon's area measured in Planck
+ areas.
+ (The Planck length, about 
+\begin_inset Formula $10^{-33}$
+\end_inset
+
+ centimeter, is the fundamental length scale related to gravity and quantum
+ mechanics.
+ The Planck area is its square.) Even in thermodynamic terms, this is a vast
+ quantity of entropy.
+ The entropy of a black hole one centimeter in diameter would be about 
+\begin_inset Formula $10^{66}$
+\end_inset
+
+ bits, roughly equal to the thermodynamic entropy of a cube of water 10
+ billion kilometers on a side.
+\end_layout
+
+\begin_layout Subsection*
+The World as a Hologram
+\end_layout
+
+\begin_layout Standard
+THE GSL ALLOWS US to set bounds on the information capacity of any isolated
+ physical system, limits that refer to the information at all levels of
+ structure down to level X.
+ In 1980 I began studying the first such bound, called the universal entropy
+ bound, which limits how much entropy can be carried by a specified mass
+ of a specified size [see box at left].
+ A related idea, the holographic bound, was foreshadowed in 1993 by Nobel
+ laureate Gerard t Hooft of the University of Utrecht in the Netherlands
+ and developed in 1995 by Leonard Susskind of Stanford University.
+ It limits how much entropy can be contained in matter and energy occupying
+ a specified volume of space.
+\end_layout
+
+\begin_layout Standard
+In his work on the holographic bound, Susskind considered any approximately
+ spherical isolated mass that is not itself a black hole and that fits inside
+ a closed surface of area A.
+ If the mass can collapse to a black hole, that hole will end up with a
+ horizon area smaller than A.
+ The black hole entropy is therefore smaller than A/4.
+ According to the GSL, the entropy of the system cannot decrease, so the
+ mass's original entropy cannot have been bigger than A/4.
+ It follows that the entropy of an isolated physical system with boundary
+ area A is necessarily less than A/4.
+ What if the mass does not spontaneously collapse? In 2000 I showed that
+ a tiny black hole can be used to convert the system to a black hole not
+ much different from the one in Susskind's argument.
+ The bound is therefore independent of the constitution of the system or
+ of the nature of level X.
+ It just depends on the GSL.
+\end_layout
+
+\begin_layout Standard
+We can now answer some of those elusive questions about the ultimate limits
+ of information storage.
+ A device measuring a centimeter across could in principle hold up to 
+\begin_inset Formula $10^{66}$
+\end_inset
+
+ bits--a mind-boggling amount.
+ The visible universe contains at least 
+\begin_inset Formula $10^{100}$
+\end_inset
+
+ bits of entropy, which could in principle be packed inside a sphere a tenth
+ of a light-year across.
+ Estimating the entropy of the universe is a difficult problem, however,
+ and much larger numbers, requiring a sphere almost as big as the universe
+ itself, are entirely plausible.
+\end_layout
+
+\begin_layout Standard
+But it is another aspect of the holographic bound that is truly astonishing.
+ Namely, that the maximum possible entropy depends on the boundary area
+ instead of the volume.
+ Imagine that we are piling up computer memory chips in a big heap.
+ The number of transistors--the total data storage capacity--increases with
+ the volume of the heap.
+ So, too, does the total thermodynamic entropy of all the chips.
+ Remarkably, though, the theoretical ultimate information capacity of the
+ space occupied by the heap increases only with the surface area.
+ Because volume increases more rapidly than surface area, at some point
+ the entropy of all the chips would exceed the holographic bound.
+ It would seem that either the GSL or our commonsense ideas of entropy and
+ information capacity must fail.
+ In fact, what fails is the pile itself: it would collapse under its own
+ gravity and form a black hole before that impasse was reached.
+ Thereafter each additional memory chip would increase the mass and surface
+ area of the black hole in a way that would continue to preserve the GSL.
+\end_layout
+
+\begin_layout Standard
+This surprising result--that information capacity depends on surface area--has
+ a natural explanation if the holographic principle (proposed by t Hooft
+ and elaborated by Susskind) is true.
+ In the everyday world, a hologram is a special kind of photograph that
+ generates a full three-dimensional image when it is illuminated in the
+ right manner.
+ All the information describing the 3-D scene is encoded into the pattern
+ of light and dark areas on the two-dimensional piece of film, ready to
+ be regenerated.
+ The holographic principle contends that an analogue of this visual magic
+ applies to the full physical description of any system occupying a 3-D
+ region: it proposes that another physical theory defined only on the 2-D
+ boundary of the region completely describes the 3-D physics.
+ If a 3-D system can be fully described by a physical theory operating solely
+ on its 2-D boundary, one would expect the information content of the system
+ not to exceed that of the description on the boundary.
+\end_layout
+
+\begin_layout Subsection*
+A Universe Painted on Its Boundary
+\end_layout
+
+\begin_layout Standard
+CAN WE APPLY the holographic principle to the universe at large? The real
+ universe is a 4-D system: it has volume and extends in time.
+ If the physics of our universe is holographic, there would be an alternative
+ set of physical laws, operating on a 3-D boundary of spacetime somewhere,
+ that would be equivalent to our known 4-D physics.
+ We do not yet know of any such 3-D theory that works in that way.
+ Indeed, what surface should we use as the boundary of the universe? One
+ step toward realizing these ideas is to study models that are simpler than
+ our real universe.
+\end_layout
+
+\begin_layout Standard
+A class of concrete examples of the holographic principle at work involves
+ so-called anti de Sitter spacetimes.
+ The original de Sitter spacetime is a model universe first obtained by
+ Dutch astronomer Willem de Sitter in 1917 as a solution of Einstein's equations
+, including the repulsive force known as the cosmological constant.
+ De Sitter spacetime is empty, expands at an accelerating rate and is very
+ highly symmetrical.
+ In 1997 astronomers studying distant supernova explosions concluded that
+ our universe now expands in an accelerated fashion and will probably become
+ increasingly like a de Sitter spacetime in the future.
+ Now, if the repulsive cosmological constant is replaced by an attractive
+ one, de Sitter's solution turns into anti-de Sitter spacetime, which has
+ equally as much symmetry.
+ More important for the holographic concept, it possesses a boundary (mit
+ der Zeitkoordinate), which is located at infinity and is a lot like our
+ everyday spacetime.
+\end_layout
+
+\begin_layout Standard
+Using anti-de Sitter spacetime, theorists have devised a concrete example
+ of the holographic principle at work: a universe described by superstring
+ theory functioning in an anti-de Sitter spacetime is completely equivalent
+ to a quantum field theory operating on the boundary of that spacetime [see
+ box below].
+ Thus, the full majesty of superstring theory in an anti-de Sitter universe
+ is painted on the boundary of the universe.
+ Juan Maldacena, then at Harvard University, first conjectured such a relation
+ in 1997 for the 5-D anti-de Sitter case, and it was later confirmed for
+ many situations by Edward Witten of the Institute for Advanced Study in
+ Princeton, N.J., and Steven S.
+ Gubser, Igor R.
+ Klebanov and Alexander M.
+ Polyakov of Princeton University.
+ Examples of this holographic correspondence are now known for spacetimes
+ with a variety of dimensions.
+\end_layout
+
+\begin_layout Standard
+This result means that two ostensibly very different theories--not even
+ acting in spaces of the same dimension--are equivalent.
+ Creatures living in one of these universes would be incapable of determining
+ if they inhabited a 5-D universe described by string theory or a 4-D one
+ described by a quantum field theory of point particles.
+ (Of course, the structures of their brains might give them an overwhelming
+ commonsense prejudice in favor of one description or another, in just the
+ way that our brains construct an innate perception that our universe has
+ three spatial dimensions; see the illustration on the opposite page.)
+\end_layout
+
+\begin_layout Standard
+The holographic equivalence can allow a difficult calculation in the 4-D
+ boundary spacetime, such as the behavior of quarks and gluons, to be traded
+ for another, easier calculation in the highly symmetric, 5-D anti-de Sitter
+ spacetime.
+ The correspondence works the other way, too.
+ Witten has shown that a black hole in anti-de Sitter spacetime corresponds
+ to hot radiation in the alternative physics operating on the bounding spacetime.
+ The entropy of the hole--a deeply mysterious concept--equals the radiation's
+ entropy, which is quite mundane (banal).
+\end_layout
+
+\begin_layout Subsection*
+The Expanding Universe
+\end_layout
+
+\begin_layout Standard
+HIGHLY SYMMETRIC and empty, the 5-D antide Sitter universe is hardly like
+ our universe existing in 4-D, filled with matter and radiation and riddled
+ with violent events.
+ Even if we approximate our real universe with one that has matter and radiation
+ spread uniformly throughout, we get not an antide Sitter universe but rather
+ a Friedmann-Robertson-Walker universe.
+ Most cosmologists today concur (übereinstimmen) that our universe resembles
+ (ähnelt) an FRW universe, one that is infinite, has no boundary and will
+ go on expanding ad infinitum.
+\end_layout
+
+\begin_layout Standard
+Does such a universe conform to the holographic principle or the holographic
+ bound? Susskind's argument based on collapse to a black hole is of no help
+ here.
+ Indeed, the holographic bound deduced from black holes must break down
+ in a uniform expanding universe.
+ The entropy of a region uniformly filled with matter and radiation is truly
+ proportional to its volume.
+ A sufficiently large region will therefore violate the holographic bound.
+\end_layout
+
+\begin_layout Standard
+In 1999 Raphael Bousso, then at Stanford, proposed a modified holographic
+ bound, which has since been found to work even in situations where the
+ bounds we discussed earlier cannot be applied.
+ Bousso's formulation starts with any suitable 2-D surface; it may be closed
+ like a sphere or open like a sheet of paper.
+ One then imagines a brief burst of light issuing simultaneously and perpendicul
+arly from all over one side of the surface.
+ The only demand is that the imaginary light rays are converging to start
+ with.
+ Light emitted from the inner surface of a spherical shell, for instance,
+ satisfies that requirement.
+ One then considers the entropy of the matter and radiation that these imaginary
+ rays traverse, up to the points where they start crossing.
+ Bousso conjectured that this entropy cannot exceed the entropy represented
+ by the initial surface--one quarter of its area, measured in Planck areas.
+ This is a different way of tallying up the entropy than that used in the
+ original holographic bound.
+ Bousso's bound refers not to the entropy of a region at one time but rather
+ to the sum of entropies of locales at a variety of times: those that are
+ illuminated by the light burst from the surface.
+\end_layout
+
+\begin_layout Standard
+Bousso's bound subsumes other entropy bounds while avoiding their limitations.
+ Both the universal entropy bound and the t Hooft-Susskind form of the holograph
+ic bound can be deduced from Bousso's for any isolated system that is not
+ evolving rapidly and whose gravitational field is not strong.
+ When these conditions are overstepped--as for a collapsing sphere of matter
+ already inside a black hole--these bounds eventually fail, whereas Bousso's
+ bound continues to hold.
+ Bousso has also shown that his strategy can be used to locate the 2-D surfaces
+ on which holograms of the world can be set up.
+\end_layout
+
+\end_body
+\end_document
