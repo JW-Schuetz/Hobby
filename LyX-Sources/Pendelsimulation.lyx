@@ -366,7 +366,7 @@ literal "false"
 
 ) 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Durch Anwendung der Kettenregel 
@@ -434,14 +434,6 @@ Es gilt also
 \end_inset
 
 ergibt sich daraus 
-\begin_inset Formula 
-\[
-\frac{d^{2}}{dt^{2}}x_{1}\left(t\right)=-\omega^{2}\sin x_{1}\left(t\right).
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section*
@@ -700,7 +692,7 @@ noprefix "false"
 
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Da existieren doch bestimmt Zusammenhänge zu den Faserbündeln! Und damit
@@ -745,7 +737,7 @@ Zu Bündeln, die nicht nur lokal, sondern auch global ein Produkt
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Subsection*
@@ -954,7 +946,7 @@ Für jedes
 .
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Wie ist die Bewegung definiert für Punkte 
@@ -971,21 +963,17 @@ Wie ist die Bewegung definiert für Punkte
 \end_layout
 
 \begin_layout Plain Layout
-Nein, denn 
-\begin_inset Formula $\pi$
+Nein, denn jeder Punkt 
+\begin_inset Formula $x\in X$
 \end_inset
 
- ist auf ganz 
-\begin_inset Formula $X$
-\end_inset
-
- definiert.
- ???
+ ist Element einer Trajektorie.
+ 
 \end_layout
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Subsubsection*
