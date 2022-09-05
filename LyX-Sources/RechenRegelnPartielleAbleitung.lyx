@@ -1,0 +1,139 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%% Doku dazu: /usr/share/texmf-texlive/doc/latex/caption
+\usepackage[singlelinecheck=off,labelfont=bf]{caption}
+
+% wenn pdflatex benutzt wird:
+\usepackage{ifpdf}
+
+\ifpdf
+
+% Alle Querverweise und URLs als Link darstellen In der PDF-Ausgabe
+\usepackage[colorlinks=true, bookmarks, bookmarksnumbered, 		bookmarksopen, bookmarksopenlevel=0,
+linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue,
+pdfpagelayout=OneColumn, pdfnewwindow=true,
+pdfstartview=XYZ, plainpages=false, pdfpagelabels,
+pdfauthor={Jürgen Womser-Schütz, Dr. Kornmesserstr. 36, 64739 Höchst/Odw.}, pdftex,
+pdftitle={Rechenregeln partielle Ableitung},
+pdfsubject={Ausgleichsrechnung},
+pdfkeywords={Ausgleichsrechnung, Rechenregeln}]{hyperref}
+
+\else % In der DVI- oder PS-Ausgabe
+
+% Alle Querverweise und URLs als Link in der DVI-Ansicht darstellen
+\usepackage[ps2pdf, colorlinks=true,
+linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue]{hyperref}
+
+\fi % Ende von: wenn pdflatex benutzt wird
+\end_preamble
+\use_default_options false
+\language ngerman
+\inputencoding auto
+\font_roman cmr
+\font_sans cmss
+\font_typewriter cmtt
+\font_default_family sfdefault
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 0
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 3cm
+\topmargin 1cm
+\rightmargin 2cm
+\bottommargin 3.5cm
+\headheight 1cm
+\headsep 1.5cm
+\footskip 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Rechenregeln partielle Ableitung
+\end_layout
+
+\begin_layout Author
+©Jürgen Womser-Schütz, Dr.
+ Kornmesserstr.
+ 36, 64732 Höchst/Odw.
+ 
+\end_layout
+
+\begin_layout Standard
+Es sei
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Im folgenden wird stets angenommen, dass die Produkte der Vektoren und Matrizen
+ auch wohldefiniert sind.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \[
+\nabla_{\underline{b}}\left(f\left(\underline{b}\right)\right):=\left(\begin{array}{c}
+\frac{\partial f}{\partial b_{1}}\\
+\frac{\partial f}{\partial b_{2}}\\
+\vdots\\
+\frac{\partial f}{\partial b_{m}}\end{array}\right)\]
+
+\end_inset
+
+der Vektor der partiellen Ableitungen der skalaren Funktion 
+\begin_inset Formula $f\left(\underline{b}\right)$
+\end_inset
+
+ nach den Komponenten des Vektors 
+\begin_inset Formula $\underline{b}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Es gelten dann die folgenden Rechenregeln
+\begin_inset Formula \begin{eqnarray*}
+\nabla_{\underline{b}}\left(\underline{b}^{T}\underline{b}\right) & = & 2\underline{b}\\
+\nabla_{\underline{b}}\left(\underline{c}^{T}\underline{b}\right) & = & \underline{c}\\
+\nabla_{\underline{b}}\left(\underline{b}^{T}A\underline{b}\right) & = & \left(A+A^{T}\right)\underline{b}\\
+\nabla_{\underline{b}}\left(\underline{c}^{T}A\underline{b}\right) & = & A^{T}\underline{c}.\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
