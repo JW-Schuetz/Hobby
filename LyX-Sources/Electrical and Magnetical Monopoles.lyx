@@ -567,19 +567,69 @@ Der Definitionsbereich der Felder und Potentiale beider Monopole ist der
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Dieser spezielle Definitionsbereich wird im folgenden mit 
+ Dieser spezielle Definitionsbereich wird im folgenden mit 
 \begin_inset Formula $U$
 \end_inset
 
  bezeichnet.
 \end_layout
 
+\begin_layout Standard
+Für 
+\begin_inset Formula $U=\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+ gilt
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{1}\left(U\right)=0$
+\end_inset
+
+, d.h.
+ man kann jede 1-Späre in 
+\begin_inset Formula $U$
+\end_inset
+
+ zu einem Punkt zusammenziehen
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
+\end_inset
+
+, d.h.
+ man kann nicht jede 2-Späre in 
+\begin_inset Formula $U$
+\end_inset
+
+ zu einem Punkt zusammenziehen
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Hinweis: für den Fall 
+\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
+\end_inset
+
+ betrachte man z.B.
+ eine 2-Sphäre, die den Ursprung umschliesst.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $U$
+\end_inset
+
+ ist homologisch trivial.
+\end_layout
+
 \begin_layout Subsection*
-Topologischen Eigenschaften
+Erläuterungen der topologischen Eigenschaften 
 \end_layout
 
 \begin_layout Itemize
@@ -662,56 +712,12 @@ Man nennt
 
 \end_layout
 
-\begin_layout Standard
-Für 
-\begin_inset Formula $U=\mathbb{R}^{3}-\underline{0}$
-\end_inset
-
- gilt
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Hinweis: für den Fall 
-\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
-\end_inset
-
- betrachte man z.B.
- eine 2-Sphäre, die den Ursprung umschliesst.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\pi_{1}\left(U\right)=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\pi_{2}\left(U\right)\neq0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $U$
-\end_inset
-
- ist homologisch trivial.
-\end_layout
-
 \begin_layout Section
 Existenz der Potentiale
 \end_layout
 
 \begin_layout Standard
-Wegen den bekannten Identitäten der Vektoranalysis 
+Aus den bekannten Identitäten der Vektoranalysis 
 \begin_inset Formula 
 \begin{eqnarray*}
 \text{rot grad\left(\psi\right)} & = & \underline{0}\\
@@ -724,15 +730,25 @@ Wegen den bekannten Identitäten der Vektoranalysis
 \end_layout
 
 \begin_layout Standard
-gelten die folgenden beiden Aussagen 
+folgen die beiden Aussagen 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray}
-\underline{V}=\text{grad\left(\psi\right)} & \rightarrow & \text{rot}\left(\underline{V}\right)=\underline{0}\label{eq:Potentiale-Notwendig-Rotationsfrei-1}\\
-\underline{W}=\text{rot\left(\underline{A}\right)} & \rightarrow & \text{div}\left(\underline{W}\right)=0.\label{eq:Potentiale-Notwendig-Divergenzfrei-1}
-\end{eqnarray}
+\begin{equation}
+\underline{V}=\text{grad\left(\psi\right)}\rightarrow\text{rot}\left(\underline{V}\right)=\underline{0}\underline{W}=\text{rot\left(\underline{A}\right)}\rightarrow\text{div}\left(\underline{W}\right)=0.\label{eq:Potentiale-Notwendig-Rotationsfrei-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\underline{V}=\text{grad\left(\psi\right)}\rightarrow\text{rot}\left(\underline{V}\right)=\underline{0}\underline{W}=\text{rot\left(\underline{A}\right)}\rightarrow\text{div}\left(\underline{W}\right)=0.\label{eq:Potentiale-Notwendig-Rotationsfrei-1-1}
+\end{equation}
 
 \end_inset
 
@@ -779,7 +795,11 @@ Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
 \end_inset
 
  ab.
- Es werden im folgenden 2 Fälle unterschieden.
+ Es werden im folgenden 2 Fälle für 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ unterschieden.
 \end_layout
 
 \begin_layout Subsection*
@@ -900,7 +920,7 @@ Annahme: es existiere kein Potential
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Paragraph*
 Annahme

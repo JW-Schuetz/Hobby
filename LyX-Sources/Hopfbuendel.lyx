@@ -171,7 +171,7 @@ Diese Darstellung von
 \begin_inset Formula $\left(x_{1},\cdots x_{4}\right)$
 \end_inset
 
- abhängig, es sind aber nur 3 nötig.
+ abhängig, es sind aber für eine 3-Sphäre nur 3 nötig.
  Also macht man z.B.
  mit 
 \begin_inset Formula $r_{1},r_{2}\geq0$
@@ -193,12 +193,19 @@ Diese Darstellung von
 \begin_inset Formula $z_{2}=r_{2}\exp\left(i\xi_{2}\right)$
 \end_inset
 
- (siehe dazu im Anhang die Behauptung 2) und erhält die Parametrierung für
- 
+ (siehe dazu im Anhang die Behauptung 2) und erhält wegen 
+\begin_inset Formula 
+\[
+\cos^{2}\phi+\sin^{2}\phi=1
+\]
+
+\end_inset
+
+die Parametrierung für 
 \begin_inset Formula $S^{3}$
 \end_inset
 
- mit 3 neuen Parametern 
+ mit den neuen Parametern 
 \begin_inset Formula $\left(\phi,\xi_{1},\xi_{2}\right)$
 \end_inset
 
@@ -214,11 +221,8 @@ S^{3}=\left\{ \left(\cos\left(\phi\right)\exp\left(i\xi_{1}\right),\sin\left(\ph
 \end_layout
 
 \begin_layout Standard
-Um sich eine Vorstellung dieser Parametrierung von 
-\begin_inset Formula $S_{3}$
-\end_inset
-
- machen zu können, werden im folgenden drei Fälle für den Winkel 
+Um sich eine geometrische Vorstellung dieser Parametrierung machen zu können,
+ werden im folgenden drei Fälle für den Winkel 
 \begin_inset Formula $\phi$
 \end_inset
 
