@@ -251,6 +251,96 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection*
+Argumentationskette 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Naber"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Im Fall des magnetischen Monopols existiert für 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ kein Vektorpotential 
+\begin_inset Formula $\underline{A}$
+\end_inset
+
+ auf 
+\begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Aber es existieren für 
+\begin_inset Formula $\underline{B}$
+\end_inset
+
+ zwei Vektorpotentale 
+\begin_inset Formula $\underline{A}_{+}$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{A}_{-}$
+\end_inset
+
+ jeweils auf 
+\begin_inset Formula $Z_{+}=\left\{ \left(0,0,z\right)\in\mathbb{R}^{3}:z\geq0\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $Z_{-}=\left\{ \left(0,0,z\right)\in\mathbb{R}^{3}:z\leq0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Die beiden Potentiale unterscheiden sich nur durch einen Gradienten 
+\begin_inset Formula $\underline{A}_{+}-\underline{A}_{-}=\nabla\left(2g\Theta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Aus der Schrödingergleichung ergibt sich, dass aus 
+\begin_inset Formula $\underline{A}\rightarrow\underline{A}+\nabla\varOmega$
+\end_inset
+
+ für die Wellenfunktion 
+\begin_inset Formula $\psi\rightarrow\exp\left(iq\varOmega\right)\psi$
+\end_inset
+
+ folgt.
+ Ein additiver Gradient für das Vektorpotential liefert also eine Phasenänderung
+ der Wellenfunktion, und umgekehrt.
+\end_layout
+
+\begin_layout Itemize
+Der magnetische Monopol wird also durch eines der beiden Vektorpotentiale
+ plus einer Phasenänderung beschrieben.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Grundlegendes
 \end_layout
