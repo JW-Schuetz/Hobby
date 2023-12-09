@@ -1,0 +1,956 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part*
+Zeitunabhängige Schrödingergleichung
+\end_layout
+
+\begin_layout Standard
+Es gilt der Energiesatz
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & \frac{mv^{2}}{2}+V\left(x\right)\\
+ & = & \frac{m^{2}v^{2}}{2m}+V\left(x\right)\\
+ & = & \frac{p^{2}}{2m}+V\left(x\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit der Korrespondenz 
+\begin_inset Formula $p\rightarrow\frac{\hbar}{i}\partial_{x}$
+\end_inset
+
+ folgt
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & -\frac{\hbar^{2}}{2m}\partial_{x}^{2}+V\left(x\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und damit mit Multiplikation mit der Wellenfunktion 
+\begin_inset Formula $\psi\left(x\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+-\frac{\hbar^{2}}{2m}\partial_{x}^{2}\psi\left(x\right) & = & \left[E-V\left(x\right)\right]\psi\left(x\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Zeitabhängige Schrödingergleichung
+\end_layout
+
+\begin_layout Standard
+Aus den Maxwellschen Gleichungen folgt (Wellengleichung der Lichtausbreitung)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\left(\partial_{x}^{2}-\frac{1}{c^{2}}\partial_{t}^{2}\right)\psi & = & 0.\label{eq:Wellengleichung}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus der relativistischen Energie-Impuls-Beziehung von Einstein
+\begin_inset Formula 
+\begin{eqnarray}
+E^{2} & = & c^{2}p^{2}+m^{2}c^{4}\label{eq:Einstein}
+\end{eqnarray}
+
+\end_inset
+
+folgt für ruhemasselose Teilchen
+\begin_inset Formula 
+\begin{eqnarray*}
+E^{2}-c^{2}p^{2} & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus den Korrespondenzen
+\begin_inset Formula 
+\begin{eqnarray}
+p & \rightarrow & \frac{\hbar}{i}\partial_{x}\label{eq:Korrespondenzen}\\
+E & \rightarrow & i\hbar\partial_{t}\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+ folgt
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\hbar^{2}\partial_{t}^{2}-c^{2}\hbar^{2}\partial_{x}^{2} & = & 0\\
+\partial_{t}^{2}-c^{2}\partial_{x}^{2} & = & 0\\
+\partial_{x}^{2}-\frac{1}{c^{2}}\partial_{t}^{2} & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das heisst, mit den beiden Korrespondenzen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Korrespondenzen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt aus der Einsteinschen Energieerhaltung genau der Operator aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Wellengleichung"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Einsetzen der Korrespondenzen in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Einstein"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) liefert
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+-\hbar^{2}\partial_{t}^{2} & = & -c^{2}\hbar^{2}\partial_{x}^{2}+m^{2}c^{4}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Plancksches Wirkungsquantum
+\end_layout
+
+\begin_layout Section*
+Kleine und grosse Frequenzen: Planck
+\end_layout
+
+\begin_layout Standard
+Mit spektraler Energiedichte 
+\begin_inset Formula $w$
+\end_inset
+
+, Frequenz 
+\begin_inset Formula $v$
+\end_inset
+
+, Lichtgeschwindigkeit 
+\begin_inset Formula $c$
+\end_inset
+
+, Boltzmann-Konstante 
+\begin_inset Formula $k$
+\end_inset
+
+, Temperatur 
+\begin_inset Formula $T$
+\end_inset
+
+ gilt das Plancksche Gesetz
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+w_{P}\left(v\right) & = & \frac{8\pi}{c^{3}}\frac{hv^{3}}{e^{\frac{hv}{kT}}-1}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Paragraph*
+Einheiten
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grösse
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Einheit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $v$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{s}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{m}{s}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{J}{K}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $K$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Js$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{Js}{m^{3}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Kleine Frequenzen: Rayleigh-Jeans
+\end_layout
+
+\begin_layout Standard
+Für kleine 
+\begin_inset Formula $v$
+\end_inset
+
+ gilt das Rayleigh-Jeans Gesetz
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+w_{R}\left(v\right) & = & \frac{8\pi kT}{c^{3}}v^{2}.\label{eq:Raleigh}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diese Energiedichte wächst quadratisch mit 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Das Gesetz kann also nur für kleine 
+\begin_inset Formula $v$
+\end_inset
+
+ gültig sein (Utraviolett-Katastrophe).
+\end_layout
+
+\begin_layout Section*
+Grosse Frequenzen: Wien
+\end_layout
+
+\begin_layout Standard
+Für grosse 
+\begin_inset Formula $v$
+\end_inset
+
+ gilt das Wiensche Gesetz
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+w_{W}\left(v\right) & = & \frac{C_{1}v^{3}}{e^{\frac{C_{2}v}{T}}}\label{eq:Wien}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit den beiden freien Konstanten 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $C_{2}.$
+\end_inset
+
+ Für grosse Frequenzen 
+\begin_inset Formula $v$
+\end_inset
+
+ konvergiert 
+\begin_inset Formula $w\left(v\right)$
+\end_inset
+
+ gegen 0, es gibt also keine Utraviolett-Katastrophe.
+\end_layout
+
+\begin_layout Section*
+Neues Gesetz 
+\begin_inset Formula $w\left(v\right)$
+\end_inset
+
+ finden
+\end_layout
+
+\begin_layout Standard
+Die Idee ist, das Rayleigh-Jeans Gesetz (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Raleigh"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) als Linearisierung des aufzufindenden Gesetzes aufzufassen und dabei das
+ Verhalten des Wienschen Gesetzes für grosse 
+\begin_inset Formula $v$
+\end_inset
+
+ beizubehalten.
+\end_layout
+
+\begin_layout Standard
+Ausgegangen wird vom Wienschen Gesetz (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Wien"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsubsection*
+1.
+ Schritt: Festlegung der freien Konstanten 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Wien"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt zunächst mit der Festlegung der freien Konstanten 
+\begin_inset Formula $C_{2}=\frac{h}{k}$
+\end_inset
+
+ mit einer freien Hilfskonstanten 
+\begin_inset Formula $h$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+w\left(v\right) & = & \frac{C_{1}v^{3}}{e^{\frac{hv}{kT}}}.\label{eq:Schritt 1}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Begründung: damit erhält man im Nenner des Exponenten den im Rayleigh-Jeans
+ Gesetz auftretenden Term 
+\begin_inset Formula $kT$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+2.
+ Schritt: Subtraktion von 
+\begin_inset Formula $1$
+\end_inset
+
+ im Nenner
+\end_layout
+
+\begin_layout Standard
+Man darf im Nenner eine 1 subtrahieren und macht dabei für grosse 
+\begin_inset Formula $v$
+\end_inset
+
+ keinen nennenswerten Fehler
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+w\left(v\right) & = & \frac{C_{1}v^{3}}{e^{\frac{hv}{kT}}-1}.\label{eq:Schritt 2}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Begründung: Die Idee ist, dass das Rayleigh-Jeans Gesetz eine Linearisierung
+ der zu auffindenden Gesetzes ist.
+ 
+\end_layout
+
+\begin_layout Standard
+Wenn man nämlich die Exponentialfunktion im Nenner durch die ersten beiden
+ Glieder ihrer Potenzreihenentwicklung ersetzt
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+gilt gut nur für kleine 
+\begin_inset Formula $v$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, erhält man
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+e^{\frac{hv}{kT}} & \thickapprox & 1+\frac{hv}{kT}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und es folgt damit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+w\left(v\right) & \thickapprox & \frac{C_{1}v^{3}}{\frac{hv}{kT}}\\
+ & \thickapprox & C_{1}\frac{kT}{h}v^{2}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit ist die Linearisierung von 
+\begin_inset Formula $w\left(v\right)$
+\end_inset
+
+ schon recht nahe am Rayleigh-Jeans Gesetz (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Raleigh"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsubsection*
+3.
+ Schritt: Festlegung der freien Konstanten 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit der Festlegung der freien Konstanten 
+\begin_inset Formula $C_{1}=\frac{8\pi}{c^{3}}$
+\end_inset
+
+ folgt (das ist Gleichung 7.11 aus 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gassner"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+w\left(v\right) & = & \frac{8\pi}{c^{3}}\frac{v^{3}}{e^{\frac{hv}{kT}}-1}.\label{eq:Schritt 3}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Linearisierung
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+w\left(v\right) & = & \frac{8\pi}{c^{3}}\frac{v^{3}}{e^{\frac{hv}{kT}}-1}\\
+ & = & \frac{8\pi}{c^{3}}\frac{v^{3}}{\frac{hv}{kT}}\\
+ & = & \frac{8\pi}{c^{3}}kT\frac{v^{3}}{hv}\\
+ & = & \frac{8\pi}{c^{3}}\frac{kT}{h}v^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Rayleigh-Jeans
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+w_{R}\left(v\right) & = & \frac{8\pi}{c^{3}}kTv^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bergündung: Mit der obigen Linearisierung folgt daraus
+\begin_inset Formula 
+\begin{eqnarray*}
+w\left(v\right) & \thickapprox & \frac{8\pi kT}{c^{3}}\frac{1}{h}v^{2}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dies stimmt mit dem Rayleigh-Jeans Gesetz (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Raleigh"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) bis auf den Faktor 
+\begin_inset Formula $\frac{1}{h}$
+\end_inset
+
+ überein.
+\end_layout
+
+\begin_layout Subsubsection*
+4.
+ Schritt: Multiplikation mit 
+\begin_inset Formula $h$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es gilt damit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+w\left(v\right) & = & \frac{8\pi}{c^{3}}\frac{hv^{3}}{e^{\frac{hv}{kT}}-1}\label{eq:Schritt 4}\\
+ & = & w_{P}\left(v\right).
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+5.
+ Schritt: Überprüfung für kleine Frequenzen 
+\begin_inset Formula $v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für kleine 
+\begin_inset Formula $v$
+\end_inset
+
+ gilt wegen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{8\pi}{c^{3}}\frac{hv^{3}}{e^{\frac{hv}{kT}}-1} & \thickapprox & \frac{8\pi}{c^{3}}\frac{v^{3}}{\frac{hv}{kT}}\\
+ & \thickapprox & \frac{8\pi}{c^{3}}\frac{kT}{h}v^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Gassner"
+literal "false"
+
+\end_inset
+
+Gassner, Josef M., Müller, Jörn; Können wie die Welt verstehen?; S.
+ Fischer
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,210 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Bekenstein-Limit
+\end_layout
+
+\begin_layout Itemize
+Ein schwarzes Loch hat das kleinst mögliche Volumen zu einer vorgegebenen
+ Masse.
+\end_layout
+
+\begin_layout Itemize
+Es interagiert nur mit seiner 
+\begin_inset Quotes gld
+\end_inset
+
+Oberfläche
+\begin_inset Quotes grd
+\end_inset
+
+ (der Fläche einer Kugel mit dem Schwarzschildradius) mit dem restlichen
+ Universum.
+\end_layout
+
+\begin_layout Itemize
+Enthält also diese Oberfläche alle Informationen um den Inhalt des schwarzen
+ Loches zu beschreiben?
+\end_layout
+
+\begin_layout Standard
+Mit der Gravitationskonstanten 
+\begin_inset Formula $G$
+\end_inset
+
+ und der Lichtgeschwindigkeit 
+\begin_inset Formula $c$
+\end_inset
+
+ ist die Planck-Länge 
+\begin_inset Formula $l_{P}^{2}=\frac{\hbar G}{c^{3}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Mit Masse 
+\begin_inset Formula $M$
+\end_inset
+
+ des Schwarzen Loches ist sein Schwarzschild-Radius 
+\begin_inset Formula $R=$
+\end_inset
+
+
+\begin_inset Formula $\frac{2GM}{c^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es gilt
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+dE & = & TdS.\label{eq:Hawking}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dabei ist 
+\begin_inset Formula $E=Mc^{2}$
+\end_inset
+
+ die Energie des Schwarzen Loches, 
+\begin_inset Formula $T=\frac{\hbar c^{3}}{8\pi kGM}$
+\end_inset
+
+ ist die Hawking-Temperatur und 
+\begin_inset Formula $k$
+\end_inset
+
+ ist die Bolzmannkonstante, 
+\begin_inset Formula $S$
+\end_inset
+
+ ist die Entropie.
+\end_layout
+
+\begin_layout Standard
+Es folgt damit aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Hawking"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{eqnarray*}
+c^{2}dM & = & \frac{\hbar c^{3}}{8\pi kGM}dS\\
+MdM & = & \frac{\hbar c}{8\pi kG}dS\\
+M^{2}+C_{1} & = & \frac{\hbar c}{4\pi kG}S\\
+S & = & \frac{4\pi kG}{\hbar c}\left(M^{2}+C_{1}\right)\\
+S & = & \frac{4\pi kG^{2}}{\frac{\hbar G}{c^{3}}c^{4}}\left(M^{2}+C_{1}\right)\\
+S & = & \frac{4\pi kG^{2}}{l_{P}^{2}c^{4}}\left(M^{2}+C_{1}\right)\\
+S & = & k\frac{\pi R^{2}}{l_{P}^{2}}+C_{2}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
