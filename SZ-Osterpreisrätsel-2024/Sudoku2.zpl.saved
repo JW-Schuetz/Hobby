@@ -1,0 +1,27 @@
+# Modell mit integer Optimierungsvariablen
+
+# Für jedes Arrayelement <i,j> gibt es eine integer Variable 
+# für die die Zahl k.
+
+# Arraygrösse
+param m := 7;
+set I := { 1 .. m };
+
+# Vordefinierte Arrayelemente
+ set PREDEFINED := { <4,1,1>, <5,7,1>, <6,7,6> };
+
+# Optimierungsvariablen
+# x[i,j] definiert die Zahl an Stelle [i,j]
+#
+var x[I*I] integer >= 1 <= m;
+
+# Nebenbedingung: Zahl darf in jeder Zeile nur einmal vorkommen
+subto columns :
+	forall <i> in I do									# jede Zeile i
+		forall <j> in I do								# jedes Element j diese Zeile i
+			forall <k> in I with abs( k - j ) > 0 do	# jedes Element k diese Zeile i mit j != k
+				vabs( x[i,j] - x[i,k] ) >= 1;
+
+# Nebenbedingung: Vordefinierte Einträge
+subto known : forall <i,j,k> in PREDEFINED do
+	x[i,j] == k;

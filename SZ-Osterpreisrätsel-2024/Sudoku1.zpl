@@ -1,0 +1,36 @@
+# Modell mit binären Optimierungsvariablen
+
+# Für jedes Arrayelement <i,j> gibt es eine binäre Variable, die
+# beschreibt, ob die Zahl k dort vorhanden ist, oder nicht.
+
+# Arraygrösse
+param m := 7;
+set I := { 1 .. m };
+
+# Vordefinierte Arrayelemente
+set PREDEFINED := { <4,1,1>, <5,7,1>, <6,7,6> };
+#set PREDEFINED := { <4,1,1>, <5,7,1>, <6,7,6>, <6,4,1> };
+
+# Optimierungsvariablen
+# x[i,j,k] = 1 bedeutet, an Stelle [i,j] befindet sich die Zahl k
+# x[i,j,k] = 0 bedeutet, an Stelle [i,j] befindet sich die Zahl k nicht
+#
+var x[I*I*I] binary;
+
+# Nebenbedingung: Vordefinierte Einträge
+subto known : forall < i, j, k > in PREDEFINED do
+	x[i,j,k] == 1;
+	
+# Nebenbedingung: nur ein Eintrag in jeder Zeile
+subto columns : forall < j, k > in I * I do
+	( sum <i> in I do x[i,j,k] ) == 1;
+
+# Nebenbedingung: nur ein Eintrag in jeder Spalte
+subto rows : forall < i, k > in I * I do
+	( sum <j> in I do x[i,j,k] ) == 1;
+
+# Nebenbedingung: überall mindestens ein Eintrag
+subto allfilled : forall < i, j > in I * I do
+	( sum <k> in I do x[i,j,k] ) == 1;
+
+# Ungleichungs-Nebenbedingungen:

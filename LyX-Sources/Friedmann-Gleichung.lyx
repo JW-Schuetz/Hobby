@@ -1,0 +1,325 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children no
+\language ngerman
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip halfline
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Friedmann-Gleichung
+\end_layout
+
+\begin_layout Date
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kein Datum!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Herleitung (klassisch,
+ keine ART)
+\end_layout
+
+\begin_layout Standard
+Gegeben sei die Masse 
+\begin_inset Formula $m$
+\end_inset
+
+ (z.B.
+ einer Galaxie) mit dem Radius 
+\begin_inset Formula $R$
+\end_inset
+
+ vom Koordinatenursprung
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+ein beliebiger Punkt im des Universum
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Wegen der kosmischen Expansion gilt mit dem zeitvarianten Skalenfaktor 
+\begin_inset Formula $a\left(t\right)$
+\end_inset
+
+ die Gleichung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+R\left(t\right) & = & a\left(t\right)R_{0}.\label{eq:R}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Dabei ist 
+\begin_inset Formula $R_{0}$
+\end_inset
+
+ der Radius zur Zeit 
+\begin_inset Formula $t_{0}=0.$
+\end_inset
+
+ Es gilt mit der Hubblekonstanten 
+\begin_inset Formula $H$
+\end_inset
+
+ die Proportionalität
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{R} & = & HR
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und durch Einsetzen folgt
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+H & = & \frac{\dot{a}\left(t\right)}{a\left(t\right)}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Durch die kosmische Expansion bewege sich die Masse 
+\begin_inset Formula $m$
+\end_inset
+
+ radial nach aussen.
+ Die als homogen und isotrop angenommene Massedichte im Universum sei 
+\begin_inset Formula $\rho.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Innerhalb des Radius 
+\begin_inset Formula $R$
+\end_inset
+
+ befindet sich also die Masse
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+M & = & \rho V=\rho\frac{4\pi}{3}R^{3}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für die kinetische und potentielle Energie der Galaxie folgen die Gleichungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{K} & = & \frac{m}{2}\left(\dot{R}\right)^{2}\\
+E_{P} & = & -G\frac{mM}{R}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Somit folgt mit einer Konstanten 
+\begin_inset Formula $C$
+\end_inset
+
+ die Energiebilanz
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{K}+E_{P} & = & C\\
+\frac{m}{2}\left(\dot{R}\right)^{2}-G\frac{mM}{R} & = & C.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Durch Einsetzen von Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:R"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+) und Vereinfachung folgt
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{m}{2}\left[a\left(t\right)R_{0}\right]^{2}-G\frac{mM}{a\left(t\right)R_{0}} & = & C\\
+a^{2}\left(t\right)R_{0}^{2}-G\frac{2M}{a\left(t\right)R_{0}} & = & \frac{2C}{m}\\
+a^{2}\left(t\right)R_{0}^{2}-G\frac{2\rho\frac{4\pi}{3}R^{3}}{a\left(t\right)R_{0}} & = & \frac{2C}{m}\\
+a^{2}\left(t\right)R_{0}^{2}-G\frac{8\pi\rho\left[a\left(t\right)R_{0}\right]^{3}}{3a\left(t\right)R_{0}} & = & \frac{2C}{m}\\
+a^{2}\left(t\right)R_{0}^{2}-\frac{8\pi}{3}G\rho a\left(t\right)R_{0}^{2} & = & \frac{2C}{m}\\
+\\\\\\\dot{a}^{2}\left(t\right)R_{0}^{2}-2G\frac{\rho\frac{4\pi}{3}R^{3}}{R} & = & \frac{2C}{m}\\
+\dot{a}^{2}\left(t\right)R_{0}^{2}-G\rho\frac{8\pi}{3}a^{3}\left(t\right)R_{0}^{3} & = & \frac{2C}{m}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{a}^{2}\left(t\right)R_{0}^{2}-G\rho\frac{8\pi}{3}a^{3}\left(t\right)R_{0}^{3} & = & \frac{2C}{m}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

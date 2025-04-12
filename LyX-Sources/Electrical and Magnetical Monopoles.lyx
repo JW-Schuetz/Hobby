@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -8,13 +8,16 @@
 \begin_preamble
 \usepackage{a4}
 \pagestyle{empty}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
 \end_preamble
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language ngerman
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -22,7 +25,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -32,6 +37,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -56,7 +63,9 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -68,7 +77,7 @@
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
-\defskip smallskip
+\defskip halfline
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style german
@@ -76,11 +85,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -90,7 +104,8 @@ Elektrische und magnetische Monopole
 \end_layout
 
 \begin_layout Author
-Jürgen Womser-Schütz, https://github.com/JW-Schuetz 
+Jürgen Womser-Schütz,
+ https://github.com/JW-Schuetz 
 \end_layout
 
 \begin_layout Date
@@ -137,19 +152,23 @@ Vektoren werden im folgenden durch einen Unterstrich kenntlich gemacht
 \begin_inset Formula $\underline{v}$
 \end_inset
 
-, ihr inneres Produkt sei durch 
+,
+ ihr inneres Produkt sei durch 
 \begin_inset Formula $\bullet$
 \end_inset
 
-, ihr äusseres Produkt durch 
+,
+ ihr äusseres Produkt durch 
 \begin_inset Formula $\times$
 \end_inset
 
- bezeichnet, weiterhin sollen Kugelkoordinaten 
+ bezeichnet,
+ weiterhin sollen Kugelkoordinaten 
 \begin_inset Formula $\left(\rho,\phi,\Theta\right)$
 \end_inset
 
- benutzt werden, das Symbol 
+ benutzt werden,
+ das Symbol 
 \begin_inset Formula $\subset$
 \end_inset
 
@@ -177,8 +196,7 @@ In
 \end_layout
 
 \begin_layout Standard
-Die wichtigsten der im Literaturverzeichnis zitierten Quellen sind im Github-Unt
-er\SpecialChar softhyphen
+Die wichtigsten der im Literaturverzeichnis zitierten Quellen sind im Github-Unter\SpecialChar softhyphen
 verzeichnis 
 \begin_inset Quotes gld
 \end_inset
@@ -203,15 +221,13 @@ In der Elektrodynamik sind die Skalar- und Vektorpotentiale
 \begin_inset Formula $\underline{A}$
 \end_inset
 
- für die elektrische und magnetische Feldstärke ein nützliches mathematisches
- Werkzeug, das die Lösung der Maxwell-Gleichungen stark vereinfacht.
- Die Potentiale sind aber zur Lösung nicht unbedingt notwendig und haben
- keine eigenständigen physikalischen Auswirkungen.
+ für die elektrische und magnetische Feldstärke ein nützliches mathematisches Werkzeug,
+ das die Lösung der Maxwell-Gleichungen stark vereinfacht.
+ Die Potentiale sind aber zur Lösung nicht unbedingt notwendig und haben keine eigenständigen physikalischen Auswirkungen.
 \end_layout
 
 \begin_layout Standard
-Mit der Quantenmechanik ändert sich die Situation - hier kann auf das Vektorpote
-ntial 
+Mit der Quantenmechanik ändert sich die Situation - hier kann auf das Vektorpotential 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
@@ -223,12 +239,14 @@ literal "false"
 
 \end_inset
 
- zeigt, dass das Vektorpotential physikalisch messbar Auswirkungen besitzt.
+ zeigt,
+ dass das Vektorpotential physikalisch messbar Auswirkungen besitzt.
 \end_layout
 
 \begin_layout Standard
-Umso ärgerlicher ist es, dass es einfache physikalische Systeme gibt, für
- die kein Vektorpotential existiert.
+Umso ärgerlicher ist es,
+ dass es einfache physikalische Systeme gibt,
+ für die kein Vektorpotential existiert.
  
 \end_layout
 
@@ -237,10 +255,9 @@ Ein solches System ist der magnetische Monopol.
 \end_layout
 
 \begin_layout Standard
-Magnetische Monopole sind noch nicht beobachtet worden, es gibt aber starke
- Indizien für ihre Existenz.
- Insbesondere wäre die Quantisierung der elektrischen Elementarladung eine
- direkte Folge der Existenz des magnetischen Monopols 
+Magnetische Monopole sind noch nicht beobachtet worden,
+ es gibt aber starke Indizien für ihre Existenz.
+ Insbesondere wäre die Quantisierung der elektrischen Elementarladung eine direkte Folge der Existenz des magnetischen Monopols 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Dirac-2"
@@ -317,7 +334,8 @@ Die beiden Potentiale unterscheiden sich nur durch einen Gradienten
 \end_layout
 
 \begin_layout Itemize
-Aus der Schrödingergleichung ergibt sich, dass aus 
+Aus der Schrödingergleichung ergibt sich,
+ dass aus 
 \begin_inset Formula $\underline{A}\rightarrow\underline{A}+\nabla\varOmega$
 \end_inset
 
@@ -326,13 +344,12 @@ Aus der Schrödingergleichung ergibt sich, dass aus
 \end_inset
 
  folgt.
- Ein additiver Gradient für das Vektorpotential liefert also eine Phasenänderung
- der Wellenfunktion, und umgekehrt.
+ Ein additiver Gradient für das Vektorpotential liefert also eine Phasenänderung der Wellenfunktion,
+ und umgekehrt.
 \end_layout
 
 \begin_layout Itemize
-Der magnetische Monopol wird also durch eines der beiden Vektorpotentiale
- plus einer Phasenänderung beschrieben.
+Der magnetische Monopol wird also durch eines der beiden Vektorpotentiale plus einer Phasenänderung beschrieben.
  
 \end_layout
 
@@ -354,8 +371,9 @@ Definitionsbereiche sind Teilmengen des
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
-, alle Felder sind glatt, Flächen und Kurven sind glatt und orientierbar
- (sie besitzen also Normalenvektoren).
+,
+ alle Felder sind glatt,
+ Flächen und Kurven sind glatt und orientierbar (sie besitzen also Normalenvektoren).
 \end_layout
 
 \begin_layout Subsection*
@@ -466,8 +484,10 @@ status collapsed
 \begin_layout Plain Layout
 
 \color red
-Noch zu tun: der Satz von Gauss ist ein Spezialfall des Satzes von Stokes.
- Wie sieht man das? 
+Noch zu tun:
+ der Satz von Gauss ist ein Spezialfall des Satzes von Stokes.
+ Wie sieht man das?
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -480,6 +500,7 @@ reference "eq:Satz-von-Stokes"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -647,12 +668,12 @@ Definitionsbereich für die Monopole
 \end_layout
 
 \begin_layout Standard
-Der Definitionsbereich der Felder und Potentiale beider Monopole ist der
- gesamte 
+Der Definitionsbereich der Felder und Potentiale beider Monopole ist der gesamte 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- mit Ausnahme des Ortes des Monopoles im Koordinatenursprung, also 
+ mit Ausnahme des Ortes des Monopoles im Koordinatenursprung,
+ also 
 \begin_inset Formula $\mathbb{R}^{3}-\underline{0}$
 \end_inset
 
@@ -676,7 +697,8 @@ Für
 \begin_inset Formula $\pi_{1}\left(U\right)=0$
 \end_inset
 
-, d.h.
+,
+ d.h.
  man kann jede 1-Späre in 
 \begin_inset Formula $U$
 \end_inset
@@ -688,7 +710,8 @@ Für
 \begin_inset Formula $\pi_{2}\left(U\right)\neq0$
 \end_inset
 
-, d.h.
+,
+ d.h.
  man kann nicht jede 2-Späre in 
 \begin_inset Formula $U$
 \end_inset
@@ -698,12 +721,14 @@ Für
 status collapsed
 
 \begin_layout Plain Layout
-Hinweis: für den Fall 
+Hinweis:
+ für den Fall 
 \begin_inset Formula $\pi_{2}\left(U\right)\neq0$
 \end_inset
 
  betrachte man z.B.
- eine 2-Sphäre, die den Ursprung umschliesst.
+ eine 2-Sphäre,
+ die den Ursprung umschliesst.
 \end_layout
 
 \end_inset
@@ -731,11 +756,13 @@ Man nennt die erste Homotopiegruppe
 \begin_inset Formula $\Omega$
 \end_inset
 
- trivial (formal: 
+ trivial (formal:
+ 
 \begin_inset Formula $\pi_{1}\left(\Omega\right)=0$
 \end_inset
 
-), falls eine beliebige 1-Sphäre 
+),
+ falls eine beliebige 1-Sphäre 
 \begin_inset Formula $S^{1}$
 \end_inset
 
@@ -759,11 +786,13 @@ Man nennt die zweite Homotopiegruppe
 \begin_inset Formula $\Omega$
 \end_inset
 
- trivial (formal: 
+ trivial (formal:
+ 
 \begin_inset Formula $\pi_{2}\left(\Omega\right)=0$
 \end_inset
 
-), falls eine beliebige 2-Sphäre 
+),
+ falls eine beliebige 2-Sphäre 
 \begin_inset Formula $S^{2}$
 \end_inset
 
@@ -779,7 +808,8 @@ Man nennt
 \begin_inset Formula $\Omega$
 \end_inset
 
- homologisch trivial, falls jede geschlossene Kurve 
+ homologisch trivial,
+ falls jede geschlossene Kurve 
 \begin_inset Formula $c\subset\Omega$
 \end_inset
 
@@ -791,7 +821,8 @@ Man nennt
 \begin_inset Formula $S\subset\Omega$
 \end_inset
 
- ist, falls also gilt
+ ist,
+ falls also gilt
 \begin_inset Formula 
 \[
 \forall c\exists S\mid c=\partial S.
@@ -846,7 +877,8 @@ folgen die beiden Aussagen
 \end_layout
 
 \begin_layout Standard
-Aber gilt auch die Umkehrung? 
+Aber gilt auch die Umkehrung?
+ 
 \end_layout
 
 \begin_layout Standard
@@ -879,8 +911,7 @@ Existiert also für jedes rotationsfreie Feld
 \end_layout
 
 \begin_layout Standard
-Die Antworten auf diese Fragen hängen von der Topologie des betrachteten
- Definitionsbereichs 
+Die Antworten auf diese Fragen hängen von der Topologie des betrachteten Definitionsbereichs 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -914,13 +945,15 @@ Es sei ein rotationsfreies Feld
 \begin_inset Formula $s=\partial S$
 \end_inset
 
-, so folgt mit dem Satz von Stokes (
+,
+ so folgt mit dem Satz von Stokes (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Stokes"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -983,7 +1016,8 @@ Für ein Vektorfeld
 \end_layout
 
 \begin_layout Plain Layout
-Annahme: es existiere kein Potential 
+Annahme:
+ es existiere kein Potential 
 \begin_inset Formula $\psi$
 \end_inset
 
@@ -1065,10 +1099,12 @@ reference "eq:Wegunabhängigkeit"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-) aus dem Fundamentaltheorem der Vektoranalysis, da gilt
+) aus dem Fundamentaltheorem der Vektoranalysis,
+ da gilt
 \begin_inset Formula 
 \begin{eqnarray*}
 \oint_{s}\underline{V}\bullet\underline{t}ds & = & \oint_{s}\text{grad}\left(\psi\right)\bullet\underline{t}ds=\psi\left(P_{2}\right)-\psi\left(P_{1}\right).
@@ -1087,6 +1123,7 @@ reference "eq:Wegunabhängigkeit"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1125,13 +1162,15 @@ Es sei ein Feld
 \begin_inset Formula $S$
 \end_inset
 
-, so folgt mit dem Satz von Gauss (
+,
+ so folgt mit dem Satz von Gauss (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Gauss"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1142,7 +1181,8 @@ noprefix "false"
 .
  
 \color red
-Noch zu tun: der Schluss fehlt noch!
+Noch zu tun:
+ der Schluss fehlt noch!
 \end_layout
 
 \begin_layout Subsection*
@@ -1164,7 +1204,8 @@ Es soll für
 \begin_inset Formula $\Omega=U$
 \end_inset
 
- gezeigt werden, dass die folgenden Aussagen richtig sind
+ gezeigt werden,
+ dass die folgenden Aussagen richtig sind
 \end_layout
 
 \begin_layout Enumerate
@@ -1262,7 +1303,8 @@ Im Fall
 \begin_layout Standard
 
 \color red
-Noch zu tun: Beweisen!
+Noch zu tun:
+ Beweisen!
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1342,17 +1384,20 @@ Da der Fluss von
 \begin_inset Formula $C$
 \end_inset
 
- gehörenden Kurve verschwindet, folgt aus dem Satz von Stokes (
+ gehörenden Kurve verschwindet,
+ folgt aus dem Satz von Stokes (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Stokes"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-), dass das Linienintegral jeder geschlossenen Kurve 
+),
+ dass das Linienintegral jeder geschlossenen Kurve 
 \begin_inset Formula $C$
 \end_inset
 
@@ -1457,17 +1502,20 @@ Da das Integral von
 \begin_inset Formula $D$
 \end_inset
 
- verschwindet, folgt aus dem Satz von Stokes (
+ verschwindet,
+ folgt aus dem Satz von Stokes (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Stokes"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-), dass der Fluss von 
+),
+ dass der Fluss von 
 \begin_inset Formula $B$
 \end_inset
 
@@ -1493,7 +1541,8 @@ Theorem 3
 \end_layout
 
 \begin_layout Standard
-Nehmen wir an, dass 
+Nehmen wir an,
+ dass 
 \begin_inset Formula $\underline{H}$
 \end_inset
 
@@ -1546,7 +1595,8 @@ Setzt man
 \begin_inset Formula $\underline{0}$
 \end_inset
 
- fort, dann bleibt 
+ fort,
+ dann bleibt 
 \begin_inset Formula $\underline{H}$
 \end_inset
 
@@ -1560,12 +1610,12 @@ Setzt man
 status open
 
 \begin_layout Plain Layout
-Hier wird das Argument benutzt, dass im 
+Hier wird das Argument benutzt,
+ dass im 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- jedes rotationsfreie Feld als Gradient eines skalaren Potentials bestimmt
- werden kann.
+ jedes rotationsfreie Feld als Gradient eines skalaren Potentials bestimmt werden kann.
  
 \color red
 Beweis?
@@ -1586,7 +1636,8 @@ Theorem 4
 \end_layout
 
 \begin_layout Standard
-Nehmen wir an, dass 
+Nehmen wir an,
+ dass 
 \begin_inset Formula $\underline{B}$
 \end_inset
 
@@ -1639,7 +1690,8 @@ Setzt man
 \begin_inset Formula $\underline{0}$
 \end_inset
 
- fort, dann bleibt 
+ fort,
+ dann bleibt 
 \begin_inset Formula $\underline{B}$
 \end_inset
 
@@ -1653,12 +1705,12 @@ Setzt man
 status open
 
 \begin_layout Plain Layout
-Hier wird das Argument benutzt, dass im 
+Hier wird das Argument benutzt,
+ dass im 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- jedes divergenzfreie Feld als Rotation eines Vektorpotentials bestimmt
- werden kann.
+ jedes divergenzfreie Feld als Rotation eines Vektorpotentials bestimmt werden kann.
  
 \color red
 Beweis?
@@ -1677,7 +1729,8 @@ Beweis?
 \begin_layout Standard
 
 \color red
-Noch zu tun: 
+Noch zu tun:
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1697,7 +1750,8 @@ Harmonischen Felder
 \begin_layout Itemize
 
 \color red
-Theorem 2 ist die Stelle, in der die Topologie ins Spiel kommt.
+Theorem 2 ist die Stelle,
+ in der die Topologie ins Spiel kommt.
  Diese Voraussetzungen von sind für den magnetischen Monopol nicht erfüllt!
 \end_layout
 
@@ -1742,7 +1796,8 @@ gegeben.
 \begin_layout Standard
 
 \color red
-Noch zu tun: Skalares Potential und Vektorpotential herleiten.
+Noch zu tun:
+ Skalares Potential und Vektorpotential herleiten.
 \end_layout
 
 \begin_layout Section
@@ -1750,8 +1805,7 @@ Felder und Potentiale des magnetischen Monopols
 \end_layout
 
 \begin_layout Standard
-Ein magnetischer Monopol wurde bisher noch nicht beobachtet und ist deshalb
- hypothetisch.
+Ein magnetischer Monopol wurde bisher noch nicht beobachtet und ist deshalb hypothetisch.
 \end_layout
 
 \begin_layout Standard
@@ -1785,7 +1839,8 @@ gegeben.
 \begin_layout Standard
 
 \color red
-Noch zu tun: 
+Noch zu tun:
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1803,8 +1858,7 @@ Dirac-Strings thematisieren.
 \begin_layout Itemize
 
 \color red
-Quantelung der Elementarladung als direkte Folge der magnetischen Monopole
- herleiten.
+Quantelung der Elementarladung als direkte Folge der magnetischen Monopole herleiten.
 \end_layout
 
 \begin_layout Subsection*
@@ -1815,6 +1869,7 @@ reference "enu:Fall-2"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1873,16 +1928,20 @@ Betrachtet wird die Oberfläche
 \end_layout
 
 \begin_layout Standard
-Annahme: Wir nehmen an, dass ein Vektorpotential 
+Annahme:
+ Wir nehmen an,
+ dass ein Vektorpotential 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
  mit kontinuierlichen 1.
- partiellen Ableitungen in einer Umgebung, die 
+ partiellen Ableitungen in einer Umgebung,
+ die 
 \begin_inset Formula $S$
 \end_inset
 
- enthält, existiert.
+ enthält,
+ existiert.
 \end_layout
 
 \begin_layout Standard
@@ -1901,6 +1960,7 @@ reference "eq:B-Feld-MM"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1930,6 +1990,7 @@ reference "eq:Stokes"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1958,6 +2019,7 @@ reference "eq:linke-Seite"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1968,12 +2030,12 @@ reference "eq:rechte-Seite"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
 ) besteht ein Widerspruch.
- Die Annahme ist also falsch und es existiert kein solches Vektorpotential
- 
+ Die Annahme ist also falsch und es existiert kein solches Vektorpotential 
 \begin_inset Formula $\underline{A}$
 \end_inset
 
@@ -1988,7 +2050,9 @@ noprefix "false"
 \begin_layout Standard
 
 \color red
-Noch zu tun: 1, 2 und 3 in voller Allgemeinheit beweisen.
+Noch zu tun:
+ 1,
+ 2 und 3 in voller Allgemeinheit beweisen.
 \end_layout
 
 \begin_layout Section
@@ -2039,7 +2103,8 @@ Eine Form
 \begin_inset Formula $\alpha$
 \end_inset
 
- nennt man geschlossen, falls 
+ nennt man geschlossen,
+ falls 
 \begin_inset Formula $d\alpha=0$
 \end_inset
 
@@ -2051,11 +2116,13 @@ Eine Form
 \begin_inset Formula $\beta$
 \end_inset
 
- nennt man exakt, falls 
+ nennt man exakt,
+ falls 
 \begin_inset Formula $\beta=d\gamma$
 \end_inset
 
- gilt , wobei 
+ gilt ,
+ wobei 
 \begin_inset Formula $\gamma$
 \end_inset
 
@@ -2064,8 +2131,7 @@ Eine Form
 \end_layout
 
 \begin_layout Enumerate
-Eine exakte Form ist im Bild und eine geschlossene Form im Kern der Abbildung
- 
+Eine exakte Form ist im Bild und eine geschlossene Form im Kern der Abbildung 
 \begin_inset Formula $d$
 \end_inset
 
@@ -2081,6 +2147,7 @@ reference "enu:Punkt-1"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2088,13 +2155,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-Die Frage, ob jede geschlossene Form exakt ist, hängt von der Topologie
- des Definitionsbereiches ab.
+Die Frage,
+ ob jede geschlossene Form exakt ist,
+ hängt von der Topologie des Definitionsbereiches ab.
 \end_layout
 
 \begin_layout Enumerate
-Auf einem einfach zusammenhängenden Definitionsbereich ist jede geschlossene
- p-Form mit 
+Auf einem einfach zusammenhängenden Definitionsbereich ist jede geschlossene p-Form mit 
 \begin_inset Formula $1\leqq p\leqq n$
 \end_inset
 
@@ -2118,7 +2185,8 @@ Es gibt Ähnlichkeiten der äusseren Ableitung
 ).
  
 \color red
-Wie hängt das tiefer zusammen? Siehe Wikipedia-Artikel 
+Wie hängt das tiefer zusammen?
+ Siehe Wikipedia-Artikel 
 \begin_inset Quotes gld
 \end_inset
 
@@ -2142,8 +2210,7 @@ Sei
 \begin_inset Formula $m$
 \end_inset
 
--dimensionale kompakte differenzierbare Mannigfaltigkeit mit abschnittsweise
- glattem Rand 
+-dimensionale kompakte differenzierbare Mannigfaltigkeit mit abschnittsweise glattem Rand 
 \begin_inset Formula $\partial M$
 \end_inset
 
@@ -2160,7 +2227,8 @@ Sei
 \begin_inset Formula $m-1$
 \end_inset
 
-, die als stetig differenzierbar vorausgesetzt wird.
+,
+ die als stetig differenzierbar vorausgesetzt wird.
 \end_layout
 
 \begin_layout Standard
@@ -2178,7 +2246,8 @@ Dann gilt
 \begin_layout Standard
 
 \color red
-Noch zu tun: 
+Noch zu tun:
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -2191,10 +2260,12 @@ reference "enu:Punkt-1"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-)? 
+)?
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -2240,8 +2311,12 @@ literal "false"
 
 \end_inset
 
-Topology, Geometry and Gauge fields; Naber, Gregory; Springer Science+Business
- Media; 2011
+Topology,
+ Geometry and Gauge fields;
+ Naber,
+ Gregory;
+ Springer Science+Business Media;
+ 2011
 \end_layout
 
 \begin_layout Bibliography
@@ -2253,8 +2328,12 @@ literal "false"
 
 \end_inset
 
-Scalar and vector potentials, Helmholtz decomposition and de Rham cohomology;
- Valli, Alberto; University of Trento, Italy
+Scalar and vector potentials,
+ Helmholtz decomposition and de Rham cohomology;
+ Valli,
+ Alberto;
+ University of Trento,
+ Italy
 \end_layout
 
 \begin_layout Bibliography
@@ -2266,9 +2345,14 @@ literal "false"
 
 \end_inset
 
-Quantised singularities in the electromagnetic field; Dirac, P.A.M.; Proc.
+Quantised singularities in the electromagnetic field;
+ Dirac,
+ P.A.M.;
+ Proc.
  Roy.
- Soc., A133(1931), 60–72
+ Soc.,
+ A133(1931),
+ 60–72
 \end_layout
 
 \begin_layout Bibliography
@@ -2280,8 +2364,13 @@ literal "false"
 
 \end_inset
 
-The theory of magnetic poles; Dirac, P.A.M.; Phys.
- Rev., 74(1948), 817–830
+The theory of magnetic poles;
+ Dirac,
+ P.A.M.;
+ Phys.
+ Rev.,
+ 74(1948),
+ 817–830
 \end_layout
 
 \begin_layout Bibliography
@@ -2293,7 +2382,11 @@ literal "false"
 
 \end_inset
 
-Classical Elektrodynamics; Jackson, John David; John Wiley & Sons, Inc.;
+Classical Elektrodynamics;
+ Jackson,
+ John David;
+ John Wiley & Sons,
+ Inc.;
  1999
 \end_layout
 
@@ -2306,8 +2399,11 @@ literal "false"
 
 \end_inset
 
-Significance of electromagnetic potentials in the quantum theory; Aharonov,
- Y., Bohm, D.
+Significance of electromagnetic potentials in the quantum theory;
+ Aharonov,
+ Y.,
+ Bohm,
+ D.
 \end_layout
 
 \begin_layout Bibliography
@@ -2319,8 +2415,15 @@ literal "false"
 
 \end_inset
 
-Vektoranalysis; Jänich, Klaus; Springer Berlin, Heidelberg, New York; 5.
- Auflage, 2005
+Vektoranalysis;
+ Jänich,
+ Klaus;
+ Springer Berlin,
+ Heidelberg,
+ New York;
+ 5.
+ Auflage,
+ 2005
 \end_layout
 
 \end_body

@@ -1,0 +1,1614 @@
+SCIP version 9.0.0 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: Soplex 7.0.0] [GitHash: 7205bedd94]
+Copyright (c) 2002-2024 Zuse Institute Berlin (ZIB)
+
+External libraries: 
+  Soplex 7.0.0         Linear Programming Solver developed at Zuse Institute Berlin (soplex.zib.de) [GitHash: 6657fb3b]
+  CppAD 20180000.0     Algorithmic Differentiation of C++ algorithms developed by B. Bell (github.com/coin-or/CppAD)
+  MPIR 3.0.0           Multiple Precision Integers and Rationals Library developed by W. Hart (mpir.org)
+  ZIMPL 3.5.3          Zuse Institute Mathematical Programming Language developed by T. Koch (zimpl.zib.de)
+  AMPL/MP 690e9e7      AMPL .nl file reader library (github.com/ampl/mp)
+  PaPILO 2.2.0         parallel presolve for integer and linear optimization (github.com/scipopt/papilo) (built with TBB) [GitHash: df30ae49]
+  bliss 0.77           Computing Graph Automorphisms by T. Junttila and P. Kaski (users.aalto.fi/~tjunttil/bliss)
+  sassy 1.1            Symmetry preprocessor by Markus Anders (github.com/markusa4/sassy)
+  Ipopt 3.12.9         Interior Point Optimizer developed by A. Waechter et.al. (github.com/coin-or/Ipopt)
+
+reading user parameter file <scip.set>
+
+read problem <Sudoku2.zpl>
+============
+
+
+base directory for ZIMPL parsing: <D:\Projekte\Hobby\Sudoku-Versuch>
+
+original problem has 1225 variables (0 bin, 49 int, 0 impl, 1176 cont) and 1782 constraints
+
+solve problem
+=============
+
+presolving:
+(round 1, fast)       4 del vars, 593 del conss, 0 add conss, 2357 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       96 del vars, 689 del conss, 0 add conss, 2550 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       100 del vars, 689 del conss, 0 add conss, 3422 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 4, fast)       100 del vars, 689 del conss, 0 add conss, 3520 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 5, exhaustive) 100 del vars, 689 del conss, 0 add conss, 3520 chg bounds, 0 chg sides, 0 chg coeffs, 13 upgd conss, 0 impls, 0 clqs
+   (0.0s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.0s) symmetry computation finished: 10 generators found (max: 1500, log10 of symmetry group size: 0.0) (symcode time: 0.00)
+dynamic symmetry handling statistics:
+   orbitopal reduction:       no components
+   orbital reduction:         no components
+   lexicographic reduction:   no permutations
+handled 10 out of 10 symmetry components
+(round 6, exhaustive) 100 del vars, 689 del conss, 10 add conss, 3520 chg bounds, 0 chg sides, 0 chg coeffs, 13 upgd conss, 0 impls, 0 clqs
+(round 7, exhaustive) 100 del vars, 689 del conss, 10 add conss, 3520 chg bounds, 0 chg sides, 0 chg coeffs, 23 upgd conss, 0 impls, 0 clqs
+presolving (8 rounds: 8 fast, 4 medium, 4 exhaustive):
+ 100 deleted vars, 689 deleted constraints, 0 added constraints, 3520 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 1125 variables (0 bin, 45 int, 1080 impl, 0 cont) and 1103 constraints
+     23 constraints of type <varbound>
+    496 constraints of type <linear>
+    584 constraints of type <nonlinear>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.0s|     1 |     0 |  1611 |     - |    28M |   0 |2283 |1104 |2743 |   0 |  0 |   1 |   0 | 0.000000e+00 |      --      |    Inf | unknown
+  2.0s|     1 |     0 |  6806 |     - |    29M |   0 |2283 |1086 |2743 |   0 |  1 |   2 |   0 | 0.000000e+00 |      --      |    Inf | unknown
+  2.0s|     1 |     0 |  6870 |     - |    29M |   0 |2283 |1086 |2787 |  44 |  2 |   2 |   0 | 0.000000e+00 |      --      |    Inf | unknown
+  2.0s|     1 |     0 |  6872 |     - |    29M |   0 |2283 |1086 |2789 |  46 |  3 |   2 |   0 | 0.000000e+00 |      --      |    Inf | unknown
+(run 1, node 1) restarting after 742 global fixings of integer variables
+
+presolving:
+(round 1, fast)       1362 del vars, 174 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+presolving (2 rounds: 2 fast, 1 medium, 1 exhaustive):
+ 1362 deleted vars, 174 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 923 variables (2 bin, 35 int, 886 impl, 0 cont) and 912 constraints
+     12 constraints of type <varbound>
+    364 constraints of type <linear>
+     12 constraints of type <bounddisjunction>
+    524 constraints of type <nonlinear>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  2.0s|     1 |     0 |  8463 |     - |    32M |   0 |1961 | 912 |2798 |   0 |  0 |   2 |   0 | 0.000000e+00 |      --      |    Inf | unknown
+* 2.0s|     1 |     0 |  8463 |     - |    LP  |   0 |1961 | 912 |2798 |   0 |  0 |   2 |   0 | 0.000000e+00 | 0.000000e+00 |   0.00%| unknown
+  2.0s|     1 |     0 |  8463 |     - |    33M |   0 |1961 | 915 |2798 |   0 |  1 |   2 |   0 | 0.000000e+00 | 0.000000e+00 |   0.00%| unknown
+  2.0s|     1 |     0 |  8463 |     - |    33M |   0 |1961 | 915 |2798 |   0 |  1 |   2 |   0 | 0.000000e+00 | 0.000000e+00 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 2.00
+Solving Nodes      : 1 (total of 2 nodes in 2 runs)
+Primal Bound       : +0.00000000000000e+00 (1 solutions)
+Dual Bound         : +0.00000000000000e+00
+Gap                : 0.00 %
+
+primal solution (original space):
+=================================
+
+objective value:                                    0
+x#1#1                                               4 	(obj:0)
+x#1#2                                               1 	(obj:0)
+x#1#3                                               5 	(obj:0)
+x#1#4                                               6 	(obj:0)
+x#1#5                                               2 	(obj:0)
+x#1#6                                               3 	(obj:0)
+x#1#7                                               7 	(obj:0)
+x#2#1                                               6 	(obj:0)
+x#2#2                                               7 	(obj:0)
+x#2#3                                               1 	(obj:0)
+x#2#4                                               2 	(obj:0)
+x#2#5                                               3 	(obj:0)
+x#2#6                                               5 	(obj:0)
+x#2#7                                               4 	(obj:0)
+x#3#1                                               7 	(obj:0)
+x#3#2                                               2 	(obj:0)
+x#3#3                                               6 	(obj:0)
+x#3#4                                               1 	(obj:0)
+x#3#5                                               5 	(obj:0)
+x#3#6                                               4 	(obj:0)
+x#3#7                                               3 	(obj:0)
+x#4#1                                               1 	(obj:0)
+x#4#2                                               3 	(obj:0)
+x#4#3                                               2 	(obj:0)
+x#4#4                                               4 	(obj:0)
+x#4#5                                               6 	(obj:0)
+x#4#6                                               7 	(obj:0)
+x#4#7                                               5 	(obj:0)
+x#5#1                                               2 	(obj:0)
+x#5#2                                               4 	(obj:0)
+x#5#3                                               3 	(obj:0)
+x#5#4                                               5 	(obj:0)
+x#5#5                                               7 	(obj:0)
+x#5#6                                               6 	(obj:0)
+x#5#7                                               1 	(obj:0)
+x#6#1                                               3 	(obj:0)
+x#6#2                                               5 	(obj:0)
+x#6#3                                               4 	(obj:0)
+x#6#4                                               7 	(obj:0)
+x#6#5                                               1 	(obj:0)
+x#6#6                                               2 	(obj:0)
+x#6#7                                               6 	(obj:0)
+x#7#1                                               5 	(obj:0)
+x#7#2                                               6 	(obj:0)
+x#7#3                                               7 	(obj:0)
+x#7#4                                               3 	(obj:0)
+x#7#5                                               4 	(obj:0)
+x#7#6                                               1 	(obj:0)
+x#7#7                                               2 	(obj:0)
+@@columns_1_t_0                                     3 	(obj:0)
+@@columns_1_r_1                                     3 	(obj:0)
+@@columns_2_t_2                                    -1 	(obj:0)
+@@columns_2_r_3                                     1 	(obj:0)
+@@columns_3_t_4                                    -2 	(obj:0)
+@@columns_3_r_5                                     2 	(obj:0)
+@@columns_4_t_6                                     2 	(obj:0)
+@@columns_4_r_7                                     2 	(obj:0)
+@@columns_5_t_8                                     1 	(obj:0)
+@@columns_5_r_9                                     1 	(obj:0)
+@@columns_6_t_10                                   -3 	(obj:0)
+@@columns_6_r_11                                    3 	(obj:0)
+@@columns_7_t_12                                   -3 	(obj:0)
+@@columns_7_r_13                                    3 	(obj:0)
+@@columns_8_t_14                                   -4 	(obj:0)
+@@columns_8_r_15                                    4 	(obj:0)
+@@columns_9_t_16                                   -5 	(obj:0)
+@@columns_9_r_17                                    5 	(obj:0)
+@@columns_10_t_18                                  -1 	(obj:0)
+@@columns_10_r_19                                   1 	(obj:0)
+@@columns_11_t_20                                  -2 	(obj:0)
+@@columns_11_r_21                                   2 	(obj:0)
+@@columns_12_t_22                                  -6 	(obj:0)
+@@columns_12_r_23                                   6 	(obj:0)
+@@columns_13_t_24                                   1 	(obj:0)
+@@columns_13_r_25                                   1 	(obj:0)
+@@columns_14_t_26                                   4 	(obj:0)
+@@columns_14_r_27                                   4 	(obj:0)
+@@columns_15_t_28                                  -1 	(obj:0)
+@@columns_15_r_29                                   1 	(obj:0)
+@@columns_16_t_30                                   3 	(obj:0)
+@@columns_16_r_31                                   3 	(obj:0)
+@@columns_17_t_32                                   2 	(obj:0)
+@@columns_17_r_33                                   2 	(obj:0)
+@@columns_18_t_34                                  -2 	(obj:0)
+@@columns_18_r_35                                   2 	(obj:0)
+@@columns_19_t_36                                   2 	(obj:0)
+@@columns_19_r_37                                   2 	(obj:0)
+@@columns_20_t_38                                   5 	(obj:0)
+@@columns_20_r_39                                   5 	(obj:0)
+@@columns_21_t_40                                   1 	(obj:0)
+@@columns_21_r_41                                   1 	(obj:0)
+@@columns_22_t_42                                   4 	(obj:0)
+@@columns_22_r_43                                   4 	(obj:0)
+@@columns_23_t_44                                   3 	(obj:0)
+@@columns_23_r_45                                   3 	(obj:0)
+@@columns_24_t_46                                  -1 	(obj:0)
+@@columns_24_r_47                                   1 	(obj:0)
+@@columns_25_t_48                                  -2 	(obj:0)
+@@columns_25_r_49                                   2 	(obj:0)
+@@columns_26_t_50                                   1 	(obj:0)
+@@columns_26_r_51                                   1 	(obj:0)
+@@columns_27_t_52                                  -3 	(obj:0)
+@@columns_27_r_53                                   3 	(obj:0)
+@@columns_28_t_54                                  -4 	(obj:0)
+@@columns_28_r_55                                   4 	(obj:0)
+@@columns_29_t_56                                  -1 	(obj:0)
+@@columns_29_r_57                                   1 	(obj:0)
+@@columns_30_t_58                                  -5 	(obj:0)
+@@columns_30_r_59                                   5 	(obj:0)
+@@columns_31_t_60                                  -1 	(obj:0)
+@@columns_31_r_61                                   1 	(obj:0)
+@@columns_32_t_62                                   2 	(obj:0)
+@@columns_32_r_63                                   2 	(obj:0)
+@@columns_33_t_64                                  -2 	(obj:0)
+@@columns_33_r_65                                   2 	(obj:0)
+@@columns_34_t_66                                  -3 	(obj:0)
+@@columns_34_r_67                                   3 	(obj:0)
+@@columns_35_t_68                                   1 	(obj:0)
+@@columns_35_r_69                                   1 	(obj:0)
+@@columns_36_t_70                                  -4 	(obj:0)
+@@columns_36_r_71                                   4 	(obj:0)
+@@columns_37_t_72                                   3 	(obj:0)
+@@columns_37_r_73                                   3 	(obj:0)
+@@columns_38_t_74                                   6 	(obj:0)
+@@columns_38_r_75                                   6 	(obj:0)
+@@columns_39_t_76                                   2 	(obj:0)
+@@columns_39_r_77                                   2 	(obj:0)
+@@columns_40_t_78                                   1 	(obj:0)
+@@columns_40_r_79                                   1 	(obj:0)
+@@columns_41_t_80                                   5 	(obj:0)
+@@columns_41_r_81                                   5 	(obj:0)
+@@columns_42_t_82                                   4 	(obj:0)
+@@columns_42_r_83                                   4 	(obj:0)
+@@columns_43_t_84                                  -1 	(obj:0)
+@@columns_43_r_85                                   1 	(obj:0)
+@@columns_44_t_86                                   5 	(obj:0)
+@@columns_44_r_87                                   5 	(obj:0)
+@@columns_45_t_88                                   4 	(obj:0)
+@@columns_45_r_89                                   4 	(obj:0)
+@@columns_46_t_90                                   3 	(obj:0)
+@@columns_46_r_91                                   3 	(obj:0)
+@@columns_47_t_92                                   1 	(obj:0)
+@@columns_47_r_93                                   1 	(obj:0)
+@@columns_48_t_94                                   2 	(obj:0)
+@@columns_48_r_95                                   2 	(obj:0)
+@@columns_49_t_96                                   1 	(obj:0)
+@@columns_49_r_97                                   1 	(obj:0)
+@@columns_50_t_98                                   6 	(obj:0)
+@@columns_50_r_99                                   6 	(obj:0)
+@@columns_51_t_100                                  5 	(obj:0)
+@@columns_51_r_101                                  5 	(obj:0)
+@@columns_52_t_102                                  4 	(obj:0)
+@@columns_52_r_103                                  4 	(obj:0)
+@@columns_53_t_104                                  2 	(obj:0)
+@@columns_53_r_105                                  2 	(obj:0)
+@@columns_54_t_106                                  3 	(obj:0)
+@@columns_54_r_107                                  3 	(obj:0)
+@@columns_55_t_108                                 -5 	(obj:0)
+@@columns_55_r_109                                  5 	(obj:0)
+@@columns_56_t_110                                 -6 	(obj:0)
+@@columns_56_r_111                                  6 	(obj:0)
+@@columns_57_t_112                                 -1 	(obj:0)
+@@columns_57_r_113                                  1 	(obj:0)
+@@columns_58_t_114                                 -2 	(obj:0)
+@@columns_58_r_115                                  2 	(obj:0)
+@@columns_59_t_116                                 -4 	(obj:0)
+@@columns_59_r_117                                  4 	(obj:0)
+@@columns_60_t_118                                 -3 	(obj:0)
+@@columns_60_r_119                                  3 	(obj:0)
+@@columns_61_t_120                                 -4 	(obj:0)
+@@columns_61_r_121                                  4 	(obj:0)
+@@columns_62_t_122                                 -5 	(obj:0)
+@@columns_62_r_123                                  5 	(obj:0)
+@@columns_63_t_124                                  1 	(obj:0)
+@@columns_63_r_125                                  1 	(obj:0)
+@@columns_64_t_126                                 -1 	(obj:0)
+@@columns_64_r_127                                  1 	(obj:0)
+@@columns_65_t_128                                 -3 	(obj:0)
+@@columns_65_r_129                                  3 	(obj:0)
+@@columns_66_t_130                                 -2 	(obj:0)
+@@columns_66_r_131                                  2 	(obj:0)
+@@columns_67_t_132                                 -3 	(obj:0)
+@@columns_67_r_133                                  3 	(obj:0)
+@@columns_68_t_134                                 -4 	(obj:0)
+@@columns_68_r_135                                  4 	(obj:0)
+@@columns_69_t_136                                  2 	(obj:0)
+@@columns_69_r_137                                  2 	(obj:0)
+@@columns_70_t_138                                  1 	(obj:0)
+@@columns_70_r_139                                  1 	(obj:0)
+@@columns_71_t_140                                 -2 	(obj:0)
+@@columns_71_r_141                                  2 	(obj:0)
+@@columns_72_t_142                                 -1 	(obj:0)
+@@columns_72_r_143                                  1 	(obj:0)
+@@columns_73_t_144                                 -1 	(obj:0)
+@@columns_73_r_145                                  1 	(obj:0)
+@@columns_74_t_146                                 -2 	(obj:0)
+@@columns_74_r_147                                  2 	(obj:0)
+@@columns_75_t_148                                  4 	(obj:0)
+@@columns_75_r_149                                  4 	(obj:0)
+@@columns_76_t_150                                  3 	(obj:0)
+@@columns_76_r_151                                  3 	(obj:0)
+@@columns_77_t_152                                  2 	(obj:0)
+@@columns_77_r_153                                  2 	(obj:0)
+@@columns_78_t_154                                  1 	(obj:0)
+@@columns_78_r_155                                  1 	(obj:0)
+@@columns_79_t_156                                 -2 	(obj:0)
+@@columns_79_r_157                                  2 	(obj:0)
+@@columns_80_t_158                                 -3 	(obj:0)
+@@columns_80_r_159                                  3 	(obj:0)
+@@columns_81_t_160                                  3 	(obj:0)
+@@columns_81_r_161                                  3 	(obj:0)
+@@columns_82_t_162                                  2 	(obj:0)
+@@columns_82_r_163                                  2 	(obj:0)
+@@columns_83_t_164                                  1 	(obj:0)
+@@columns_83_r_165                                  1 	(obj:0)
+@@columns_84_t_166                                 -1 	(obj:0)
+@@columns_84_r_167                                  1 	(obj:0)
+@@columns_85_t_168                                  5 	(obj:0)
+@@columns_85_r_169                                  5 	(obj:0)
+@@columns_86_t_170                                  1 	(obj:0)
+@@columns_86_r_171                                  1 	(obj:0)
+@@columns_87_t_172                                  6 	(obj:0)
+@@columns_87_r_173                                  6 	(obj:0)
+@@columns_88_t_174                                  2 	(obj:0)
+@@columns_88_r_175                                  2 	(obj:0)
+@@columns_89_t_176                                  3 	(obj:0)
+@@columns_89_r_177                                  3 	(obj:0)
+@@columns_90_t_178                                  4 	(obj:0)
+@@columns_90_r_179                                  4 	(obj:0)
+@@columns_91_t_180                                 -5 	(obj:0)
+@@columns_91_r_181                                  5 	(obj:0)
+@@columns_92_t_182                                 -4 	(obj:0)
+@@columns_92_r_183                                  4 	(obj:0)
+@@columns_93_t_184                                  1 	(obj:0)
+@@columns_93_r_185                                  1 	(obj:0)
+@@columns_94_t_186                                 -3 	(obj:0)
+@@columns_94_r_187                                  3 	(obj:0)
+@@columns_95_t_188                                 -2 	(obj:0)
+@@columns_95_r_189                                  2 	(obj:0)
+@@columns_96_t_190                                 -1 	(obj:0)
+@@columns_96_r_191                                  1 	(obj:0)
+@@columns_97_t_192                                 -1 	(obj:0)
+@@columns_97_r_193                                  1 	(obj:0)
+@@columns_98_t_194                                  4 	(obj:0)
+@@columns_98_r_195                                  4 	(obj:0)
+@@columns_99_t_196                                  5 	(obj:0)
+@@columns_99_r_197                                  5 	(obj:0)
+@@columns_100_t_198                                 1 	(obj:0)
+@@columns_100_r_199                                 1 	(obj:0)
+@@columns_101_t_200                                 2 	(obj:0)
+@@columns_101_r_201                                 2 	(obj:0)
+@@columns_102_t_202                                 3 	(obj:0)
+@@columns_102_r_203                                 3 	(obj:0)
+@@columns_103_t_204                                -6 	(obj:0)
+@@columns_103_r_205                                 6 	(obj:0)
+@@columns_104_t_206                                -1 	(obj:0)
+@@columns_104_r_207                                 1 	(obj:0)
+@@columns_105_t_208                                -5 	(obj:0)
+@@columns_105_r_209                                 5 	(obj:0)
+@@columns_106_t_210                                -4 	(obj:0)
+@@columns_106_r_211                                 4 	(obj:0)
+@@columns_107_t_212                                -3 	(obj:0)
+@@columns_107_r_213                                 3 	(obj:0)
+@@columns_108_t_214                                -2 	(obj:0)
+@@columns_108_r_215                                 2 	(obj:0)
+@@columns_109_t_216                                -2 	(obj:0)
+@@columns_109_r_217                                 2 	(obj:0)
+@@columns_110_t_218                                 3 	(obj:0)
+@@columns_110_r_219                                 3 	(obj:0)
+@@columns_111_t_220                                -1 	(obj:0)
+@@columns_111_r_221                                 1 	(obj:0)
+@@columns_112_t_222                                 4 	(obj:0)
+@@columns_112_r_223                                 4 	(obj:0)
+@@columns_113_t_224                                 1 	(obj:0)
+@@columns_113_r_225                                 1 	(obj:0)
+@@columns_114_t_226                                 2 	(obj:0)
+@@columns_114_r_227                                 2 	(obj:0)
+@@columns_115_t_228                                -3 	(obj:0)
+@@columns_115_r_229                                 3 	(obj:0)
+@@columns_116_t_230                                 2 	(obj:0)
+@@columns_116_r_231                                 2 	(obj:0)
+@@columns_117_t_232                                -2 	(obj:0)
+@@columns_117_r_233                                 2 	(obj:0)
+@@columns_118_t_234                                 3 	(obj:0)
+@@columns_118_r_235                                 3 	(obj:0)
+@@columns_119_t_236                                -1 	(obj:0)
+@@columns_119_r_237                                 1 	(obj:0)
+@@columns_120_t_238                                 1 	(obj:0)
+@@columns_120_r_239                                 1 	(obj:0)
+@@columns_121_t_240                                -4 	(obj:0)
+@@columns_121_r_241                                 4 	(obj:0)
+@@columns_122_t_242                                 1 	(obj:0)
+@@columns_122_r_243                                 1 	(obj:0)
+@@columns_123_t_244                                -3 	(obj:0)
+@@columns_123_r_245                                 3 	(obj:0)
+@@columns_124_t_246                                 2 	(obj:0)
+@@columns_124_r_247                                 2 	(obj:0)
+@@columns_125_t_248                                -2 	(obj:0)
+@@columns_125_r_249                                 2 	(obj:0)
+@@columns_126_t_250                                -1 	(obj:0)
+@@columns_126_r_251                                 1 	(obj:0)
+@@columns_127_t_252                                -2 	(obj:0)
+@@columns_127_r_253                                 2 	(obj:0)
+@@columns_128_t_254                                -1 	(obj:0)
+@@columns_128_r_255                                 1 	(obj:0)
+@@columns_129_t_256                                -3 	(obj:0)
+@@columns_129_r_257                                 3 	(obj:0)
+@@columns_130_t_258                                -5 	(obj:0)
+@@columns_130_r_259                                 5 	(obj:0)
+@@columns_131_t_260                                -6 	(obj:0)
+@@columns_131_r_261                                 6 	(obj:0)
+@@columns_132_t_262                                -4 	(obj:0)
+@@columns_132_r_263                                 4 	(obj:0)
+@@columns_133_t_264                                 2 	(obj:0)
+@@columns_133_r_265                                 2 	(obj:0)
+@@columns_134_t_266                                 1 	(obj:0)
+@@columns_134_r_267                                 1 	(obj:0)
+@@columns_135_t_268                                -1 	(obj:0)
+@@columns_135_r_269                                 1 	(obj:0)
+@@columns_136_t_270                                -3 	(obj:0)
+@@columns_136_r_271                                 3 	(obj:0)
+@@columns_137_t_272                                -4 	(obj:0)
+@@columns_137_r_273                                 4 	(obj:0)
+@@columns_138_t_274                                -2 	(obj:0)
+@@columns_138_r_275                                 2 	(obj:0)
+@@columns_139_t_276                                 1 	(obj:0)
+@@columns_139_r_277                                 1 	(obj:0)
+@@columns_140_t_278                                -1 	(obj:0)
+@@columns_140_r_279                                 1 	(obj:0)
+@@columns_141_t_280                                -2 	(obj:0)
+@@columns_141_r_281                                 2 	(obj:0)
+@@columns_142_t_282                                -4 	(obj:0)
+@@columns_142_r_283                                 4 	(obj:0)
+@@columns_143_t_284                                -5 	(obj:0)
+@@columns_143_r_285                                 5 	(obj:0)
+@@columns_144_t_286                                -3 	(obj:0)
+@@columns_144_r_287                                 3 	(obj:0)
+@@columns_145_t_288                                 3 	(obj:0)
+@@columns_145_r_289                                 3 	(obj:0)
+@@columns_146_t_290                                 1 	(obj:0)
+@@columns_146_r_291                                 1 	(obj:0)
+@@columns_147_t_292                                 2 	(obj:0)
+@@columns_147_r_293                                 2 	(obj:0)
+@@columns_148_t_294                                -2 	(obj:0)
+@@columns_148_r_295                                 2 	(obj:0)
+@@columns_149_t_296                                -3 	(obj:0)
+@@columns_149_r_297                                 3 	(obj:0)
+@@columns_150_t_298                                -1 	(obj:0)
+@@columns_150_r_299                                 1 	(obj:0)
+@@columns_151_t_300                                 5 	(obj:0)
+@@columns_151_r_301                                 5 	(obj:0)
+@@columns_152_t_302                                 3 	(obj:0)
+@@columns_152_r_303                                 3 	(obj:0)
+@@columns_153_t_304                                 4 	(obj:0)
+@@columns_153_r_305                                 4 	(obj:0)
+@@columns_154_t_306                                 2 	(obj:0)
+@@columns_154_r_307                                 2 	(obj:0)
+@@columns_155_t_308                                -1 	(obj:0)
+@@columns_155_r_309                                 1 	(obj:0)
+@@columns_156_t_310                                 1 	(obj:0)
+@@columns_156_r_311                                 1 	(obj:0)
+@@columns_157_t_312                                 6 	(obj:0)
+@@columns_157_r_313                                 6 	(obj:0)
+@@columns_158_t_314                                 4 	(obj:0)
+@@columns_158_r_315                                 4 	(obj:0)
+@@columns_159_t_316                                 5 	(obj:0)
+@@columns_159_r_317                                 5 	(obj:0)
+@@columns_160_t_318                                 3 	(obj:0)
+@@columns_160_r_319                                 3 	(obj:0)
+@@columns_161_t_320                                 1 	(obj:0)
+@@columns_161_r_321                                 1 	(obj:0)
+@@columns_162_t_322                                 2 	(obj:0)
+@@columns_162_r_323                                 2 	(obj:0)
+@@columns_163_t_324                                 4 	(obj:0)
+@@columns_163_r_325                                 4 	(obj:0)
+@@columns_164_t_326                                 2 	(obj:0)
+@@columns_164_r_327                                 2 	(obj:0)
+@@columns_165_t_328                                 3 	(obj:0)
+@@columns_165_r_329                                 3 	(obj:0)
+@@columns_166_t_330                                 1 	(obj:0)
+@@columns_166_r_331                                 1 	(obj:0)
+@@columns_167_t_332                                -1 	(obj:0)
+@@columns_167_r_333                                 1 	(obj:0)
+@@columns_168_t_334                                -2 	(obj:0)
+@@columns_168_r_335                                 2 	(obj:0)
+@@columns_169_t_336                                -2 	(obj:0)
+@@columns_169_r_337                                 2 	(obj:0)
+@@columns_170_t_338                                -1 	(obj:0)
+@@columns_170_r_339                                 1 	(obj:0)
+@@columns_171_t_340                                -3 	(obj:0)
+@@columns_171_r_341                                 3 	(obj:0)
+@@columns_172_t_342                                -5 	(obj:0)
+@@columns_172_r_343                                 5 	(obj:0)
+@@columns_173_t_344                                -4 	(obj:0)
+@@columns_173_r_345                                 4 	(obj:0)
+@@columns_174_t_346                                 1 	(obj:0)
+@@columns_174_r_347                                 1 	(obj:0)
+@@columns_175_t_348                                 2 	(obj:0)
+@@columns_175_r_349                                 2 	(obj:0)
+@@columns_176_t_350                                 1 	(obj:0)
+@@columns_176_r_351                                 1 	(obj:0)
+@@columns_177_t_352                                -1 	(obj:0)
+@@columns_177_r_353                                 1 	(obj:0)
+@@columns_178_t_354                                -3 	(obj:0)
+@@columns_178_r_355                                 3 	(obj:0)
+@@columns_179_t_356                                -2 	(obj:0)
+@@columns_179_r_357                                 2 	(obj:0)
+@@columns_180_t_358                                 3 	(obj:0)
+@@columns_180_r_359                                 3 	(obj:0)
+@@columns_181_t_360                                 1 	(obj:0)
+@@columns_181_r_361                                 1 	(obj:0)
+@@columns_182_t_362                                -1 	(obj:0)
+@@columns_182_r_363                                 1 	(obj:0)
+@@columns_183_t_364                                -2 	(obj:0)
+@@columns_183_r_365                                 2 	(obj:0)
+@@columns_184_t_366                                -4 	(obj:0)
+@@columns_184_r_367                                 4 	(obj:0)
+@@columns_185_t_368                                -3 	(obj:0)
+@@columns_185_r_369                                 3 	(obj:0)
+@@columns_186_t_370                                 2 	(obj:0)
+@@columns_186_r_371                                 2 	(obj:0)
+@@columns_187_t_372                                 3 	(obj:0)
+@@columns_187_r_373                                 3 	(obj:0)
+@@columns_188_t_374                                 1 	(obj:0)
+@@columns_188_r_375                                 1 	(obj:0)
+@@columns_189_t_376                                 2 	(obj:0)
+@@columns_189_r_377                                 2 	(obj:0)
+@@columns_190_t_378                                -2 	(obj:0)
+@@columns_190_r_379                                 2 	(obj:0)
+@@columns_191_t_380                                -1 	(obj:0)
+@@columns_191_r_381                                 1 	(obj:0)
+@@columns_192_t_382                                 4 	(obj:0)
+@@columns_192_r_383                                 4 	(obj:0)
+@@columns_193_t_384                                 5 	(obj:0)
+@@columns_193_r_385                                 5 	(obj:0)
+@@columns_194_t_386                                 3 	(obj:0)
+@@columns_194_r_387                                 3 	(obj:0)
+@@columns_195_t_388                                 4 	(obj:0)
+@@columns_195_r_389                                 4 	(obj:0)
+@@columns_196_t_390                                 2 	(obj:0)
+@@columns_196_r_391                                 2 	(obj:0)
+@@columns_197_t_392                                 1 	(obj:0)
+@@columns_197_r_393                                 1 	(obj:0)
+@@columns_198_t_394                                 6 	(obj:0)
+@@columns_198_r_395                                 6 	(obj:0)
+@@columns_199_t_396                                 4 	(obj:0)
+@@columns_199_r_397                                 4 	(obj:0)
+@@columns_200_t_398                                 2 	(obj:0)
+@@columns_200_r_399                                 2 	(obj:0)
+@@columns_201_t_400                                 3 	(obj:0)
+@@columns_201_r_401                                 3 	(obj:0)
+@@columns_202_t_402                                 1 	(obj:0)
+@@columns_202_r_403                                 1 	(obj:0)
+@@columns_203_t_404                                -1 	(obj:0)
+@@columns_203_r_405                                 1 	(obj:0)
+@@columns_204_t_406                                 5 	(obj:0)
+@@columns_204_r_407                                 5 	(obj:0)
+@@columns_205_t_408                                -1 	(obj:0)
+@@columns_205_r_409                                 1 	(obj:0)
+@@columns_206_t_410                                -3 	(obj:0)
+@@columns_206_r_411                                 3 	(obj:0)
+@@columns_207_t_412                                -2 	(obj:0)
+@@columns_207_r_413                                 2 	(obj:0)
+@@columns_208_t_414                                -4 	(obj:0)
+@@columns_208_r_415                                 4 	(obj:0)
+@@columns_209_t_416                                -6 	(obj:0)
+@@columns_209_r_417                                 6 	(obj:0)
+@@columns_210_t_418                                -5 	(obj:0)
+@@columns_210_r_419                                 5 	(obj:0)
+@@columns_211_t_420                                -2 	(obj:0)
+@@columns_211_r_421                                 2 	(obj:0)
+@@columns_212_t_422                                -1 	(obj:0)
+@@columns_212_r_423                                 1 	(obj:0)
+@@columns_213_t_424                                -4 	(obj:0)
+@@columns_213_r_425                                 4 	(obj:0)
+@@columns_214_t_426                                 2 	(obj:0)
+@@columns_214_r_427                                 2 	(obj:0)
+@@columns_215_t_428                                 1 	(obj:0)
+@@columns_215_r_429                                 1 	(obj:0)
+@@columns_216_t_430                                -3 	(obj:0)
+@@columns_216_r_431                                 3 	(obj:0)
+@@columns_217_t_432                                 2 	(obj:0)
+@@columns_217_r_433                                 2 	(obj:0)
+@@columns_218_t_434                                 1 	(obj:0)
+@@columns_218_r_435                                 1 	(obj:0)
+@@columns_219_t_436                                -2 	(obj:0)
+@@columns_219_r_437                                 2 	(obj:0)
+@@columns_220_t_438                                 4 	(obj:0)
+@@columns_220_r_439                                 4 	(obj:0)
+@@columns_221_t_440                                 3 	(obj:0)
+@@columns_221_r_441                                 3 	(obj:0)
+@@columns_222_t_442                                -1 	(obj:0)
+@@columns_222_r_443                                 1 	(obj:0)
+@@columns_223_t_444                                 1 	(obj:0)
+@@columns_223_r_445                                 1 	(obj:0)
+@@columns_224_t_446                                -1 	(obj:0)
+@@columns_224_r_447                                 1 	(obj:0)
+@@columns_225_t_448                                -3 	(obj:0)
+@@columns_225_r_449                                 3 	(obj:0)
+@@columns_226_t_450                                 3 	(obj:0)
+@@columns_226_r_451                                 3 	(obj:0)
+@@columns_227_t_452                                 2 	(obj:0)
+@@columns_227_r_453                                 2 	(obj:0)
+@@columns_228_t_454                                -2 	(obj:0)
+@@columns_228_r_455                                 2 	(obj:0)
+@@columns_229_t_456                                 4 	(obj:0)
+@@columns_229_r_457                                 4 	(obj:0)
+@@columns_230_t_458                                 2 	(obj:0)
+@@columns_230_r_459                                 2 	(obj:0)
+@@columns_231_t_460                                 3 	(obj:0)
+@@columns_231_r_461                                 3 	(obj:0)
+@@columns_232_t_462                                 6 	(obj:0)
+@@columns_232_r_463                                 6 	(obj:0)
+@@columns_233_t_464                                 5 	(obj:0)
+@@columns_233_r_465                                 5 	(obj:0)
+@@columns_234_t_466                                 1 	(obj:0)
+@@columns_234_r_467                                 1 	(obj:0)
+@@columns_235_t_468                                -2 	(obj:0)
+@@columns_235_r_469                                 2 	(obj:0)
+@@columns_236_t_470                                -4 	(obj:0)
+@@columns_236_r_471                                 4 	(obj:0)
+@@columns_237_t_472                                -3 	(obj:0)
+@@columns_237_r_473                                 3 	(obj:0)
+@@columns_238_t_474                                -6 	(obj:0)
+@@columns_238_r_475                                 6 	(obj:0)
+@@columns_239_t_476                                -1 	(obj:0)
+@@columns_239_r_477                                 1 	(obj:0)
+@@columns_240_t_478                                -5 	(obj:0)
+@@columns_240_r_479                                 5 	(obj:0)
+@@columns_241_t_480                                -1 	(obj:0)
+@@columns_241_r_481                                 1 	(obj:0)
+@@columns_242_t_482                                -3 	(obj:0)
+@@columns_242_r_483                                 3 	(obj:0)
+@@columns_243_t_484                                -2 	(obj:0)
+@@columns_243_r_485                                 2 	(obj:0)
+@@columns_244_t_486                                -5 	(obj:0)
+@@columns_244_r_487                                 5 	(obj:0)
+@@columns_245_t_488                                 1 	(obj:0)
+@@columns_245_r_489                                 1 	(obj:0)
+@@columns_246_t_490                                -4 	(obj:0)
+@@columns_246_r_491                                 4 	(obj:0)
+@@columns_247_t_492                                 3 	(obj:0)
+@@columns_247_r_493                                 3 	(obj:0)
+@@columns_248_t_494                                 1 	(obj:0)
+@@columns_248_r_495                                 1 	(obj:0)
+@@columns_249_t_496                                 2 	(obj:0)
+@@columns_249_r_497                                 2 	(obj:0)
+@@columns_250_t_498                                -1 	(obj:0)
+@@columns_250_r_499                                 1 	(obj:0)
+@@columns_251_t_500                                 5 	(obj:0)
+@@columns_251_r_501                                 5 	(obj:0)
+@@columns_252_t_502                                 4 	(obj:0)
+@@columns_252_r_503                                 4 	(obj:0)
+@@columns_253_t_504                                -1 	(obj:0)
+@@columns_253_r_505                                 1 	(obj:0)
+@@columns_254_t_506                                -2 	(obj:0)
+@@columns_254_r_507                                 2 	(obj:0)
+@@columns_255_t_508                                 2 	(obj:0)
+@@columns_255_r_509                                 2 	(obj:0)
+@@columns_256_t_510                                 1 	(obj:0)
+@@columns_256_r_511                                 1 	(obj:0)
+@@columns_257_t_512                                 4 	(obj:0)
+@@columns_257_r_513                                 4 	(obj:0)
+@@columns_258_t_514                                 3 	(obj:0)
+@@columns_258_r_515                                 3 	(obj:0)
+@@columns_259_t_516                                 1 	(obj:0)
+@@columns_259_r_517                                 1 	(obj:0)
+@@columns_260_t_518                                -1 	(obj:0)
+@@columns_260_r_519                                 1 	(obj:0)
+@@columns_261_t_520                                 3 	(obj:0)
+@@columns_261_r_521                                 3 	(obj:0)
+@@columns_262_t_522                                 2 	(obj:0)
+@@columns_262_r_523                                 2 	(obj:0)
+@@columns_263_t_524                                 5 	(obj:0)
+@@columns_263_r_525                                 5 	(obj:0)
+@@columns_264_t_526                                 4 	(obj:0)
+@@columns_264_r_527                                 4 	(obj:0)
+@@columns_265_t_528                                 2 	(obj:0)
+@@columns_265_r_529                                 2 	(obj:0)
+@@columns_266_t_530                                 1 	(obj:0)
+@@columns_266_r_531                                 1 	(obj:0)
+@@columns_267_t_532                                 4 	(obj:0)
+@@columns_267_r_533                                 4 	(obj:0)
+@@columns_268_t_534                                 3 	(obj:0)
+@@columns_268_r_535                                 3 	(obj:0)
+@@columns_269_t_536                                 6 	(obj:0)
+@@columns_269_r_537                                 6 	(obj:0)
+@@columns_270_t_538                                 5 	(obj:0)
+@@columns_270_r_539                                 5 	(obj:0)
+@@columns_271_t_540                                -2 	(obj:0)
+@@columns_271_r_541                                 2 	(obj:0)
+@@columns_272_t_542                                -3 	(obj:0)
+@@columns_272_r_543                                 3 	(obj:0)
+@@columns_273_t_544                                -4 	(obj:0)
+@@columns_273_r_545                                 4 	(obj:0)
+@@columns_274_t_546                                -1 	(obj:0)
+@@columns_274_r_547                                 1 	(obj:0)
+@@columns_275_t_548                                 2 	(obj:0)
+@@columns_275_r_549                                 2 	(obj:0)
+@@columns_276_t_550                                 1 	(obj:0)
+@@columns_276_r_551                                 1 	(obj:0)
+@@columns_277_t_552                                -1 	(obj:0)
+@@columns_277_r_553                                 1 	(obj:0)
+@@columns_278_t_554                                -2 	(obj:0)
+@@columns_278_r_555                                 2 	(obj:0)
+@@columns_279_t_556                                -3 	(obj:0)
+@@columns_279_r_557                                 3 	(obj:0)
+@@columns_280_t_558                                 1 	(obj:0)
+@@columns_280_r_559                                 1 	(obj:0)
+@@columns_281_t_560                                 3 	(obj:0)
+@@columns_281_r_561                                 3 	(obj:0)
+@@columns_282_t_562                                 2 	(obj:0)
+@@columns_282_r_563                                 2 	(obj:0)
+@@columns_283_t_564                                -4 	(obj:0)
+@@columns_283_r_565                                 4 	(obj:0)
+@@columns_284_t_566                                -5 	(obj:0)
+@@columns_284_r_567                                 5 	(obj:0)
+@@columns_285_t_568                                -6 	(obj:0)
+@@columns_285_r_569                                 6 	(obj:0)
+@@columns_286_t_570                                -2 	(obj:0)
+@@columns_286_r_571                                 2 	(obj:0)
+@@columns_287_t_572                                -3 	(obj:0)
+@@columns_287_r_573                                 3 	(obj:0)
+@@columns_288_t_574                                -1 	(obj:0)
+@@columns_288_r_575                                 1 	(obj:0)
+@@columns_289_t_576                                -3 	(obj:0)
+@@columns_289_r_577                                 3 	(obj:0)
+@@columns_290_t_578                                -4 	(obj:0)
+@@columns_290_r_579                                 4 	(obj:0)
+@@columns_291_t_580                                -5 	(obj:0)
+@@columns_291_r_581                                 5 	(obj:0)
+@@columns_292_t_582                                -1 	(obj:0)
+@@columns_292_r_583                                 1 	(obj:0)
+@@columns_293_t_584                                -2 	(obj:0)
+@@columns_293_r_585                                 2 	(obj:0)
+@@columns_294_t_586                                 1 	(obj:0)
+@@columns_294_r_587                                 1 	(obj:0)
+@@rows_1_t_588                                     -2 	(obj:0)
+@@rows_1_r_589                                      2 	(obj:0)
+@@rows_2_t_590                                     -3 	(obj:0)
+@@rows_2_r_591                                      3 	(obj:0)
+@@rows_3_t_592                                      3 	(obj:0)
+@@rows_3_r_593                                      3 	(obj:0)
+@@rows_4_t_594                                      2 	(obj:0)
+@@rows_4_r_595                                      2 	(obj:0)
+@@rows_5_t_596                                      1 	(obj:0)
+@@rows_5_r_597                                      1 	(obj:0)
+@@rows_6_t_598                                     -1 	(obj:0)
+@@rows_6_r_599                                      1 	(obj:0)
+@@rows_7_t_600                                      2 	(obj:0)
+@@rows_7_r_601                                      2 	(obj:0)
+@@rows_8_t_602                                     -1 	(obj:0)
+@@rows_8_r_603                                      1 	(obj:0)
+@@rows_9_t_604                                      5 	(obj:0)
+@@rows_9_r_605                                      5 	(obj:0)
+@@rows_10_t_606                                     4 	(obj:0)
+@@rows_10_r_607                                     4 	(obj:0)
+@@rows_11_t_608                                     3 	(obj:0)
+@@rows_11_r_609                                     3 	(obj:0)
+@@rows_12_t_610                                     1 	(obj:0)
+@@rows_12_r_611                                     1 	(obj:0)
+@@rows_13_t_612                                     3 	(obj:0)
+@@rows_13_r_613                                     3 	(obj:0)
+@@rows_14_t_614                                     1 	(obj:0)
+@@rows_14_r_615                                     1 	(obj:0)
+@@rows_15_t_616                                     6 	(obj:0)
+@@rows_15_r_617                                     6 	(obj:0)
+@@rows_16_t_618                                     5 	(obj:0)
+@@rows_16_r_619                                     5 	(obj:0)
+@@rows_17_t_620                                     4 	(obj:0)
+@@rows_17_r_621                                     4 	(obj:0)
+@@rows_18_t_622                                     2 	(obj:0)
+@@rows_18_r_623                                     2 	(obj:0)
+@@rows_19_t_624                                    -3 	(obj:0)
+@@rows_19_r_625                                     3 	(obj:0)
+@@rows_20_t_626                                    -5 	(obj:0)
+@@rows_20_r_627                                     5 	(obj:0)
+@@rows_21_t_628                                    -6 	(obj:0)
+@@rows_21_r_629                                     6 	(obj:0)
+@@rows_22_t_630                                    -1 	(obj:0)
+@@rows_22_r_631                                     1 	(obj:0)
+@@rows_23_t_632                                    -2 	(obj:0)
+@@rows_23_r_633                                     2 	(obj:0)
+@@rows_24_t_634                                    -4 	(obj:0)
+@@rows_24_r_635                                     4 	(obj:0)
+@@rows_25_t_636                                    -2 	(obj:0)
+@@rows_25_r_637                                     2 	(obj:0)
+@@rows_26_t_638                                    -4 	(obj:0)
+@@rows_26_r_639                                     4 	(obj:0)
+@@rows_27_t_640                                    -5 	(obj:0)
+@@rows_27_r_641                                     5 	(obj:0)
+@@rows_28_t_642                                     1 	(obj:0)
+@@rows_28_r_643                                     1 	(obj:0)
+@@rows_29_t_644                                    -1 	(obj:0)
+@@rows_29_r_645                                     1 	(obj:0)
+@@rows_30_t_646                                    -3 	(obj:0)
+@@rows_30_r_647                                     3 	(obj:0)
+@@rows_31_t_648                                    -1 	(obj:0)
+@@rows_31_r_649                                     1 	(obj:0)
+@@rows_32_t_650                                    -3 	(obj:0)
+@@rows_32_r_651                                     3 	(obj:0)
+@@rows_33_t_652                                    -4 	(obj:0)
+@@rows_33_r_653                                     4 	(obj:0)
+@@rows_34_t_654                                     2 	(obj:0)
+@@rows_34_r_655                                     2 	(obj:0)
+@@rows_35_t_656                                     1 	(obj:0)
+@@rows_35_r_657                                     1 	(obj:0)
+@@rows_36_t_658                                    -2 	(obj:0)
+@@rows_36_r_659                                     2 	(obj:0)
+@@rows_37_t_660                                     1 	(obj:0)
+@@rows_37_r_661                                     1 	(obj:0)
+@@rows_38_t_662                                    -1 	(obj:0)
+@@rows_38_r_663                                     1 	(obj:0)
+@@rows_39_t_664                                    -2 	(obj:0)
+@@rows_39_r_665                                     2 	(obj:0)
+@@rows_40_t_666                                     4 	(obj:0)
+@@rows_40_r_667                                     4 	(obj:0)
+@@rows_41_t_668                                     3 	(obj:0)
+@@rows_41_r_669                                     3 	(obj:0)
+@@rows_42_t_670                                     2 	(obj:0)
+@@rows_42_r_671                                     2 	(obj:0)
+@@rows_43_t_672                                    -6 	(obj:0)
+@@rows_43_r_673                                     6 	(obj:0)
+@@rows_44_t_674                                    -1 	(obj:0)
+@@rows_44_r_675                                     1 	(obj:0)
+@@rows_45_t_676                                    -2 	(obj:0)
+@@rows_45_r_677                                     2 	(obj:0)
+@@rows_46_t_678                                    -3 	(obj:0)
+@@rows_46_r_679                                     3 	(obj:0)
+@@rows_47_t_680                                    -4 	(obj:0)
+@@rows_47_r_681                                     4 	(obj:0)
+@@rows_48_t_682                                    -5 	(obj:0)
+@@rows_48_r_683                                     5 	(obj:0)
+@@rows_49_t_684                                     6 	(obj:0)
+@@rows_49_r_685                                     6 	(obj:0)
+@@rows_50_t_686                                     5 	(obj:0)
+@@rows_50_r_687                                     5 	(obj:0)
+@@rows_51_t_688                                     4 	(obj:0)
+@@rows_51_r_689                                     4 	(obj:0)
+@@rows_52_t_690                                     3 	(obj:0)
+@@rows_52_r_691                                     3 	(obj:0)
+@@rows_53_t_692                                     2 	(obj:0)
+@@rows_53_r_693                                     2 	(obj:0)
+@@rows_54_t_694                                     1 	(obj:0)
+@@rows_54_r_695                                     1 	(obj:0)
+@@rows_55_t_696                                     1 	(obj:0)
+@@rows_55_r_697                                     1 	(obj:0)
+@@rows_56_t_698                                    -5 	(obj:0)
+@@rows_56_r_699                                     5 	(obj:0)
+@@rows_57_t_700                                    -1 	(obj:0)
+@@rows_57_r_701                                     1 	(obj:0)
+@@rows_58_t_702                                    -2 	(obj:0)
+@@rows_58_r_703                                     2 	(obj:0)
+@@rows_59_t_704                                    -3 	(obj:0)
+@@rows_59_r_705                                     3 	(obj:0)
+@@rows_60_t_706                                    -4 	(obj:0)
+@@rows_60_r_707                                     4 	(obj:0)
+@@rows_61_t_708                                     2 	(obj:0)
+@@rows_61_r_709                                     2 	(obj:0)
+@@rows_62_t_710                                    -4 	(obj:0)
+@@rows_62_r_711                                     4 	(obj:0)
+@@rows_63_t_712                                     1 	(obj:0)
+@@rows_63_r_713                                     1 	(obj:0)
+@@rows_64_t_714                                    -1 	(obj:0)
+@@rows_64_r_715                                     1 	(obj:0)
+@@rows_65_t_716                                    -2 	(obj:0)
+@@rows_65_r_717                                     2 	(obj:0)
+@@rows_66_t_718                                    -3 	(obj:0)
+@@rows_66_r_719                                     3 	(obj:0)
+@@rows_67_t_720                                     3 	(obj:0)
+@@rows_67_r_721                                     3 	(obj:0)
+@@rows_68_t_722                                    -3 	(obj:0)
+@@rows_68_r_723                                     3 	(obj:0)
+@@rows_69_t_724                                     2 	(obj:0)
+@@rows_69_r_725                                     2 	(obj:0)
+@@rows_70_t_726                                     1 	(obj:0)
+@@rows_70_r_727                                     1 	(obj:0)
+@@rows_71_t_728                                    -1 	(obj:0)
+@@rows_71_r_729                                     1 	(obj:0)
+@@rows_72_t_730                                    -2 	(obj:0)
+@@rows_72_r_731                                     2 	(obj:0)
+@@rows_73_t_732                                     4 	(obj:0)
+@@rows_73_r_733                                     4 	(obj:0)
+@@rows_74_t_734                                    -2 	(obj:0)
+@@rows_74_r_735                                     2 	(obj:0)
+@@rows_75_t_736                                     3 	(obj:0)
+@@rows_75_r_737                                     3 	(obj:0)
+@@rows_76_t_738                                     2 	(obj:0)
+@@rows_76_r_739                                     2 	(obj:0)
+@@rows_77_t_740                                     1 	(obj:0)
+@@rows_77_r_741                                     1 	(obj:0)
+@@rows_78_t_742                                    -1 	(obj:0)
+@@rows_78_r_743                                     1 	(obj:0)
+@@rows_79_t_744                                     5 	(obj:0)
+@@rows_79_r_745                                     5 	(obj:0)
+@@rows_80_t_746                                    -1 	(obj:0)
+@@rows_80_r_747                                     1 	(obj:0)
+@@rows_81_t_748                                     4 	(obj:0)
+@@rows_81_r_749                                     4 	(obj:0)
+@@rows_82_t_750                                     3 	(obj:0)
+@@rows_82_r_751                                     3 	(obj:0)
+@@rows_83_t_752                                     2 	(obj:0)
+@@rows_83_r_753                                     2 	(obj:0)
+@@rows_84_t_754                                     1 	(obj:0)
+@@rows_84_r_755                                     1 	(obj:0)
+@@rows_85_t_756                                     4 	(obj:0)
+@@rows_85_r_757                                     4 	(obj:0)
+@@rows_86_t_758                                    -1 	(obj:0)
+@@rows_86_r_759                                     1 	(obj:0)
+@@rows_87_t_760                                     3 	(obj:0)
+@@rows_87_r_761                                     3 	(obj:0)
+@@rows_88_t_762                                     2 	(obj:0)
+@@rows_88_r_763                                     2 	(obj:0)
+@@rows_89_t_764                                     1 	(obj:0)
+@@rows_89_r_765                                     1 	(obj:0)
+@@rows_90_t_766                                    -2 	(obj:0)
+@@rows_90_r_767                                     2 	(obj:0)
+@@rows_91_t_768                                    -4 	(obj:0)
+@@rows_91_r_769                                     4 	(obj:0)
+@@rows_92_t_770                                    -5 	(obj:0)
+@@rows_92_r_771                                     5 	(obj:0)
+@@rows_93_t_772                                    -1 	(obj:0)
+@@rows_93_r_773                                     1 	(obj:0)
+@@rows_94_t_774                                    -2 	(obj:0)
+@@rows_94_r_775                                     2 	(obj:0)
+@@rows_95_t_776                                    -3 	(obj:0)
+@@rows_95_r_777                                     3 	(obj:0)
+@@rows_96_t_778                                    -6 	(obj:0)
+@@rows_96_r_779                                     6 	(obj:0)
+@@rows_97_t_780                                     1 	(obj:0)
+@@rows_97_r_781                                     1 	(obj:0)
+@@rows_98_t_782                                     5 	(obj:0)
+@@rows_98_r_783                                     5 	(obj:0)
+@@rows_99_t_784                                     4 	(obj:0)
+@@rows_99_r_785                                     4 	(obj:0)
+@@rows_100_t_786                                    3 	(obj:0)
+@@rows_100_r_787                                    3 	(obj:0)
+@@rows_101_t_788                                    2 	(obj:0)
+@@rows_101_r_789                                    2 	(obj:0)
+@@rows_102_t_790                                   -1 	(obj:0)
+@@rows_102_r_791                                    1 	(obj:0)
+@@rows_103_t_792                                   -3 	(obj:0)
+@@rows_103_r_793                                    3 	(obj:0)
+@@rows_104_t_794                                    1 	(obj:0)
+@@rows_104_r_795                                    1 	(obj:0)
+@@rows_105_t_796                                   -4 	(obj:0)
+@@rows_105_r_797                                    4 	(obj:0)
+@@rows_106_t_798                                   -1 	(obj:0)
+@@rows_106_r_799                                    1 	(obj:0)
+@@rows_107_t_800                                   -2 	(obj:0)
+@@rows_107_r_801                                    2 	(obj:0)
+@@rows_108_t_802                                   -5 	(obj:0)
+@@rows_108_r_803                                    5 	(obj:0)
+@@rows_109_t_804                                   -2 	(obj:0)
+@@rows_109_r_805                                    2 	(obj:0)
+@@rows_110_t_806                                    2 	(obj:0)
+@@rows_110_r_807                                    2 	(obj:0)
+@@rows_111_t_808                                   -3 	(obj:0)
+@@rows_111_r_809                                    3 	(obj:0)
+@@rows_112_t_810                                    1 	(obj:0)
+@@rows_112_r_811                                    1 	(obj:0)
+@@rows_113_t_812                                   -1 	(obj:0)
+@@rows_113_r_813                                    1 	(obj:0)
+@@rows_114_t_814                                   -4 	(obj:0)
+@@rows_114_r_815                                    4 	(obj:0)
+@@rows_115_t_816                                   -1 	(obj:0)
+@@rows_115_r_817                                    1 	(obj:0)
+@@rows_116_t_818                                    3 	(obj:0)
+@@rows_116_r_819                                    3 	(obj:0)
+@@rows_117_t_820                                   -2 	(obj:0)
+@@rows_117_r_821                                    2 	(obj:0)
+@@rows_118_t_822                                    2 	(obj:0)
+@@rows_118_r_823                                    2 	(obj:0)
+@@rows_119_t_824                                    1 	(obj:0)
+@@rows_119_r_825                                    1 	(obj:0)
+@@rows_120_t_826                                   -3 	(obj:0)
+@@rows_120_r_827                                    3 	(obj:0)
+@@rows_121_t_828                                    2 	(obj:0)
+@@rows_121_r_829                                    2 	(obj:0)
+@@rows_122_t_830                                    6 	(obj:0)
+@@rows_122_r_831                                    6 	(obj:0)
+@@rows_123_t_832                                    1 	(obj:0)
+@@rows_123_r_833                                    1 	(obj:0)
+@@rows_124_t_834                                    5 	(obj:0)
+@@rows_124_r_835                                    5 	(obj:0)
+@@rows_125_t_836                                    4 	(obj:0)
+@@rows_125_r_837                                    4 	(obj:0)
+@@rows_126_t_838                                    3 	(obj:0)
+@@rows_126_r_839                                    3 	(obj:0)
+@@rows_127_t_840                                    4 	(obj:0)
+@@rows_127_r_841                                    4 	(obj:0)
+@@rows_128_t_842                                    5 	(obj:0)
+@@rows_128_r_843                                    5 	(obj:0)
+@@rows_129_t_844                                    2 	(obj:0)
+@@rows_129_r_845                                    2 	(obj:0)
+@@rows_130_t_846                                    1 	(obj:0)
+@@rows_130_r_847                                    1 	(obj:0)
+@@rows_131_t_848                                   -1 	(obj:0)
+@@rows_131_r_849                                    1 	(obj:0)
+@@rows_132_t_850                                    3 	(obj:0)
+@@rows_132_r_851                                    3 	(obj:0)
+@@rows_133_t_852                                   -4 	(obj:0)
+@@rows_133_r_853                                    4 	(obj:0)
+@@rows_134_t_854                                    1 	(obj:0)
+@@rows_134_r_855                                    1 	(obj:0)
+@@rows_135_t_856                                   -2 	(obj:0)
+@@rows_135_r_857                                    2 	(obj:0)
+@@rows_136_t_858                                   -3 	(obj:0)
+@@rows_136_r_859                                    3 	(obj:0)
+@@rows_137_t_860                                   -5 	(obj:0)
+@@rows_137_r_861                                    5 	(obj:0)
+@@rows_138_t_862                                   -1 	(obj:0)
+@@rows_138_r_863                                    1 	(obj:0)
+@@rows_139_t_864                                   -5 	(obj:0)
+@@rows_139_r_865                                    5 	(obj:0)
+@@rows_140_t_866                                   -1 	(obj:0)
+@@rows_140_r_867                                    1 	(obj:0)
+@@rows_141_t_868                                   -3 	(obj:0)
+@@rows_141_r_869                                    3 	(obj:0)
+@@rows_142_t_870                                   -4 	(obj:0)
+@@rows_142_r_871                                    4 	(obj:0)
+@@rows_143_t_872                                   -6 	(obj:0)
+@@rows_143_r_873                                    6 	(obj:0)
+@@rows_144_t_874                                   -2 	(obj:0)
+@@rows_144_r_875                                    2 	(obj:0)
+@@rows_145_t_876                                   -2 	(obj:0)
+@@rows_145_r_877                                    2 	(obj:0)
+@@rows_146_t_878                                    2 	(obj:0)
+@@rows_146_r_879                                    2 	(obj:0)
+@@rows_147_t_880                                    3 	(obj:0)
+@@rows_147_r_881                                    3 	(obj:0)
+@@rows_148_t_882                                   -1 	(obj:0)
+@@rows_148_r_883                                    1 	(obj:0)
+@@rows_149_t_884                                   -3 	(obj:0)
+@@rows_149_r_885                                    3 	(obj:0)
+@@rows_150_t_886                                    1 	(obj:0)
+@@rows_150_r_887                                    1 	(obj:0)
+@@rows_151_t_888                                   -1 	(obj:0)
+@@rows_151_r_889                                    1 	(obj:0)
+@@rows_152_t_890                                    3 	(obj:0)
+@@rows_152_r_891                                    3 	(obj:0)
+@@rows_153_t_892                                    4 	(obj:0)
+@@rows_153_r_893                                    4 	(obj:0)
+@@rows_154_t_894                                    1 	(obj:0)
+@@rows_154_r_895                                    1 	(obj:0)
+@@rows_155_t_896                                   -2 	(obj:0)
+@@rows_155_r_897                                    2 	(obj:0)
+@@rows_156_t_898                                    2 	(obj:0)
+@@rows_156_r_899                                    2 	(obj:0)
+@@rows_157_t_900                                    1 	(obj:0)
+@@rows_157_r_901                                    1 	(obj:0)
+@@rows_158_t_902                                    5 	(obj:0)
+@@rows_158_r_903                                    5 	(obj:0)
+@@rows_159_t_904                                    6 	(obj:0)
+@@rows_159_r_905                                    6 	(obj:0)
+@@rows_160_t_906                                    3 	(obj:0)
+@@rows_160_r_907                                    3 	(obj:0)
+@@rows_161_t_908                                    2 	(obj:0)
+@@rows_161_r_909                                    2 	(obj:0)
+@@rows_162_t_910                                    4 	(obj:0)
+@@rows_162_r_911                                    4 	(obj:0)
+@@rows_163_t_912                                   -3 	(obj:0)
+@@rows_163_r_913                                    3 	(obj:0)
+@@rows_164_t_914                                    1 	(obj:0)
+@@rows_164_r_915                                    1 	(obj:0)
+@@rows_165_t_916                                    2 	(obj:0)
+@@rows_165_r_917                                    2 	(obj:0)
+@@rows_166_t_918                                   -1 	(obj:0)
+@@rows_166_r_919                                    1 	(obj:0)
+@@rows_167_t_920                                   -2 	(obj:0)
+@@rows_167_r_921                                    2 	(obj:0)
+@@rows_168_t_922                                   -4 	(obj:0)
+@@rows_168_r_923                                    4 	(obj:0)
+@@rows_169_t_924                                   -1 	(obj:0)
+@@rows_169_r_925                                    1 	(obj:0)
+@@rows_170_t_926                                   -3 	(obj:0)
+@@rows_170_r_927                                    3 	(obj:0)
+@@rows_171_t_928                                   -4 	(obj:0)
+@@rows_171_r_929                                    4 	(obj:0)
+@@rows_172_t_930                                   -5 	(obj:0)
+@@rows_172_r_931                                    5 	(obj:0)
+@@rows_173_t_932                                    1 	(obj:0)
+@@rows_173_r_933                                    1 	(obj:0)
+@@rows_174_t_934                                   -2 	(obj:0)
+@@rows_174_r_935                                    2 	(obj:0)
+@@rows_175_t_936                                    1 	(obj:0)
+@@rows_175_r_937                                    1 	(obj:0)
+@@rows_176_t_938                                   -2 	(obj:0)
+@@rows_176_r_939                                    2 	(obj:0)
+@@rows_177_t_940                                   -3 	(obj:0)
+@@rows_177_r_941                                    3 	(obj:0)
+@@rows_178_t_942                                   -4 	(obj:0)
+@@rows_178_r_943                                    4 	(obj:0)
+@@rows_179_t_944                                    2 	(obj:0)
+@@rows_179_r_945                                    2 	(obj:0)
+@@rows_180_t_946                                   -1 	(obj:0)
+@@rows_180_r_947                                    1 	(obj:0)
+@@rows_181_t_948                                    3 	(obj:0)
+@@rows_181_r_949                                    3 	(obj:0)
+@@rows_182_t_950                                    2 	(obj:0)
+@@rows_182_r_951                                    2 	(obj:0)
+@@rows_183_t_952                                   -1 	(obj:0)
+@@rows_183_r_953                                    1 	(obj:0)
+@@rows_184_t_954                                   -2 	(obj:0)
+@@rows_184_r_955                                    2 	(obj:0)
+@@rows_185_t_956                                    4 	(obj:0)
+@@rows_185_r_957                                    4 	(obj:0)
+@@rows_186_t_958                                    1 	(obj:0)
+@@rows_186_r_959                                    1 	(obj:0)
+@@rows_187_t_960                                    4 	(obj:0)
+@@rows_187_r_961                                    4 	(obj:0)
+@@rows_188_t_962                                    3 	(obj:0)
+@@rows_188_r_963                                    3 	(obj:0)
+@@rows_189_t_964                                    1 	(obj:0)
+@@rows_189_r_965                                    1 	(obj:0)
+@@rows_190_t_966                                   -1 	(obj:0)
+@@rows_190_r_967                                    1 	(obj:0)
+@@rows_191_t_968                                    5 	(obj:0)
+@@rows_191_r_969                                    5 	(obj:0)
+@@rows_192_t_970                                    2 	(obj:0)
+@@rows_192_r_971                                    2 	(obj:0)
+@@rows_193_t_972                                    5 	(obj:0)
+@@rows_193_r_973                                    5 	(obj:0)
+@@rows_194_t_974                                    4 	(obj:0)
+@@rows_194_r_975                                    4 	(obj:0)
+@@rows_195_t_976                                    2 	(obj:0)
+@@rows_195_r_977                                    2 	(obj:0)
+@@rows_196_t_978                                    1 	(obj:0)
+@@rows_196_r_979                                    1 	(obj:0)
+@@rows_197_t_980                                    6 	(obj:0)
+@@rows_197_r_981                                    6 	(obj:0)
+@@rows_198_t_982                                    3 	(obj:0)
+@@rows_198_r_983                                    3 	(obj:0)
+@@rows_199_t_984                                   -1 	(obj:0)
+@@rows_199_r_985                                    1 	(obj:0)
+@@rows_200_t_986                                   -2 	(obj:0)
+@@rows_200_r_987                                    2 	(obj:0)
+@@rows_201_t_988                                   -4 	(obj:0)
+@@rows_201_r_989                                    4 	(obj:0)
+@@rows_202_t_990                                   -5 	(obj:0)
+@@rows_202_r_991                                    5 	(obj:0)
+@@rows_203_t_992                                   -6 	(obj:0)
+@@rows_203_r_993                                    6 	(obj:0)
+@@rows_204_t_994                                   -3 	(obj:0)
+@@rows_204_r_995                                    3 	(obj:0)
+@@rows_205_t_996                                    2 	(obj:0)
+@@rows_205_r_997                                    2 	(obj:0)
+@@rows_206_t_998                                    1 	(obj:0)
+@@rows_206_r_999                                    1 	(obj:0)
+@@rows_207_t_1000                                  -1 	(obj:0)
+@@rows_207_r_1001                                   1 	(obj:0)
+@@rows_208_t_1002                                  -2 	(obj:0)
+@@rows_208_r_1003                                   2 	(obj:0)
+@@rows_209_t_1004                                  -3 	(obj:0)
+@@rows_209_r_1005                                   3 	(obj:0)
+@@rows_210_t_1006                                   3 	(obj:0)
+@@rows_210_r_1007                                   3 	(obj:0)
+@@rows_211_t_1008                                  -2 	(obj:0)
+@@rows_211_r_1009                                   2 	(obj:0)
+@@rows_212_t_1010                                  -1 	(obj:0)
+@@rows_212_r_1011                                   1 	(obj:0)
+@@rows_213_t_1012                                  -4 	(obj:0)
+@@rows_213_r_1013                                   4 	(obj:0)
+@@rows_214_t_1014                                  -3 	(obj:0)
+@@rows_214_r_1015                                   3 	(obj:0)
+@@rows_215_t_1016                                   1 	(obj:0)
+@@rows_215_r_1017                                   1 	(obj:0)
+@@rows_216_t_1018                                   2 	(obj:0)
+@@rows_216_r_1019                                   2 	(obj:0)
+@@rows_217_t_1020                                   2 	(obj:0)
+@@rows_217_r_1021                                   2 	(obj:0)
+@@rows_218_t_1022                                   1 	(obj:0)
+@@rows_218_r_1023                                   1 	(obj:0)
+@@rows_219_t_1024                                  -2 	(obj:0)
+@@rows_219_r_1025                                   2 	(obj:0)
+@@rows_220_t_1026                                  -1 	(obj:0)
+@@rows_220_r_1027                                   1 	(obj:0)
+@@rows_221_t_1028                                   3 	(obj:0)
+@@rows_221_r_1029                                   3 	(obj:0)
+@@rows_222_t_1030                                   4 	(obj:0)
+@@rows_222_r_1031                                   4 	(obj:0)
+@@rows_223_t_1032                                   1 	(obj:0)
+@@rows_223_r_1033                                   1 	(obj:0)
+@@rows_224_t_1034                                  -1 	(obj:0)
+@@rows_224_r_1035                                   1 	(obj:0)
+@@rows_225_t_1036                                  -3 	(obj:0)
+@@rows_225_r_1037                                   3 	(obj:0)
+@@rows_226_t_1038                                  -2 	(obj:0)
+@@rows_226_r_1039                                   2 	(obj:0)
+@@rows_227_t_1040                                   2 	(obj:0)
+@@rows_227_r_1041                                   2 	(obj:0)
+@@rows_228_t_1042                                   3 	(obj:0)
+@@rows_228_r_1043                                   3 	(obj:0)
+@@rows_229_t_1044                                   4 	(obj:0)
+@@rows_229_r_1045                                   4 	(obj:0)
+@@rows_230_t_1046                                   2 	(obj:0)
+@@rows_230_r_1047                                   2 	(obj:0)
+@@rows_231_t_1048                                   3 	(obj:0)
+@@rows_231_r_1049                                   3 	(obj:0)
+@@rows_232_t_1050                                   1 	(obj:0)
+@@rows_232_r_1051                                   1 	(obj:0)
+@@rows_233_t_1052                                   5 	(obj:0)
+@@rows_233_r_1053                                   5 	(obj:0)
+@@rows_234_t_1054                                   6 	(obj:0)
+@@rows_234_r_1055                                   6 	(obj:0)
+@@rows_235_t_1056                                   3 	(obj:0)
+@@rows_235_r_1057                                   3 	(obj:0)
+@@rows_236_t_1058                                   1 	(obj:0)
+@@rows_236_r_1059                                   1 	(obj:0)
+@@rows_237_t_1060                                   2 	(obj:0)
+@@rows_237_r_1061                                   2 	(obj:0)
+@@rows_238_t_1062                                  -1 	(obj:0)
+@@rows_238_r_1063                                   1 	(obj:0)
+@@rows_239_t_1064                                   4 	(obj:0)
+@@rows_239_r_1065                                   4 	(obj:0)
+@@rows_240_t_1066                                   5 	(obj:0)
+@@rows_240_r_1067                                   5 	(obj:0)
+@@rows_241_t_1068                                  -1 	(obj:0)
+@@rows_241_r_1069                                   1 	(obj:0)
+@@rows_242_t_1070                                  -3 	(obj:0)
+@@rows_242_r_1071                                   3 	(obj:0)
+@@rows_243_t_1072                                  -2 	(obj:0)
+@@rows_243_r_1073                                   2 	(obj:0)
+@@rows_244_t_1074                                  -5 	(obj:0)
+@@rows_244_r_1075                                   5 	(obj:0)
+@@rows_245_t_1076                                  -4 	(obj:0)
+@@rows_245_r_1077                                   4 	(obj:0)
+@@rows_246_t_1078                                   1 	(obj:0)
+@@rows_246_r_1079                                   1 	(obj:0)
+@@rows_247_t_1080                                  -2 	(obj:0)
+@@rows_247_r_1081                                   2 	(obj:0)
+@@rows_248_t_1082                                  -4 	(obj:0)
+@@rows_248_r_1083                                   4 	(obj:0)
+@@rows_249_t_1084                                  -3 	(obj:0)
+@@rows_249_r_1085                                   3 	(obj:0)
+@@rows_250_t_1086                                  -6 	(obj:0)
+@@rows_250_r_1087                                   6 	(obj:0)
+@@rows_251_t_1088                                  -5 	(obj:0)
+@@rows_251_r_1089                                   5 	(obj:0)
+@@rows_252_t_1090                                  -1 	(obj:0)
+@@rows_252_r_1091                                   1 	(obj:0)
+@@rows_253_t_1092                                   3 	(obj:0)
+@@rows_253_r_1093                                   3 	(obj:0)
+@@rows_254_t_1094                                   4 	(obj:0)
+@@rows_254_r_1095                                   4 	(obj:0)
+@@rows_255_t_1096                                   2 	(obj:0)
+@@rows_255_r_1097                                   2 	(obj:0)
+@@rows_256_t_1098                                   6 	(obj:0)
+@@rows_256_r_1099                                   6 	(obj:0)
+@@rows_257_t_1100                                   1 	(obj:0)
+@@rows_257_r_1101                                   1 	(obj:0)
+@@rows_258_t_1102                                   5 	(obj:0)
+@@rows_258_r_1103                                   5 	(obj:0)
+@@rows_259_t_1104                                  -3 	(obj:0)
+@@rows_259_r_1105                                   3 	(obj:0)
+@@rows_260_t_1106                                   1 	(obj:0)
+@@rows_260_r_1107                                   1 	(obj:0)
+@@rows_261_t_1108                                  -1 	(obj:0)
+@@rows_261_r_1109                                   1 	(obj:0)
+@@rows_262_t_1110                                   3 	(obj:0)
+@@rows_262_r_1111                                   3 	(obj:0)
+@@rows_263_t_1112                                  -2 	(obj:0)
+@@rows_263_r_1113                                   2 	(obj:0)
+@@rows_264_t_1114                                   2 	(obj:0)
+@@rows_264_r_1115                                   2 	(obj:0)
+@@rows_265_t_1116                                  -4 	(obj:0)
+@@rows_265_r_1117                                   4 	(obj:0)
+@@rows_266_t_1118                                  -1 	(obj:0)
+@@rows_266_r_1119                                   1 	(obj:0)
+@@rows_267_t_1120                                  -2 	(obj:0)
+@@rows_267_r_1121                                   2 	(obj:0)
+@@rows_268_t_1122                                   2 	(obj:0)
+@@rows_268_r_1123                                   2 	(obj:0)
+@@rows_269_t_1124                                  -3 	(obj:0)
+@@rows_269_r_1125                                   3 	(obj:0)
+@@rows_270_t_1126                                   1 	(obj:0)
+@@rows_270_r_1127                                   1 	(obj:0)
+@@rows_271_t_1128                                  -2 	(obj:0)
+@@rows_271_r_1129                                   2 	(obj:0)
+@@rows_272_t_1130                                   1 	(obj:0)
+@@rows_272_r_1131                                   1 	(obj:0)
+@@rows_273_t_1132                                   2 	(obj:0)
+@@rows_273_r_1133                                   2 	(obj:0)
+@@rows_274_t_1134                                   4 	(obj:0)
+@@rows_274_r_1135                                   4 	(obj:0)
+@@rows_275_t_1136                                  -1 	(obj:0)
+@@rows_275_r_1137                                   1 	(obj:0)
+@@rows_276_t_1138                                   3 	(obj:0)
+@@rows_276_r_1139                                   3 	(obj:0)
+@@rows_277_t_1140                                  -6 	(obj:0)
+@@rows_277_r_1141                                   6 	(obj:0)
+@@rows_278_t_1142                                  -3 	(obj:0)
+@@rows_278_r_1143                                   3 	(obj:0)
+@@rows_279_t_1144                                  -2 	(obj:0)
+@@rows_279_r_1145                                   2 	(obj:0)
+@@rows_280_t_1146                                  -4 	(obj:0)
+@@rows_280_r_1147                                   4 	(obj:0)
+@@rows_281_t_1148                                  -5 	(obj:0)
+@@rows_281_r_1149                                   5 	(obj:0)
+@@rows_282_t_1150                                  -1 	(obj:0)
+@@rows_282_r_1151                                   1 	(obj:0)
+@@rows_283_t_1152                                  -1 	(obj:0)
+@@rows_283_r_1153                                   1 	(obj:0)
+@@rows_284_t_1154                                   2 	(obj:0)
+@@rows_284_r_1155                                   2 	(obj:0)
+@@rows_285_t_1156                                   3 	(obj:0)
+@@rows_285_r_1157                                   3 	(obj:0)
+@@rows_286_t_1158                                   1 	(obj:0)
+@@rows_286_r_1159                                   1 	(obj:0)
+@@rows_287_t_1160                                   5 	(obj:0)
+@@rows_287_r_1161                                   5 	(obj:0)
+@@rows_288_t_1162                                   4 	(obj:0)
+@@rows_288_r_1163                                   4 	(obj:0)
+@@rows_289_t_1164                                  -5 	(obj:0)
+@@rows_289_r_1165                                   5 	(obj:0)
+@@rows_290_t_1166                                  -2 	(obj:0)
+@@rows_290_r_1167                                   2 	(obj:0)
+@@rows_291_t_1168                                  -1 	(obj:0)
+@@rows_291_r_1169                                   1 	(obj:0)
+@@rows_292_t_1170                                  -3 	(obj:0)
+@@rows_292_r_1171                                   3 	(obj:0)
+@@rows_293_t_1172                                   1 	(obj:0)
+@@rows_293_r_1173                                   1 	(obj:0)
+@@rows_294_t_1174                                  -4 	(obj:0)
+@@rows_294_r_1175                                   4 	(obj:0)
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       2.00
+  solving          :       2.00
+  presolving       :       0.00 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (3 #copies) (minimal 0.00, maximal 0.00, average 0.00)
+Original Problem   :
+  Problem name     : Sudoku2.zpl
+  Variables        : 1225 (0 binary, 49 integer, 0 implicit integer, 1176 continuous)
+  Constraints      : 1782 initial, 1782 maximal
+  Objective        : minimize, 0 non-zeros (abs.min = 1e+20, abs.max = -1e+20)
+Presolved Problem  :
+  Problem name     : t_Sudoku2.zpl
+  Variables        : 1961 (2 binary, 35 integer, 1924 implicit integer, 0 continuous)
+  Constraints      : 912 initial, 915 maximal
+  Objective        : minimize, 0 non-zeros (abs.min = 1e+20, abs.max = -1e+20)
+  Nonzeros         : 2202 constraint, 0 clique table
+Presolvers         :   ExecTime  SetupTime  Calls  FixedVars   AggrVars   ChgTypes  ChgBounds   AddHoles    DelCons    AddCons   ChgSides   ChgCoefs
+  boundshift       :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  convertinttobin  :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  domcol           :       0.00       0.00      3          0          0          0          0          0          0          0          0          0
+  dualagg          :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualcomp         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualinfer        :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualsparsify     :       0.00       0.00      2          0          0          0          0          0          0          0          0          0
+  gateextraction   :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  implics          :       0.00       0.00      5          0          0          0          0          0          0          0          0          0
+  inttobinary      :       0.00       0.00     10          0          2          2          0          0          0          0          0          0
+  milp             :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  qpkktref         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  redvub           :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  sparsify         :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  stuffing         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  trivial          :       0.00       0.00     10        742          0          0          0          0          0          0          0          0
+  tworowbnd        :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualfix          :       0.00       0.00     10        520          0          0          0          0          0          0          0          0
+  genvbounds       :       0.00       0.00      2          0          0          0          0          0          0          0          0          0
+  probing          :       0.00       0.00      2          0          0          0          0          0          0          0          0          0
+  pseudoobj        :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  symmetry         :       0.00       0.00      1          0          0          0          0          0          0         10          0          0
+  vbounds          :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  varbound         :       0.00       0.00      9          0          0          0          0          0          0          0          0          0
+  linear           :       0.00       0.00     15          8        190          0       2593          0        787          0          0          0
+  bounddisjunction :       0.00       0.00      2          0          0          0          0          0         12          0          0          0
+  nonlinear        :       0.00       0.00     18          0          0          0        927          0         64        -10          0          0
+  benders          :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  components       :       0.00       0.00      2          0          0          0          0          0          0          0          0          0
+  root node        :          -          -      -       1316          -          -       6074          -          -          -          -          -
+Constraints        :     Number  MaxNumber  #Separate #Propagate    #EnfoLP    #EnfoRelax  #EnfoPS    #Check   #ResProp    Cutoffs    DomReds       Cuts    Applied      Conss   Children
+  benderslp        :          0          0          0          0          0          0          0         24          0          0          0          0          0          0          0
+  integral         :          0          0          0          0          0          0          0         24          0          0          0          0          0          0          0
+  varbound         :         12         12          5        362          0          0          0         19          0          0          0          0          0          0          0
+  linear           :        364        364          5        362          0          0          0         22          3          5        712          0          0          0          0
+  bounddisjunction :         12+        15          0         46          0          0          0          0          0          0          0          0          0          0          0
+  nonlinear        :        524        524          5        357          0          0          0          7          0         19       1820         46         46          0          0
+  benders          :          0          0          0          0          0          0          0          2          0          0          0          0          0          0          0
+  countsols        :          0          0          0          0          0          0          0          2          0          0          0          0          0          0          0
+  components       :          0          0          0          0          0          0          0          0          0          0          0          0          0          0          0
+Constraint Timings :  TotalTime  SetupTime   Separate  Propagate     EnfoLP     EnfoPS     EnfoRelax   Check    ResProp    SB-Prop
+  benderslp        :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  integral         :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  varbound         :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  linear           :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  bounddisjunction :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  nonlinear        :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  benders          :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  countsols        :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  components       :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+Propagators        : #Propagate   #ResProp    Cutoffs    DomReds
+  dualfix          :         20          0          0          0
+  genvbounds       :         25          0          0        820
+  nlobbt           :          0          0          0          0
+  obbt             :          2          0          0         28
+  probing          :          0          0          0          0
+  pseudoobj        :          0          0          0          0
+  redcost          :          0          0          0          0
+  rootredcost      :          0          0          0          0
+  symmetry         :          0          0          0          0
+  vbounds          :        119          1          0          2
+Propagator Timings :  TotalTime  SetupTime   Presolve  Propagate    ResProp    SB-Prop
+  dualfix          :       0.00       0.00       0.00       0.00       0.00       0.00
+  genvbounds       :       0.00       0.00       0.00       0.00       0.00       0.00
+  nlobbt           :       0.00       0.00       0.00       0.00       0.00       0.00
+  obbt             :       2.00       0.00       0.00       2.00       0.00       0.00
+  probing          :       0.00       0.00       0.00       0.00       0.00       0.00
+  pseudoobj        :       0.00       0.00       0.00       0.00       0.00       0.00
+  redcost          :       0.00       0.00       0.00       0.00       0.00       0.00
+  rootredcost      :       0.00       0.00       0.00       0.00       0.00       0.00
+  symmetry         :       0.00       0.00       0.00       0.00       0.00       0.00
+  vbounds          :       0.00       0.00       0.00       0.00       0.00       0.00
+Symmetry           :
+  orbitopal reduction:          0 reductions applied,          0 cutoffs
+  orbital reduction:          0 reductions applied,          0 cutoffs
+  lexicographic red:          0 reductions applied,          0 cutoffs
+  shadow tree time :       0.00 s
+Conflict Analysis  :       Time      Calls    Success    DomReds  Conflicts   Literals    Reconvs ReconvLits   Dualrays   Nonzeros   LP Iters   (pool size: [10000,10000])
+  propagation      :       0.00          2          2          -          2        3.0          0        0.0          -          -          -
+  infeasible LP    :       0.00          0          0          -          0        0.0          0        0.0          0        0.0          0
+  bound exceed. LP :       0.00          0          0          -          0        0.0          0        0.0          0        0.0          0
+  strong branching :       0.00          0          0          -          0        0.0          0        0.0          -          -          0
+  pseudo solution  :       0.00          0          0          -          0        0.0          0        0.0          -          -          -
+  applied globally :       0.00          -          -          0          2        3.0          -          -          0          -          -
+  applied locally  :          -          -          -          0          0        0.0          -          -          0          -          -
+Separators         :   ExecTime  SetupTime      Calls  RootCalls    Cutoffs    DomReds  FoundCuts ViaPoolAdd  DirectAdd    Applied ViaPoolApp  DirectApp      Conss
+  cut pool         :       0.00          -          0          0          -          -          0          0          -          -          -          -          -    (maximal pool size:          0)
+  aggregation      :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  > cmir           :          -          -          -          -          -          -          -          0          0          0          0          0          -
+  > flowcover      :          -          -          -          -          -          -          -          0          0          0          0          0          -
+  > knapsackcover  :          -          -          -          -          -          -          -          0          0          0          0          0          -
+  cgmip            :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  clique           :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  closecuts        :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  convexproj       :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  disjunctive      :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  eccuts           :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  gauge            :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  gomory           :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  > gomorymi       :          -          -          -          -          -          -          -          0          0          0          0          0          -
+  > strongcg       :          -          -          -          -          -          -          -          0          0          0          0          0          -
+  impliedbounds    :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  interminor       :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  intobj           :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  lagromory        :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  mcf              :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  minor            :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  mixing           :       0.00       0.00          5          5          0          0          0          0          0          0          0          0          0
+  oddcycle         :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+  rapidlearning    :       0.00       0.00          2          2          0        476          0          0          0          0          0          0         37
+  rlt              :       0.00       0.00          5          5          0          0          0          0          0          0          0          0          0
+  zerohalf         :       0.00       0.00          0          0          0          0          0          0          0          0          0          0          0
+Cutselectors       :   ExecTime  SetupTime      Calls  RootCalls   Selected     Forced   Filtered  RootSelec   RootForc   RootFilt 
+  hybrid           :       0.00       0.00          2          2         46          0          0         46          0          0
+  ensemble         :       0.00       0.00          0          0          0          0          0          0          0          0
+  dynamic          :       0.00       0.00          0          0          0          0          0          0          0          0
+Pricers            :   ExecTime  SetupTime      Calls       Vars
+  problem variables:       0.00          -          0          0
+Branching Rules    :   ExecTime  SetupTime   BranchLP  BranchExt   BranchPS    Cutoffs    DomReds       Cuts      Conss   Children
+  allfullstrong    :       0.00       0.00          0          0          0          0          0          0          0          0
+  cloud            :       0.00       0.00          0          0          0          0          0          0          0          0
+  distribution     :       0.00       0.00          0          0          0          0          0          0          0          0
+  fullstrong       :       0.00       0.00          0          0          0          0          0          0          0          0
+  gomory           :       0.00       0.00          0          0          0          0          0          0          0          0
+  inference        :       0.00       0.00          0          0          0          0          0          0          0          0
+  leastinf         :       0.00       0.00          0          0          0          0          0          0          0          0
+  lookahead        :       0.00       0.00          0          0          0          0          0          0          0          0
+  mostinf          :       0.00       0.00          0          0          0          0          0          0          0          0
+  multaggr         :       0.00       0.00          0          0          0          0          0          0          0          0
+  nodereopt        :       0.00       0.00          0          0          0          0          0          0          0          0
+  pscost           :       0.00       0.00          0          0          0          0          0          0          0          0
+  random           :       0.00       0.00          0          0          0          0          0          0          0          0
+  relpscost        :       0.00       0.00          0          0          0          0          0          0          0          0
+  vanillafullstrong:       0.00       0.00          0          0          0          0          0          0          0          0
+Primal Heuristics  :   ExecTime  SetupTime      Calls      Found       Best
+  LP solutions     :       0.00          -          -          0          0
+  relax solutions  :       0.00          -          -          0          0
+  pseudo solutions :       0.00          -          -          0          0
+  strong branching :       0.00          -          -          0          0
+  actconsdiving    :       0.00       0.00          0          0          0
+  adaptivediving   :       0.00       0.00          0          0          0
+  alns             :       0.00       0.00          1          0          0
+  bound            :       0.00       0.00          0          0          0
+  clique           :       0.00       0.00          0          0          0
+  coefdiving       :       0.00       0.00          0          0          0
+  completesol      :       0.00       0.00          0          0          0
+  conflictdiving   :       0.00       0.00          1          0          0
+  crossover        :       0.00       0.00          0          0          0
+  dins             :       0.00       0.00          0          0          0
+  distributiondivin:       0.00       0.00          0          0          0
+  dps              :       0.00       0.00          0          0          0
+  dualval          :       0.00       0.00          0          0          0
+  farkasdiving     :       0.00       0.00          0          0          0
+  feaspump         :       0.00       0.00          0          0          0
+  fixandinfer      :       0.00       0.00          0          0          0
+  fracdiving       :       0.00       0.00          0          0          0
+  gins             :       0.00       0.00          0          0          0
+  guideddiving     :       0.00       0.00          0          0          0
+  indicator        :       0.00       0.00          0          0          0
+  indicatordiving  :       0.00       0.00          0          0          0
+  intdiving        :       0.00       0.00          0          0          0
+  intshifting      :       0.00       0.00          0          0          0
+  linesearchdiving :       0.00       0.00          0          0          0
+  localbranching   :       0.00       0.00          0          0          0
+  locks            :       0.00       0.00          0          0          0
+  lpface           :       0.00       0.00          0          0          0
+  mpec             :       0.00       0.00          0          0          0
+  multistart       :       0.00       0.00          0          0          0
+  mutation         :       0.00       0.00          0          0          0
+  nlpdiving        :       0.00       0.00          0          0          0
+  objpscostdiving  :       0.00       0.00          0          0          0
+  octane           :       0.00       0.00          0          0          0
+  ofins            :       0.00       0.00          0          0          0
+  oneopt           :       0.00       0.00          0          0          0
+  padm             :       0.00       0.00          0          0          0
+  proximity        :       0.00       0.00          0          0          0
+  pscostdiving     :       0.00       0.00          0          0          0
+  randrounding     :       0.00       0.00          0          0          0
+  rens             :       0.00       0.00          0          0          0
+  reoptsols        :       0.00       0.00          0          0          0
+  repair           :       0.00       0.00          0          0          0
+  rins             :       0.00       0.00          0          0          0
+  rootsoldiving    :       0.00       0.00          0          0          0
+  rounding         :       0.00       0.00          0          0          0
+  scheduler        :       0.00       0.00          0          0          0
+  shiftandpropagate:       0.00       0.00          2          0          0
+  shifting         :       0.00       0.00          0          0          0
+  simplerounding   :       0.00       0.00          0          0          0
+  subnlp           :       0.00       0.00          0          0          0
+  trivial          :       0.00       0.00          4          0          0
+  trivialnegation  :       0.00       0.00          0          0          0
+  trustregion      :       0.00       0.00          0          0          0
+  trysol           :       0.00       0.00          0          0          0
+  twoopt           :       0.00       0.00          0          0          0
+  undercover       :       0.00       0.00          1          0          0
+  vbounds          :       0.00       0.00          0          0          0
+  veclendiving     :       0.00       0.00          0          0          0
+  zeroobj          :       0.00       0.00          0          0          0
+  zirounding       :       0.00       0.00          1          0          0
+  other solutions  :          -          -          -          0          -
+LNS (Scheduler)    :      Calls  SetupTime  SolveTime SolveNodes       Sols       Best       Exp3    Exp3-IX  EpsGreedy        UCB TgtFixRate  Opt  Inf Node Stal  Sol  Usr Othr Actv
+  rens             :          0       0.00       0.00          0          0          0    0.00000    0.14286   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  rins             :          0       0.00       0.00          0          0          0    0.00000    0.14286   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  mutation         :          0       0.00       0.00          0          0          0    0.00000    0.14286   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  crossover        :          0       0.00       0.00          0          0          0    0.00000    0.14286   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  localbranching   :          0       0.00       0.00          0          0          0    0.00000    0.14286   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  proximity        :          0       0.00       0.00          0          0          0    0.00000    0.14286   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  dins             :          0       0.00       0.00          0          0          0    0.00000    0.14286   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  zeroobjective    :          0       0.00       0.00          0          0          0    0.00000    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    0
+  trustregion      :          0       0.00       0.00          0          0          0    0.00000    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    0
+Expressions        :   #IntEval  IntEvalTi   #RevProp  RevPropTi    DomReds    Cutoffs  #Estimate  EstimTime  Branching  #Simplify SimplifyTi Simplified
+  abs              :      52960       0.00      25321       0.00       1202          0       2294       0.00          0       3856       0.00         64
+  sum              :      62118       0.00      34728       0.00       9604          0       1108       0.00          0       4618       0.00       1322
+  val              :          1       0.00          0       0.00          0          0          0       0.00          0          0       0.00          0
+  var              :      83157       0.00          0       0.00          0          0          0       0.00          0       6600       0.00        312
+Nlhdlrs            :    Detects  DetectAll DetectTime   #IntEval  IntEvalTi   #RevProp  RevPropTi    DomReds    Cutoffs   #Enforce   EnfoTime       Cuts  Branching
+  soc              :          0          0       0.00          0       0.00          0       0.00          0          0          0       0.00          0          0
+  convex           :        150        228       0.00          0       0.00          0       0.00          0          0        228       0.00          0          0
+  concave          :        152        230       0.00          0       0.00          0       0.00          0          0        244       0.00          0          0
+  signomial        :          0          0       0.00          0       0.00          0       0.00          0          0          0       0.00          0          0
+  quotient         :          0          0       0.00          0       0.00          0       0.00          0          0          0       0.00          0          0
+  quadratic        :          0          0       0.00          0       0.00          0       0.00          0          0          0       0.00          0          0
+  default          :       2111      45805       0.00     109943       0.00      67321       0.00      10806          0       2542       0.00         46          0
+  bilinear         :          0          0       0.00          0       0.00          0       0.00          0          0          0       0.00          0          0
+  perspective      :          0          0       0.00          0       0.00          0       0.00          0          0          0       0.00          0          0
+Quadratic Nlhdlr   :    GenCuts    AddCuts  CouldImpr   NLargeRE AbrtBadRay AbrtPosPhi AbrtNonBas  NStrength  NMonoidal AveCutcoef    AveMonoidalImprov AveDensity AveEfficacy AveBCutsFrac 
+  Quadratic Nlhdlr :          0          0          0          0          0          0          0          0          0          0                   -1          0          0          0
+LP                 :       Time      Calls Iterations  Iter/call   Iter/sec  Time-0-It Calls-0-It    ItLimit
+  primal LP        :       0.00          0          0       0.00          -       0.00          0
+  dual LP          :       0.00          6       2872     574.40          -       0.00          1
+  lex dual LP      :       0.00          0          0       0.00          -
+  barrier LP       :       0.00          0          0       0.00          -       0.00          0
+  resolve instable :       0.00          0          0       0.00          -
+  diving/probing LP:       2.00        289       5591      19.35    2795.50
+  strong branching :       0.00          0          0       0.00          -          -          -          0
+    (at root node) :          -          0          0       0.00          -
+  conflict analysis:       0.00          0          0       0.00          -
+NLP relaxation     :
+  solve time       :       0.00 (0 calls)
+  convexity        :  nonconvex (376 linear rows, 0 convex ineq., 0 nonconvex ineq., 524 nonlinear eq. or two-sided ineq.)
+NLP Solvers        :  #Problems  ProblemTi    #Solves  SolveTime      #Iter  Time/Iter      #Okay #TimeLimit #IterLimit #LObjLimit #Interrupt  #NumError #EvalError  #OutOfMem #LicenseEr #OtherTerm   #GlobOpt    #LocOpt  #Feasible #LocInfeas #GlobInfea #Unbounded   #Unknown
+  ipopt            :          2       0.00          0       0.00          0       0.00          0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          0          0
+B&B Tree           :
+  number of runs   :          2
+  nodes            :          1 (0 internal, 1 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :          0
+  nodes (total)    :          2 (0 internal, 2 leaves)
+  nodes left       :          0
+  max depth        :          0
+  max depth (total):          0
+  backtracks       :          0 (0.0%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       2.00
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +0.00000000000000e+00
+  First LP Iters   :       1611
+  First LP Time    :       0.00
+  Final Dual Bound : +0.00000000000000e+00
+  Final Root Iters :       2872
+  Root LP Estimate :                     -
+Solution           :
+  Solutions found  :          1 (1 improvements)
+  First Solution   : +0.00000000000000e+00   (in run 2, after 1 nodes, 2.00 seconds, depth 0, found by <relaxation>)
+  Gap First Sol.   :       0.00 %
+  Gap Last Sol.    :       0.00 %
+  Primal Bound     : +0.00000000000000e+00   (in run 2, after 1 nodes, 2.00 seconds, depth 0, found by <relaxation>)
+  Dual Bound       : +0.00000000000000e+00
+  Gap              :       0.00 %
+Integrals          :      Total       Avg%
+  primal-dual      :     200.00     100.00
+  primal-ref       :          -          - (not evaluated)
+  dual-ref         :          -          - (not evaluated)
